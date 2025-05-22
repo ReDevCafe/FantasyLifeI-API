@@ -3,7 +3,7 @@
 void extractString(const std::string& json, const char* key, std::string& out)
 {
 	std::string pat = "\"" + std::string(key) + "\"";
-	inline size_t pos = json.find(pat);
+	size_t pos = json.find(pat);
 
 	if (pos == std::string::npos) return;
 }

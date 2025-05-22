@@ -9,5 +9,5 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "MinHook/include/MinHook.h"
+#include "../MinHook/include/MinHook.h"
 #endif //PCH_H

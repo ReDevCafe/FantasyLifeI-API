@@ -31,18 +31,6 @@ DWORD setupEnvironnement()
         if (!std::filesystem::exists(modJsonPath)) continue;
 
         ModMeta meta;
-        /*std::ifstream file(modJsonPath);
-        if (file.is_open())
-        {
-            std::stringstream buffer;
-            buffer << file.rdbuf();
-            std::string content = buffer.str()
-        }
-        else
-        {
-            std::cerr << ML << "Failed to open Mods.json in " << entry.path().string() << std::endl;
-            return 0;
-        }*/
         meta.name = "testN";
         meta.author = "testA";
         meta.majorVer = 1;
@@ -78,6 +66,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
     std::cout.clear();
     std::cerr.clear();
+
+    std::cout << ML << "Mod loader attached to process" << std::endl;
 
     HANDLE LoaderThread = CreateThread(nullptr, 0, ModLoaderThread, nullptr, 0, nullptr);
     if (LoaderThread)
