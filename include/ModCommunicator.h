@@ -1,10 +1,7 @@
-#ifndef MODCOMMUNICATOR_HEADER
-#define MODCOMMUNICATOR_HEADER
+#pragma once
 
 #include "ModAPI.h"
 #include <iostream>
 #include <Windows.h>
 
 void LoadMod(const char* dll, ModMeta meta);
-
-#endif // !MODCOMMUNICATOR_HEADER

@@ -1,5 +1,5 @@
-#ifndef MODMETA_HEADER
-#define MODMETA_HEADER
+#pragma once
+
 #include <string>
 #include <Windows.h>
 #include <sstream>
@@ -10,5 +10,3 @@
 
 
 int parseModMeta(const std::string& filename, ModMeta& mod);
-
-#endif // !MODMETA_HEADER

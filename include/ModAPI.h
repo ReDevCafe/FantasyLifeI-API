@@ -1,5 +1,4 @@
-#ifndef MODAPI_HEADER
-#define MODAPI_HEADER
+#pragma once
 #include <string>
 
 typedef struct ModMeta
@@ -12,10 +11,13 @@ typedef struct ModMeta
     std::string dllName;
 } ModMeta;
 
+
 typedef struct ModAPI
 {
     void (*Log)					(std::string message);
     void (*RegisterCommand)		(const char* name, void (*callback)());
-} ModAPI;
+    void (*HookEvents)          (const char* event, void (*callback)(void*));
+    // void (*RegisterObject)      (char REGISTRY_TYPE /* Waiting for more infos*/, void* object);
+    // void* (*GetRegistryObject)  (char REGISTRY_TYPE /* Waiting for more infos*/, const char* name);
 
-#endif
+} ModAPI;

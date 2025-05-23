@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "ModCommunicator.h"
 #include "ModMeta.h"
 
@@ -12,11 +11,20 @@ void __internal__command_register(const char* name, void (*callback)())
 	
 }
 
-ModAPI api =
+void __internal__hook_event(const char* name, void (*callback)(void*))
+{
+	// For now just call the callback
+	callback(nullptr);
+}
+
+static ModAPI api =
 {
 	__internal__log,
 	__internal__command_register,
+	__internal__hook_event,
 };
+
+static 
 
 void LoadMod(const char* dll, ModMeta meta)
 {
