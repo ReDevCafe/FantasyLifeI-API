@@ -1,4 +1,3 @@
-#include "pch.h"
 #include <Windows.h>
 #include <fstream>
 #include <iostream>
@@ -8,6 +7,8 @@
 #include <filesystem>
 #include "ModCommunicator.h"
 #include "ModMeta.h"
+#include "Patcher/Patcher.hpp"
+#include "Patcher/Patches/HookDataManager.hpp"
 
 #define ML "[FLiML] "
 
@@ -59,11 +60,16 @@ DWORD setupEnvironnement()
 DWORD WINAPI ModLoaderThread(LPVOID)
 {
     std::cout << ML << "Mod loader has been started" << std::endl;
-
-    //FIXME: Wait for Patcher but for now use a Sleep(3s)
-    Sleep(3000);
+    uintptr_t baseAddress = (uintptr_t) GetModuleHandle(NULL);
+    Patcher::add(new HookDataManager());
+    if (!Patcher::applyPatches(baseAddress)) {
+        Patcher::clear();
+        return 1;
+    }
+    while (HookDataManager::getDataManager() == NULL)
+        Sleep(1);
+    std::cout << ML << "DataManager found : 0x" << std::hex << (uintptr_t) HookDataManager::getDataManager() << std::endl;
     setupEnvironnement();
-
     return 0;
 }
 

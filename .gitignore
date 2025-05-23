@@ -1,9 +1,7 @@
-lib
-FantasyL.b1c5f0c2
-.vs
-.vscode
-.intellij
-x64
-*/.github
-build
-out
+*
+!include/
+!include/**/*
+!src/
+!src/**/*
+!CMakeLists.txt
+!README.md
