@@ -9,7 +9,7 @@
 #include "ModCommunicator.h"
 #include "ModMeta.h"
 
-#define ML "[FLi.ML] "
+#define ML "[FLiML] "
 
 DWORD setupEnvironnement()
 {
@@ -21,26 +21,36 @@ DWORD setupEnvironnement()
         return 0;
     }
 
-    std::cout << ML << "Searching for mods..." << std::endl;
-
     for (const auto& entry : std::filesystem::directory_iterator(modsDirs))
     {
-        if (!std::filesystem::is_directory(entry)) continue;
+        if (!std::filesystem::is_directory(entry))
+        {
+            std::cerr << ML << "Invalid object inside the mods folder" << std::endl;
+            return 0;
+        }
 
         std::filesystem::path modJsonPath = entry.path() / "Mod.json";
-        if (!std::filesystem::exists(modJsonPath)) continue;
+        if (!std::filesystem::exists(modJsonPath))
+        {
+            std::cerr << ML << "Invalid mod packet" << std::endl;
+            return 0;
+        }
 
         ModMeta meta;
-        meta.name = "testN";
-        meta.author = "testA";
-        meta.majorVer = 1;
-        meta.minorVer = 0;
-        meta.dllName = "Mod.dll";
+        if (parseModMeta(modJsonPath.string(), meta))
+        {
+            std::cerr << "Failed to load Mod.json of " << entry.path() << ", mod has been disabled.." << std::endl;
+            return 0;
+        }
 
         std::filesystem::path modDllPath = entry.path() / meta.dllName;
-        if (!std::filesystem::exists(modDllPath)) continue;
+        if (!std::filesystem::exists(modDllPath))
+        {
+            std::cerr << ML << "Cannot find mod dll" << std::endl;
+            return 0;
+        }
 
-        LoadMod(modDllPath.string().c_str());
+        LoadMod(modDllPath.string().c_str(), meta);
     }
 
     return 0;
@@ -49,10 +59,11 @@ DWORD setupEnvironnement()
 DWORD WINAPI ModLoaderThread(LPVOID)
 {
     std::cout << ML << "Mod loader has been started" << std::endl;
+
+    //FIXME: Wait for Patcher but for now use a Sleep(3s)
+    Sleep(3000);
     setupEnvironnement();
 
-
-    Sleep(30000);
     return 0;
 }
 

@@ -5,6 +5,6 @@
 #include <iostream>
 #include <Windows.h>
 
-void LoadMod(const char* dll);
+void LoadMod(const char* dll, ModMeta meta);
 
 #endif // !MODCOMMUNICATOR_HEADER

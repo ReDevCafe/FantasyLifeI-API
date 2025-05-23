@@ -1,22 +1,23 @@
 #include "ModMeta.h"
 
-void extractString(const std::string& json, const char* key, std::string& out)
+using json = nlohmann::json;
+
+int parseModMeta(const std::string& filename, ModMeta& mod)
 {
-	std::string pat = "\"" + std::string(key) + "\"";
-	size_t pos = json.find(pat);
+	std::ifstream file(filename);
+	if (!file.is_open())
+	{
+		return 1;
+	}
 
-	if (pos == std::string::npos) return;
-}
+	json js;
+	file >> js;
 
-void ParseModJson(const std::string& path, ModMeta& meta)
-{
-	std::ifstream file(path);
-	if (!file.is_open()) return;
+	js.at("name").get_to(mod.name);
+	js.at("author").get_to(mod.author);
+	js.at("majorVer").get_to(mod.majorVer);
+	js.at("minorVer").get_to(mod.minorVer);
+	js.at("dllName").get_to(mod.dllName);
 
-	std::ostringstream ss;
-	ss << file.rdbuf();
-
-	std::string content = ss.str();
-
-	
+	return 0;
 }

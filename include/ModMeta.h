@@ -5,17 +5,10 @@
 #include <sstream>
 #include <iostream>
 #include <fstream>
+#include "ModAPI.h"
+#include "json.hpp"
 
 
-typedef struct
-{
-    std::string name;
-    std::string author;
-    int majorVer;
-    int minorVer;
-
-    std::string dllName;
-} ModMeta;
-
+int parseModMeta(const std::string& filename, ModMeta& mod);
 
 #endif // !MODMETA_HEADER
