@@ -16,11 +16,6 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_precompile_headers(${PROJECT_NAME} 
-    PUBLIC
-        include/pch.h
-)
-
 target_link_libraries(${PROJECT_NAME} PUBLIC
     user32
     kernel32
