@@ -30,6 +30,10 @@ Fantasy Life I/
 When you launch Fantasy Life I, the mod loader will automatically start alongside the game
 
 ### Adding mods
+> [!NOTE]  
+> If you're interested in making your own mods for Fantasy Life I, there's a ready-to-use template available here:
+> [Fantasy Life I Mod Template](https://github.com/ReDevCafe/FantasyLifeI-ModTemplate)
+
 1. Find the `Mods` folder
 At the root of your game install directory, create a folder named `Mods` if it doesn't already exist:
 ```mathematica
@@ -54,7 +58,3 @@ Fantasy Life I/
     │
     └── OtherMod/... 
 ```
-> [!NOTE]  
-> If you're interested in making your own mods for Fantasy Life I, there's a ready-to-use template available here:
-> [Fantasy Life I Mod Template](https://github.com/ReDevCafe/FantasyLifeI-ModTemplate)
-
