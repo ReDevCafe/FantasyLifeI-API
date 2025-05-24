@@ -4,7 +4,7 @@ PROJECT(FantasyLifeI-ModLoader LANGUAGES CXX C)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 add_subdirectory(DllProxy)
 
-add_library(${PROJECT_NAME} SHARED src/dllmain.cpp) 
+add_library(${PROJECT_NAME} SHARED src/ModLoader.cpp) 
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     OUTPUT_NAME "ModLoader"

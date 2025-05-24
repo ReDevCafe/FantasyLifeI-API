@@ -1,12 +1,6 @@
-/*
-** EPITECH PROJECT, 2025
-** FantasyLifeI-ModLoader
-** File description:
-** Utils
-*/
-
 #include "Utils.hpp"
 
+/*
 std::string Utils::FNameToString(FName fname) {
     char name[1024] = {0};
 	const unsigned int chunkOffset = fname.ComparisonIndex >> 16;
@@ -30,3 +24,4 @@ std::string Utils::FNameToString(FName fname) {
 		nameLength < NAME_SIZE ? nameLength : NAME_SIZE
 	);
 }
+*/
