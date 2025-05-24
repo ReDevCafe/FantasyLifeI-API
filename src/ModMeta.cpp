@@ -1,4 +1,4 @@
-#include "ModMeta.h"
+#include "ModMeta.hpp"
 
 using json = nlohmann::json;
 

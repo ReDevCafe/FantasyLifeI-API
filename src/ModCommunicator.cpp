@@ -1,5 +1,5 @@
-#include "ModCommunicator.h"
-#include "ModMeta.h"
+#include "ModCommunicator.hpp"
+#include "ModMeta.hpp"
 
 void __internal__log(std::string data)
 {

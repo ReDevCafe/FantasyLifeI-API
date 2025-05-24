@@ -5,10 +5,12 @@
 #include <sstream>
 #include <chrono>
 #include <filesystem>
-#include "ModCommunicator.h"
-#include "ModMeta.h"
+#include "ModCommunicator.hpp"
+#include "ModMeta.hpp"
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/HookDataManager.hpp"
+#include "Game/UStaticDataManager.hpp"
+#include <cstddef>
 
 #define ML "[FLiML] "
 
@@ -60,15 +62,28 @@ DWORD setupEnvironnement()
 DWORD WINAPI ModLoaderThread(LPVOID)
 {
     std::cout << ML << "Mod loader has been started" << std::endl;
-    uintptr_t baseAddress = (uintptr_t) GetModuleHandle(NULL);
+    uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
     Patcher::add(new HookDataManager());
     if (!Patcher::applyPatches(baseAddress)) {
         Patcher::clear();
         return 1;
     }
-    while (HookDataManager::getDataManager() == NULL)
+    while (HookDataManager::getDataManager() == nullptr)
         Sleep(1);
-    std::cout << ML << "DataManager found : 0x" << std::hex << (uintptr_t) HookDataManager::getDataManager() << std::endl;
+    UStaticDataManager *manager = reinterpret_cast<UStaticDataManager *>(HookDataManager::getDataManager());
+    std::cout << ML << "DataManager found : 0x" << std::hex << HookDataManager::getDataManager() << std::endl;
+    while (manager->m_CharaParameter == nullptr)
+        Sleep(1);
+    std::cout << ML << "CharaParameter : 0x" << std::hex << manager->m_CharaParameter << std::endl;
+    UGDSCharaParameter *parameter = manager->m_CharaParameter;
+    TMap<FGDId, FGDCharaParameter> map = parameter->m_dataMap;
+    auto data = map.Data;
+    using Array = TArray<TSetElement<TPair<FGDId, FGDCharaParameter>>>;
+    while (true) {
+        for (int i = 0; i < data.Count; ++i)
+            std::cout << ML << "[" << i << "]" << data[i].Value.Second.moveSpeed << std::endl;
+        Sleep(2000);
+    }
     setupEnvironnement();
     return 0;
 }
