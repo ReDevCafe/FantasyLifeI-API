@@ -4,15 +4,18 @@
 
     #include "Engine/FName.hpp"
     #include <string>
+    #include <unordered_map>
 
+    #define NAME_BUFFER 1024
 
 const uintptr_t GNAME_OFFSET = 0xBF3DA40;
 
 class Utils {
     public:
-        std::string FNameToString(FName fname);
+        static std::string &FNameToString(uintptr_t baseAddress, FName fname);
     protected:
     private:
+        static std::unordered_map<FNameEntryId, std::string> _strings; 
 };
 
 #endif /* !UTILS_HPP_ */

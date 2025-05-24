@@ -11,6 +11,7 @@
 #include "Patcher/Patches/HookDataManager.hpp"
 #include "Game/UStaticDataManager.hpp"
 #include <cstddef>
+#include "Utils.hpp"
 
 #define ML "[FLiML] "
 
@@ -74,16 +75,6 @@ DWORD WINAPI ModLoaderThread(LPVOID)
     std::cout << ML << "DataManager found : 0x" << std::hex << HookDataManager::getDataManager() << std::endl;
     while (manager->m_CharaParameter == nullptr)
         Sleep(1);
-    std::cout << ML << "CharaParameter : 0x" << std::hex << manager->m_CharaParameter << std::endl;
-    UGDSCharaParameter *parameter = manager->m_CharaParameter;
-    TMap<FGDId, FGDCharaParameter> map = parameter->m_dataMap;
-    auto data = map.Data;
-    using Array = TArray<TSetElement<TPair<FGDId, FGDCharaParameter>>>;
-    while (true) {
-        for (int i = 0; i < data.Count; ++i)
-            std::cout << ML << "[" << i << "]" << data[i].Value.Second.moveSpeed << std::endl;
-        Sleep(2000);
-    }
     setupEnvironnement();
     return 0;
 }

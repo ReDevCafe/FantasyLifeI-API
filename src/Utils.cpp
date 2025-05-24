@@ -1,32 +1,16 @@
-/*
-** EPITECH PROJECT, 2025
-** FantasyLifeI-ModLoader
-** File description:
-** Utils
-*/
-
 #include "Utils.hpp"
 
-std::string Utils::FNameToString(FName fname) {
-    char name[1024] = {0};
+std::unordered_map<FNameEntryId, std::string> Utils::_strings; 
+
+std::string &Utils::FNameToString(uintptr_t baseAddress, FName fname) {
+    if (_strings.contains(fname.ComparisonIndex))
+        return _strings.at(fname.ComparisonIndex);
+    char name[NAME_BUFFER + 1] = {0};
 	const unsigned int chunkOffset = fname.ComparisonIndex >> 16;
 	const unsigned short nameOffset = fname.ComparisonIndex;
-    uint64_t namePoolChunk = Memory::read<uint64_t>(gNames + 8 * (chunkOffset + 2)) + 4 * nameOffset;
-
-	const auto nameLength = Memory::read<uint16_t>(namePoolChunk + 4) >> 1;
-
-	if (nameLength > NAME_SIZE)
-	{
-		// we're about to corrupt our memory in the next call to Memory::read if we don't clamp the value!
-		windows::LogWindow::Log(windows::LogWindow::logLevels::LOGLEVEL_ERROR, "CORE", "Memory corruption avoided! FName nameLength > NAME_SIZE! Setting WITH_CASE_PRESERVING_NAME=TRUE might resolve this issue");
-		puts("Memory corruption avoided! FName nameLength > NAME_SIZE! Setting WITH_CASE_PRESERVING_NAME=TRUE might resolve this issue");
-		//DebugBreak();
-	}
-
-	Memory::read(
-		reinterpret_cast<void*>(namePoolChunk + 6), 
-		name, 
-		// safeguard against overflow and memory corruption
-		nameLength < NAME_SIZE ? nameLength : NAME_SIZE
-	);
+    uintptr_t namePoolChunk = *(uintptr_t *) (baseAddress + GNAME_OFFSET + 8 * (chunkOffset + 2)) + 2 * nameOffset;
+    const uint16_t nameLength = *(uint16_t *) (namePoolChunk) >> 6;
+    memcpy(name, (void *) (namePoolChunk + 2), nameLength < NAME_BUFFER ? nameLength : NAME_BUFFER);
+    auto result = _strings.emplace(fname.ComparisonIndex, std::string(name));
+    return result.first->second;
 }
