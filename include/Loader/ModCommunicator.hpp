@@ -7,6 +7,7 @@
 #include <iostream>
 #include <Windows.h>
 #include "Loader/ModObject.hpp"
+#include "Logger/ModLoaderLogger.hpp"
 
 class ModCommunicator
 {

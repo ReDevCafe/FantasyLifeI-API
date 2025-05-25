@@ -2,7 +2,7 @@
 
 void ModCommunicator::__internal__log(std::string data)
 {
-	std::cout << "[M.API] " << data << std::endl;
+	std::cout << data;
 }
 
 void ModCommunicator::__internal__command_register(const char* name, void (*callback)())
@@ -23,7 +23,7 @@ void ModCommunicator::LoadMod(const char* dll, ModObject modO)
 	void (*InitMod)(ModAPI*, ModObject) = (void(*)(ModAPI*, ModObject))GetProcAddress(mod, "InitMod");
 	if (!InitMod) 
 	{
-		std::cerr << "Failed to load " << dll << std::endl;
+		mlLogger.error("Failed to load ", dll);
 		return;
 	}
 
