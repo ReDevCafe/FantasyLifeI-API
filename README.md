@@ -46,7 +46,8 @@ Fantasy Life I/
 - The compiled mod DLL (e.g. `MyReallyReallyCuteMod.dll`)
 
 > [!WARNING] 
-> Both files are required for the mod to be recognized and initialized by the mod loader so if a mod doesn't include them, there's a good chaance the developer messed up their export.
+> Both files are required for the mod to be recognized and initialized by the mod loader so if a mod doesn't include them, there's a good chaance the developer messed up their export. <br />
+
 Example layout:
 ```mathematica
 Fantasy Life I/
