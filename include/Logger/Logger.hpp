@@ -17,6 +17,7 @@ class Logger
             std::ostringstream oss;
             (oss << ... << std::forward<Args>(args));
             logFunc(std::string(level) + prefix + oss.str() + "\033[0m\n");
+            std::cout.flags(std::ios::fmtflags(0));
         }
 
     public:

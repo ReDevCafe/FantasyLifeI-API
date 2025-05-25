@@ -4,7 +4,7 @@
     #include <cstdint>
     #include "FName.hpp"
 
-enum class EObjectFlags : uint32_t
+enum EObjectFlags
 {
 	RF_NoFlags = 0x00000000,
 	RF_Public = 0x00000001,
