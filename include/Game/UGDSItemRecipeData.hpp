@@ -1,7 +1,7 @@
 #ifndef UGDSITEMRECIPEDATA_HPP_
     #define UGDSITEMRECIPEDATA_HPP_
 
-    #include "../Game/FGDItemData.hpp"
+    #include "FGDItemData.hpp"
 
 class FGDItemRecipeData : public FGDItemData {
     public:

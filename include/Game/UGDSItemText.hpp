@@ -1,22 +1,9 @@
 #ifndef UGDSITEMTEXT_HPP_
     #define UGDSITEMTEXT_HPP_
 
-    #include "../Engine/UGameDataAsset.hpp"
-    #include "../Engine/DataTable.hpp"
-
-class FGDStCommon_TextInfo {
-    public:
-        int8_t subID;
-        FString Text;
-        FString text_en;
-        FString text_fr;
-        FString text_it;
-        FString text_de;
-        FString text_es;
-        FString text_czh;
-        FString text_tzh;
-        FString text_ko;
-};
+    #include "Engine/UGameDataAsset.hpp"
+    #include "Engine/DataTable.hpp"
+    #include "Game/FGDStCommon.hpp"
 
 class FGDItemText : public FTableRowBase {
     public:

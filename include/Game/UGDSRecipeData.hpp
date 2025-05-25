@@ -4,6 +4,7 @@
     #include "../Engine/UGameDataAsset.hpp"
     #include "../Engine/DataTable.hpp"
     #include "../Game/FGDItemData.hpp"
+    #include "Game/FGDStCommon.hpp"
 
 enum class ERecipeItemSeries : uint8_t
 {

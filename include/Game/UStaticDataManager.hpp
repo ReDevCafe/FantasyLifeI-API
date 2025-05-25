@@ -6,6 +6,11 @@
     #include "UGDSRecipeData.hpp"
     #include "UGDSItemText.hpp"
     #include "UGDSItemRecipeData.hpp"
+    #include "UGDSCharaLevelConfig.hpp"
+    #include "UGDSCharaData.hpp"
+    #include "UGDSLifeData.hpp"
+    #include "UGDSLifeText.hpp"
+    #include "UGDSLifeText_Noun.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -181,11 +186,11 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_BattleDropItemTableSetting_Property;
         void *m_VehicleData;
 		USDMDataPropetyClass *m_VehicleData_Property;
-        void *m_LifeData;
+        UGDSLifeData *m_LifeData;
 		USDMDataPropetyClass *m_LifeData_Property;
-        void *m_LifeText;
+        UGDSLifeText *m_LifeText;
 		USDMDataPropetyClass *m_LifeText_Property;
-        void *m_LifeText_Noun;
+        UGDSLifeText_Noun *m_LifeText_Noun;
 		USDMDataPropetyClass *m_LifeText_Noun_Property;
         void *m_LifeParamData;
 		USDMDataPropetyClass *m_LifeParamData_Property;
@@ -449,7 +454,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_CharaCtrlLimitConfig_Property;
         void *m_FollowerLimitConfig;
 		USDMDataPropetyClass *m_FollowerLimitConfig_Property;
-        void *m_CharaLevelConfig;
+        UGDSCharaLevelConfig *m_CharaLevelConfig;
 		USDMDataPropetyClass *m_CharaLevelConfig_Property;
         void *m_EnemyCharaLevelConfig;
 		USDMDataPropetyClass *m_EnemyCharaLevelConfig_Property;
@@ -859,7 +864,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_TalkMenuType_Property;
         void *m_CharaText_Noun;
 		USDMDataPropetyClass *m_CharaText_Noun_Property;
-        void *m_CharaData;
+        UGDSCharaData *m_CharaData;
 		USDMDataPropetyClass *m_CharaData_Property;
         void *m_CharaSpeed;
 		USDMDataPropetyClass *m_CharaSpeed_Property;
