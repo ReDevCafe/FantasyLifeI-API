@@ -9,19 +9,21 @@
 #include "Patcher/Patches/HookDataManager.hpp"
 #include "Game/UStaticDataManager.hpp"
 #include "Loader/ModEnvironnement.hpp"
-#include <cstddef>
+#include "Logger/Logger.hpp"
+#include "Logger/ModLoaderLogger.hpp"
 #include "Utils.hpp"
+#include <cstddef>
 
 DWORD WINAPI ModLoaderThread(LPVOID)
 {
-    std::cout << ML << "Mod loader has been started" << std::endl;
+    mlLogger.info("Mod loader has been started");
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
     Patcher::add(new HookDataManager());
     if (!Patcher::applyPatches(baseAddress)) {
         Patcher::clear();
         return 1;
     }
-    while (HookDataManager::getDataManager() == nullptr)
+    /*while (HookDataManager::getDataManager() == nullptr)
         Sleep(1);
     UStaticDataManager *manager = reinterpret_cast<UStaticDataManager *>(HookDataManager::getDataManager());
     std::cout << ML << "DataManager found : 0x" << std::hex << HookDataManager::getDataManager() << std::dec << std::endl;
@@ -54,7 +56,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             std::cout.clear();
             std::cerr.clear();
 
-            std::cout << ML << "Mod loader attached to process" << std::endl;
+            Utils::EnableAnsiColors();
+            mlLogger.warn("Mod loader attached to process");
 
             LoaderThread = CreateThread(nullptr, 0, ModLoaderThread, nullptr, 0, nullptr);
             if (LoaderThread)
@@ -63,10 +66,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         }
         case DLL_PROCESS_DETACH:
         {
-            std::cout << ML << "Mod loader detached from process" << std::endl;
+            mlLogger.warn("Mod loader detached from process");
             if (LoaderThread)
                 CloseHandle(LoaderThread);
-
+            
             FreeConsole();
             break;
         }

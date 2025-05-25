@@ -16,3 +16,15 @@ std::string &Utils::FNameToString(uintptr_t baseAddress, FName fname) {
     auto result = _strings.emplace(fname.ComparisonIndex, std::string(name));
     return result.first->second;
 }
+
+void Utils::EnableAnsiColors()
+{
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    if(hConsole == INVALID_HANDLE_VALUE) return;
+
+    DWORD dwMode = 0;
+    if(!GetConsoleMode(hConsole, &dwMode)) return;
+
+    dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+    SetConsoleMode(hConsole, dwMode);
+}

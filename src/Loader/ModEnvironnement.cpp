@@ -26,7 +26,7 @@ DWORD ModEnvironnement::SetupEnvironnement()
     if (!std::filesystem::exists(modsDirs))
     {
         std::filesystem::create_directories(modsDirs);
-        std::cout << ML << "Created Mods directory" << std::endl;
+        mlLogger.info("Created Mods directory");
         return 0;
     }
 
@@ -34,28 +34,28 @@ DWORD ModEnvironnement::SetupEnvironnement()
     {
         if (!std::filesystem::is_directory(entry))
         {
-            std::cerr << ML << "Invalid object inside the mods folder" << std::endl;
+            mlLogger.error("Invalid object inside the mods folder");
             return 0;
         }
 
         std::filesystem::path modJsonPath = entry.path() / "Mod.json";
         if (!std::filesystem::exists(modJsonPath))
         {
-            std::cerr << ML << "Invalid mod packet" << std::endl;
+            mlLogger.error("Invalid mod packet inside of",  entry.path());
             return 0;
         }
 
         ModObject meta;
         if (parseModMeta(modJsonPath.string(), meta))
         {
-            std::cerr << "Failed to load Mod.json of " << entry.path() << ", mod has been disabled.." << std::endl;
+            mlLogger.error("Failed to load Mod.json of ", entry.path(), ", mod has been disabled..");
             return 0;
         }
 
         std::filesystem::path modDllPath = entry.path() / meta.dllName;
         if (!std::filesystem::exists(modDllPath))
         {
-            std::cerr << ML << "Cannot find mod dll" << std::endl;
+            mlLogger.error("Cannot find mod dll ", modDllPath, ", for ", meta.name, ", mod has been disabled..");
             return 0;
         }
 

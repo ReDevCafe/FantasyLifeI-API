@@ -2,6 +2,7 @@
 
 #include "Patcher/Patcher.hpp"
 #include <iostream>
+#include <Logger/ModLoaderLogger.hpp>
 
 std::priority_queue<Patch *, std::vector<Patch *>, Compare> Patcher::_queue;
 
@@ -9,15 +10,17 @@ void Patcher::add(Patch *patch) {
     _queue.push(std::move(patch));
 }
 
-bool Patcher::applyPatches(uintptr_t baseAddress) {
-    std::cout << "[FLiML] Starting to load patches ..." << std::endl;
+bool Patcher::applyPatches(uintptr_t baseAddress) 
+{
+    mlLogger.info("Stating to load patches...");
     while (!_queue.empty()) {
         Patch *patch = _queue.top();
-        if (!patch->apply(baseAddress)) {
-            std::cout << "[FLiML] " << "Failed to apply patch: " << patch->getName() << " at " << baseAddress + patch->getTargetOffset() << std::endl;
+        if (!patch->apply(baseAddress)) 
+        {
+            mlLogger.error("Failed to apply patch: ", patch->getName(), " at ", baseAddress + patch->getTargetOffset());
             return false;
         }
-        std::cout << "[FLiML] " << patch->getName() << " successfully applied" << std::endl;
+        mlLogger.info("Patches successfully applied");
         _queue.pop();
         delete patch;
     }

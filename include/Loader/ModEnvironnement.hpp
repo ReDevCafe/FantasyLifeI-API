@@ -10,9 +10,7 @@
     #include "ModObject.hpp"
     #include "ModCommunicator.hpp"
     #include "Json.hpp"
-
-    #define ML "[FLiME] "
-    
+    #include "Logger/ModLoaderLogger.hpp"
 
 class ModEnvironnement 
 {
