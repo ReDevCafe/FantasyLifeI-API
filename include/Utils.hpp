@@ -4,6 +4,7 @@
     #include "Engine/FName.hpp"
     #include <string>
     #include <unordered_map>
+    #include <stdexcept>
 
     #define NAME_BUFFER 1024
 

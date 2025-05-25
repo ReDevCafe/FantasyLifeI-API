@@ -10,14 +10,11 @@
 #include "Game/UStaticDataManager.hpp"
 #include "Loader/ModEnvironnement.hpp"
 #include <cstddef>
-
-
-#define ML "[FLiML] "
+#include "Utils.hpp"
 
 DWORD WINAPI ModLoaderThread(LPVOID)
 {
     std::cout << ML << "Mod loader has been started" << std::endl;
-    /*
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
     Patcher::add(new HookDataManager());
     if (!Patcher::applyPatches(baseAddress)) {
@@ -27,27 +24,25 @@ DWORD WINAPI ModLoaderThread(LPVOID)
     while (HookDataManager::getDataManager() == nullptr)
         Sleep(1);
     UStaticDataManager *manager = reinterpret_cast<UStaticDataManager *>(HookDataManager::getDataManager());
-    std::cout << ML << "DataManager found : 0x" << std::hex << HookDataManager::getDataManager() << std::endl;
-    while (manager->m_CharaParameter == nullptr)
+    std::cout << ML << "DataManager found : 0x" << std::hex << HookDataManager::getDataManager() << std::dec << std::endl;
+    while (manager->m_ItemTitleData == nullptr)
         Sleep(1);
-    std::cout << ML << "CharaParameter : 0x" << std::hex << manager->m_CharaParameter << std::endl;
-    UGDSCharaParameter *parameter = manager->m_CharaParameter;
-    TMap<FGDId, FGDCharaParameter> map = parameter->m_dataMap;
-    auto data = map.Data;
-    using Array = TArray<TSetElement<TPair<FGDId, FGDCharaParameter>>>;
-    while (true) {
-        for (int i = 0; i < data.Count; ++i)
-            std::cout << ML << "[" << i << "]" << data[i].Value.Second.moveSpeed << std::endl;
-        Sleep(2000);
+    /*std::cout << std::hex << offsetof(UGDSItemTitleData, m_dataMap) << std::endl;
+    TArray<TSetElement<TPair<char, FGDItemTitleData>>> titles = manager->m_ItemTitleData->m_dataMap.Data;
+    for (int i = 0; i < titles.Count; ++i) {
+        FGDItemTitleData title = titles[i].Value.Second;
+        try {
+            std::cout << ML << Utils::FNameToString(baseAddress, title.titleText) << std::endl;
+        } catch (std::exception &exception) {
+            std::cerr << exception.what() << std::endl;
+        }
     }*/
-
     ModEnvironnement::SetupEnvironnement();
-    return 0;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
-    HANDLE LoaderThread;
+    HANDLE LoaderThread = nullptr;
     switch(ul_reason_for_call)
     {
         case DLL_PROCESS_ATTACH:
@@ -64,7 +59,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             LoaderThread = CreateThread(nullptr, 0, ModLoaderThread, nullptr, 0, nullptr);
             if (LoaderThread)
                 CloseHandle(LoaderThread);
-              
             break;
         }
         case DLL_PROCESS_DETACH:

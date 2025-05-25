@@ -10,6 +10,8 @@ std::string &Utils::FNameToString(uintptr_t baseAddress, FName fname) {
 	const unsigned short nameOffset = fname.ComparisonIndex;
     uintptr_t namePoolChunk = *(uintptr_t *) (baseAddress + GNAME_OFFSET + 8 * (chunkOffset + 2)) + 2 * nameOffset;
     const uint16_t nameLength = *(uint16_t *) (namePoolChunk) >> 6;
+    if (reinterpret_cast<void *>(namePoolChunk + 2) == nullptr)
+        throw std::invalid_argument("namePoolChunk is null.");
     memcpy(name, (void *) (namePoolChunk + 2), nameLength < NAME_BUFFER ? nameLength : NAME_BUFFER);
     auto result = _strings.emplace(fname.ComparisonIndex, std::string(name));
     return result.first->second;
