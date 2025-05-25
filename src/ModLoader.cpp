@@ -23,8 +23,10 @@ DWORD WINAPI ModLoaderThread(LPVOID)
         Patcher::clear();
         return 1;
     }
-    /*while (HookDataManager::getDataManager() == nullptr)
+    while (HookDataManager::getDataManager() == nullptr)
         Sleep(1);
+
+    /*
     UStaticDataManager *manager = reinterpret_cast<UStaticDataManager *>(HookDataManager::getDataManager());
     std::cout << ML << "DataManager found : 0x" << std::hex << HookDataManager::getDataManager() << std::dec << std::endl;
     while (manager->m_ItemTitleData == nullptr)
@@ -40,6 +42,8 @@ DWORD WINAPI ModLoaderThread(LPVOID)
         }
     }*/
     ModEnvironnement::SetupEnvironnement();
+
+    return 0;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)

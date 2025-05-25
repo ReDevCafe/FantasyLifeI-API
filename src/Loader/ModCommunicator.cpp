@@ -15,6 +15,18 @@ void* ModCommunicator::__internal__get_registry_object(char REGISTRY_TYPE, const
 	return nullptr;
 }
 
+UStaticDataManager* ModCommunicator::__internal__get_static_data_manager(void)
+{
+	UStaticDataManager *manager = reinterpret_cast<UStaticDataManager *>(HookDataManager::getDataManager());
+	if(!manager)
+	{
+		mlLogger.error("StaticDataManager instance appears to have been lost???");
+		return nullptr;
+	}
+
+	return manager;
+}
+
 void ModCommunicator::LoadMod(const char* dll, ModObject modO)
 {
 	HMODULE mod = LoadLibraryA(dll);
