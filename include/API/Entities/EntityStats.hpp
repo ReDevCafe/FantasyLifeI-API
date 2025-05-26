@@ -7,6 +7,7 @@
 
 class EntityStats : public GameObjectProxy<FGDCharaParameter> {
     public:
+        EntityStats(FGDCharaParameter &parameter) : GameObjectProxy(parameter) {};
         void setHP(int32_t hp);
         void setSP(int32_t sp);
         void setPhysicalAttack(int32_t physicalAttack);

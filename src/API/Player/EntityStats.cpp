@@ -1,4 +1,4 @@
-#include "API/Player/EntityStats.hpp"
+#include "API/Entities/EntityStats.hpp"
 
 // void EntityStats::setHP(int32_t hp) {
 //     this->_object.para

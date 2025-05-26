@@ -14,6 +14,7 @@ const uintptr_t GNAME_OFFSET = 0xBF3DA40;
 class Utils {
     public:
         static std::string &FNameToString(uintptr_t baseAddress, FName fname);
+        static std::string &FNameToString(FName fname);
         static void EnableAnsiColors();
     protected:
     private:

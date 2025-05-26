@@ -1,4 +1,5 @@
 #include "Loader/ModCommunicator.hpp"
+#include "ModLoader.hpp"
 
 void ModCommunicator::__internal__log(std::string data)
 {
@@ -17,7 +18,7 @@ void* ModCommunicator::__internal__get_registry_object(char REGISTRY_TYPE, const
 
 UStaticDataManager* ModCommunicator::__internal__get_static_data_manager(void)
 {
-	UStaticDataManager *manager = reinterpret_cast<UStaticDataManager *>(HookDataManager::getDataManager());
+	UStaticDataManager *manager = ModLoader::gameData->getStaticDataManager();
 	if(!manager)
 	{
 		mlLogger.error("StaticDataManager instance appears to have been lost???");
