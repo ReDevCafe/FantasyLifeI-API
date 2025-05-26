@@ -1,15 +1,11 @@
 #ifndef UGDDCHARASTATUS_HPP
     #define UGDDCHARASTATUS_HPP
-    #include "Engine/TMap.hpp"
+
+    #include "Engine/DataTable.hpp"
     #include "Engine/UObject.hpp"
-    #include "Engine/FHandle.hpp"
-    #include "UGDSLifeData.hpp"
-
-struct FCharaStatusHandle : FHandle
-{};
-
-struct FInventoryHandle : FHandle
-{};
+    #include "Game/Life/UGDSLifeData.hpp"
+    #include "Game/Character/FCharacterDetailInfo.hpp"
+    #include "Game/Inventory/Inventory.hpp"
 
 struct FCharaStatusP
 {

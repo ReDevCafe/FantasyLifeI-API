@@ -2,6 +2,8 @@
 #ifndef DATATABLE_HPP_
     #define DATATABLE_HPP_
 
+    #include <cstdint>
+
 struct FTableRowBase {
     unsigned char m_unknown[8];
 };

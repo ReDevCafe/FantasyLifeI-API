@@ -2,7 +2,7 @@
     #define USTATICDATAMANAGER_HPP
 
     #include "Engine/UObject.hpp"
-    #include "UGDDCharaStatus.hpp"
+    #include "Game/Character/UGDDCharaStatus.hpp"
 
 class UDynamicDataManager : public UGameInstanceSubsystem 
 {
