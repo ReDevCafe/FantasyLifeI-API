@@ -8,7 +8,6 @@
     #include <Windows.h>
     #include "Loader/ModObject.hpp"
     #include "Logger/ModLoaderLogger.hpp"
-    #include <Patcher/Patches/HookDataManager.hpp>
 
 class ModCommunicator
 {

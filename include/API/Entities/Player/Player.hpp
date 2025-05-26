@@ -6,11 +6,11 @@
 
 class Player {
     public:
-        Player();
-        ~Player();
+        Player(FGDCharaParameter &charaParameter);
+        ~Player() = default;
+        EntityStats stats;
     protected:
     private:
-        EntityStats entity;
 };
 
 #endif /* !PLAYER_HPP_ */
