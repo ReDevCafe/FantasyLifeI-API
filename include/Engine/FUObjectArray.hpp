@@ -32,7 +32,7 @@ class FChunkedFixedUObjectArray {
 class FUObjectArray {
     public:
         FChunkedFixedUObjectArray ObjObjects;
-        FCriticalSection ObjObjectsCritical;
+        mutable FCriticalSection ObjObjectsCritical;
 
         UObject *getObject(uint32_t index);
         void lock();

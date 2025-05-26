@@ -1,4 +1,5 @@
 #include "Utils.hpp"
+#include "ModLoader.hpp"
 
 std::unordered_map<FNameEntryId, std::string> Utils::_strings; 
 
@@ -15,6 +16,10 @@ std::string &Utils::FNameToString(uintptr_t baseAddress, FName fname) {
     memcpy(name, (void *) (namePoolChunk + 2), nameLength < NAME_BUFFER ? nameLength : NAME_BUFFER);
     auto result = _strings.emplace(fname.ComparisonIndex, std::string(name));
     return result.first->second;
+}
+
+std::string &Utils::FNameToString(FName fname) {
+    return FNameToString(ModLoader::gameData->getBaseAddress(), fname);
 }
 
 void Utils::EnableAnsiColors()
