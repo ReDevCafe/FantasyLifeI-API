@@ -56,10 +56,30 @@ class UField : public UObject {
         UField *next;
 };
 
+class FField {
+	public:
+	FField* Next; // 8
+	void* Owner;  // 16
+	FName Name; // 24  
+	uint32_t Flags; // 28
+	uint16_t Size; // 30
+	uint16_t Alignment; // 32
+	uint16_t Id;
+};
+
+class FProperty : public FField {
+	public:
+		int32_t ArrayDim;
+		int32_t ElementSize;
+		uint64_t PropertyFlags;
+		int32_t Offset_Internal;
+};
+
 class UStruct : public UField {
     public:
         UStruct *superStruct;
-        UField *childrien;
+        UField *children;
+		FField* ChildProperties;
 };
 
 class USubSystem : public UObject 
@@ -74,5 +94,10 @@ class UGameInstanceSubsystem : public USubSystem
 };
 
 class UClass : public UStruct {};
+
+class UScriptStruct : public UStruct { 
+	public:
+		unsigned char                                      UnknownData00_1[0x10];                                      // 0x00B0   (0x0010)  MISSED
+};
 
 #endif /* !UOBJECT_HPP_ */

@@ -2,8 +2,8 @@
 #ifndef ENTITYSTATS_HPP_
     #define ENTITYSTATS_HPP_
 
-    #include "API/GameObjectProxy.hpp"
-    #include "Game/UGDSCharaParameter.hpp"
+    #include "../GameObjectProxy.hpp"
+    #include "Game/Character/UGDSCharaParameter.hpp"
 
 class EntityStats : public GameObjectProxy<FGDCharaParameter> {
     public:

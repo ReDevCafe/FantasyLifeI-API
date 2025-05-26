@@ -3,7 +3,6 @@
 
     #include "Engine/UGameDataAsset.hpp"
     #include "Engine/DataTable.hpp"
-    #include "Game/UGDSItemText.hpp"
     #include "Game/FGDStCommon.hpp"
 
 class FGDLifeText_Noun : public FTableRowBase
