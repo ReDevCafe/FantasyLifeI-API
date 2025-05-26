@@ -19,11 +19,6 @@ if(MSVC)
     set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/DEF:${CMAKE_CURRENT_SOURCE_DIR}/version_proxy.def")
 endif()
 
-target_precompile_headers(${PROJECT_NAME} 
-    PUBLIC
-        include/pch.h
-)
-
 target_link_libraries(${PROJECT_NAME} PUBLIC
     user32
     kernel32

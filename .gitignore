@@ -1,8 +1,8 @@
 *
 !include/
-!include//*
+!include/**/*
 !src/
-!src//*
+!src/**/*
 !CMakeLists.txt
 !README.md
 !version_proxy.def
