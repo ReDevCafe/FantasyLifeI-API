@@ -5,6 +5,18 @@
     #include "Engine/UGameDataAsset.hpp"
     #include "UGDSRecipeData.hpp"
 
+enum class ELicenseRank : uint8_t
+{
+	None          = 0,
+	Apprentice    = 1,
+	Novice        = 2,
+	Pretty        = 3,
+	Able          = 4,
+	Expert        = 5,
+	Master        = 6,
+	Hero          = 7
+};
+
 enum class ELifeCategory : uint8_t
 {
     None        = 0,

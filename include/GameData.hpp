@@ -9,6 +9,7 @@
 
     #include <type_traits>
     #include <functional>
+    #include "Game/UDynamicDataManager.hpp"
 
 constexpr uintptr_t GOBJECTS_OFFSET = 0xBFF47F0;
 constexpr uintptr_t GNAMES_OFFSET =  0xBF3DA40;
@@ -23,17 +24,18 @@ class GameData {
         ~GameData() = default;
 
         template<UObjectBase T = void>
-        T *getUObject(const std::string &name, bool safe = true) {
+        T *getUObject(const std::string &name, bool safe = true, uint32_t nth = 0) {
             if (_gObjects == nullptr) return nullptr;
             if (_cache.contains(name))
                 return reinterpret_cast<T *>(_cache.at(name));
             UObject *object = nullptr;
+            uint32_t counter = 0;
             if (safe)
                 _gObjects->lock();
             for (int i = 0; i < _gObjects->ObjObjects.NumElements; ++i) {
                 object = _gObjects->getObject(i);
                 if (object == nullptr) continue;
-                if (Utils::FNameToString(_baseAddress, object->NamePrivate) == name) break;
+                if (Utils::FNameToString(_baseAddress, object->NamePrivate) == name && ++counter > nth) break;
                 object = nullptr;
             }
             if (safe)
@@ -48,13 +50,14 @@ class GameData {
         void *getGNames();
         void *getGWorld();
         UStaticDataManager *getStaticDataManager();
-        void *getDynamicDataManager();
+        UDynamicDataManager *getDynamicDataManager();
+        Player *getPlayer();
 
         template<typename T = void *>
-        void waitObject(T *object, const std::string &name = "") {
+        void waitObject(T *object, const std::string &name = "", uint32_t nth = 0) {
             while (*object == nullptr) {
                 if (name != "")
-                    *object = this->getUObject<typename std::remove_pointer<T>::type>(name, false);
+                    *object = this->getUObject<typename std::remove_pointer<T>::type>(name, false, nth);
                 Sleep(1);
             }
         }
@@ -65,7 +68,7 @@ class GameData {
         void *_gNames;
         void *_gWorld;
         UStaticDataManager *_staticDataManager;
-        void *_dynamicDataManager;
+        UDynamicDataManager *_dynamicDataManager;
         std::unique_ptr<Player> _player;
         std::unordered_map<std::string, UObject *> _cache;
 };

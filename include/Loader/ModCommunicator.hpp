@@ -1,7 +1,6 @@
 #ifndef MODCOMMUNICATOR_HPP
     #define MODCOMMUNICATOR_HPP
 
-    #endif // !MODCOMMUNICATOR_HPP 
     #include "ModAPI.hpp"
     #include "ModObject.hpp"
     #include <iostream>
@@ -18,10 +17,10 @@ class ModCommunicator
         static void LoadMod(const char* dll, ModObject meta);
 
     private:
-        static void                 __internal__log                    (std::string message);
-        static void                 __internal__command_register       (const char* name, void (*callback)());
-        static void*               __internal__get_registry_object     (char REGISTRY_TYPE, const char* name);
-        static UStaticDataManager* __internal__get_static_data_manager (void);
+        static void                 __internal__log                     (std::string message);
+        static void                 __internal__command_register        (const char* name, void (*callback)());
+        static void*                __internal__get_registry_object     (char REGISTRY_TYPE, const char* name);
+        static UStaticDataManager*  __internal__get_static_data_manager (void);
 
     protected:
         inline static ModAPI api =
@@ -32,3 +31,5 @@ class ModCommunicator
             __internal__get_static_data_manager
         };
 };
+
+#endif // !MODCOMMUNICATOR_HPP 

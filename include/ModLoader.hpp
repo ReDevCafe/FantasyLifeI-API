@@ -3,6 +3,7 @@
 
     #include "GameData.hpp"
     #include "Logger/ModLoaderLogger.hpp"
+    #include "Loader/ModEnvironnement.hpp"
     #include "Utils.hpp"
 
 class ModLoader {

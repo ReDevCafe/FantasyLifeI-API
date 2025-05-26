@@ -62,6 +62,17 @@ class UStruct : public UField {
         UField *childrien;
 };
 
+class USubSystem : public UObject 
+{
+	public:
+		unsigned char	m_unknown[0x8];
+};
+
+class UGameInstanceSubsystem : public USubSystem
+{
+	public:
+};
+
 class UClass : public UStruct {};
 
 #endif /* !UOBJECT_HPP_ */

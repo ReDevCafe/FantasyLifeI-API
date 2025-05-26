@@ -1,4 +1,3 @@
-
 #ifndef FNAME_HPP_
     #define FNAME_HPP_
 
