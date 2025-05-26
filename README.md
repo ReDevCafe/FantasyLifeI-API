@@ -57,4 +57,3 @@ Fantasy Life I/
     │   └── MyReallyReallyCuteMod.dll
     │
     └── OtherMod/... 
-```
