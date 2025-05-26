@@ -3,15 +3,8 @@
 
     #include "Engine/DataTable.hpp"
     #include "Engine/UGameDataAsset.hpp"
-    #include "UGDSRecipeData.hpp"
-
-enum class ELifeCategory : uint8_t
-{
-    None        = 0,
-    Battle      = 1,
-    Gatherer    = 2,
-    Crafter     = 3
-};
+    
+    #include "Life.hpp"
 
 class FGDLifeData : public FTableRowBase
 {

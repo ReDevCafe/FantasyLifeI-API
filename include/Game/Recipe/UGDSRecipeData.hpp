@@ -1,13 +1,15 @@
 #ifndef UGDSRECIPEDATA_HPP_
     #define UGDSRECIPEDATA_HPP_
 
-    #include "../Engine/UGameDataAsset.hpp"
-    #include "../Engine/DataTable.hpp"
-    #include "../Game/FGDItemData.hpp"
+    #include "Engine/UGameDataAsset.hpp"
+    #include "Engine/DataTable.hpp"
+    #include "Game/Item/FGDItemData.hpp"
     #include "Game/FGDStCommon.hpp"
+	#include "Game/Recipe/Recipe.hpp"
+	#include "Game/Types.hpp"
+	#include "Game/Life/Life.hpp"
 
-enum class ERecipeItemSeries : uint8_t
-{
+enum class ERecipeItemSeries : uint8_t {
 	Invalid = 0,
 	MetalWeapon = 10,
 	MetalLifeTool = 11,
@@ -45,15 +47,7 @@ enum class ERecipeItemSeries : uint8_t
 	Exterior = 115
 };
 
-enum class ERecipeType : uint8_t
-{
-	None = 0,
-	Life = 1,
-	Random = 2
-};
-
-enum class ERecipeCategory : uint8_t
-{
+enum class ERecipeCategory : uint8_t {
 	None = 0,
 	Story = 1,
 	Weapon = 2,
@@ -67,41 +61,6 @@ enum class ERecipeCategory : uint8_t
 	Favorite = 10
 };
 
-enum class ERandomRecipeType : uint8_t
-{
-	None = 0,
-	Level1 = 1,
-	Level2 = 2
-};
-
-enum class EItemCraftAddMaterialType : uint8_t
-{
-	None = 0,
-	Weapon = 1,
-	Armor = 2,
-	PickLifeTool = 3,
-	CraftLifeTool = 4
-};
-
-enum class ELifeType : uint8_t
-{
-	None = 0,
-	NoMakeup = 1,
-	Knight = 2,
-	Mercenary = 3,
-	Hunter = 4,
-	Wizard = 5,
-	Miner = 6,
-	Lumberjack= 7,
-	Fisherman = 8,
-	Farmer = 9,
-	Cook = 10,
-	Blacksmith = 11,
-	Carpenter = 12,
-	Needleworker = 13,
-	Alchemist = 14,
-	Artist = 15
-};
 
 class FGDRecipeData_LifeParamInfo {
     public:

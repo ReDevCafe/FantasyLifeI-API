@@ -1,8 +1,8 @@
 #ifndef UGDSCHARAPARAMETER_HPP_
     #define UGDSCHARAPARAMETER_HPP_
 
-    #include "../Engine/DataTable.hpp"
-    #include "../Engine/UGameDataAsset.hpp"
+    #include "Engine/DataTable.hpp"
+    #include "Engine/UGameDataAsset.hpp"
 
 
 class FGDCharaParameterBase : public FTableRowBase {

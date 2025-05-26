@@ -4,14 +4,6 @@
     #include "Engine/UGameDataAsset.hpp"
     #include "Engine/DataTable.hpp"
 
-enum class EGenderType : uint8_t
-{
-	None                                                                = 0,
-	Male                                                                = 1,
-	Female                                                              = 2,
-	Unknown                                                             = 3
-};
-
 class FGDCharaData : public FTableRowBase 
 {
     public:

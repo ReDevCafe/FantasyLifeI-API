@@ -1,16 +1,16 @@
 #ifndef USTATICDATAMANAGER_HPP_
     #define USTATICDATAMANAGER_HPP_
 
-    #include "../Engine/UObject.hpp"
-    #include "UGDSCharaParameter.hpp"
-    #include "UGDSRecipeData.hpp"
-    #include "UGDSItemText.hpp"
-    #include "UGDSItemRecipeData.hpp"
-    #include "UGDSCharaLevelConfig.hpp"
-    #include "UGDSCharaData.hpp"
-    #include "UGDSLifeData.hpp"
-    #include "UGDSLifeText.hpp"
-    #include "UGDSLifeText_Noun.hpp"
+    #include "Engine/UObject.hpp"
+    #include "Game/Character/UGDSCharaParameter.hpp"
+    #include "Game/Recipe/UGDSRecipeData.hpp"
+    #include "Game/Item/UGDSItemText.hpp"
+    #include "Game/Item/UGDSItemRecipeData.hpp"
+    #include "Game/Character/UGDSCharaLevelConfig.hpp"
+    #include "Game/Character/UGDSCharaData.hpp"
+    #include "Game/Life/UGDSLifeData.hpp"
+    #include "Game/Life/UGDSLifeText.hpp"
+    #include "Game/Life/UGDSLifeText_Noun.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:

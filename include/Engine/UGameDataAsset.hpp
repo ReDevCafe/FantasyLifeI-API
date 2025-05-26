@@ -2,7 +2,7 @@
     #define UGAMEDATAASSET_HPP_
 
     #include "UObject.hpp"
-    #include "TMap.hpp"
+    #include "DataTable.hpp"
 
 class FGDId {
     public:

@@ -1,6 +1,8 @@
 #ifndef FGDSTCOMMON_HPP
     #define FGDSTCOMMON_HPP
-    #include "Engine/TMap.hpp"
+
+    #include "Engine/DataTable.hpp"
+    #include "Engine/FName.hpp"
     
 class FGDStCommon_TextInfo {
     public:
