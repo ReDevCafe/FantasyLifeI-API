@@ -3,7 +3,25 @@
 
     #include "Engine/DataTable.hpp"
     #include "Engine/FName.hpp"
-    
+    #include "Game/Item/FGDItemData.hpp"
+
+class FGDAuto { 
+    public:
+        uint32_t m_offset;
+        uint32_t m_dataSize;
+        UGameDataAsset *m_pAsset;
+};
+
+struct FGDStCommon_ElementAttrParam
+{ 
+	int32_t     fire;  
+	int32_t     water;  
+	int32_t     wind;  
+	int32_t     earth;  
+	int32_t     shine;  
+	int32_t     dark;  
+};
+
 class FGDStCommon_TextInfo {
     public:
         int8_t subID;
@@ -148,6 +166,25 @@ class FGDStCommon_NounInfo
         FString                                nounPluralIndefiniteArticle_ko;                          
         FString                                nounPluralPrefix_ko;                                     
         FString                                nounPluralForm_ko;    
+};
+
+class FGDStCommon_CondCmd {
+    public:
+        FName Cmd;
+        TArray<FGDAuto> arg;
+};
+
+class FGDStCommon_PriceInfo {
+    public:
+        TArray<int32_t> priceBuyRichList;
+        TArray<int32_t> priceSellRichList;
+        TArray<int32_t> priceBuySparkleList;
+        TArray<int32_t> priceBuyTourCoinList;
+        TArray<int32_t> priceBuyGoddessSeedList;
+        TArray<int32_t> priceBuyShineGoddessSeedList;
+        TArray<int32_t> priceBuyRainbowGoddessSeedList;
+        TArray<int32_t> priceTradeRebuildStoneList;
+        TArray<int32_t> priceBuyChestnut;
 };
 
 #endif // !FGDSTCOMMON_HPP

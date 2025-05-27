@@ -92,6 +92,4 @@ enum class EItemRankType : uint8_t
 	Dec = 10
 };
 
-
-
 #endif /* !ITEM_HPP_ */

@@ -7,32 +7,7 @@
 
 	#include "Item.hpp"
     #include "Game/Types.hpp"
-
-class FGDAuto { 
-    public:
-        uint32_t m_offset;
-        uint32_t m_dataSize;
-        UGameDataAsset *m_pAsset;
-};
-
-class FGDStCommon_CondCmd {
-    public:
-        FName Cmd;
-        TArray<FGDAuto> arg;
-};
-
-class FGDStCommon_PriceInfo {
-    public:
-        TArray<int32_t> priceBuyRichList;
-        TArray<int32_t> priceSellRichList;
-        TArray<int32_t> priceBuySparkleList;
-        TArray<int32_t> priceBuyTourCoinList;
-        TArray<int32_t> priceBuyGoddessSeedList;
-        TArray<int32_t> priceBuyShineGoddessSeedList;
-        TArray<int32_t> priceBuyRainbowGoddessSeedList;
-        TArray<int32_t> priceTradeRebuildStoneList;
-        TArray<int32_t> priceBuyChestnut;
-};
+    #include <Game/FGDStCommon.hpp>
 
 class FGDItemData : public FTableRowBase {
     public:
@@ -59,16 +34,18 @@ class FGDItemData : public FTableRowBase {
         EItemEffectType dropEffType;
 };
 
-class FGDItemTitleData : public FTableRowBase {
-	public:
-		EItemTitleType itemTitleType;
-		FName titleText;
-		FName iconID;
+struct FGDItemEquipData : FGDItemData
+{
+	FName			modelId;
+	bool			notAggregated;
+	unsigned char	unknown[0x7];
+	TArray<FName>	addStatusLotTableList;
+	TArray<FName>	addSkillLotTable;
 };
 
-class UGDSItemTitleData : public UGameDataAsset {
-	public:
-		TMap<char, FGDItemTitleData> m_dataMap;
+struct FGDItemUniqueSkillEquipData : FGDItemEquipData
+{
+	TArray<FName>	SkillID;
 };
 
 #endif /* !FGDITEMDATA_HPP_ */

@@ -1,4 +1,7 @@
 #include "API/Life/LifeData.hpp"
+#include "GameData.hpp"
+#include "Utils.hpp"
+#include "ModLoader.hpp"
 
 static FString _____nFString(L"");
 

@@ -4,9 +4,6 @@
     #include "Game/Life/UGDSLifeData.hpp"
     #include "API/Language.hpp"
     #include "API/GameObjectProxy.hpp"
-    #include "GameData.hpp"
-    #include "Utils.hpp"
-    #include "ModLoader.hpp"
 
 class LifeData : public GameObjectProxy<FGDLifeData>
 {   

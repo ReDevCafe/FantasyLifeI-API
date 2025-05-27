@@ -11,6 +11,9 @@
     #include "Game/Life/UGDSLifeData.hpp"
     #include "Game/Life/UGDSLifeText.hpp"
     #include "Game/Life/UGDSLifeText_Noun.hpp"
+    #include "Game/Item/UGDSItemLifeToolsData.hpp"
+    #include "Game/Item/UGDSItemText_Noun.hpp"
+    #include "Game/Item/UGDSItemArmorData.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -146,11 +149,11 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemImportantData_Property;
         void *m_ItemWeaponData;
 		USDMDataPropetyClass *m_ItemWeaponData_Property;
-        void *m_ItemLifeToolsData;
+        UGDSItemLifeToolsData *m_ItemLifeToolsData;
 		USDMDataPropetyClass *m_ItemLifeToolsData_Property;
         void *m_ItemRodData;
 		USDMDataPropetyClass *m_ItemRodData_Property;
-        void *m_ItemArmorData;
+        UGDSItemArmorData *m_ItemArmorData;
 		USDMDataPropetyClass *m_ItemArmorData_Property;
         void *m_ItemEquipModelData;
 		USDMDataPropetyClass *m_ItemEquipModelData_Property;
@@ -170,7 +173,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemPowerUpData_Property;
         UGDSItemText *m_ItemText;
 		USDMDataPropetyClass *m_ItemText_Property;
-        void *m_ItemText_Noun;
+        UGDSItemText_Noun *m_ItemText_Noun;
 		USDMDataPropetyClass *m_ItemText_Noun_Property;
         void *m_CommonItemTableSetting;
 		USDMDataPropetyClass *m_CommonItemTableSetting_Property;
@@ -496,7 +499,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemSeriesData_Property;
         void *m_ItemQualityGroup;
 		USDMDataPropetyClass *m_ItemQualityGroup_Property;
-        UGDSItemTitleData *m_ItemTitleData;
+        void *m_ItemTitleData;
 		USDMDataPropetyClass *m_ItemTitleData_Property;
         void *m_BattleReactionChange;
 		USDMDataPropetyClass *m_BattleReactionChange_Property;

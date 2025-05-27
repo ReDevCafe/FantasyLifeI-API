@@ -1,18 +1,46 @@
 #include "ModLoader.hpp"
 
-GameData *ModLoader::gameData = nullptr;
-
 #include <fstream>
 #include "Engine/FUObjectArray.hpp"
 #include <API/Life/ULifeData.hpp>
-#include "Engine/TMap.hpp"
-#include <API/Life/LifeData.hpp>
+#include "Engine/DataTable.hpp"
+#include "API/Life/LifeData.hpp"
+#include "API/Item/ItemLifeToolsData.hpp"
+#include "GameData.hpp"
+
+GameData *ModLoader::gameData = nullptr;
 
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     mlLogger.info("Mod loader has been started");
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
 
-    Sleep(7000);
+    Sleep(10000);
+
+    // std::string ntm = gameData->getItemText_Noun("ilt01000020")->nounSingularForm_fr.ToString();
+    // mlLogger.warn(ntm);
+
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data.Count; i++)
+    {
+        auto no = gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
+        FName ronpiche = gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.First;
+
+        mlLogger.info(Utils::FNameToString(ronpiche));
+        gameData->_cacheNounInfo.emplace(Utils::FNameToString(ronpiche), no);
+    } 
+
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data.Count; i++)
+    {
+        auto jsp = gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second;
+        ItemLifeToolsData item = ItemLifeToolsData(jsp);
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), item);
+
+        mlLogger.warn("| ", item.GetIdentifier(), " | ", item.GetName(LANG::ENGLISH), " |");
+    }
+
+    //FIXME: FIX CA CA MARCHE PAS LALALALALALALA
+    gameData->_cacheItemData.at("ilt07000020").SetName(LANG::ENGLISH, L"Ratio");
+
     while(true) 
     {
         if(gameData->getDynamicDataManager()->GDDCharaStatus->m_permanent.m_stAvatarP.Count == 0) continue;

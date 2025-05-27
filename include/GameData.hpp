@@ -2,14 +2,14 @@
     #define GAMEDATA_HPP_
 
     #include "Engine/FUObjectArray.hpp"
-    #include "Game/UStaticDataManager.hpp"
+    #include "Game/Global/UStaticDataManager.hpp"
     #include "API/Entities/Player/Player.hpp"
     #include "Utils.hpp"
     #include "Logger/ModLoaderLogger.hpp"
-
     #include <type_traits>
     #include <functional>
-    #include "Game/UDynamicDataManager.hpp"
+    #include "Game/Global/UDynamicDataManager.hpp"
+    #include "API/Item/ItemData.hpp"
 
 constexpr uintptr_t GOBJECTS_OFFSET = 0xBFF47F0;
 constexpr uintptr_t GNAMES_OFFSET =  0xBF3DA40;
@@ -61,9 +61,12 @@ class GameData {
                 Sleep(1);
             }
         }
+
+        std::unordered_map<std::string, FGDStCommon_NounInfo*> _cacheNounInfo;
+        std::unordered_map<std::string, ItemData> _cacheItemData;
     protected:
     private:
-        uintptr_t _baseAddress;typename 
+        uintptr_t _baseAddress; 
         FUObjectArray *_gObjects;
         void *_gNames;
         void *_gWorld;
@@ -71,6 +74,7 @@ class GameData {
         UDynamicDataManager *_dynamicDataManager;
         std::unique_ptr<Player> _player;
         std::unordered_map<std::string, UObject *> _cache;
+
 };
 
 #endif /* !GAMEDATA_HPP_ */
