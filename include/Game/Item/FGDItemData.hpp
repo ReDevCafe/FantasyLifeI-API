@@ -34,16 +34,17 @@ class FGDItemData : public FTableRowBase {
         EItemEffectType dropEffType;
 };
 
-struct FGDItemEquipData : FGDItemData
+struct FGDItemEquipData : public  FGDItemData
 {
-	FName			modelId;
-	bool			notAggregated;
-	unsigned char	unknown[0x7];
-	TArray<FName>	addStatusLotTableList;
-	TArray<FName>	addSkillLotTable;
+    public:
+        FName			modelId;
+        bool			notAggregated;
+        unsigned char	unknown[0x7];
+        TArray<FName>	addStatusLotTableList;
+        TArray<FName>	addSkillLotTable;
 };
 
-struct FGDItemUniqueSkillEquipData : FGDItemEquipData
+struct FGDItemUniqueSkillEquipData : public FGDItemEquipData
 {
 	TArray<FName>	SkillID;
 };

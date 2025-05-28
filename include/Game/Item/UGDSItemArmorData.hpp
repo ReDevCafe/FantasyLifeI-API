@@ -6,15 +6,14 @@
     #include "Game/Item/FGDItemData.hpp"
     #include "Game/FGDStCommon.hpp"
 
-
-
-struct FGDItemArmorData : FGDItemUniqueSkillEquipData
+struct FGDItemArmorData : public FGDItemUniqueSkillEquipData
 {
-    bool                            disableBurial;
-    unsigned char                   unknown[0x7];
-    TArray<int32_t>                 physicalDefenseList;
-    TArray<int32_t>                 magicDefenseList;
-    FGDStCommon_ElementAttrParam    attrResist;
+    public:
+        bool                            disableBurial;
+        unsigned char                   unknown[0x7];
+        TArray<int32_t>                 physicalDefenseList;
+        TArray<int32_t>                 magicDefenseList;
+        FGDStCommon_ElementAttrParam    attrResist;
 };
 
 class UGDSItemArmorData : public UGameDataAsset

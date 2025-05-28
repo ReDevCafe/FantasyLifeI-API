@@ -4,8 +4,12 @@
 
 std::string ItemData::GetIdentifier()
 {
-    mlLogger.warn("GetIdentifier, ", Utils::FNameToString(this->_object.ID));
     return Utils::FNameToString(this->_object.ID);
+}
+
+std::string ItemData::GetNameIdentifier()
+{
+    return Utils::FNameToString(this->_object.nameId);
 }
 
 std::string ItemData::GetName(LANG lang)
@@ -15,6 +19,5 @@ std::string ItemData::GetName(LANG lang)
 
 void ItemData::SetName(LANG lang, FString string)
 {
-    mlLogger.warn("SetName, ", Utils::FNameToString(this->_object.nameId));
     ModLoader::gameData->_cacheNounInfo.at(Utils::FNameToString(this->_object.nameId))->nounSingularForm_en = string;
 }

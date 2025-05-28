@@ -6,7 +6,13 @@
 #include "Engine/DataTable.hpp"
 #include "API/Life/LifeData.hpp"
 #include "API/Item/ItemLifeToolsData.hpp"
+#include "API/Item/ItemArmorData.hpp"
 #include "GameData.hpp"
+#include "API/Item/ItemIdentifier.hpp"
+#include "API/Item/ItemMaterialData.hpp"
+#include "API/Item/ItemConsumeData.hpp"
+#include "API/Item/ItemImportantData.hpp"
+#include <memory>
 
 GameData *ModLoader::gameData = nullptr;
 
@@ -24,52 +30,72 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
         auto no = gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         FName ronpiche = gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.First;
 
-        mlLogger.info(Utils::FNameToString(ronpiche));
         gameData->_cacheNounInfo.emplace(Utils::FNameToString(ronpiche), no);
     } 
 
     for (int i = 0; i < gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data.Count; i++)
     {
-        auto jsp = gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second;
-        ItemLifeToolsData item = ItemLifeToolsData(jsp);
+        ItemLifeToolsData item{ gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second };
 
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), item);
-
-        mlLogger.warn("| ", item.GetIdentifier(), " | ", item.GetName(LANG::ENGLISH), " |");
+        gameData->_cacheItemData.emplace(item.GetIdentifier(),  std::make_shared<ItemLifeToolsData>(item));
     }
 
-    //FIXME: FIX CA CA MARCHE PAS LALALALALALALA
-    gameData->_cacheItemData.at("ilt07000020").SetName(LANG::ENGLISH, L"Ratio");
-
-    while(true) 
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemArmorData->m_dataMap.Data.Count; i++)
     {
-        if(gameData->getDynamicDataManager()->GDDCharaStatus->m_permanent.m_stAvatarP.Count == 0) continue;
-        auto truc = gameData->getDynamicDataManager()->GDDCharaStatus->m_permanent.m_stAvatarP[0];
-        std::string id = Utils::FNameToString(truc.m_lifeId);
-        mlLogger.warn("Level de merde: ", truc.m_lv.Data[0].Value.Second, "Exp de merde: ", truc.m_exp.Data[0].Value.Second, " Life:", id);
-        Sleep(2000);
+        ItemArmorData item{ gameData->getStaticDataManager()->m_ItemArmorData->m_dataMap.Data[i].Value.Second };
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemArmorData>(item));
     }
 
-    // TEST
-    /*
-    mlLogger.info(gameData->getStaticDataManager()->m_LifeData->m_dataMap.Data.Count);
-    UGDSLifeData& lifes = ULifeData(*gameData->getStaticDataManager()->m_LifeData).getObject();
-    LifeData life = LifeData(ULifeData(*gameData->getStaticDataManager()->m_LifeData).getLife(ELifeType::Cook));
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemMaterialData->m_dataMap.Data.Count; i++)
+    {
+        ItemMaterialData item{ gameData->getStaticDataManager()->m_ItemMaterialData->m_dataMap.Data[i].Value.Second };
+
+        //gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemMaterialData>(item));
+    }
+
+    // CAUSE CRASH BECAUSE MONEY HAVE "NONE"
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemConsumeData->m_dataMap.Data.Count; i++)
+    {
+        ItemConsumeData item{ gameData->getStaticDataManager()->m_ItemConsumeData->m_dataMap.Data[i].Value.Second };
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemConsumeData>(item));
+    }
+
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemImportantData->m_dataMap.Data.Count; i++)
+    {
+        ItemImportantData item{ gameData->getStaticDataManager()->m_ItemImportantData->m_dataMap.Data[i].Value.Second };
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemImportantData>(item));
+    }
     
-    life.getObject().Category = ELifeCategory::Gatherer;
-    life.getObject().emblemIconId = lifes.m_dataMap.Data[8].Value.Second.portraitIconId;
-    life.Name(LANG::ENGLISH) = FString(L"WAWAWA");
-    life.Description(LANG::ENGLISH) = FString(L"Skibidi skibidi\n hawk tuah hawk\n Skibidi edging and skibidi mog\n Edging and gooning and learning to tax");
-
-    for(int i = 0; i < lifes.m_dataMap.Data.Count; ++i)
+    //FIXME: FIX CA CA MARCHE PAS LALALALALALALA
+    for(auto item = gameData->_cacheItemData.begin(); item != gameData->_cacheItemData.end(); ++item)
     {
-        FName lifeName        = lifes.m_dataMap.Data[i].Value.First;
-        FName testId          = lifes.m_dataMap.Data[i].Value.Second.emblemIconId;
-        std::string testIdStr = Utils::FNameToString(testId);
-        std::string uwu = LifeData(lifes.m_dataMap.Data[i].Value.Second).Name(LANG::ENGLISH).ToString();
+        if(item->second->GetNameIdentifier() == "None") 
+        {   
+            mlLogger.warn("#define BAD \"", item->second->GetIdentifier(), "\"");
+            continue;   // Probably miss some but fuck it
+        }
+        std::string itemName = item->second->GetName(LANG::ENGLISH);
+        for(auto& c: itemName)
+        {
+            if(c == ' ' || c == '\'' || c == '-') c = '_';
+            else c = std::toupper(c);
+        }
 
-        mlLogger.warn("     [",i,"] {", Utils::FNameToString(lifeName), ", L\"", uwu, "\" { name: \"", testIdStr, "\", fNameIndex: ", testId.ComparisonIndex, ", fNameNum: ", testId.Number, "}}");
-    }*/
+        mlLogger.warn("#define ", itemName, " \"", item->second->GetIdentifier(), "\"");
+    }
+    /*
+     * RACCOON_HEAD iam02000070 SEND RACC_MDL -> TAIL_MDL
+     *
+
+    auto data = std::dynamic_pointer_cast<ItemArmorData>(gameData->_cacheItemData.at(TAILOR_CAP));
+    data->SetName(LANG::ENGLISH, L"Ratio");
+    data->GetModel();
+    auto data1 = std::dynamic_pointer_cast<ItemArmorData>(gameData->_cacheItemData.at(RACCOON_HEAD));
+    data1->GetModel();
+    */
 
     //! TEST
     return 0;

@@ -14,6 +14,9 @@
     #include "Game/Item/UGDSItemLifeToolsData.hpp"
     #include "Game/Item/UGDSItemText_Noun.hpp"
     #include "Game/Item/UGDSItemArmorData.hpp"
+    #include "Game/Item/UGDSItemImportantData.hpp"
+    #include "Game/Item/UGDSItemMaterialData.hpp"
+    #include "Game/Item/UGDSItemConsumeData.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -135,9 +138,9 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_PlantDungeonRoomTableData_Property;
         void *m_PlantDungeonRoomTableGroupData;
 		USDMDataPropetyClass *m_PlantDungeonRoomTableGroupData_Property;
-        void *m_ItemMaterialData;
+        UGDSItemMaterialData *m_ItemMaterialData;
 		USDMDataPropetyClass *m_ItemMaterialData_Property;
-        void *m_ItemConsumeData;
+        UGDSItemConsumeData *m_ItemConsumeData;
 		USDMDataPropetyClass *m_ItemConsumeData_Property;
         void *m_ItemCookParamData;
 		USDMDataPropetyClass *m_ItemCookParamData_Property;
@@ -145,7 +148,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemCookParamValue_Property;
         void *m_ItemConsumeModelData;
 		USDMDataPropetyClass *m_ItemConsumeModelData_Property;
-        void *m_ItemImportantData;
+        UGDSItemImportantData *m_ItemImportantData;
 		USDMDataPropetyClass *m_ItemImportantData_Property;
         void *m_ItemWeaponData;
 		USDMDataPropetyClass *m_ItemWeaponData_Property;
@@ -613,7 +616,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_DailyMissionTitleText_Property;
         void *m_DailyMissionCompleteNotificationText;
 		USDMDataPropetyClass *m_DailyMissionCompleteNotificationText_Property;
-        void *m_PasswordData;
+        void *m_PasswordData;       //TODO: Look
 		USDMDataPropetyClass *m_PasswordData_Property;
         void *m_AOCCommonData;
 		USDMDataPropetyClass *m_AOCCommonData_Property;

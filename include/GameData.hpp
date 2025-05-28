@@ -63,7 +63,7 @@ class GameData {
         }
 
         std::unordered_map<std::string, FGDStCommon_NounInfo*> _cacheNounInfo;
-        std::unordered_map<std::string, ItemData> _cacheItemData;
+        std::unordered_map<std::string, std::shared_ptr<ItemData>> _cacheItemData;
     protected:
     private:
         uintptr_t _baseAddress; 

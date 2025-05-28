@@ -187,4 +187,13 @@ class FGDStCommon_PriceInfo {
         TArray<int32_t> priceBuyChestnut;
 };
 
+struct FGDStCommon_ItemEffParam
+{
+    int16_t         val;
+    int16_t         Time;
+    bool            isRange;
+    char            itemEffectType;
+    unsigned char   unknown[0x2];
+    FName           effDescId;
+};
 #endif // !FGDSTCOMMON_HPP

@@ -15,5 +15,7 @@ class ItemData : public GameObjectProxy<FGDItemData>
         std::string GetName(LANG lang);
         void        SetName(LANG lang, FString string);
 
+        std::string GetNameIdentifier();
+
 };
 #endif // !ITEMDATA_HPP
