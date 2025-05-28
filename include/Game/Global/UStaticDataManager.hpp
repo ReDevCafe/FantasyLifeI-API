@@ -17,6 +17,8 @@
     #include "Game/Item/UGDSItemImportantData.hpp"
     #include "Game/Item/UGDSItemMaterialData.hpp"
     #include "Game/Item/UGDSItemConsumeData.hpp"
+    #include "Game/Item/UGDSItemWeaponData.hpp"
+    #include "Game/Item/UGDSItemCraftData.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -150,7 +152,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemConsumeModelData_Property;
         UGDSItemImportantData *m_ItemImportantData;
 		USDMDataPropetyClass *m_ItemImportantData_Property;
-        void *m_ItemWeaponData;
+        UGDSItemWeaponData *m_ItemWeaponData;
 		USDMDataPropetyClass *m_ItemWeaponData_Property;
         UGDSItemLifeToolsData *m_ItemLifeToolsData;
 		USDMDataPropetyClass *m_ItemLifeToolsData_Property;
@@ -164,9 +166,9 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemEquipModelOffsetData_Property;
         void *m_ItemEquipModelHairTypeData;
 		USDMDataPropetyClass *m_ItemEquipModelHairTypeData_Property;
-        void *m_ItemCraftData;
+        UGDSItemCraftData *m_ItemCraftData;
 		USDMDataPropetyClass *m_ItemCraftData_Property;
-        void *m_ItemKitData;
+        UGDSItemKitData *m_ItemKitData;
 		USDMDataPropetyClass *m_ItemKitData_Property;
         UGDSItemRecipeData *m_ItemRecipeData;
 		USDMDataPropetyClass *m_ItemRecipeData_Property;

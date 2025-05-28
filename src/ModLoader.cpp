@@ -12,6 +12,9 @@
 #include "API/Item/ItemMaterialData.hpp"
 #include "API/Item/ItemConsumeData.hpp"
 #include "API/Item/ItemImportantData.hpp"
+#include "API/Item/ItemWeaponData.hpp"
+#include "API/Item/ItemCraftData.hpp"
+#include "API/Item/ItemKitData.hpp"
 #include <memory>
 
 GameData *ModLoader::gameData = nullptr;
@@ -22,39 +25,22 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
 
     Sleep(10000);
 
-    // std::string ntm = gameData->getItemText_Noun("ilt01000020")->nounSingularForm_fr.ToString();
-    // mlLogger.warn(ntm);
-
     for (int i = 0; i < gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data.Count; i++)
     {
         auto no = gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        FName ronpiche = gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.First;
+        std::string ronpiche = Utils::FNameToString(gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.First);
 
-        gameData->_cacheNounInfo.emplace(Utils::FNameToString(ronpiche), no);
+        gameData->_cacheNounInfo.emplace(ronpiche, no);
     } 
-
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data.Count; i++)
-    {
-        ItemLifeToolsData item{ gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second };
-
-        gameData->_cacheItemData.emplace(item.GetIdentifier(),  std::make_shared<ItemLifeToolsData>(item));
-    }
-
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemArmorData->m_dataMap.Data.Count; i++)
-    {
-        ItemArmorData item{ gameData->getStaticDataManager()->m_ItemArmorData->m_dataMap.Data[i].Value.Second };
-
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemArmorData>(item));
-    }
-
+    
     for (int i = 0; i < gameData->getStaticDataManager()->m_ItemMaterialData->m_dataMap.Data.Count; i++)
     {
         ItemMaterialData item{ gameData->getStaticDataManager()->m_ItemMaterialData->m_dataMap.Data[i].Value.Second };
 
-        //gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemMaterialData>(item));
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemMaterialData>(item));
     }
 
-    // CAUSE CRASH BECAUSE MONEY HAVE "NONE"
+    // CAUSE CRASH BECAUSE MONEY AND EXP HAVE "NONE"
     for (int i = 0; i < gameData->getStaticDataManager()->m_ItemConsumeData->m_dataMap.Data.Count; i++)
     {
         ItemConsumeData item{ gameData->getStaticDataManager()->m_ItemConsumeData->m_dataMap.Data[i].Value.Second };
@@ -68,24 +54,59 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
 
         gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemImportantData>(item));
     }
-    
-    //FIXME: FIX CA CA MARCHE PAS LALALALALALALA
-    for(auto item = gameData->_cacheItemData.begin(); item != gameData->_cacheItemData.end(); ++item)
-    {
-        if(item->second->GetNameIdentifier() == "None") 
-        {   
-            mlLogger.warn("#define BAD \"", item->second->GetIdentifier(), "\"");
-            continue;   // Probably miss some but fuck it
-        }
-        std::string itemName = item->second->GetName(LANG::ENGLISH);
-        for(auto& c: itemName)
-        {
-            if(c == ' ' || c == '\'' || c == '-') c = '_';
-            else c = std::toupper(c);
-        }
 
-        mlLogger.warn("#define ", itemName, " \"", item->second->GetIdentifier(), "\"");
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemWeaponData->m_dataMap.Data.Count; i++)
+    {
+        ItemWeaponData item{ gameData->getStaticDataManager()->m_ItemWeaponData->m_dataMap.Data[i].Value.Second };
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemWeaponData>(item));
     }
+    
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data.Count; i++)
+    {
+        ItemLifeToolsData item{ gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second };
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(),  std::make_shared<ItemLifeToolsData>(item));
+    }
+    
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemArmorData->m_dataMap.Data.Count; i++)
+    {
+        ItemArmorData item{ gameData->getStaticDataManager()->m_ItemArmorData->m_dataMap.Data[i].Value.Second };
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemArmorData>(item));
+    }
+
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemCraftData->m_dataMap.Data.Count; i++)
+    {
+        ItemCraftData item{ gameData->getStaticDataManager()->m_ItemCraftData->m_dataMap.Data[i].Value.Second };
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemCraftData>(item));
+    }
+
+    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemKitData->m_dataMap.Data.Count; i++)
+    {
+        ItemKitData item{ gameData->getStaticDataManager()->m_ItemKitData->m_dataMap.Data[i].Value.Second };
+
+        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemKitData>(item));
+    }
+    // MOVE TO A NEW CLASS /\ /\
+
+    //FIXME: SEGF somewhere
+    for (int i = 0; i < gameData->getStaticDataManager()->m_RecipeData->m_dataMap.Data.Count; i++)
+    {
+        RecipeData recipe{ gameData->getStaticDataManager()->m_RecipeData->m_dataMap.Data[i].Value.Second };
+
+        mlLogger.warn(recipe.GetIdentifier(), " POWER:", recipe.GetLifeParam().GetPower());
+
+        ItemData boo = recipe.GetItem();
+        mlLogger.warn("     REWARD: ", boo.GetName(LANG::ENGLISH), " (", boo.GetIdentifier(), ")");
+        boo.SetName(LANG::ENGLISH, FString(L"AAAaaAAA"));
+        gameData->_cacheRecipeData.emplace(recipe.GetIdentifier(), std::make_shared<RecipeData>(recipe));
+    }
+
+    
+    // REGISTER TEXTS
+    
     /*
      * RACCOON_HEAD iam02000070 SEND RACC_MDL -> TAIL_MDL
      *

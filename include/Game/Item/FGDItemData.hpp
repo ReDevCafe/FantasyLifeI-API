@@ -49,5 +49,15 @@ struct FGDItemUniqueSkillEquipData : public FGDItemEquipData
 	TArray<FName>	SkillID;
 };
 
-#endif /* !FGDITEMDATA_HPP_ */
+struct FGDItemKitData : FGDItemData
+{ 
+};
 
+class UGDSItemKitData : public UGameDataAsset
+{ 
+    public:
+        TMap<FName, FGDItemKitData> m_dataMap;
+        unsigned char               unknown[0x50];
+};
+
+#endif /* !FGDITEMDATA_HPP_ */
