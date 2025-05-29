@@ -8,117 +8,42 @@
 #include "API/Item/ItemLifeToolsData.hpp"
 #include "API/Item/ItemArmorData.hpp"
 #include "GameData.hpp"
-#include "API/Item/ItemIdentifier.hpp"
+#include "GameCache.hpp"
 #include "API/Item/ItemMaterialData.hpp"
 #include "API/Item/ItemConsumeData.hpp"
 #include "API/Item/ItemImportantData.hpp"
 #include "API/Item/ItemWeaponData.hpp"
 #include "API/Item/ItemCraftData.hpp"
 #include "API/Item/ItemKitData.hpp"
+#include "API/Item/ItemVehicleData.hpp"
+#include "API/Item/ItemPowerUpData.hpp"
+#include "API/Identifier/RecipeIdentifier.hpp"
+#include "API/Identifier/ItemIdentifier.hpp"
 #include <memory>
+#include <corecrt_io.h>
+#include <io.h>
+#include <fcntl.h>
 
 GameData *ModLoader::gameData = nullptr;
+GameCache *ModLoader::gameCache = nullptr;
 
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     mlLogger.info("Mod loader has been started");
-    gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
-
-    Sleep(10000);
-
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto no = gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        std::string ronpiche = Utils::FNameToString(gameData->getStaticDataManager()->m_ItemText_Noun->m_dataMap.Data[i].Value.First);
-
-        gameData->_cacheNounInfo.emplace(ronpiche, no);
-    } 
+    gameData  = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
+    gameCache = new GameCache();
     
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemMaterialData->m_dataMap.Data.Count; i++)
-    {
-        ItemMaterialData item{ gameData->getStaticDataManager()->m_ItemMaterialData->m_dataMap.Data[i].Value.Second };
+    auto lifecure = gameCache->GetItem(MATERIAL_CHICKEN_EGGS);
+    lifecure.SetName(LANG::ENGLISH, FString(L"Estrogen :3"));
+    auto AAAAA = gameCache->GetItem(MATERIAL_WATER_SHARD);
+    auto recipe = gameCache->GetRecipe(RECIPE_COASTAL_BRIGANDINE);
 
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemMaterialData>(item));
-    }
+    auto result = recipe.GetItem();
+    recipe.AddItem(lifecure, 56);
 
-    // CAUSE CRASH BECAUSE MONEY AND EXP HAVE "NONE"
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemConsumeData->m_dataMap.Data.Count; i++)
-    {
-        ItemConsumeData item{ gameData->getStaticDataManager()->m_ItemConsumeData->m_dataMap.Data[i].Value.Second };
+    auto recipe1 = gameCache->GetRecipe(RECIPE_COASTAL_BOTTOMS);
+    recipe1.AddItem(AAAAA, 45);
 
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemConsumeData>(item));
-    }
-
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemImportantData->m_dataMap.Data.Count; i++)
-    {
-        ItemImportantData item{ gameData->getStaticDataManager()->m_ItemImportantData->m_dataMap.Data[i].Value.Second };
-
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemImportantData>(item));
-    }
-
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemWeaponData->m_dataMap.Data.Count; i++)
-    {
-        ItemWeaponData item{ gameData->getStaticDataManager()->m_ItemWeaponData->m_dataMap.Data[i].Value.Second };
-
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemWeaponData>(item));
-    }
-    
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data.Count; i++)
-    {
-        ItemLifeToolsData item{ gameData->getStaticDataManager()->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second };
-
-        gameData->_cacheItemData.emplace(item.GetIdentifier(),  std::make_shared<ItemLifeToolsData>(item));
-    }
-    
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemArmorData->m_dataMap.Data.Count; i++)
-    {
-        ItemArmorData item{ gameData->getStaticDataManager()->m_ItemArmorData->m_dataMap.Data[i].Value.Second };
-
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemArmorData>(item));
-    }
-
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemCraftData->m_dataMap.Data.Count; i++)
-    {
-        ItemCraftData item{ gameData->getStaticDataManager()->m_ItemCraftData->m_dataMap.Data[i].Value.Second };
-
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemCraftData>(item));
-    }
-
-    for (int i = 0; i < gameData->getStaticDataManager()->m_ItemKitData->m_dataMap.Data.Count; i++)
-    {
-        ItemKitData item{ gameData->getStaticDataManager()->m_ItemKitData->m_dataMap.Data[i].Value.Second };
-
-        gameData->_cacheItemData.emplace(item.GetIdentifier(), std::make_shared<ItemKitData>(item));
-    }
-    // MOVE TO A NEW CLASS /\ /\
-
-    //FIXME: SEGF somewhere
-    for (int i = 0; i < gameData->getStaticDataManager()->m_RecipeData->m_dataMap.Data.Count; i++)
-    {
-        RecipeData recipe{ gameData->getStaticDataManager()->m_RecipeData->m_dataMap.Data[i].Value.Second };
-
-        mlLogger.warn(recipe.GetIdentifier(), " POWER:", recipe.GetLifeParam().GetPower());
-
-        ItemData boo = recipe.GetItem();
-        mlLogger.warn("     REWARD: ", boo.GetName(LANG::ENGLISH), " (", boo.GetIdentifier(), ")");
-        boo.SetName(LANG::ENGLISH, FString(L"AAAaaAAA"));
-        gameData->_cacheRecipeData.emplace(recipe.GetIdentifier(), std::make_shared<RecipeData>(recipe));
-    }
-
-    
-    // REGISTER TEXTS
-    
-    /*
-     * RACCOON_HEAD iam02000070 SEND RACC_MDL -> TAIL_MDL
-     *
-
-    auto data = std::dynamic_pointer_cast<ItemArmorData>(gameData->_cacheItemData.at(TAILOR_CAP));
-    data->SetName(LANG::ENGLISH, L"Ratio");
-    data->GetModel();
-    auto data1 = std::dynamic_pointer_cast<ItemArmorData>(gameData->_cacheItemData.at(RACCOON_HEAD));
-    data1->GetModel();
-    */
-
-    //! TEST
+    recipe1.GetItemInfo()[0].GetItem().SetName(LANG::ENGLISH, FString(L"LALALALA"));
     return 0;
 }
 
@@ -130,6 +55,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         case DLL_PROCESS_ATTACH:
         {
             AllocConsole();
+
             freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);
             freopen_s(reinterpret_cast<FILE**>(stderr), "CONOUT$", "w", stderr);
 
@@ -150,8 +76,13 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             if (LoaderThread)
                 CloseHandle(LoaderThread);
             FreeConsole();
+
             if (ModLoader::gameData != nullptr)
                 delete ModLoader::gameData;
+
+            if(ModLoader::gameCache != nullptr)
+                delete ModLoader::gameCache;
+
             break;
         }
     }

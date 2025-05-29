@@ -2,59 +2,67 @@
 #include "GameData.hpp"
 #include "Utils.hpp"
 #include "ModLoader.hpp"
+#include "GameCache.hpp"
 
-static FString _____nFString(L"");
-
-FString& LifeData::Name(LANG lang)
+std::string LifeData::GetNameIdentifier()
 {
-    FName nameRaw  = this->_object.nameId;
-    std::string nameLink = Utils::FNameToString(nameRaw);
-    auto texts = ModLoader::gameData->getStaticDataManager()->m_LifeText_Noun->m_dataMap.Data;
+    return Utils::FNameToString(this->_object.nameId);
+}
 
-    for(int i = 0; i < texts.Count; ++i)
-    {
-        if(Utils::FNameToString(texts.Data[i].Value.Second.ID) != nameLink) continue;
-
-        switch(lang)
-        {
-            case LANG::NONE:     return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm;
-            case LANG::ENGLISH:  return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm_en;
-            case LANG::FRENCH:   return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm_fr;
-            case LANG::ESPAGNOL: return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm_es;
-            case LANG::DEUTSCH:  return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm_de;
-            case LANG::ITALIAN:  return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm_de;
-            case LANG::TZH:      return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm_tzh;
-            case LANG::CZH:      return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm_czh;
-            case LANG::KO :      return texts.Data[i].Value.Second.textInfo.Data->nounSingularForm_ko;
-        }
-    }
+std::string LifeData::GetName(LANG lang)
+{
+    if(GetNameIdentifier() == "None") return "NO_NAME";
+    auto text = ModLoader::gameCache->GetNoun(GetNameIdentifier());
    
-    return _____nFString;
-}
-
-FString& LifeData::Description(LANG lang)
-{
-    FName descRaw = this->_object.DescId;
-    std::string descLink = Utils::FNameToString(descRaw);
-    auto texts = ModLoader::gameData->getStaticDataManager()->m_LifeText->m_dataMap.Data;
-
-    for(int i = 0; i < texts.Count; ++i)
+    switch(lang)
     {
-        if(Utils::FNameToString(texts.Data[i].Value.Second.ID) != descLink) continue;
-
-        switch(lang)
-        {
-            case LANG::NONE:     return texts.Data[i].Value.Second.textInfo.Data->Text;
-            case LANG::ENGLISH:  return texts.Data[i].Value.Second.textInfo.Data->text_en;
-            case LANG::FRENCH:   return texts.Data[i].Value.Second.textInfo.Data->text_fr;
-            case LANG::ESPAGNOL: return texts.Data[i].Value.Second.textInfo.Data->text_es;
-            case LANG::DEUTSCH:  return texts.Data[i].Value.Second.textInfo.Data->text_de;
-            case LANG::ITALIAN:  return texts.Data[i].Value.Second.textInfo.Data->text_de;
-            case LANG::TZH:      return texts.Data[i].Value.Second.textInfo.Data->text_tzh;
-            case LANG::CZH:      return texts.Data[i].Value.Second.textInfo.Data->text_czh;
-            case LANG::KO :      return texts.Data[i].Value.Second.textInfo.Data->text_ko;
-        }
+        case LANG::NONE:    
+        case LANG::ENGLISH:  return text->nounSingularForm_en.ToString();
+        case LANG::FRENCH:   return text->nounSingularForm_fr.ToString();
+        case LANG::ESPAGNOL: return text->nounSingularForm_es.ToString();
+        case LANG::DEUTSCH:  return text->nounSingularForm_de.ToString();
+        case LANG::ITALIAN:  return text->nounSingularForm_de.ToString();
+        case LANG::TZH:      return text->nounSingularForm_tzh.ToString();
+        case LANG::CZH:      return text->nounSingularForm_czh.ToString();
+        case LANG::KO :      return text->nounSingularForm_ko.ToString();
     }
-
-    return _____nFString;
 }
+
+void LifeData::SetName(LANG lang, FString string)
+{
+    auto text = ModLoader::gameCache->GetNoun(GetNameIdentifier());
+    switch(lang)
+    {
+        case LANG::NONE:
+        case LANG::ENGLISH: text->nounSingularForm_en = string;
+        case LANG::FRENCH:  text->nounSingularForm_fr = string;
+        case LANG::ESPAGNOL:  text->nounSingularForm_es = string;
+        case LANG::DEUTSCH:  text->nounSingularForm_de = string;
+        case LANG::ITALIAN:  text->nounSingularForm_it = string;
+        case LANG::TZH:  text->nounSingularForm_tzh = string;
+        case LANG::CZH:  text->nounSingularForm_czh = string;
+        case LANG::KO:  text->nounSingularForm_ko = string;
+    }
+}
+
+/*
+std::string LifeData::Description(LANG lang)
+{
+    
+    std::string descLink = Utils::FNameToString(this->_object.DescId);
+    auto text = ModLoader::gameCache->GetText(descLink);
+
+    switch(lang)
+    {
+        case LANG::NONE:
+        case LANG::ENGLISH:  return noun->text_en;
+        case LANG::FRENCH:   return noun->text_fr;
+        case LANG::ESPAGNOL: return noun->text_es;
+        case LANG::DEUTSCH:  return noun->text_de;
+        case LANG::ITALIAN:  return noun->text_de;
+        case LANG::TZH:      return noun->text_tzh;
+        case LANG::CZH:      return noun->text_czh;
+        case LANG::KO :      return noun->text_ko;
+    }
+    
+}*/

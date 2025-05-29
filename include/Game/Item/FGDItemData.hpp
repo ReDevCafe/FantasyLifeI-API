@@ -7,7 +7,7 @@
 
 	#include "Item.hpp"
     #include "Game/Types.hpp"
-    #include <Game/FGDStCommon.hpp>
+    #include "Game/FGDStCommon.hpp"
 
 class FGDItemData : public FTableRowBase {
     public:

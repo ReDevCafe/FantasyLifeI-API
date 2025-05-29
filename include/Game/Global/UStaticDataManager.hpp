@@ -10,15 +10,24 @@
     #include "Game/Character/UGDSCharaData.hpp"
     #include "Game/Life/UGDSLifeData.hpp"
     #include "Game/Life/UGDSLifeText.hpp"
-    #include "Game/Life/UGDSLifeText_Noun.hpp"
+    #include "Game/Noun/UGDSPlantDungeonText_Noun.hpp"
+    #include "Game/Noun/UGDSItemText_Noun.hpp"
+    #include "Game/Noun/UGDSLifeText_Noun.hpp"
+    #include "Game/Noun/UGDSSkillText_Noun.hpp"
+    #include "Game/Noun/UGDSQuestRequestMapText_Noun.hpp"
+    #include "Game/Noun/UGDSMapText_Noun.hpp"
+    #include "Game/Noun/UGDSMenuText_Noun.hpp"
+    #include "Game/Noun/UGDSCharaText_Noun.hpp"
+    #include "Game/Noun/UGDSSystemText_Noun.hpp"
     #include "Game/Item/UGDSItemLifeToolsData.hpp"
-    #include "Game/Item/UGDSItemText_Noun.hpp"
     #include "Game/Item/UGDSItemArmorData.hpp"
     #include "Game/Item/UGDSItemImportantData.hpp"
     #include "Game/Item/UGDSItemMaterialData.hpp"
     #include "Game/Item/UGDSItemConsumeData.hpp"
     #include "Game/Item/UGDSItemWeaponData.hpp"
     #include "Game/Item/UGDSItemCraftData.hpp"
+    #include "Game/Item/UGDSItemVehicleData.hpp"
+    #include "Game/Item/UGDSItemPowerUpData.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -130,7 +139,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_NPCRoomViewPointData_Property;
         void *m_PlantDungeonText;
 		USDMDataPropetyClass *m_PlantDungeonText_Property;
-        void *m_PlantDungeonText_Noun;
+        UGDSPlantDungeonText_Noun *m_PlantDungeonText_Noun;
 		USDMDataPropetyClass *m_PlantDungeonText_Noun_Property;
         void *m_PlantDungeonRoomData;
 		USDMDataPropetyClass *m_PlantDungeonRoomData_Property;
@@ -172,9 +181,9 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemKitData_Property;
         UGDSItemRecipeData *m_ItemRecipeData;
 		USDMDataPropetyClass *m_ItemRecipeData_Property;
-        void *m_ItemVehicleData;
+        UGDSItemVehicleData *m_ItemVehicleData;
 		USDMDataPropetyClass *m_ItemVehicleData_Property;
-        void *m_ItemPowerUpData;
+        UGDSItemPowerUpData *m_ItemPowerUpData;
 		USDMDataPropetyClass *m_ItemPowerUpData_Property;
         UGDSItemText *m_ItemText;
 		USDMDataPropetyClass *m_ItemText_Property;
@@ -336,7 +345,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_SkillDataEx_Property;
         void *m_SkillText;
 		USDMDataPropetyClass *m_SkillText_Property;
-        void *m_SkillText_Noun;
+        UGDSSkillText_Noun *m_SkillText_Noun;
 		USDMDataPropetyClass *m_SkillText_Noun_Property;
         void *m_SkillEffectData;
 		USDMDataPropetyClass *m_SkillEffectData_Property;
@@ -396,7 +405,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_RandomQuestLotteryItemQuality_Property;
         void *m_RandomQuestLotteryReward;
 		USDMDataPropetyClass *m_RandomQuestLotteryReward_Property;
-        void *m_QuestRequestMapText_Noun;
+        UGDSQuestRequestMapText_Noun *m_QuestRequestMapText_Noun;
 		USDMDataPropetyClass *m_QuestRequestMapText_Noun_Property;
         void *m_QuestRequester;
 		USDMDataPropetyClass *m_QuestRequester_Property;
@@ -414,7 +423,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_AreaPanel_Property;
         void *m_MapText;
 		USDMDataPropetyClass *m_MapText_Property;
-        void *m_MapText_Noun;
+        UGDSMapText_Noun *m_MapText_Noun;
 		USDMDataPropetyClass *m_MapText_Noun_Property;
         void *m_MapLightSetData;
 		USDMDataPropetyClass *m_MapLightSetData_Property;
@@ -470,7 +479,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ExpLevelConfig_Property;
         void *m_CharaRelease;
 		USDMDataPropetyClass *m_CharaRelease_Property;
-        void *m_MenuText_Noun;
+        UGDSMenuText_Noun *m_MenuText_Noun;
 		USDMDataPropetyClass *m_MenuText_Noun_Property;
         void *m_EquipMenuSlotData;
 		USDMDataPropetyClass *m_EquipMenuSlotData_Property;
@@ -870,7 +879,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_MenuButtonGuideTextData_Property;
         void *m_TalkMenuType;
 		USDMDataPropetyClass *m_TalkMenuType_Property;
-        void *m_CharaText_Noun;
+        UGDSCharaText_Noun *m_CharaText_Noun;
 		USDMDataPropetyClass *m_CharaText_Noun_Property;
         UGDSCharaData *m_CharaData;
 		USDMDataPropetyClass *m_CharaData_Property;
@@ -1042,7 +1051,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_FontStyleOverwriteSetting_Property;
         void *m_SystemText;
 		USDMDataPropetyClass *m_SystemText_Property;
-        void *m_SystemText_Noun;
+        UGDSSystemText_Noun *m_SystemText_Noun;
 		USDMDataPropetyClass *m_SystemText_Noun_Property;
         void *m_SituationTalkSetting;
 		USDMDataPropetyClass *m_SituationTalkSetting_Property;

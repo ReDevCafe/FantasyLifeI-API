@@ -4,11 +4,12 @@
     #include "Engine/UGameDataAsset.hpp"
     #include "Engine/DataTable.hpp"
     #include "Game/FGDStCommon.hpp"
+    
 
 class FGDItemText_Noun : public FTableRowBase {
     public:
         FName ID;
-        TArray<FGDStCommon_NounInfo> textInfo;
+        TArray<FGDStCommon_NounInfo> nounInfoArray;
 };
 
 class UGDSItemText_Noun : public UGameDataAsset {

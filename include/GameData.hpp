@@ -11,6 +11,7 @@
     #include "Game/Global/UDynamicDataManager.hpp"
     #include "API/Item/ItemData.hpp"
     #include "API/Recipe/RecipeData.hpp"
+    #include <memory>
 
 constexpr uintptr_t GOBJECTS_OFFSET = 0xBFF47F0;
 constexpr uintptr_t GNAMES_OFFSET =  0xBF3DA40;
@@ -63,9 +64,6 @@ class GameData {
             }
         }
 
-        std::unordered_map<std::string, FGDStCommon_NounInfo*> _cacheNounInfo;
-        std::unordered_map<std::string, std::shared_ptr<ItemData>> _cacheItemData;
-        std::unordered_map<std::string, std::shared_ptr<RecipeData>> _cacheRecipeData;
     protected:
     private:
         uintptr_t _baseAddress; 
@@ -76,7 +74,6 @@ class GameData {
         UDynamicDataManager *_dynamicDataManager;
         std::unique_ptr<Player> _player;
         std::unordered_map<std::string, UObject *> _cache;
-
 };
 
 #endif /* !GAMEDATA_HPP_ */

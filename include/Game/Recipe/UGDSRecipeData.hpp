@@ -70,20 +70,24 @@ class FGDRecipeData_LifeParamInfo {
 
 class FGDRecipeData_RewardData  { 
     public:
-	FName rank0_itemId;
-	uint32_t rank0_exp;
-	FName rank1_itemId;
-	uint32_t rank1_exp;
-	FName rank2_itemId;
-    uint32_t rank2_exp;
-	FName rank3_itemId;
-	uint32_t rank3_exp;
+		FName rank0_itemId;
+		uint32_t rank0_exp;
+		FName rank1_itemId;
+		uint32_t rank1_exp;
+		FName rank2_itemId;
+		uint32_t rank2_exp;
+		FName rank3_itemId;
+		uint32_t rank3_exp;
 };
 
 class FGDRecipeData_ItemInfo { 
     public:
         FName ItemId;
         int32_t numItems;
+
+		FGDRecipeData_ItemInfo(FName item, int32_t count)
+			: ItemId(item), numItems(count)
+		{}
 };
 
 class FGDRecipeTabData : public FTableRowBase {

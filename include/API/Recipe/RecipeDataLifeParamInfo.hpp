@@ -9,11 +9,11 @@ class RecipeDataLifeParamInfo : GameObjectProxy<FGDRecipeData_LifeParamInfo>
     public:
         RecipeDataLifeParamInfo(FGDRecipeData_LifeParamInfo& data) : GameObjectProxy(data){};
 
-        ELifeType GetLifeType();
-        void      SetLifeType(ELifeType life);
+        ELifeType GetLifeType() const { return static_cast<ELifeType>((int) this->_object.lifeType - 1); }
+        void      SetLifeType(ELifeType life) const { this->_object.lifeType = static_cast<ELifeType>((int) life - 1); }
         
-        int32_t   GetPower();
-        void      SetPower(int32_t power);
+        int32_t   GetPower() const { return this->_object.power; }
+        void      SetPower(int32_t power) const { this->_object.power = power; }
 };
 
 #endif // !RECIPEDATALIFEPARAMINFO_HPP

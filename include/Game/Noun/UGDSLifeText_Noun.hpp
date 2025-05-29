@@ -9,7 +9,7 @@ class FGDLifeText_Noun : public FTableRowBase
 {
     public:
         FName                           ID;
-        TArray<FGDStCommon_NounInfo>    textInfo;
+        TArray<FGDStCommon_NounInfo>    nounInfoArray;
 };
 
 class UGDSLifeText_Noun : public UGameDataAsset

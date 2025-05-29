@@ -5,10 +5,12 @@
     #include "Loader/ModEnvironnement.hpp"
     #include "Utils.hpp"
 class GameData;
+class GameCache;
 
 class ModLoader {
     public:
         static GameData *gameData;
+        static GameCache *gameCache;
         static DWORD WINAPI init(LPVOID lpParam);
     protected:
     private:
