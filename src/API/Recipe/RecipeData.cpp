@@ -22,19 +22,23 @@ ItemData RecipeData::GetItem()
 void RecipeData::AddItem(ItemData data, int32_t quantity)
 {
     auto object = RecipeDataItemInfo{data, quantity};
-
-    //auto oldPtr = this->_object.itemList.Data;
     int32_t count = this->_object.itemList.Count;
-    //size_t newCount = count + 1;
 
-    //auto newSize = sizeof(FGDRecipeData_ItemInfo) * newCount;
-    //auto newPtr = static_cast<FGDRecipeData_ItemInfo*>(
-     //   std::realloc(oldPtr, newSize)
-    //);
-    //if(!newPtr) return;
-
-    //this->_object.itemList.Data = newPtr;
-    //this->_object.itemList.Count = newCount;
     this->_object.itemList.Data[count] = object.getObject();
     this->_object.itemList.Count = ++count;
+
+    this->_itemInfo.emplace_back(object);
+}
+
+// NOT WORKING?
+void RecipeData::RemoveItem(int index)
+{
+    int32_t count = this->_object.itemList.Count;
+    if(index <= 0 || index >= count) return;    // Invalid index
+
+    this->_itemInfo.clear();
+    this->_object.itemList.RemoveAt(index);
+
+    for(int i = 0; i < this->_object.itemList.Count; ++i)
+        _itemInfo.push_back(RecipeDataItemInfo{this->_object.itemList[i]});
 }

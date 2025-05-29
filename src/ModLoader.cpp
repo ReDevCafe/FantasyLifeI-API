@@ -39,11 +39,8 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
 
     auto result = recipe.GetItem();
     recipe.AddItem(lifecure, 56);
+    recipe.RemoveItem(0);
 
-    auto recipe1 = gameCache->GetRecipe(RECIPE_COASTAL_BOTTOMS);
-    recipe1.AddItem(AAAAA, 45);
-
-    recipe1.GetItemInfo()[0].GetItem().SetName(LANG::ENGLISH, FString(L"LALALALA"));
     return 0;
 }
 

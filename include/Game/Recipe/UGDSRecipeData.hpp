@@ -61,7 +61,6 @@ enum class ERecipeCategory : uint8_t {
 	Favorite = 10
 };
 
-
 class FGDRecipeData_LifeParamInfo {
     public:
         ELifeType lifeType;

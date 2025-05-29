@@ -6,19 +6,26 @@
 
 class RecipeDataItemInfo : public GameObjectProxy<FGDRecipeData_ItemInfo>
 {
+    private:
+        FGDRecipeData_ItemInfo dataObj;
     public:
-        RecipeDataItemInfo(FGDRecipeData_ItemInfo& data) : GameObjectProxy(data){}; 
+        RecipeDataItemInfo(FGDRecipeData_ItemInfo& data) :
+            dataObj(data),
+            GameObjectProxy(dataObj)
+        {}; 
 
-        RecipeDataItemInfo(ItemData data, int32_t power) : GameObjectProxy(this->_object)
-        {
-            this->_object = FGDRecipeData_ItemInfo{data.getObject().ID, power};
-        };
+        RecipeDataItemInfo(ItemData data, int32_t power) :
+            dataObj{data.getObject().ID, power},
+            GameObjectProxy(dataObj)
+        {};
 
         ItemData GetItem();
         void SetItem(ItemData data) const { this->_object.ItemId = data.getObject().ID; }
 
         int32_t GetNumberRequired() const { return this->_object.numItems; }
         void SetNumberRequired(int32_t value) const { this->_object.numItems = value; } 
+
+        FGDRecipeData_ItemInfo _getObject() const { return dataObj; }
 };
 
 #endif // !RECIPEDATAITEMINFO
