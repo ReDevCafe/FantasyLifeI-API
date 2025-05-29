@@ -1,10 +1,12 @@
 #ifndef MODLOADER_HPP_
     #define MODLOADER_HPP_
 
-    #include "GameData.hpp"
     #include "Logger/ModLoaderLogger.hpp"
     #include "Loader/ModEnvironnement.hpp"
     #include "Utils.hpp"
+    #include "GameData.hpp"
+
+class GameData;
 
 class ModLoader {
     public:

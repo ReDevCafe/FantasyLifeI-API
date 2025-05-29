@@ -2,26 +2,10 @@
 
 GameData *ModLoader::gameData = nullptr;
 
-#include <fstream>
-#include "Engine/FUObjectArray.hpp"
-#include <API/Life/ULifeData.hpp>
-#include "Engine/TMap.hpp"
-#include <API/Life/LifeData.hpp>
-
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     mlLogger.info("Mod loader has been started");
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
-
-    Sleep(7000);
-    while(true) 
-    {
-        if(gameData->getDynamicDataManager()->GDDCharaStatus->m_permanent.m_stAvatarP.Count == 0) continue;
-        auto truc = gameData->getDynamicDataManager()->GDDCharaStatus->m_permanent.m_stAvatarP[0];
-        std::string id = Utils::FNameToString(truc.m_lifeId);
-        mlLogger.warn("Level de merde: ", truc.m_lv.Data[0].Value.Second, "Exp de merde: ", truc.m_exp.Data[0].Value.Second, " Life:", id);
-        Sleep(2000);
-    }
-
+    gameData->initOthersData();
     // TEST
     /*
     mlLogger.info(gameData->getStaticDataManager()->m_LifeData->m_dataMap.Data.Count);
@@ -63,7 +47,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
             Utils::EnableAnsiColors();
             mlLogger.warn("Mod loader attached to process");
-
+            Sleep(5000);
             LoaderThread = CreateThread(nullptr, 0, ModLoader::init, nullptr, 0, nullptr);
             if (LoaderThread)
                 CloseHandle(LoaderThread);

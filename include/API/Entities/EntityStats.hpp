@@ -4,24 +4,28 @@
 
     #include "../GameObjectProxy.hpp"
     #include "Game/Character/UGDSCharaParameter.hpp"
+    #include "Game/Life/Life.hpp"
+
+    #include <stdexcept>
 
 class EntityStats : public GameObjectProxy<FGDCharaParameter> {
     public:
         EntityStats(FGDCharaParameter &parameter) : GameObjectProxy(parameter) {};
-        void setHP(int32_t hp);
-        void setSP(int32_t sp);
-        void setPhysicalAttack(int32_t physicalAttack);
-        void setMagicalAttack(int32_t magicalAttack);
-        void setPhysicalDefense(int32_t physicalDefense);
-        void setMagicalDefense(int32_t magicalDefense);
-        int32_t getHP(int32_t hp);
-        int32_t getSP(int32_t sp);
-        int32_t getPhysicalAttack();
-        int32_t getMagicalAttack();
-        int32_t getPhysicalDefense();
-        int32_t getMagicalDefense();
+        void setPhysicalAttack(ELifeType life, int32_t physicalAttack);
+        void setMagicalAttack(ELifeType life, int32_t magicalAttack);
+        void setPhysicalDefense(ELifeType life, int32_t physicalDefense);
+        void setMagicalDefense(ELifeType life, int32_t magicalDefense);
+        void setCriticalRate(ELifeType life, int32_t criticalRate);
+        void setCriticalRateEvasion(ELifeType life, int32_t criticalRateEvasion);
+        int32_t getPhysicalAttack(ELifeType life);
+        int32_t getMagicalAttack(ELifeType life);
+        int32_t getPhysicalDefense(ELifeType life);
+        int32_t getMagicalDefense(ELifeType life);
+        int32_t getCriticalRate(ELifeType life);
+        int32_t getCriticalRateEvasion(ELifeType life);
     protected:
     private:
+        FGDCharaParameter_CharaStatusParam &_getParamFrom(ELifeType life);
 };
 
 #endif /* !ENTITYSTATS_HPP_ */

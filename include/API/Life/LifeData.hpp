@@ -11,7 +11,7 @@
 class LifeData : public GameObjectProxy<FGDLifeData>
 {   
     public:
-        LifeData(FGDLifeData& data) : GameObjectProxy(data){};
+        LifeData(FGDLifeData &data) : GameObjectProxy(data){};
 
         FString&    Name(LANG lang);
 

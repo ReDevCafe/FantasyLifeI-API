@@ -2,28 +2,36 @@
     #define GAMEDATA_HPP_
 
     #include "Engine/FUObjectArray.hpp"
-    #include "Game/UStaticDataManager.hpp"
-    #include "API/Entities/Player/Player.hpp"
+    #include "Game/Global/UStaticDataManager.hpp"
+    #include "Game/Global/UDynamicDataManager.hpp"
     #include "Utils.hpp"
     #include "Logger/ModLoaderLogger.hpp"
+    #include "API/Entities/Player/Player.hpp"
 
     #include <type_traits>
     #include <functional>
-    #include "Game/UDynamicDataManager.hpp"
+    #include <memory>
+
+class Player;
 
 constexpr uintptr_t GOBJECTS_OFFSET = 0xBFF47F0;
 constexpr uintptr_t GNAMES_OFFSET =  0xBF3DA40;
 constexpr uintptr_t GWORLD_OFFSET = 0xC174678;
-
-template<typename T>
-concept UObjectBase = std::is_base_of_v<UObject, T> || std::is_same_v<T, FUObjectArray> || std::is_same_v<T, void>;
 
 class GameData {
     public:
         GameData(uintptr_t baseAddress);
         ~GameData() = default;
 
-        template<UObjectBase T = void>
+        void initOthersData();
+        uintptr_t getBaseAddress();
+        FUObjectArray *getGObjects();
+        void *getGNames();
+        void *getGWorld();
+        UStaticDataManager *getStaticDataManager();
+        UDynamicDataManager *getDynamicDataManager();
+
+        template<typename T = void>
         T *getUObject(const std::string &name, bool safe = true, uint32_t nth = 0) {
             if (_gObjects == nullptr) return nullptr;
             if (_cache.contains(name))
@@ -45,21 +53,17 @@ class GameData {
             return reinterpret_cast<T *>(object);
         }
 
-        uintptr_t getBaseAddress();
-        FUObjectArray *getGObjects();
-        void *getGNames();
-        void *getGWorld();
-        UStaticDataManager *getStaticDataManager();
-        UDynamicDataManager *getDynamicDataManager();
         Player *getPlayer();
 
         template<typename T = void *>
         void waitObject(T *object, const std::string &name = "", uint32_t nth = 0) {
+            mlLogger.info("Waiting an object...");
             while (*object == nullptr) {
                 if (name != "")
                     *object = this->getUObject<typename std::remove_pointer<T>::type>(name, false, nth);
                 Sleep(1);
             }
+            mlLogger.info("Object found !");
         }
     protected:
     private:

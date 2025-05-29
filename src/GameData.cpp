@@ -1,7 +1,5 @@
 #include "GameData.hpp"
-#include "Logger/ModLoaderLogger.hpp"
-#include "API/Life/ULifeData.hpp"
-#include "API/Life/LifeData.hpp"
+#include "API/Entities/Player/Player.hpp"
 
 GameData::GameData(uintptr_t baseAddress) : _staticDataManager(nullptr), _dynamicDataManager(nullptr) {
     mlLogger.info("Initialize GameData");
@@ -14,20 +12,16 @@ GameData::GameData(uintptr_t baseAddress) : _staticDataManager(nullptr), _dynami
     mlLogger.info("Found StaticDataManager => ", std::hex, this->_staticDataManager);
     this->waitObject(&this->_dynamicDataManager, "DynamicDataManager", 1);
     mlLogger.info("Found DynamicDataManager => ", std::hex, this->_dynamicDataManager);
-    
+}
 
-    this->waitObject(&this->_staticDataManager->m_LifeData);
-    this->waitObject(&this->_staticDataManager->m_LifeText_Noun);
-    this->waitObject(&this->_staticDataManager->m_LifeText);
-
+void GameData::initOthersData() {
     this->waitObject(&this->_dynamicDataManager->GDDCharaStatus);
-    
-    /*
     this->waitObject(&this->_staticDataManager->m_CharaParameter);
-    UObject *detailsInfo = this->getUObject<UObject>("CharacterDetailInfo");
-    mlLogger.info(Utils::FNameToString(baseAddress, detailsInfo->ClassPrivate->NamePrivate));
-    _player = std::make_unique<Player>(_staticDataManager->m_CharaParameter->m_dataMap.Data[0].Value.Second);
-    */
+    _player = std::make_unique<Player>(
+        this->_staticDataManager->m_CharaParameter->m_dataMap.Data[0].Value.Second,
+        static_cast<FCharaStatusP *>(this->_dynamicDataManager->GDDCharaStatus->m_permanent.m_stAvatarP.Data),
+        this->_dynamicDataManager->GDDCharaStatus->m_volatile.data[0]
+    );
 }
 
 Player *GameData::getPlayer() {

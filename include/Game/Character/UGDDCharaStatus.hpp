@@ -172,11 +172,53 @@ class FCharaStatusGroupP
         TArray<FSupportCharaStatusP>                       m_stSupportP;
 };
 
+struct FNewCharaStatusP {
+    uint32_t m_maxHP; //0x0
+    uint16_t m_maxSP; //0x4
+    uint16_t m_physicalOffense; //0x6
+    uint16_t m_magicalOffense; // 0x8
+    //0xC m_magicalDefense
+    //0x38 fireResistance
+    //03C windResistance
+    //0x40 lightResistance
+    //0x48 HP = this + m_maxHP
+    //0x4C SP = this + m_maxSP
+    //0x90  HP = this + m_maxHP
+    //0x94 SP = this + m_maxSP
+    //0xD8 this + HP => à droite dans l'interface
+    //0xDC this + SP => à droite dans l'interface
+    //0xE0 this + baseDef
+    //0xE4 this + magicDef
+    //0x110 fireResistance
+    //0114 windResistance
+    //0118 lightResistance
+    //16C Truc bizarre qui change l'interface et la vie
+    //1c0 crash quand je change la valeur
+    //1DC Crash aussi
+    //1E0 Aussi
+
+
+
+};
+
 class FCharaStatusGroupV
 {
     public:
-        unsigned char       m_unknown[0xC8];  
-};
+        uint64_t m_unknown;
+        TArray<FNewCharaStatusP> data;
+        /*TArray array2;
+        TArray array3;
+        TArray array4;
+        TArray array5;
+        TArray array6;
+        TArray array7;
+        TArray array8;
+        TArray array9;
+        TArray array10;
+        TArray array11;
+        TArray array12;
+        */
+};  
 
 class UGDDCharaStatus : public UObject 
 {

@@ -8,7 +8,7 @@
 class ULifeData : public GameObjectProxy<UGDSLifeData>
 {
     public: 
-        ULifeData(UGDSLifeData& data) : GameObjectProxy(data){};
+        ULifeData(UGDSLifeData &data) : GameObjectProxy(data) {};
 
         FGDLifeData&    getLife(ELifeType life);
 };      
