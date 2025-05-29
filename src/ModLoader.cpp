@@ -38,8 +38,10 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     auto recipe = gameCache->GetRecipe(RECIPE_COASTAL_BRIGANDINE);
 
     auto result = recipe.GetItem();
-    recipe.AddItem(lifecure, 56);
     recipe.RemoveItem(0);
+    recipe.RemoveItem(0);
+    recipe.RemoveItem(0);
+    recipe.AddItem(lifecure, 56);
 
     return 0;
 }
