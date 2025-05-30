@@ -40,10 +40,20 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     auto pine_staff = reinterpret_cast<ItemEquipData*>(&b);
     bronze_sword->SetName(LANG::ENGLISH, FString(L"Estrogen :3"));
     bronze_sword->SetModel(*pine_staff);
-    /*for(int i = 0; i < bronze_sword->GetStatusLotTable().size(); ++i)
-    {
-        mlLogger.warn("sfsdf sfsd ", bronze_sword->GetSkillLot(i));
-    }*/
+    bronze_sword->SetQuality(EItemQualityType::Quality4);
+    bronze_sword->SetRarityType(ERarityType::Rarity6);
+    bronze_sword->SetEffectType(EItemEffectType::Invincible);
+
+    auto c = gameCache->GetRecipe(RECIPE_SCIENCE_FLASK_1);
+    c.SetRank(EItemTitleType::Masterpiece);
+    
+    auto d = gameCache->GetItem(ARMOR_PALADINS_CUIRASS);
+    auto paladins_cuirass = reinterpret_cast<ItemArmorData*>(&d.getObject());
+    //paladins_cuirass->SetPhysicalDefense(0, 599);
+
+    // segfaault?
+    paladins_cuirass->GetAttrResist().SetDark(456);
+    mlLogger.warn(bronze_sword->GetOverwriteIcon());
     
     return 0;
 }

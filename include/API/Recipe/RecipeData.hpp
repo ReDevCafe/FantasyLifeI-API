@@ -19,7 +19,6 @@ public:
     {
         for(int i = 0; i < data.itemList.Count; ++i)
             _itemInfo.push_back(RecipeDataItemInfo{data.itemList[i]});
-
     };
 
     std::string GetIdentifier();
@@ -36,8 +35,8 @@ public:
     ERecipeItemSeries               GetSeries() const { return this->_object.recipeItemSeries; }
     void                            SetSeries(ERecipeItemSeries serie) const { this->_object.recipeItemSeries = serie; }
 
-    EItemTitleType                  GetTitleType() const { return this->_object.titleType; }
-    void                            SetTitleType(EItemTitleType type) const { this->_object.titleType = type; }
+    EItemTitleType                  GetRank() const { return this->_object.titleType; }
+    void                            SetRank(EItemTitleType rank) const { this->_object.titleType = rank; }
 
     ERandomRecipeType               GetRandomRecipeType() const { return this->_object.randomRecipeType; }
     void                            SetRandomRecipeType(ERandomRecipeType type) const { this->_object.randomRecipeType = type; }

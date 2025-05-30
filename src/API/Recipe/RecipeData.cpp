@@ -30,7 +30,7 @@ void RecipeData::AddItem(ItemData data, int32_t quantity)
     this->_itemInfo.emplace_back(object);
 }
 
-// NOT WORKING?
+//FIXME: rework
 void RecipeData::RemoveItem(int index)
 {
     int32_t count = this->_object.itemList.Count;
