@@ -11,7 +11,7 @@ class ItemData : public GameObjectProxy<FGDItemData>
     public:
         ItemData(FGDItemData& data) :
             GameObjectProxy(data),
-            _priceInfo{data.priceInfo}
+            _priceInfo(data.priceInfo)
         {};
 
         std::string         GetIdentifier();

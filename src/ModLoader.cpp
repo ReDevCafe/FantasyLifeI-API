@@ -45,15 +45,20 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     bronze_sword->SetEffectType(EItemEffectType::Invincible);
 
     auto c = gameCache->GetRecipe(RECIPE_SCIENCE_FLASK_1);
-    c.SetRank(EItemTitleType::Masterpiece);
+    c.SetRank(EItemTitleType::Legend);
+    c.RemoveItem(1);
     
     auto d = gameCache->GetItem(ARMOR_PALADINS_CUIRASS);
-    auto paladins_cuirass = reinterpret_cast<ItemArmorData*>(&d.getObject());
-    //paladins_cuirass->SetPhysicalDefense(0, 599);
+    auto paladins_cuirass = reinterpret_cast<ItemArmorData*>(&d);
 
-    // segfaault?
-    paladins_cuirass->GetAttrResist().SetDark(456);
-    mlLogger.warn(bronze_sword->GetOverwriteIcon());
+    auto f = gameCache->GetItem(LIFETOOLS_SCIENCE_FLASK);
+    auto science_flask = reinterpret_cast<ItemLifeToolsData*>(&f);
+
+    science_flask->SetLifeParam(EItemTitleType::Legend, 9999);
+
+    auto gay = gameCache->GetSkill("es_alchemy_up06").ID.Name;
+    mlLogger.warn(Utils::FNameToString(gay));
+    science_flask->SetSkill(0, gay);
     
     return 0;
 }

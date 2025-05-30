@@ -17,8 +17,8 @@ class ItemEquipData : public ItemData
         std::string GetModel();
         void SetModel(ItemEquipData item);
 
-        bool GetNotAggregated() const { return reinterpret_cast<FGDItemEquipData*>(&this->_object)->notAggregated; }
-        void SetNotAggretated(bool value) { reinterpret_cast<FGDItemEquipData*>(&this->_object)->notAggregated = value; }
+        bool GetNotAggregated()             { return reinterpret_cast<FGDItemEquipData*>(&this->_object)->notAggregated; }
+        void SetNotAggretated(bool value)   { reinterpret_cast<FGDItemEquipData*>(&this->_object)->notAggregated = value; }
 };
 
 #endif // !ITEMEQUIPDATA_HPP

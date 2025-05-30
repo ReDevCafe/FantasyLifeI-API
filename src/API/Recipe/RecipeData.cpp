@@ -34,7 +34,7 @@ void RecipeData::AddItem(ItemData data, int32_t quantity)
 void RecipeData::RemoveItem(int index)
 {
     int32_t count = this->_object.itemList.Count;
-    //if(index <= 0 || index >= count) return;    // Invalid index
+    if(index <= 0 || index >= count) return;    // Invalid index
 
     this->_itemInfo.clear();
     this->_object.itemList.RemoveSingle(index);

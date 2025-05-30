@@ -7,9 +7,10 @@
 
 class FGDAuto { 
     public:
-        uint32_t m_offset;
-        uint32_t m_dataSize;
-        UGameDataAsset *m_pAsset;
+        uint32_t                m_offset;
+        uint32_t                m_dataSize;
+        class UGameDataAsset    *m_pAsset;
+        unsigned char           unknown[0x10];
 };
 
 struct FGDStCommon_ElementAttrParam
@@ -34,6 +35,11 @@ class FGDStCommon_TextInfo {
         FString text_czh;
         FString text_tzh;
         FString text_ko;
+};
+
+struct FGDStCommon_SkillParam
+{ 
+	TArray<FGDAuto> prm;                                                        // 0x0000   (0x0010)  
 };
 
 class FGDStCommon_NounInfo

@@ -26,6 +26,9 @@ GameCache::GameCache()
     initText(gmd, sdm);
     mlLogger.info("Cached: Text Registries");
 
+    initSkill(gmd, sdm);
+    mlLogger.info("Cached: Skill Registries");
+
     initItem(gmd, sdm);
     mlLogger.info("Cached: Items Registries");
 
@@ -367,6 +370,20 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     }
 }
 
+//FIXME: Convert to API Object
+void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
+{
+    gmd->waitObject(&sdm->m_SkillData);
+    for (int i = 0; i < sdm->m_SkillData->m_dataMap.Data.Count; i++)
+    {
+        auto skill = sdm->m_SkillData->m_dataMap.Data[i].Value.Second;
+        std::string key = Utils::FNameToString(sdm->m_SkillData->m_dataMap.Data[i].Value.First.Name);
+        if(key == "ps_just_avoid" || key == "ps_just_guard") continue;
+        
+        this->_cacheSkillData.emplace(key, skill);
+    } 
+}
+
 void GameCache::initItem(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_ItemMaterialData);
@@ -406,8 +423,9 @@ void GameCache::initItem(GameData* gmd, UStaticDataManager* sdm)
     for (int i = 0; i < sdm->m_ItemLifeToolsData->m_dataMap.Data.Count; i++)
     {
         ItemLifeToolsData citem{ sdm->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second };
-
         _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemLifeToolsData>(citem));
+
+        auto array = sdm->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second.lifeParamList;
     }
 
     gmd->waitObject(&sdm->m_ItemArmorData);

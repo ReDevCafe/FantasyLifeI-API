@@ -8,6 +8,7 @@
 
     #include "API/Item/ItemData.hpp"
     #include "API/Recipe/RecipeData.hpp"
+    #include "Game/Skill/UGDSSkillData.hpp"
 
 class UStaticDataManager;
 class GameData;
@@ -19,6 +20,7 @@ class GameCache
 
         FGDStCommon_NounInfo*   GetNoun     (std::string key) const { return _cacheNounInfo.at(key); }
         FGDStCommon_TextInfo*   GetText     (std::string key) const { return _cacheTextInfo.at(key); }
+        FGDSkillData            GetSkill    (std::string key) const { return _cacheSkillData.at(key); }
         ItemData                GetItem     (std::string key) const { return *_cacheItemData.at(key); }
         RecipeData              GetRecipe   (std::string key) const { return *_cacheRecipeData.at(key); }
 
@@ -28,12 +30,14 @@ class GameCache
     private:
         std::unordered_map<std::string, FGDStCommon_NounInfo*> _cacheNounInfo;
         std::unordered_map<std::string, FGDStCommon_TextInfo*> _cacheTextInfo;
+        std::unordered_map<std::string, FGDSkillData>           _cacheSkillData;
         std::unordered_map<std::string, std::unique_ptr<ItemData>> _cacheItemData;
         std::unordered_map<std::string, std::unique_ptr<RecipeData>> _cacheRecipeData;
 
     protected:
         void initNoun(GameData* gmd, UStaticDataManager* sdm);
         void initText(GameData* gmd, UStaticDataManager* sdm);
+        void initSkill(GameData* gmd, UStaticDataManager* sdm);
         void initItem(GameData* gmd, UStaticDataManager* sdm);
         void initRecipe(GameData* gmd, UStaticDataManager* sdm);
 };

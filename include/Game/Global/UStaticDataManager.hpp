@@ -50,6 +50,7 @@
     #include "Game/Text/UGDSSystemText.hpp"
     #include "Game/Text/UGDSTipsText.hpp"
     #include "Game/Graphic/UGDSMenuIconTexture.hpp"
+    #include "Game/Skill/UGDSSkillData.hpp"
 
 
 class USDMDataPropetyClass : public UObject {
@@ -362,7 +363,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemCraftGameTutorialSetting_Property;
         void *m_ItemCraftGameSeSetting;
 		USDMDataPropetyClass *m_ItemCraftGameSeSetting_Property;
-        void *m_SkillData;
+        UGDSSkillData *m_SkillData;
 		USDMDataPropetyClass *m_SkillData_Property;
         void *m_SkillDataEx;
 		USDMDataPropetyClass *m_SkillDataEx_Property;
