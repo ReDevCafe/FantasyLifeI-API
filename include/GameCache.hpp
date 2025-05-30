@@ -17,20 +17,23 @@ class GameCache
         GameCache();
         ~GameCache() = default;
 
-        FGDStCommon_NounInfo*   GetNoun     (std::string key);
-        ItemData                GetItem     (std::string key);
-        RecipeData              GetRecipe   (std::string key);
+        FGDStCommon_NounInfo*   GetNoun     (std::string key) const { return _cacheNounInfo.at(key); }
+        FGDStCommon_TextInfo*   GetText     (std::string key) const { return _cacheTextInfo.at(key); }
+        ItemData                GetItem     (std::string key) const { return *_cacheItemData.at(key); }
+        RecipeData              GetRecipe   (std::string key) const { return *_cacheRecipeData.at(key); }
 
         const std::unordered_map<std::string, std::unique_ptr<ItemData>>& GetListItems() const { return _cacheItemData; }
         const std::unordered_map<std::string, std::unique_ptr<RecipeData>>& GetListRecipes() const { return _cacheRecipeData; }
 
     private:
         std::unordered_map<std::string, FGDStCommon_NounInfo*> _cacheNounInfo;
+        std::unordered_map<std::string, FGDStCommon_TextInfo*> _cacheTextInfo;
         std::unordered_map<std::string, std::unique_ptr<ItemData>> _cacheItemData;
         std::unordered_map<std::string, std::unique_ptr<RecipeData>> _cacheRecipeData;
 
     protected:
         void initNoun(GameData* gmd, UStaticDataManager* sdm);
+        void initText(GameData* gmd, UStaticDataManager* sdm);
         void initItem(GameData* gmd, UStaticDataManager* sdm);
         void initRecipe(GameData* gmd, UStaticDataManager* sdm);
 };

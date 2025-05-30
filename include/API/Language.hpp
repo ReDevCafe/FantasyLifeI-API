@@ -2,7 +2,7 @@
 
 enum class LANG 
 {
-    NONE,
+    JAPANESE,
     ENGLISH,
     FRENCH,
     ESPAGNOL,

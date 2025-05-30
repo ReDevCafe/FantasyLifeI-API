@@ -8,7 +8,7 @@
 class FGDItemText : public FTableRowBase {
     public:
         FName ID;
-        TArray<FGDStCommon_TextInfo> textInfo;
+        TArray<FGDStCommon_TextInfo> textInfoArray;
 };
 
 class UGDSItemText : public UGameDataAsset {

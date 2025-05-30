@@ -2,7 +2,7 @@
 
 #include <fstream>
 #include "Engine/FUObjectArray.hpp"
-#include <API/Life/ULifeData.hpp>
+#include "API/Life/ULifeData.hpp"
 #include "Engine/DataTable.hpp"
 #include "API/Life/LifeData.hpp"
 #include "API/Item/ItemLifeToolsData.hpp"
@@ -27,22 +27,24 @@
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
 
-DWORD WINAPI ModLoader::init(LPVOID lpParam) {
+DWORD WINAPI ModLoader::init(LPVOID lpParam)
+{
     mlLogger.info("Mod loader has been started");
     gameData  = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
+    Sleep(10000);
     gameCache = new GameCache();
+    //
+    auto a = gameCache->GetItem(WEAPON_BRONZE_SWORD);
+    auto b = gameCache->GetItem(ARMOR_STEEL_BEASTS_HELM);
+    auto bronze_sword = reinterpret_cast<ItemEquipData*>(&a);
+    auto pine_staff = reinterpret_cast<ItemEquipData*>(&b);
+    bronze_sword->SetName(LANG::ENGLISH, FString(L"Estrogen :3"));
+    bronze_sword->SetModel(*pine_staff);
+    /*for(int i = 0; i < bronze_sword->GetStatusLotTable().size(); ++i)
+    {
+        mlLogger.warn("sfsdf sfsd ", bronze_sword->GetSkillLot(i));
+    }*/
     
-    auto lifecure = gameCache->GetItem(MATERIAL_CHICKEN_EGGS);
-    lifecure.SetName(LANG::ENGLISH, FString(L"Estrogen :3"));
-    auto AAAAA = gameCache->GetItem(MATERIAL_WATER_SHARD);
-    auto recipe = gameCache->GetRecipe(RECIPE_COASTAL_BRIGANDINE);
-
-    auto result = recipe.GetItem();
-    recipe.RemoveItem(0);
-    recipe.RemoveItem(0);
-    recipe.RemoveItem(0);
-    recipe.AddItem(lifecure, 56);
-
     return 0;
 }
 

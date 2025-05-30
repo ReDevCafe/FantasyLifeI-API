@@ -19,8 +19,8 @@ class FGDItemData : public FTableRowBase {
         uint32_t flagNo;
         EItemCategory Category;
         EItemType Type;
-        char series;
-        char seType;
+        char series;    // ERecipeItemSeries??
+        char seType;    
         uint16_t StackMax;
         bool disableSolAbadon;
         bool disableUsedInventory;

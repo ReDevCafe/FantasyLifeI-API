@@ -4,12 +4,10 @@
     #include "Engine/UObject.hpp"
     #include "Game/Character/UGDSCharaParameter.hpp"
     #include "Game/Recipe/UGDSRecipeData.hpp"
-    #include "Game/Item/UGDSItemText.hpp"
     #include "Game/Item/UGDSItemRecipeData.hpp"
     #include "Game/Character/UGDSCharaLevelConfig.hpp"
     #include "Game/Character/UGDSCharaData.hpp"
     #include "Game/Life/UGDSLifeData.hpp"
-    #include "Game/Life/UGDSLifeText.hpp"
     #include "Game/Noun/UGDSPlantDungeonText_Noun.hpp"
     #include "Game/Noun/UGDSItemText_Noun.hpp"
     #include "Game/Noun/UGDSLifeText_Noun.hpp"
@@ -28,6 +26,31 @@
     #include "Game/Item/UGDSItemCraftData.hpp"
     #include "Game/Item/UGDSItemVehicleData.hpp"
     #include "Game/Item/UGDSItemPowerUpData.hpp"
+    #include "Game/Noun/UGDSBattleCommandNameNoun.hpp"
+    #include "Game/Noun/UGDSQuestTitleText.hpp"
+    #include "Game/Text/UGDSAchievementText.hpp"
+    #include "Game/Text/UGDSBattleCommandDescText.hpp"
+    #include "Game/Text/UGDSCharacterFlavorText.hpp"
+    #include "Game/Text/UGDSCharamakeText.hpp"
+    #include "Game/Text/UGDSDailyMissionCompleteNotificationText.hpp"
+    #include "Game/Text/UGDSDailyMissionTitleText.hpp"
+    #include "Game/Text/UGDSGuildRewardText.hpp"
+    #include "Game/Text/UGDSItemText.hpp"
+    #include "Game/Text/UGDSLifeText.hpp"
+    #include "Game/Text/UGDSMapText.hpp"
+    #include "Game/Text/UGDSMenuText.hpp"
+    #include "Game/Text/UGDSMultiText.hpp"
+    #include "Game/Text/UGDSPhasePurposeText.hpp"
+    #include "Game/Text/UGDSPhaseTitleText.hpp"
+    #include "Game/Text/UGDSPlantDungeonText.hpp"
+    #include "Game/Text/UGDSQuestDetailText.hpp"
+    #include "Game/Text/UGDSQuestPurposeText.hpp"
+    #include "Game/Text/UGDSQuestReportNotificationText.hpp"
+    #include "Game/Text/UGDSSkillText.hpp"
+    #include "Game/Text/UGDSSystemText.hpp"
+    #include "Game/Text/UGDSTipsText.hpp"
+    #include "Game/Graphic/UGDSMenuIconTexture.hpp"
+
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -137,7 +160,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_NPCRoomData_Property;
         void *m_NPCRoomViewPointData;
 		USDMDataPropetyClass *m_NPCRoomViewPointData_Property;
-        void *m_PlantDungeonText;
+        UGDSPlantDungeonText *m_PlantDungeonText;
 		USDMDataPropetyClass *m_PlantDungeonText_Property;
         UGDSPlantDungeonText_Noun *m_PlantDungeonText_Noun;
 		USDMDataPropetyClass *m_PlantDungeonText_Noun_Property;
@@ -343,7 +366,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_SkillData_Property;
         void *m_SkillDataEx;
 		USDMDataPropetyClass *m_SkillDataEx_Property;
-        void *m_SkillText;
+        UGDSSkillText *m_SkillText;
 		USDMDataPropetyClass *m_SkillText_Property;
         UGDSSkillText_Noun *m_SkillText_Noun;
 		USDMDataPropetyClass *m_SkillText_Noun_Property;
@@ -421,7 +444,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_AnywhereGateSetting_Property;
         void *m_AreaPanel;
 		USDMDataPropetyClass *m_AreaPanel_Property;
-        void *m_MapText;
+        UGDSMapText *m_MapText;
 		USDMDataPropetyClass *m_MapText_Property;
         UGDSMapText_Noun *m_MapText_Noun;
 		USDMDataPropetyClass *m_MapText_Noun_Property;
@@ -529,7 +552,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_MapHarvestingAreaPlacement_Property;
         void *m_QuestReportTypeData;
 		USDMDataPropetyClass *m_QuestReportTypeData_Property;
-        void *m_QuestReportNotificationText;
+        UGDSQuestReportNotificationText *m_QuestReportNotificationText;
 		USDMDataPropetyClass *m_QuestReportNotificationText_Property;
         void *m_ItemEffDescData;
 		USDMDataPropetyClass *m_ItemEffDescData_Property;
@@ -563,7 +586,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_BulletinBoardAreaDef_Property;
         void *m_MultiAdventureData;
 		USDMDataPropetyClass *m_MultiAdventureData_Property;
-        void *m_MultiText;
+        UGDSMultiText *m_MultiText;
 		USDMDataPropetyClass *m_MultiText_Property;
         void *m_MultiplayParameterFactor;
 		USDMDataPropetyClass *m_MultiplayParameterFactor_Property;
@@ -579,7 +602,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_GalleryPlacementLocationData_Property;
         void *m_AchievementList;
 		USDMDataPropetyClass *m_AchievementList_Property;
-        void *m_AchievementText;
+        UGDSAchievementText *m_AchievementText;
 		USDMDataPropetyClass *m_AchievementText_Property;
         void *m_AchievementFlag;
 		USDMDataPropetyClass *m_AchievementFlag_Property;
@@ -607,7 +630,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_GuildQuestData_Property;
         void *m_GuildRankData;
 		USDMDataPropetyClass *m_GuildRankData_Property;
-        void *m_GuildRewardText;
+        UGDSGuildRewardText *m_GuildRewardText;
 		USDMDataPropetyClass *m_GuildRewardText_Property;
         void *m_LibraryListData;
 		USDMDataPropetyClass *m_LibraryListData_Property;
@@ -623,9 +646,9 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_DeliveryRequestData_Property;
         void *m_DailyMissionData;
 		USDMDataPropetyClass *m_DailyMissionData_Property;
-        void *m_DailyMissionTitleText;
+        UGDSDailyMissionTitleText *m_DailyMissionTitleText;
 		USDMDataPropetyClass *m_DailyMissionTitleText_Property;
-        void *m_DailyMissionCompleteNotificationText;
+        UGDSDailyMissionCompleteNotificationText *m_DailyMissionCompleteNotificationText;
 		USDMDataPropetyClass *m_DailyMissionCompleteNotificationText_Property;
         void *m_PasswordData;       //TODO: Look
 		USDMDataPropetyClass *m_PasswordData_Property;
@@ -679,13 +702,13 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ArenaSetting_Property;
         void *m_ArenaRankData;
 		USDMDataPropetyClass *m_ArenaRankData_Property;
-        void *m_CharamakeText;
+        UGDSCharamakeText *m_CharamakeText;
 		USDMDataPropetyClass *m_CharamakeText_Property;
-        void *m_TipsText;
+        UGDSTipsText *m_TipsText;
 		USDMDataPropetyClass *m_TipsText_Property;
         void *m_AnnounceRandomTalk;
 		USDMDataPropetyClass *m_AnnounceRandomTalk_Property;
-        void *m_CharacterFlavorText;
+        UGDSCharacterFlavorText *m_CharacterFlavorText;
 		USDMDataPropetyClass *m_CharacterFlavorText_Property;
         void *m_MapAreaEnvParam;
 		USDMDataPropetyClass *m_MapAreaEnvParam_Property;
@@ -761,11 +784,11 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_PhaseSetting_Property;
         void *m_PhaseTrigger;
 		USDMDataPropetyClass *m_PhaseTrigger_Property;
-        void *m_PhasePurposeText;
+        UGDSPhasePurposeText *m_PhasePurposeText;
 		USDMDataPropetyClass *m_PhasePurposeText_Property;
         void *m_PhasePurposePoint;
 		USDMDataPropetyClass *m_PhasePurposePoint_Property;
-        void *m_PhaseTitleText;
+        UGDSPhaseTitleText *m_PhaseTitleText;
 		USDMDataPropetyClass *m_PhaseTitleText_Property;
         void *m_BlueprintPaths;
 		USDMDataPropetyClass *m_BlueprintPaths_Property;
@@ -873,7 +896,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_SoundEreaData_Property;
         void *m_MenuCreateData;
 		USDMDataPropetyClass *m_MenuCreateData_Property;
-        void *m_MenuText;
+        UGDSMenuText *m_MenuText;
 		USDMDataPropetyClass *m_MenuText_Property;
         void *m_MenuButtonGuideTextData;
 		USDMDataPropetyClass *m_MenuButtonGuideTextData_Property;
@@ -969,7 +992,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_CameraShake_Property;
         void *m_PickUpCameraDef;
 		USDMDataPropetyClass *m_PickUpCameraDef_Property;
-        void *m_MenuIcon;
+        UGDSMenuIconTexture *m_MenuIcon;
 		USDMDataPropetyClass *m_MenuIcon_Property;
         void *m_EventMenuTexture;
 		USDMDataPropetyClass *m_EventMenuTexture_Property;
@@ -989,11 +1012,11 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_StoneTabletItemLotData_Property;
         void *m_QuestTrigger;
 		USDMDataPropetyClass *m_QuestTrigger_Property;
-        void *m_QuestTitleText;
+        UGDSQuestTitleText *m_QuestTitleText;
 		USDMDataPropetyClass *m_QuestTitleText_Property;
-        void *m_QuestDetailText;
+        UGDSQuestDetailText *m_QuestDetailText;
 		USDMDataPropetyClass *m_QuestDetailText_Property;
-        void *m_QuestPurposeText;
+        UGDSQuestPurposeText *m_QuestPurposeText;
 		USDMDataPropetyClass *m_QuestPurposeText_Property;
         void *m_QuestPurposePoint;
 		USDMDataPropetyClass *m_QuestPurposePoint_Property;
@@ -1049,7 +1072,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_FontStyleSetting_Property;
         void *m_FontStyleOverwriteSetting;
 		USDMDataPropetyClass *m_FontStyleOverwriteSetting_Property;
-        void *m_SystemText;
+        UGDSSystemText *m_SystemText;
 		USDMDataPropetyClass *m_SystemText_Property;
         UGDSSystemText_Noun *m_SystemText_Noun;
 		USDMDataPropetyClass *m_SystemText_Noun_Property;
@@ -1095,7 +1118,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_SwitchHDVibrationData_Property;
         void *m_PS5VibrationData;
 		USDMDataPropetyClass *m_PS5VibrationData_Property;
-        void *m_BattleCommandNameNoun;
+        UGDSBattleCommandNameNoun *m_BattleCommandNameNoun;
 		USDMDataPropetyClass *m_BattleCommandNameNoun_Property;
         void *m_FootSeData;
 		USDMDataPropetyClass *m_FootSeData_Property;
@@ -1111,7 +1134,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_EventPictureOpenCloseType_Property;
         void *m_FontColorData;
 		USDMDataPropetyClass *m_FontColorData_Property;
-        void *m_BattleCommandDescText;
+        UGDSBattleCommandDescText *m_BattleCommandDescText;
 		USDMDataPropetyClass *m_BattleCommandDescText_Property;
         void *m_TextReplaceTag;
 		USDMDataPropetyClass *m_TextReplaceTag_Property;

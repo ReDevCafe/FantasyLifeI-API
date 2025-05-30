@@ -1,4 +1,4 @@
 #pragma once
 #include "Logger.hpp"
 
-inline Logger mlLogger("ModLoader");
+inline Logger mlLogger("ModLoader", "logOut.log");
