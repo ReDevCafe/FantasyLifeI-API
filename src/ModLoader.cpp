@@ -1,32 +1,19 @@
 #include "ModLoader.hpp"
 #include "Hook/Memory.hpp"
 #include "Patcher/Patcher.hpp"
+#include "Patcher/Patches/EventHook.hpp"
+#include "Game/Menu/Menu.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 
-void test()
-{
-    std::cout << "Cliquer sur le menu" << std::endl;
-}
+void test(UMenuLa)
 
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     mlLogger.info("Mod loader has been started");
     Patcher patcher;
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
-    patcher.add(new Patch(
-        Priority::HIGH,
-        "ClickEvent",
-        0x657DC32,
-        reinterpret_cast<uintptr_t>(test)
-    ));
-    patcher.add(new Patch(
-        Priority::HIGH,
-        "KeyEvent",
-        0x657DC32,
-        reinterpret_cast<uintptr_t>(test)
-    ));
+    patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     patcher.applyPatches(baseAddress);
-    mlLogger.info(std::hex, Memory::findFreeMemory(baseAddress, 5));
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
     gameData->initOthersData();
     // TEST

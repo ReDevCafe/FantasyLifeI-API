@@ -14,6 +14,20 @@ struct FName {
     FNameEntryId Number = 0;
 };
 
+class FTextData {
+public:
+    char pad_0x0000[0x28];  //0x0000
+    wchar_t* Name;          //0x0028 
+    __int32 Length;         //0x0030 
+
+};
+
+struct FText
+{
+    FTextData* Data;
+    char UnknownData[0x10];
+};
+
 struct FString : public TArray<wchar_t>
 {
     inline FString() {};

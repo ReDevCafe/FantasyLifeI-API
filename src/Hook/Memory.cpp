@@ -21,3 +21,26 @@ bool Memory::isFree(uintptr_t address, uint8_t length) {
     }
     return true;
 }
+
+CONTEXT Memory::getPreviousFrame(CONTEXT originalCtx, uint8_t nth) {
+    DWORD64 imageBase = 0;
+    CONTEXT newContext = originalCtx;
+    for (int i = 0; i < nth; ++i) {
+        PRUNTIME_FUNCTION runtimeFunction = RtlLookupFunctionEntry(newContext.Rip, &imageBase, NULL);
+        if (!runtimeFunction)
+            throw std::runtime_error("Cannot get previous frame");
+        void* handlerData = nullptr;
+        ULONG64 establisherFrame = 0;
+        RtlVirtualUnwind(
+            UNW_FLAG_NHANDLER,
+            imageBase,
+            newContext.Rip,
+            runtimeFunction,
+            &newContext,
+            &handlerData,
+            &establisherFrame,
+            nullptr
+        );
+    }
+    return newContext;
+}

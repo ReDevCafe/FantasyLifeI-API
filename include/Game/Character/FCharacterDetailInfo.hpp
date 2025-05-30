@@ -6,7 +6,7 @@
 
     #include "Game/Element.hpp"
     #include "Game/Types.hpp"
-    #include "Game/Character/Menu.hpp"
+    #include "Game/Character/CharaMenu.hpp"
 	#include "Game/Equip/Equip.hpp"
 	#include "Game/Item/FBaseItemDetailWindowInfo.hpp"
 

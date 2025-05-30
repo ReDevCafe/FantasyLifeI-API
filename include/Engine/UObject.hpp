@@ -82,6 +82,12 @@ class UStruct : public UField {
 		FField* ChildProperties;
 };
 
+class UFunction : public UStruct
+{
+	public:
+		unsigned char UnknownData00_1[0x30];
+};
+
 class USubSystem : public UObject 
 {
 	public:
