@@ -3,7 +3,7 @@
 
     #include "Engine/DataTable.hpp"
     #include "Engine/FName.hpp"
-    #include "Game/Item/FGDItemData.hpp"
+    #include "Engine/UGameDataAsset.hpp"
 
 class FGDAuto { 
     public:
@@ -202,4 +202,63 @@ struct FGDStCommon_ItemEffParam
     unsigned char   unknown[0x2];
     FName           effDescId;
 };
+
+struct FGDStCommon_PickStatusParam
+{ 
+    public:
+	int32_t     HP;                                                         // 0x0000   (0x0004)  
+	int32_t     offense;                                                    // 0x0004   (0x0004)  
+	int32_t     defense;                                                    // 0x0008   (0x0004)  
+	int32_t     criticalRateEvasion;                                        // 0x000C   (0x0004)  
+	uint32_t    Exp;                                                        // 0x0010   (0x0004)  
+};
+
+/// Struct /Script/DP1Project.GDCommonPickParamData_CommonPickParam
+/// Size: 0x0010 (16 bytes) (0x000000 - 0x000010) align 4 MaxSize: 0x0010
+struct FGDCommonPickParamData_CommonPickParam
+{ 
+    public:
+	float   Radius;                                                     // 0x0000   (0x0004)  
+	char    sweetSpotAngle;                                             // 0x0004   (0x0001)  
+	bool    isChangeSweetSpot;                                          // 0x0005   (0x0001)  
+	char    sweetSpotMin;                                               // 0x0006   (0x0001)  
+	char    sweetSpotMax;                                               // 0x0007   (0x0001)  
+	float   walkAroundSpeed;                                            // 0x0008   (0x0004)  
+	float   hitEffPosRate;                                              // 0x000C   (0x0004)  
+};
+
+struct FGDStItem_PickPointDropItem
+{ 
+    public:
+	FName   tableGroupId;                                               // 0x0000   (0x0008)  
+	FName   excellentTableGroupId;                                      // 0x0008   (0x0008)  
+};
+
+struct FGDCommonPickParamData : FTableRowBase
+{
+    public: 
+	FName                                              ID;                                                         // 0x0008   (0x0008)  
+	char                                               enemyType;                                                  // 0x0010   (0x0001)  
+	char                                               Category;                                                   // 0x0011   (0x0001)  
+	unsigned char                                      UnknownData00_6[0x2];                                       // 0x0012   (0x0002)  MISSED
+	FName                                              gotId;                                                      // 0x0014   (0x0008)  
+	FGDStCommon_PickStatusParam                        pickParamMin;                                               // 0x001C   (0x0014)  
+	FGDStCommon_PickStatusParam                        pickParamMax;                                               // 0x0030   (0x0014)  
+	FGDCommonPickParamData_CommonPickParam             commonPickInfo;                                             // 0x0044   (0x0010)  
+	char                                               overkillRate;                                               // 0x0054   (0x0001)  
+	unsigned char                                      UnknownData01_6[0x3];                                       // 0x0055   (0x0003)  MISSED
+	float                                              healRate;                                                   // 0x0058   (0x0004)  
+	float                                              healRateInBattle;                                           // 0x005C   (0x0004)  
+	bool                                               isBoss;                                                     // 0x0060   (0x0001)  
+	unsigned char                                      UnknownData02_6[0x3];                                       // 0x0061   (0x0003)  MISSED
+	FGDStItem_PickPointDropItem                        Drop;                                                       // 0x0064   (0x0010)  
+	unsigned char                                      UnknownData03_7[0x4];                                       // 0x0074   (0x0004)  MISSED
+};
+
+class UGDSCommonPickParamData : public UGameDataAsset
+{ 
+    public:
+        TMap<FName, FGDCommonPickParamData>                m_dataMap;                                                  // 0x0050   (0x0050)  
+};
+
 #endif // !FGDSTCOMMON_HPP

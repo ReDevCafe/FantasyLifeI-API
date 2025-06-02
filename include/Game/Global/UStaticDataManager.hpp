@@ -51,6 +51,7 @@
     #include "Game/Text/UGDSTipsText.hpp"
     #include "Game/Graphic/UGDSMenuIconTexture.hpp"
     #include "Game/Skill/UGDSSkillData.hpp"
+    #include "Game/Character/UGDSCharaParameterEnemy.hpp"
 
 
 class USDMDataPropetyClass : public UObject {
@@ -259,7 +260,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_VegetableParamData_Property;
         void *m_VegetableQualityData;
 		USDMDataPropetyClass *m_VegetableQualityData_Property;
-        void *m_CommonPickParamData;
+        UGDSCommonPickParamData *m_CommonPickParamData;
 		USDMDataPropetyClass *m_CommonPickParamData_Property;
         void *m_MapPickPointConfig;
 		USDMDataPropetyClass *m_MapPickPointConfig_Property;
@@ -911,7 +912,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_CharaSpeed_Property;
         UGDSCharaParameter *m_CharaParameter;
 		USDMDataPropetyClass *m_CharaParameter_Property;
-        void *m_CharaParameterEnemy;
+        UGDSCharaParameterEnemy *m_CharaParameterEnemy;
 		USDMDataPropetyClass *m_CharaParameterEnemy_Property;
         void *m_CharaModelData;
 		USDMDataPropetyClass *m_CharaModelData_Property;

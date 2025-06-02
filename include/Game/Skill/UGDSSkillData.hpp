@@ -5,6 +5,7 @@
     #include "Engine/UGameDataAsset.hpp"
     #include "Game/FGDStCommon.hpp"
     #include "Skill.hpp"
+    #include "Game/Types.hpp"
 
 struct FGDSkillData_EffCond
 { 
@@ -45,7 +46,7 @@ struct FGDSkillData : FTableRowBase
         TArray<int8_t>                          filterType;
         TArray<FGDSkillData_SkillEffectInfo>    skillEffectInfoList;
         bool                                    notAggregated;
-        char                                    Rarity;
+        ERarityType                                    Rarity;
         unsigned char                           unknown3[0x6];
 };
 

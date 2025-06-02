@@ -34,6 +34,9 @@ GameCache::GameCache()
 
     initRecipe(gmd, sdm);
     mlLogger.info("Cached: Recipes Registries");   
+
+    initPickParam(gmd, sdm);
+    mlLogger.info("Cached: CommonPickParams Registries");
 }
 
 void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
@@ -376,11 +379,24 @@ void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_SkillData);
     for (int i = 0; i < sdm->m_SkillData->m_dataMap.Data.Count; i++)
     {
-        auto skill = sdm->m_SkillData->m_dataMap.Data[i].Value.Second;
         std::string key = Utils::FNameToString(sdm->m_SkillData->m_dataMap.Data[i].Value.First.Name);
         if(key == "ps_just_avoid" || key == "ps_just_guard") continue;
+
+        SkillData skill{ sdm->m_SkillData->m_dataMap.Data[i].Value.Second }; 
         
-        this->_cacheSkillData.emplace(key, skill);
+        this->_cacheSkillData.emplace(key, std::make_unique<SkillData>(skill));
+    } 
+}
+
+void GameCache::initPickParam(GameData* gmd, UStaticDataManager* sdm)
+{
+    gmd->waitObject(&sdm->m_CommonPickParamData);
+    for (int i = 0; i < sdm->m_CommonPickParamData->m_dataMap.Data.Count; i++)
+    {
+        CommonPickParamData param{ sdm->m_CommonPickParamData->m_dataMap.Data[i].Value.Second }; 
+        this->_cacheCommonPickParam.emplace(param.GetIdentifier(), std::make_unique<CommonPickParamData>(param));
+        param.SetIsBoss(true);
+        mlLogger.warn("#define", _cacheTextInfo.at(param.GetIdentifier())->text_en.ToString() ," \"" ,param.GetIdentifier(), "\" // ", param.GetGotIdentifier());
     } 
 }
 

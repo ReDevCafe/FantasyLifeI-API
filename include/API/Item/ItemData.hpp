@@ -1,7 +1,6 @@
 #ifndef ITEMDATA_HPP
     #define ITEMDATA_HPP
 
-    #include "API/GameObjectProxy.hpp"
     #include "API/Language.hpp"
     #include "Game/Item/FGDItemData.hpp"
     #include "API/Common/CommonPriceInfo.hpp"

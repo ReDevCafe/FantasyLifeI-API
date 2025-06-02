@@ -56,10 +56,13 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
 
     science_flask->SetLifeParam(EItemTitleType::Legend, 9999);
 
-    auto gay = gameCache->GetSkill("es_alchemy_up06").ID.Name;
-    mlLogger.warn(Utils::FNameToString(gay));
-    science_flask->SetSkill(0, gay);
+    auto gay = gameCache->GetSkill("es_alchemy_up06");
+    science_flask->AddSkill(gay);
+
     
+    
+
+
     return 0;
 }
 
