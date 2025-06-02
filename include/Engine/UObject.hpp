@@ -4,6 +4,20 @@
     #include <cstdint>
     #include "FName.hpp"
 
+struct FVector2D
+{ 
+	double	X;  
+	double	Y;  
+};
+
+struct FVector4
+{ 
+	double	X;  
+	double	Y;  
+	double	Z;  
+	double	W;  
+};
+
 enum EObjectFlags
 {
 	RF_NoFlags = 0x00000000,

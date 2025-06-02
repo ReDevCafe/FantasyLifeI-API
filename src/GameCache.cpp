@@ -396,7 +396,14 @@ void GameCache::initPickParam(GameData* gmd, UStaticDataManager* sdm)
         CommonPickParamData param{ sdm->m_CommonPickParamData->m_dataMap.Data[i].Value.Second }; 
         this->_cacheCommonPickParam.emplace(param.GetIdentifier(), std::make_unique<CommonPickParamData>(param));
         param.SetIsBoss(true);
-        mlLogger.warn("#define", _cacheTextInfo.at(param.GetIdentifier())->text_en.ToString() ," \"" ,param.GetIdentifier(), "\" // ", param.GetGotIdentifier());
+
+        std::string name = "NO_NAME_FOUND";
+        if(_cacheTextInfo.contains(param.GetGotIdentifier()))
+        {
+            auto x = _cacheTextInfo.at(param.GetGotIdentifier())->text_en;
+            name = x.c_str() ? x.ToString() : "NOT_DEFINED";
+        }
+        mlLogger.warn("#define ",  name," \"" ,param.GetIdentifier(), "\" // ", param.GetGotIdentifier());
     } 
 }
 

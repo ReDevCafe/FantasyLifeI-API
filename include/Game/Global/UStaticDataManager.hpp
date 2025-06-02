@@ -52,7 +52,8 @@
     #include "Game/Graphic/UGDSMenuIconTexture.hpp"
     #include "Game/Skill/UGDSSkillData.hpp"
     #include "Game/Character/UGDSCharaParameterEnemy.hpp"
-
+    #include "Game/World/UGDSWorldMapData.hpp"
+    #include "Game/World/UGDSMapData.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -864,9 +865,9 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_EventSoundCommand_Property;
         void *m_EventSound;
 		USDMDataPropetyClass *m_EventSound_Property;
-        void *m_MapData;
+        UGDSMapData *m_MapData;
 		USDMDataPropetyClass *m_MapData_Property;
-        void *m_WorldMapData;
+        UGDSWorldMapData *m_WorldMapData;
 		USDMDataPropetyClass *m_WorldMapData_Property;
         void *m_WorldMapTransitionData;
 		USDMDataPropetyClass *m_WorldMapTransitionData_Property;
