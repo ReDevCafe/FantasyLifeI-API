@@ -7,7 +7,7 @@
     #include "Engine/UObject.hpp"
     #include "Map.hpp"
 
-    struct FGDMapData_MapViewData
+struct FGDMapData_MapViewData
 { 
 	FString                                            mapName;                                                    // 0x0000   (0x0010)  
 	FName                                              playerStartTag;                                             // 0x0010   (0x0008)  

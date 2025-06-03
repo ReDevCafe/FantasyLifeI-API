@@ -54,6 +54,8 @@
     #include "Game/Character/UGDSCharaParameterEnemy.hpp"
     #include "Game/World/UGDSWorldMapData.hpp"
     #include "Game/World/UGDSMapData.hpp"
+    #include "Game/Npc/UGDSNPCRoomData.hpp"
+    #include "Game/World/UGDSMapSubLevel.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -159,7 +161,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_CraftObjActionSetting_Property;
         void *m_CraftObjActionAnimData;
 		USDMDataPropetyClass *m_CraftObjActionAnimData_Property;
-        void *m_NPCRoomData;
+        UGDSNPCRoomData *m_NPCRoomData;
 		USDMDataPropetyClass *m_NPCRoomData_Property;
         void *m_NPCRoomViewPointData;
 		USDMDataPropetyClass *m_NPCRoomViewPointData_Property;
@@ -881,7 +883,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_CommonSubLevelLoadGroup_Property;
         void *m_MapRoute;
 		USDMDataPropetyClass *m_MapRoute_Property;
-        void *m_MapSubLevel;
+        UGDSMapSubLevel *m_MapSubLevel;
 		USDMDataPropetyClass *m_MapSubLevel_Property;
         void *m_MapDataLayer;
 		USDMDataPropetyClass *m_MapDataLayer_Property;

@@ -14,4 +14,11 @@ enum class EMapType : uint8_t
 	WillowOfDevildom    = 6
 };
 
+enum class EMapSublevelType : uint8_t
+{
+	Common			= 0,
+	Environment		= 1,
+	Room			= 2
+};
+
 #endif // !MAP_HPP

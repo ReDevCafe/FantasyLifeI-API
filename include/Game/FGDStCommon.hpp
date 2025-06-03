@@ -261,4 +261,10 @@ class UGDSCommonPickParamData : public UGameDataAsset
         TMap<FName, FGDCommonPickParamData>                m_dataMap;                                                  // 0x0050   (0x0050)  
 };
 
+struct FGDStCommon_SubLevelLoadInfo
+{ 
+	FName   SubLevelPath;  
+};
+
+
 #endif // !FGDSTCOMMON_HPP

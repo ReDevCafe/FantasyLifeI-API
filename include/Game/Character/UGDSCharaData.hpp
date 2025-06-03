@@ -3,6 +3,7 @@
     
     #include "Engine/UGameDataAsset.hpp"
     #include "Engine/DataTable.hpp"
+    #include "Game/Types.hpp"
 
 class FGDCharaData : public FTableRowBase 
 {
@@ -14,13 +15,15 @@ class FGDCharaData : public FTableRowBase
         TArray<FName>   AnimLoadGroupIDList;
         FName           moveSpeed;
         FName           CraftAreaMoveSpeed;
-        char            gender;
+        EGenderType     gender;
         bool            isAvatar;
+        unsigned char   unknown1[0x2];
         FName           iconID;
         FName           BodyIconId;
         FName           lifeIconId;
         FName           nicknameId;
         FName           VoiceOverrideID;
+        unsigned char   unknown2[0x14];
 };
 
 class UGDSCharaData : public UGameDataAsset

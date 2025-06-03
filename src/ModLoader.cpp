@@ -59,23 +59,19 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     auto gay = gameCache->GetSkill("es_alchemy_up06");
     science_flask->AddSkill(gay);
 
-    auto maps = gameData->getStaticDataManager()->m_MapData->m_dataMap.Data;
-    for(int i = 0; i < maps.Count; ++i)
+    /*
+    auto room = gameData->getStaticDataManager()->m_NPCRoomData->m_dataMap.Data;
+    for (int i = 0; i < room.Count; ++i)
     {
-        auto aled = maps.Data[i].Value.Second;
-        
-        std::string mapid = Utils::FNameToString(aled.MapNameID);
-        std::string AAAAAAAAAA = "NOT_DEFINED";
+        auto aled = room.Data[i].Value.Second;
 
-        if(mapid != "None")
-        {
-            auto gww = gameCache->GetNoun(mapid)->nounSingularForm_en;
-            AAAAAAAAAA = gww.c_str() ? gww.ToString() : "NO_NAME";
-        }
+        auto chara = gameCache->GetChara(Utils::FNameToString(aled.charaID));
 
-        mlLogger.warn("#define ", Utils::FNameToString(aled.mapId), " \"", mapid  ,"\"  // ", AAAAAAAAAA, " + ", mapid);
-        mlLogger.warn("// ", Utils::FNameToString(aled.MapPath));
+        mlLogger.info(Utils::FNameToString(aled.mapId), " > ", chara.GetIdentifier(), " | ", chara.GetName(LANG::ENGLISH));
     }
+    */
+    
+
 
     return 0;
 }

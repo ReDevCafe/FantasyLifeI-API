@@ -11,6 +11,9 @@
     #include "Game/Skill/UGDSSkillData.hpp"
     #include "API/Skill/SkillData.hpp"
     #include "API/Common/CommonPickParamData.hpp"
+    #include "API/Entities/CharaData.hpp"
+    #include "API/World/MapSubLevel.hpp"
+    #include "API/World/MapData.hpp"
 
 class UStaticDataManager;
 class GameData;
@@ -26,6 +29,11 @@ class GameCache
         CommonPickParamData     GetPickParam    (std::string key) const { return *_cacheCommonPickParam.at(key); }
         ItemData                GetItem         (std::string key) const { return *_cacheItemData.at(key); }
         RecipeData              GetRecipe       (std::string key) const { return *_cacheRecipeData.at(key); }
+        CharaData               GetChara        (std::string key) const { return *_cacheCharaData.at(key); }
+
+        // World shit
+        MapSubLevel             GetSubLevel     (std::string key) const { return *_cacheSubLevel.at(key); }
+        MapData                 GetMapData      (std::string key) const { return *_cacheMap.at(key); }
 
         const std::unordered_map<std::string, std::unique_ptr<ItemData>>& GetListItems() const { return _cacheItemData; }
         const std::unordered_map<std::string, std::unique_ptr<RecipeData>>& GetListRecipes() const { return _cacheRecipeData; }
@@ -37,14 +45,23 @@ class GameCache
         std::unordered_map<std::string, std::unique_ptr<SkillData>>             _cacheSkillData;
         std::unordered_map<std::string, std::unique_ptr<ItemData>>              _cacheItemData;
         std::unordered_map<std::string, std::unique_ptr<RecipeData>>            _cacheRecipeData;
+        std::unordered_map<std::string, std::unique_ptr<CharaData>>             _cacheCharaData;
 
-    protected:
+        // World shit
+        std::unordered_map<std::string, std::unique_ptr<MapSubLevel>>           _cacheSubLevel;
+        std::unordered_map<std::string, std::unique_ptr<MapData>>               _cacheMap;
+
         void initNoun(GameData* gmd, UStaticDataManager* sdm);
         void initText(GameData* gmd, UStaticDataManager* sdm);
         void initSkill(GameData* gmd, UStaticDataManager* sdm);
         void initPickParam(GameData* gmd, UStaticDataManager* sdm);
         void initItem(GameData* gmd, UStaticDataManager* sdm);
         void initRecipe(GameData* gmd, UStaticDataManager* sdm);
+        void initChara(GameData* gmd, UStaticDataManager* sdm);
+
+        // World shit
+        void initSubLevel(GameData* gmd, UStaticDataManager* sdm);
+        void initMap(GameData* gmd, UStaticDataManager* sdm);
 };
 
 #endif // !GAMECACHE_HPP

@@ -37,6 +37,15 @@ GameCache::GameCache()
 
     initPickParam(gmd, sdm);
     mlLogger.info("Cached: CommonPickParams Registries");
+
+    initChara(gmd, sdm);
+    mlLogger.info("Cached: Basic Chara Registries");
+
+    initSubLevel(gmd, sdm);
+    mlLogger.info("Cached: Sub level registries");
+
+    initMap(gmd, sdm);
+    mlLogger.info("Cached: Map registries");
 }
 
 void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
@@ -255,6 +264,8 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         std::string key = Utils::FNameToString(sdm->m_MapText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
+
+        mlLogger.warn(key, " > ", text->text_en.ToString());
     }
 
     gmd->waitObject(&sdm->m_MenuText);
@@ -373,7 +384,6 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     }
 }
 
-//FIXME: Convert to API Object
 void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_SkillData);
@@ -388,6 +398,7 @@ void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
     } 
 }
 
+//TODO: Get more infos
 void GameCache::initPickParam(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_CommonPickParamData);
@@ -397,13 +408,13 @@ void GameCache::initPickParam(GameData* gmd, UStaticDataManager* sdm)
         this->_cacheCommonPickParam.emplace(param.GetIdentifier(), std::make_unique<CommonPickParamData>(param));
         param.SetIsBoss(true);
 
-        std::string name = "NO_NAME_FOUND";
+        /*std::string name = "NO_NAME_FOUND";
         if(_cacheTextInfo.contains(param.GetGotIdentifier()))
         {
             auto x = _cacheTextInfo.at(param.GetGotIdentifier())->text_en;
             name = x.c_str() ? x.ToString() : "NOT_DEFINED";
         }
-        mlLogger.warn("#define ",  name," \"" ,param.GetIdentifier(), "\" // ", param.GetGotIdentifier());
+        mlLogger.warn("#define ",  name," \"" ,param.GetIdentifier(), "\" // ", param.GetGotIdentifier());*/
     } 
 }
 
@@ -498,5 +509,47 @@ void GameCache::initRecipe(GameData* gmd, UStaticDataManager* sdm)
         RecipeData recipe{ sdm->m_RecipeData->m_dataMap.Data[i].Value.Second };
 
         _cacheRecipeData.emplace(recipe.GetIdentifier(), std::make_unique<RecipeData>(recipe));
+    }
+}
+
+void GameCache::initChara(GameData* gmd, UStaticDataManager* sdm)
+{
+    gmd->waitObject(&sdm->m_CharaData);
+    for (int i = 0; i < sdm->m_CharaData->m_dataMap.Data.Count; i++)
+    {
+        CharaData chara{ sdm->m_CharaData->m_dataMap.Data[i].Value.Second };
+
+        _cacheCharaData.emplace(chara.GetIdentifier(), std::make_unique<CharaData>(chara));
+    }
+}
+
+void GameCache::initSubLevel(GameData* gmd, UStaticDataManager* sdm)
+{
+    gmd->waitObject(&sdm->m_MapSubLevel);
+    for (int i = 0; i < sdm->m_MapSubLevel->m_dataMap.Data.Count; i++)
+    {
+        MapSubLevel level{ sdm->m_MapSubLevel->m_dataMap.Data[i].Value.Second };
+
+        _cacheSubLevel.emplace(level.GetIdentifier(), std::make_unique<MapSubLevel>(level));
+    }
+}
+
+void GameCache::initMap(GameData* gmd, UStaticDataManager* sdm)
+{
+    gmd->waitObject(&sdm->m_MapData);
+    for (int i = 0; i < sdm->m_MapData->m_dataMap.Data.Count; ++i)
+    {
+        MapData map{ sdm->m_MapData->m_dataMap.Data[i].Value.Second };
+
+        _cacheMap.emplace(map.GetIdentifier(), std::make_unique<MapData>(map));
+
+        std::string name = "NOT_DEFINED";
+        if(_cacheNounInfo.contains(map.GetNameIdentifier()))
+        {
+            auto gay = _cacheNounInfo.at(map.GetNameIdentifier())->nounSingularForm_en;
+            name = gay.c_str() ? gay.ToString() : "NO_NAME";
+        }
+
+        mlLogger.warn("#define MAP_", map.GetIdentifier(), "\"",map.GetIdentifier(), "\" //", name);
     }
 }
