@@ -10,6 +10,13 @@ struct FVector2D
 	double	Y;  
 };
 
+struct FVector
+{ 
+	double	X;
+	double	Y;  
+	double	Z; 
+};
+
 struct FVector4
 { 
 	double	X;  

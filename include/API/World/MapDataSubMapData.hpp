@@ -4,7 +4,7 @@
     #include "API/World/MapSubLevel.hpp"
     #include "API/World/MapAttributeInfo.hpp"
  
-class MapDataSubMapData : GameObjectProxy<FGDMapData_SubMapData>
+class MapDataSubMapData : public GameObjectProxy<FGDMapData_SubMapData>
 {
     public:
     MapDataSubMapData(FGDMapData_SubMapData& data) : 
@@ -37,6 +37,9 @@ class MapDataSubMapData : GameObjectProxy<FGDMapData_SubMapData>
 
     float       GetFallTroughHeight()                   { return  this->_object.fallThroughHeight; }
     void        SetFallTroughHeight(float value)        { this->_object.fallThroughHeight = value; }
+
+    FVector4    GetSafeWarpPosition()                   { return  this->_object.safeWarpPos; }
+    void        SetSafeWarpPosition(FVector4 value)     { this->_object.safeWarpPos = value; }
 
     private:
     MapAttributeInfo _attributeInfo;

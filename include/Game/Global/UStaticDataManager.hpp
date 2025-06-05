@@ -56,6 +56,10 @@
     #include "Game/World/UGDSMapData.hpp"
     #include "Game/Npc/UGDSNPCRoomData.hpp"
     #include "Game/World/UGDSMapSubLevel.hpp"
+    #include "Game/PickPoint/UGDSMapPickPointConfig.hpp"
+    #include "Game/PickPoint/UGDSMapPickPoint.hpp"
+    #include "Game/World/UGDSMapAbsolutePoint.hpp"
+    #include "Game/FastTravel/UGDSFastTravel.hpp"
 
 class USDMDataPropetyClass : public UObject {
     public:
@@ -265,11 +269,11 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_VegetableQualityData_Property;
         UGDSCommonPickParamData *m_CommonPickParamData;
 		USDMDataPropetyClass *m_CommonPickParamData_Property;
-        void *m_MapPickPointConfig;
+        UGDSMapPickPointConfig *m_MapPickPointConfig;
 		USDMDataPropetyClass *m_MapPickPointConfig_Property;
-        void *m_MapPickPoint;
+        UGDSMapPickPoint *m_MapPickPoint;
 		USDMDataPropetyClass *m_MapPickPoint_Property;
-        void *m_MapAreaPickPoint;
+        UGDSMapPickPoint *m_MapAreaPickPoint;
 		USDMDataPropetyClass *m_MapAreaPickPoint_Property;
         void *m_MapJumpFuncPointPlacement;
 		USDMDataPropetyClass *m_MapJumpFuncPointPlacement_Property;
@@ -439,7 +443,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_QuestRequester_Property;
         void *m_QuestReportTargetGroup;
 		USDMDataPropetyClass *m_QuestReportTargetGroup_Property;
-        void *m_FastTravel;
+        UGDSFastTravel *m_FastTravel;
 		USDMDataPropetyClass *m_FastTravel_Property;
         void *m_WorkbenchSetting;
 		USDMDataPropetyClass *m_WorkbenchSetting_Property;
@@ -737,7 +741,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ActiveEventRewardData_Property;
         void *m_ActiveEventTarget;
 		USDMDataPropetyClass *m_ActiveEventTarget_Property;
-        void *m_MapAbsolutePoint;
+        UGDSMapAbsolutePoint *m_MapAbsolutePoint;
 		USDMDataPropetyClass *m_MapAbsolutePoint_Property;
         void *m_InstantCharaData;
 		USDMDataPropetyClass *m_InstantCharaData_Property;

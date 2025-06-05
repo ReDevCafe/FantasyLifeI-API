@@ -59,19 +59,20 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     auto gay = gameCache->GetSkill("es_alchemy_up06");
     science_flask->AddSkill(gay);
 
-    /*
-    auto room = gameData->getStaticDataManager()->m_NPCRoomData->m_dataMap.Data;
-    for (int i = 0; i < room.Count; ++i)
+    FName reveriapath = gameData->getStaticDataManager()->m_MapData->m_dataMap.Data[13].Value.Second.MapPath;
+    auto map = gameData->getStaticDataManager()->m_MapData->m_dataMap.Data;
+    for (int i = 0; i < map.Count; ++i)
     {
-        auto aled = room.Data[i].Value.Second;
-
-        auto chara = gameCache->GetChara(Utils::FNameToString(aled.charaID));
-
-        mlLogger.info(Utils::FNameToString(aled.mapId), " > ", chara.GetIdentifier(), " | ", chara.GetName(LANG::ENGLISH));
+        map.Data[i].Value.Second.MapPath = reveriapath;
     }
-    */
-    
 
+    auto travel = gameData->getStaticDataManager()->m_FastTravel->m_dataMap.Data;
+    for (int i = 0; i < travel.Count; ++i)
+    {
+        travel.Data[i].Value.Second.Position = {0,0,0};
+        
+        mlLogger.warn(Utils::FNameToString(travel.Data[i].Value.Second.Title), " ", Utils::FNameToString(travel.Data[i].Value.Second.AreaID));
+    }
 
     return 0;
 }

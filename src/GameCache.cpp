@@ -550,6 +550,6 @@ void GameCache::initMap(GameData* gmd, UStaticDataManager* sdm)
             name = gay.c_str() ? gay.ToString() : "NO_NAME";
         }
 
-        mlLogger.warn("#define MAP_", map.GetIdentifier(), "\"",map.GetIdentifier(), "\" //", name);
+        mlLogger.warn(i, " #define MAP_", map.GetIdentifier(), "\" ",map.GetIdentifier(), "\" //", name, " PATH: ", map.GetPath());
     }
 }
