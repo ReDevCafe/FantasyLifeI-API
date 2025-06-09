@@ -1,7 +1,6 @@
 #ifndef API_LIFEDATA_HPP
     #define API_LIFEDATA_HPP
     
-    #include "Game/Life/UGDSLifeData.hpp"
     #include "API/Language.hpp"
     #include "API/GameObjectProxy.hpp"
     #include "GameData.hpp"

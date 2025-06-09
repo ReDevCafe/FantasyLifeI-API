@@ -5,8 +5,9 @@
     #include "Loader/ModEnvironnement.hpp"
     #include "Utils.hpp"
     #include "GameData.hpp"
-
-class GameData;
+    #include "Hook/MemoryHelper.hpp"
+    #include "Patcher/Patcher.hpp"
+    #include "Patcher/Patches/EventHook.hpp"
 
 class ModLoader {
     public:

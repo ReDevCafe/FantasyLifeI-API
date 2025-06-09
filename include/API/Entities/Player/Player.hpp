@@ -4,12 +4,11 @@
 
     #include "../EntityStats.hpp"
     #include "../EntityStatus.hpp"
-    #include "Game/Character/UGDDCharaStatus.hpp"
     #include <cstddef>
 
 class Player {
     public:
-        Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FNewCharaStatusP &charaStatusV);
+        Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV);
         ~Player() = default;
         EntityStats stats;
         EntityStatus status;

@@ -3,8 +3,6 @@
     #define ENTITYSTATS_HPP_
 
     #include "../GameObjectProxy.hpp"
-    #include "Game/Character/UGDSCharaParameter.hpp"
-    #include "Game/Life/Life.hpp"
 
     #include <stdexcept>
 

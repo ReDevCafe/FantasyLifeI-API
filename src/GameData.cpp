@@ -20,7 +20,7 @@ void GameData::initOthersData() {
     _player = std::make_unique<Player>(
         this->_staticDataManager->m_CharaParameter->m_dataMap.Data[0].Value.Second,
         static_cast<FCharaStatusP *>(this->_dynamicDataManager->GDDCharaStatus->m_permanent.m_stAvatarP.Data),
-        this->_dynamicDataManager->GDDCharaStatus->m_volatile.data[0]
+        this->_dynamicDataManager->GDDCharaStatus->m_volatile.m_stAvatarV.Data[0]
     );
 }
 

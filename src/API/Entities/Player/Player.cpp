@@ -3,13 +3,13 @@
 #include "Utils.hpp"
 #include "ModLoader.hpp"
 
-Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FNewCharaStatusP &charaStatusV) : stats(charaParameter), status(*charaStatusP, charaStatusV) {}
+Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV) : stats(charaParameter), status(*charaStatusP, charaStatusV) {}
 
 ELifeType Player::getLifeType() {
     FAvatarCharaStatusP *avatarStatus = reinterpret_cast<FAvatarCharaStatusP *>(&this->status.getPermanentStatus());
     std::string &lifeId = Utils::FNameToString(avatarStatus->m_lifeId);
     if (lifeId.empty() || lifeId.size() <= 4)
-        return ELifeType::None;
+        return ELifeType::ELifeType__None;
     return static_cast<ELifeType>(std::stoi(lifeId.c_str() + 4));
 }
 

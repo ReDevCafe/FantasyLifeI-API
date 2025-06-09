@@ -12,13 +12,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD_REQUIRED YES
 )
 
-## REMOVE FOR RELEASE
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /Zi")
-set(CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} /DEBUG")
-set(CMAKE_SHARED_LINKER_FLAGS_RELEASE "${CMAKE_SHARED_LINKER_FLAGS_RELEASE} /DEBUG")
-
-if (MSVC)
-    add_compile_options(/wd4309 /wd639)
+if(MSVC)
+    target_compile_options(FantasyLifeI-ModLoader PRIVATE /wd4369 /wd4309)
 endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -34,10 +29,4 @@ file(GLOB_RECURSE PROJECT_SOURCE "src/*.cpp")
 
 target_sources(${PROJECT_NAME} PUBLIC
     ${PROJECT_SOURCE}
-)
-
-add_custom_command(TARGET FantasyLifeI-ModLoader POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        $<TARGET_FILE:FantasyLifeI-ModLoader>
-        "C:\\Users\\Venodez\\Downloads\\FANTASY LIFE i\\FANTASY LIFE i"
 )

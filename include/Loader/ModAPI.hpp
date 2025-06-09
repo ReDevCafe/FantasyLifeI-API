@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "Game/Global/UStaticDataManager.hpp"
+#include "SDK.h"
 
 typedef struct ModAPI
 {

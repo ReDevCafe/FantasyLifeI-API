@@ -3,7 +3,6 @@
     #define ULIFEDATA_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/Life/UGDSLifeData.hpp"
 
 class ULifeData : public GameObjectProxy<UGDSLifeData>
 {

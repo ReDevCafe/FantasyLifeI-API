@@ -1,9 +1,14 @@
 #include "ModLoader.hpp"
+#include "Hook/EventHandler.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     mlLogger.info("Mod loader has been started");
+    Patcher patcher;
+    uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
+    patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
+    patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
     gameData->initOthersData();
     // TEST

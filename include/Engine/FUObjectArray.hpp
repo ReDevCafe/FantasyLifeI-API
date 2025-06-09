@@ -2,7 +2,7 @@
 #ifndef FUOBJECTARRAY_HPP_
     #define FUOBJECTARRAY_HPP_
 
-    #include "UObject.hpp"
+    #include "SDK.h"
     #include <Windows.h>
 
     #define NUM_ELEMENT_PER_CHUNK 65536

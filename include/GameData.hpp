@@ -1,9 +1,8 @@
 #ifndef GAMEDATA_HPP_
     #define GAMEDATA_HPP_
 
+    #include "SDK.h"
     #include "Engine/FUObjectArray.hpp"
-    #include "Game/Global/UStaticDataManager.hpp"
-    #include "Game/Global/UDynamicDataManager.hpp"
     #include "Utils.hpp"
     #include "Logger/ModLoaderLogger.hpp"
     #include "API/Entities/Player/Player.hpp"
@@ -11,8 +10,6 @@
     #include <type_traits>
     #include <functional>
     #include <memory>
-
-class Player;
 
 constexpr uintptr_t GOBJECTS_OFFSET = 0xBFF47F0;
 constexpr uintptr_t GNAMES_OFFSET =  0xBF3DA40;

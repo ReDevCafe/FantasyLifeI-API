@@ -1,15 +1,17 @@
 #ifndef UTILS_HPP_
     #define UTILS_HPP_
 
-    #include "Engine/FName.hpp"
     #include <string>
     #include <unordered_map>
     #include <stdexcept>
     #include <Windows.h>
+    #include "SDK.h"
 
     #define NAME_BUFFER 1024
 
 const uintptr_t GNAME_OFFSET = 0xBF3DA40;
+
+struct FName;
 
 class Utils {
     public:
