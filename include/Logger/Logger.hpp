@@ -3,10 +3,13 @@
 
 #include <string>
 #include <ostream>
+#include <string_view>
 #include <sstream>
 #include <iostream>
+#include <fstream>
 #include <mutex>
 #include <functional>
+#include <Windows.h>
 
 class Logger
 {
@@ -14,10 +17,12 @@ class Logger
         template<typename... Args>
         void log(std::string_view level, Args&&... args)
         {
+            mutex.lock();
             std::ostringstream oss;
             (oss << ... << std::forward<Args>(args));
             logFunc(std::string(level) + prefix + oss.str() + "\033[0m\n");
             std::cout.flags(std::ios::fmtflags(0));
+            mutex.unlock();
         }
 
     public:
@@ -49,6 +54,7 @@ class Logger
     private:
         std::string prefix;
         std::function<void(std::string)> logFunc;
+        mutable std::mutex mutex;
 };
 
 #endif // LOGGER_HPP

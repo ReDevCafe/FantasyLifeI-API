@@ -1,5 +1,7 @@
 #include "Loader/ModCommunicator.hpp"
 #include "ModLoader.hpp"
+#include "GameData.hpp"
+
 
 void ModCommunicator::__internal__log(std::string data)
 {

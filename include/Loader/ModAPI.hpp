@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <Game/UStaticDataManager.hpp>
+#include "SDK.h"
 
 typedef struct ModAPI
 {
@@ -12,9 +12,5 @@ typedef struct ModAPI
     UStaticDataManager*             (*GetStaticDataManager)(void);
 
     // Shortcuts functions
-    UGDSCharaParameter*             GetCharaParam(void)     { return GetStaticDataManager()->m_CharaParameter; }
-    UGDSItemTitleData*              GetItemTitleData(void)  { return GetStaticDataManager()->m_ItemTitleData; }
-    UGDSRecipeData*                 GetRecipeData(void)     { return GetStaticDataManager()->m_RecipeData; }
-    UGDSItemRecipeData*             GetItemRecipeData(void) { return GetStaticDataManager()->m_ItemRecipeData; }
 
 } ModAPI;
