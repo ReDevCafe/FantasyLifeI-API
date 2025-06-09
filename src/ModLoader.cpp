@@ -19,6 +19,7 @@
 #include "API/Item/ItemPowerUpData.hpp"
 #include "API/Identifier/RecipeIdentifier.hpp"
 #include "API/Identifier/ItemIdentifier.hpp"
+#include "API/Common/CommonItemTableSetting.hpp"
 #include <memory>
 #include <corecrt_io.h>
 #include <io.h>
@@ -31,47 +32,26 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
 {
     mlLogger.info("Mod loader has been started");
     gameData  = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
-    Sleep(10000);
     gameCache = new GameCache();
-    //
-    auto a = gameCache->GetItem(WEAPON_BRONZE_SWORD);
-    auto b = gameCache->GetItem(ARMOR_STEEL_BEASTS_HELM);
-    auto bronze_sword = reinterpret_cast<ItemEquipData*>(&a);
-    auto pine_staff = reinterpret_cast<ItemEquipData*>(&b);
-    bronze_sword->SetName(LANG::ENGLISH, FString(L"Estrogen :3"));
-    bronze_sword->SetModel(*pine_staff);
-    bronze_sword->SetQuality(EItemQualityType::Quality4);
-    bronze_sword->SetRarityType(ERarityType::Rarity6);
-    bronze_sword->SetEffectType(EItemEffectType::Invincible);
 
-    auto c = gameCache->GetRecipe(RECIPE_SCIENCE_FLASK_1);
-    c.SetRank(EItemTitleType::Legend);
-    c.RemoveItem(1);
-    
-    auto d = gameCache->GetItem(ARMOR_PALADINS_CUIRASS);
-    auto paladins_cuirass = reinterpret_cast<ItemArmorData*>(&d);
+    ItemData GotNewID = gameCache->GetItem(VEHICLE_FLYING_SHIP);
+    gameData->waitObject(&gameData->getStaticDataManager()->m_CommonItemTableSetting);
 
-    auto f = gameCache->GetItem(LIFETOOLS_SCIENCE_FLASK);
-    auto science_flask = reinterpret_cast<ItemLifeToolsData*>(&f);
-
-    science_flask->SetLifeParam(EItemTitleType::Legend, 9999);
-
-    auto gay = gameCache->GetSkill("es_alchemy_up06");
-    science_flask->AddSkill(gay);
-
-    FName reveriapath = gameData->getStaticDataManager()->m_MapData->m_dataMap.Data[13].Value.Second.MapPath;
-    auto map = gameData->getStaticDataManager()->m_MapData->m_dataMap.Data;
-    for (int i = 0; i < map.Count; ++i)
+    auto map = gameData->getStaticDataManager()->m_CommonItemTableSetting->m_dataMap.Data; 
+    for(int i = 0; map.Count > i; ++i)
     {
-        map.Data[i].Value.Second.MapPath = reveriapath;
-    }
+        auto cObject = CommonItemTableSetting{map.Data[i].Value.Second};
 
-    auto travel = gameData->getStaticDataManager()->m_FastTravel->m_dataMap.Data;
-    for (int i = 0; i < travel.Count; ++i)
-    {
-        travel.Data[i].Value.Second.Position = {0,0,0};
-        
-        mlLogger.warn(Utils::FNameToString(travel.Data[i].Value.Second.Title), " ", Utils::FNameToString(travel.Data[i].Value.Second.AreaID));
+        std::string itemsName;
+        for(int j = 0; cObject.getObject().tableData.Count > j; ++j)
+        {
+            auto data = cObject.GetData(j);
+            
+            data.SetItem(GotNewID);
+            itemsName += data.GetItem().GetName(LANG::ENGLISH) + " ";
+        }
+
+        mlLogger.info("#define #", std::hex, cObject.GetIdentifier(), std::dec, " \"", cObject.GetIdentifier(), "\" // ",  itemsName);
     }
 
     return 0;

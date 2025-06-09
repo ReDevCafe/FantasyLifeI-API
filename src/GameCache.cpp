@@ -542,14 +542,5 @@ void GameCache::initMap(GameData* gmd, UStaticDataManager* sdm)
         MapData map{ sdm->m_MapData->m_dataMap.Data[i].Value.Second };
 
         _cacheMap.emplace(map.GetIdentifier(), std::make_unique<MapData>(map));
-
-        std::string name = "NOT_DEFINED";
-        if(_cacheNounInfo.contains(map.GetNameIdentifier()))
-        {
-            auto gay = _cacheNounInfo.at(map.GetNameIdentifier())->nounSingularForm_en;
-            name = gay.c_str() ? gay.ToString() : "NO_NAME";
-        }
-
-        mlLogger.warn(i, " #define MAP_", map.GetIdentifier(), "\" ",map.GetIdentifier(), "\" //", name, " PATH: ", map.GetPath());
     }
 }

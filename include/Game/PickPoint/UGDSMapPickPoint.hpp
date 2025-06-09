@@ -4,6 +4,7 @@
     #include "Engine/DataTable.hpp"
     #include "Engine/UGameDataAsset.hpp"
     #include "Game/FGDStCommon.hpp"
+    #include "Game/PickPoint/PickPoint.hpp"
 
 struct FGDMapPickPoint_ParamInfo
 {
@@ -32,7 +33,7 @@ struct FGDMapPickPoint : FTableRowBase
     public:
     FName                           ID;
     uint16_t                        dataIdx;
-    char                            Type;           // EPickPointType?
+    EPickPointType                  Type;           // EPickPointType?
     unsigned char                   unknown1[0x1];  // PROBABLY ENUM
 
     FName                           AreaID;

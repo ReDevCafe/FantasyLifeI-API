@@ -4,6 +4,7 @@
     #include "Engine/DataTable.hpp"
     #include "Engine/FName.hpp"
     #include "Engine/UGameDataAsset.hpp"
+    #include "Game/Item/Item.hpp"
 
 class FGDAuto { 
     public:
@@ -234,6 +235,19 @@ struct FGDStItem_PickPointDropItem
 	FName   excellentTableGroupId;                                      // 0x0008   (0x0008)  
 };
 
+struct FGDStItem_ItemTableDetail
+{
+    FName                       ItemId;
+    uint32_t                    Value;
+    EItemTitleType              itemTitleType;
+    unsigned char               unknown1[0x3];
+    FName                       addStatusTable;
+    FName                       addSkillTable;
+    int32_t                     Rate;
+    unsigned char               unknown2[0x4];
+    TArray<FGDStCommon_CondCmd> cond;
+};
+
 struct FGDCommonPickParamData : FTableRowBase
 {
     public: 
@@ -264,6 +278,18 @@ class UGDSCommonPickParamData : public UGameDataAsset
 struct FGDStCommon_SubLevelLoadInfo
 { 
 	FName   SubLevelPath;  
+};
+
+struct FGDCommonItemTableSetting : FTableRowBase
+{ 
+	FName                                              tableId;
+	TArray<FGDStItem_ItemTableDetail>                  tableData;
+};
+
+class UGDSCommonItemTableSetting : public UGameDataAsset
+{ 
+    public:
+	TMap<FName, FGDCommonItemTableSetting>             m_dataMap;
 };
 
 

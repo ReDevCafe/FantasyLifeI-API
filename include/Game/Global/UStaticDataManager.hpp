@@ -221,7 +221,7 @@ class UStaticDataManager : public UObject {
 		USDMDataPropetyClass *m_ItemText_Property;
         UGDSItemText_Noun *m_ItemText_Noun;
 		USDMDataPropetyClass *m_ItemText_Noun_Property;
-        void *m_CommonItemTableSetting;
+        UGDSCommonItemTableSetting *m_CommonItemTableSetting;
 		USDMDataPropetyClass *m_CommonItemTableSetting_Property;
         void *m_BattleItemTableSetting;
 		USDMDataPropetyClass *m_BattleItemTableSetting_Property;
