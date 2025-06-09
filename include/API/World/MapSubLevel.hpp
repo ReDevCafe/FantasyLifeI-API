@@ -2,7 +2,6 @@
     #define MAPSUBLEVEL_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/World/UGDSMapSubLevel.hpp"
 
 class MapSubLevel : public GameObjectProxy<FGDMapSubLevel>
 {

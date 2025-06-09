@@ -2,7 +2,7 @@
     #define COMMON___HPP
 
     #include "API/Language.hpp"
-    #include "Engine/FName.hpp"
+    #include "SDK.h"
     #include <string>    
 
     #define NAME_GET Common::NounSingular

@@ -1,7 +1,6 @@
 #ifndef SKILLDATA_HPP
     #define SKILLDATA_HPP
 
-    #include "Game/Skill/UGDSSkillData.hpp"
     #include "API/Common/CommonSkillParam.hpp"
     #include "API/Language.hpp"
     #include <vector>
@@ -35,8 +34,8 @@ class SkillData : public GameObjectProxy<FGDSkillData>
         std::string         GetDescription(LANG lang);
         void                SetDescription(LANG lang, FString name);
 
-        ESkillIconType      GetIconType()                       { return this->_object.SkillIconType; }
-        void                SetIconType(ESkillIconType type)    { this->_object.SkillIconType = type; }
+        ESkillIconType      GetIconType()                       { return this->_object.skillIconType; }
+        void                SetIconType(ESkillIconType type)    { this->_object.skillIconType = type; }
 
         std::string         GetLifeLimit();
 
@@ -50,8 +49,8 @@ class SkillData : public GameObjectProxy<FGDSkillData>
         bool                GetNotAggregated()                  { return  this->_object.notAggregated; }
         void                SetNotAggregated(bool value)        { this->_object.notAggregated = value; }
 
-        ERarityType         GetRarity()                         { return  this->_object.Rarity; }
-        void                SetRarity(ERarityType value)        { this->_object.Rarity = value; }
+        ERarityType         GetRarity()                         { return  this->_object.rarity; }
+        void                SetRarity(ERarityType value)        { this->_object.rarity = value; }
 
     private:    
         CommonSkillParam _params;

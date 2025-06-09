@@ -2,7 +2,6 @@
     #define EFFECTCONDITION_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/Skill/UGDSSkillData.hpp"
 
 class EffectCondition : public GameObjectProxy<FGDSkillData_EffCond>
 {

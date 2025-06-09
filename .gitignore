@@ -3,6 +3,6 @@
 !include/**/*
 !src/
 !src/**/*
-!CMakeLists.txt
+#!CMakeLists.txt
 !README.md
 !version_proxy.def

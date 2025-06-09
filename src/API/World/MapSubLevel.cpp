@@ -3,7 +3,7 @@
 
 std::string MapSubLevel::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.SubLevelId);
+    return Utils::FNameToString(this->_object.SubLevelID);
 }
 
 std::string MapSubLevel::GetMapSubIdentifier()

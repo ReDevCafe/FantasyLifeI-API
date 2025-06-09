@@ -26,9 +26,6 @@ GameCache::GameCache()
     initText(gmd, sdm);
     mlLogger.info("Cached: Text Registries");
 
-    initSkill(gmd, sdm);
-    mlLogger.info("Cached: Skill Registries");
-
     initItem(gmd, sdm);
     mlLogger.info("Cached: Items Registries");
 
@@ -73,7 +70,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_ItemText_Noun);
     for (int i = 0; i < sdm->m_ItemText_Noun->m_dataMap.Data.Count; i++)
     {
-        auto noun = sdm->m_ItemText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
+        auto noun = sdm->m_ItemText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_ItemText_Noun->m_dataMap.Data[i].Value.First);
         
@@ -83,7 +80,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_LifeText_Noun);
     for (int i = 0; i < sdm->m_LifeText_Noun->m_dataMap.Data.Count; i++)
     {
-        auto noun = sdm->m_LifeText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
+        auto noun = sdm->m_LifeText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_LifeText_Noun->m_dataMap.Data[i].Value.First);
         
@@ -93,7 +90,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_SkillText_Noun);
     for (int i = 0; i < sdm->m_SkillText_Noun->m_dataMap.Data.Count; i++)
     {
-        auto noun = sdm->m_SkillText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
+        auto noun = sdm->m_SkillText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_SkillText_Noun->m_dataMap.Data[i].Value.First);
         
@@ -103,7 +100,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_QuestRequestMapText_Noun);
     for (int i = 0; i < sdm->m_QuestRequestMapText_Noun->m_dataMap.Data.Count; i++)
     {
-        auto noun = sdm->m_QuestRequestMapText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
+        auto noun = sdm->m_QuestRequestMapText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_QuestRequestMapText_Noun->m_dataMap.Data[i].Value.First);
         
@@ -113,7 +110,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_QuestTitleText);
     for (int i = 0; i < sdm->m_QuestTitleText->m_dataMap.Data.Count; i++)
     {
-        auto noun = sdm->m_QuestTitleText->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
+        auto noun = sdm->m_QuestTitleText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (noun == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_QuestTitleText->m_dataMap.Data[i].Value.First);
         
@@ -123,7 +120,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_MapText_Noun);
     for (int i = 0; i < sdm->m_MapText_Noun->m_dataMap.Data.Count; i++)
     {
-        auto noun = sdm->m_MapText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
+        auto noun = sdm->m_MapText_Noun->m_dataMap.Data[i].Value.Second.nounInfo.Data;
         if (noun == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_MapText_Noun->m_dataMap.Data[i].Value.First);
         
@@ -143,7 +140,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_CharaText_Noun);
     for (int i = 0; i < sdm->m_CharaText_Noun->m_dataMap.Data.Count; i++)
     {
-        auto noun = sdm->m_CharaText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
+        auto noun = sdm->m_CharaText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_CharaText_Noun->m_dataMap.Data[i].Value.First);
         
@@ -166,7 +163,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_AchievementText);
     for (int i = 0; i < sdm->m_AchievementText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_AchievementText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_AchievementText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_AchievementText->m_dataMap.Data[i].Value.First);
 
@@ -189,7 +186,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_CharacterFlavorText);
     for (int i = 0; i < sdm->m_CharacterFlavorText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_CharacterFlavorText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_CharacterFlavorText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_CharacterFlavorText->m_dataMap.Data[i].Value.First);
         
@@ -199,7 +196,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_CharamakeText);
     for (int i = 0; i < sdm->m_CharamakeText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_CharamakeText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_CharamakeText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_CharamakeText->m_dataMap.Data[i].Value.First);
         
@@ -209,7 +206,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_DailyMissionCompleteNotificationText);
     for (int i = 0; i < sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data[i].Value.First);
         
@@ -219,7 +216,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_DailyMissionTitleText);
     for (int i = 0; i < sdm->m_DailyMissionTitleText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_DailyMissionTitleText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_DailyMissionTitleText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_DailyMissionTitleText->m_dataMap.Data[i].Value.First);
 
@@ -229,7 +226,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_GuildRewardText);
     for (int i = 0; i < sdm->m_GuildRewardText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_GuildRewardText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_GuildRewardText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_GuildRewardText->m_dataMap.Data[i].Value.First);
 
@@ -239,7 +236,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_ItemText);
     for (int i = 0; i < sdm->m_ItemText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_ItemText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_ItemText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_ItemText->m_dataMap.Data[i].Value.First);
         
@@ -249,7 +246,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_LifeText);
     for (int i = 0; i < sdm->m_LifeText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_LifeText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_LifeText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_LifeText->m_dataMap.Data[i].Value.First);
        
@@ -259,7 +256,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_MapText);
     for (int i = 0; i < sdm->m_MapText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_MapText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_MapText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_MapText->m_dataMap.Data[i].Value.First);
         
@@ -271,7 +268,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_MenuText);
     for (int i = 0; i < sdm->m_MenuText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_MenuText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_MenuText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_MenuText->m_dataMap.Data[i].Value.First);
 
@@ -281,7 +278,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_MultiText);
     for (int i = 0; i < sdm->m_MultiText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_MultiText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_MultiText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_MultiText->m_dataMap.Data[i].Value.First);
 
@@ -316,7 +313,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_PlantDungeonText);
     for (int i = 0; i < sdm->m_PlantDungeonText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_PlantDungeonText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_PlantDungeonText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_PlantDungeonText->m_dataMap.Data[i].Value.First);
         
@@ -326,7 +323,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_QuestDetailText);
     for (int i = 0; i < sdm->m_QuestDetailText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_QuestDetailText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_QuestDetailText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_QuestDetailText->m_dataMap.Data[i].Value.First);
 
@@ -336,7 +333,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_QuestPurposeText);
     for (int i = 0; i < sdm->m_QuestPurposeText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_QuestPurposeText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_QuestPurposeText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_QuestPurposeText->m_dataMap.Data[i].Value.First);
         
@@ -346,7 +343,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_QuestReportNotificationText);
     for (int i = 0; i < sdm->m_QuestReportNotificationText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_QuestReportNotificationText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_QuestReportNotificationText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_QuestReportNotificationText->m_dataMap.Data[i].Value.First);
         
@@ -356,7 +353,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_SkillText);
     for (int i = 0; i < sdm->m_SkillText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_SkillText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_SkillText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_SkillText->m_dataMap.Data[i].Value.First);
         
@@ -366,7 +363,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_SystemText);
     for (int i = 0; i < sdm->m_SystemText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_SystemText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_SystemText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_SystemText->m_dataMap.Data[i].Value.First);
         
@@ -376,7 +373,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_TipsText);
     for (int i = 0; i < sdm->m_TipsText->m_dataMap.Data.Count; i++)
     {
-        auto text = sdm->m_TipsText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
+        auto text = sdm->m_TipsText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
         std::string key = Utils::FNameToString(sdm->m_TipsText->m_dataMap.Data[i].Value.First);
         

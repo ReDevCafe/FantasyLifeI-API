@@ -2,7 +2,6 @@
     #define ITEMCONSUMEDATA_HPP
 
     #include "ItemData.hpp"
-    #include "Game/Item/UGDSItemConsumeData.hpp"
 
 class ItemConsumeData : public ItemData 
 {

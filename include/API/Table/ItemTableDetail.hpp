@@ -1,7 +1,6 @@
 #ifndef ITEMTABLEDETAIL_HPP
     #define ITEMTABLEDETAIL_HPP
 
-    #include "Game/FGDStCommon.hpp"
     #include "API/GameObjectProxy.hpp"
     #include "API/Item/ItemData.hpp"
 

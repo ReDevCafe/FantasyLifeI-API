@@ -1,10 +1,8 @@
 #ifndef RECIPEDATA_HPP
 #define RECIPEDATA_HPP
 
-#include "Game/Recipe/UGDSRecipeData.hpp"
 #include "RecipeDataLifeParamInfo.hpp"
 #include "RecipeDataItemInfo.hpp"
-#include "Game/Life/Life.hpp"
 #include "API/Recipe/RecipeDataRewardData.hpp"
 #include <vector>
 
@@ -12,14 +10,8 @@ class RecipeData : GameObjectProxy<FGDRecipeData>
 {
 public:
     RecipeData(FGDRecipeData &data) 
-        : GameObjectProxy(data),
-        _lifeParam{data.lifeParamInfo},
-        _rewardData{data.rewardData},
-        _rebuildItem{data.rebuildItem}
-    {
-        for(int i = 0; i < data.itemList.Count; ++i)
-            _itemInfo.push_back(RecipeDataItemInfo{data.itemList[i]});
-    };
+        : GameObjectProxy(data)
+    {};
 
     std::string GetIdentifier();
     std::string GetItemIdentifier();
@@ -27,7 +19,7 @@ public:
     ERecipeType GetType() const { return this->_object.Type; }
     void SetType(ERecipeType type) const { this->_object.Type = type; }
 
-    RecipeDataLifeParamInfo         GetLifeParam() const { return this->_lifeParam; }
+    RecipeDataLifeParamInfo         GetLifeParam() const { return RecipeDataLifeParamInfo(this->_object.lifeParamInfo); }
 
     ERecipeCategory                 GetCategory() const { return this->_object.Category; }
     void                            GetCategory(ERecipeCategory category) const { this->_object.Category = category; }
@@ -47,14 +39,13 @@ public:
     ERarityType                     GetRarity() const { return this->_object.rarity; }  
     void                            SetRarity(ERarityType rarity) const { this->_object.rarity = rarity; }
 
-    RecipeDataRewardData            GetRewards() const { return this->_rewardData; }
+    RecipeDataRewardData            GetRewards() const { return RecipeDataRewardData(this->_object.rewardData); }
 
-    std::vector<RecipeDataItemInfo> GetItemList() const { return this->_itemInfo; }
-
+    RecipeDataItemInfo              GetItem(int index);
+    void                            SetItem(int index, ItemData data, int32_t quantity);
     void                            AddItem(ItemData data, int32_t quantity);
-    void                            RemoveItem(int index); // UNSTABLE?
 
-    RecipeDataItemInfo              GetRebuildItem() const { return _rebuildItem; }
+    RecipeDataItemInfo              GetRebuildItem() const { return RecipeDataItemInfo(this->_object.rebuildItem); }
 
     bool                            GetRequestable() const { return this->_object.requestable; }
     void                            SetRequestable(bool i) const { this->_object.requestable = i; }
@@ -62,11 +53,6 @@ public:
     bool                            GetNotAcquiredLife() const {  return this->_object.notAcquiredLife; }
     void                            SetNotAcquiredLife(bool i) const { this->_object.notAcquiredLife = i; }
         
-private:
-    RecipeDataLifeParamInfo _lifeParam;
-    RecipeDataRewardData _rewardData;
-    std::vector<RecipeDataItemInfo> _itemInfo;
-    RecipeDataItemInfo _rebuildItem;
 };
 
 #endif // !RECIPEDATA_HPP

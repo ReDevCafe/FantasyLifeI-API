@@ -2,7 +2,6 @@
     #define COMMONPICKSTAATUSPARAM_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/FGDStCommon.hpp"
 
 class CommonPickStatusParam : public GameObjectProxy<FGDStCommon_PickStatusParam>
 {

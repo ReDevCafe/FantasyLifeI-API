@@ -1,6 +1,13 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
 
+#include "API/Identifier/ItemIdentifier.hpp"
+#include "API/Item/ItemEquipData.hpp"
+#include "API/Identifier/ItemIdentifier.hpp"
+#include "API/Identifier/RecipeIdentifier.hpp"
+#include "API/Item/ItemArmorData.hpp"
+#include "API/Item/ItemLifeToolsData.hpp"
+
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
 
@@ -12,8 +19,8 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
     gameData->initOthersData();
-    
-    
+    gameCache = new GameCache();
+
     return 0;
 }
 

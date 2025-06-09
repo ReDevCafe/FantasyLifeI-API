@@ -5,6 +5,7 @@
     #include "Loader/ModEnvironnement.hpp"
     #include "Utils.hpp"
     #include "GameData.hpp"
+    #include "GameCache.hpp"
     #include "Hook/MemoryHelper.hpp"
     #include "Patcher/Patcher.hpp"
     #include "Patcher/Patches/EventHook.hpp"

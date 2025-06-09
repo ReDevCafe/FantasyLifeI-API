@@ -2,7 +2,6 @@
     #define ITEMWEAPONDATA_HPP
 
     #include "ItemUniqueSkillEquipData.hpp"
-    #include "Game/Item/UGDSItemWeaponData.hpp"
     #include <vector>
 
 class ItemWeaponData : public ItemUniqueSkillEquipData

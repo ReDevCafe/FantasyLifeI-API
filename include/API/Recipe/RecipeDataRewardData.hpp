@@ -1,7 +1,6 @@
 #ifndef RECIPEDATAREWARDDATA
     #define RECIPEDATAREWARDDATA
 
-    #include "Game/Recipe/UGDSRecipeData.hpp"
     #include "API/GameObjectProxy.hpp"
     #include "API/Item/ItemData.hpp"
 

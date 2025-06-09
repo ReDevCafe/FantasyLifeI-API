@@ -24,6 +24,12 @@ std::string Common::NounSingular(LANG lang, std::string identifier)
 
 void Common::NounSingularSet(LANG lang, std::string identifier, FString value)
 {
+    if(identifier == "None") 
+    {
+        mlLogger.warn("Invalide Noun Set, identifier is None");
+        return;
+    }
+    
     auto text = ModLoader::gameCache->GetNoun(identifier);
     switch(lang)
     {

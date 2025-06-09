@@ -2,7 +2,6 @@
     #define SKILLEFFECTINFO_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/Skill/UGDSSkillData.hpp"
     #include "EffectCondition.hpp"
     #include <vector>
 

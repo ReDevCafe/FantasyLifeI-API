@@ -8,7 +8,6 @@
 
     #include "API/Item/ItemData.hpp"
     #include "API/Recipe/RecipeData.hpp"
-    #include "Game/Skill/UGDSSkillData.hpp"
     #include "API/Skill/SkillData.hpp"
     #include "API/Common/CommonPickParamData.hpp"
     #include "API/Entities/CharaData.hpp"

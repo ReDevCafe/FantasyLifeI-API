@@ -2,7 +2,6 @@
     #define COMMONPRICEINFO_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/FGDStCommon.hpp"
     #include <vector>
 
 class CommonPriceInfo : public GameObjectProxy<FGDStCommon_PriceInfo>

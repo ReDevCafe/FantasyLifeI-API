@@ -2,7 +2,6 @@
     #define ITEMCRAFTDATA_HPP
 
     #include "ItemData.hpp"
-    #include "Game/Item/UGDSItemCraftData.hpp"
 
 class ItemCraftData : public ItemData
 {

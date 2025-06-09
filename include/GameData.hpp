@@ -3,13 +3,11 @@
 
     #include "SDK.h"
     #include "Engine/FUObjectArray.hpp"
-    #include "Game/Global/UStaticDataManager.hpp"
     #include "API/Entities/Player/Player.hpp"
     #include "Utils.hpp"
     #include "Logger/ModLoaderLogger.hpp"
     #include <type_traits>
     #include <functional>
-    #include "Game/Global/UDynamicDataManager.hpp"
     #include "API/Item/ItemData.hpp"
     #include "API/Recipe/RecipeData.hpp"
     #include <memory>
@@ -57,13 +55,12 @@ class GameData {
 
         template<typename T = void *>
         void waitObject(T *object, const std::string &name = "", uint32_t nth = 0) {
-            mlLogger.info("Waiting an object...");
-            while (*object == nullptr) {
+            while (*object == nullptr) 
+            {
                 if (name != "")
                     *object = this->getUObject<typename std::remove_pointer<T>::type>(name, false, nth);
                 Sleep(1);
             }
-            mlLogger.info("Object found !");
         }
 
     protected:

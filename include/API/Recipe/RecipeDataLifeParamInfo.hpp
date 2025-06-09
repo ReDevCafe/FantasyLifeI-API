@@ -2,7 +2,6 @@
     #define RECIPEDATALIFEPARAMINFO_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/Recipe/UGDSRecipeData.hpp"
 
 class RecipeDataLifeParamInfo : GameObjectProxy<FGDRecipeData_LifeParamInfo>
 {

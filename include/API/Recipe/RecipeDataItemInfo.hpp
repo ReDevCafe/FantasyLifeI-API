@@ -1,7 +1,6 @@
 #ifndef RECIPEDATAITEMINFO
     #define RECIPEDATAITEMINFO
 
-    #include "Game/Recipe/UGDSRecipeData.hpp"
     #include "API/Item/ItemData.hpp"
 
 class RecipeDataItemInfo : public GameObjectProxy<FGDRecipeData_ItemInfo>

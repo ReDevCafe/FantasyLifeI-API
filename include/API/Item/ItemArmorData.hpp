@@ -2,7 +2,6 @@
     #define ITEMARMORDATA_HPP
 
     #include "ItemUniqueSkillEquipData.hpp"
-    #include "Game/Item/UGDSItemArmorData.hpp"
     #include "API/Common/CommonElementAttrParam.hpp"
     #include <vector>
     #include <memory>

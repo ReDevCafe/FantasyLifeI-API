@@ -19,26 +19,38 @@ ItemData RecipeData::GetItem()
     return ModLoader::gameCache->GetItem(GetItemIdentifier());
 }
 
-void RecipeData::AddItem(ItemData data, int32_t quantity)
+RecipeDataItemInfo RecipeData::GetItem(int index)
 {
-    auto object = RecipeDataItemInfo{data, quantity};
-    int32_t count = this->_object.itemList.Count;
+    if(index >= this->_object.itemList.Count || index < 0)
+        throw std::out_of_range("RecipeData::GetItem() out of range");
 
-    this->_object.itemList.Data[count] = object.getObject();
-    this->_object.itemList.Count = ++count;
-
-    this->_itemInfo.emplace_back(object);
+    return RecipeDataItemInfo(this->_object.itemList.Data[index]);
 }
 
-//FIXME: rework
-void RecipeData::RemoveItem(int index)
+void RecipeData::SetItem(int index, ItemData value, int32_t quantity)
 {
-    int32_t count = this->_object.itemList.Count;
-    if(index <= 0 || index >= count) return;    // Invalid index
+    auto array = this->_object.itemList;
+    int count = array.Count;
+    if(array.Max == 0)
+    {
+        array.Max = 4;
+        array.Data = new FGDRecipeData_ItemInfo[4];
+    } else if (count >= array.Max)
+    {
+        FGDRecipeData_ItemInfo* newData = new FGDRecipeData_ItemInfo[count + 1];
+        for(int i = 0; i < count; ++i)
+            newData[i] = array.Data[i];
 
-    this->_itemInfo.clear();
-    this->_object.itemList.RemoveSingle(index);
+        delete[] array.Data;
+        array.Data = newData;
+        array.Max = count + 1;
+    }
+    
+    array.Data[count] = FGDRecipeData_ItemInfo{value.getObject().ID, quantity};
+    array.Count = ++count;
+}
 
-    for(int i = 0; i < this->_object.itemList.Count; ++i)
-        _itemInfo.push_back(RecipeDataItemInfo{this->_object.itemList[i]});
+void RecipeData::AddItem(ItemData data, int32_t quantity)
+{
+    SetItem(this->_object.itemList.Count, data, quantity);
 }

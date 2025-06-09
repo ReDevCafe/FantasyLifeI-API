@@ -2,7 +2,6 @@
     #define ITEMDATA_HPP
 
     #include "API/Language.hpp"
-    #include "Game/Item/FGDItemData.hpp"
     #include "API/Common/CommonPriceInfo.hpp"
 
 class ItemData : public GameObjectProxy<FGDItemData>
@@ -51,8 +50,8 @@ class ItemData : public GameObjectProxy<FGDItemData>
         uint16_t            GetStackMax()                       { return this->_object.StackMax; }
         void                SetStackMax(uint16_t value)         { this->_object.StackMax = value; }
 
-        bool                GetDisableSolAbadon()               { return this->_object.disableSolAbadon; }
-        void                SetDisableSolAbadon(bool value)     { this->_object.disableSolAbadon = value; }
+        bool                GetDisableSoldAbadon()               { return this->_object.disableSoldAbadon; }
+        void                SetDisableSoldAbadon(bool value)     { this->_object.disableSoldAbadon = value; }
 
         bool                GetDisableUsedInventory()           { return this->_object.disableUsedInventory; }
         void                SetDisableUsedInventory(bool value) { this->_object.disableUsedInventory = value; }

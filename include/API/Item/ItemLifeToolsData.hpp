@@ -2,8 +2,6 @@
     #define ITEMLIFETOOLSDATA_HPP
 
     #include "ItemUniqueSkillEquipData.hpp"
-    #include "Game/Item/UGDSItemLifeToolsData.hpp"
-
 
 class ItemLifeToolsData : public  ItemUniqueSkillEquipData
 {

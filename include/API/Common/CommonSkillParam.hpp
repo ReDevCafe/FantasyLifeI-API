@@ -2,7 +2,6 @@
     #define COMMONSKILLPARAM_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/FGDStCommon.hpp"
 
 class CommonSkillParam : public GameObjectProxy<FGDStCommon_SkillParam>
 {

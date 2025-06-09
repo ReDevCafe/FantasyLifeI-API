@@ -26,7 +26,7 @@ void SkillData::SetName(LANG lang, FString string)
 
 std::string SkillData::GetDescIdentifier()
 {
-    return Utils::FNameToString(this->_object.descTextID);
+    return Utils::FNameToString(this->_object.dascTextId);
 }
 
 std::string SkillData::GetDescription(LANG lang)

@@ -3,7 +3,6 @@
 
     #include "API/GameObjectProxy.hpp"
     #include "API/Language.hpp"
-    #include "Game/Character/UGDSCharaData.hpp"
 
 class CharaData : GameObjectProxy<FGDCharaData>
 {
@@ -28,7 +27,7 @@ class CharaData : GameObjectProxy<FGDCharaData>
     EGenderType GetGender()                     { return   this->_object.gender; }
     void        SetGender(EGenderType gender)   { this->_object.gender = gender; }
 
-    bool        GetIsAvatar()                   { return this->_object.isAvatar; }
+    bool        GetIsAvatar()                   { return this->_object.IsAvatar; }
 };
 
 #endif // !CHARADATA_HPP

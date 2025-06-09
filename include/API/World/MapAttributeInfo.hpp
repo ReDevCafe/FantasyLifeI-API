@@ -2,7 +2,6 @@
     #define MAPATTRIBUTEINFO_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/World/UGDSMapData.hpp"
 
 class MapAttributeInfo : public GameObjectProxy<FGDMapData_AttributeInfo>
 {

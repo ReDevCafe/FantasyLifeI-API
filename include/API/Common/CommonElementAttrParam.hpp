@@ -2,7 +2,6 @@
     #define COMMONELEMENTATTRPARAM_HPP
 
     #include "API/GameObjectProxy.hpp"
-    #include "Game/FGDStCommon.hpp"
 
 class CommonElementAttrParam : public GameObjectProxy<FGDStCommon_ElementAttrParam>
 {

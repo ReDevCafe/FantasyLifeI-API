@@ -3,7 +3,6 @@
 
     #include "API/GameObjectProxy.hpp"
     #include "API/Table/ItemTableDetail.hpp"
-    #include "Engine/DataTable.hpp"
 
 class CommonItemTableSetting : public GameObjectProxy<FGDCommonItemTableSetting>
 {

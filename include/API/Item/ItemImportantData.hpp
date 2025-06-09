@@ -2,7 +2,6 @@
     #define ITEMIMPORTANTDATA_HPP
 
     #include "ItemData.hpp"
-    #include "Game/Item/UGDSItemImportantData.hpp"
 
 class ItemImportantData : public ItemData
 {
