@@ -1,28 +1,26 @@
 #include "Hook/EventHandler.hpp"
-#include "Hook/Memory.hpp"
-#include <iostream>
+#include "Hook/MemoryHelper.hpp"
 #include "Logger/ModLoaderLogger.hpp"
-#include "Game/Menu/Menu.hpp"
+#include "SDK.h"
+
+#include <iomanip>
 
 std::unordered_map<EventType, std::vector<std::function<void(std::vector<std::any>)>>> EventHandler::_handlers;
 std::unordered_map<uintptr_t, EventType> EventHandler::_events;
 
 void EventHandler::callEvent() {
-    CONTEXT context = {};
+    CONTEXT context;
+    context.ContextFlags = CONTEXT_ALL;
     RtlCaptureContext(&context);
-    CONTEXT newContext = Memory::getPreviousFrame(context, 1);
-    uintptr_t call = *reinterpret_cast<uintptr_t *>(newContext.Rsp) - 5;
+    CONTEXT newContext = MemoryHelper::getPreviousFrame(context, 1);
+    uintptr_t call = newContext.Rip - 0x14;
     EventType type = getTypeFromAddress(call);
-    std::vector<std::function<void(std::vector<std::any>)>> * eventHandler = getEventHandler(type);
+    std::vector<std::function<void(std::vector<std::any>)>> *eventHandler = getEventHandler(type);
     if (eventHandler == nullptr)
         return;
     std::vector<std::any> args = getArgsFromEvent(type, newContext);
     for (auto &handler : *eventHandler)
         handler(args);
-}
-
-std::vector<std::any> EventHandler::handlingArgument(EventType type) {
-    return std::vector<std::any>();
 }
 
 void EventHandler::addEvent(EventType type, uintptr_t trampoline) {
@@ -45,8 +43,8 @@ std::vector<std::any> EventHandler::getArgsFromEvent(EventType type, CONTEXT con
     std::vector<std::any> args;
     switch (type) {
         case EventType::ClickEvent:
-            args.push_back(std::any_cast<UMenuLayer *>(context.R15));
-            args.push_back(std::any_cast<FGestureData *>(context.R8));
+            args.push_back(reinterpret_cast<UMenuLayer *>(context.R15));
+            args.push_back(reinterpret_cast<FGestureData *>(context.R8));
             break;
         default:
             break;

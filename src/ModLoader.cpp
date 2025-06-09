@@ -1,12 +1,7 @@
 #include "ModLoader.hpp"
-#include "Hook/Memory.hpp"
-#include "Patcher/Patcher.hpp"
-#include "Patcher/Patches/EventHook.hpp"
-#include "Game/Menu/Menu.hpp"
+#include "Hook/EventHandler.hpp"
 
 GameData *ModLoader::gameData = nullptr;
-
-void test(UMenuLa)
 
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     mlLogger.info("Mod loader has been started");

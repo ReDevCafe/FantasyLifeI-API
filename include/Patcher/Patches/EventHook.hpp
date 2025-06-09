@@ -2,7 +2,7 @@
     #define EVENTHOOK_HPP_
 
     #include "../Patch.hpp"
-    #include "../../Hook/EventHandler.hpp"
+    #include "Hook/EventHandler.hpp"
 
 class EventHook : public Patch {
     public:

@@ -22,6 +22,6 @@ FCharaStatusP &EntityStatus::getPermanentStatus() {
     return this->_permanentStatus;
 }
 
-FNewCharaStatusP &EntityStatus::getVolatileStatus() {
+FAvatarCharaStatusV &EntityStatus::getVolatileStatus() {
     return this->_volatileStatus;
 }
