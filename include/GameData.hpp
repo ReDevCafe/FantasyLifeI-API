@@ -3,12 +3,15 @@
 
     #include "SDK.h"
     #include "Engine/FUObjectArray.hpp"
+    #include "Game/Global/UStaticDataManager.hpp"
+    #include "API/Entities/Player/Player.hpp"
     #include "Utils.hpp"
     #include "Logger/ModLoaderLogger.hpp"
-    #include "API/Entities/Player/Player.hpp"
-
     #include <type_traits>
     #include <functional>
+    #include "Game/Global/UDynamicDataManager.hpp"
+    #include "API/Item/ItemData.hpp"
+    #include "API/Recipe/RecipeData.hpp"
     #include <memory>
 
 constexpr uintptr_t GOBJECTS_OFFSET = 0xBFF47F0;
@@ -62,9 +65,10 @@ class GameData {
             }
             mlLogger.info("Object found !");
         }
+
     protected:
     private:
-        uintptr_t _baseAddress;typename 
+        uintptr_t _baseAddress; 
         FUObjectArray *_gObjects;
         void *_gNames;
         void *_gWorld;

@@ -2,4 +2,4 @@
 #include "Logger.hpp"
 #include <atomic>
 
-inline Logger mlLogger("ModLoader");
+inline Logger mlLogger("ModLoader", "logOut.log");

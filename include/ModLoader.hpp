@@ -12,6 +12,7 @@
 class ModLoader {
     public:
         static GameData *gameData;
+        static GameCache *gameCache;
         static DWORD WINAPI init(LPVOID lpParam);
     protected:
     private:

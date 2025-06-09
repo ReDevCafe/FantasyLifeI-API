@@ -3,10 +3,13 @@
 
 #include <string>
 #include <ostream>
+#include <string_view>
 #include <sstream>
 #include <iostream>
+#include <fstream>
 #include <mutex>
 #include <functional>
+#include <Windows.h>
 
 class Logger
 {
@@ -38,6 +41,25 @@ class Logger
             prefix("[" + prefix + "] "),
             logFunc([](const std::string& msg) { std::cout << msg; }) 
         {}
+
+        Logger(
+            const std::string& prefix,
+            const std::string& path
+            ) :
+            fileStream(std::ofstream(path, std::ios::app)),
+            prefix("[" + prefix + "] ")
+        {
+            if(!fileStream.is_open())
+                fileStream.open(path, std::ios::app);
+
+            logFunc = [this](const std::string& msg) {
+
+                fileStream << msg;
+                fileStream.flush();
+
+                std::cout << msg;
+            };
+        }
 
         template<typename... Args>
         void info(Args&&... args) { log("\033[37m", std::forward<Args>(args)...); }
