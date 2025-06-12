@@ -41,9 +41,9 @@ public:
 
     RecipeDataRewardData            GetRewards() const { return RecipeDataRewardData(this->_object.rewardData); }
 
-    RecipeDataItemInfo              GetItem(int index);
-    void                            SetItem(int index, ItemData data, int32_t quantity);
-    void                            AddItem(ItemData data, int32_t quantity);
+    RecipeDataItemInfo              GetRecipeItem(int index);
+    void                            SetRecipeItem(ItemData data, int index, int32_t quantity);
+    void                            AddRecipeItem(ItemData data, int32_t quantity);
 
     RecipeDataItemInfo              GetRebuildItem() const { return RecipeDataItemInfo(this->_object.rebuildItem); }
 

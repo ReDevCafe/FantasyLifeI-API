@@ -1,6 +1,6 @@
 #include "Hook/EventHandler.hpp"
 #include "Hook/MemoryHelper.hpp"
-#include "Logger/ModLoaderLogger.hpp"
+#include "ModLoader.hpp"
 #include "SDK.h"
 
 #include <iomanip>

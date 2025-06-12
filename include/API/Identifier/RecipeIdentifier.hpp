@@ -1783,8 +1783,8 @@
 #define RECIPE_STONE_GEAR_PART "recipe_life10_iky01000710" // Stone Gear Part
 #define RECIPE_WOODEN_GEAR_PART "recipe_life11_iky01000720" // Wooden Gear Part
 #define RECIPE_ART_COMPETITION_PAINTING "recipe_life14_iky01000830" // Art Competition Painting
-#define RECIPE_NO_NAME "recipe_life09_flash02" // NONE
-#define RECIPE_NO_NAME "recipe_life13_flash01" // NONE
-#define RECIPE_NO_NAME "recipe_life13_flash02" // NONE
-#define RECIPE_NO_NAME "recipe_life14_flash02" // NONE
-#define RECIPE_NO_NAME "recipe_life09_flash01" // NONE
+#define RECIPE_LIFE09_FLASH02 "recipe_life09_flash02" // NONE
+#define RECIPE_LIFE13_FLASH01 "recipe_life13_flash01" // NONE
+#define RECIPE_LIFE13_FLASH02 "recipe_life13_flash02" // NONE
+#define RECIPE_LIFE14_FLASH02 "recipe_life14_flash02" // NONE
+#define RECIPE_LIFE09_FLASH01 "recipe_life09_flash01" // NONE

@@ -1,6 +1,6 @@
 #include "Patcher/Patch.hpp"
 #include "Hook/MemoryHelper.hpp"
-#include "Logger/ModLoaderLogger.hpp"
+#include "ModLoader.hpp"
 
 Patch::Patch(Priority priority, const std::string name, uintptr_t target, uintptr_t callback) : _priority(priority), _callback(callback), _name(name),  _target(target) {};
 
@@ -9,35 +9,35 @@ bool Patch::apply(uintptr_t baseAddress) {
     try {
         stubAddress = MemoryHelper::findFreeMemory(baseAddress + _target + 1 + sizeof(patch), sizeof(stub));
     } catch (std::exception &exception) {
-        mlLogger.error(exception.what());
+        ModLoader::logger->error(exception.what());
         return false;
     }
     if (!MemoryHelper::isFree(baseAddress + _target + 1, sizeof(patch) - 1)) {
-        mlLogger.error("Not enough space at ", std::hex, baseAddress + _target);
+        ModLoader::logger->error("Not enough space at ", std::hex, baseAddress + _target);
         return false;
     }
     DWORD oldProtectPtr;
     DWORD oldProtectFree;
     void *ptr = reinterpret_cast<void *>(baseAddress + _target);
     void *stubPtr = reinterpret_cast<void *>(stubAddress);
-    mlLogger.info(std::hex, ptr);
-    mlLogger.info(std::hex, stubPtr);
+    ModLoader::logger->info(std::hex, ptr);
+    ModLoader::logger->info(std::hex, stubPtr);
     if (!VirtualProtect(free, sizeof(trampoline), PAGE_EXECUTE_READWRITE, &oldProtectFree)) {
-        mlLogger.error("Cannot write at ", std::hex, free);
+        ModLoader::logger->error("Cannot write at ", std::hex, free);
         return false;
     }
     if (!VirtualProtect(ptr, sizeof(patch), PAGE_EXECUTE_READWRITE, &oldProtectPtr)) {
-        mlLogger.error("Cannot write at ", std::hex, ptr);
+        ModLoader::logger->error("Cannot write at ", std::hex, ptr);
         return false;
     }
     uintptr_t relative = stubAddress - baseAddress - _target - 5;
 
     void *customTrampoline = VirtualAlloc(NULL, sizeof(trampoline), MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
     if (customTrampoline == nullptr) {
-        mlLogger.error("Cannot alloc memory for the trampoline");
+        ModLoader::logger->error("Cannot alloc memory for the trampoline");
         return false;
     }
-    mlLogger.info(std::hex, customTrampoline);
+    ModLoader::logger->info(std::hex, customTrampoline);
     memcpy(customTrampoline, trampoline, sizeof(trampoline));
     memcpy(static_cast<char*>(customTrampoline) + 10, &_callback, 8);
 
@@ -53,12 +53,12 @@ bool Patch::apply(uintptr_t baseAddress) {
     memcpy(stubPtr, customStub, sizeof(customStub));
 
     if (!VirtualProtect(stubPtr, sizeof(trampoline), oldProtectFree, &oldProtectFree)) {
-        mlLogger.error("Cannot restore at  ", std::hex, free);
+        ModLoader::logger->error("Cannot restore at  ", std::hex, free);
         VirtualFree(customTrampoline, 0, MEM_RELEASE);
         return false;
     }
     if (!VirtualProtect(ptr, sizeof(patch), oldProtectPtr, &oldProtectPtr)) {
-        mlLogger.error("Cannot restore at ", std::hex, ptr);
+        ModLoader::logger->error("Cannot restore at ", std::hex, ptr);
         VirtualFree(customTrampoline, 0, MEM_RELEASE);
         return false;
     }

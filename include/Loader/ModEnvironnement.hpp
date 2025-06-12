@@ -8,9 +8,8 @@
     #include <iostream>
 
     #include "ModObject.hpp"
-    #include "ModCommunicator.hpp"
     #include "Json.hpp"
-    #include "Logger/ModLoaderLogger.hpp"
+    #include "ModLoader.hpp"
 
 class ModEnvironnement 
 {

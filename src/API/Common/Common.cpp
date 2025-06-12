@@ -26,7 +26,7 @@ void Common::NounSingularSet(LANG lang, std::string identifier, FString value)
 {
     if(identifier == "None") 
     {
-        mlLogger.warn("Invalide Noun Set, identifier is None");
+        ModLoader::logger->warn("Invalide Noun Set, identifier is None");
         return;
     }
     
@@ -68,7 +68,7 @@ void Common::DescriptionSet(LANG lang, std::string identifier, FString value)
 {
     if(identifier == "desc_itm_common") 
     {
-        mlLogger.warn("Invalid description modification <", identifier, ">");
+        ModLoader::logger->warn("Invalid description modification <", identifier, ">");
         return;
     }
 
