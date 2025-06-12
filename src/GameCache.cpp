@@ -256,8 +256,6 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         std::string key = Utils::FNameToString(sdm->m_MapText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
-
-        ModLoader::logger->warn(key, " > ", text->text_en.ToString());
     }
 
     gmd->waitObject(&sdm->m_MenuText);
@@ -399,7 +397,6 @@ void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
     } 
 }
 
-//TODO: Get more infos
 void GameCache::initPickParam(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_CommonPickParamData);
@@ -408,14 +405,6 @@ void GameCache::initPickParam(GameData* gmd, UStaticDataManager* sdm)
         CommonPickParamData param{ sdm->m_CommonPickParamData->m_dataMap.Data[i].Value.Second }; 
         this->_cacheCommonPickParam.emplace(param.GetIdentifier(), std::make_unique<CommonPickParamData>(param));
         param.SetIsBoss(true);
-
-        /*std::string name = "NO_NAME_FOUND";
-        if(_cacheTextInfo.contains(param.GetGotIdentifier()))
-        {
-            auto x = _cacheTextInfo.at(param.GetGotIdentifier())->text_en;
-            name = x.c_str() ? x.ToString() : "NOT_DEFINED";
-        }
-        ModLoader::logger->warn("#define ",  name," \"" ,param.GetIdentifier(), "\" // ", param.GetGotIdentifier());*/
     } 
 }
 
