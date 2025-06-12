@@ -63,7 +63,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
                 delete ModLoader::gameCache;
 
             if(ModLoader::logger != nullptr)
-                delete odLoader::logger;
+                delete ModLoader::logger;
 
             break;
         }
