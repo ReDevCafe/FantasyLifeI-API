@@ -1,42 +1,20 @@
 #include "API/Skill/SkillEffectInfo.hpp"
 #include <stdexcept>
-#include "Logger/ModLoaderLogger.hpp"
+#include "ModLoader.hpp"
+#include "API/Engine/TArrayHelper.hpp"
 
 EffectCondition SkillEffectInfo::GetEffectCondition(int index)
 {
-    if(index >= this->_object.effCondList.Count || index < 0)
-    {
-        mlLogger.warn("GetEffectCondition() out of range. count: ", index, " max: ", this->_object.effCondList.Count);
-        throw std::out_of_range("");
-    }
-
-    return EffectCondition(this->_object.effCondList.Data[index]);
+    auto raw = TArrayHelper<FGDSkillData_EffCond>::Get(this->_object.effCondList, index);
+    return EffectCondition(raw);
 }
 
 void SkillEffectInfo::SetEffectCondition(int index, EffectCondition value)
 {
-    auto array = this->_object.effCondList;
-    int count = array.Count;
-    if(array.Max == 0)
-    {
-        array.Max = 4;
-        array.Data = new FGDSkillData_EffCond[4];
-    } else if (count >= array.Max)
-    {
-        FGDSkillData_EffCond* newData = new FGDSkillData_EffCond[count + 1];
-        for(int i = 0; i < count; ++i)
-            newData[i] = array.Data[i];
-
-        delete[] array.Data;
-        array.Data = newData;
-        array.Max = count + 1;
-    }
-    
-    array.Data[count] = value.getObject();
-    array.Count = ++count;
+    TArrayHelper<FGDSkillData_EffCond>::Set(this->_object.effCondList, index, value.getObject());
 }
 
 void SkillEffectInfo::AddEffectCondition(EffectCondition value)
 {
-    this->SetEffectCondition(this->_object.effCondList.Count, value);
+    TArrayHelper<FGDSkillData_EffCond>::Add(this->_object.effCondList, value.getObject());
 }

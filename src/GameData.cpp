@@ -1,17 +1,18 @@
 #include "GameData.hpp"
 #include "API/Entities/Player/Player.hpp"
+#include "ModLoader.hpp"
 
 GameData::GameData(uintptr_t baseAddress) : _staticDataManager(nullptr), _dynamicDataManager(nullptr) {
-    mlLogger.info("Initialize GameData");
+    ModLoader::logger->info("Initialize GameData");
     this->_baseAddress = baseAddress;
     this->_gObjects = reinterpret_cast<FUObjectArray *>(this->_baseAddress + GOBJECTS_OFFSET);
     this->_gWorld = reinterpret_cast<void *>(this->_baseAddress + GWORLD_OFFSET);
     this->_gNames = reinterpret_cast<void *>(this->_baseAddress + GNAMES_OFFSET);
     this->waitObject(&this->_gObjects);
     this->waitObject(&this->_staticDataManager, "StaticDataManager", 1);
-    mlLogger.info("Found StaticDataManager => ", std::hex, this->_staticDataManager);
+    ModLoader::logger->info("Found StaticDataManager => ", std::hex, this->_staticDataManager);
     this->waitObject(&this->_dynamicDataManager, "DynamicDataManager", 1);
-    mlLogger.info("Found DynamicDataManager => ", std::hex, this->_dynamicDataManager);
+    ModLoader::logger->info("Found DynamicDataManager => ", std::hex, this->_dynamicDataManager);
 }
 
 void GameData::initOthersData() {

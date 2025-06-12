@@ -1,4 +1,5 @@
 #include "Loader/ModEnvironnement.hpp"
+#include "ModLoader.hpp"
 using json = nlohmann::json;
 
 int parseModMeta(const std::string& filename, ModObject& mod)
@@ -26,7 +27,7 @@ DWORD ModEnvironnement::SetupEnvironnement()
     if (!std::filesystem::exists(modsDirs))
     {
         std::filesystem::create_directories(modsDirs);
-        mlLogger.info("Created Mods directory");
+        ModLoader::logger->info("Created Mods directory");
         return 0;
     }
 
@@ -34,32 +35,31 @@ DWORD ModEnvironnement::SetupEnvironnement()
     {
         if (!std::filesystem::is_directory(entry))
         {
-            mlLogger.error("Invalid object inside the mods folder");
+            ModLoader::logger->error("Invalid object inside the mods folder");
             return 0;
         }
 
         std::filesystem::path modJsonPath = entry.path() / "Mod.json";
         if (!std::filesystem::exists(modJsonPath))
         {
-            mlLogger.error("Invalid mod packet inside of",  entry.path());
+            ModLoader::logger->error("Invalid mod packet inside of",  entry.path());
             return 0;
         }
 
         ModObject meta;
         if (parseModMeta(modJsonPath.string(), meta))
         {
-            mlLogger.error("Failed to load Mod.json of ", entry.path(), ", mod has been disabled..");
+            ModLoader::logger->error("Failed to load Mod.json of ", entry.path(), ", mod has been disabled..");
             return 0;
         }
 
         std::filesystem::path modDllPath = entry.path() / meta.dllName;
         if (!std::filesystem::exists(modDllPath))
         {
-            mlLogger.error("Cannot find mod dll ", modDllPath, ", for ", meta.name, ", mod has been disabled..");
+            ModLoader::logger->error("Cannot find mod dll ", modDllPath, ", for ", meta.name, ", mod has been disabled..");
             return 0;
         }
 
-        ModCommunicator::LoadMod(modDllPath.string().c_str(), meta);
     }
 
     return 0;

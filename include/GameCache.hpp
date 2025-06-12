@@ -22,6 +22,9 @@ class GameCache
         GameCache();
         ~GameCache() = default;
 
+        //                      Called for caches that require the save to be loaded
+        void                    PostLoadCache   ();
+
         FGDStCommon_NounInfo*   GetNoun         (std::string key) const { return _cacheNounInfo.at(key); }
         FGDStCommon_TextInfo*   GetText         (std::string key) const { return _cacheTextInfo.at(key); }
         SkillData               GetSkill        (std::string key) const { return *_cacheSkillData.at(key); }
@@ -57,6 +60,9 @@ class GameCache
         void initItem(GameData* gmd, UStaticDataManager* sdm);
         void initRecipe(GameData* gmd, UStaticDataManager* sdm);
         void initChara(GameData* gmd, UStaticDataManager* sdm);
+
+
+        void postInitText(GameData* gmd, UStaticDataManager* sdm);
 
         // World shit
         void initSubLevel(GameData* gmd, UStaticDataManager* sdm);

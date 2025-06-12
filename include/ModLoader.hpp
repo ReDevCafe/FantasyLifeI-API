@@ -1,7 +1,7 @@
 #ifndef MODLOADER_HPP_
     #define MODLOADER_HPP_
 
-    #include "Logger/ModLoaderLogger.hpp"
+    #include "Logger/Logger.hpp"
     #include "Loader/ModEnvironnement.hpp"
     #include "Utils.hpp"
     #include "GameData.hpp"
@@ -14,6 +14,7 @@ class ModLoader {
     public:
         static GameData *gameData;
         static GameCache *gameCache;
+        static Logger *logger; 
         static DWORD WINAPI init(LPVOID lpParam);
     protected:
     private:

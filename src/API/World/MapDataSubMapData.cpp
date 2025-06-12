@@ -3,8 +3,6 @@
 #include "GameCache.hpp"
 #include "Utils.hpp"
 
-#include "Logger/ModLoaderLogger.hpp"
-
 std::string MapDataSubMapData::GetSubMapIdentifier()
 {
     return Utils::FNameToString(this->_object.subMapId);

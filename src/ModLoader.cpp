@@ -1,18 +1,13 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
 
-#include "API/Identifier/ItemIdentifier.hpp"
-#include "API/Item/ItemEquipData.hpp"
-#include "API/Identifier/ItemIdentifier.hpp"
-#include "API/Identifier/RecipeIdentifier.hpp"
-#include "API/Item/ItemArmorData.hpp"
-#include "API/Item/ItemLifeToolsData.hpp"
-
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
+Logger *ModLoader::logger = nullptr;
 
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
-    mlLogger.info("Mod loader has been started");
+    logger = new Logger("ModLoader");
+    logger->info("Mod loader has been started");
     Patcher patcher;
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
@@ -20,6 +15,15 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
     gameData->initOthersData();
     gameCache = new GameCache();
+    //TODO: Load PreLoad mod function
+
+
+
+
+    gameCache->PostLoadCache();
+    //TODO: Load PostLoad mod function
+
+
 
     return 0;
 }
@@ -40,8 +44,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             std::cerr.clear();
 
             Utils::EnableAnsiColors();
-            mlLogger.warn("Mod loader attached to process");
-            Sleep(5000);
             LoaderThread = CreateThread(nullptr, 0, ModLoader::init, nullptr, 0, nullptr);
             if (LoaderThread)
                 CloseHandle(LoaderThread);
@@ -49,7 +51,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         }
         case DLL_PROCESS_DETACH:
         {
-            mlLogger.warn("Mod loader detached from process");
+            ModLoader::logger->warn("Mod loader detached from process");
             if (LoaderThread)
                 CloseHandle(LoaderThread);
             FreeConsole();
@@ -59,6 +61,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
             if(ModLoader::gameCache != nullptr)
                 delete ModLoader::gameCache;
+
+            if(ModLoader::logger != nullptr)
+                delete ModLoader::logger;
 
             break;
         }

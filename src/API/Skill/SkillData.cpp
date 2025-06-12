@@ -3,6 +3,7 @@
 #include "GameCache.hpp"
 #include "Utils.hpp"
 #include "API/Common/Common.hpp"
+#include "API/Engine/TArrayHelper.hpp"
 
 std::string SkillData::GetIdentifier()
 {
@@ -41,40 +42,16 @@ void SkillData::SetDescription(LANG lang, FString string)
 
 SkillEffectInfo SkillData::GetSkillEffect(int index)
 {
-    if(index >= this->_object.skillEffectInfoList.Count || index < 0)
-    {
-        mlLogger.warn("GetSkillEffect() out of range. count: ", index, " max: ", this->_object.skillEffectInfoList.Count);
-        throw std::out_of_range("");
-    }
-
-    return SkillEffectInfo(this->_object.skillEffectInfoList.Data[index]);
+    auto raw = TArrayHelper<FGDSkillData_SkillEffectInfo>::Get(this->_object.skillEffectInfoList, index);
+    return SkillEffectInfo(raw);
 }
 
 void SkillData::SetSkillEffect(int index, SkillEffectInfo value)
 {
-    auto array = this->_object.skillEffectInfoList;
-    int count = array.Count;
-    if(array.Max == 0)
-    {
-        array.Max = 4;
-        array.Data = new FGDSkillData_SkillEffectInfo[4];
-    } 
-    else if (count >= array.Max)
-    {
-        FGDSkillData_SkillEffectInfo* newData = new FGDSkillData_SkillEffectInfo[count +1];
-        for(int i = 0; i < count; ++i)
-            newData[i] = array.Data[i];
-
-        delete[] array.Data;
-        array.Data = newData;
-        array.Max = count + 1;
-    }
-
-    array.Data[count] = value.getObject();
-    array.Count = ++count;
+    TArrayHelper<FGDSkillData_SkillEffectInfo>::Set(this->_object.skillEffectInfoList, index, value.getObject());
 }
 
 void SkillData::AddSkillEffect(SkillEffectInfo data)
 {
-    this->SetSkillEffect(this->_object.skillEffectInfoList.Count, data);
+    TArrayHelper<FGDSkillData_SkillEffectInfo>::Add(this->_object.skillEffectInfoList, data.getObject());
 }

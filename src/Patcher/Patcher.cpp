@@ -1,7 +1,7 @@
 
 
 #include "Patcher/Patcher.hpp"
-#include "Logger/ModLoaderLogger.hpp"
+#include "ModLoader.hpp"
 #include <iostream>
 
 std::priority_queue<Patch *, std::vector<Patch *>, Compare> Patcher::_queue;
@@ -11,14 +11,14 @@ void Patcher::add(Patch *patch) {
 }
 
 bool Patcher::applyPatches(uintptr_t baseAddress) {
-    mlLogger.info("Starting to load patches ...");
+    ModLoader::logger->info("Starting to load patches ...");
     while (!_queue.empty()) {
         Patch *patch = _queue.top();
         if (!patch->apply(baseAddress)) {
-            mlLogger.error("Failed to apply patch: ", patch->getName(), " at ", std::hex, baseAddress + patch->getTarget());
+            ModLoader::logger->error("Failed to apply patch: ", patch->getName(), " at ", std::hex, baseAddress + patch->getTarget());
             return false;
         }
-        mlLogger.info(patch->getName(), " successfully applied");
+        ModLoader::logger->info(patch->getName(), " successfully applied");
         _queue.pop();
         delete patch;
     }

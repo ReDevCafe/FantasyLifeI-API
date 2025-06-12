@@ -5,7 +5,7 @@
     #include "Engine/FUObjectArray.hpp"
     #include "API/Entities/Player/Player.hpp"
     #include "Utils.hpp"
-    #include "Logger/ModLoaderLogger.hpp"
+    #include "ModLoader.hpp"
     #include <type_traits>
     #include <functional>
     #include "API/Item/ItemData.hpp"
