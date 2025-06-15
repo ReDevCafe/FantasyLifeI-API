@@ -23,13 +23,13 @@ public:
 
 	/// Functions
 	// Function /Script/AudioCapture.AudioCapture.StopCapturingAudio
-	// void StopCapturingAudio();                                                                                               // [0x7e41250] Final|Native|Public|BlueprintCallable 
+	// void StopCapturingAudio();                                                                                               // [0x7ed8ee0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioCapture.AudioCapture.StartCapturingAudio
-	// void StartCapturingAudio();                                                                                              // [0x7e41200] Final|Native|Public|BlueprintCallable 
+	// void StartCapturingAudio();                                                                                              // [0x7ed8e90] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioCapture.AudioCapture.IsCapturingAudio
-	// bool IsCapturingAudio();                                                                                                 // [0x7e411c0] Final|Native|Public|BlueprintCallable 
+	// bool IsCapturingAudio();                                                                                                 // [0x7ed8e50] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioCapture.AudioCapture.GetAudioCaptureDeviceInfo
-	// bool GetAudioCaptureDeviceInfo(FAudioCaptureDeviceInfo& OutInfo);                                                        // [0x7e40f80] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool GetAudioCaptureDeviceInfo(FAudioCaptureDeviceInfo& OutInfo);                                                        // [0x7ed8c10] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/AudioCapture.AudioCaptureFunctionLibrary
@@ -41,7 +41,7 @@ public:
 
 	/// Functions
 	// Function /Script/AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture
-	// class UAudioCapture* CreateAudioCapture();                                                                               // [0x7e40f50] Final|Native|Static|Public|BlueprintCallable 
+	// class UAudioCapture* CreateAudioCapture();                                                                               // [0x7ed8be0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/AudioCapture.AudioCaptureBlueprintLibrary
@@ -53,9 +53,9 @@ public:
 
 	/// Functions
 	// Function /Script/AudioCapture.AudioCaptureBlueprintLibrary.GetAvailableAudioInputDevices
-	// void GetAvailableAudioInputDevices(class UObject* WorldContextObject, FDelegateProperty& OnObtainDevicesEvent);          // [0x7e410d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void GetAvailableAudioInputDevices(class UObject* WorldContextObject, FDelegateProperty& OnObtainDevicesEvent);          // [0x7ed8d60] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AudioCapture.AudioCaptureBlueprintLibrary.Conv_AudioInputDeviceInfoToString
-	// FString Conv_AudioInputDeviceInfoToString(FAudioInputDeviceInfo& Info);                                                  // [0x7e40de0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// FString Conv_AudioInputDeviceInfoToString(FAudioInputDeviceInfo& Info);                                                  // [0x7ed8a70] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/AudioCapture.AudioCaptureComponent
@@ -89,5 +89,3 @@ struct FAudioCaptureDeviceInfo
 };
 
 #pragma pack(pop)
-
-

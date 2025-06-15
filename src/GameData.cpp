@@ -1,6 +1,7 @@
 #include "GameData.hpp"
 #include "API/Entities/Player/Player.hpp"
 #include "ModLoader.hpp"
+#include "Offset.h"
 
 GameData::GameData(uintptr_t baseAddress) : _staticDataManager(nullptr), _dynamicDataManager(nullptr) {
     ModLoader::logger->info("Initialize GameData");

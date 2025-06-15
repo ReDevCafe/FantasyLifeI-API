@@ -30,9 +30,9 @@ struct FChaosDestructionEvent_SWC
 	int32_t                                            Type;                                                       // 0x0040   (0x0004)  
 };
 
-/// Struct /Engine/Transient.PropertyBag_15cf488ce5477289
+/// Struct /Engine/Transient.PropertyBag_45400ed6e3db0aeb
 /// Size: 0x5760 (22368 bytes) (0x000000 - 0x005760) align 16 MaxSize: 0x5760
-struct FPropertyBag_15cf488ce5477289
+struct FPropertyBag_45400ed6e3db0aeb
 { 
 	FTransform                                         RigVMModel___RigUnit_GetTransform_Transform;                // 0x0000   (0x0060)  
 	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_CachedIndex;              // 0x0060   (0x0010)  
@@ -47,15 +47,15 @@ struct FPropertyBag_15cf488ce5477289
 	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_1_1_CachedIndex;          // 0x01E0   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel___RigUnit_SetTransform_1_1_CachedIndex;          // 0x01F0   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___ParentConstraint_ChildCache;             // 0x0200   (0x0010)  
-	SDK_UNDEFINED(16,1224) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___ParentConstraint_ParentCaches); // 0x0210   (0x0010)  
+	SDK_UNDEFINED(16,1227) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___ParentConstraint_ParentCaches); // 0x0210   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_ChildCache; // 0x0220   (0x0010)  
-	SDK_UNDEFINED(16,1225) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_ParentCaches); // 0x0230   (0x0010)  
+	SDK_UNDEFINED(16,1228) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_ParentCaches); // 0x0230   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_ChildCache; // 0x0240   (0x0010)  
-	SDK_UNDEFINED(16,1226) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_ParentCaches); // 0x0250   (0x0010)  
+	SDK_UNDEFINED(16,1229) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_ParentCaches); // 0x0250   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_1_ChildCache; // 0x0260   (0x0010)  
-	SDK_UNDEFINED(16,1227) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_1_ParentCaches); // 0x0270   (0x0010)  
+	SDK_UNDEFINED(16,1230) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_1_ParentCaches); // 0x0270   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_ChildCache; // 0x0280   (0x0010)  
-	SDK_UNDEFINED(16,1228) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_ParentCaches); // 0x0290   (0x0010)  
+	SDK_UNDEFINED(16,1231) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_ParentCaches); // 0x0290   (0x0010)  
 	FTransform                                         RigVMModel_Rig_2___RigUnit_GetTransform_Transform;          // 0x02A0   (0x0060)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RigUnit_GetTransform_CachedIndex;        // 0x0300   (0x0010)  
 	FName                                              RigVMModel_Rig_2___RigVMFunction_ControlFlowBranch_5_BlockToRun; // 0x0310   (0x0008)  
@@ -151,7 +151,7 @@ struct FPropertyBag_15cf488ce5477289
 	FVector                                            __n0_V_____0___Q_60;                                        // 0x0C00   (0x0018)  
 	unsigned char                                      UnknownData13_6[0x8];                                       // 0x0C18   (0x0008)  MISSED
 	FTransform                                         __n0_V_____0___Q_61;                                        // 0x0C20   (0x0060)  
-	SDK_UNDEFINED(16,1229) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x0C80   (0x0010)  
+	SDK_UNDEFINED(16,1232) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x0C80   (0x0010)  
 	FRigUnit_AimItem_Target                            __n0_V_____0___Q_63;                                        // 0x0C90   (0x0048)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_64;                                        // 0x0CD8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_65;                                        // 0x0CE8   (0x0010)  
@@ -285,7 +285,7 @@ struct FPropertyBag_15cf488ce5477289
 	FVector                                            __n0_V_____0___Q_171;                                       // 0x19F0   (0x0018)  
 	unsigned char                                      UnknownData34_6[0x8];                                       // 0x1A08   (0x0008)  MISSED
 	FTransform                                         __n0_V_____0___Q_172;                                       // 0x1A10   (0x0060)  
-	SDK_UNDEFINED(16,1230) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x1A70   (0x0010)  
+	SDK_UNDEFINED(16,1233) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x1A70   (0x0010)  
 	FRigUnit_AimItem_Target                            __n0_V_____0___Q_174;                                       // 0x1A80   (0x0048)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_175;                                       // 0x1AC8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_176;                                       // 0x1AD8   (0x0010)  
@@ -475,7 +475,7 @@ struct FPropertyBag_15cf488ce5477289
 	unsigned char                                      UnknownData64_6[0x4];                                       // 0x2D0C   (0x0004)  MISSED
 	TArray<FConstraintParent>                          MR___0_0_0_0n0_c_R_328;                                     // 0x2D10   (0x0010)  
 	TArray<FCachedRigElement>                          MR___0_0_0_0n0_c_R_329;                                     // 0x2D20   (0x0010)  
-	SDK_UNDEFINED(16,1231) /* TArray<TArray<FCachedRigElement>> */ __um(MR___0_0_0_0n0_c_R_);                      // 0x2D30   (0x0010)  
+	SDK_UNDEFINED(16,1234) /* TArray<TArray<FCachedRigElement>> */ __um(MR___0_0_0_0n0_c_R_);                      // 0x2D30   (0x0010)  
 	FTransform                                         MR___0_0_0_0n0_c_R_331;                                     // 0x2D40   (0x0060)  
 	FRigElementKey                                     MR___0_0_0_0n0_c_R_332;                                     // 0x2DA0   (0x000C)  
 	unsigned char                                      UnknownData65_6[0x4];                                       // 0x2DAC   (0x0004)  MISSED
@@ -526,7 +526,7 @@ struct FPropertyBag_15cf488ce5477289
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_369;                                       // 0x32A8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_370;                                       // 0x32B8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_371;                                       // 0x32C8   (0x0010)  
-	SDK_UNDEFINED(16,1232) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x32D8   (0x0010)  
+	SDK_UNDEFINED(16,1235) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x32D8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_373;                                       // 0x32E8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_374;                                       // 0x32F8   (0x0010)  
 	TArray<bool>                                       __n0_V_____0___Q_375;                                       // 0x3308   (0x0010)  
@@ -556,7 +556,7 @@ struct FPropertyBag_15cf488ce5477289
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_399;                                       // 0x3628   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_400;                                       // 0x3638   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_401;                                       // 0x3648   (0x0010)  
-	SDK_UNDEFINED(16,1233) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x3658   (0x0010)  
+	SDK_UNDEFINED(16,1236) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x3658   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_403;                                       // 0x3668   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_404;                                       // 0x3678   (0x0010)  
 	TArray<bool>                                       __n0_V_____0___Q_405;                                       // 0x3688   (0x0010)  
@@ -659,7 +659,7 @@ struct FPropertyBag_15cf488ce5477289
 	unsigned char                                      UnknownData88_6[0x4];                                       // 0x407C   (0x0004)  MISSED
 	TArray<FConstraintParent>                          MR___0_0_0_0n0_c_R_486;                                     // 0x4080   (0x0010)  
 	TArray<FCachedRigElement>                          MR___0_0_0_0n0_c_R_487;                                     // 0x4090   (0x0010)  
-	SDK_UNDEFINED(16,1234) /* TArray<TArray<FCachedRigElement>> */ __um(MR___0_0_0_0n0_c_R_);                      // 0x40A0   (0x0010)  
+	SDK_UNDEFINED(16,1237) /* TArray<TArray<FCachedRigElement>> */ __um(MR___0_0_0_0n0_c_R_);                      // 0x40A0   (0x0010)  
 	FTransform                                         MR___0_0_0_0n0_c_R_489;                                     // 0x40B0   (0x0060)  
 	FRigElementKey                                     MR___0_0_0_0n0_c_R_490;                                     // 0x4110   (0x000C)  
 	unsigned char                                      UnknownData89_6[0x4];                                       // 0x411C   (0x0004)  MISSED
@@ -717,7 +717,7 @@ struct FPropertyBag_15cf488ce5477289
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_531;                                       // 0x4638   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_532;                                       // 0x4648   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_533;                                       // 0x4658   (0x0010)  
-	SDK_UNDEFINED(16,1235) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x4668   (0x0010)  
+	SDK_UNDEFINED(16,1238) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x4668   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_535;                                       // 0x4678   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_536;                                       // 0x4688   (0x0010)  
 	TArray<bool>                                       __n0_V_____0___Q_537;                                       // 0x4698   (0x0010)  
@@ -775,7 +775,7 @@ struct FPropertyBag_15cf488ce5477289
 	unsigned char                                      UnknownData103_6[0x4];                                      // 0x4B8C   (0x0004)  MISSED
 	TArray<FConstraintParent>                          ___S_0_0_0_0n0_c_R_581;                                     // 0x4B90   (0x0010)  
 	TArray<FCachedRigElement>                          ___S_0_0_0_0n0_c_R_582;                                     // 0x4BA0   (0x0010)  
-	SDK_UNDEFINED(16,1236) /* TArray<TArray<FCachedRigElement>> */ __um(___S_0_0_0_0n0_c_R_);                      // 0x4BB0   (0x0010)  
+	SDK_UNDEFINED(16,1239) /* TArray<TArray<FCachedRigElement>> */ __um(___S_0_0_0_0n0_c_R_);                      // 0x4BB0   (0x0010)  
 	FTransform                                         ___S_0_0_0_0n0_c_R_584;                                     // 0x4BC0   (0x0060)  
 	FRigElementKey                                     ___S_0_0_0_0n0_c_R_585;                                     // 0x4C20   (0x000C)  
 	unsigned char                                      UnknownData104_6[0x4];                                      // 0x4C2C   (0x0004)  MISSED
@@ -830,7 +830,7 @@ struct FPropertyBag_15cf488ce5477289
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_626;                                       // 0x5138   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_627;                                       // 0x5148   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_628;                                       // 0x5158   (0x0010)  
-	SDK_UNDEFINED(16,1237) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x5168   (0x0010)  
+	SDK_UNDEFINED(16,1240) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x5168   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_630;                                       // 0x5178   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_631;                                       // 0x5188   (0x0010)  
 	TArray<bool>                                       __n0_V_____0___Q_632;                                       // 0x5198   (0x0010)  
@@ -888,7 +888,7 @@ struct FPropertyBag_15cf488ce5477289
 	unsigned char                                      UnknownData118_6[0x4];                                      // 0x568C   (0x0004)  MISSED
 	TArray<FConstraintParent>                          ___S_0_0_0_0n0_c_R_677;                                     // 0x5690   (0x0010)  
 	TArray<FCachedRigElement>                          ___S_0_0_0_0n0_c_R_678;                                     // 0x56A0   (0x0010)  
-	SDK_UNDEFINED(16,1238) /* TArray<TArray<FCachedRigElement>> */ __um(___S_0_0_0_0n0_c_R_);                      // 0x56B0   (0x0010)  
+	SDK_UNDEFINED(16,1241) /* TArray<TArray<FCachedRigElement>> */ __um(___S_0_0_0_0n0_c_R_);                      // 0x56B0   (0x0010)  
 	FTransform                                         ___S_0_0_0_0n0_c_R_680;                                     // 0x56C0   (0x0060)  
 	FRigElementKey                                     ___S_0_0_0_0n0_c_R_681;                                     // 0x5720   (0x000C)  
 	unsigned char                                      UnknownData119_6[0x4];                                      // 0x572C   (0x0004)  MISSED
@@ -899,9 +899,9 @@ struct FPropertyBag_15cf488ce5477289
 	FName                                              RigVMModel_Rig_2___RigVMFunction_ControlFlowBranch_BlockToRun; // 0x5758   (0x0008)  
 };
 
-/// Struct /Engine/Transient.PropertyBag_8238bb899bcbde4f
+/// Struct /Engine/Transient.PropertyBag_ed2c40aeb3b38f9
 /// Size: 0x13FC (5116 bytes) (0x000000 - 0x0013FC) align 16 MaxSize: 0x13FC
-struct FPropertyBag_8238bb899bcbde4f
+struct FPropertyBag_ed2c40aeb3b38f9
 { 
 	FRigElementKey                                     RigVMModel___RigUnit_SetTransform_Item__Const;              // 0x0000   (0x000C)  
 	ERigVMTransformSpace                               RigVMModel___RigUnit_SetTransform_Space__Const;             // 0x000C   (0x0001)  
@@ -1208,5 +1208,3 @@ struct FPropertyBag_8238bb899bcbde4f
 };
 
 #pragma pack(pop)
-
-

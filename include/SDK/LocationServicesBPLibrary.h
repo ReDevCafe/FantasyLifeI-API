@@ -32,19 +32,19 @@ public:
 
 	/// Functions
 	// Function /Script/LocationServicesBPLibrary.LocationServices.StopLocationServices
-	// bool StopLocationServices();                                                                                             // [0x830b360] Final|Native|Static|Public|BlueprintCallable 
+	// bool StopLocationServices();                                                                                             // [0x83a2e40] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.StartLocationServices
-	// bool StartLocationServices();                                                                                            // [0x830b310] Final|Native|Static|Public|BlueprintCallable 
+	// bool StartLocationServices();                                                                                            // [0x83a2df0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.IsLocationAccuracyAvailable
-	// bool IsLocationAccuracyAvailable(ELocationAccuracy Accuracy);                                                            // [0x830b270] Final|Native|Static|Public|BlueprintCallable 
+	// bool IsLocationAccuracyAvailable(ELocationAccuracy Accuracy);                                                            // [0x83a2d50] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.InitLocationServices
-	// bool InitLocationServices(ELocationAccuracy Accuracy, float UpdateFrequency, float MinDistanceFilter);                   // [0x830b140] Final|Native|Static|Public|BlueprintCallable 
+	// bool InitLocationServices(ELocationAccuracy Accuracy, float UpdateFrequency, float MinDistanceFilter);                   // [0x83a2c20] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.GetLocationServicesImpl
-	// class ULocationServicesImpl* GetLocationServicesImpl();                                                                  // [0x830b120] Final|Native|Static|Public|BlueprintCallable 
+	// class ULocationServicesImpl* GetLocationServicesImpl();                                                                  // [0x83a2c00] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.GetLastKnownLocation
-	// FLocationServicesData GetLastKnownLocation();                                                                            // [0x830b0c0] Final|Native|Static|Public|BlueprintCallable 
+	// FLocationServicesData GetLastKnownLocation();                                                                            // [0x83a2ba0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/LocationServicesBPLibrary.LocationServices.AreLocationServicesEnabled
-	// bool AreLocationServicesEnabled();                                                                                       // [0x830b070] Final|Native|Static|Public|BlueprintCallable 
+	// bool AreLocationServicesEnabled();                                                                                       // [0x83a2b50] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/LocationServicesBPLibrary.LocationServicesImpl
@@ -52,7 +52,7 @@ public:
 class ULocationServicesImpl : public UObject
 { 
 public:
-	SDK_UNDEFINED(16,1106) /* FMulticastInlineDelegate */ __um(OnLocationChanged);                                 // 0x0028   (0x0010)  
+	SDK_UNDEFINED(16,1109) /* FMulticastInlineDelegate */ __um(OnLocationChanged);                                 // 0x0028   (0x0010)  
 };
 
 /// Struct /Script/LocationServicesBPLibrary.LocationServicesData
@@ -68,5 +68,3 @@ struct FLocationServicesData
 };
 
 #pragma pack(pop)
-
-

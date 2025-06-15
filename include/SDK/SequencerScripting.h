@@ -40,13 +40,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceKey.SetValue
-	// void SetValue(FMovieSceneObjectBindingID& InNewValue);                                                                   // [0x7111310] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValue(FMovieSceneObjectBindingID& InNewValue);                                                                   // [0x71a9510] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71110b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71a92b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceKey.GetValue
-	// FMovieSceneObjectBindingID GetValue();                                                                                   // [0x710f8f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FMovieSceneObjectBindingID GetValue();                                                                                   // [0x71a7af0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingChannel
@@ -67,21 +67,21 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel.SetDefault
-	// void SetDefault(FMovieSceneObjectBindingID InDefaultValue);                                                              // [0x71105b0] Final|Native|Public|BlueprintCallable 
+	// void SetDefault(FMovieSceneObjectBindingID InDefaultValue);                                                              // [0x71a87b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel.RemoveDefault
-	// void RemoveDefault();                                                                                                    // [0x7110040] Final|Native|Public|BlueprintCallable 
+	// void RemoveDefault();                                                                                                    // [0x71a8240] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel.HasDefault
-	// bool HasDefault();                                                                                                       // [0x710fd60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasDefault();                                                                                                       // [0x71a7f60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel.GetDefault
-	// FMovieSceneObjectBindingID GetDefault();                                                                                 // [0x710f140] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FMovieSceneObjectBindingID GetDefault();                                                                                 // [0x71a7340] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel.AddKey
-	// class UMovieSceneScriptingActorReferenceKey* AddKey(FFrameNumber InTime, FMovieSceneObjectBindingID NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x710e2a0] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingActorReferenceKey* AddKey(FFrameNumber InTime, FMovieSceneObjectBindingID NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x71a64a0] Final|Native|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingBoolKey
@@ -94,13 +94,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolKey.SetValue
-	// void SetValue(bool InNewValue);                                                                                          // [0x7111480] Final|Native|Public|BlueprintCallable 
+	// void SetValue(bool InNewValue);                                                                                          // [0x71a9680] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71110b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71a92b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolKey.GetValue
-	// bool GetValue();                                                                                                         // [0x710f9f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValue();                                                                                                         // [0x71a7bf0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingBoolChannel
@@ -113,27 +113,27 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.SetDefault
-	// void SetDefault(bool InDefaultValue);                                                                                    // [0x7110720] Final|Native|Public|BlueprintCallable 
+	// void SetDefault(bool InDefaultValue);                                                                                    // [0x71a8920] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.RemoveDefault
-	// void RemoveDefault();                                                                                                    // [0x71100c0] Final|Native|Public|BlueprintCallable 
+	// void RemoveDefault();                                                                                                    // [0x71a82c0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.HasDefault
-	// bool HasDefault();                                                                                                       // [0x710fe40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasDefault();                                                                                                       // [0x71a8040] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.GetNumKeys
-	// int32_t GetNumKeys();                                                                                                    // [0x710f610] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumKeys();                                                                                                    // [0x71a7810] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.GetDefault
-	// bool GetDefault();                                                                                                       // [0x710f1e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetDefault();                                                                                                       // [0x71a73e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.EvaluateKeys
-	// TArray<bool> EvaluateKeys(FSequencerScriptingRange Range, FFrameRate FrameRate);                                         // [0x710ed80] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<bool> EvaluateKeys(FSequencerScriptingRange Range, FFrameRate FrameRate);                                         // [0x71a6f80] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.ComputeEffectiveRange
-	// FSequencerScriptingRange ComputeEffectiveRange();                                                                        // [0x710eb00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FSequencerScriptingRange ComputeEffectiveRange();                                                                        // [0x71a6d00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingBoolChannel.AddKey
-	// class UMovieSceneScriptingBoolKey* AddKey(FFrameNumber& InTime, bool NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x710e410] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingBoolKey* AddKey(FFrameNumber& InTime, bool NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x71a6610] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingByteKey
@@ -146,13 +146,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteKey.SetValue
-	// void SetValue(char InNewValue);                                                                                          // [0x7111590] Final|Native|Public|BlueprintCallable 
+	// void SetValue(char InNewValue);                                                                                          // [0x71a9790] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71110b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71a92b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteKey.GetValue
-	// char GetValue();                                                                                                         // [0x710faa0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// char GetValue();                                                                                                         // [0x71a7ca0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingByteChannel
@@ -165,21 +165,21 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteChannel.SetDefault
-	// void SetDefault(char InDefaultValue);                                                                                    // [0x7110850] Final|Native|Public|BlueprintCallable 
+	// void SetDefault(char InDefaultValue);                                                                                    // [0x71a8a50] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteChannel.RemoveDefault
-	// void RemoveDefault();                                                                                                    // [0x7110190] Final|Native|Public|BlueprintCallable 
+	// void RemoveDefault();                                                                                                    // [0x71a8390] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteChannel.HasDefault
-	// bool HasDefault();                                                                                                       // [0x710ff00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasDefault();                                                                                                       // [0x71a8100] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteChannel.GetDefault
-	// char GetDefault();                                                                                                       // [0x710f2a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// char GetDefault();                                                                                                       // [0x71a74a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingByteChannel.AddKey
-	// class UMovieSceneScriptingByteKey* AddKey(FFrameNumber& InTime, char NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation); // [0x710e5a0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingByteKey* AddKey(FFrameNumber& InTime, char NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation); // [0x71a67a0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingDoubleKey
@@ -192,41 +192,41 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetValue
-	// void SetValue(double InNewValue);                                                                                        // [0x71116b0] Final|Native|Public|BlueprintCallable 
+	// void SetValue(double InNewValue);                                                                                        // [0x71a98b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71110b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71a92b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetTangentWeightMode
-	// void SetTangentWeightMode(TEnumAsByte<ERichCurveTangentWeightMode> InNewValue);                                          // [0x7110fd0] Final|Native|Public|BlueprintCallable 
+	// void SetTangentWeightMode(TEnumAsByte<ERichCurveTangentWeightMode> InNewValue);                                          // [0x71a91d0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetTangentMode
-	// void SetTangentMode(TEnumAsByte<ERichCurveTangentMode> InNewValue);                                                      // [0x7110ef0] Final|Native|Public|BlueprintCallable 
+	// void SetTangentMode(TEnumAsByte<ERichCurveTangentMode> InNewValue);                                                      // [0x71a90f0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetLeaveTangentWeight
-	// void SetLeaveTangentWeight(float InNewValue);                                                                            // [0x7110c90] Final|Native|Public|BlueprintCallable 
+	// void SetLeaveTangentWeight(float InNewValue);                                                                            // [0x71a8e90] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetLeaveTangent
-	// void SetLeaveTangent(float InNewValue);                                                                                  // [0x7110b90] Final|Native|Public|BlueprintCallable 
+	// void SetLeaveTangent(float InNewValue);                                                                                  // [0x71a8d90] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetInterpolationMode
-	// void SetInterpolationMode(TEnumAsByte<ERichCurveInterpMode> InNewValue);                                                 // [0x7110ab0] Final|Native|Public|BlueprintCallable 
+	// void SetInterpolationMode(TEnumAsByte<ERichCurveInterpMode> InNewValue);                                                 // [0x71a8cb0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetArriveTangentWeight
-	// void SetArriveTangentWeight(float InNewValue);                                                                           // [0x71104c0] Final|Native|Public|BlueprintCallable 
+	// void SetArriveTangentWeight(float InNewValue);                                                                           // [0x71a86c0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.SetArriveTangent
-	// void SetArriveTangent(float InNewValue);                                                                                 // [0x71103c0] Final|Native|Public|BlueprintCallable 
+	// void SetArriveTangent(float InNewValue);                                                                                 // [0x71a85c0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetValue
-	// double GetValue();                                                                                                       // [0x710fb60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// double GetValue();                                                                                                       // [0x71a7d60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetTangentWeightMode
-	// TEnumAsByte<ERichCurveTangentWeightMode> GetTangentWeightMode();                                                         // [0x710f7f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveTangentWeightMode> GetTangentWeightMode();                                                         // [0x71a79f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetTangentMode
-	// TEnumAsByte<ERichCurveTangentMode> GetTangentMode();                                                                     // [0x710f790] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveTangentMode> GetTangentMode();                                                                     // [0x71a7990] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetLeaveTangentWeight
-	// float GetLeaveTangentWeight();                                                                                           // [0x710f5b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetLeaveTangentWeight();                                                                                           // [0x71a77b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetLeaveTangent
-	// float GetLeaveTangent();                                                                                                 // [0x710f550] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetLeaveTangent();                                                                                                 // [0x71a7750] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetInterpolationMode
-	// TEnumAsByte<ERichCurveInterpMode> GetInterpolationMode();                                                                // [0x710f3f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveInterpMode> GetInterpolationMode();                                                                // [0x71a75f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetArriveTangentWeight
-	// float GetArriveTangentWeight();                                                                                          // [0x710f0e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetArriveTangentWeight();                                                                                          // [0x71a72e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleKey.GetArriveTangent
-	// float GetArriveTangent();                                                                                                // [0x710f080] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetArriveTangent();                                                                                                // [0x71a7280] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingDoubleChannel
@@ -239,35 +239,35 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.SetPreInfinityExtrapolation
-	// void SetPreInfinityExtrapolation(TEnumAsByte<ERichCurveExtrapolation> InExtrapolation);                                  // [0x7110e40] Final|Native|Public|BlueprintCallable 
+	// void SetPreInfinityExtrapolation(TEnumAsByte<ERichCurveExtrapolation> InExtrapolation);                                  // [0x71a9040] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.SetPostInfinityExtrapolation
-	// void SetPostInfinityExtrapolation(TEnumAsByte<ERichCurveExtrapolation> InExtrapolation);                                 // [0x7110d90] Final|Native|Public|BlueprintCallable 
+	// void SetPostInfinityExtrapolation(TEnumAsByte<ERichCurveExtrapolation> InExtrapolation);                                 // [0x71a8f90] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.SetDefault
-	// void SetDefault(double InDefaultValue);                                                                                  // [0x7110970] Final|Native|Public|BlueprintCallable 
+	// void SetDefault(double InDefaultValue);                                                                                  // [0x71a8b70] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.RemoveDefault
-	// void RemoveDefault();                                                                                                    // [0x7110260] Final|Native|Public|BlueprintCallable 
+	// void RemoveDefault();                                                                                                    // [0x71a8460] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.HasDefault
-	// bool HasDefault();                                                                                                       // [0x710ffc0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasDefault();                                                                                                       // [0x71a81c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.GetPreInfinityExtrapolation
-	// TEnumAsByte<ERichCurveExtrapolation> GetPreInfinityExtrapolation();                                                      // [0x710f730] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveExtrapolation> GetPreInfinityExtrapolation();                                                      // [0x71a7930] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.GetPostInfinityExtrapolation
-	// TEnumAsByte<ERichCurveExtrapolation> GetPostInfinityExtrapolation();                                                     // [0x710f6d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveExtrapolation> GetPostInfinityExtrapolation();                                                     // [0x71a78d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.GetNumKeys
-	// int32_t GetNumKeys();                                                                                                    // [0x710f670] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumKeys();                                                                                                    // [0x71a7870] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.GetDefault
-	// double GetDefault();                                                                                                     // [0x710f360] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// double GetDefault();                                                                                                     // [0x71a7560] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.EvaluateKeys
-	// TArray<double> EvaluateKeys(FSequencerScriptingRange Range, FFrameRate FrameRate);                                       // [0x710ef00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<double> EvaluateKeys(FSequencerScriptingRange Range, FFrameRate FrameRate);                                       // [0x71a7100] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.ComputeEffectiveRange
-	// FSequencerScriptingRange ComputeEffectiveRange();                                                                        // [0x710ec40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FSequencerScriptingRange ComputeEffectiveRange();                                                                        // [0x71a6e40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingDoubleChannel.AddKey
-	// class UMovieSceneScriptingDoubleKey* AddKey(FFrameNumber& InTime, double NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation); // [0x710e770] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingDoubleKey* AddKey(FFrameNumber& InTime, double NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation); // [0x71a6970] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingEventKey
@@ -280,13 +280,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingEventKey.SetValue
-	// void SetValue(FMovieSceneEvent& InNewValue);                                                                             // [0x71117a0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValue(FMovieSceneEvent& InNewValue);                                                                             // [0x71a99a0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingEventKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71110b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71a92b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingEventKey.GetValue
-	// FMovieSceneEvent GetValue();                                                                                             // [0x710fbc0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FMovieSceneEvent GetValue();                                                                                             // [0x71a7dc0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingEventKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingEventChannel
@@ -299,13 +299,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingEventChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingEventChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingEventChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingEventChannel.AddKey
-	// class UMovieSceneScriptingEventKey* AddKey(FFrameNumber& InTime, FMovieSceneEvent NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x710e940] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingEventKey* AddKey(FFrameNumber& InTime, FMovieSceneEvent NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x71a6b40] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingFloatKey
@@ -317,41 +317,41 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetValue
-	// void SetValue(float InNewValue);                                                                                         // [0x711c3a0] Native|Public|BlueprintCallable 
+	// void SetValue(float InNewValue);                                                                                         // [0x71b45a0] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x711c280] Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71b4480] Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetTangentWeightMode
-	// void SetTangentWeightMode(TEnumAsByte<ERichCurveTangentWeightMode> InNewValue);                                          // [0x711c200] Native|Public|BlueprintCallable 
+	// void SetTangentWeightMode(TEnumAsByte<ERichCurveTangentWeightMode> InNewValue);                                          // [0x71b4400] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetTangentMode
-	// void SetTangentMode(TEnumAsByte<ERichCurveTangentMode> InNewValue);                                                      // [0x711c180] Native|Public|BlueprintCallable 
+	// void SetTangentMode(TEnumAsByte<ERichCurveTangentMode> InNewValue);                                                      // [0x71b4380] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetLeaveTangentWeight
-	// void SetLeaveTangentWeight(float InNewValue);                                                                            // [0x711ba00] Native|Public|BlueprintCallable 
+	// void SetLeaveTangentWeight(float InNewValue);                                                                            // [0x71b3c00] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetLeaveTangent
-	// void SetLeaveTangent(float InNewValue);                                                                                  // [0x711b970] Native|Public|BlueprintCallable 
+	// void SetLeaveTangent(float InNewValue);                                                                                  // [0x71b3b70] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetInterpolationMode
-	// void SetInterpolationMode(TEnumAsByte<ERichCurveInterpMode> InNewValue);                                                 // [0x711b8f0] Native|Public|BlueprintCallable 
+	// void SetInterpolationMode(TEnumAsByte<ERichCurveInterpMode> InNewValue);                                                 // [0x71b3af0] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetArriveTangentWeight
-	// void SetArriveTangentWeight(float InNewValue);                                                                           // [0x711b350] Native|Public|BlueprintCallable 
+	// void SetArriveTangentWeight(float InNewValue);                                                                           // [0x71b3550] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.SetArriveTangent
-	// void SetArriveTangent(float InNewValue);                                                                                 // [0x50a0f90] Native|Public|BlueprintCallable 
+	// void SetArriveTangent(float InNewValue);                                                                                 // [0x511f280] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetValue
-	// float GetValue();                                                                                                        // [0x4ec9640] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetValue();                                                                                                        // [0x4f47930] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetTangentWeightMode
-	// TEnumAsByte<ERichCurveTangentWeightMode> GetTangentWeightMode();                                                         // [0x52a9d50] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveTangentWeightMode> GetTangentWeightMode();                                                         // [0x5328010] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetTangentMode
-	// TEnumAsByte<ERichCurveTangentMode> GetTangentMode();                                                                     // [0x50310e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveTangentMode> GetTangentMode();                                                                     // [0x50af3d0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetLeaveTangentWeight
-	// float GetLeaveTangentWeight();                                                                                           // [0x711a050] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetLeaveTangentWeight();                                                                                           // [0x71b2250] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetLeaveTangent
-	// float GetLeaveTangent();                                                                                                 // [0x711a010] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetLeaveTangent();                                                                                                 // [0x71b2210] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetInterpolationMode
-	// TEnumAsByte<ERichCurveInterpMode> GetInterpolationMode();                                                                // [0x4d8cd20] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveInterpMode> GetInterpolationMode();                                                                // [0x4e0b010] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetArriveTangentWeight
-	// float GetArriveTangentWeight();                                                                                          // [0x5301950] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetArriveTangentWeight();                                                                                          // [0x537fc10] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatKey.GetArriveTangent
-	// float GetArriveTangent();                                                                                                // [0x71199f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetArriveTangent();                                                                                                // [0x71b1bf0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingActualFloatKey
@@ -380,35 +380,35 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.SetPreInfinityExtrapolation
-	// void SetPreInfinityExtrapolation(TEnumAsByte<ERichCurveExtrapolation> InExtrapolation);                                  // [0x711be80] Final|Native|Public|BlueprintCallable 
+	// void SetPreInfinityExtrapolation(TEnumAsByte<ERichCurveExtrapolation> InExtrapolation);                                  // [0x71b4080] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.SetPostInfinityExtrapolation
-	// void SetPostInfinityExtrapolation(TEnumAsByte<ERichCurveExtrapolation> InExtrapolation);                                 // [0x711bdc0] Final|Native|Public|BlueprintCallable 
+	// void SetPostInfinityExtrapolation(TEnumAsByte<ERichCurveExtrapolation> InExtrapolation);                                 // [0x71b3fc0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.SetDefault
-	// void SetDefault(float InDefaultValue);                                                                                   // [0x711b3e0] Final|Native|Public|BlueprintCallable 
+	// void SetDefault(float InDefaultValue);                                                                                   // [0x71b35e0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.RemoveDefault
-	// void RemoveDefault();                                                                                                    // [0x711b140] Final|Native|Public|BlueprintCallable 
+	// void RemoveDefault();                                                                                                    // [0x71b3340] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.HasDefault
-	// bool HasDefault();                                                                                                       // [0x711abb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasDefault();                                                                                                       // [0x71b2db0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.GetPreInfinityExtrapolation
-	// TEnumAsByte<ERichCurveExtrapolation> GetPreInfinityExtrapolation();                                                      // [0x711a5f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveExtrapolation> GetPreInfinityExtrapolation();                                                      // [0x71b27f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.GetPostInfinityExtrapolation
-	// TEnumAsByte<ERichCurveExtrapolation> GetPostInfinityExtrapolation();                                                     // [0x711a570] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<ERichCurveExtrapolation> GetPostInfinityExtrapolation();                                                     // [0x71b2770] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.GetNumKeys
-	// int32_t GetNumKeys();                                                                                                    // [0x711a240] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumKeys();                                                                                                    // [0x71b2440] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.GetDefault
-	// float GetDefault();                                                                                                      // [0x7119b10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetDefault();                                                                                                      // [0x71b1d10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.EvaluateKeys
-	// TArray<float> EvaluateKeys(FSequencerScriptingRange Range, FFrameRate FrameRate);                                        // [0x7119230] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<float> EvaluateKeys(FSequencerScriptingRange Range, FFrameRate FrameRate);                                        // [0x71b1430] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.ComputeEffectiveRange
-	// FSequencerScriptingRange ComputeEffectiveRange();                                                                        // [0x71191f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FSequencerScriptingRange ComputeEffectiveRange();                                                                        // [0x71b13f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingFloatChannel.AddKey
-	// class UMovieSceneScriptingFloatKey* AddKey(FFrameNumber& InTime, float NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation); // [0x7118900] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingFloatKey* AddKey(FFrameNumber& InTime, float NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation); // [0x71b0b00] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingIntegerKey
@@ -421,13 +421,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerKey.SetValue
-	// void SetValue(int32_t InNewValue);                                                                                       // [0x711c430] Final|Native|Public|BlueprintCallable 
+	// void SetValue(int32_t InNewValue);                                                                                       // [0x71b4630] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71110b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71a92b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerKey.GetValue
-	// int32_t GetValue();                                                                                                      // [0x711a870] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetValue();                                                                                                      // [0x71b2a70] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingIntegerChannel
@@ -440,25 +440,25 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.SetDefault
-	// void SetDefault(int32_t InDefaultValue);                                                                                 // [0x711b460] Final|Native|Public|BlueprintCallable 
+	// void SetDefault(int32_t InDefaultValue);                                                                                 // [0x71b3660] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.RemoveDefault
-	// void RemoveDefault();                                                                                                    // [0x711b160] Final|Native|Public|BlueprintCallable 
+	// void RemoveDefault();                                                                                                    // [0x71b3360] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.HasDefault
-	// bool HasDefault();                                                                                                       // [0x711ac90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasDefault();                                                                                                       // [0x71b2e90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.GetNumKeys
-	// int32_t GetNumKeys();                                                                                                    // [0x710f670] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumKeys();                                                                                                    // [0x71a7870] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.GetDefault
-	// int32_t GetDefault();                                                                                                    // [0x7119c10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetDefault();                                                                                                    // [0x71b1e10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.EvaluateKeys
-	// TArray<int32_t> EvaluateKeys(FSequencerScriptingRange Range, FFrameRate FrameRate);                                      // [0x71194b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<int32_t> EvaluateKeys(FSequencerScriptingRange Range, FFrameRate FrameRate);                                      // [0x71b16b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingIntegerChannel.AddKey
-	// class UMovieSceneScriptingIntegerKey* AddKey(FFrameNumber& InTime, int32_t NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x7118ac0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingIntegerKey* AddKey(FFrameNumber& InTime, int32_t NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x71b0cc0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingObjectPathKey
@@ -471,13 +471,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathKey.SetValue
-	// void SetValue(class UObject* InNewValue);                                                                                // [0x711c550] Final|Native|Public|BlueprintCallable 
+	// void SetValue(class UObject* InNewValue);                                                                                // [0x71b4750] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71110b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71a92b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathKey.GetValue
-	// class UObject* GetValue();                                                                                               // [0x711a930] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UObject* GetValue();                                                                                               // [0x71b2b30] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel
@@ -490,21 +490,21 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel.SetDefault
-	// void SetDefault(class UObject* InDefaultValue);                                                                          // [0x711b580] Final|Native|Public|BlueprintCallable 
+	// void SetDefault(class UObject* InDefaultValue);                                                                          // [0x71b3780] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel.RemoveDefault
-	// void RemoveDefault();                                                                                                    // [0x7110040] Final|Native|Public|BlueprintCallable 
+	// void RemoveDefault();                                                                                                    // [0x71a8240] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel.HasDefault
-	// bool HasDefault();                                                                                                       // [0x711ad10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasDefault();                                                                                                       // [0x71b2f10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel.GetDefault
-	// class UObject* GetDefault();                                                                                             // [0x7119ca0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UObject* GetDefault();                                                                                             // [0x71b1ea0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingObjectPathChannel.AddKey
-	// class UMovieSceneScriptingObjectPathKey* AddKey(FFrameNumber InTime, class UObject* NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x7118c40] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingObjectPathKey* AddKey(FFrameNumber InTime, class UObject* NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x71b0e40] Final|Native|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingStringKey
@@ -517,13 +517,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringKey.SetValue
-	// void SetValue(FString InNewValue);                                                                                       // [0x711c6c0] Final|Native|Public|BlueprintCallable 
+	// void SetValue(FString InNewValue);                                                                                       // [0x71b48c0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringKey.SetTime
-	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71110b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetTime(FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);                                // [0x71a92b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringKey.GetValue
-	// FString GetValue();                                                                                                      // [0x711aa80] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetValue();                                                                                                      // [0x71b2c80] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringKey.GetTime
-	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x710f850] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit);                                                                        // [0x71a7a50] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingStringChannel
@@ -536,21 +536,21 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringChannel.SetDefault
-	// void SetDefault(FString InDefaultValue);                                                                                 // [0x711b640] Final|Native|Public|BlueprintCallable 
+	// void SetDefault(FString InDefaultValue);                                                                                 // [0x71b3840] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringChannel.RemoveKey
-	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x7110330] Native|Public|BlueprintCallable 
+	// void RemoveKey(class UMovieSceneScriptingKey* Key);                                                                      // [0x71a8530] Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringChannel.RemoveDefault
-	// void RemoveDefault();                                                                                                    // [0x7110260] Final|Native|Public|BlueprintCallable 
+	// void RemoveDefault();                                                                                                    // [0x71a8460] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringChannel.HasDefault
-	// bool HasDefault();                                                                                                       // [0x711ad50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasDefault();                                                                                                       // [0x71b2f50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringChannel.GetKeysByIndex
-	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x710f450] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeysByIndex(TArray<int32_t>& Indices);                                               // [0x71a7650] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringChannel.GetKeys
-	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4d6e3f0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UMovieSceneScriptingKey*> GetKeys();                                                                              // [0x4dec6e0] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringChannel.GetDefault
-	// FString GetDefault();                                                                                                    // [0x7119cd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetDefault();                                                                                                    // [0x71b1ed0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SequencerScripting.MovieSceneScriptingStringChannel.AddKey
-	// class UMovieSceneScriptingStringKey* AddKey(FFrameNumber& InTime, FString NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x7118e00] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// class UMovieSceneScriptingStringKey* AddKey(FFrameNumber& InTime, FString NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit); // [0x71b1000] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneBindingExtensions
@@ -562,47 +562,47 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.SetSpawnableBindingID
-	// void SetSpawnableBindingID(FMovieSceneBindingProxy& InBinding, FMovieSceneObjectBindingID& SpawnableBindingID);          // [0x711c010] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetSpawnableBindingID(FMovieSceneBindingProxy& InBinding, FMovieSceneObjectBindingID& SpawnableBindingID);          // [0x71b4210] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.SetSortingOrder
-	// void SetSortingOrder(FMovieSceneBindingProxy& InBinding, int32_t SortingOrder);                                          // [0x711bf40] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetSortingOrder(FMovieSceneBindingProxy& InBinding, int32_t SortingOrder);                                          // [0x71b4140] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.SetParent
-	// void SetParent(FMovieSceneBindingProxy& InBinding, FMovieSceneBindingProxy& InParentBinding);                            // [0x711bc90] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetParent(FMovieSceneBindingProxy& InBinding, FMovieSceneBindingProxy& InParentBinding);                            // [0x71b3e90] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.SetName
-	// void SetName(FMovieSceneBindingProxy& InBinding, FString InName);                                                        // [0x711ba90] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetName(FMovieSceneBindingProxy& InBinding, FString InName);                                                        // [0x71b3c90] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.SetDisplayName
-	// void SetDisplayName(FMovieSceneBindingProxy& InBinding, FText& InDisplayName);                                           // [0x711b7f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetDisplayName(FMovieSceneBindingProxy& InBinding, FText& InDisplayName);                                           // [0x71b39f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.RemoveTrack
-	// void RemoveTrack(FMovieSceneBindingProxy& InBinding, class UMovieSceneTrack* TrackToRemove);                             // [0x711b230] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void RemoveTrack(FMovieSceneBindingProxy& InBinding, class UMovieSceneTrack* TrackToRemove);                             // [0x71b3430] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.Remove
-	// void Remove(FMovieSceneBindingProxy& InBinding);                                                                         // [0x711b080] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void Remove(FMovieSceneBindingProxy& InBinding);                                                                         // [0x71b3280] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.MoveBindingContents
-	// void MoveBindingContents(FMovieSceneBindingProxy& SourceBindingId, FMovieSceneBindingProxy& DestinationBindingId);       // [0x711aee0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void MoveBindingContents(FMovieSceneBindingProxy& SourceBindingId, FMovieSceneBindingProxy& DestinationBindingId);       // [0x71b30e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.IsValid
-	// bool IsValid(FMovieSceneBindingProxy& InBinding);                                                                        // [0x711ae00] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// bool IsValid(FMovieSceneBindingProxy& InBinding);                                                                        // [0x71b3000] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetTracks
-	// TArray<UMovieSceneTrack*> GetTracks(FMovieSceneBindingProxy& InBinding);                                                 // [0x711a710] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> GetTracks(FMovieSceneBindingProxy& InBinding);                                                 // [0x71b2910] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetSortingOrder
-	// int32_t GetSortingOrder(FMovieSceneBindingProxy& InBinding);                                                             // [0x711a670] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// int32_t GetSortingOrder(FMovieSceneBindingProxy& InBinding);                                                             // [0x71b2870] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetPossessedObjectClass
-	// class UClass* GetPossessedObjectClass(FMovieSceneBindingProxy& InBinding);                                               // [0x711a4b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UClass* GetPossessedObjectClass(FMovieSceneBindingProxy& InBinding);                                               // [0x71b26b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetParent
-	// FMovieSceneBindingProxy GetParent(FMovieSceneBindingProxy& InBinding);                                                   // [0x711a3a0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FMovieSceneBindingProxy GetParent(FMovieSceneBindingProxy& InBinding);                                                   // [0x71b25a0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetObjectTemplate
-	// class UObject* GetObjectTemplate(FMovieSceneBindingProxy& InBinding);                                                    // [0x711a2d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UObject* GetObjectTemplate(FMovieSceneBindingProxy& InBinding);                                                    // [0x71b24d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetName
-	// FString GetName(FMovieSceneBindingProxy& InBinding);                                                                     // [0x711a090] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FString GetName(FMovieSceneBindingProxy& InBinding);                                                                     // [0x71b2290] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetId
-	// FGuid GetId(FMovieSceneBindingProxy& InBinding);                                                                         // [0x7119f70] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FGuid GetId(FMovieSceneBindingProxy& InBinding);                                                                         // [0x71b2170] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetDisplayName
-	// FText GetDisplayName(FMovieSceneBindingProxy& InBinding);                                                                // [0x7119e70] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FText GetDisplayName(FMovieSceneBindingProxy& InBinding);                                                                // [0x71b2070] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.GetChildPossessables
-	// TArray<FMovieSceneBindingProxy> GetChildPossessables(FMovieSceneBindingProxy& InBinding);                                // [0x7119a30] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMovieSceneBindingProxy> GetChildPossessables(FMovieSceneBindingProxy& InBinding);                                // [0x71b1c30] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.FindTracksByType
-	// TArray<UMovieSceneTrack*> FindTracksByType(FMovieSceneBindingProxy& InBinding, class UClass* TrackType);                 // [0x7119810] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> FindTracksByType(FMovieSceneBindingProxy& InBinding, class UClass* TrackType);                 // [0x71b1a10] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.FindTracksByExactType
-	// TArray<UMovieSceneTrack*> FindTracksByExactType(FMovieSceneBindingProxy& InBinding, class UClass* TrackType);            // [0x7119630] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> FindTracksByExactType(FMovieSceneBindingProxy& InBinding, class UClass* TrackType);            // [0x71b1830] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneBindingExtensions.AddTrack
-	// class UMovieSceneTrack* AddTrack(FMovieSceneBindingProxy& InBinding, class UClass* TrackType);                           // [0x7118fd0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UMovieSceneTrack* AddTrack(FMovieSceneBindingProxy& InBinding, class UClass* TrackType);                           // [0x71b11d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneEventTrackExtensions
@@ -614,11 +614,11 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneEventTrackExtensions.GetBoundObjectPropertyClass
-	// class UClass* GetBoundObjectPropertyClass(FMovieSceneEvent& EventKey);                                                   // [0x7123010] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UClass* GetBoundObjectPropertyClass(FMovieSceneEvent& EventKey);                                                   // [0x71bb210] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneEventTrackExtensions.AddEventTriggerSection
-	// class UMovieSceneEventTriggerSection* AddEventTriggerSection(class UMovieSceneEventTrack* InTrack);                      // [0x711fb50] Final|Native|Static|Public|BlueprintCallable 
+	// class UMovieSceneEventTriggerSection* AddEventTriggerSection(class UMovieSceneEventTrack* InTrack);                      // [0x71b7d50] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneEventTrackExtensions.AddEventRepeaterSection
-	// class UMovieSceneEventRepeaterSection* AddEventRepeaterSection(class UMovieSceneEventTrack* InTrack);                    // [0x711f9e0] Final|Native|Static|Public|BlueprintCallable 
+	// class UMovieSceneEventRepeaterSection* AddEventRepeaterSection(class UMovieSceneEventTrack* InTrack);                    // [0x71b7be0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneFolderExtensions
@@ -630,37 +630,37 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.SetFolderName
-	// bool SetFolderName(class UMovieSceneFolder* Folder, FName InFolderName);                                                 // [0x7129e30] Final|Native|Static|Public|BlueprintCallable 
+	// bool SetFolderName(class UMovieSceneFolder* Folder, FName InFolderName);                                                 // [0x71c2030] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.SetFolderColor
-	// bool SetFolderColor(class UMovieSceneFolder* Folder, FColor InFolderColor);                                              // [0x7129d40] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// bool SetFolderColor(class UMovieSceneFolder* Folder, FColor InFolderColor);                                              // [0x71c1f40] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.RemoveChildTrack
-	// bool RemoveChildTrack(class UMovieSceneFolder* Folder, class UMovieSceneTrack* InTrack);                                 // [0x7128710] Final|Native|Static|Public|BlueprintCallable 
+	// bool RemoveChildTrack(class UMovieSceneFolder* Folder, class UMovieSceneTrack* InTrack);                                 // [0x71c0910] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.RemoveChildObjectBinding
-	// bool RemoveChildObjectBinding(class UMovieSceneFolder* Folder, FMovieSceneBindingProxy InObjectBinding);                 // [0x7128820] Final|Native|Static|Public|BlueprintCallable 
+	// bool RemoveChildObjectBinding(class UMovieSceneFolder* Folder, FMovieSceneBindingProxy InObjectBinding);                 // [0x71c0a20] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.RemoveChildMasterTrack
-	// bool RemoveChildMasterTrack(class UMovieSceneFolder* Folder, class UMovieSceneTrack* InTrack);                           // [0x7128710] Final|Native|Static|Public|BlueprintCallable 
+	// bool RemoveChildMasterTrack(class UMovieSceneFolder* Folder, class UMovieSceneTrack* InTrack);                           // [0x71c0910] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.RemoveChildFolder
-	// bool RemoveChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToRemove);                  // [0x7128600] Final|Native|Static|Public|BlueprintCallable 
+	// bool RemoveChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToRemove);                  // [0x71c0800] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.GetFolderName
-	// FName GetFolderName(class UMovieSceneFolder* Folder);                                                                    // [0x7124540] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// FName GetFolderName(class UMovieSceneFolder* Folder);                                                                    // [0x71bc740] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.GetFolderColor
-	// FColor GetFolderColor(class UMovieSceneFolder* Folder);                                                                  // [0x71244a0] Final|Native|Static|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// FColor GetFolderColor(class UMovieSceneFolder* Folder);                                                                  // [0x71bc6a0] Final|Native|Static|Public|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.GetChildTracks
-	// TArray<UMovieSceneTrack*> GetChildTracks(class UMovieSceneFolder* Folder);                                               // [0x71238f0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// TArray<UMovieSceneTrack*> GetChildTracks(class UMovieSceneFolder* Folder);                                               // [0x71bbaf0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.GetChildObjectBindings
-	// TArray<FMovieSceneBindingProxy> GetChildObjectBindings(class UMovieSceneFolder* Folder);                                 // [0x7123a40] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// TArray<FMovieSceneBindingProxy> GetChildObjectBindings(class UMovieSceneFolder* Folder);                                 // [0x71bbc40] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.GetChildMasterTracks
-	// TArray<UMovieSceneTrack*> GetChildMasterTracks(class UMovieSceneFolder* Folder);                                         // [0x71238f0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// TArray<UMovieSceneTrack*> GetChildMasterTracks(class UMovieSceneFolder* Folder);                                         // [0x71bbaf0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.GetChildFolders
-	// TArray<UMovieSceneFolder*> GetChildFolders(class UMovieSceneFolder* Folder);                                             // [0x7123790] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// TArray<UMovieSceneFolder*> GetChildFolders(class UMovieSceneFolder* Folder);                                             // [0x71bb990] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.AddChildTrack
-	// bool AddChildTrack(class UMovieSceneFolder* Folder, class UMovieSceneTrack* InTrack);                                    // [0x711f790] Final|Native|Static|Public|BlueprintCallable 
+	// bool AddChildTrack(class UMovieSceneFolder* Folder, class UMovieSceneTrack* InTrack);                                    // [0x71b7990] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.AddChildObjectBinding
-	// bool AddChildObjectBinding(class UMovieSceneFolder* Folder, FMovieSceneBindingProxy InObjectBinding);                    // [0x711f8a0] Final|Native|Static|Public|BlueprintCallable 
+	// bool AddChildObjectBinding(class UMovieSceneFolder* Folder, FMovieSceneBindingProxy InObjectBinding);                    // [0x71b7aa0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.AddChildMasterTrack
-	// bool AddChildMasterTrack(class UMovieSceneFolder* Folder, class UMovieSceneTrack* InTrack);                              // [0x711f790] Final|Native|Static|Public|BlueprintCallable 
+	// bool AddChildMasterTrack(class UMovieSceneFolder* Folder, class UMovieSceneTrack* InTrack);                              // [0x71b7990] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFolderExtensions.AddChildFolder
-	// bool AddChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToAdd);                        // [0x711f680] Final|Native|Static|Public|BlueprintCallable 
+	// bool AddChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToAdd);                        // [0x71b7880] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneMaterialTrackExtensions
@@ -672,13 +672,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneMaterialTrackExtensions.SetMaterialInfo
-	// void SetMaterialInfo(class UMovieSceneComponentMaterialTrack* Track, FComponentMaterialInfo& MaterialInfo);              // [0x712a500] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetMaterialInfo(class UMovieSceneComponentMaterialTrack* Track, FComponentMaterialInfo& MaterialInfo);              // [0x71c2700] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneMaterialTrackExtensions.SetMaterialIndex
-	// void SetMaterialIndex(class UMovieSceneComponentMaterialTrack* Track, int32_t MaterialIndex);                            // [0x712a310] Final|Native|Static|Public|BlueprintCallable 
+	// void SetMaterialIndex(class UMovieSceneComponentMaterialTrack* Track, int32_t MaterialIndex);                            // [0x71c2510] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneMaterialTrackExtensions.GetMaterialInfo
-	// FComponentMaterialInfo GetMaterialInfo(class UMovieSceneComponentMaterialTrack* Track);                                  // [0x7124e20] Final|Native|Static|Public|BlueprintCallable 
+	// FComponentMaterialInfo GetMaterialInfo(class UMovieSceneComponentMaterialTrack* Track);                                  // [0x71bd020] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneMaterialTrackExtensions.GetMaterialIndex
-	// int32_t GetMaterialIndex(class UMovieSceneComponentMaterialTrack* Track);                                                // [0x7124cc0] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetMaterialIndex(class UMovieSceneComponentMaterialTrack* Track);                                                // [0x71bcec0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions
@@ -690,13 +690,13 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.SetMaterialInfo
-	// void SetMaterialInfo(class UMovieScenePrimitiveMaterialTrack* Track, FComponentMaterialInfo& MaterialInfo);              // [0x712a600] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetMaterialInfo(class UMovieScenePrimitiveMaterialTrack* Track, FComponentMaterialInfo& MaterialInfo);              // [0x71c2800] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.SetMaterialIndex
-	// void SetMaterialIndex(class UMovieScenePrimitiveMaterialTrack* Track, int32_t MaterialIndex);                            // [0x712a410] Final|Native|Static|Public|BlueprintCallable 
+	// void SetMaterialIndex(class UMovieScenePrimitiveMaterialTrack* Track, int32_t MaterialIndex);                            // [0x71c2610] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.GetMaterialInfo
-	// FComponentMaterialInfo GetMaterialInfo(class UMovieScenePrimitiveMaterialTrack* Track);                                  // [0x7124ef0] Final|Native|Static|Public|BlueprintCallable 
+	// FComponentMaterialInfo GetMaterialInfo(class UMovieScenePrimitiveMaterialTrack* Track);                                  // [0x71bd0f0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.GetMaterialIndex
-	// int32_t GetMaterialIndex(class UMovieScenePrimitiveMaterialTrack* Track);                                                // [0x7124d70] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetMaterialIndex(class UMovieScenePrimitiveMaterialTrack* Track);                                                // [0x71bcf70] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieScenePropertyTrackExtensions
@@ -708,21 +708,21 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieScenePropertyTrackExtensions.SetPropertyNameAndPath
-	// void SetPropertyNameAndPath(class UMovieScenePropertyTrack* Track, FName& InPropertyName, FString InPropertyPath);       // [0x712b080] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetPropertyNameAndPath(class UMovieScenePropertyTrack* Track, FName& InPropertyName, FString InPropertyPath);       // [0x71c3280] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePropertyTrackExtensions.SetObjectPropertyClass
-	// void SetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track, class UClass* PropertyClass);                   // [0x712a7e0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track, class UClass* PropertyClass);                   // [0x71c29e0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePropertyTrackExtensions.SetByteTrackEnum
-	// void SetByteTrackEnum(class UMovieSceneByteTrack* Track, class UEnum* InEnum);                                           // [0x71290e0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetByteTrackEnum(class UMovieSceneByteTrack* Track, class UEnum* InEnum);                                           // [0x71c12e0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePropertyTrackExtensions.GetUniqueTrackName
-	// FName GetUniqueTrackName(class UMovieScenePropertyTrack* Track);                                                         // [0x7127420] Final|Native|Static|Public|BlueprintCallable 
+	// FName GetUniqueTrackName(class UMovieScenePropertyTrack* Track);                                                         // [0x71bf620] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePropertyTrackExtensions.GetPropertyPath
-	// FString GetPropertyPath(class UMovieScenePropertyTrack* Track);                                                          // [0x7126580] Final|Native|Static|Public|BlueprintCallable 
+	// FString GetPropertyPath(class UMovieScenePropertyTrack* Track);                                                          // [0x71be780] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePropertyTrackExtensions.GetPropertyName
-	// FName GetPropertyName(class UMovieScenePropertyTrack* Track);                                                            // [0x71264c0] Final|Native|Static|Public|BlueprintCallable 
+	// FName GetPropertyName(class UMovieScenePropertyTrack* Track);                                                            // [0x71be6c0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePropertyTrackExtensions.GetObjectPropertyClass
-	// class UClass* GetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track);                                       // [0x7125130] Final|Native|Static|Public|BlueprintCallable 
+	// class UClass* GetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track);                                       // [0x71bd330] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieScenePropertyTrackExtensions.GetByteTrackEnum
-	// class UEnum* GetByteTrackEnum(class UMovieSceneByteTrack* Track);                                                        // [0x71230d0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// class UEnum* GetByteTrackEnum(class UMovieSceneByteTrack* Track);                                                        // [0x71bb2d0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneSectionExtensions
@@ -734,53 +734,53 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.SetStartFrameSeconds
-	// void SetStartFrameSeconds(class UMovieSceneSection* Section, float StartTime);                                           // [0x712bca0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetStartFrameSeconds(class UMovieSceneSection* Section, float StartTime);                                           // [0x71c3ea0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.SetStartFrameBounded
-	// void SetStartFrameBounded(class UMovieSceneSection* Section, bool bIsBounded);                                           // [0x712bb60] Final|Native|Static|Public|BlueprintCallable 
+	// void SetStartFrameBounded(class UMovieSceneSection* Section, bool bIsBounded);                                           // [0x71c3d60] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.SetStartFrame
-	// void SetStartFrame(class UMovieSceneSection* Section, int32_t StartFrame);                                               // [0x712b940] Final|Native|Static|Public|BlueprintCallable 
+	// void SetStartFrame(class UMovieSceneSection* Section, int32_t StartFrame);                                               // [0x71c3b40] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.SetRangeSeconds
-	// void SetRangeSeconds(class UMovieSceneSection* Section, float StartTime, float EndTime);                                 // [0x712b3d0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetRangeSeconds(class UMovieSceneSection* Section, float StartTime, float EndTime);                                 // [0x71c35d0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.SetRange
-	// void SetRange(class UMovieSceneSection* Section, int32_t StartFrame, int32_t EndFrame);                                  // [0x712b1d0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetRange(class UMovieSceneSection* Section, int32_t StartFrame, int32_t EndFrame);                                  // [0x71c33d0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.SetEndFrameSeconds
-	// void SetEndFrameSeconds(class UMovieSceneSection* Section, float EndTime);                                               // [0x7129910] Final|Native|Static|Public|BlueprintCallable 
+	// void SetEndFrameSeconds(class UMovieSceneSection* Section, float EndTime);                                               // [0x71c1b10] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.SetEndFrameBounded
-	// void SetEndFrameBounded(class UMovieSceneSection* Section, bool bIsBounded);                                             // [0x71297d0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetEndFrameBounded(class UMovieSceneSection* Section, bool bIsBounded);                                             // [0x71c19d0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.SetEndFrame
-	// void SetEndFrame(class UMovieSceneSection* Section, int32_t EndFrame);                                                   // [0x71295b0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetEndFrame(class UMovieSceneSection* Section, int32_t EndFrame);                                                   // [0x71c17b0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.HasStartFrame
-	// bool HasStartFrame(class UMovieSceneSection* Section);                                                                   // [0x71279d0] Final|Native|Static|Public|BlueprintCallable 
+	// bool HasStartFrame(class UMovieSceneSection* Section);                                                                   // [0x71bfbd0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.HasEndFrame
-	// bool HasEndFrame(class UMovieSceneSection* Section);                                                                     // [0x7127880] Final|Native|Static|Public|BlueprintCallable 
+	// bool HasEndFrame(class UMovieSceneSection* Section);                                                                     // [0x71bfa80] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetStartFrameSeconds
-	// float GetStartFrameSeconds(class UMovieSceneSection* Section);                                                           // [0x7126de0] Final|Native|Static|Public|BlueprintCallable 
+	// float GetStartFrameSeconds(class UMovieSceneSection* Section);                                                           // [0x71befe0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetStartFrame
-	// int32_t GetStartFrame(class UMovieSceneSection* Section);                                                                // [0x7126c00] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetStartFrame(class UMovieSceneSection* Section);                                                                // [0x71bee00] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetParentSequenceFrame
-	// int32_t GetParentSequenceFrame(class UMovieSceneSubSection* Section, int32_t InFrame, class UMovieSceneSequence* ParentSequence); // [0x71251f0] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetParentSequenceFrame(class UMovieSceneSubSection* Section, int32_t InFrame, class UMovieSceneSequence* ParentSequence); // [0x71bd3f0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetEndFrameSeconds
-	// float GetEndFrameSeconds(class UMovieSceneSection* Section);                                                             // [0x7124150] Final|Native|Static|Public|BlueprintCallable 
+	// float GetEndFrameSeconds(class UMovieSceneSection* Section);                                                             // [0x71bc350] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetEndFrame
-	// int32_t GetEndFrame(class UMovieSceneSection* Section);                                                                  // [0x7123f70] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetEndFrame(class UMovieSceneSection* Section);                                                                  // [0x71bc170] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetChannelsByType
-	// TArray<UMovieSceneScriptingChannel*> GetChannelsByType(class UMovieSceneSection* Section, class UClass* ChannelType);    // [0x7123260] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneScriptingChannel*> GetChannelsByType(class UMovieSceneSection* Section, class UClass* ChannelType);    // [0x71bb460] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetChannel
-	// class UMovieSceneScriptingChannel* GetChannel(class UMovieSceneSection* Section, FName& ChannelName);                    // [0x7123190] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UMovieSceneScriptingChannel* GetChannel(class UMovieSceneSection* Section, FName& ChannelName);                    // [0x71bb390] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetAutoSizeStartFrameSeconds
-	// float GetAutoSizeStartFrameSeconds(class UMovieSceneSection* Section);                                                   // [0x7122bb0] Final|Native|Static|Public|BlueprintCallable 
+	// float GetAutoSizeStartFrameSeconds(class UMovieSceneSection* Section);                                                   // [0x71badb0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetAutoSizeStartFrame
-	// int32_t GetAutoSizeStartFrame(class UMovieSceneSection* Section);                                                        // [0x7122a60] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetAutoSizeStartFrame(class UMovieSceneSection* Section);                                                        // [0x71bac60] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetAutoSizeHasStartFrame
-	// bool GetAutoSizeHasStartFrame(class UMovieSceneSection* Section);                                                        // [0x7122980] Final|Native|Static|Public|BlueprintCallable 
+	// bool GetAutoSizeHasStartFrame(class UMovieSceneSection* Section);                                                        // [0x71bab80] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetAutoSizeHasEndFrame
-	// bool GetAutoSizeHasEndFrame(class UMovieSceneSection* Section);                                                          // [0x71228a0] Final|Native|Static|Public|BlueprintCallable 
+	// bool GetAutoSizeHasEndFrame(class UMovieSceneSection* Section);                                                          // [0x71baaa0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetAutoSizeEndFrameSeconds
-	// float GetAutoSizeEndFrameSeconds(class UMovieSceneSection* Section);                                                     // [0x71226f0] Final|Native|Static|Public|BlueprintCallable 
+	// float GetAutoSizeEndFrameSeconds(class UMovieSceneSection* Section);                                                     // [0x71ba8f0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetAutoSizeEndFrame
-	// int32_t GetAutoSizeEndFrame(class UMovieSceneSection* Section);                                                          // [0x71225a0] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetAutoSizeEndFrame(class UMovieSceneSection* Section);                                                          // [0x71ba7a0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSectionExtensions.GetAllChannels
-	// TArray<UMovieSceneScriptingChannel*> GetAllChannels(class UMovieSceneSection* Section);                                  // [0x7122390] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneScriptingChannel*> GetAllChannels(class UMovieSceneSection* Section);                                  // [0x71ba590] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneSequenceExtensions
@@ -792,153 +792,153 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SortMarkedFrames
-	// void SortMarkedFrames(class UMovieSceneSequence* Sequence);                                                              // [0x712c640] Final|Native|Static|Public|BlueprintCallable 
+	// void SortMarkedFrames(class UMovieSceneSequence* Sequence);                                                              // [0x71c4840] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetWorkRangeStart
-	// void SetWorkRangeStart(class UMovieSceneSequence* InSequence, double StartTimeInSeconds);                                // [0x712c560] Final|Native|Static|Public|BlueprintCallable 
+	// void SetWorkRangeStart(class UMovieSceneSequence* InSequence, double StartTimeInSeconds);                                // [0x71c4760] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetWorkRangeEnd
-	// void SetWorkRangeEnd(class UMovieSceneSequence* InSequence, double EndTimeInSeconds);                                    // [0x712c480] Final|Native|Static|Public|BlueprintCallable 
+	// void SetWorkRangeEnd(class UMovieSceneSequence* InSequence, double EndTimeInSeconds);                                    // [0x71c4680] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetViewRangeStart
-	// void SetViewRangeStart(class UMovieSceneSequence* InSequence, double StartTimeInSeconds);                                // [0x712c3a0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetViewRangeStart(class UMovieSceneSequence* InSequence, double StartTimeInSeconds);                                // [0x71c45a0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetViewRangeEnd
-	// void SetViewRangeEnd(class UMovieSceneSequence* InSequence, double EndTimeInSeconds);                                    // [0x712c2c0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetViewRangeEnd(class UMovieSceneSequence* InSequence, double EndTimeInSeconds);                                    // [0x71c44c0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetTickResolutionDirectly
-	// void SetTickResolutionDirectly(class UMovieSceneSequence* Sequence, FFrameRate TickResolution);                          // [0x712c090] Final|Native|Static|Public|BlueprintCallable 
+	// void SetTickResolutionDirectly(class UMovieSceneSequence* Sequence, FFrameRate TickResolution);                          // [0x71c4290] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetTickResolution
-	// void SetTickResolution(class UMovieSceneSequence* Sequence, FFrameRate TickResolution);                                  // [0x712bf90] Final|Native|Static|Public|BlueprintCallable 
+	// void SetTickResolution(class UMovieSceneSequence* Sequence, FFrameRate TickResolution);                                  // [0x71c4190] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetReadOnly
-	// void SetReadOnly(class UMovieSceneSequence* Sequence, bool bInReadOnly);                                                 // [0x712b6b0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetReadOnly(class UMovieSceneSequence* Sequence, bool bInReadOnly);                                                 // [0x71c38b0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetPlaybackStartSeconds
-	// void SetPlaybackStartSeconds(class UMovieSceneSequence* Sequence, float StartTime);                                      // [0x712aeb0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetPlaybackStartSeconds(class UMovieSceneSequence* Sequence, float StartTime);                                      // [0x71c30b0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetPlaybackStart
-	// void SetPlaybackStart(class UMovieSceneSequence* Sequence, int32_t StartFrame);                                          // [0x712ad20] Final|Native|Static|Public|BlueprintCallable 
+	// void SetPlaybackStart(class UMovieSceneSequence* Sequence, int32_t StartFrame);                                          // [0x71c2f20] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetPlaybackRangeLocked
-	// void SetPlaybackRangeLocked(class UMovieSceneSequence* Sequence, bool bInLocked);                                        // [0x712ac50] Final|Native|Static|Public|BlueprintCallable 
+	// void SetPlaybackRangeLocked(class UMovieSceneSequence* Sequence, bool bInLocked);                                        // [0x71c2e50] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetPlaybackEndSeconds
-	// void SetPlaybackEndSeconds(class UMovieSceneSequence* Sequence, float EndTime);                                          // [0x712aa80] Final|Native|Static|Public|BlueprintCallable 
+	// void SetPlaybackEndSeconds(class UMovieSceneSequence* Sequence, float EndTime);                                          // [0x71c2c80] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetPlaybackEnd
-	// void SetPlaybackEnd(class UMovieSceneSequence* Sequence, int32_t EndFrame);                                              // [0x712a8f0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetPlaybackEnd(class UMovieSceneSequence* Sequence, int32_t EndFrame);                                              // [0x71c2af0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetMarkedFramesLocked
-	// void SetMarkedFramesLocked(class UMovieSceneSequence* Sequence, bool bInLocked);                                         // [0x712a240] Final|Native|Static|Public|BlueprintCallable 
+	// void SetMarkedFramesLocked(class UMovieSceneSequence* Sequence, bool bInLocked);                                         // [0x71c2440] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetMarkedFrameInSequence
-	// void SetMarkedFrameInSequence(class UMovieSceneSequence* Sequence, int32_t InMarkIndex, FFrameNumber InFrameNumber, EMovieSceneTimeUnit TimeUnit); // [0x712a070] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// void SetMarkedFrameInSequence(class UMovieSceneSequence* Sequence, int32_t InMarkIndex, FFrameNumber InFrameNumber, EMovieSceneTimeUnit TimeUnit); // [0x71c2270] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetMarkedFrame
-	// void SetMarkedFrame(class UMovieSceneSequence* Sequence, int32_t InMarkIndex, FFrameNumber InFrameNumber);               // [0x7129f20] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// void SetMarkedFrame(class UMovieSceneSequence* Sequence, int32_t InMarkIndex, FFrameNumber InFrameNumber);               // [0x71c2120] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetEvaluationType
-	// void SetEvaluationType(class UMovieSceneSequence* InSequence, EMovieSceneEvaluationType InEvaluationType);               // [0x7129c40] Final|Native|Static|Public|BlueprintCallable 
+	// void SetEvaluationType(class UMovieSceneSequence* InSequence, EMovieSceneEvaluationType InEvaluationType);               // [0x71c1e40] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetDisplayRate
-	// void SetDisplayRate(class UMovieSceneSequence* Sequence, FFrameRate DisplayRate);                                        // [0x71294b0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetDisplayRate(class UMovieSceneSequence* Sequence, FFrameRate DisplayRate);                                        // [0x71c16b0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.SetClockSource
-	// void SetClockSource(class UMovieSceneSequence* InSequence, EUpdateClockSource InClockSource);                            // [0x71291d0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetClockSource(class UMovieSceneSequence* InSequence, EUpdateClockSource InClockSource);                            // [0x71c13d0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.ResolveBindingID
-	// FMovieSceneBindingProxy ResolveBindingID(class UMovieSceneSequence* RootSequence, FMovieSceneObjectBindingID InObjectBindingID); // [0x7128eb0] Final|Native|Static|Public|BlueprintCallable 
+	// FMovieSceneBindingProxy ResolveBindingID(class UMovieSceneSequence* RootSequence, FMovieSceneObjectBindingID InObjectBindingID); // [0x71c10b0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.RemoveTrack
-	// bool RemoveTrack(class UMovieSceneSequence* Sequence, class UMovieSceneTrack* Track);                                    // [0x7128a00] Final|Native|Static|Public|BlueprintCallable 
+	// bool RemoveTrack(class UMovieSceneSequence* Sequence, class UMovieSceneTrack* Track);                                    // [0x71c0c00] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.RemoveRootFolderFromSequence
-	// void RemoveRootFolderFromSequence(class UMovieSceneSequence* Sequence, class UMovieSceneFolder* Folder);                 // [0x7128b40] Final|Native|Static|Public|BlueprintCallable 
+	// void RemoveRootFolderFromSequence(class UMovieSceneSequence* Sequence, class UMovieSceneFolder* Folder);                 // [0x71c0d40] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.RemoveMasterTrack
-	// bool RemoveMasterTrack(class UMovieSceneSequence* Sequence, class UMovieSceneTrack* Track);                              // [0x7128a00] Final|Native|Static|Public|BlueprintCallable 
+	// bool RemoveMasterTrack(class UMovieSceneSequence* Sequence, class UMovieSceneTrack* Track);                              // [0x71c0c00] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.MakeRangeSeconds
-	// FSequencerScriptingRange MakeRangeSeconds(class UMovieSceneSequence* Sequence, float StartTime, float Duration);         // [0x7128330] Final|Native|Static|Public|BlueprintCallable 
+	// FSequencerScriptingRange MakeRangeSeconds(class UMovieSceneSequence* Sequence, float StartTime, float Duration);         // [0x71c0530] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.MakeRange
-	// FSequencerScriptingRange MakeRange(class UMovieSceneSequence* Sequence, int32_t StartFrame, int32_t Duration);           // [0x7128170] Final|Native|Static|Public|BlueprintCallable 
+	// FSequencerScriptingRange MakeRange(class UMovieSceneSequence* Sequence, int32_t StartFrame, int32_t Duration);           // [0x71c0370] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.LocateBoundObjects
-	// TArray<UObject*> LocateBoundObjects(class UMovieSceneSequence* Sequence, FMovieSceneBindingProxy& InBinding, class UObject* Context); // [0x7127bc0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// TArray<UObject*> LocateBoundObjects(class UMovieSceneSequence* Sequence, FMovieSceneBindingProxy& InBinding, class UObject* Context); // [0x71bfdc0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.IsReadOnly
-	// bool IsReadOnly(class UMovieSceneSequence* Sequence);                                                                    // [0x7127b20] Final|Native|Static|Public|BlueprintCallable 
+	// bool IsReadOnly(class UMovieSceneSequence* Sequence);                                                                    // [0x71bfd20] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.IsPlaybackRangeLocked
-	// bool IsPlaybackRangeLocked(class UMovieSceneSequence* Sequence);                                                         // [0x7127a80] Final|Native|Static|Public|BlueprintCallable 
+	// bool IsPlaybackRangeLocked(class UMovieSceneSequence* Sequence);                                                         // [0x71bfc80] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetWorkRangeStart
-	// double GetWorkRangeStart(class UMovieSceneSequence* InSequence);                                                         // [0x7127710] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// double GetWorkRangeStart(class UMovieSceneSequence* InSequence);                                                         // [0x71bf910] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetWorkRangeEnd
-	// double GetWorkRangeEnd(class UMovieSceneSequence* InSequence);                                                           // [0x7127650] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// double GetWorkRangeEnd(class UMovieSceneSequence* InSequence);                                                           // [0x71bf850] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetViewRangeStart
-	// double GetViewRangeStart(class UMovieSceneSequence* InSequence);                                                         // [0x7127590] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// double GetViewRangeStart(class UMovieSceneSequence* InSequence);                                                         // [0x71bf790] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetViewRangeEnd
-	// double GetViewRangeEnd(class UMovieSceneSequence* InSequence);                                                           // [0x71274d0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// double GetViewRangeEnd(class UMovieSceneSequence* InSequence);                                                           // [0x71bf6d0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetTracks
-	// TArray<UMovieSceneTrack*> GetTracks(class UMovieSceneSequence* Sequence);                                                // [0x7127260] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> GetTracks(class UMovieSceneSequence* Sequence);                                                // [0x71bf460] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetTickResolution
-	// FFrameRate GetTickResolution(class UMovieSceneSequence* Sequence);                                                       // [0x7127070] Final|Native|Static|Public|BlueprintCallable 
+	// FFrameRate GetTickResolution(class UMovieSceneSequence* Sequence);                                                       // [0x71bf270] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetSpawnables
-	// TArray<FMovieSceneBindingProxy> GetSpawnables(class UMovieSceneSequence* Sequence);                                      // [0x7126a10] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<FMovieSceneBindingProxy> GetSpawnables(class UMovieSceneSequence* Sequence);                                      // [0x71bec10] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetRootFoldersInSequence
-	// TArray<UMovieSceneFolder*> GetRootFoldersInSequence(class UMovieSceneSequence* Sequence);                                // [0x7126690] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// TArray<UMovieSceneFolder*> GetRootFoldersInSequence(class UMovieSceneSequence* Sequence);                                // [0x71be890] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetPossessables
-	// TArray<FMovieSceneBindingProxy> GetPossessables(class UMovieSceneSequence* Sequence);                                    // [0x71262d0] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<FMovieSceneBindingProxy> GetPossessables(class UMovieSceneSequence* Sequence);                                    // [0x71be4d0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetPortableBindingID
-	// FMovieSceneObjectBindingID GetPortableBindingID(class UMovieSceneSequence* RootSequence, class UMovieSceneSequence* DestinationSequence, FMovieSceneBindingProxy& InBinding); // [0x7125cb0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FMovieSceneObjectBindingID GetPortableBindingID(class UMovieSceneSequence* RootSequence, class UMovieSceneSequence* DestinationSequence, FMovieSceneBindingProxy& InBinding); // [0x71bdeb0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetPlaybackStartSeconds
-	// float GetPlaybackStartSeconds(class UMovieSceneSequence* Sequence);                                                      // [0x7125aa0] Final|Native|Static|Public|BlueprintCallable 
+	// float GetPlaybackStartSeconds(class UMovieSceneSequence* Sequence);                                                      // [0x71bdca0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetPlaybackStart
-	// int32_t GetPlaybackStart(class UMovieSceneSequence* Sequence);                                                           // [0x7125910] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetPlaybackStart(class UMovieSceneSequence* Sequence);                                                           // [0x71bdb10] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetPlaybackRange
-	// FSequencerScriptingRange GetPlaybackRange(class UMovieSceneSequence* Sequence);                                          // [0x71257b0] Final|Native|Static|Public|BlueprintCallable 
+	// FSequencerScriptingRange GetPlaybackRange(class UMovieSceneSequence* Sequence);                                          // [0x71bd9b0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetPlaybackEndSeconds
-	// float GetPlaybackEndSeconds(class UMovieSceneSequence* Sequence);                                                        // [0x71255a0] Final|Native|Static|Public|BlueprintCallable 
+	// float GetPlaybackEndSeconds(class UMovieSceneSequence* Sequence);                                                        // [0x71bd7a0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetPlaybackEnd
-	// int32_t GetPlaybackEnd(class UMovieSceneSequence* Sequence);                                                             // [0x7125410] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetPlaybackEnd(class UMovieSceneSequence* Sequence);                                                             // [0x71bd610] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetMovieScene
-	// class UMovieScene* GetMovieScene(class UMovieSceneSequence* Sequence);                                                   // [0x7124fc0] Final|Native|Static|Public|BlueprintCallable 
+	// class UMovieScene* GetMovieScene(class UMovieSceneSequence* Sequence);                                                   // [0x71bd1c0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetMasterTracks
-	// TArray<UMovieSceneTrack*> GetMasterTracks(class UMovieSceneSequence* Sequence);                                          // [0x7124b20] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> GetMasterTracks(class UMovieSceneSequence* Sequence);                                          // [0x71bcd20] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetMarkedFramesFromSequence
-	// TArray<FMovieSceneMarkedFrame> GetMarkedFramesFromSequence(class UMovieSceneSequence* Sequence, EMovieSceneTimeUnit TimeUnit); // [0x7124830] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<FMovieSceneMarkedFrame> GetMarkedFramesFromSequence(class UMovieSceneSequence* Sequence, EMovieSceneTimeUnit TimeUnit); // [0x71bca30] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetMarkedFrames
-	// TArray<FMovieSceneMarkedFrame> GetMarkedFrames(class UMovieSceneSequence* Sequence);                                     // [0x7124600] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<FMovieSceneMarkedFrame> GetMarkedFrames(class UMovieSceneSequence* Sequence);                                     // [0x71bc800] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetEvaluationType
-	// EMovieSceneEvaluationType GetEvaluationType(class UMovieSceneSequence* InSequence);                                      // [0x71243e0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// EMovieSceneEvaluationType GetEvaluationType(class UMovieSceneSequence* InSequence);                                      // [0x71bc5e0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetDisplayRate
-	// FFrameRate GetDisplayRate(class UMovieSceneSequence* Sequence);                                                          // [0x7123ea0] Final|Native|Static|Public|BlueprintCallable 
+	// FFrameRate GetDisplayRate(class UMovieSceneSequence* Sequence);                                                          // [0x71bc0a0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetClockSource
-	// EUpdateClockSource GetClockSource(class UMovieSceneSequence* InSequence);                                                // [0x7123c60] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// EUpdateClockSource GetClockSource(class UMovieSceneSequence* InSequence);                                                // [0x71bbe60] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetBindings
-	// TArray<FMovieSceneBindingProxy> GetBindings(class UMovieSceneSequence* Sequence);                                        // [0x7122e60] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<FMovieSceneBindingProxy> GetBindings(class UMovieSceneSequence* Sequence);                                        // [0x71bb060] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.GetBindingID
-	// FMovieSceneObjectBindingID GetBindingID(class UMovieSceneSequence* Sequence, FMovieSceneBindingProxy& InBinding);        // [0x7122d60] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FMovieSceneObjectBindingID GetBindingID(class UMovieSceneSequence* Sequence, FMovieSceneBindingProxy& InBinding);        // [0x71baf60] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindTracksByType
-	// TArray<UMovieSceneTrack*> FindTracksByType(class UMovieSceneSequence* Sequence, class UClass* TrackType);                // [0x7122060] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> FindTracksByType(class UMovieSceneSequence* Sequence, class UClass* TrackType);                // [0x71ba260] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindTracksByExactType
-	// TArray<UMovieSceneTrack*> FindTracksByExactType(class UMovieSceneSequence* Sequence, class UClass* TrackType);           // [0x7121d60] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> FindTracksByExactType(class UMovieSceneSequence* Sequence, class UClass* TrackType);           // [0x71b9f60] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindNextMarkedFrameInSequence
-	// int32_t FindNextMarkedFrameInSequence(class UMovieSceneSequence* Sequence, FFrameNumber InFrameNumber, bool bForward, EMovieSceneTimeUnit TimeUnit); // [0x7121b80] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// int32_t FindNextMarkedFrameInSequence(class UMovieSceneSequence* Sequence, FFrameNumber InFrameNumber, bool bForward, EMovieSceneTimeUnit TimeUnit); // [0x71b9d80] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindNextMarkedFrame
-	// int32_t FindNextMarkedFrame(class UMovieSceneSequence* Sequence, FFrameNumber InFrameNumber, bool bForward);             // [0x7121a30] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// int32_t FindNextMarkedFrame(class UMovieSceneSequence* Sequence, FFrameNumber InFrameNumber, bool bForward);             // [0x71b9c30] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindMasterTracksByType
-	// TArray<UMovieSceneTrack*> FindMasterTracksByType(class UMovieSceneSequence* Sequence, class UClass* TrackType);          // [0x71216e0] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> FindMasterTracksByType(class UMovieSceneSequence* Sequence, class UClass* TrackType);          // [0x71b98e0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindMasterTracksByExactType
-	// TArray<UMovieSceneTrack*> FindMasterTracksByExactType(class UMovieSceneSequence* Sequence, class UClass* TrackType);     // [0x71213e0] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneTrack*> FindMasterTracksByExactType(class UMovieSceneSequence* Sequence, class UClass* TrackType);     // [0x71b95e0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindMarkedFrameByLabel
-	// int32_t FindMarkedFrameByLabel(class UMovieSceneSequence* Sequence, FString InLabel);                                    // [0x71212c0] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t FindMarkedFrameByLabel(class UMovieSceneSequence* Sequence, FString InLabel);                                    // [0x71b94c0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindMarkedFrameByFrameNumberInSequence
-	// int32_t FindMarkedFrameByFrameNumberInSequence(class UMovieSceneSequence* Sequence, FFrameNumber InFrameNumber, EMovieSceneTimeUnit TimeUnit); // [0x7121130] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// int32_t FindMarkedFrameByFrameNumberInSequence(class UMovieSceneSequence* Sequence, FFrameNumber InFrameNumber, EMovieSceneTimeUnit TimeUnit); // [0x71b9330] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindMarkedFrameByFrameNumber
-	// int32_t FindMarkedFrameByFrameNumber(class UMovieSceneSequence* Sequence, FFrameNumber InFrameNumber);                   // [0x7121030] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// int32_t FindMarkedFrameByFrameNumber(class UMovieSceneSequence* Sequence, FFrameNumber InFrameNumber);                   // [0x71b9230] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindBindingByName
-	// FMovieSceneBindingProxy FindBindingByName(class UMovieSceneSequence* Sequence, FString Name);                            // [0x7120e30] Final|Native|Static|Public|BlueprintCallable 
+	// FMovieSceneBindingProxy FindBindingByName(class UMovieSceneSequence* Sequence, FString Name);                            // [0x71b9030] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.FindBindingById
-	// FMovieSceneBindingProxy FindBindingById(class UMovieSceneSequence* Sequence, FGuid BindingID);                           // [0x7120cc0] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FMovieSceneBindingProxy FindBindingById(class UMovieSceneSequence* Sequence, FGuid BindingID);                           // [0x71b8ec0] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.DeleteMarkedFrames
-	// void DeleteMarkedFrames(class UMovieSceneSequence* Sequence);                                                            // [0x7120c10] Final|Native|Static|Public|BlueprintCallable 
+	// void DeleteMarkedFrames(class UMovieSceneSequence* Sequence);                                                            // [0x71b8e10] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.DeleteMarkedFrame
-	// void DeleteMarkedFrame(class UMovieSceneSequence* Sequence, int32_t DeleteIndex);                                        // [0x7120b10] Final|Native|Static|Public|BlueprintCallable 
+	// void DeleteMarkedFrame(class UMovieSceneSequence* Sequence, int32_t DeleteIndex);                                        // [0x71b8d10] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AreMarkedFramesLocked
-	// bool AreMarkedFramesLocked(class UMovieSceneSequence* Sequence);                                                         // [0x7120a70] Final|Native|Static|Public|BlueprintCallable 
+	// bool AreMarkedFramesLocked(class UMovieSceneSequence* Sequence);                                                         // [0x71b8c70] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AddTrack
-	// class UMovieSceneTrack* AddTrack(class UMovieSceneSequence* Sequence, class UClass* TrackType);                          // [0x71208a0] Final|Native|Static|Public|BlueprintCallable 
+	// class UMovieSceneTrack* AddTrack(class UMovieSceneSequence* Sequence, class UClass* TrackType);                          // [0x71b8aa0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AddSpawnableFromInstance
-	// FMovieSceneBindingProxy AddSpawnableFromInstance(class UMovieSceneSequence* Sequence, class UObject* ObjectToSpawn);     // [0x7120730] Final|Native|Static|Public|BlueprintCallable 
+	// FMovieSceneBindingProxy AddSpawnableFromInstance(class UMovieSceneSequence* Sequence, class UObject* ObjectToSpawn);     // [0x71b8930] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AddSpawnableFromClass
-	// FMovieSceneBindingProxy AddSpawnableFromClass(class UMovieSceneSequence* Sequence, class UClass* ClassToSpawn);          // [0x71205c0] Final|Native|Static|Public|BlueprintCallable 
+	// FMovieSceneBindingProxy AddSpawnableFromClass(class UMovieSceneSequence* Sequence, class UClass* ClassToSpawn);          // [0x71b87c0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AddRootFolderToSequence
-	// class UMovieSceneFolder* AddRootFolderToSequence(class UMovieSceneSequence* Sequence, FString NewFolderName);            // [0x7120390] Final|Native|Static|Public|BlueprintCallable 
+	// class UMovieSceneFolder* AddRootFolderToSequence(class UMovieSceneSequence* Sequence, FString NewFolderName);            // [0x71b8590] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AddPossessable
-	// FMovieSceneBindingProxy AddPossessable(class UMovieSceneSequence* Sequence, class UObject* ObjectToPossess);             // [0x7120220] Final|Native|Static|Public|BlueprintCallable 
+	// FMovieSceneBindingProxy AddPossessable(class UMovieSceneSequence* Sequence, class UObject* ObjectToPossess);             // [0x71b8420] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AddMasterTrack
-	// class UMovieSceneTrack* AddMasterTrack(class UMovieSceneSequence* Sequence, class UClass* TrackType);                    // [0x7120030] Final|Native|Static|Public|BlueprintCallable 
+	// class UMovieSceneTrack* AddMasterTrack(class UMovieSceneSequence* Sequence, class UClass* TrackType);                    // [0x71b8230] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AddMarkedFrameToSequence
-	// int32_t AddMarkedFrameToSequence(class UMovieSceneSequence* Sequence, FMovieSceneMarkedFrame& InMarkedFrame, EMovieSceneTimeUnit TimeUnit); // [0x711fe40] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// int32_t AddMarkedFrameToSequence(class UMovieSceneSequence* Sequence, FMovieSceneMarkedFrame& InMarkedFrame, EMovieSceneTimeUnit TimeUnit); // [0x71b8040] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneSequenceExtensions.AddMarkedFrame
-	// int32_t AddMarkedFrame(class UMovieSceneSequence* Sequence, FMovieSceneMarkedFrame& InMarkedFrame);                      // [0x711fcc0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// int32_t AddMarkedFrame(class UMovieSceneSequence* Sequence, FMovieSceneMarkedFrame& InMarkedFrame);                      // [0x71b7ec0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneTrackExtensions
@@ -950,31 +950,31 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.SetTrackRowDisplayName
-	// void SetTrackRowDisplayName(class UMovieSceneTrack* Track, FText& InName, int32_t RowIndex);                             // [0x712c190] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetTrackRowDisplayName(class UMovieSceneTrack* Track, FText& InName, int32_t RowIndex);                             // [0x71c4390] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.SetSortingOrder
-	// void SetSortingOrder(class UMovieSceneTrack* Track, int32_t SortingOrder);                                               // [0x712b870] Final|Native|Static|Public|BlueprintCallable 
+	// void SetSortingOrder(class UMovieSceneTrack* Track, int32_t SortingOrder);                                               // [0x71c3a70] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.SetSectionToKey
-	// void SetSectionToKey(class UMovieSceneTrack* Track, class UMovieSceneSection* Section);                                  // [0x712b780] Final|Native|Static|Public|BlueprintCallable 
+	// void SetSectionToKey(class UMovieSceneTrack* Track, class UMovieSceneSection* Section);                                  // [0x71c3980] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.SetDisplayName
-	// void SetDisplayName(class UMovieSceneTrack* Track, FText& InName);                                                       // [0x71293c0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetDisplayName(class UMovieSceneTrack* Track, FText& InName);                                                       // [0x71c15c0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.SetColorTint
-	// void SetColorTint(class UMovieSceneTrack* Track, FColor& ColorTint);                                                     // [0x71292f0] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetColorTint(class UMovieSceneTrack* Track, FColor& ColorTint);                                                     // [0x71c14f0] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.RemoveSection
-	// void RemoveSection(class UMovieSceneTrack* Track, class UMovieSceneSection* Section);                                    // [0x7128d20] Final|Native|Static|Public|BlueprintCallable 
+	// void RemoveSection(class UMovieSceneTrack* Track, class UMovieSceneSection* Section);                                    // [0x71c0f20] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.GetTrackRowDisplayName
-	// FText GetTrackRowDisplayName(class UMovieSceneTrack* Track, int32_t RowIndex);                                           // [0x7127140] Final|Native|Static|Public|BlueprintCallable 
+	// FText GetTrackRowDisplayName(class UMovieSceneTrack* Track, int32_t RowIndex);                                           // [0x71bf340] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.GetSortingOrder
-	// int32_t GetSortingOrder(class UMovieSceneTrack* Track);                                                                  // [0x7126960] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetSortingOrder(class UMovieSceneTrack* Track);                                                                  // [0x71beb60] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.GetSectionToKey
-	// class UMovieSceneSection* GetSectionToKey(class UMovieSceneTrack* Track);                                                // [0x7126750] Final|Native|Static|Public|BlueprintCallable 
+	// class UMovieSceneSection* GetSectionToKey(class UMovieSceneTrack* Track);                                                // [0x71be950] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.GetSections
-	// TArray<UMovieSceneSection*> GetSections(class UMovieSceneTrack* Track);                                                  // [0x7126810] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<UMovieSceneSection*> GetSections(class UMovieSceneTrack* Track);                                                  // [0x71bea10] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.GetDisplayName
-	// FText GetDisplayName(class UMovieSceneTrack* Track);                                                                     // [0x7123dc0] Final|Native|Static|Public|BlueprintCallable 
+	// FText GetDisplayName(class UMovieSceneTrack* Track);                                                                     // [0x71bbfc0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.GetColorTint
-	// FColor GetColorTint(class UMovieSceneTrack* Track);                                                                      // [0x7123d20] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FColor GetColorTint(class UMovieSceneTrack* Track);                                                                      // [0x71bbf20] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneTrackExtensions.AddSection
-	// class UMovieSceneSection* AddSection(class UMovieSceneTrack* Track);                                                     // [0x71204e0] Final|Native|Static|Public|BlueprintCallable 
+	// class UMovieSceneSection* AddSection(class UMovieSceneTrack* Track);                                                     // [0x71b86e0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneFloatVectorTrackExtensions
@@ -986,9 +986,9 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneFloatVectorTrackExtensions.SetNumChannelsUsed
-	// void SetNumChannelsUsed(class UMovieSceneFloatVectorTrack* Track, int32_t InNumChannelsUsed);                            // [0x712a700] Final|Native|Static|Public|BlueprintCallable 
+	// void SetNumChannelsUsed(class UMovieSceneFloatVectorTrack* Track, int32_t InNumChannelsUsed);                            // [0x71c2900] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneFloatVectorTrackExtensions.GetNumChannelsUsed
-	// int32_t GetNumChannelsUsed(class UMovieSceneFloatVectorTrack* Track);                                                    // [0x7125080] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetNumChannelsUsed(class UMovieSceneFloatVectorTrack* Track);                                                    // [0x71bd280] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.MovieSceneDoubleVectorTrackExtensions
@@ -1000,9 +1000,9 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.MovieSceneDoubleVectorTrackExtensions.SetNumChannelsUsed
-	// void SetNumChannelsUsed(class UMovieSceneDoubleVectorTrack* Track, int32_t InNumChannelsUsed);                           // [0x712a700] Final|Native|Static|Public|BlueprintCallable 
+	// void SetNumChannelsUsed(class UMovieSceneDoubleVectorTrack* Track, int32_t InNumChannelsUsed);                           // [0x71c2900] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/SequencerScripting.MovieSceneDoubleVectorTrackExtensions.GetNumChannelsUsed
-	// int32_t GetNumChannelsUsed(class UMovieSceneDoubleVectorTrack* Track);                                                   // [0x7125080] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetNumChannelsUsed(class UMovieSceneDoubleVectorTrack* Track);                                                   // [0x71bd280] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/SequencerScripting.SequencerScriptingRangeExtensions
@@ -1014,29 +1014,29 @@ public:
 
 	/// Functions
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.SetStartSeconds
-	// void SetStartSeconds(FSequencerScriptingRange& Range, float Start);                                                      // [0x712be60] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetStartSeconds(FSequencerScriptingRange& Range, float Start);                                                      // [0x71c4060] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.SetStartFrame
-	// void SetStartFrame(FSequencerScriptingRange& Range, int32_t Start);                                                      // [0x712ba80] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetStartFrame(FSequencerScriptingRange& Range, int32_t Start);                                                      // [0x71c3c80] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.SetEndSeconds
-	// void SetEndSeconds(FSequencerScriptingRange& Range, float End);                                                          // [0x7129ad0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetEndSeconds(FSequencerScriptingRange& Range, float End);                                                          // [0x71c1cd0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.SetEndFrame
-	// void SetEndFrame(FSequencerScriptingRange& Range, int32_t End);                                                          // [0x71296f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetEndFrame(FSequencerScriptingRange& Range, int32_t End);                                                          // [0x71c18f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.RemoveStart
-	// void RemoveStart(FSequencerScriptingRange& Range);                                                                       // [0x7128e10] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void RemoveStart(FSequencerScriptingRange& Range);                                                                       // [0x71c1010] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.RemoveEnd
-	// void RemoveEnd(FSequencerScriptingRange& Range);                                                                         // [0x7128960] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void RemoveEnd(FSequencerScriptingRange& Range);                                                                         // [0x71c0b60] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.HasStart
-	// bool HasStart(FSequencerScriptingRange& Range);                                                                          // [0x7127930] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// bool HasStart(FSequencerScriptingRange& Range);                                                                          // [0x71bfb30] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.HasEnd
-	// bool HasEnd(FSequencerScriptingRange& Range);                                                                            // [0x71277d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// bool HasEnd(FSequencerScriptingRange& Range);                                                                            // [0x71bf9d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.GetStartSeconds
-	// float GetStartSeconds(FSequencerScriptingRange& Range);                                                                  // [0x7126f70] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// float GetStartSeconds(FSequencerScriptingRange& Range);                                                                  // [0x71bf170] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.GetStartFrame
-	// int32_t GetStartFrame(FSequencerScriptingRange& Range);                                                                  // [0x7126d40] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// int32_t GetStartFrame(FSequencerScriptingRange& Range);                                                                  // [0x71bef40] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.GetEndSeconds
-	// float GetEndSeconds(FSequencerScriptingRange& Range);                                                                    // [0x71242e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// float GetEndSeconds(FSequencerScriptingRange& Range);                                                                    // [0x71bc4e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SequencerScripting.SequencerScriptingRangeExtensions.GetEndFrame
-	// int32_t GetEndFrame(FSequencerScriptingRange& Range);                                                                    // [0x71240b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// int32_t GetEndFrame(FSequencerScriptingRange& Range);                                                                    // [0x71bc2b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/SequencerScripting.SequencerScriptingRange
@@ -1052,5 +1052,3 @@ struct FSequencerScriptingRange
 };
 
 #pragma pack(pop)
-
-

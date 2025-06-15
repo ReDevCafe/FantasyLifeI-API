@@ -12,10 +12,6 @@
     #include "API/Recipe/RecipeData.hpp"
     #include <memory>
 
-constexpr uintptr_t GOBJECTS_OFFSET = 0xBFF47F0;
-constexpr uintptr_t GNAMES_OFFSET =  0xBF3DA40;
-constexpr uintptr_t GWORLD_OFFSET = 0xC174678;
-
 class GameData {
     public:
         GameData(uintptr_t baseAddress);
@@ -30,7 +26,8 @@ class GameData {
         UDynamicDataManager *getDynamicDataManager();
 
         template<typename T = void>
-        T *getUObject(const std::string &name, bool safe = true, uint32_t nth = 0) {
+        T *getUObject(const std::string &name, bool safe = true, uint32_t nth = 0)
+        {
             if (_gObjects == nullptr) return nullptr;
             if (_cache.contains(name))
                 return reinterpret_cast<T *>(_cache.at(name));

@@ -11,7 +11,7 @@
 #pragma pack(push, 0x1)
 
 /// Struct /Script/ShaderModule.DioramaBlur_General_DetailedAdjustment
-/// Size: 0x0005 (5 bytes) (0x000000 - 0x000005) align 1 MaxSize: 0x0005
+/// Size: 0x0006 (6 bytes) (0x000000 - 0x000006) align 1 MaxSize: 0x0006
 struct FDioramaBlur_General_DetailedAdjustment
 { 
 	bool                                               isUseDioramaBlurMaskPS;                                     // 0x0000   (0x0001)  
@@ -19,6 +19,7 @@ struct FDioramaBlur_General_DetailedAdjustment
 	bool                                               isUseSvPosition;                                            // 0x0002   (0x0001)  
 	bool                                               isUseSceneTexturesStruct;                                   // 0x0003   (0x0001)  
 	bool                                               isUseFinalComposite_NoDownScale;                            // 0x0004   (0x0001)  
+	bool                                               isUseFinalComposite_ScreenAspect;                           // 0x0005   (0x0001)  
 };
 
 /// Struct /Script/ShaderModule.DioramaBlur_General
@@ -35,8 +36,8 @@ struct FDioramaBlur_General
 	int32_t                                            BlurPassX_DownScaleY;                                       // 0x0020   (0x0004)  
 	int32_t                                            BlurPassY_DownScaleX;                                       // 0x0024   (0x0004)  
 	int32_t                                            BlurPassY_DownScaleY;                                       // 0x0028   (0x0004)  
-	FDioramaBlur_General_DetailedAdjustment            detailedAdjustment;                                         // 0x002C   (0x0005)  
-	unsigned char                                      UnknownData01_7[0x3];                                       // 0x0031   (0x0003)  MISSED
+	FDioramaBlur_General_DetailedAdjustment            detailedAdjustment;                                         // 0x002C   (0x0006)  
+	unsigned char                                      UnknownData01_7[0x2];                                       // 0x0032   (0x0002)  MISSED
 };
 
 /// Struct /Script/ShaderModule.DioramaBlur_Depth
@@ -94,5 +95,3 @@ struct FPostProcessDioramaBlurParam
 };
 
 #pragma pack(pop)
-
-

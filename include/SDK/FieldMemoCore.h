@@ -22,25 +22,23 @@ public:
 
 	/// Functions
 	// Function /Script/FieldMemoCore.FieldMemoWidget.UpdateDisplay
-	// void UpdateDisplay();                                                                                                    // [0x2f06970] Event|Public|BlueprintEvent 
+	// void UpdateDisplay();                                                                                                    // [0x2f852e0] Event|Public|BlueprintEvent 
 	// Function /Script/FieldMemoCore.FieldMemoWidget.GetTitle
-	// FString GetTitle();                                                                                                      // [0x7cae500] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetTitle();                                                                                                      // [0x7d46240] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FieldMemoCore.FieldMemoWidget.GetState
-	// FString GetState();                                                                                                      // [0x7cae4c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetState();                                                                                                      // [0x7d46200] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FieldMemoCore.FieldMemoWidget.GetRank
-	// FString GetRank();                                                                                                       // [0x7cae480] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetRank();                                                                                                       // [0x7d461c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FieldMemoCore.FieldMemoWidget.GetMapID
-	// FName GetMapID();                                                                                                        // [0x7cae450] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetMapID();                                                                                                        // [0x7d46190] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FieldMemoCore.FieldMemoWidget.GetLocation
-	// FVector GetLocation();                                                                                                   // [0x7cae410] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetLocation();                                                                                                   // [0x7d46150] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FieldMemoCore.FieldMemoWidget.GetId
-	// FName GetId();                                                                                                           // [0x7cae3e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetId();                                                                                                           // [0x7d46120] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FieldMemoCore.FieldMemoWidget.GetDisplayState
-	// FString GetDisplayState();                                                                                               // [0x7cae380] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetDisplayState();                                                                                               // [0x7d460c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FieldMemoCore.FieldMemoWidget.CustomTick
-	// void CustomTick();                                                                                                       // [0x2f06970] Event|Public|BlueprintEvent 
+	// void CustomTick();                                                                                                       // [0x2f852e0] Event|Public|BlueprintEvent 
 };
 
 #pragma pack(pop)
-
-

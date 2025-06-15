@@ -40,7 +40,7 @@ public:
 
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
-	// class UGeometryCacheComponent* GetGeometryCacheComponent();                                                              // [0x48cf030] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UGeometryCacheComponent* GetGeometryCacheComponent();                                                              // [0x494d560] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/GeometryCache.GeometryCacheCodecBase
@@ -94,61 +94,61 @@ public:
 
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheComponent.TickAtThisTime
-	// void TickAtThisTime(float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping);                                // [0x82720f0] Final|Native|Public|BlueprintCallable 
+	// void TickAtThisTime(float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping);                                // [0x8309c80] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.Stop
-	// void Stop();                                                                                                             // [0x82720d0] Final|Native|Public|BlueprintCallable 
+	// void Stop();                                                                                                             // [0x8309c60] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetWireframeOverrideColor
-	// void SetWireframeOverrideColor(FLinearColor Color);                                                                      // [0x8272050] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetWireframeOverrideColor(FLinearColor Color);                                                                      // [0x8309be0] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetStartTimeOffset
-	// void SetStartTimeOffset(float NewStartTimeOffset);                                                                       // [0x8271fa0] Final|Native|Public|BlueprintCallable 
+	// void SetStartTimeOffset(float NewStartTimeOffset);                                                                       // [0x8309b30] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
-	// void SetPlaybackSpeed(float NewPlaybackSpeed);                                                                           // [0x8271f00] Final|Native|Public|BlueprintCallable 
+	// void SetPlaybackSpeed(float NewPlaybackSpeed);                                                                           // [0x8309a90] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetOverrideWireframeColor
-	// void SetOverrideWireframeColor(bool bOverride);                                                                          // [0x8271e70] Final|Native|Public|BlueprintCallable 
+	// void SetOverrideWireframeColor(bool bOverride);                                                                          // [0x8309a00] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetMotionVectorScale
-	// void SetMotionVectorScale(float NewMotionVectorScale);                                                                   // [0x8271dd0] Final|Native|Public|BlueprintCallable 
+	// void SetMotionVectorScale(float NewMotionVectorScale);                                                                   // [0x8309960] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetLooping
-	// void SetLooping(bool bNewLooping);                                                                                       // [0x8271ad0] Final|Native|Public|BlueprintCallable 
+	// void SetLooping(bool bNewLooping);                                                                                       // [0x8309660] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetGeometryCache
-	// bool SetGeometryCache(class UGeometryCache* NewGeomCache);                                                               // [0x8271a30] Final|Native|Public|BlueprintCallable 
+	// bool SetGeometryCache(class UGeometryCache* NewGeomCache);                                                               // [0x83095c0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.SetExtrapolateFrames
-	// void SetExtrapolateFrames(bool bNewExtrapolating);                                                                       // [0x82719a0] Final|Native|Public|BlueprintCallable 
+	// void SetExtrapolateFrames(bool bNewExtrapolating);                                                                       // [0x8309530] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.PlayReversedFromEnd
-	// void PlayReversedFromEnd();                                                                                              // [0x8271940] Final|Native|Public|BlueprintCallable 
+	// void PlayReversedFromEnd();                                                                                              // [0x83094d0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.PlayReversed
-	// void PlayReversed();                                                                                                     // [0x82718f0] Final|Native|Public|BlueprintCallable 
+	// void PlayReversed();                                                                                                     // [0x8309480] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.PlayFromStart
-	// void PlayFromStart();                                                                                                    // [0x8271890] Final|Native|Public|BlueprintCallable 
+	// void PlayFromStart();                                                                                                    // [0x8309420] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.Play
-	// void Play();                                                                                                             // [0x8271840] Final|Native|Public|BlueprintCallable 
+	// void Play();                                                                                                             // [0x83093d0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.Pause
-	// void Pause();                                                                                                            // [0x8271810] Final|Native|Public|BlueprintCallable 
+	// void Pause();                                                                                                            // [0x83093a0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCache.GeometryCacheComponent.IsPlayingReversed
-	// bool IsPlayingReversed();                                                                                                // [0x82717d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPlayingReversed();                                                                                                // [0x8309360] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.IsPlaying
-	// bool IsPlaying();                                                                                                        // [0x82717b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPlaying();                                                                                                        // [0x8309340] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.IsLooping
-	// bool IsLooping();                                                                                                        // [0x8271790] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsLooping();                                                                                                        // [0x8309320] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.IsExtrapolatingFrames
-	// bool IsExtrapolatingFrames();                                                                                            // [0x8271770] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsExtrapolatingFrames();                                                                                            // [0x8309300] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetWireframeOverrideColor
-	// FLinearColor GetWireframeOverrideColor();                                                                                // [0x8271740] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FLinearColor GetWireframeOverrideColor();                                                                                // [0x83092d0] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetStartTimeOffset
-	// float GetStartTimeOffset();                                                                                              // [0x8271720] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetStartTimeOffset();                                                                                              // [0x83092b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetPlaybackSpeed
-	// float GetPlaybackSpeed();                                                                                                // [0x82716e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPlaybackSpeed();                                                                                                // [0x8309270] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetPlaybackDirection
-	// float GetPlaybackDirection();                                                                                            // [0x82716c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPlaybackDirection();                                                                                            // [0x8309250] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetOverrideWireframeColor
-	// bool GetOverrideWireframeColor();                                                                                        // [0x82716a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetOverrideWireframeColor();                                                                                        // [0x8309230] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetNumberOfFrames
-	// int32_t GetNumberOfFrames();                                                                                             // [0x8271660] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumberOfFrames();                                                                                             // [0x83091f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetMotionVectorScale
-	// float GetMotionVectorScale();                                                                                            // [0x8271620] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetMotionVectorScale();                                                                                            // [0x83091b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetDuration
-	// float GetDuration();                                                                                                     // [0x8271600] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetDuration();                                                                                                     // [0x8309190] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetAnimationTime
-	// float GetAnimationTime();                                                                                                // [0x82715c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetAnimationTime();                                                                                                // [0x8309150] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/GeometryCache.GeometryCacheTrack
@@ -171,7 +171,7 @@ public:
 
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
-	// void AddMeshSample(FGeometryCacheMeshData& MeshData, float SampleTime);                                                  // [0x82712b0] Final|Native|Public|HasOutParms 
+	// void AddMeshSample(FGeometryCacheMeshData& MeshData, float SampleTime);                                                  // [0x8308e40] Final|Native|Public|HasOutParms 
 };
 
 /// Class /Script/GeometryCache.GeometryCacheTrackStreamable
@@ -195,7 +195,7 @@ public:
 
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
-	// void SetMesh(FGeometryCacheMeshData& NewMeshData);                                                                       // [0x8271b60] Final|Native|Public|HasOutParms 
+	// void SetMesh(FGeometryCacheMeshData& NewMeshData);                                                                       // [0x83096f0] Final|Native|Public|HasOutParms 
 };
 
 /// Class /Script/GeometryCache.GeometryCacheTrack_TransformGroupAnimation
@@ -208,7 +208,7 @@ public:
 
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
-	// void SetMesh(FGeometryCacheMeshData& NewMeshData);                                                                       // [0x8271b60] Final|Native|Public|HasOutParms 
+	// void SetMesh(FGeometryCacheMeshData& NewMeshData);                                                                       // [0x83096f0] Final|Native|Public|HasOutParms 
 };
 
 /// Struct /Script/GeometryCache.NiagaraGeometryCacheMICOverride
@@ -282,5 +282,3 @@ struct FGeometryCacheMeshData
 };
 
 #pragma pack(pop)
-
-

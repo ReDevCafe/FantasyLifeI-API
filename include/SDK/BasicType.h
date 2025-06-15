@@ -267,6 +267,7 @@ class TPersistentObjectPtr
 {
 public:
 	FWeakObjectPtr WeakPtr;
+	int32_t TagAtLastTest;
 	TObjectID ObjectID;
 };
 
@@ -297,8 +298,7 @@ public:
 struct FSoftObjectPath_
 {
 public:
-	FName PackageName;
-    FName AssetName;
+	FName AssetPathName;
 	FString SubPathString;
 };
 

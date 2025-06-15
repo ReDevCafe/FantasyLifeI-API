@@ -59,5 +59,3 @@ struct FPerPlatformSettings
 };
 
 #pragma pack(pop)
-
-

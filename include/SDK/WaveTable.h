@@ -135,5 +135,3 @@ struct FWaveTableSettings
 };
 
 #pragma pack(pop)
-
-

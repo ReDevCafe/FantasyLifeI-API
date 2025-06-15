@@ -199,5 +199,3 @@ struct FClothParameterMask_Legacy
 };
 
 #pragma pack(pop)
-
-

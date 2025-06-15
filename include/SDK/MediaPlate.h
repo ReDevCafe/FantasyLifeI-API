@@ -93,51 +93,49 @@ public:
 
 	/// Functions
 	// Function /Script/MediaPlate.MediaPlateComponent.SetPlayOnlyWhenVisible
-	// void SetPlayOnlyWhenVisible(bool bInPlayOnlyWhenVisible);                                                                // [0x82a26d0] Final|Native|Public|BlueprintCallable 
+	// void SetPlayOnlyWhenVisible(bool bInPlayOnlyWhenVisible);                                                                // [0x833a230] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.SetMeshRange
-	// void SetMeshRange(FVector2D InMeshRange);                                                                                // [0x82a2640] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetMeshRange(FVector2D InMeshRange);                                                                                // [0x833a1a0] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.SetLoop
-	// void SetLoop(bool bInLoop);                                                                                              // [0x82a25a0] Final|Native|Public|BlueprintCallable 
+	// void SetLoop(bool bInLoop);                                                                                              // [0x833a100] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.SetLetterboxAspectRatio
-	// void SetLetterboxAspectRatio(float AspectRatio);                                                                         // [0x82a2480] Final|Native|Public|BlueprintCallable 
+	// void SetLetterboxAspectRatio(float AspectRatio);                                                                         // [0x8339fe0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.SetIsAspectRatioAuto
-	// void SetIsAspectRatioAuto(bool bInIsAspectRatioAuto);                                                                    // [0x82a23e0] Final|Native|Public|BlueprintCallable 
+	// void SetIsAspectRatioAuto(bool bInIsAspectRatioAuto);                                                                    // [0x8339f40] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.Seek
-	// bool Seek(FTimespan& Time);                                                                                              // [0x82a2330] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool Seek(FTimespan& Time);                                                                                              // [0x8339e90] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.Rewind
-	// bool Rewind();                                                                                                           // [0x82a22e0] Final|Native|Public|BlueprintCallable 
+	// bool Rewind();                                                                                                           // [0x8339e40] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.Play
-	// void Play();                                                                                                             // [0x82a22b0] Final|Native|Public|BlueprintCallable 
+	// void Play();                                                                                                             // [0x8339e10] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.Pause
-	// void Pause();                                                                                                            // [0x82a2280] Final|Native|Public|BlueprintCallable 
+	// void Pause();                                                                                                            // [0x8339de0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.Open
-	// void Open();                                                                                                             // [0x82a2260] Final|Native|Public|BlueprintCallable 
+	// void Open();                                                                                                             // [0x8339dc0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.OnMediaSuspended
-	// void OnMediaSuspended();                                                                                                 // [0x82a2240] Final|Native|Private 
+	// void OnMediaSuspended();                                                                                                 // [0x8339da0] Final|Native|Private 
 	// Function /Script/MediaPlate.MediaPlateComponent.OnMediaResumed
-	// void OnMediaResumed();                                                                                                   // [0x82a2220] Final|Native|Private 
+	// void OnMediaResumed();                                                                                                   // [0x8339d80] Final|Native|Private 
 	// Function /Script/MediaPlate.MediaPlateComponent.OnMediaOpened
-	// void OnMediaOpened(FString DeviceUrl);                                                                                   // [0x82a20f0] Final|Native|Private 
+	// void OnMediaOpened(FString DeviceUrl);                                                                                   // [0x8339c50] Final|Native|Private 
 	// Function /Script/MediaPlate.MediaPlateComponent.OnMediaEnd
-	// void OnMediaEnd();                                                                                                       // [0x82a2080] Final|Native|Private 
+	// void OnMediaEnd();                                                                                                       // [0x8339be0] Final|Native|Private 
 	// Function /Script/MediaPlate.MediaPlateComponent.IsMediaPlatePlaying
-	// bool IsMediaPlatePlaying();                                                                                              // [0x82a2060] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsMediaPlatePlaying();                                                                                              // [0x8339bc0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaPlate.MediaPlateComponent.GetMeshRange
-	// FVector2D GetMeshRange();                                                                                                // [0x82a2030] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector2D GetMeshRange();                                                                                                // [0x8339b90] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaPlate.MediaPlateComponent.GetMediaTexture
-	// class UMediaTexture* GetMediaTexture(int32_t Index);                                                                     // [0x82a1f70] Final|Native|Public|BlueprintCallable 
+	// class UMediaTexture* GetMediaTexture(int32_t Index);                                                                     // [0x8339ad0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.GetMediaPlayer
-	// class UMediaPlayer* GetMediaPlayer();                                                                                    // [0x4ea0ba0] Final|Native|Public|BlueprintCallable 
+	// class UMediaPlayer* GetMediaPlayer();                                                                                    // [0x4f1ee90] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.GetLoop
-	// bool GetLoop();                                                                                                          // [0x51b0010] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// bool GetLoop();                                                                                                          // [0x522e300] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/MediaPlate.MediaPlateComponent.GetLetterboxAspectRatio
-	// float GetLetterboxAspectRatio();                                                                                         // [0x82a1f50] Final|Native|Public|BlueprintCallable 
+	// float GetLetterboxAspectRatio();                                                                                         // [0x8339ab0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaPlate.MediaPlateComponent.GetIsAspectRatioAuto
-	// bool GetIsAspectRatioAuto();                                                                                             // [0x82a1f30] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetIsAspectRatioAuto();                                                                                             // [0x8339a90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaPlate.MediaPlateComponent.Close
-	// void Close();                                                                                                            // [0x82a1ed0] Final|Native|Public|BlueprintCallable 
+	// void Close();                                                                                                            // [0x8339a30] Final|Native|Public|BlueprintCallable 
 };
 
 #pragma pack(pop)
-
-

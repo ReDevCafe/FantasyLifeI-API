@@ -169,5 +169,3 @@ struct FNiagaraShaderScriptParametersMetadata
 };
 
 #pragma pack(pop)
-
-

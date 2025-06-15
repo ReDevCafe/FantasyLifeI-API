@@ -18,8 +18,6 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     //TODO: Load PreLoad mod function
 
 
-
-
     gameCache->PostLoadCache();
     //TODO: Load PostLoad mod function
 

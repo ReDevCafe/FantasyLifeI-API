@@ -57,5 +57,3 @@ struct FLocalizableMessageParameterMessage
 };
 
 #pragma pack(pop)
-
-

@@ -92,7 +92,7 @@ public:
 
 	/// Functions
 	// Function /Script/ClothingSystemRuntimeNv.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness
-	// void SetAnimDriveDamperStiffness(float InStiffness);                                                                     // [0x4fbc460] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAnimDriveDamperStiffness(float InStiffness);                                                                     // [0x503a750] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy
@@ -107,5 +107,3 @@ public:
 };
 
 #pragma pack(pop)
-
-

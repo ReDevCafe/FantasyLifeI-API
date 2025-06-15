@@ -38,15 +38,15 @@ public:
 
 	/// Functions
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSetLibrary.SetSelectionFromList
-	// bool SetSelectionFromList(class UTypedElementSelectionSet* SelectionSet, FScriptTypedElementListProxy ElementList, FTypedElementSelectionOptions SelectionOptions); // [0x3b29c80] Final|Native|Static|Public|BlueprintCallable 
+	// bool SetSelectionFromList(class UTypedElementSelectionSet* SelectionSet, FScriptTypedElementListProxy ElementList, FTypedElementSelectionOptions SelectionOptions); // [0x3ba83c0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSetLibrary.SelectElementsFromList
-	// bool SelectElementsFromList(class UTypedElementSelectionSet* SelectionSet, FScriptTypedElementListProxy ElementList, FTypedElementSelectionOptions SelectionOptions); // [0x3b29600] Final|Native|Static|Public|BlueprintCallable 
+	// bool SelectElementsFromList(class UTypedElementSelectionSet* SelectionSet, FScriptTypedElementListProxy ElementList, FTypedElementSelectionOptions SelectionOptions); // [0x3ba7d40] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSetLibrary.GetNormalizedSelection
-	// FScriptTypedElementListProxy GetNormalizedSelection(class UTypedElementSelectionSet* SelectionSet, FTypedElementSelectionNormalizationOptions NormalizationOptions); // [0x3b27e30] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// FScriptTypedElementListProxy GetNormalizedSelection(class UTypedElementSelectionSet* SelectionSet, FTypedElementSelectionNormalizationOptions NormalizationOptions); // [0x3ba6570] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSetLibrary.GetNormalizedElementList
-	// FScriptTypedElementListProxy GetNormalizedElementList(class UTypedElementSelectionSet* SelectionSet, FScriptTypedElementListProxy ElementList, FTypedElementSelectionNormalizationOptions NormalizationOptions); // [0x3b27c60] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// FScriptTypedElementListProxy GetNormalizedElementList(class UTypedElementSelectionSet* SelectionSet, FScriptTypedElementListProxy ElementList, FTypedElementSelectionNormalizationOptions NormalizationOptions); // [0x3ba63a0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSetLibrary.DeselectElementsFromList
-	// bool DeselectElementsFromList(class UTypedElementSelectionSet* SelectionSet, FScriptTypedElementListProxy ElementList, FTypedElementSelectionOptions SelectionOptions); // [0x3b27390] Final|Native|Static|Public|BlueprintCallable 
+	// bool DeselectElementsFromList(class UTypedElementSelectionSet* SelectionSet, FScriptTypedElementListProxy ElementList, FTypedElementSelectionOptions SelectionOptions); // [0x3ba5ad0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/TypedElementRuntime.TypedElementSelectionSet
@@ -62,53 +62,53 @@ public:
 
 	/// Functions
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.SetSelection
-	// bool SetSelection(TArray<FScriptTypedElementHandle>& InElementHandles, FTypedElementSelectionOptions InSelectionOptions); // [0x3b29a80] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool SetSelection(TArray<FScriptTypedElementHandle>& InElementHandles, FTypedElementSelectionOptions InSelectionOptions); // [0x3ba81c0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.SelectElements
-	// bool SelectElements(TArray<FScriptTypedElementHandle>& InElementHandles, FTypedElementSelectionOptions InSelectionOptions); // [0x3b29430] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool SelectElements(TArray<FScriptTypedElementHandle>& InElementHandles, FTypedElementSelectionOptions InSelectionOptions); // [0x3ba7b70] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.SelectElement
-	// bool SelectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);        // [0x3b292b0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool SelectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);        // [0x3ba79f0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.RestoreSelectionState
-	// void RestoreSelectionState(FTypedElementSelectionSetState& InSelectionState);                                            // [0x3b29000] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void RestoreSelectionState(FTypedElementSelectionSetState& InSelectionState);                                            // [0x3ba7740] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.OnPreChangeDynamic__DelegateSignature
-	// void OnPreChangeDynamic__DelegateSignature(class UTypedElementSelectionSet* SelectionSet);                               // [0x2f06970] MulticastDelegate|Public|Delegate 
+	// void OnPreChangeDynamic__DelegateSignature(class UTypedElementSelectionSet* SelectionSet);                               // [0x2f852e0] MulticastDelegate|Public|Delegate 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.OnChangeDynamic__DelegateSignature
-	// void OnChangeDynamic__DelegateSignature(class UTypedElementSelectionSet* SelectionSet);                                  // [0x2f06970] MulticastDelegate|Public|Delegate 
+	// void OnChangeDynamic__DelegateSignature(class UTypedElementSelectionSet* SelectionSet);                                  // [0x2f852e0] MulticastDelegate|Public|Delegate 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.K2_GetSelectedElementHandles
-	// TArray<FScriptTypedElementHandle> K2_GetSelectedElementHandles(class UClass* InBaseInterfaceType);                       // [0x3b28e10] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+	// TArray<FScriptTypedElementHandle> K2_GetSelectedElementHandles(class UClass* InBaseInterfaceType);                       // [0x3ba7550] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.IsElementSelected
-	// bool IsElementSelected(FScriptTypedElementHandle& InElementHandle, FTypedElementIsSelectedOptions InSelectionOptions);   // [0x3b28c70] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool IsElementSelected(FScriptTypedElementHandle& InElementHandle, FTypedElementIsSelectedOptions InSelectionOptions);   // [0x3ba73b0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.HasSelectedObjects
-	// bool HasSelectedObjects(class UClass* InRequiredClass);                                                                  // [0x3b28910] Final|Native|Public|BlueprintCallable|Const 
+	// bool HasSelectedObjects(class UClass* InRequiredClass);                                                                  // [0x3ba7050] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.HasSelectedElements
-	// bool HasSelectedElements(class UClass* InBaseInterfaceType);                                                             // [0x3b28860] Final|Native|Public|BlueprintCallable|Const 
+	// bool HasSelectedElements(class UClass* InBaseInterfaceType);                                                             // [0x3ba6fa0] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.GetTopSelectedObject
-	// class UObject* GetTopSelectedObject(class UClass* InRequiredClass);                                                      // [0x3b28750] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UObject* GetTopSelectedObject(class UClass* InRequiredClass);                                                      // [0x3ba6e90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.GetSelectionElement
-	// FScriptTypedElementHandle GetSelectionElement(FScriptTypedElementHandle& InElementHandle, ETypedElementSelectionMethod InSelectionMethod); // [0x3b28620] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// FScriptTypedElementHandle GetSelectionElement(FScriptTypedElementHandle& InElementHandle, ETypedElementSelectionMethod InSelectionMethod); // [0x3ba6d60] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.GetSelectedObjects
-	// TArray<UObject*> GetSelectedObjects(class UClass* InRequiredClass);                                                      // [0x3b28270] Final|Native|Public|BlueprintCallable|Const 
+	// TArray<UObject*> GetSelectedObjects(class UClass* InRequiredClass);                                                      // [0x3ba69b0] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.GetNumSelectedElements
-	// int32_t GetNumSelectedElements();                                                                                        // [0x3b27f70] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumSelectedElements();                                                                                        // [0x3ba66b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.GetCurrentSelectionState
-	// FTypedElementSelectionSetState GetCurrentSelectionState();                                                               // [0x3b27b60] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FTypedElementSelectionSetState GetCurrentSelectionState();                                                               // [0x3ba62a0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.GetBottomSelectedObject
-	// class UObject* GetBottomSelectedObject(class UClass* InRequiredClass);                                                   // [0x3b278a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UObject* GetBottomSelectedObject(class UClass* InRequiredClass);                                                   // [0x3ba5fe0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.DeselectElements
-	// bool DeselectElements(TArray<FScriptTypedElementHandle>& InElementHandles, FTypedElementSelectionOptions InSelectionOptions); // [0x3b271c0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool DeselectElements(TArray<FScriptTypedElementHandle>& InElementHandles, FTypedElementSelectionOptions InSelectionOptions); // [0x3ba5900] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.DeselectElement
-	// bool DeselectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);      // [0x3b27040] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool DeselectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);      // [0x3ba5780] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.CountSelectedObjects
-	// int32_t CountSelectedObjects(class UClass* InRequiredClass);                                                             // [0x3b26ce0] Final|Native|Public|BlueprintCallable|Const 
+	// int32_t CountSelectedObjects(class UClass* InRequiredClass);                                                             // [0x3ba5420] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.CountSelectedElements
-	// int32_t CountSelectedElements(class UClass* InBaseInterfaceType);                                                        // [0x3b26c30] Final|Native|Public|BlueprintCallable|Const 
+	// int32_t CountSelectedElements(class UClass* InBaseInterfaceType);                                                        // [0x3ba5370] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.ClearSelection
-	// bool ClearSelection(FTypedElementSelectionOptions InSelectionOptions);                                                   // [0x3b26b80] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool ClearSelection(FTypedElementSelectionOptions InSelectionOptions);                                                   // [0x3ba52c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.CanSelectElement
-	// bool CanSelectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);     // [0x3b26970] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool CanSelectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);     // [0x3ba50b0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.CanDeselectElement
-	// bool CanDeselectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);   // [0x3b26630] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool CanDeselectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);   // [0x3ba4d70] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.AllowSelectionModifiers
-	// bool AllowSelectionModifiers(FScriptTypedElementHandle& InElementHandle);                                                // [0x3b263e0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool AllowSelectionModifiers(FScriptTypedElementHandle& InElementHandle);                                                // [0x3ba4b20] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/TypedElementRuntime.TypedElementAssetDataInterface
@@ -120,9 +120,9 @@ public:
 
 	/// Functions
 	// Function /Script/TypedElementRuntime.TypedElementAssetDataInterface.GetAssetData
-	// FAssetData GetAssetData(FScriptTypedElementHandle& InElementHandle);                                                     // [0x3b276b0] RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FAssetData GetAssetData(FScriptTypedElementHandle& InElementHandle);                                                     // [0x3ba5df0] RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementAssetDataInterface.GetAllReferencedAssetDatas
-	// TArray<FAssetData> GetAllReferencedAssetDatas(FScriptTypedElementHandle& InElementHandle);                               // [0x3b27510] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FAssetData> GetAllReferencedAssetDatas(FScriptTypedElementHandle& InElementHandle);                               // [0x3ba5c50] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/TypedElementRuntime.TypedElementHierarchyInterface
@@ -134,9 +134,9 @@ public:
 
 	/// Functions
 	// Function /Script/TypedElementRuntime.TypedElementHierarchyInterface.GetParentElement
-	// FScriptTypedElementHandle GetParentElement(FScriptTypedElementHandle& InElementHandle, bool bAllowCreate);               // [0x3b28140] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// FScriptTypedElementHandle GetParentElement(FScriptTypedElementHandle& InElementHandle, bool bAllowCreate);               // [0x3ba6880] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementHierarchyInterface.GetChildElements
-	// void GetChildElements(FScriptTypedElementHandle& InElementHandle, TArray<FScriptTypedElementHandle>& OutElementHandles, bool bAllowCreate); // [0x3b279b0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetChildElements(FScriptTypedElementHandle& InElementHandle, TArray<FScriptTypedElementHandle>& OutElementHandles, bool bAllowCreate); // [0x3ba60f0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/TypedElementRuntime.TypedElementObjectInterface
@@ -148,9 +148,9 @@ public:
 
 	/// Functions
 	// Function /Script/TypedElementRuntime.TypedElementObjectInterface.GetObjectClass
-	// class UClass* GetObjectClass(FScriptTypedElementHandle& InElementHandle);                                                // [0x3b28070] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// class UClass* GetObjectClass(FScriptTypedElementHandle& InElementHandle);                                                // [0x3ba67b0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementObjectInterface.GetObject
-	// class UObject* GetObject(FScriptTypedElementHandle& InElementHandle);                                                    // [0x3b27fa0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// class UObject* GetObject(FScriptTypedElementHandle& InElementHandle);                                                    // [0x3ba66e0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/TypedElementRuntime.TypedElementPrimitiveCustomDataInterface
@@ -162,9 +162,9 @@ public:
 
 	/// Functions
 	// Function /Script/TypedElementRuntime.TypedElementPrimitiveCustomDataInterface.SetCustomDataValue
-	// void SetCustomDataValue(FScriptTypedElementHandle& InElementHandle, int32_t CustomDataIndex, float CustomDataValue, bool bMarkRenderStateDirty); // [0x3b298f0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetCustomDataValue(FScriptTypedElementHandle& InElementHandle, int32_t CustomDataIndex, float CustomDataValue, bool bMarkRenderStateDirty); // [0x3ba8030] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementPrimitiveCustomDataInterface.SetCustomData
-	// void SetCustomData(FScriptTypedElementHandle& InElementHandle, TArray<float>& CustomDataFloats, bool bMarkRenderStateDirty); // [0x3b29780] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetCustomData(FScriptTypedElementHandle& InElementHandle, TArray<float>& CustomDataFloats, bool bMarkRenderStateDirty); // [0x3ba7ec0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/TypedElementRuntime.TypedElementSelectionInterface
@@ -176,19 +176,19 @@ public:
 
 	/// Functions
 	// Function /Script/TypedElementRuntime.TypedElementSelectionInterface.SelectElement
-	// bool SelectElement(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InSelectionSet, FTypedElementSelectionOptions& InSelectionOptions); // [0x3b290e0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool SelectElement(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InSelectionSet, FTypedElementSelectionOptions& InSelectionOptions); // [0x3ba7820] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionInterface.IsElementSelected
-	// bool IsElementSelected(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InSelectionSet, FTypedElementIsSelectedOptions& InSelectionOptions); // [0x3b28aa0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool IsElementSelected(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InSelectionSet, FTypedElementIsSelectedOptions& InSelectionOptions); // [0x3ba71e0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionInterface.GetSelectionElement
-	// FScriptTypedElementHandle GetSelectionElement(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InCurrentSelection, ETypedElementSelectionMethod InSelectionMethod); // [0x3b28430] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// FScriptTypedElementHandle GetSelectionElement(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InCurrentSelection, ETypedElementSelectionMethod InSelectionMethod); // [0x3ba6b70] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionInterface.DeselectElement
-	// bool DeselectElement(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InSelectionSet, FTypedElementSelectionOptions& InSelectionOptions); // [0x3b26e70] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool DeselectElement(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InSelectionSet, FTypedElementSelectionOptions& InSelectionOptions); // [0x3ba55b0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionInterface.CanSelectElement
-	// bool CanSelectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions& InSelectionOptions);    // [0x3b26840] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool CanSelectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions& InSelectionOptions);    // [0x3ba4f80] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionInterface.CanDeselectElement
-	// bool CanDeselectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions& InSelectionOptions);  // [0x3b26500] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool CanDeselectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions& InSelectionOptions);  // [0x3ba4c40] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionInterface.AllowSelectionModifiers
-	// bool AllowSelectionModifiers(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InSelectionSet);   // [0x3b26270] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool AllowSelectionModifiers(FScriptTypedElementHandle& InElementHandle, FScriptTypedElementListProxy InSelectionSet);   // [0x3ba49b0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/TypedElementRuntime.TypedElementSelectionOptions
@@ -230,5 +230,3 @@ struct FTypedElementSelectionNormalizationOptions
 };
 
 #pragma pack(pop)
-
-

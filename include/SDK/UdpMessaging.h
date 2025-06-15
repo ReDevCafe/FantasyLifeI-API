@@ -59,5 +59,3 @@ struct FUdpMockMessage
 };
 
 #pragma pack(pop)
-
-

@@ -72,9 +72,9 @@ public:
 
 	/// Functions
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.SetVisualFidelity
-	// void SetVisualFidelity(class UObject* WorldContextObject, FLatentActionInfo LatentInfo, class UAnimationCompressionLibraryDatabase* DatabaseAsset, ACLVisualFidelityChangeResult& Result, ACLVisualFidelity VisualFidelity); // [0x7d84f00] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetVisualFidelity(class UObject* WorldContextObject, FLatentActionInfo LatentInfo, class UAnimationCompressionLibraryDatabase* DatabaseAsset, ACLVisualFidelityChangeResult& Result, ACLVisualFidelity VisualFidelity); // [0x7e1cb90] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.GetVisualFidelity
-	// ACLVisualFidelity GetVisualFidelity(class UAnimationCompressionLibraryDatabase* DatabaseAsset);                          // [0x7d84e60] Final|Native|Static|Public|BlueprintCallable 
+	// ACLVisualFidelity GetVisualFidelity(class UAnimationCompressionLibraryDatabase* DatabaseAsset);                          // [0x7e1caf0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLBase
@@ -121,5 +121,3 @@ public:
 };
 
 #pragma pack(pop)
-
-

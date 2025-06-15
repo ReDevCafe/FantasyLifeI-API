@@ -31,5 +31,3 @@ struct FSourceGeometryPartID : FElementID
 };
 
 #pragma pack(pop)
-
-
