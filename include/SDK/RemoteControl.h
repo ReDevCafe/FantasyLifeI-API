@@ -107,91 +107,91 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueVector2D
-	// bool SetValueVector2D(FVector2D& InVector2D);                                                                            // [0x713eba0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetValueVector2D(FVector2D& InVector2D);                                                                            // [0x71d6da0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueVector
-	// bool SetValueVector(FVector& InVector);                                                                                  // [0x713ec40] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetValueVector(FVector& InVector);                                                                                  // [0x71d6e40] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueUint64
-	// bool SetValueUint64(uint64_t InUInt64);                                                                                  // [0x713eb00] Final|Native|Public  
+	// bool SetValueUint64(uint64_t InUInt64);                                                                                  // [0x71d6d00] Final|Native|Public  
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueUInt32
-	// bool SetValueUInt32(uint32_t InUInt32);                                                                                  // [0x713e9c0] Final|Native|Public  
+	// bool SetValueUInt32(uint32_t InUInt32);                                                                                  // [0x71d6bc0] Final|Native|Public  
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueUint16
-	// bool SetValueUint16(uint16_t InUInt16);                                                                                  // [0x713ea60] Final|Native|Public  
+	// bool SetValueUint16(uint16_t InUInt16);                                                                                  // [0x71d6c60] Final|Native|Public  
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueText
-	// bool SetValueText(FText& InTextValue);                                                                                   // [0x713e900] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool SetValueText(FText& InTextValue);                                                                                   // [0x71d6b00] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueString
-	// bool SetValueString(FString InStringValue);                                                                              // [0x713e850] Final|Native|Public|BlueprintCallable 
+	// bool SetValueString(FString InStringValue);                                                                              // [0x71d6a50] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueRotator
-	// bool SetValueRotator(FRotator& InRotator);                                                                               // [0x713e7b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetValueRotator(FRotator& InRotator);                                                                               // [0x71d69b0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueNumericInteger
-	// bool SetValueNumericInteger(int64_t InInt64Value);                                                                       // [0x713e710] Final|Native|Public|BlueprintCallable 
+	// bool SetValueNumericInteger(int64_t InInt64Value);                                                                       // [0x71d6910] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueName
-	// bool SetValueName(FName& InNameValue);                                                                                   // [0x713e660] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool SetValueName(FName& InNameValue);                                                                                   // [0x71d6860] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueLinearColor
-	// bool SetValueLinearColor(FLinearColor& InLinearColor);                                                                   // [0x713e5c0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetValueLinearColor(FLinearColor& InLinearColor);                                                                   // [0x71d67c0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueInt8
-	// bool SetValueInt8(int8_t InInt8);                                                                                        // [0x713e530] Final|Native|Public  
+	// bool SetValueInt8(int8_t InInt8);                                                                                        // [0x71d6730] Final|Native|Public  
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueInt64
-	// bool SetValueInt64(int64_t InInt64);                                                                                     // [0x713e490] Final|Native|Public|BlueprintCallable 
+	// bool SetValueInt64(int64_t InInt64);                                                                                     // [0x71d6690] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueInt32
-	// bool SetValueInt32(int32_t InInt32);                                                                                     // [0x713e3f0] Final|Native|Public|BlueprintCallable 
+	// bool SetValueInt32(int32_t InInt32);                                                                                     // [0x71d65f0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueInt16
-	// bool SetValueInt16(int16_t InInt16);                                                                                     // [0x713e350] Final|Native|Public  
+	// bool SetValueInt16(int16_t InInt16);                                                                                     // [0x71d6550] Final|Native|Public  
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueFloat
-	// bool SetValueFloat(float InFloat);                                                                                       // [0x713e2c0] Final|Native|Public|BlueprintCallable 
+	// bool SetValueFloat(float InFloat);                                                                                       // [0x71d64c0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueDouble
-	// bool SetValueDouble(double InDouble);                                                                                    // [0x713e230] Final|Native|Public|BlueprintCallable 
+	// bool SetValueDouble(double InDouble);                                                                                    // [0x71d6430] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueColor
-	// bool SetValueColor(FColor& InColor);                                                                                     // [0x713e190] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetValueColor(FColor& InColor);                                                                                     // [0x71d6390] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueByte
-	// bool SetValueByte(char InByte);                                                                                          // [0x713e100] Final|Native|Public|BlueprintCallable 
+	// bool SetValueByte(char InByte);                                                                                          // [0x71d6300] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.SetValueBool
-	// bool SetValueBool(bool InBoolValue);                                                                                     // [0x713e060] Final|Native|Public|BlueprintCallable 
+	// bool SetValueBool(bool InBoolValue);                                                                                     // [0x71d6260] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueVector2D
-	// bool GetValueVector2D(FVector2D& OutVector2D);                                                                           // [0x713dea0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueVector2D(FVector2D& OutVector2D);                                                                           // [0x71d60a0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueVector
-	// bool GetValueVector(FVector& OutVector);                                                                                 // [0x713df40] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueVector(FVector& OutVector);                                                                                 // [0x71d6140] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueUint64
-	// bool GetValueUint64(uint64_t& OuyUInt64);                                                                                // [0x713ddf0] Final|Native|Public|HasOutParms|Const 
+	// bool GetValueUint64(uint64_t& OuyUInt64);                                                                                // [0x71d5ff0] Final|Native|Public|HasOutParms|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueUInt32
-	// bool GetValueUInt32(uint32_t& OutUInt32);                                                                                // [0x713dc90] Final|Native|Public|HasOutParms|Const 
+	// bool GetValueUInt32(uint32_t& OutUInt32);                                                                                // [0x71d5e90] Final|Native|Public|HasOutParms|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueUint16
-	// bool GetValueUint16(uint16_t& OutUInt16);                                                                                // [0x713dd40] Final|Native|Public|HasOutParms|Const 
+	// bool GetValueUint16(uint16_t& OutUInt16);                                                                                // [0x71d5f40] Final|Native|Public|HasOutParms|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueText
-	// bool GetValueText(FText& OutTextValue);                                                                                  // [0x713dbd0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueText(FText& OutTextValue);                                                                                  // [0x71d5dd0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueString
-	// bool GetValueString(FString& OutStringValue);                                                                            // [0x713db10] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueString(FString& OutStringValue);                                                                            // [0x71d5d10] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueRotator
-	// bool GetValueRotator(FRotator& OutRotator);                                                                              // [0x713da70] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueRotator(FRotator& OutRotator);                                                                              // [0x71d5c70] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueObject
-	// class UObject* GetValueObject();                                                                                         // [0x713da40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UObject* GetValueObject();                                                                                         // [0x71d5c40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueNumericInteger
-	// bool GetValueNumericInteger(int64_t& OutInt64Value);                                                                     // [0x713d990] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueNumericInteger(int64_t& OutInt64Value);                                                                     // [0x71d5b90] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueName
-	// bool GetValueName(FName& OutNameValue);                                                                                  // [0x713d8e0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueName(FName& OutNameValue);                                                                                  // [0x71d5ae0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueLinearColor
-	// bool GetValueLinearColor(FLinearColor& OutLinearColor);                                                                  // [0x713d840] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueLinearColor(FLinearColor& OutLinearColor);                                                                  // [0x71d5a40] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueInt8
-	// bool GetValueInt8(int8_t& OutInt8);                                                                                      // [0x713d790] Final|Native|Public|HasOutParms|Const 
+	// bool GetValueInt8(int8_t& OutInt8);                                                                                      // [0x71d5990] Final|Native|Public|HasOutParms|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueInt64
-	// bool GetValueInt64(int64_t& OuyInt64);                                                                                   // [0x713d6e0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueInt64(int64_t& OuyInt64);                                                                                   // [0x71d58e0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueInt32
-	// bool GetValueInt32(int32_t& OutInt32);                                                                                   // [0x713d630] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueInt32(int32_t& OutInt32);                                                                                   // [0x71d5830] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueInt16
-	// bool GetValueInt16(int16_t& OutInt16);                                                                                   // [0x713d580] Final|Native|Public|HasOutParms|Const 
+	// bool GetValueInt16(int16_t& OutInt16);                                                                                   // [0x71d5780] Final|Native|Public|HasOutParms|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueFloat
-	// bool GetValueFloat(float& OutFloat);                                                                                     // [0x713d4d0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueFloat(float& OutFloat);                                                                                     // [0x71d56d0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueDouble
-	// bool GetValueDouble(double& OutDouble);                                                                                  // [0x713d420] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueDouble(double& OutDouble);                                                                                  // [0x71d5620] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueColor
-	// bool GetValueColor(FColor& OutColor);                                                                                    // [0x713d380] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueColor(FColor& OutColor);                                                                                    // [0x71d5580] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueByte
-	// bool GetValueByte(char& OutByte);                                                                                        // [0x713d2d0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueByte(char& OutByte);                                                                                        // [0x71d54d0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetValueBool
-	// bool GetValueBool(bool& OutBoolValue);                                                                                   // [0x713d220] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueBool(bool& OutBoolValue);                                                                                   // [0x71d5420] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetPropertyName
-	// FName GetPropertyName();                                                                                                 // [0x713d1e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetPropertyName();                                                                                                 // [0x71d53e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RemoteControl.RCVirtualPropertyBase.GetDisplayValueAsString
-	// FString GetDisplayValueAsString();                                                                                       // [0x713d140] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetDisplayValueAsString();                                                                                       // [0x71d5340] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/RemoteControl.RCVirtualPropertyInContainer
@@ -216,7 +216,7 @@ class URCVirtualPropertyContainerBase : public UObject
 { 
 public:
 	FInstancedPropertyBag                              BAG;                                                        // 0x0028   (0x0010)  
-	SDK_UNDEFINED(80,1183) /* TSet<URCVirtualPropertyBase*> */ __um(VirtualProperties);                            // 0x0038   (0x0050)  
+	SDK_UNDEFINED(80,1186) /* TSet<URCVirtualPropertyBase*> */ __um(VirtualProperties);                            // 0x0038   (0x0050)  
 	TWeakObjectPtr<class URemoteControlPreset*>        PresetWeakPtr;                                              // 0x0088   (0x0008)  
 	unsigned char                                      UnknownData00_6[0x18];                                      // 0x0090   (0x0018)  MISSED
 	TMap<FName, FGuid>                                 ControllerLabelToIdCache;                                   // 0x00A8   (0x0050)  
@@ -256,8 +256,8 @@ struct FRemoteControlInitialBindingContext
 class URemoteControlLevelDependantBinding : public URemoteControlBinding
 { 
 public:
-	SDK_UNDEFINED(80,1184) /* TMap<FSoftObjectPath, TWeakObjectPtr<UObject*>> */ __um(BoundObjectMapByPath);       // 0x0058   (0x0050)  
-	SDK_UNDEFINED(80,1185) /* TMap<FSoftObjectPath, TWeakObjectPtr<ULevel*>> */ __um(SubLevelSelectionMapByPath);  // 0x00A8   (0x0050)  
+	SDK_UNDEFINED(80,1187) /* TMap<FSoftObjectPath, TWeakObjectPtr<UObject*>> */ __um(BoundObjectMapByPath);       // 0x0058   (0x0050)  
+	SDK_UNDEFINED(80,1188) /* TMap<FSoftObjectPath, TWeakObjectPtr<ULevel*>> */ __um(SubLevelSelectionMapByPath);  // 0x00A8   (0x0050)  
 	TWeakObjectPtr<class ULevel*>                      LevelWithLastSuccessfulResolve;                             // 0x00F8   (0x0008)  
 	unsigned char                                      UnknownData00_6[0x20];                                      // 0x0100   (0x0020)  MISSED
 	FRemoteControlInitialBindingContext                BindingContext;                                             // 0x0120   (0x0070)  
@@ -286,9 +286,9 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControl.RemoteControlDeltaAPITestObject.SetInt32WithSetterValue
-	// void SetInt32WithSetterValue(int32_t NewValue);                                                                          // [0x713dfe0] Final|Native|Public|BlueprintCallable 
+	// void SetInt32WithSetterValue(int32_t NewValue);                                                                          // [0x71d61e0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RemoteControlDeltaAPITestObject.GetInt32WithSetterValue
-	// int32_t GetInt32WithSetterValue();                                                                                       // [0x713d1c0] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// int32_t GetInt32WithSetterValue();                                                                                       // [0x71d53c0] Final|Native|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/RemoteControl.RemoteControlExposeRegistry
@@ -296,9 +296,9 @@ public:
 class URemoteControlExposeRegistry : public UObject
 { 
 public:
-	SDK_UNDEFINED(80,1186) /* TSet<FRCEntityWrapper> */ __um(ExposedEntities);                                     // 0x0028   (0x0050)  
+	SDK_UNDEFINED(80,1189) /* TSet<FRCEntityWrapper> */ __um(ExposedEntities);                                     // 0x0028   (0x0050)  
 	TMap<FName, FGuid>                                 LabelToIdCache;                                             // 0x0078   (0x0050)  
-	SDK_UNDEFINED(80,1187) /* TSet<UScriptStruct*> */  __um(ExposedTypes);                                         // 0x00C8   (0x0050)  
+	SDK_UNDEFINED(80,1190) /* TSet<UScriptStruct*> */  __um(ExposedTypes);                                         // 0x00C8   (0x0050)  
 };
 
 /// Class /Script/RemoteControl.RemoteControlFunctionLibrary
@@ -310,15 +310,15 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControl.RemoteControlFunctionLibrary.ExposeProperty
-	// bool ExposeProperty(class URemoteControlPreset* Preset, class UObject* SourceObject, FString Property, FRemoteControlOptionalExposeArgs args); // [0x7150160] Final|Native|Static|Public|BlueprintCallable 
+	// bool ExposeProperty(class URemoteControlPreset* Preset, class UObject* SourceObject, FString Property, FRemoteControlOptionalExposeArgs args); // [0x71e8360] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RemoteControlFunctionLibrary.ExposeFunction
-	// bool ExposeFunction(class URemoteControlPreset* Preset, class UObject* SourceObject, FString Function, FRemoteControlOptionalExposeArgs args); // [0x714ff60] Final|Native|Static|Public|BlueprintCallable 
+	// bool ExposeFunction(class URemoteControlPreset* Preset, class UObject* SourceObject, FString Function, FRemoteControlOptionalExposeArgs args); // [0x71e8160] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RemoteControlFunctionLibrary.ExposeActor
-	// bool ExposeActor(class URemoteControlPreset* Preset, class AActor* Actor, FRemoteControlOptionalExposeArgs args);        // [0x714fdb0] Final|Native|Static|Public|BlueprintCallable 
+	// bool ExposeActor(class URemoteControlPreset* Preset, class AActor* Actor, FRemoteControlOptionalExposeArgs args);        // [0x71e7fb0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/RemoteControl.RemoteControlFunctionLibrary.ApplyColorWheelDelta
-	// bool ApplyColorWheelDelta(class UObject* targetObject, FString PropertyName, FColorWheelColor& DeltaValue, FColorWheelColor& ReferenceColor, bool bIsInteractive); // [0x714fbc0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// bool ApplyColorWheelDelta(class UObject* targetObject, FString PropertyName, FColorWheelColor& DeltaValue, FColorWheelColor& ReferenceColor, bool bIsInteractive); // [0x71e7dc0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RemoteControl.RemoteControlFunctionLibrary.ApplyColorGradingWheelDelta
-	// bool ApplyColorGradingWheelDelta(class UObject* targetObject, FString PropertyName, FColorGradingWheelColor& DeltaValue, FColorGradingWheelColor& ReferenceColor, bool bIsInteractive, float MinValue, float MaxValue); // [0x714f950] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// bool ApplyColorGradingWheelDelta(class UObject* targetObject, FString PropertyName, FColorGradingWheelColor& DeltaValue, FColorGradingWheelColor& ReferenceColor, bool bIsInteractive, float MinValue, float MaxValue); // [0x71e7b50] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/RemoteControl.RemoteControlInterceptionTestStruct
@@ -350,7 +350,7 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControl.RemoteControlInterceptionTestObject.TestFunction
-	// FRemoteControlInterceptionFunctionParamStruct TestFunction(FRemoteControlInterceptionFunctionParamStruct& InStruct, int32_t InTestFactor); // [0x7150360] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FRemoteControlInterceptionFunctionParamStruct TestFunction(FRemoteControlInterceptionFunctionParamStruct& InStruct, int32_t InTestFactor); // [0x71e8560] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/RemoteControl.RemoteControlPresetGroup
@@ -431,7 +431,7 @@ struct FRemoteControlTestStructOuter
 { 
 	int8_t                                             Int8Value;                                                  // 0x0000   (0x0001)  
 	unsigned char                                      UnknownData00_6[0x7];                                       // 0x0001   (0x0007)  MISSED
-	SDK_UNDEFINED(80,1188) /* TSet<FRemoteControlTestStructInner> */ __um(StructInnerSet);                         // 0x0008   (0x0050)  
+	SDK_UNDEFINED(80,1191) /* TSet<FRemoteControlTestStructInner> */ __um(StructInnerSet);                         // 0x0008   (0x0050)  
 	int32_t                                            Int32Value;                                                 // 0x0058   (0x0004)  
 	FRemoteControlTestStructInner                      RemoteControlTestStructInner;                               // 0x005C   (0x001C)  
 };
@@ -445,7 +445,7 @@ public:
 	unsigned char                                      UnknownData00_6[0x4];                                       // 0x0034   (0x0004)  MISSED
 	TArray<int32_t>                                    IntArray;                                                   // 0x0038   (0x0010)  
 	TArray<FRemoteControlTestStructOuter>              StructOuterArray;                                           // 0x0048   (0x0010)  
-	SDK_UNDEFINED(80,1189) /* TSet<int32_t> */         __um(IntSet);                                               // 0x0058   (0x0050)  
+	SDK_UNDEFINED(80,1192) /* TSet<int32_t> */         __um(IntSet);                                               // 0x0058   (0x0050)  
 	TMap<int32_t, int32_t>                             IntMap;                                                     // 0x00A8   (0x0050)  
 	TMap<int32_t, FRemoteControlTestStructOuter>       StructOuterMap;                                             // 0x00F8   (0x0050)  
 	TMap<FString, FColor>                              StringColorMap;                                             // 0x0148   (0x0050)  
@@ -479,7 +479,7 @@ public:
 class URemoteControlPropertyIdRegistry : public UObject
 { 
 public:
-	SDK_UNDEFINED(80,1190) /* TSet<FRCPropertyIdWrapper> */ __um(IdentifiedFields);                                // 0x0028   (0x0050)  
+	SDK_UNDEFINED(80,1193) /* TSet<FRCPropertyIdWrapper> */ __um(IdentifiedFields);                                // 0x0028   (0x0050)  
 	unsigned char                                      UnknownData00_7[0x18];                                      // 0x0078   (0x0018)  MISSED
 };
 
@@ -502,7 +502,7 @@ public:
 	unsigned char                                      UnknownData00_6[0x4];                                       // 0x0034   (0x0004)  MISSED
 	TArray<int32_t>                                    IntArray;                                                   // 0x0038   (0x0010)  
 	TArray<float>                                      FloatArray;                                                 // 0x0048   (0x0010)  
-	SDK_UNDEFINED(80,1191) /* TSet<int32_t> */         __um(IntSet);                                               // 0x0058   (0x0050)  
+	SDK_UNDEFINED(80,1194) /* TSet<int32_t> */         __um(IntSet);                                               // 0x0058   (0x0050)  
 	TMap<int32_t, int32_t>                             IntMap;                                                     // 0x00A8   (0x0050)  
 	TMap<int32_t, FRemoteControlTestInnerStruct>       IntInnerStructMap;                                          // 0x00F8   (0x0050)  
 	TMap<FString, FColor>                              StringColorMap;                                             // 0x0148   (0x0050)  
@@ -514,7 +514,7 @@ struct FRemoteControlEntity
 { 
 	unsigned char                                      UnknownData00_7[0x8];                                       // 0x0000   (0x0008)  MISSED
 	TMap<FName, FString>                               UserMetadata;                                               // 0x0008   (0x0050)  
-	SDK_UNDEFINED(16,1192) /* TArray<TWeakObjectPtr<URemoteControlBinding*>> */ __um(Bindings);                    // 0x0058   (0x0010)  
+	SDK_UNDEFINED(16,1195) /* TArray<TWeakObjectPtr<URemoteControlBinding*>> */ __um(Bindings);                    // 0x0058   (0x0010)  
 	TWeakObjectPtr<class URemoteControlPreset*>        Owner;                                                      // 0x0068   (0x0008)  
 	FName                                              Label;                                                      // 0x0070   (0x0008)  
 	FGuid                                              ID;                                                         // 0x0078   (0x0010)  
@@ -566,7 +566,7 @@ struct FRemoteControlField : FRemoteControlEntity
 	FName                                              PropertyID;                                                 // 0x00A4   (0x0008)  
 	unsigned char                                      UnknownData01_6[0x4];                                       // 0x00AC   (0x0004)  MISSED
 	FRCFieldPathInfo                                   FieldPathInfo;                                              // 0x00B0   (0x0018)  
-	SDK_UNDEFINED(80,1193) /* TSet<FRemoteControlProtocolBinding> */ __um(ProtocolBindings);                       // 0x00C8   (0x0050)  
+	SDK_UNDEFINED(80,1196) /* TSet<FRemoteControlProtocolBinding> */ __um(ProtocolBindings);                       // 0x00C8   (0x0050)  
 	FSoftClassPath                                     OwnerClass;                                                 // 0x0118   (0x0020)  
 	bool                                               bIsEditorOnly;                                              // 0x0138   (0x0001)  
 	char                                               ActiveMasks;                                                // 0x0139   (0x0001)  
@@ -832,7 +832,7 @@ struct FRemoteControlProtocolEntity
 	TWeakObjectPtr<class URemoteControlPreset*>        Owner;                                                      // 0x0008   (0x0008)  
 	FGuid                                              PropertyID;                                                 // 0x0010   (0x0010)  
 	unsigned char                                      UnknownData01_6[0x8];                                       // 0x0020   (0x0008)  MISSED
-	SDK_UNDEFINED(80,1194) /* TSet<FRemoteControlProtocolMapping> */ __um(Mappings);                               // 0x0028   (0x0050)  
+	SDK_UNDEFINED(80,1197) /* TSet<FRemoteControlProtocolMapping> */ __um(Mappings);                               // 0x0028   (0x0050)  
 	ERCMask                                            OverridenMasks;                                             // 0x0078   (0x0001)  
 	ERCBindingStatus                                   BindingStatus;                                              // 0x0079   (0x0001)  
 	unsigned char                                      UnknownData02_7[0x6];                                       // 0x007A   (0x0006)  MISSED
@@ -854,5 +854,3 @@ struct FRemoteControlTestStruct
 };
 
 #pragma pack(pop)
-
-

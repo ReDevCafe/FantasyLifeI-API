@@ -228,5 +228,3 @@ struct FTransformNoScale
 };
 
 #pragma pack(pop)
-
-

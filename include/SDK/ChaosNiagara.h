@@ -197,5 +197,3 @@ struct FChaosDestructionEvent
 };
 
 #pragma pack(pop)
-
-

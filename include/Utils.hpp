@@ -6,10 +6,9 @@
     #include <stdexcept>
     #include <Windows.h>
     #include "SDK.h"
+    #include "Offset.h"
 
     #define NAME_BUFFER 1024
-
-const uintptr_t GNAME_OFFSET = 0xBF3DA40;
 
 struct FName;
 

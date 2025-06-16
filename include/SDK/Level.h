@@ -24,13 +24,11 @@ public:
 
 	/// Functions
 	// Function /Game/Level/Title/TitleSubLevel_GraphicSetting_Map.TitleLevel_GraphicSettingMap_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x2f06970] Event|Protected|BlueprintEvent 
+	// void ReceiveBeginPlay();                                                                                                 // [0x2f852e0] Event|Protected|BlueprintEvent 
 	// Function /Game/Level/Title/TitleSubLevel_GraphicSetting_Map.TitleLevel_GraphicSettingMap_C.ReceiveTick
-	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x2f06970] Event|Public|BlueprintEvent 
+	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x2f852e0] Event|Public|BlueprintEvent 
 	// Function /Game/Level/Title/TitleSubLevel_GraphicSetting_Map.TitleLevel_GraphicSettingMap_C.ExecuteUbergraph_TitleLevel_GraphicSettingMap
-	// void ExecuteUbergraph_TitleLevel_GraphicSettingMap(int32_t EntryPoint);                                                  // [0x2f06970] Final|HasDefaults    
+	// void ExecuteUbergraph_TitleLevel_GraphicSettingMap(int32_t EntryPoint);                                                  // [0x2f852e0] Final|HasDefaults    
 };
 
 #pragma pack(pop)
-
-

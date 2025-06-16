@@ -91,5 +91,3 @@ public:
 };
 
 #pragma pack(pop)
-
-

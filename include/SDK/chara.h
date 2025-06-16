@@ -22,21 +22,21 @@ public:
 
 	/// Functions
 	// Function /Game/chara/_bluePrints/_test/BP_CharaLight.BP_CharaLight_C.SetCharaLightParamToMPC
-	// void SetCharaLightParamToMPC(class UMaterialParameterCollection* MatParam);                                              // [0x2f06970] Public|BlueprintCallable|BlueprintEvent 
+	// void SetCharaLightParamToMPC(class UMaterialParameterCollection* MatParam);                                              // [0x2f852e0] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/_test/BP_CharaLight.BP_CharaLight_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x2f06970] Event|Public|BlueprintCallable|BlueprintEvent 
+	// void UserConstructionScript();                                                                                           // [0x2f852e0] Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/_test/BP_CharaLight.BP_CharaLight_C.�0�0�0�0�
-	// void _0_0_0_0_();                                                                                                        // [0x2f06970] BlueprintCallable|BlueprintEvent 
+	// void _0_0_0_0_();                                                                                                        // [0x2f852e0] BlueprintCallable|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/_test/BP_CharaLight.BP_CharaLight_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x2f06970] Event|Protected|BlueprintEvent 
+	// void ReceiveBeginPlay();                                                                                                 // [0x2f852e0] Event|Protected|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/_test/BP_CharaLight.BP_CharaLight_C.TransformUpdated
-	// void TransformUpdated();                                                                                                 // [0x2f06970] Event|Public|BlueprintCallable|BlueprintEvent 
+	// void TransformUpdated();                                                                                                 // [0x2f852e0] Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/_test/BP_CharaLight.BP_CharaLight_C.UpdateColorAndBrightness
-	// void UpdateColorAndBrightness();                                                                                         // [0x2f06970] Event|Public|BlueprintCallable|BlueprintEvent 
+	// void UpdateColorAndBrightness();                                                                                         // [0x2f852e0] Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/_test/BP_CharaLight.BP_CharaLight_C.ForceUpdateAllLightParameter
-	// void ForceUpdateAllLightParameter();                                                                                     // [0x2f06970] Event|Public|BlueprintCallable|BlueprintEvent 
+	// void ForceUpdateAllLightParameter();                                                                                     // [0x2f852e0] Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/_test/BP_CharaLight.BP_CharaLight_C.ExecuteUbergraph_BP_CharaLight
-	// void ExecuteUbergraph_BP_CharaLight(int32_t EntryPoint);                                                                 // [0x2f06970] Final                
+	// void ExecuteUbergraph_BP_CharaLight(int32_t EntryPoint);                                                                 // [0x2f852e0] Final                
 };
 
 /// Class /Game/chara/_bluePrints/BpFunc_CharaLight.BpFunc_CharaLight_C
@@ -48,13 +48,11 @@ public:
 
 	/// Functions
 	// Function /Game/chara/_bluePrints/BpFunc_CharaLight.BpFunc_CharaLight_C.�0�0�0�0�IQ
-	// void _0_0_0_0__IQ(class AActor* lightActor, class UObject* __WorldContext);                                              // [0x2f06970] Public|BlueprintCallable|BlueprintEvent 
+	// void _0_0_0_0__IQ(class AActor* lightActor, class UObject* __WorldContext);                                              // [0x2f852e0] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/BpFunc_CharaLight.BpFunc_CharaLight_C.�0�0�0�0�0�0�0�0�0�
-	// void _0_0_0_0_0_0_0_0_0_(class UMaterialParameterCollection* MaterialParameterCollection, class AActor* SelfActor, class UObject* __WorldContext); // [0x2f06970] Public|BlueprintCallable|BlueprintEvent 
+	// void _0_0_0_0_0_0_0_0_0_(class UMaterialParameterCollection* MaterialParameterCollection, class AActor* SelfActor, class UObject* __WorldContext); // [0x2f852e0] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/chara/_bluePrints/BpFunc_CharaLight.BpFunc_CharaLight_C.�0�0�0�0�0�0�0�0�0
-	// void _0_0_0_0_0_0_0_0_0(class UMaterialParameterCollection* MatParam, class ULightComponent* LightComponent, FLinearColor LightColor, double LightIntensity, FLinearColor rimColor, FLinearColor HighlightColor, FLinearColor LineColor, FLinearColor shadowColor, double rimBlur, double highLightBlur, double widthMax, double depthFade, double depthAjust, double lineDensity, double lineOcclusionRate, FLinearColor toonLightColor, FLinearColor allColorAdd, FLinearColor shadeColor, double shade01Range, double shade01Blur, double shade02Range, double shade02Strength, double shade02Blur, double texShade01Range, double texShade01Blur, double texShadeRate, double shadeColorGrayScaleAdd, double shadeColorSaturation, double shadeColorValue, class UObject* __WorldContext); // [0x2f06970] Public|BlueprintCallable|BlueprintEvent 
+	// void _0_0_0_0_0_0_0_0_0(class UMaterialParameterCollection* MatParam, class ULightComponent* LightComponent, FLinearColor LightColor, double LightIntensity, FLinearColor rimColor, FLinearColor HighlightColor, FLinearColor LineColor, FLinearColor shadowColor, double rimBlur, double highLightBlur, double widthMax, double depthFade, double depthAjust, double lineDensity, double lineOcclusionRate, FLinearColor toonLightColor, FLinearColor allColorAdd, FLinearColor shadeColor, double shade01Range, double shade01Blur, double shade02Range, double shade02Strength, double shade02Blur, double texShade01Range, double texShade01Blur, double texShadeRate, double shadeColorGrayScaleAdd, double shadeColorSaturation, double shadeColorValue, class UObject* __WorldContext); // [0x2f852e0] Public|BlueprintCallable|BlueprintEvent 
 };
 
 #pragma pack(pop)
-
-

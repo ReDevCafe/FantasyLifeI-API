@@ -105,5 +105,3 @@ struct FDataflowTerminalNode : FDataflowNode
 };
 
 #pragma pack(pop)
-
-

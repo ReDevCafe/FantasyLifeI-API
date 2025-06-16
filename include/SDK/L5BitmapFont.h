@@ -94,5 +94,3 @@ struct FBMPWord
 };
 
 #pragma pack(pop)
-
-

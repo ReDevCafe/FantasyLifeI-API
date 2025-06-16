@@ -148,5 +148,3 @@ struct FConstSharedStruct
 };
 
 #pragma pack(pop)
-
-

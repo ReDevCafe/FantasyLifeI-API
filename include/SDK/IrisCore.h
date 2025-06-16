@@ -987,5 +987,3 @@ struct FVector3dNetSerializerConfig : FNetSerializerConfig
 };
 
 #pragma pack(pop)
-
-

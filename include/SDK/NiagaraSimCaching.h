@@ -84,5 +84,3 @@ struct FMovieSceneNiagaraCacheSectionTemplate : FMovieSceneTrackImplementation
 };
 
 #pragma pack(pop)
-
-

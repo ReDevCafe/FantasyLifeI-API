@@ -1308,5 +1308,3 @@ struct FToolBarStyle : FSlateWidgetStyle
 };
 
 #pragma pack(pop)
-
-

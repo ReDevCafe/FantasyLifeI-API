@@ -63,5 +63,3 @@ struct FMediaPlayerOptions
 };
 
 #pragma pack(pop)
-
-

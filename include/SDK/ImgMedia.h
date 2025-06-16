@@ -31,17 +31,17 @@ public:
 
 	/// Functions
 	// Function /Script/ImgMedia.ImgMediaSource.SetTokenizedSequencePath
-	// void SetTokenizedSequencePath(FString Path);                                                                             // [0x82983c0] Final|Native|Public|BlueprintCallable 
+	// void SetTokenizedSequencePath(FString Path);                                                                             // [0x832ff20] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ImgMedia.ImgMediaSource.SetSequencePath
-	// void SetSequencePath(FString Path);                                                                                      // [0x8298320] Final|Native|Public|BlueprintCallable 
+	// void SetSequencePath(FString Path);                                                                                      // [0x832fe80] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ImgMedia.ImgMediaSource.RemoveTargetObject
-	// void RemoveTargetObject(class AActor* InActor);                                                                          // [0x8298180] Final|Native|Public|BlueprintCallable 
+	// void RemoveTargetObject(class AActor* InActor);                                                                          // [0x832fce0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ImgMedia.ImgMediaSource.GetSequencePath
-	// FString GetSequencePath();                                                                                               // [0x8298110] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetSequencePath();                                                                                               // [0x832fc70] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ImgMedia.ImgMediaSource.GetProxies
-	// void GetProxies(TArray<FString>& OutProxies);                                                                            // [0x8297f80] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetProxies(TArray<FString>& OutProxies);                                                                            // [0x832fae0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ImgMedia.ImgMediaSource.AddTargetObject
-	// void AddTargetObject(class AActor* InActor);                                                                             // [0x8297f10] Final|Native|Public|BlueprintCallable 
+	// void AddTargetObject(class AActor* InActor);                                                                             // [0x832fa70] Final|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/ImgMedia.ImgMediaSourceCustomizationSequenceProxy
@@ -52,5 +52,3 @@ struct FImgMediaSourceCustomizationSequenceProxy
 };
 
 #pragma pack(pop)
-
-

@@ -88,5 +88,3 @@ public:
 };
 
 #pragma pack(pop)
-
-

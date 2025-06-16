@@ -41,11 +41,11 @@ public:
 
 	/// Functions
 	// Function /Script/CriWareMovieScenes.MovieSceneAtomSection.SetStartOffset
-	// void SetStartOffset(FFrameNumber InStartOffset);                                                                         // [0x60ce000] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetStartOffset(FFrameNumber InStartOffset);                                                                         // [0x6150450] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/CriWareMovieScenes.MovieSceneAtomSection.IsLooping
-	// bool IsLooping();                                                                                                        // [0x7d387b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsLooping();                                                                                                        // [0x7dd0470] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CriWareMovieScenes.MovieSceneAtomSection.GetStartOffset
-	// FFrameNumber GetStartOffset();                                                                                           // [0x60cdfe0] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FFrameNumber GetStartOffset();                                                                                           // [0x6150430] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/CriWareMovieScenes.MovieSceneAtomTrack
@@ -115,5 +115,3 @@ struct FMovieSceneManaSectionTemplate : FMovieSceneEvalTemplate
 };
 
 #pragma pack(pop)
-
-

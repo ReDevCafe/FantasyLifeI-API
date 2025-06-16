@@ -58,5 +58,3 @@ struct FAnimNode_CharamakeBoneModify : FAnimNode_SkeletalControlBase
 };
 
 #pragma pack(pop)
-
-

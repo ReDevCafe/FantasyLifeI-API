@@ -57,5 +57,3 @@ struct FMovieSceneGeometryCollectionSectionTemplate : FMovieSceneEvalTemplate
 };
 
 #pragma pack(pop)
-
-

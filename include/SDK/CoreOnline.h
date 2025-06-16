@@ -38,5 +38,3 @@ struct FUniqueNetIdWrapper
 };
 
 #pragma pack(pop)
-
-

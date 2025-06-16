@@ -16,42 +16,42 @@ public:
     std::string GetIdentifier();
     std::string GetItemIdentifier();
 
-    ERecipeType GetType() const { return this->_object.Type; }
-    void SetType(ERecipeType type) const { this->_object.Type = type; }
+    ERecipeType                     GetType()                                   { return this->_object.Type; }
+    void                            SetType(ERecipeType type)                   { this->_object.Type = type; }
 
-    RecipeDataLifeParamInfo         GetLifeParam() const { return RecipeDataLifeParamInfo(this->_object.lifeParamInfo); }
+    RecipeDataLifeParamInfo         GetLifeParam()                              { return RecipeDataLifeParamInfo(this->_object.lifeParamInfo); }
 
-    ERecipeCategory                 GetCategory() const { return this->_object.Category; }
-    void                            GetCategory(ERecipeCategory category) const { this->_object.Category = category; }
+    ERecipeCategory                 GetCategory()                               { return this->_object.Category; }
+    void                            GetCategory(ERecipeCategory category)       { this->_object.Category = category; }
 
-    ERecipeItemSeries               GetSeries() const { return this->_object.recipeItemSeries; }
-    void                            SetSeries(ERecipeItemSeries serie) const { this->_object.recipeItemSeries = serie; }
+    ERecipeItemSeries               GetSeries()                                 { return this->_object.recipeItemSeries; }
+    void                            SetSeries(ERecipeItemSeries serie)          { this->_object.recipeItemSeries = serie; }
 
-    EItemTitleType                  GetRank() const { return this->_object.titleType; }
-    void                            SetRank(EItemTitleType rank) const { this->_object.titleType = rank; }
+    EItemTitleType                  GetRank()                                   { return this->_object.titleType; }
+    void                            SetRank(EItemTitleType rank)                { this->_object.titleType = rank; }
 
-    ERandomRecipeType               GetRandomRecipeType() const { return this->_object.randomRecipeType; }
-    void                            SetRandomRecipeType(ERandomRecipeType type) const { this->_object.randomRecipeType = type; }
+    ERandomRecipeType               GetRandomRecipeType()                       { return this->_object.randomRecipeType; }
+    void                            SetRandomRecipeType(ERandomRecipeType type) { this->_object.randomRecipeType = type; }
 
     ItemData GetItem();
-    void SetItem(ItemData data) const { this->_object.ItemId = data.getObject().ID; }
+    void                            SetItem(ItemData data)                      { this->_object.ItemId = data.getObject().ID; }
 
-    ERarityType                     GetRarity() const { return this->_object.rarity; }  
-    void                            SetRarity(ERarityType rarity) const { this->_object.rarity = rarity; }
+    ERarityType                     GetRarity()                                 { return this->_object.rarity; }  
+    void                            SetRarity(ERarityType rarity)               { this->_object.rarity = rarity; }
 
-    RecipeDataRewardData            GetRewards() const { return RecipeDataRewardData(this->_object.rewardData); }
+    RecipeDataRewardData            GetRewards()                                { return RecipeDataRewardData(this->_object.rewardData); }
 
     RecipeDataItemInfo              GetRecipeItem(int index);
     void                            SetRecipeItem(ItemData data, int index, int32_t quantity);
     void                            AddRecipeItem(ItemData data, int32_t quantity);
 
-    RecipeDataItemInfo              GetRebuildItem() const { return RecipeDataItemInfo(this->_object.rebuildItem); }
+    RecipeDataItemInfo              GetRebuildItem()                            { return RecipeDataItemInfo(this->_object.rebuildItem); }
 
-    bool                            GetRequestable() const { return this->_object.requestable; }
-    void                            SetRequestable(bool i) const { this->_object.requestable = i; }
+    bool                            GetRequestable()                            { return this->_object.requestable; }
+    void                            SetRequestable(bool i)                      { this->_object.requestable = i; }
 
-    bool                            GetNotAcquiredLife() const {  return this->_object.notAcquiredLife; }
-    void                            SetNotAcquiredLife(bool i) const { this->_object.notAcquiredLife = i; }
+    bool                            GetNotAcquiredLife()                        { return this->_object.notAcquiredLife; }
+    void                            SetNotAcquiredLife(bool i)                  { this->_object.notAcquiredLife = i; }
         
 };
 

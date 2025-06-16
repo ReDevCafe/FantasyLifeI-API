@@ -34,9 +34,9 @@ public:
 
 	/// Functions
 	// Function /Script/ExtraAssets.GameDataAsset.ImportCSV
-	// void ImportCSV();                                                                                                        // [0x6041db0] Final|Native|Public  
+	// void ImportCSV();                                                                                                        // [0x60c4200] Final|Native|Public  
 	// Function /Script/ExtraAssets.GameDataAsset.ExportCSV
-	// void ExportCSV();                                                                                                        // [0x6041d90] Final|Native|Public|Const 
+	// void ExportCSV();                                                                                                        // [0x60c41e0] Final|Native|Public|Const 
 };
 
 /// Class /Script/ExtraAssets.TextAsset
@@ -66,5 +66,3 @@ struct FGDId
 };
 
 #pragma pack(pop)
-
-
