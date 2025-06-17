@@ -15,6 +15,8 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     mlLogger.info("Mod loader has been started");
     Patcher patcher;
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
+    static const unsigned char eacBypassPatch[] = {0x48, 0x31, 0xC0, 0x90, 0x90, 0x90};
+    patcher.add(new Patch(Priority::HIGH, "EACBypass", 0x60c1e76, eacBypassPatch, sizeof(eacBypassPatch)));
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
