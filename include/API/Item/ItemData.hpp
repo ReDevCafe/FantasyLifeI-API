@@ -8,8 +8,7 @@ class ItemData : public GameObjectProxy<FGDItemData>
 {
     public:
         ItemData(FGDItemData& data) :
-            GameObjectProxy(data),
-            _priceInfo(data.priceInfo)
+            GameObjectProxy(data)
         {};
 
         std::string         GetIdentifier();
@@ -65,7 +64,7 @@ class ItemData : public GameObjectProxy<FGDItemData>
         bool                GetDisablePresentToMulti()          { return this->_object.disablePresentToMultiplay; }
         void                SetDisablePresentToMulti(bool value){ this->_object.disablePresentToMultiplay = value;}
 
-        CommonPriceInfo     GetPriceInfo()                      { return _priceInfo; }
+        CommonPriceInfo     GetPriceInfo()                      { return CommonPriceInfo(this->_object.priceInfo); }
 
         ERarityType         GetRarityType()                     { return this->_object.rarity; }
         void                SetRarityType(ERarityType type)     { this->_object.rarity = type; }
@@ -75,8 +74,5 @@ class ItemData : public GameObjectProxy<FGDItemData>
 
         EItemEffectType     GetEffectType()                     { return this->_object.dropEffType; }
         void                SetEffectType(EItemEffectType type) { this->_object.dropEffType = type; }
-
-        private:
-            CommonPriceInfo _priceInfo;
 };
 #endif // !ITEMDATA_HPP

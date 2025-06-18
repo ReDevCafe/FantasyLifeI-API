@@ -4,14 +4,16 @@
 
     #include "../EntityStats.hpp"
     #include "../EntityStatus.hpp"
+    #include "Inventory.hpp"
     #include <cstddef>
 
 class Player {
     public:
-        Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV);
+        Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV, FInventoryStatusDataP& inventoryStatusP);
         ~Player() = default;
         EntityStats stats;
         EntityStatus status;
+        Inventory inventory;
         ELifeType getLifeType();
         void setExp(ELifeType life, uint32_t exp);
         void setLevel(ELifeType life, uint16_t lvl);

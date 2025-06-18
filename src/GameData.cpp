@@ -19,10 +19,12 @@ GameData::GameData(uintptr_t baseAddress) : _staticDataManager(nullptr), _dynami
 void GameData::initOthersData() {
     this->waitObject(&this->_dynamicDataManager->GDDCharaStatus);
     this->waitObject(&this->_staticDataManager->m_CharaParameter);
+    this->waitObject(&this->_dynamicDataManager->GDDInventoryStatus);
     _player = std::make_unique<Player>(
         this->_staticDataManager->m_CharaParameter->m_dataMap.Data[0].Value.Second,
         static_cast<FCharaStatusP *>(this->_dynamicDataManager->GDDCharaStatus->m_permanent.m_stAvatarP.Data),
-        this->_dynamicDataManager->GDDCharaStatus->m_volatile.m_stAvatarV.Data[0]
+        this->_dynamicDataManager->GDDCharaStatus->m_volatile.m_stAvatarV.Data[0],
+        this->_dynamicDataManager->GDDInventoryStatus->m_permanent
     );
 }
 

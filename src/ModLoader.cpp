@@ -1,5 +1,6 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
+#include "API/Item/ItemWeaponData.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -21,20 +22,10 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameCache->PostLoadCache();
     //TODO: Load PostLoad mod function
 
-
-    gameData->waitObject(&gameData->getDynamicDataManager()->GDDInventoryStatus);
-    logger->info("Found InvStatus => ", std::hex, gameData->getDynamicDataManager()->GDDInventoryStatus);
-
-    USaveData* help;
-    gameData->waitObject(&help, "SaveData", 0);
-    logger->info("Found SaveData => ", std::hex, help);
-
-    auto test = gameData->getDynamicDataManager()->GDDInventoryStatus->m_permanent;
-
-    logger->info("Found SaveData => ", std::hex, gameData->getDynamicDataManager()->GDDInventoryStatus, std::dec, " ", test.invConsume.Count);
-    auto item = gameCache->GetItem(Utils::FNameToString(test.invConsume.Data[0].ItemId));
-    logger->verbose("First item in InvConsume: ", item.GetName(LANG::ENGLISH));
-
+    auto inv = gameData->getPlayer()->inventory;
+    auto swordOfTimeInstance = inv.GetWeapon(6);
+    auto sword = swordOfTimeInstance.GetItem<ItemWeaponData>();
+    inv.SetWeapon(6, swordOfTimeInstance);
     return 0;
 }
 

@@ -11,13 +11,7 @@ class ItemArmorData : public ItemUniqueSkillEquipData
     public:
         ItemArmorData(FGDItemArmorData& data) : 
             ItemUniqueSkillEquipData(data)
-        {
-            //for(int i = 0; data.physicalDefenseList.Count; i++)
-            //    _physicalDefense.emplace_back(data.physicalDefenseList.Data[i]);
-            
-            //for(int i = 0; data.magicDefenseList.Count; i++)
-            //    _magicDefense.emplace_back(data.magicDefenseList.Data[i]);
-        };
+        {};
 
         bool GetDisableBurial()             { return  reinterpret_cast<FGDItemArmorData*>(&this->_object)->disableBurial; }
         void SetDisableBurial(bool value)   { reinterpret_cast<FGDItemArmorData*>(&this->_object)->disableBurial = value; }

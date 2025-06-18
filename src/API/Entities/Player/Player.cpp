@@ -3,7 +3,11 @@
 #include "Utils.hpp"
 #include "ModLoader.hpp"
 
-Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV) : stats(charaParameter), status(*charaStatusP, charaStatusV) {}
+Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV, FInventoryStatusDataP& inventoryStatusP) : 
+    stats(charaParameter),
+    status(*charaStatusP, charaStatusV),
+    inventory(inventoryStatusP)
+{}
 
 ELifeType Player::getLifeType() {
     FAvatarCharaStatusP *avatarStatus = reinterpret_cast<FAvatarCharaStatusP *>(&this->status.getPermanentStatus());
