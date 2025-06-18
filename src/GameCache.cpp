@@ -15,27 +15,27 @@
 
 GameCache::GameCache()
 {
-    ModLoader::logger->info("Initialize GameCache");
+    ModLoader::logger->verbose("Initialize GameCache");
     auto* gmd = ModLoader::gameData;
     auto* sdm = gmd->getStaticDataManager();
 
     initNoun(gmd, sdm);
-    ModLoader::logger->info("Cached: Nouns Registries");
+    ModLoader::logger->verbose("Cached: Nouns Registries");
 
     initText(gmd, sdm);
-    ModLoader::logger->info("Cached: Text Registries");
+    ModLoader::logger->verbose("Cached: Text Registries");
 
     initItem(gmd, sdm);
-    ModLoader::logger->info("Cached: Items Registries");
+    ModLoader::logger->verbose("Cached: Items Registries");
 
     initRecipe(gmd, sdm);
-    ModLoader::logger->info("Cached: Recipes Registries");   
+    ModLoader::logger->verbose("Cached: Recipes Registries");   
 
-    initPickParam(gmd, sdm);
-    ModLoader::logger->info("Cached: CommonPickParams Registries");
+    initCommonPickParam(gmd, sdm);
+    ModLoader::logger->verbose("Cached: CommonPickParams Registries");
 
     initChara(gmd, sdm);
-    ModLoader::logger->info("Cached: Basic Chara Registries");
+    ModLoader::logger->verbose("Cached: Basic Chara Registries");
 }
 
 void GameCache::PostLoadCache()
@@ -44,10 +44,10 @@ void GameCache::PostLoadCache()
     auto* sdm = gmd->getStaticDataManager();
 
     initSubLevel(gmd, sdm);
-    ModLoader::logger->info("Cached: Sub level registries");
+    ModLoader::logger->verbose("Cached: Sub level registries");
 
     initMap(gmd, sdm);
-    ModLoader::logger->info("Cached: Map registries");
+    ModLoader::logger->verbose("Cached: Map registries");
 
 
     ModLoader::logger->info("OK: GameCache has been initialized");
@@ -397,14 +397,13 @@ void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
     } 
 }
 
-void GameCache::initPickParam(GameData* gmd, UStaticDataManager* sdm)
+void GameCache::initCommonPickParam(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_CommonPickParamData);
     for (int i = 0; i < sdm->m_CommonPickParamData->m_dataMap.Data.Count; i++)
     {
         CommonPickParamData param{ sdm->m_CommonPickParamData->m_dataMap.Data[i].Value.Second }; 
         this->_cacheCommonPickParam.emplace(param.GetIdentifier(), std::make_unique<CommonPickParamData>(param));
-        param.SetIsBoss(true);
     } 
 }
 

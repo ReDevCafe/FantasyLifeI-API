@@ -49,7 +49,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         }
         case DLL_PROCESS_DETACH:
         {
-            ModLoader::logger->warn("Mod loader detached from process");
+            ModLoader::logger->verbose("Mod loader detached from process");
             if (LoaderThread)
                 CloseHandle(LoaderThread);
             FreeConsole();
