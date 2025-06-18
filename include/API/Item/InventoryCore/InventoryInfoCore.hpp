@@ -17,11 +17,7 @@ class InventoryInfoCore : public GameObjectProxy<FInventoryInfoCore>
 
     public:
     template<typename T>
-    T           GetItem()
-    { 
-        auto temp = GetItemUnsafe();
-        return *reinterpret_cast<T*>(&temp); 
-    }
+    T           GetItem()                   { ItemData temp = GetItemUnsafe(); return *reinterpret_cast<T*>(&temp); }
 
     uint32_t    GetOrder()                  { return  this->_object.getOrder; }
     void        SetOrder(int32_t value)     { this->_object.getOrder = value; }
