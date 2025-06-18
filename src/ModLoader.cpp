@@ -22,6 +22,18 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     //TODO: Load PostLoad mod function
 
 
+    gameData->waitObject(&gameData->getDynamicDataManager()->GDDInventoryStatus);
+    logger->info("Found InvStatus => ", std::hex, gameData->getDynamicDataManager()->GDDInventoryStatus);
+
+    USaveData* help;
+    gameData->waitObject(&help, "SaveData", 0);
+    logger->info("Found SaveData => ", std::hex, help);
+
+    auto test = gameData->getDynamicDataManager()->GDDInventoryStatus->m_permanent;
+
+    logger->info("Found SaveData => ", std::hex, gameData->getDynamicDataManager()->GDDInventoryStatus, std::dec, " ", test.invConsume.Count);
+    auto item = gameCache->GetItem(Utils::FNameToString(test.invConsume.Data[0].ItemId));
+    logger->verbose("First item in InvConsume: ", item.GetName(LANG::ENGLISH));
 
     return 0;
 }
