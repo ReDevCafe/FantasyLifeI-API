@@ -6,14 +6,26 @@ GameCache *ModLoader::gameCache = nullptr;
 Logger *ModLoader::logger = nullptr;
 ModEnvironnement *ModLoader::modEnvironnement = nullptr;
 
-DWORD WINAPI ModLoader::init(LPVOID lpParam) {
+DWORD WINAPI ModLoader::init(LPVOID parameter) {
+    LPMODULEINFO moduleInfo = reinterpret_cast<LPMODULEINFO>(parameter);
     logger = new Logger("ModLoader");
     logger->info("Mod loader has been started");
     Patcher patcher;
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
-    static const unsigned char eacBypassPatch[] = {0x48, 0x31, 0xC0, 0x90, 0x90, 0x90};
+    const unsigned char eacBypassPatch[] = {0x48, 0x31, 0xC0, 0x90, 0x90, 0x90};
     patcher.add(new Patch(Priority::HIGH, "EACBypass", 0x60c1e76, eacBypassPatch, sizeof(eacBypassPatch)));
-    patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
+    //patcher.add(new EventHook(EventType::ClickEvent, 0x6604cb9));
+    const uint8_t eacPattern[] = {
+        0xFF, 0x15, 0x00, 0x00, 0x00, 0x00, 0x84, 0xC0, 0x74, 0x09, 0x33, 0xD2
+    };
+    const char* mask = "xx????xxxxxx";
+    try {
+        uintptr_t address = MemoryHelper::findPattern(baseAddress, lpParam->SizeOfImage, eacPattern, mask);
+        ModLoader::logger->info(std::hex, address);
+    } catch (const std::exception &exception) {
+        ModLoader::logger->info(exception.what());
+    }
+    
     patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
 
@@ -41,9 +53,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
             std::cout.clear();
             std::cerr.clear();
-
+            
             Utils::EnableAnsiColors();
-            LoaderThread = CreateThread(nullptr, 0, ModLoader::init, nullptr, 0, nullptr);
+            MODULEINFO moduleInfo{};
+            GetModuleInformation(GetCurrentProcess(), GetModuleHandle(nullptr), &moduleInfo, sizeof(MODULEINFO));
+            LoaderThread = CreateThread(nullptr, 0, ModLoader::init, &moduleInfo, 0, nullptr);
             if (LoaderThread)
                 CloseHandle(LoaderThread);
             break;
