@@ -1,4 +1,5 @@
 #include "Hook/MemoryHelper.hpp"
+#include "ModLoader.hpp"
 
 uintptr_t MemoryHelper::findFreeMemory(uintptr_t address, uint8_t length) {
     unsigned char *ptr = (unsigned char *) address;
@@ -21,6 +22,36 @@ bool MemoryHelper::isFree(uintptr_t address, uint8_t length) {
     }
     return true;
 }
+
+bool MemoryHelper::isReadable(void *ptr) {
+    MEMORY_BASIC_INFORMATION mbi = {};
+    if (VirtualQuery(ptr, &mbi, sizeof(mbi)) == 0)
+        return false;
+    DWORD protect = mbi.Protect;
+    if (protect & PAGE_GUARD || protect == PAGE_NOACCESS)
+        return false;
+    return protect & (PAGE_READONLY | PAGE_READWRITE | PAGE_EXECUTE_READ | PAGE_EXECUTE_READWRITE);
+}
+
+uintptr_t MemoryHelper::findPattern(uintptr_t start, size_t rangeSize, const uint8_t* pattern, const char* mask) {
+    size_t patternLength = std::strlen(mask);
+    for (size_t i = 0; i <= rangeSize - patternLength; ++i) {
+        uintptr_t currentAddress = start + i;
+        uint8_t* memory = reinterpret_cast<uint8_t*>(currentAddress);
+        bool match = true;
+        for (size_t j = 0; j < patternLength; ++j) {
+            if (mask[j] == '?') continue;
+            if (memory[j] != pattern[j]) {
+                match = false;
+                break;
+            }
+        }
+        if (match)
+            return currentAddress;
+    }
+    throw std::out_of_range("Pattern not found");
+}
+
 
 CONTEXT MemoryHelper::getPreviousFrame(CONTEXT originalCtx, uint8_t nth) {
     DWORD64 imageBase = 0;

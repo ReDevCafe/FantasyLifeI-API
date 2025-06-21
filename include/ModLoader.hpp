@@ -10,12 +10,14 @@
     #include "Patcher/Patcher.hpp"
     #include "Patcher/Patches/EventHook.hpp"
 
+    #include <psapi.h>
+
 class ModLoader {
     public:
         static GameData *gameData;
         static GameCache *gameCache;
         static Logger *logger; 
-        static DWORD WINAPI init(LPVOID lpParam);
+        static DWORD WINAPI init(LPVOID parameter);
     protected:
     private:
 };
