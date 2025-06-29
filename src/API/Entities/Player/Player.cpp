@@ -3,10 +3,10 @@
 #include "Utils.hpp"
 #include "ModLoader.hpp"
 
-Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV, FInventoryStatusDataP& inventoryStatusP) : 
+Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV, FInventoryStatusDataP& inventoryStatusP, FInventoryStatusDataV& inventoryStatusV) : 
     stats(charaParameter),
     status(*charaStatusP, charaStatusV),
-    inventory(inventoryStatusP)
+    inventory(inventoryStatusP, inventoryStatusV)
 {}
 
 ELifeType Player::getLifeType() {

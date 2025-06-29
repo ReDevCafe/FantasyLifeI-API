@@ -18,14 +18,14 @@ void Inventory::SetConsumable(int index, InventoryInfoStackable value)
 
 InventoryInfoEquip Inventory::GetWeapon(int index)
 {
-    FInventoryInfoWeapon temp = TArrayHelper<FInventoryInfoWeapon>::Get(_permanentStatus.invWeapon, index);
+    FInventoryInfoWeapon temp = TArrayHelper<FInventoryInfoWeapon>::Get(_permanentStatus.invInstantCharaWeapon, index);
     return InventoryInfoEquip(*reinterpret_cast<FInventoryInfoEquip*>(&temp)); 
 }
 
 void Inventory::SetWeapon(int index, InventoryInfoEquip value)
 { 
     TArrayHelper<FInventoryInfoWeapon>::Set(
-        _permanentStatus.invWeapon, 
+        _permanentStatus.invInstantCharaWeapon, 
         index,
         *reinterpret_cast<FInventoryInfoWeapon*>(&value.getObject())
     );
@@ -33,14 +33,14 @@ void Inventory::SetWeapon(int index, InventoryInfoEquip value)
 
 InventoryInfoEquip Inventory::GetLifeTools(int index)
 {
-    FInventoryInfoLifeTools temp = TArrayHelper<FInventoryInfoLifeTools>::Get(_permanentStatus.invLifeTools, index);
+    FInventoryInfoLifeTools temp = TArrayHelper<FInventoryInfoLifeTools>::Get(_volatileStatus.invReceivedCharaLifeTools, index);
     return InventoryInfoEquip(*reinterpret_cast<FInventoryInfoEquip*>(&temp)); 
 }
 
 void Inventory::SetLifeTools(int index, InventoryInfoEquip value)
 { 
     TArrayHelper<FInventoryInfoLifeTools>::Set(
-        _permanentStatus.invLifeTools, 
+        _volatileStatus.invReceivedCharaLifeTools, 
         index,
         *reinterpret_cast<FInventoryInfoLifeTools*>(&value.getObject())
     );

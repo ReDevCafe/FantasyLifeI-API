@@ -1,6 +1,7 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
 #include "API/Item/ItemWeaponData.hpp"
+#include "API/Identifier/ItemIdentifier.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -14,18 +15,33 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
-    gameData->initOthersData();
     gameCache = new GameCache();
     //TODO: Load PreLoad mod function
 
+    auto item = gameCache->GetItem(WEAPON_GREATSWORD_OF_TIME);
+    auto name = item.getObject().ID;
+    logger->verbose("TIME FNAME: ", name.ComparisonIndex, ", ", name.Number);
+
+    auto item1 = gameCache->GetItem(WEAPON_IRON_SWORD);
+    auto name1 = item1.getObject().ID;
+    logger->verbose("IRON FNAME: ", name1.ComparisonIndex, ", ", name1.Number);
 
     gameCache->PostLoadCache();
+    gameData->initOthersData();
+
     //TODO: Load PostLoad mod function
 
     auto inv = gameData->getPlayer()->inventory;
-    auto swordOfTimeInstance = inv.GetWeapon(6);
-    auto sword = swordOfTimeInstance.GetItem<ItemWeaponData>();
-    inv.SetWeapon(6, swordOfTimeInstance);
+
+    
+    for(int i = 0; i < 999; ++i)
+        logger->verbose(inv.GetWeapon(i).getObject().ItemId.ComparisonIndex);
+
+    
+    auto swordOfTimeInstance = inv.GetWeapon(0);
+    //auto sword = swordOfTimeInstance.GetItem<ItemWeaponData>();
+    //inv.SetWeapon(1, swordOfTimeInstance);
+    
     return 0;
 }
 

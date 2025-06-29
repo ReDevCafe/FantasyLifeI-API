@@ -8,12 +8,14 @@
 class Inventory
 {
     public:
-    Inventory(FInventoryStatusDataP& permanent) : 
-        _permanentStatus(permanent)
+    Inventory(FInventoryStatusDataP& dpermanent,  FInventoryStatusDataV& dvolatile) : 
+        _permanentStatus(dpermanent),
+        _volatileStatus(dvolatile)
     {};
 
     private:
     FInventoryStatusDataP   &_permanentStatus;
+    FInventoryStatusDataV  &_volatileStatus;
     
     public:
     InventoryInfoStackable  GetConsumable       (int index);

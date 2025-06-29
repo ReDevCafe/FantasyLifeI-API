@@ -9,7 +9,7 @@
 
 class Player {
     public:
-        Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV, FInventoryStatusDataP& inventoryStatusP);
+        Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV, FInventoryStatusDataP& inventoryStatusP, FInventoryStatusDataV& inventoryStatusV);
         ~Player() = default;
         EntityStats stats;
         EntityStatus status;
