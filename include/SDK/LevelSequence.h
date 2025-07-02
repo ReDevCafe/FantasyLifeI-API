@@ -56,13 +56,13 @@ public:
 
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequence.RemoveMetaDataByClass
-	// void RemoveMetaDataByClass(class UClass* InClass);                                                                       // [0x4e000b0] Final|Native|Public|BlueprintCallable 
+	// void RemoveMetaDataByClass(class UClass* InClass);                                                                       // [0x4e4f880] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequence.FindOrAddMetaDataByClass
-	// class UObject* FindOrAddMetaDataByClass(class UClass* InClass);                                                          // [0x4dff500] Final|Native|Public|BlueprintCallable 
+	// class UObject* FindOrAddMetaDataByClass(class UClass* InClass);                                                          // [0x4e4ecd0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequence.FindMetaDataByClass
-	// class UObject* FindMetaDataByClass(class UClass* InClass);                                                               // [0x4dff500] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UObject* FindMetaDataByClass(class UClass* InClass);                                                               // [0x4e4ecd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequence.CopyMetaData
-	// class UObject* CopyMetaData(class UObject* InMetaData);                                                                  // [0x4dff050] Final|Native|Public|BlueprintCallable 
+	// class UObject* CopyMetaData(class UObject* InMetaData);                                                                  // [0x4e4e820] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/LevelSequence.LevelSequenceBurnInInitSettings
@@ -85,7 +85,7 @@ public:
 
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-	// void SetBurnIn(FSoftClassPath InBurnInClass);                                                                            // [0x4e004e0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetBurnIn(FSoftClassPath InBurnInClass);                                                                            // [0x4e4fcb0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Struct /Script/LevelSequence.LevelSequenceCameraSettings
@@ -123,39 +123,39 @@ public:
 
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceActor.ShowBurnin
-	// void ShowBurnin();                                                                                                       // [0x4e00780] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ShowBurnin();                                                                                                       // [0x4e4ff50] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.SetSequence
-	// void SetSequence(class ULevelSequence* InSequence);                                                                      // [0x4e006a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSequence(class ULevelSequence* InSequence);                                                                      // [0x4e4fe70] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.SetReplicatePlayback
-	// void SetReplicatePlayback(bool ReplicatePlayback);                                                                       // [0x4e00600] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetReplicatePlayback(bool ReplicatePlayback);                                                                       // [0x4e4fdd0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.SetBindingByTag
-	// void SetBindingByTag(FName BindingTag, TArray<AActor*>& Actors, bool bAllowBindingsFromAsset);                           // [0x4e003b0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetBindingByTag(FName BindingTag, TArray<AActor*>& Actors, bool bAllowBindingsFromAsset);                           // [0x4e4fb80] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.SetBinding
-	// void SetBinding(FMovieSceneObjectBindingID Binding, TArray<AActor*>& Actors, bool bAllowBindingsFromAsset);              // [0x4e00250] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetBinding(FMovieSceneObjectBindingID Binding, TArray<AActor*>& Actors, bool bAllowBindingsFromAsset);              // [0x4e4fa20] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.ResetBindings
-	// void ResetBindings();                                                                                                    // [0x4e00200] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResetBindings();                                                                                                    // [0x4e4f9d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.ResetBinding
-	// void ResetBinding(FMovieSceneObjectBindingID Binding);                                                                   // [0x4e00140] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResetBinding(FMovieSceneObjectBindingID Binding);                                                                   // [0x4e4f910] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.RemoveBindingByTag
-	// void RemoveBindingByTag(FName Tag, class AActor* Actor);                                                                 // [0x4dfffe0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RemoveBindingByTag(FName Tag, class AActor* Actor);                                                                 // [0x4e4f7b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.RemoveBinding
-	// void RemoveBinding(FMovieSceneObjectBindingID Binding, class AActor* Actor);                                             // [0x4dffee0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RemoveBinding(FMovieSceneObjectBindingID Binding, class AActor* Actor);                                             // [0x4e4f6b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.OnLevelSequenceLoaded__DelegateSignature
-	// void OnLevelSequenceLoaded__DelegateSignature();                                                                         // [0x2f852e0] Public|Delegate      
+	// void OnLevelSequenceLoaded__DelegateSignature();                                                                         // [0x2fd44f0] Public|Delegate      
 	// Function /Script/LevelSequence.LevelSequenceActor.HideBurnin
-	// void HideBurnin();                                                                                                       // [0x4dffdb0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void HideBurnin();                                                                                                       // [0x4e4f580] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.GetSequencePlayer
-	// class ULevelSequencePlayer* GetSequencePlayer();                                                                         // [0x4dffd10] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class ULevelSequencePlayer* GetSequencePlayer();                                                                         // [0x4e4f4e0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceActor.GetSequence
-	// class ULevelSequence* GetSequence();                                                                                     // [0x4dffca0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class ULevelSequence* GetSequence();                                                                                     // [0x4e4f470] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceActor.FindNamedBindings
-	// TArray<FMovieSceneObjectBindingID> FindNamedBindings(FName Tag);                                                         // [0x4dff680] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FMovieSceneObjectBindingID> FindNamedBindings(FName Tag);                                                         // [0x4e4ee50] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceActor.FindNamedBinding
-	// FMovieSceneObjectBindingID FindNamedBinding(FName Tag);                                                                  // [0x4dff5a0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FMovieSceneObjectBindingID FindNamedBinding(FName Tag);                                                                  // [0x4e4ed70] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceActor.AddBindingByTag
-	// void AddBindingByTag(FName BindingTag, class AActor* Actor, bool bAllowBindingsFromAsset);                               // [0x4dfef40] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AddBindingByTag(FName BindingTag, class AActor* Actor, bool bAllowBindingsFromAsset);                               // [0x4e4e710] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.AddBinding
-	// void AddBinding(FMovieSceneObjectBindingID Binding, class AActor* Actor, bool bAllowBindingsFromAsset);                  // [0x4dfedf0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AddBinding(FMovieSceneObjectBindingID Binding, class AActor* Actor, bool bAllowBindingsFromAsset);                  // [0x4e4e5c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/LevelSequence.ReplicatedLevelSequenceActor
@@ -220,9 +220,9 @@ public:
 
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceBurnIn.SetSettings
-	// void SetSettings(class UObject* InSettings);                                                                             // [0x2f852e0] RequiredAPI|Event|Public|BlueprintEvent 
+	// void SetSettings(class UObject* InSettings);                                                                             // [0x2fd44f0] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/LevelSequence.LevelSequenceBurnIn.GetSettingsClass
-	// class UClass* GetSettingsClass();                                                                                        // [0x4dffd30] RequiredAPI|Native|Event|Public|BlueprintEvent|Const 
+	// class UClass* GetSettingsClass();                                                                                        // [0x4e4f500] RequiredAPI|Native|Event|Public|BlueprintEvent|Const 
 };
 
 /// Class /Script/LevelSequence.LevelSequenceDirector
@@ -241,23 +241,23 @@ public:
 
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceDirector.OnCreated
-	// void OnCreated();                                                                                                        // [0x2f852e0] RequiredAPI|Event|Public|BlueprintEvent 
+	// void OnCreated();                                                                                                        // [0x2fd44f0] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetSequence
-	// class UMovieSceneSequence* GetSequence();                                                                                // [0x4dffce0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// class UMovieSceneSequence* GetSequence();                                                                                // [0x4e4f4b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetRootSequenceTime
-	// FQualifiedFrameTime GetRootSequenceTime();                                                                               // [0x4dffc60] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FQualifiedFrameTime GetRootSequenceTime();                                                                               // [0x4e4f430] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetMasterSequenceTime
-	// FQualifiedFrameTime GetMasterSequenceTime();                                                                             // [0x4dffc20] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FQualifiedFrameTime GetMasterSequenceTime();                                                                             // [0x4e4f3f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetCurrentTime
-	// FQualifiedFrameTime GetCurrentTime();                                                                                    // [0x4dffbe0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FQualifiedFrameTime GetCurrentTime();                                                                                    // [0x4e4f3b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetBoundObjects
-	// TArray<UObject*> GetBoundObjects(FMovieSceneObjectBindingID ObjectBinding);                                              // [0x4dffad0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TArray<UObject*> GetBoundObjects(FMovieSceneObjectBindingID ObjectBinding);                                              // [0x4e4f2a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetBoundObject
-	// class UObject* GetBoundObject(FMovieSceneObjectBindingID ObjectBinding);                                                 // [0x4dffa00] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// class UObject* GetBoundObject(FMovieSceneObjectBindingID ObjectBinding);                                                 // [0x4e4f1d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetBoundActors
-	// TArray<AActor*> GetBoundActors(FMovieSceneObjectBindingID ObjectBinding);                                                // [0x4dff8f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TArray<AActor*> GetBoundActors(FMovieSceneObjectBindingID ObjectBinding);                                                // [0x4e4f0c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetBoundActor
-	// class AActor* GetBoundActor(FMovieSceneObjectBindingID ObjectBinding);                                                   // [0x4dff820] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// class AActor* GetBoundActor(FMovieSceneObjectBindingID ObjectBinding);                                                   // [0x4e4eff0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/LevelSequence.LegacyLevelSequenceDirectorBlueprint
@@ -279,9 +279,9 @@ public:
 
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequencePlayer.GetActiveCameraComponent
-	// class UCameraComponent* GetActiveCameraComponent();                                                                      // [0x4dff7e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UCameraComponent* GetActiveCameraComponent();                                                                      // [0x4e4efb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
-	// class ULevelSequencePlayer* CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, FMovieSceneSequencePlaybackSettings Settings, class ALevelSequenceActor*& OutActor); // [0x4dff0d0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class ULevelSequencePlayer* CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, FMovieSceneSequencePlaybackSettings Settings, class ALevelSequenceActor*& OutActor); // [0x4e4e8a0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/LevelSequence.LevelSequenceProjectSettings
@@ -311,15 +311,15 @@ public:
 
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceMediaController.SynchronizeToServer
-	// void SynchronizeToServer(float DesyncThresholdSeconds);                                                                  // [0x4e007b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SynchronizeToServer(float DesyncThresholdSeconds);                                                                  // [0x4e4ff80] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.Play
-	// void Play();                                                                                                             // [0x4dffdf0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Play();                                                                                                             // [0x4e4f5c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.OnRep_ServerStartTimeSeconds
-	// void OnRep_ServerStartTimeSeconds();                                                                                     // [0x4dffdd0] Final|RequiredAPI|Native|Private 
+	// void OnRep_ServerStartTimeSeconds();                                                                                     // [0x4e4f5a0] Final|RequiredAPI|Native|Private 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.GetSequence
-	// class ALevelSequenceActor* GetSequence();                                                                                // [0x4dffcc0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class ALevelSequenceActor* GetSequence();                                                                                // [0x4e4f490] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.GetMediaComponent
-	// class UMediaComponent* GetMediaComponent();                                                                              // [0x4d2c4f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UMediaComponent* GetMediaComponent();                                                                              // [0x4d7bbb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/LevelSequence.LegacyLazyObjectPtrFragment
@@ -385,3 +385,5 @@ struct FLevelSequenceObject
 };
 
 #pragma pack(pop)
+
+

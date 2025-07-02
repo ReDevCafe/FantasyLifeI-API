@@ -1,4 +1,3 @@
-#pragma once
 
 /********************************************************
 *                                                       *
@@ -117,6 +116,8 @@
 #include "SDK/EngineMessages.h"
 #include "SDK/EngineSettings.h"
 #include "SDK/EnhancedInput.h"
+#include "SDK/event.h"
+#include "SDK/Evt.h"
 #include "SDK/EyeTracker.h"
 #include "SDK/FacialAnimation.h"
 #include "SDK/FieldMemoCore.h"
@@ -133,7 +134,8 @@
 #include "SDK/GooglePAD.h"
 #include "SDK/KawaiiPhysics.h"
 #include "SDK/NiagaraUIRenderer.h"
-#include "SDK/merged_Graphics_Program.h"
+#include "SDK/Program.h"
+#include "SDK/Graphics.h"
 #include "SDK/HeadMountedDisplay.h"
 #include "SDK/HttpNetworkReplayStreaming.h"
 #include "SDK/PBIK.h"
@@ -156,7 +158,6 @@
 #include "SDK/InterchangePipelines.h"
 #include "SDK/JsonUtilities.h"
 #include "SDK/Landscape.h"
-#include "SDK/Level.h"
 #include "SDK/LocalFileNetworkReplayStreaming.h"
 #include "SDK/LocalizableMessage.h"
 #include "SDK/LocalizableMessageBlueprint.h"
@@ -199,6 +200,7 @@
 #include "SDK/SignificanceManager.h"
 #include "SDK/SkeletalMeshDescription.h"
 #include "SDK/SlateRHIRenderer.h"
+#include "SDK/sound.h"
 #include "SDK/SoundFields.h"
 #include "SDK/StructUtilsEngine.h"
 #include "SDK/Synthesis.h"

@@ -34,29 +34,31 @@ public:
 
 	/// Functions
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.SetVariableCollectionDescription
-	// void SetVariableCollectionDescription(FString InVariableCollectionDescription);                                          // [0x772a8e0] Final|Native|Public|BlueprintCallable 
+	// void SetVariableCollectionDescription(FString InVariableCollectionDescription);                                          // [0x7794490] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.ReplaceSavedCommands
-	// void ReplaceSavedCommands(TArray<FConsoleVariablesEditorAssetSaveData>& Replacement);                                    // [0x772a800] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ReplaceSavedCommands(TArray<FConsoleVariablesEditorAssetSaveData>& Replacement);                                    // [0x77943b0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.RemoveConsoleVariable
-	// bool RemoveConsoleVariable(FString InCommandString);                                                                     // [0x772a750] Final|Native|Public|BlueprintCallable 
+	// bool RemoveConsoleVariable(FString InCommandString);                                                                     // [0x7794300] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.GetVariableCollectionDescription
-	// FString GetVariableCollectionDescription();                                                                              // [0x494ce00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetVariableCollectionDescription();                                                                              // [0x499c290] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.GetSavedCommandsCount
-	// int32_t GetSavedCommandsCount();                                                                                         // [0x537fe80] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetSavedCommandsCount();                                                                                         // [0x53cf970] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.GetSavedCommandsAsStringArray
-	// TArray<FString> GetSavedCommandsAsStringArray(bool bOnlyIncludeChecked);                                                 // [0x772a630] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FString> GetSavedCommandsAsStringArray(bool bOnlyIncludeChecked);                                                 // [0x77941e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.GetSavedCommandsAsCommaSeparatedString
-	// FString GetSavedCommandsAsCommaSeparatedString(bool bOnlyIncludeChecked);                                                // [0x772a4b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetSavedCommandsAsCommaSeparatedString(bool bOnlyIncludeChecked);                                                // [0x7794060] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.GetSavedCommands
-	// TArray<FConsoleVariablesEditorAssetSaveData> GetSavedCommands();                                                         // [0x772a480] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FConsoleVariablesEditorAssetSaveData> GetSavedCommands();                                                         // [0x7794030] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.FindSavedDataByCommandString
-	// bool FindSavedDataByCommandString(FString InCommandString, FConsoleVariablesEditorAssetSaveData& OutValue, TEnumAsByte<ESearchCase> SearchCase); // [0x772a300] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool FindSavedDataByCommandString(FString InCommandString, FConsoleVariablesEditorAssetSaveData& OutValue, TEnumAsByte<ESearchCase> SearchCase); // [0x7793eb0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.ExecuteSavedCommands
-	// void ExecuteSavedCommands(class UObject* WorldContextObject, bool bOnlyIncludeChecked);                                  // [0x772a160] Final|Native|Public|BlueprintCallable|Const 
+	// void ExecuteSavedCommands(class UObject* WorldContextObject, bool bOnlyIncludeChecked);                                  // [0x7793d10] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.CopyFrom
-	// void CopyFrom(class UConsoleVariablesAsset* InAssetToCopy);                                                              // [0x772a030] Final|Native|Public|BlueprintCallable 
+	// void CopyFrom(class UConsoleVariablesAsset* InAssetToCopy);                                                              // [0x7793be0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.AddOrSetConsoleObjectSavedData
-	// void AddOrSetConsoleObjectSavedData(FConsoleVariablesEditorAssetSaveData& InData);                                       // [0x7729f70] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void AddOrSetConsoleObjectSavedData(FConsoleVariablesEditorAssetSaveData& InData);                                       // [0x7793b20] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 #pragma pack(pop)
+
+

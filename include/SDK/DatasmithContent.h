@@ -135,8 +135,8 @@ public:
 class UDatasmithActorTemplate : public UDatasmithObjectTemplate
 { 
 public:
-	SDK_UNDEFINED(80,670) /* TSet<FName> */            __um(Layers);                                               // 0x0030   (0x0050)  
-	SDK_UNDEFINED(80,671) /* TSet<FName> */            __um(Tags);                                                 // 0x0080   (0x0050)  
+	SDK_UNDEFINED(80,671) /* TSet<FName> */            __um(Layers);                                               // 0x0030   (0x0050)  
+	SDK_UNDEFINED(80,672) /* TSet<FName> */            __um(Tags);                                                 // 0x0080   (0x0050)  
 };
 
 /// Class /Script/DatasmithContent.DatasmithAdditionalData
@@ -438,13 +438,13 @@ public:
 
 	/// Functions
 	// Function /Script/DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValuesForKey
-	// TArray<FString> GetDatasmithUserDataValuesForKey(class UObject* Object, FName Key, bool bPartialMatchKey);               // [0x7f2e740] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<FString> GetDatasmithUserDataValuesForKey(class UObject* Object, FName Key, bool bPartialMatchKey);               // [0x7f98670] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey
-	// FString GetDatasmithUserDataValueForKey(class UObject* Object, FName Key, bool bPartialMatchKey);                        // [0x7f2e270] Final|Native|Static|Public|BlueprintCallable 
+	// FString GetDatasmithUserDataValueForKey(class UObject* Object, FName Key, bool bPartialMatchKey);                        // [0x7f981a0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue
-	// void GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, FString StringToMatch, TArray<FName>& OutKeys, TArray<FString>& OutValues); // [0x7f2dda0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, FString StringToMatch, TArray<FName>& OutKeys, TArray<FString>& OutValues); // [0x7f97cd0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData
-	// class UDatasmithAssetUserData* GetDatasmithUserData(class UObject* Object);                                              // [0x7f2dd10] Final|Native|Static|Public|BlueprintCallable 
+	// class UDatasmithAssetUserData* GetDatasmithUserData(class UObject* Object);                                              // [0x7f97c40] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/DatasmithContent.DatasmithCustomActionBase
@@ -476,7 +476,7 @@ public:
 
 	/// Functions
 	// Function /Script/DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence
-	// void PlayLevelSequence(class ULevelSequence* SequenceToPlay);                                                            // [0x49ad310] Final|Native|Public|BlueprintCallable 
+	// void PlayLevelSequence(class ULevelSequence* SequenceToPlay);                                                            // [0x49fc7a0] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/DatasmithContent.DatasmithOptionsBase
@@ -613,7 +613,7 @@ public:
 	unsigned char                                      UnknownData00_6[0x20];                                      // 0x0038   (0x0020)  MISSED
 	TMap<FName, float>                                 ScalarParameterValues;                                      // 0x0058   (0x0050)  
 	TMap<FName, FLinearColor>                          VectorParameterValues;                                      // 0x00A8   (0x0050)  
-	SDK_UNDEFINED(80,672) /* TMap<FName, TWeakObjectPtr<UTexture*>> */ __um(TextureParameterValues);               // 0x00F8   (0x0050)  
+	SDK_UNDEFINED(80,673) /* TMap<FName, TWeakObjectPtr<UTexture*>> */ __um(TextureParameterValues);               // 0x00F8   (0x0050)  
 	FDatasmithStaticParameterSetTemplate               StaticParameters;                                           // 0x0148   (0x0050)  
 };
 
@@ -654,7 +654,7 @@ class ADatasmithSceneActor : public AActor
 { 
 public:
 	class UDatasmithScene*                             Scene;                                                      // 0x0290   (0x0008)  
-	SDK_UNDEFINED(80,673) /* TMap<FName, TWeakObjectPtr<AActor*>> */ __um(RelatedActors);                          // 0x0298   (0x0050)  
+	SDK_UNDEFINED(80,674) /* TMap<FName, TWeakObjectPtr<AActor*>> */ __um(RelatedActors);                          // 0x0298   (0x0050)  
 };
 
 /// Class /Script/DatasmithContent.DatasmithSceneComponentTemplate
@@ -670,7 +670,7 @@ public:
 	bool                                               bVisible;                                                   // 0x00C0   (0x0001)  
 	bool                                               bCastShadow;                                                // 0x00C1   (0x0001)  
 	unsigned char                                      UnknownData02_6[0x6];                                       // 0x00C2   (0x0006)  MISSED
-	SDK_UNDEFINED(80,674) /* TSet<FName> */            __um(Tags);                                                 // 0x00C8   (0x0050)  
+	SDK_UNDEFINED(80,675) /* TSet<FName> */            __um(Tags);                                                 // 0x00C8   (0x0050)  
 	unsigned char                                      UnknownData03_7[0x8];                                       // 0x0118   (0x0008)  MISSED
 };
 
@@ -770,3 +770,5 @@ struct FDatasmithRetessellationOptions : FDatasmithTessellationOptions
 };
 
 #pragma pack(pop)
+
+

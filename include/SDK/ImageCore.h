@@ -19,17 +19,17 @@ public:
 
 	/// Functions
 	// Function /Script/ImageCore.SharedImageConstRefBlueprintFns.IsValid
-	// bool IsValid(FSharedImageConstRefBlueprint& Image);                                                                      // [0x3145a40] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// bool IsValid(FSharedImageConstRefBlueprint& Image);                                                                      // [0x3194cd0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ImageCore.SharedImageConstRefBlueprintFns.GetWidth
-	// int32_t GetWidth(FSharedImageConstRefBlueprint& Image);                                                                  // [0x3145950] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// int32_t GetWidth(FSharedImageConstRefBlueprint& Image);                                                                  // [0x3194be0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ImageCore.SharedImageConstRefBlueprintFns.GetSize
-	// FVector2f GetSize(FSharedImageConstRefBlueprint& Image);                                                                 // [0x3145830] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FVector2f GetSize(FSharedImageConstRefBlueprint& Image);                                                                 // [0x3194ac0] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/ImageCore.SharedImageConstRefBlueprintFns.GetPixelValue
-	// FVector4f GetPixelValue(FSharedImageConstRefBlueprint& Image, int32_t X, int32_t Y, bool& bValid);                       // [0x3145670] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FVector4f GetPixelValue(FSharedImageConstRefBlueprint& Image, int32_t X, int32_t Y, bool& bValid);                       // [0x3194900] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/ImageCore.SharedImageConstRefBlueprintFns.GetPixelLinearColor
-	// FLinearColor GetPixelLinearColor(FSharedImageConstRefBlueprint& Image, int32_t X, int32_t Y, bool& bValid, FLinearColor FailureColor); // [0x31453e0] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FLinearColor GetPixelLinearColor(FSharedImageConstRefBlueprint& Image, int32_t X, int32_t Y, bool& bValid, FLinearColor FailureColor); // [0x3194670] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/ImageCore.SharedImageConstRefBlueprintFns.GetHeight
-	// int32_t GetHeight(FSharedImageConstRefBlueprint& Image);                                                                 // [0x31452f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// int32_t GetHeight(FSharedImageConstRefBlueprint& Image);                                                                 // [0x3194580] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/ImageCore.SharedImageConstRefBlueprint
@@ -40,3 +40,5 @@ struct FSharedImageConstRefBlueprint
 };
 
 #pragma pack(pop)
+
+

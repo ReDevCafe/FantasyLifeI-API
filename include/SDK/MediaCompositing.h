@@ -103,3 +103,5 @@ struct FMovieSceneMediaSectionTemplate : FMovieSceneEvalTemplate
 };
 
 #pragma pack(pop)
+
+

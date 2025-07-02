@@ -48,7 +48,7 @@ public:
 struct FChaosHandlerSet
 { 
 	unsigned char                                      UnknownData00_7[0x8];                                       // 0x0000   (0x0008)  MISSED
-	SDK_UNDEFINED(80,639) /* TSet<UObject*> */         __um(ChaosHandlers);                                        // 0x0008   (0x0050)  
+	SDK_UNDEFINED(80,640) /* TSet<UObject*> */         __um(ChaosHandlers);                                        // 0x0008   (0x0050)  
 };
 
 /// Struct /Script/ChaosSolverEngine.BreakEventCallbackWrapper
@@ -101,7 +101,7 @@ public:
 
 	/// Functions
 	// Function /Script/ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary.ConvertPhysicsCollisionToHitResult
-	// FHitResult ConvertPhysicsCollisionToHitResult(FChaosPhysicsCollisionInfo& PhysicsCollision);                             // [0x4959870] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// FHitResult ConvertPhysicsCollisionToHitResult(FChaosPhysicsCollisionInfo& PhysicsCollision);                             // [0x49a8d00] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/ChaosSolverEngine.ChaosSolver
@@ -155,9 +155,9 @@ public:
 
 	/// Functions
 	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetSolverActive
-	// void SetSolverActive(bool bActive);                                                                                      // [0x4959b40] RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSolverActive(bool bActive);                                                                                      // [0x49a8fd0] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver
-	// void SetAsCurrentWorldSolver();                                                                                          // [0x4959b20] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAsCurrentWorldSolver();                                                                                          // [0x49a8fb0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/ChaosSolverEngine.ChaosSolverSettings
@@ -187,3 +187,5 @@ struct FChaosPhysicsCollisionInfo
 };
 
 #pragma pack(pop)
+
+
