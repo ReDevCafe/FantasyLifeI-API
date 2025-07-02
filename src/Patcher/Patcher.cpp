@@ -11,7 +11,7 @@ void Patcher::add(Patch *patch) {
 }
 
 bool Patcher::applyPatches(uintptr_t baseAddress) {
-    ModLoader::logger->info("Starting to load patches ...");
+    ModLoader::logger->verbose("Starting to load patches ...");
     while (!_queue.empty()) {
         Patch *patch = _queue.top();
         if (!patch->apply(baseAddress)) {

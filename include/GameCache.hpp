@@ -56,7 +56,7 @@ class GameCache
         void initNoun(GameData* gmd, UStaticDataManager* sdm);
         void initText(GameData* gmd, UStaticDataManager* sdm);
         void initSkill(GameData* gmd, UStaticDataManager* sdm);
-        void initPickParam(GameData* gmd, UStaticDataManager* sdm);
+        void initCommonPickParam(GameData* gmd, UStaticDataManager* sdm);
         void initItem(GameData* gmd, UStaticDataManager* sdm);
         void initRecipe(GameData* gmd, UStaticDataManager* sdm);
         void initChara(GameData* gmd, UStaticDataManager* sdm);

@@ -54,17 +54,13 @@ class Logger
 
 #if MLDEBUG
         template<typename... Args>
-        void verbose(Args&&... args) { log("\033[36m]", std::forward<Args>(args)...); }
-
-        template<typename... Args>
-        void info(Args&&... args) { log("\033[37m", std::forward<Args>(args)...); }
+        void verbose(Args&&... args) { log("\033[36m", std::forward<Args>(args)...); }
 #else 
         template<typename... Args>
         void verbose(Args&&... args) { pushToFile(std::forward<Args>(args)...); }
-
-        template<typename... Args>
-        void info(Args&&... args) { pushToFile(std::forward<Args>(args)...); }
 #endif
+        template<typename... Args>
+        void info(Args&&... args) { log("\033[37m", std::forward<Args>(args)...); }
 
         template<typename... Args>
         void warn(Args&&... args) { log("\033[33m", std::forward<Args>(args)...); }

@@ -4,16 +4,16 @@
 #include "Offset.h"
 
 GameData::GameData(uintptr_t baseAddress) : _staticDataManager(nullptr), _dynamicDataManager(nullptr) {
-    ModLoader::logger->info("Initialize GameData");
+    ModLoader::logger->verbose("Initialize GameData");
     this->_baseAddress = baseAddress;
     this->_gObjects = reinterpret_cast<FUObjectArray *>(this->_baseAddress + GOBJECTS_OFFSET);
     this->_gWorld = reinterpret_cast<void *>(this->_baseAddress + GWORLD_OFFSET);
     this->_gNames = reinterpret_cast<void *>(this->_baseAddress + GNAMES_OFFSET);
     this->waitObject(&this->_gObjects);
     this->waitObject(&this->_staticDataManager, "StaticDataManager", 1);
-    ModLoader::logger->info("Found StaticDataManager => ", std::hex, this->_staticDataManager);
+    ModLoader::logger->verbose("Found StaticDataManager => ", std::hex, this->_staticDataManager);
     this->waitObject(&this->_dynamicDataManager, "DynamicDataManager", 1);
-    ModLoader::logger->info("Found DynamicDataManager => ", std::hex, this->_dynamicDataManager);
+    ModLoader::logger->verbose("Found DynamicDataManager => ", std::hex, this->_dynamicDataManager);
 }
 
 void GameData::initOthersData() {
@@ -24,6 +24,8 @@ void GameData::initOthersData() {
         static_cast<FCharaStatusP *>(this->_dynamicDataManager->GDDCharaStatus->m_permanent.m_stAvatarP.Data),
         this->_dynamicDataManager->GDDCharaStatus->m_volatile.m_stAvatarV.Data[0]
     );
+
+    ModLoader::logger->info("OK: GameData has been initialized");
 }
 
 Player *GameData::getPlayer() {
