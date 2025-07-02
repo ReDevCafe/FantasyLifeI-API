@@ -141,6 +141,10 @@ struct FString : public TArray<wchar_t>
 
 typedef uint32_t FNameEntryId;
 
+static constexpr uint32_t FNameMaxBlockBits = 13; // Limit block array a bit, still allowing 8k * block size = 1GB - 2G of FName entry data
+static constexpr uint32_t FNameBlockOffsetBits = 16;
+static constexpr uint32_t FNameMaxBlocks = 1 << FNameMaxBlockBits;
+
 struct FName
 {
     /** Index into the Names array (used to find String portion of the string/number pair used for comparison) */
@@ -151,6 +155,43 @@ struct FName
 
 };
 
+struct FNameEntryHeader
+{
+    uint16_t bIsWide : 1;
+    static constexpr inline uint32_t ProbeHashBits = 5;
+    uint16_t LowercaseProbeHash : ProbeHashBits;
+    uint16_t len : 10;
+};
+
+struct FNameEntry
+{
+    private:
+        FNameEntryHeader Header;
+
+        union {
+            char AnsiName[1024];
+            char WideName[1024];
+        };
+
+    public:
+        inline bool     IsWide()        const  { return Header.bIsWide; }
+        inline int32_t  GetNameLength() const  { return Header.len; }
+};
+
+struct FNameEntryAllocator
+{
+    CRITICAL_SECTION    Lock;
+    uint32_t            CurrentBlock = 0;
+    uint32_t            CurrentByteCursor = 0;
+    uint8_t*            Blocks[FNameMaxBlocks] = {};
+};
+
+struct FNamePool
+{
+    uint8_t MaxENames = 512;
+    FNameEntryAllocator Entries;
+    uint32_t LargestEnameUnstableId;
+};
 
 /// Definition for FScriptInterface
 

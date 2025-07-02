@@ -7,6 +7,9 @@
 std::unordered_map<FNameEntryId, std::string> Utils::_strings; 
 
 std::string &Utils::FNameToString(uintptr_t baseAddress, FName fname) {
+    uintptr_t* gnamesPtr = (uintptr_t*) (baseAddress + GNAMES_OFFSET);
+    ModLoader::logger->verbose("GNames PTR", std::hex, gnamesPtr);
+
     if (_strings.contains(fname.ComparisonIndex))
         return _strings.at(fname.ComparisonIndex);
     char name[NAME_BUFFER + 1] = {0};
@@ -48,6 +51,13 @@ std::string &Utils::PC_FNameToString(FName fname)
 {
     return PC_FNameToString(ModLoader::gameData->getBaseAddress(), fname);
 }
+
+
+FName &Utils::StringToFName(const char* string)
+{
+    
+}
+
 
 void Utils::EnableAnsiColors()
 {

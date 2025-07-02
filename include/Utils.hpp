@@ -19,6 +19,8 @@ class Utils {
         
         static std::string &PC_FNameToString(uintptr_t baseAdress, FName fname);
         static std::string &PC_FNameToString(FName fname);
+        
+        static FName       &StringToFName(const char* string);
 
         static void EnableAnsiColors();
     protected:
