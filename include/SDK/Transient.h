@@ -11,6 +11,7 @@
 /// dependency: ControlRig
 /// dependency: CoreUObject
 /// dependency: Engine
+/// dependency: PBIK
 /// dependency: RigVM
 
 #pragma pack(push, 0x1)
@@ -30,9 +31,62 @@ struct FChaosDestructionEvent_SWC
 	int32_t                                            Type;                                                       // 0x0040   (0x0004)  
 };
 
-/// Struct /Engine/Transient.PropertyBag_45400ed6e3db0aeb
+/// Struct /Engine/Transient.PropertyBag_3a724e19b6e02b9
+/// Size: 0x01C8 (456 bytes) (0x000000 - 0x0001C8) align 8 MaxSize: 0x01C8
+struct FPropertyBag_3a724e19b6e02b9
+{ 
+	double                                             RigVMModel___Minimum_Result;                                // 0x0000   (0x0008)  
+	double                                             RigVMModel___Add_1_Result;                                  // 0x0008   (0x0008)  
+	FRigVMInstructionSetExecuteState                   BlockExecuteState_2446406279;                               // 0x0010   (0x0050)  
+	float                                              RigVMModel___If_2_DISPATCH_RigVMDispatch_If_Result;         // 0x0060   (0x0004)  
+	bool                                               RigVMModel___IsNearlyEqual_Result;                          // 0x0064   (0x0001)  
+	bool                                               RigVMModel___If_2_DISPATCH_RigVMDispatch_If_Condition;      // 0x0065   (0x0001)  
+	unsigned char                                      UnknownData00_6[0x2];                                       // 0x0066   (0x0002)  MISSED
+	double                                             RigVMModel___Divide_Result;                                 // 0x0068   (0x0008)  
+	float                                              RigVMModel___GetDeltaTime_2_Result;                         // 0x0070   (0x0004)  
+	unsigned char                                      UnknownData01_6[0x4];                                       // 0x0074   (0x0004)  MISSED
+	double                                             RigVMModel___Divide_A;                                      // 0x0078   (0x0008)  
+	float                                              RigVMModel___If_2_DISPATCH_RigVMDispatch_If_False;          // 0x0080   (0x0004)  
+	unsigned char                                      UnknownData02_6[0x4];                                       // 0x0084   (0x0004)  MISSED
+	double                                             RigVMModel___Add_1_B;                                       // 0x0088   (0x0008)  
+	double                                             RigVMModel___Maximum_1_Result;                              // 0x0090   (0x0008)  
+	double                                             RigVMModel___Subtract_Result;                               // 0x0098   (0x0008)  
+	double                                             RigVMModel___Subtract_B;                                    // 0x00A0   (0x0008)  
+	FName                                              RigVMModel___Branch_RigVMUnitNode_BlockToRun;               // 0x00A8   (0x0008)  
+	FRigUnit_AimItem_Target                            RigVMModel___AimItem_Primary__IO;                           // 0x00B0   (0x0048)  
+	float                                              RigVMModel___AnimEvalRichCurve_Result;                      // 0x00F8   (0x0004)  
+	float                                              RigVMModel___AnimEvalRichCurve_Value;                       // 0x00FC   (0x0004)  
+	TArray<FCachedRigElement>                          RigVMModel___AimItem_CachedItem;                            // 0x0100   (0x0010)  
+	TArray<FCachedRigElement>                          RigVMModel___AimItem_PrimaryCachedSpace;                    // 0x0110   (0x0010)  
+	TArray<FCachedRigElement>                          RigVMModel___AimItem_SecondaryCachedSpace;                  // 0x0120   (0x0010)  
+	TArray<bool>                                       RigVMModel___AimItem_bIsInitialized;                        // 0x0130   (0x0010)  
+	FRigUnit_AimItem_Target                            RigVMModel___AimItem_1_Primary__IO;                         // 0x0140   (0x0048)  
+	TArray<FCachedRigElement>                          RigVMModel___AimItem_1_CachedItem;                          // 0x0188   (0x0010)  
+	TArray<FCachedRigElement>                          RigVMModel___AimItem_1_PrimaryCachedSpace;                  // 0x0198   (0x0010)  
+	TArray<FCachedRigElement>                          RigVMModel___AimItem_1_SecondaryCachedSpace;                // 0x01A8   (0x0010)  
+	TArray<bool>                                       RigVMModel___AimItem_1_bIsInitialized;                      // 0x01B8   (0x0010)  
+};
+
+/// Struct /Engine/Transient.PropertyBag_8d757737942fc175
+/// Size: 0x01BC (444 bytes) (0x000000 - 0x0001BC) align 16 MaxSize: 0x01BC
+struct FPropertyBag_8d757737942fc175
+{ 
+	double                                             RigVMModel___Minimum_A__Const;                              // 0x0000   (0x0008)  
+	double                                             RigVMModel___IsNearlyEqual_B__Const;                        // 0x0008   (0x0008)  
+	float                                              RigVMModel___If_2_DISPATCH_RigVMDispatch_If_True__Const;    // 0x0010   (0x0004)  
+	FRigElementKey                                     RigVMModel___AimItem_Item__Const;                           // 0x0014   (0x000C)  
+	FRigUnit_AimItem_Target                            RigVMModel___AimItem_Primary__Const;                        // 0x0020   (0x0048)  
+	FRigUnit_AimItem_Target                            RigVMModel___AimItem_Secondary__Const;                      // 0x0068   (0x0048)  
+	FRuntimeFloatCurve                                 RigVMModel___AnimEvalRichCurve_Curve__Const;                // 0x00B0   (0x0088)  
+	float                                              RigVMModel___AnimEvalRichCurve_SourceMinimum__Const;        // 0x0138   (0x0004)  
+	unsigned char                                      UnknownData00_6[0x4];                                       // 0x013C   (0x0004)  MISSED
+	FRigUnit_AimBone_DebugSettings                     RigVMModel___AimItem_DebugSettings__Const;                  // 0x0140   (0x0070)  
+	FRigElementKey                                     RigVMModel___AimItem_1_Item__Const;                         // 0x01B0   (0x000C)  
+};
+
+/// Struct /Engine/Transient.PropertyBag_c0fd519e449a8d43
 /// Size: 0x5760 (22368 bytes) (0x000000 - 0x005760) align 16 MaxSize: 0x5760
-struct FPropertyBag_45400ed6e3db0aeb
+struct FPropertyBag_c0fd519e449a8d43
 { 
 	FTransform                                         RigVMModel___RigUnit_GetTransform_Transform;                // 0x0000   (0x0060)  
 	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_CachedIndex;              // 0x0060   (0x0010)  
@@ -47,15 +101,15 @@ struct FPropertyBag_45400ed6e3db0aeb
 	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_1_1_CachedIndex;          // 0x01E0   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel___RigUnit_SetTransform_1_1_CachedIndex;          // 0x01F0   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___ParentConstraint_ChildCache;             // 0x0200   (0x0010)  
-	SDK_UNDEFINED(16,1227) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___ParentConstraint_ParentCaches); // 0x0210   (0x0010)  
+	SDK_UNDEFINED(16,1221) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___ParentConstraint_ParentCaches); // 0x0210   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_ChildCache; // 0x0220   (0x0010)  
-	SDK_UNDEFINED(16,1228) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_ParentCaches); // 0x0230   (0x0010)  
+	SDK_UNDEFINED(16,1222) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_ParentCaches); // 0x0230   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_ChildCache; // 0x0240   (0x0010)  
-	SDK_UNDEFINED(16,1229) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_ParentCaches); // 0x0250   (0x0010)  
+	SDK_UNDEFINED(16,1223) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_ParentCaches); // 0x0250   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_1_ChildCache; // 0x0260   (0x0010)  
-	SDK_UNDEFINED(16,1230) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_1_ParentCaches); // 0x0270   (0x0010)  
+	SDK_UNDEFINED(16,1224) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_1_ParentCaches); // 0x0270   (0x0010)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_ChildCache; // 0x0280   (0x0010)  
-	SDK_UNDEFINED(16,1231) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_ParentCaches); // 0x0290   (0x0010)  
+	SDK_UNDEFINED(16,1225) /* TArray<TArray<FCachedRigElement>> */ __um(RigVMModel_Rig_2___RotationConstraintLocalSpaceOffset_3_1_ParentCaches); // 0x0290   (0x0010)  
 	FTransform                                         RigVMModel_Rig_2___RigUnit_GetTransform_Transform;          // 0x02A0   (0x0060)  
 	TArray<FCachedRigElement>                          RigVMModel_Rig_2___RigUnit_GetTransform_CachedIndex;        // 0x0300   (0x0010)  
 	FName                                              RigVMModel_Rig_2___RigVMFunction_ControlFlowBranch_5_BlockToRun; // 0x0310   (0x0008)  
@@ -151,7 +205,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	FVector                                            __n0_V_____0___Q_60;                                        // 0x0C00   (0x0018)  
 	unsigned char                                      UnknownData13_6[0x8];                                       // 0x0C18   (0x0008)  MISSED
 	FTransform                                         __n0_V_____0___Q_61;                                        // 0x0C20   (0x0060)  
-	SDK_UNDEFINED(16,1232) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x0C80   (0x0010)  
+	SDK_UNDEFINED(16,1226) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x0C80   (0x0010)  
 	FRigUnit_AimItem_Target                            __n0_V_____0___Q_63;                                        // 0x0C90   (0x0048)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_64;                                        // 0x0CD8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_65;                                        // 0x0CE8   (0x0010)  
@@ -285,7 +339,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	FVector                                            __n0_V_____0___Q_171;                                       // 0x19F0   (0x0018)  
 	unsigned char                                      UnknownData34_6[0x8];                                       // 0x1A08   (0x0008)  MISSED
 	FTransform                                         __n0_V_____0___Q_172;                                       // 0x1A10   (0x0060)  
-	SDK_UNDEFINED(16,1233) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x1A70   (0x0010)  
+	SDK_UNDEFINED(16,1227) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x1A70   (0x0010)  
 	FRigUnit_AimItem_Target                            __n0_V_____0___Q_174;                                       // 0x1A80   (0x0048)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_175;                                       // 0x1AC8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_176;                                       // 0x1AD8   (0x0010)  
@@ -475,7 +529,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	unsigned char                                      UnknownData64_6[0x4];                                       // 0x2D0C   (0x0004)  MISSED
 	TArray<FConstraintParent>                          MR___0_0_0_0n0_c_R_328;                                     // 0x2D10   (0x0010)  
 	TArray<FCachedRigElement>                          MR___0_0_0_0n0_c_R_329;                                     // 0x2D20   (0x0010)  
-	SDK_UNDEFINED(16,1234) /* TArray<TArray<FCachedRigElement>> */ __um(MR___0_0_0_0n0_c_R_);                      // 0x2D30   (0x0010)  
+	SDK_UNDEFINED(16,1228) /* TArray<TArray<FCachedRigElement>> */ __um(MR___0_0_0_0n0_c_R_);                      // 0x2D30   (0x0010)  
 	FTransform                                         MR___0_0_0_0n0_c_R_331;                                     // 0x2D40   (0x0060)  
 	FRigElementKey                                     MR___0_0_0_0n0_c_R_332;                                     // 0x2DA0   (0x000C)  
 	unsigned char                                      UnknownData65_6[0x4];                                       // 0x2DAC   (0x0004)  MISSED
@@ -526,7 +580,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_369;                                       // 0x32A8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_370;                                       // 0x32B8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_371;                                       // 0x32C8   (0x0010)  
-	SDK_UNDEFINED(16,1235) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x32D8   (0x0010)  
+	SDK_UNDEFINED(16,1229) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x32D8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_373;                                       // 0x32E8   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_374;                                       // 0x32F8   (0x0010)  
 	TArray<bool>                                       __n0_V_____0___Q_375;                                       // 0x3308   (0x0010)  
@@ -556,7 +610,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_399;                                       // 0x3628   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_400;                                       // 0x3638   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_401;                                       // 0x3648   (0x0010)  
-	SDK_UNDEFINED(16,1236) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x3658   (0x0010)  
+	SDK_UNDEFINED(16,1230) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x3658   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_403;                                       // 0x3668   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_404;                                       // 0x3678   (0x0010)  
 	TArray<bool>                                       __n0_V_____0___Q_405;                                       // 0x3688   (0x0010)  
@@ -659,7 +713,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	unsigned char                                      UnknownData88_6[0x4];                                       // 0x407C   (0x0004)  MISSED
 	TArray<FConstraintParent>                          MR___0_0_0_0n0_c_R_486;                                     // 0x4080   (0x0010)  
 	TArray<FCachedRigElement>                          MR___0_0_0_0n0_c_R_487;                                     // 0x4090   (0x0010)  
-	SDK_UNDEFINED(16,1237) /* TArray<TArray<FCachedRigElement>> */ __um(MR___0_0_0_0n0_c_R_);                      // 0x40A0   (0x0010)  
+	SDK_UNDEFINED(16,1231) /* TArray<TArray<FCachedRigElement>> */ __um(MR___0_0_0_0n0_c_R_);                      // 0x40A0   (0x0010)  
 	FTransform                                         MR___0_0_0_0n0_c_R_489;                                     // 0x40B0   (0x0060)  
 	FRigElementKey                                     MR___0_0_0_0n0_c_R_490;                                     // 0x4110   (0x000C)  
 	unsigned char                                      UnknownData89_6[0x4];                                       // 0x411C   (0x0004)  MISSED
@@ -717,7 +771,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_531;                                       // 0x4638   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_532;                                       // 0x4648   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_533;                                       // 0x4658   (0x0010)  
-	SDK_UNDEFINED(16,1238) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x4668   (0x0010)  
+	SDK_UNDEFINED(16,1232) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x4668   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_535;                                       // 0x4678   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_536;                                       // 0x4688   (0x0010)  
 	TArray<bool>                                       __n0_V_____0___Q_537;                                       // 0x4698   (0x0010)  
@@ -775,7 +829,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	unsigned char                                      UnknownData103_6[0x4];                                      // 0x4B8C   (0x0004)  MISSED
 	TArray<FConstraintParent>                          ___S_0_0_0_0n0_c_R_581;                                     // 0x4B90   (0x0010)  
 	TArray<FCachedRigElement>                          ___S_0_0_0_0n0_c_R_582;                                     // 0x4BA0   (0x0010)  
-	SDK_UNDEFINED(16,1239) /* TArray<TArray<FCachedRigElement>> */ __um(___S_0_0_0_0n0_c_R_);                      // 0x4BB0   (0x0010)  
+	SDK_UNDEFINED(16,1233) /* TArray<TArray<FCachedRigElement>> */ __um(___S_0_0_0_0n0_c_R_);                      // 0x4BB0   (0x0010)  
 	FTransform                                         ___S_0_0_0_0n0_c_R_584;                                     // 0x4BC0   (0x0060)  
 	FRigElementKey                                     ___S_0_0_0_0n0_c_R_585;                                     // 0x4C20   (0x000C)  
 	unsigned char                                      UnknownData104_6[0x4];                                      // 0x4C2C   (0x0004)  MISSED
@@ -830,7 +884,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_626;                                       // 0x5138   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_627;                                       // 0x5148   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_628;                                       // 0x5158   (0x0010)  
-	SDK_UNDEFINED(16,1240) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x5168   (0x0010)  
+	SDK_UNDEFINED(16,1234) /* TArray<TArray<FCachedRigElement>> */ __um(__n0_V_____0___Q_);                        // 0x5168   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_630;                                       // 0x5178   (0x0010)  
 	TArray<FCachedRigElement>                          __n0_V_____0___Q_631;                                       // 0x5188   (0x0010)  
 	TArray<bool>                                       __n0_V_____0___Q_632;                                       // 0x5198   (0x0010)  
@@ -888,7 +942,7 @@ struct FPropertyBag_45400ed6e3db0aeb
 	unsigned char                                      UnknownData118_6[0x4];                                      // 0x568C   (0x0004)  MISSED
 	TArray<FConstraintParent>                          ___S_0_0_0_0n0_c_R_677;                                     // 0x5690   (0x0010)  
 	TArray<FCachedRigElement>                          ___S_0_0_0_0n0_c_R_678;                                     // 0x56A0   (0x0010)  
-	SDK_UNDEFINED(16,1241) /* TArray<TArray<FCachedRigElement>> */ __um(___S_0_0_0_0n0_c_R_);                      // 0x56B0   (0x0010)  
+	SDK_UNDEFINED(16,1235) /* TArray<TArray<FCachedRigElement>> */ __um(___S_0_0_0_0n0_c_R_);                      // 0x56B0   (0x0010)  
 	FTransform                                         ___S_0_0_0_0n0_c_R_680;                                     // 0x56C0   (0x0060)  
 	FRigElementKey                                     ___S_0_0_0_0n0_c_R_681;                                     // 0x5720   (0x000C)  
 	unsigned char                                      UnknownData119_6[0x4];                                      // 0x572C   (0x0004)  MISSED
@@ -899,9 +953,9 @@ struct FPropertyBag_45400ed6e3db0aeb
 	FName                                              RigVMModel_Rig_2___RigVMFunction_ControlFlowBranch_BlockToRun; // 0x5758   (0x0008)  
 };
 
-/// Struct /Engine/Transient.PropertyBag_ed2c40aeb3b38f9
+/// Struct /Engine/Transient.PropertyBag_fa79292c6682d315
 /// Size: 0x13FC (5116 bytes) (0x000000 - 0x0013FC) align 16 MaxSize: 0x13FC
-struct FPropertyBag_ed2c40aeb3b38f9
+struct FPropertyBag_fa79292c6682d315
 { 
 	FRigElementKey                                     RigVMModel___RigUnit_SetTransform_Item__Const;              // 0x0000   (0x000C)  
 	ERigVMTransformSpace                               RigVMModel___RigUnit_SetTransform_Space__Const;             // 0x000C   (0x0001)  
@@ -1207,4 +1261,266 @@ struct FPropertyBag_ed2c40aeb3b38f9
 	float                                              ___S_0_0_0_0n0_c_R_214;                                     // 0x13F8   (0x0004)  
 };
 
+/// Struct /Engine/Transient.PropertyBag_bd252b010b995ecf
+/// Size: 0x0278 (632 bytes) (0x000000 - 0x000278) align 16 MaxSize: 0x0278
+struct FPropertyBag_bd252b010b995ecf
+{ 
+	FTransform                                         RigVMModel___RigUnit_GetTransform_1_1_Transform;            // 0x0000   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_1_1_CachedIndex;          // 0x0060   (0x0010)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_SetTransform_3_CachedIndex;            // 0x0070   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_GetTransform_3_Transform;              // 0x0080   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_3_CachedIndex;            // 0x00E0   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_OffsetTransformForItem_1_OffsetTransform__IO; // 0x00F0   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_OffsetTransformForItem_1_CachedIndex;  // 0x0150   (0x0010)  
+	FQuat                                              RigVMModel___RigVMFunction_MathQuaternionFromRotatorV2_Result; // 0x0160   (0x0020)  
+	FTransform                                         RigVMModel___RigUnit_OffsetTransformForItem_1_1_OffsetTransform__IO; // 0x0180   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_OffsetTransformForItem_1_1_CachedIndex; // 0x01E0   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_GetTransform_5_Transform;              // 0x01F0   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_5_CachedIndex;            // 0x0250   (0x0010)  
+	TArray<FCachedRigElement>                          RigVMModel___Set_Transform_CachedIndex;                     // 0x0260   (0x0010)  
+	FName                                              RigVMModel___RigVMFunction_ControlFlowBranch_BlockToRun;    // 0x0270   (0x0008)  
+};
+
+/// Struct /Engine/Transient.PropertyBag_aeed5e9563ab334c
+/// Size: 0x009C (156 bytes) (0x000000 - 0x00009C) align 16 MaxSize: 0x009C
+struct FPropertyBag_aeed5e9563ab334c
+{ 
+	FRigElementKey                                     RigVMModel___RigUnit_SetTransform_3_Item__Const;            // 0x0000   (0x000C)  
+	ERigVMTransformSpace                               RigVMModel___RigUnit_SetTransform_3_Space__Const;           // 0x000C   (0x0001)  
+	bool                                               RigVMModel___RigUnit_SetTransform_3_bInitial__Const;        // 0x000D   (0x0001)  
+	unsigned char                                      UnknownData00_6[0x2];                                       // 0x000E   (0x0002)  MISSED
+	FRigElementKey                                     RigVMModel___RigUnit_GetTransform_1_1_Item__Const;          // 0x0010   (0x000C)  
+	float                                              RigVMModel___RigUnit_SetTransform_3_Weight__Const;          // 0x001C   (0x0004)  
+	bool                                               RigVMModel___RigUnit_SetTransform_3_bPropagateToChildren__Const; // 0x0020   (0x0001)  
+	unsigned char                                      UnknownData01_6[0xF];                                       // 0x0021   (0x000F)  MISSED
+	FTransform                                         RigVMModel___RigUnit_OffsetTransformForItem_1_OffsetTransform__Const; // 0x0030   (0x0060)  
+	FRigElementKey                                     RigVMModel___RigUnit_GetTransform_3_Item__Const;            // 0x0090   (0x000C)  
+};
+
+/// Struct /Engine/Transient.PropertyBag_23c99498b1078b44
+/// Size: 0x0E78 (3704 bytes) (0x000000 - 0x000E78) align 16 MaxSize: 0x0E78
+struct FPropertyBag_23c99498b1078b44
+{ 
+	FRigElementKey                                     R;                                                          // 0x0000   (0x000C)  
+	unsigned char                                      UnknownData00_6[0x4];                                       // 0x000C   (0x0004)  MISSED
+	FVector                                            R0;                                                         // 0x0010   (0x0018)  
+	FRigVMInstructionSetExecuteState                   __K0_0_Nk0_TQ0f0;                                           // 0x0028   (0x0050)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_;                              // 0x0078   (0x0018)  
+	FRigVMInstructionSetExecuteState                   __K0_0_Nk0_TQ0f01;                                          // 0x0090   (0x0050)  
+	FTransform                                         __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_2;                             // 0x00E0   (0x0060)  
+	TArray<FCachedRigElement>                          __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_3;                             // 0x0140   (0x0010)  
+	FTransform                                         __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_4;                             // 0x0150   (0x0060)  
+	TArray<FCachedRigElement>                          __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_5;                             // 0x01B0   (0x0010)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_6;                             // 0x01C0   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_7;                             // 0x01D8   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_8;                             // 0x01F0   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_9;                             // 0x0208   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_10;                            // 0x0220   (0x0018)  
+	FRigVMInstructionSetExecuteState                   __K0_0_Nk0_TQ0f0_0_0_0_0_0_;                                // 0x0238   (0x0050)  
+	bool                                               __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_11;                            // 0x0288   (0x0001)  
+	unsigned char                                      UnknownData01_6[0x7];                                       // 0x0289   (0x0007)  MISSED
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_12;                            // 0x0290   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_13;                            // 0x02A8   (0x0018)  
+	TArray<FRigUnit_SphereTrace_WorkData>              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_14;                            // 0x02C0   (0x0010)  
+	bool                                               __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_15;                            // 0x02D0   (0x0001)  
+	unsigned char                                      UnknownData02_6[0x7];                                       // 0x02D1   (0x0007)  MISSED
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_16;                            // 0x02D8   (0x0018)  
+	FTransform                                         __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_17;                            // 0x02F0   (0x0060)  
+	FRigElementKey                                     R18;                                                        // 0x0350   (0x000C)  
+	unsigned char                                      UnknownData03_6[0x4];                                       // 0x035C   (0x0004)  MISSED
+	FVector                                            R19;                                                        // 0x0360   (0x0018)  
+	FRigVMInstructionSetExecuteState                   __K0_0_Nk0_TQ0f0_0;                                         // 0x0378   (0x0050)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_20;                            // 0x03C8   (0x0018)  
+	FRigVMInstructionSetExecuteState                   __K0_0_Nk0_TQ0f0_021;                                       // 0x03E0   (0x0050)  
+	FTransform                                         __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_22;                            // 0x0430   (0x0060)  
+	TArray<FCachedRigElement>                          __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_23;                            // 0x0490   (0x0010)  
+	FTransform                                         __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_24;                            // 0x04A0   (0x0060)  
+	TArray<FCachedRigElement>                          __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_25;                            // 0x0500   (0x0010)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_26;                            // 0x0510   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_27;                            // 0x0528   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_28;                            // 0x0540   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_29;                            // 0x0558   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_30;                            // 0x0570   (0x0018)  
+	FRigVMInstructionSetExecuteState                   __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_31;                            // 0x0588   (0x0050)  
+	bool                                               __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_32;                            // 0x05D8   (0x0001)  
+	unsigned char                                      UnknownData04_6[0x7];                                       // 0x05D9   (0x0007)  MISSED
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_33;                            // 0x05E0   (0x0018)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_34;                            // 0x05F8   (0x0018)  
+	TArray<FRigUnit_SphereTrace_WorkData>              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_35;                            // 0x0610   (0x0010)  
+	bool                                               __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_36;                            // 0x0620   (0x0001)  
+	unsigned char                                      UnknownData05_6[0x7];                                       // 0x0621   (0x0007)  MISSED
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_37;                            // 0x0628   (0x0018)  
+	FTransform                                         __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_38;                            // 0x0640   (0x0060)  
+	FName                                              RigVMModel___Branch_RigVMUnitNode_BlockToRun;               // 0x06A0   (0x0008)  
+	float                                              RigVMModel___AlphaInterp_Result;                            // 0x06A8   (0x0004)  
+	unsigned char                                      UnknownData06_6[0x4];                                       // 0x06AC   (0x0004)  MISSED
+	FVector                                            RigVMModel___Rotate_Vector_1_Result;                        // 0x06B0   (0x0018)  
+	float                                              RigVMModel___AlphaInterp_Value;                             // 0x06C8   (0x0004)  
+	unsigned char                                      UnknownData07_6[0x4];                                       // 0x06CC   (0x0004)  MISSED
+	TArray<FInputScaleBiasClamp>                       RigVMModel___AlphaInterp_ScaleBiasClamp;                    // 0x06D0   (0x0010)  
+	float                                              RigVMModel___AlphaInterp_1_Result;                          // 0x06E0   (0x0004)  
+	unsigned char                                      UnknownData08_6[0x4];                                       // 0x06E4   (0x0004)  MISSED
+	FVector                                            RigVMModel___Rotate_Vector_1_1_Result;                      // 0x06E8   (0x0018)  
+	float                                              RigVMModel___AlphaInterp_1_Value;                           // 0x0700   (0x0004)  
+	unsigned char                                      UnknownData09_6[0x4];                                       // 0x0704   (0x0004)  MISSED
+	TArray<FInputScaleBiasClamp>                       RigVMModel___AlphaInterp_1_ScaleBiasClamp;                  // 0x0708   (0x0010)  
+	double                                             RigVMModel___Multiply_Result;                               // 0x0718   (0x0008)  
+	double                                             RigVMModel___If_1_DISPATCH_RigVMDispatch_If_Result;         // 0x0720   (0x0008)  
+	bool                                               RigVMModel___MathFloatLess_1_Result;                        // 0x0728   (0x0001)  
+	unsigned char                                      UnknownData10_6[0x3];                                       // 0x0729   (0x0003)  MISSED
+	float                                              RigVMModel___MathFloatLess_1_A;                             // 0x072C   (0x0004)  
+	double                                             RigVMModel___Absolute_1_Result;                             // 0x0730   (0x0008)  
+	float                                              RigVMModel___MathFloatLess_1_B;                             // 0x0738   (0x0004)  
+	bool                                               RigVMModel___If_1_DISPATCH_RigVMDispatch_If_Condition;      // 0x073C   (0x0001)  
+	unsigned char                                      UnknownData11_6[0x3];                                       // 0x073D   (0x0003)  MISSED
+	TArray<FRigUnit_ModifyTransforms_PerItem>          RigVMModel___ModifyTransforms_1_1_1_ItemToModify__IO;       // 0x0740   (0x0010)  
+	TArray<FRigUnit_ModifyTransforms_WorkData>         RigVMModel___ModifyTransforms_1_1_1_WorkData;               // 0x0750   (0x0010)  
+	double                                             RigVMModel___Subtract_Result;                               // 0x0760   (0x0008)  
+	double                                             RigVMModel___Subtract_1_Result;                             // 0x0768   (0x0008)  
+	FTransform                                         R39;                                                        // 0x0770   (0x0060)  
+	FRigElementKey                                     R40;                                                        // 0x07D0   (0x000C)  
+	unsigned char                                      UnknownData12_6[0x4];                                       // 0x07DC   (0x0004)  MISSED
+	FVector                                            R41;                                                        // 0x07E0   (0x0018)  
+	unsigned char                                      UnknownData13_6[0x8];                                       // 0x07F8   (0x0008)  MISSED
+	FTransform                                         ___z___jK0_0_____j_0_____;                                  // 0x0800   (0x0060)  
+	TArray<FCachedRigElement>                          ___z___jK0_0_____j_0_____42;                                // 0x0860   (0x0010)  
+	FVector                                            ___z___jK0_0_____j_0_____43;                                // 0x0870   (0x0018)  
+	FVector                                            ___z___jK0_0_____j_0_____44;                                // 0x0888   (0x0018)  
+	FVector                                            ___z___jK0_0_____j_0_____45;                                // 0x08A0   (0x0018)  
+	FVector                                            ___z___jK0_0_____j_0_____46;                                // 0x08B8   (0x0018)  
+	TArray<FCachedRigElement>                          RigVMModel___Set_Transform_CachedIndex;                     // 0x08D0   (0x0010)  
+	FTransform                                         R47;                                                        // 0x08E0   (0x0060)  
+	FRigElementKey                                     R48;                                                        // 0x0940   (0x000C)  
+	unsigned char                                      UnknownData14_6[0x4];                                       // 0x094C   (0x0004)  MISSED
+	FVector                                            R49;                                                        // 0x0950   (0x0018)  
+	unsigned char                                      UnknownData15_6[0x8];                                       // 0x0968   (0x0008)  MISSED
+	FTransform                                         ___z___jK0_0_____j_0_____50;                                // 0x0970   (0x0060)  
+	TArray<FCachedRigElement>                          ___z___jK0_0_____j_0_____51;                                // 0x09D0   (0x0010)  
+	FVector                                            ___z___jK0_0_____j_0_____52;                                // 0x09E0   (0x0018)  
+	FVector                                            ___z___jK0_0_____j_0_____53;                                // 0x09F8   (0x0018)  
+	FVector                                            ___z___jK0_0_____j_0_____54;                                // 0x0A10   (0x0018)  
+	FVector                                            ___z___jK0_0_____j_0_____55;                                // 0x0A28   (0x0018)  
+	TArray<FCachedRigElement>                          RigVMModel___Set_Transform_1_CachedIndex;                   // 0x0A40   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_GetTransform_Transform;                // 0x0A50   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_CachedIndex;              // 0x0AB0   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_GetTransform_1_Transform;              // 0x0AC0   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_1_CachedIndex;            // 0x0B20   (0x0010)  
+	TArray<FPBIKEffector>                              RigVMModel___PBIK_1_Effectors__IO;                          // 0x0B30   (0x0010)  
+	TArray<TArray<int32_t>>                            RigVMModel___PBIK_1_EffectorSolverIndices;                  // 0x0B40   (0x0010)  
+	FPBIKSolverSettings                                RigVMModel___PBIK_1_Settings__IO;                           // 0x0B50   (0x0040)  
+	FPBIKDebug                                         RigVMModel___PBIK_1_Debug__IO;                              // 0x0B90   (0x0008)  
+	TArray<FPBIKWorkData>                              RigVMModel___PBIK_1_WorkData;                               // 0x0B98   (0x0010)  
+	unsigned char                                      UnknownData16_6[0x8];                                       // 0x0BA8   (0x0008)  MISSED
+	FTransform                                         RigVMModel___GetTransform_1_2_1_Transform;                  // 0x0BB0   (0x0060)  
+	FRigElementKey                                     RigVMModel___GetTransform_1_2_1_Item__IO;                   // 0x0C10   (0x000C)  
+	unsigned char                                      UnknownData17_6[0x4];                                       // 0x0C1C   (0x0004)  MISSED
+	TArray<FCachedRigElement>                          RigVMModel___GetTransform_1_2_1_CachedIndex;                // 0x0C20   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_GetTransform_2_Transform;              // 0x0C30   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_2_CachedIndex;            // 0x0C90   (0x0010)  
+	FTransform                                         RigVMModel___GetTransform_1_2_1_1_Transform;                // 0x0CA0   (0x0060)  
+	FRigElementKey                                     RigVMModel___GetTransform_1_2_1_1_Item__IO;                 // 0x0D00   (0x000C)  
+	unsigned char                                      UnknownData18_6[0x4];                                       // 0x0D0C   (0x0004)  MISSED
+	TArray<FCachedRigElement>                          RigVMModel___GetTransform_1_2_1_1_CachedIndex;              // 0x0D10   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_GetTransform_2_1_Transform;            // 0x0D20   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_2_1_CachedIndex;          // 0x0D80   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_GetTransform_1_1_Transform;            // 0x0D90   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_1_1_CachedIndex;          // 0x0DF0   (0x0010)  
+	FTransform                                         RigVMModel___RigUnit_GetTransform_1_1_1_Transform;          // 0x0E00   (0x0060)  
+	TArray<FCachedRigElement>                          RigVMModel___RigUnit_GetTransform_1_1_1_CachedIndex;        // 0x0E60   (0x0010)  
+	FName                                              RigVMModel___Branch_1_1_RigVMUnitNode_BlockToRun;           // 0x0E70   (0x0008)  
+};
+
+/// Struct /Engine/Transient.PropertyBag_efebf3b98702e67f
+/// Size: 0x04D8 (1240 bytes) (0x000000 - 0x0004D8) align 16 MaxSize: 0x04D8
+struct FPropertyBag_efebf3b98702e67f
+{ 
+	FRigElementKey                                     R;                                                          // 0x0000   (0x000C)  
+	FRigElementKey                                     R0;                                                         // 0x000C   (0x000C)  
+	unsigned char                                      UnknownData00_6[0x8];                                       // 0x0018   (0x0008)  MISSED
+	FQuat                                              L;                                                          // 0x0020   (0x0020)  
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_;                              // 0x0040   (0x0018)  
+	ERigVMTransformSpace                               __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_1;                             // 0x0058   (0x0001)  
+	bool                                               __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_2;                             // 0x0059   (0x0001)  
+	unsigned char                                      UnknownData01_6[0x2];                                       // 0x005A   (0x0002)  MISSED
+	FLinearColor                                       __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_3;                             // 0x005C   (0x0010)  
+	float                                              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_4;                             // 0x006C   (0x0004)  
+	FRigElementKey                                     __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_5;                             // 0x0070   (0x000C)  
+	unsigned char                                      UnknownData02_6[0x4];                                       // 0x007C   (0x0004)  MISSED
+	FTransform                                         __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_6;                             // 0x0080   (0x0060)  
+	ETraceTypeQuery                                    __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_7;                             // 0x00E0   (0x0001)  
+	unsigned char                                      UnknownData03_6[0x3];                                       // 0x00E1   (0x0003)  MISSED
+	float                                              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_8;                             // 0x00E4   (0x0004)  
+	FLinearColor                                       __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_9;                             // 0x00E8   (0x0010)  
+	float                                              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_10;                            // 0x00F8   (0x0004)  
+	unsigned char                                      UnknownData04_6[0x4];                                       // 0x00FC   (0x0004)  MISSED
+	FString                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_11;                            // 0x0100   (0x0010)  
+	float                                              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_12;                            // 0x0110   (0x0004)  
+	FLinearColor                                       __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_13;                            // 0x0114   (0x0010)  
+	unsigned char                                      UnknownData05_6[0x4];                                       // 0x0124   (0x0004)  MISSED
+	FVector                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_14;                            // 0x0128   (0x0018)  
+	ERigVMTransformSpace                               __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_15;                            // 0x0140   (0x0001)  
+	bool                                               __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_16;                            // 0x0141   (0x0001)  
+	unsigned char                                      UnknownData06_6[0x2];                                       // 0x0142   (0x0002)  MISSED
+	FLinearColor                                       __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_17;                            // 0x0144   (0x0010)  
+	float                                              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_18;                            // 0x0154   (0x0004)  
+	FRigElementKey                                     __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_19;                            // 0x0158   (0x000C)  
+	unsigned char                                      UnknownData07_6[0xC];                                       // 0x0164   (0x000C)  MISSED
+	FTransform                                         __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_20;                            // 0x0170   (0x0060)  
+	ETraceTypeQuery                                    __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_21;                            // 0x01D0   (0x0001)  
+	unsigned char                                      UnknownData08_6[0x3];                                       // 0x01D1   (0x0003)  MISSED
+	float                                              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_22;                            // 0x01D4   (0x0004)  
+	FLinearColor                                       __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_23;                            // 0x01D8   (0x0010)  
+	float                                              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_24;                            // 0x01E8   (0x0004)  
+	unsigned char                                      UnknownData09_6[0x4];                                       // 0x01EC   (0x0004)  MISSED
+	FString                                            __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_25;                            // 0x01F0   (0x0010)  
+	float                                              __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_26;                            // 0x0200   (0x0004)  
+	FLinearColor                                       __K0_0_Nk0_TQ0f0_0_0_0_0_0_0_27;                            // 0x0204   (0x0010)  
+	unsigned char                                      UnknownData10_6[0x4];                                       // 0x0214   (0x0004)  MISSED
+	FVector                                            RigVMModel___VariableNode_2_1_Value__Const;                 // 0x0218   (0x0018)  
+	float                                              RigVMModel___AlphaInterp_Scale__Const;                      // 0x0230   (0x0004)  
+	float                                              RigVMModel___AlphaInterp_Bias__Const;                       // 0x0234   (0x0004)  
+	bool                                               RigVMModel___AlphaInterp_bMapRange__Const;                  // 0x0238   (0x0001)  
+	unsigned char                                      UnknownData11_6[0x3];                                       // 0x0239   (0x0003)  MISSED
+	FInputRange                                        RigVMModel___AlphaInterp_InRange__Const;                    // 0x023C   (0x0008)  
+	bool                                               RigVMModel___AlphaInterp_bInterpResult__Const;              // 0x0244   (0x0001)  
+	unsigned char                                      UnknownData12_6[0x3];                                       // 0x0245   (0x0003)  MISSED
+	float                                              RigVMModel___AlphaInterp_InterpSpeedIncreasing__Const;      // 0x0248   (0x0004)  
+	unsigned char                                      UnknownData13_6[0x4];                                       // 0x024C   (0x0004)  MISSED
+	TArray<FRigUnit_ModifyTransforms_PerItem>          RigVMModel___ModifyTransforms_1_1_1_ItemToModify__Const;    // 0x0250   (0x0010)  
+	EControlRigModifyBoneMode                          RigVMModel___ModifyTransforms_1_1_1_Mode__Const;            // 0x0260   (0x0001)  
+	unsigned char                                      UnknownData14_6[0xF];                                       // 0x0261   (0x000F)  MISSED
+	FTransform                                         ___z___jK0_0_____j_0_____;                                  // 0x0270   (0x0060)  
+	ERigVMTransformSpace                               ___z___jK0_0_____j_0_____28;                                // 0x02D0   (0x0001)  
+	bool                                               ___z___jK0_0_____j_0_____29;                                // 0x02D1   (0x0001)  
+	unsigned char                                      UnknownData15_6[0x6];                                       // 0x02D2   (0x0006)  MISSED
+	FVector                                            ___z___jK0_0_____j_0_____30;                                // 0x02D8   (0x0018)  
+	FRigElementKey                                     RigVMModel___Set_Transform_Item__Const;                     // 0x02F0   (0x000C)  
+	ERigVMTransformSpace                               RigVMModel___Set_Transform_Space__Const;                    // 0x02FC   (0x0001)  
+	unsigned char                                      UnknownData16_6[0x3];                                       // 0x02FD   (0x0003)  MISSED
+	FTransform                                         ___z___jK0_0_____j_0_____31;                                // 0x0300   (0x0060)  
+	ERigVMTransformSpace                               ___z___jK0_0_____j_0_____32;                                // 0x0360   (0x0001)  
+	bool                                               ___z___jK0_0_____j_0_____33;                                // 0x0361   (0x0001)  
+	unsigned char                                      UnknownData17_6[0x6];                                       // 0x0362   (0x0006)  MISSED
+	FVector                                            ___z___jK0_0_____j_0_____34;                                // 0x0368   (0x0018)  
+	FRigElementKey                                     RigVMModel___Set_Transform_1_Item__Const;                   // 0x0380   (0x000C)  
+	unsigned char                                      UnknownData18_6[0x4];                                       // 0x038C   (0x0004)  MISSED
+	TArray<FPBIKEffector>                              RigVMModel___PBIK_1_Effectors__Const;                       // 0x0390   (0x0010)  
+	TArray<FPBIKBoneSetting>                           RigVMModel___PBIK_1_BoneSettings__Const;                    // 0x03A0   (0x0010)  
+	TArray<FName>                                      RigVMModel___PBIK_1_ExcludedBones__Const;                   // 0x03B0   (0x0010)  
+	FPBIKSolverSettings                                RigVMModel___PBIK_1_Settings__Const;                        // 0x03C0   (0x0040)  
+	FPBIKDebug                                         RigVMModel___PBIK_1_Debug__Const;                           // 0x0400   (0x0008)  
+	FRigElementKey                                     RigVMModel___GetTransform_1_2_1_Item__Const;                // 0x0408   (0x000C)  
+	FLinearColor                                       RigVMModel___DebugRectangleItemSpace_3_Color__Const;        // 0x0414   (0x0010)  
+	unsigned char                                      UnknownData19_6[0xC];                                       // 0x0424   (0x000C)  MISSED
+	FTransform                                         RigVMModel___DebugRectangleItemSpace_3_WorldOffset__Const;  // 0x0430   (0x0060)  
+	FLinearColor                                       RigVMModel___DebugRectangleItemSpace_2_1_Color__Const;      // 0x0490   (0x0010)  
+	FString                                            RigVMModel___DISPATCH_RigDispatch_Print_Prefix__Const;      // 0x04A0   (0x0010)  
+	float                                              RigVMModel___DISPATCH_RigDispatch_Print_ScreenDuration__Const; // 0x04B0   (0x0004)  
+	FLinearColor                                       RigVMModel___DISPATCH_RigDispatch_Print_ScreenColor__Const; // 0x04B4   (0x0010)  
+	unsigned char                                      UnknownData20_6[0x4];                                       // 0x04C4   (0x0004)  MISSED
+	FString                                            RigVMModel___DISPATCH_RigDispatch_Print_1_Prefix__Const;    // 0x04C8   (0x0010)  
+};
+
 #pragma pack(pop)
+
+

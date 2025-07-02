@@ -25,8 +25,7 @@ GameCache::GameCache()
     initText(gmd, sdm);
     ModLoader::logger->verbose("Cached: Text Registries");
 
-    initItem(gmd, sdm);
-    ModLoader::logger->verbose("Cached: Items Registries");
+    
 
     initRecipe(gmd, sdm);
     ModLoader::logger->verbose("Cached: Recipes Registries");   
@@ -42,6 +41,10 @@ void GameCache::PostLoadCache()
 {
     auto* gmd = ModLoader::gameData;
     auto* sdm = gmd->getStaticDataManager();
+
+    // TEMPORAIRE
+    initItem(gmd, sdm);
+    ModLoader::logger->verbose("Cached: Items Registries");
 
     initSubLevel(gmd, sdm);
     ModLoader::logger->verbose("Cached: Sub level registries");
@@ -415,6 +418,7 @@ void GameCache::initItem(GameData* gmd, UStaticDataManager* sdm)
         ItemMaterialData citem{ sdm->m_ItemMaterialData->m_dataMap.Data[i].Value.Second };
 
         _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemMaterialData>(citem));
+
     }
 
     gmd->waitObject(&sdm->m_ItemConsumeData);
@@ -436,7 +440,6 @@ void GameCache::initItem(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_ItemWeaponData);
     for (int i = 0; i < sdm->m_ItemWeaponData->m_dataMap.Data.Count; i++)
     {
-        auto aled =  sdm->m_ItemWeaponData->m_dataMap.Data[i].Value.Second;
         ItemWeaponData citem{ sdm->m_ItemWeaponData->m_dataMap.Data[i].Value.Second };
 
         _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemWeaponData>(citem));
@@ -446,9 +449,8 @@ void GameCache::initItem(GameData* gmd, UStaticDataManager* sdm)
     for (int i = 0; i < sdm->m_ItemLifeToolsData->m_dataMap.Data.Count; i++)
     {
         ItemLifeToolsData citem{ sdm->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second };
+        
         _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemLifeToolsData>(citem));
-
-        auto array = sdm->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second.lifeParamList;
     }
 
     gmd->waitObject(&sdm->m_ItemArmorData);

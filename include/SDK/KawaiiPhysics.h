@@ -86,47 +86,47 @@ public:
 
 	/// Functions
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetWindScale
-	// FKawaiiPhysicsReference SetWindScale(FKawaiiPhysicsReference& KawaiiPhysics, float WindScale);                           // [0x7dc57d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference SetWindScale(FKawaiiPhysicsReference& KawaiiPhysics, float WindScale);                           // [0x7e2f600] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetTeleportRotationThreshold
-	// FKawaiiPhysicsReference SetTeleportRotationThreshold(FKawaiiPhysicsReference& KawaiiPhysics, float TeleportRotationThreshold); // [0x7dc56d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference SetTeleportRotationThreshold(FKawaiiPhysicsReference& KawaiiPhysics, float TeleportRotationThreshold); // [0x7e2f500] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetTeleportDistanceThreshold
-	// FKawaiiPhysicsReference SetTeleportDistanceThreshold(FKawaiiPhysicsReference& KawaiiPhysics, float TeleportDistanceThreshold); // [0x7dc55d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference SetTeleportDistanceThreshold(FKawaiiPhysicsReference& KawaiiPhysics, float TeleportDistanceThreshold); // [0x7e2f400] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetPhysicsSettings
-	// FKawaiiPhysicsReference SetPhysicsSettings(FKawaiiPhysicsReference& KawaiiPhysics, FKawaiiPhysicsSettings& PhysicsSettings); // [0x7dc54b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference SetPhysicsSettings(FKawaiiPhysicsReference& KawaiiPhysics, FKawaiiPhysicsSettings& PhysicsSettings); // [0x7e2f2e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetNeedWarmUp
-	// FKawaiiPhysicsReference SetNeedWarmUp(FKawaiiPhysicsReference& KawaiiPhysics, bool NeedWarmUp);                          // [0x7dc53b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference SetNeedWarmUp(FKawaiiPhysicsReference& KawaiiPhysics, bool NeedWarmUp);                          // [0x7e2f1e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetGravity
-	// FKawaiiPhysicsReference SetGravity(FKawaiiPhysicsReference& KawaiiPhysics, FVector Gravity);                             // [0x7dc52a0] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FKawaiiPhysicsReference SetGravity(FKawaiiPhysicsReference& KawaiiPhysics, FVector Gravity);                             // [0x7e2f0d0] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetEnableWind
-	// FKawaiiPhysicsReference SetEnableWind(FKawaiiPhysicsReference& KawaiiPhysics, bool EnableWind);                          // [0x7dc51a0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference SetEnableWind(FKawaiiPhysicsReference& KawaiiPhysics, bool EnableWind);                          // [0x7e2efd0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetDummyBoneLength
-	// FKawaiiPhysicsReference SetDummyBoneLength(FKawaiiPhysicsReference& KawaiiPhysics, float DummyBoneLength);               // [0x7dc50a0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference SetDummyBoneLength(FKawaiiPhysicsReference& KawaiiPhysics, float DummyBoneLength);               // [0x7e2eed0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.SetAllowWorldCollision
-	// FKawaiiPhysicsReference SetAllowWorldCollision(FKawaiiPhysicsReference& KawaiiPhysics, bool AllowWorldCollision);        // [0x7dc4fa0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference SetAllowWorldCollision(FKawaiiPhysicsReference& KawaiiPhysics, bool AllowWorldCollision);        // [0x7e2edd0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.ResetDynamics
-	// FKawaiiPhysicsReference ResetDynamics(FKawaiiPhysicsReference& KawaiiPhysics);                                           // [0x7dc4f00] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference ResetDynamics(FKawaiiPhysicsReference& KawaiiPhysics);                                           // [0x7e2ed30] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetWindScale
-	// float GetWindScale(FKawaiiPhysicsReference& KawaiiPhysics);                                                              // [0x7dc4e60] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// float GetWindScale(FKawaiiPhysicsReference& KawaiiPhysics);                                                              // [0x7e2ec90] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetTeleportRotationThreshold
-	// float GetTeleportRotationThreshold(FKawaiiPhysicsReference& KawaiiPhysics);                                              // [0x7dc4dc0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// float GetTeleportRotationThreshold(FKawaiiPhysicsReference& KawaiiPhysics);                                              // [0x7e2ebf0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetTeleportDistanceThreshold
-	// float GetTeleportDistanceThreshold(FKawaiiPhysicsReference& KawaiiPhysics);                                              // [0x7dc4d20] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// float GetTeleportDistanceThreshold(FKawaiiPhysicsReference& KawaiiPhysics);                                              // [0x7e2eb50] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetPhysicsSettings
-	// FKawaiiPhysicsSettings GetPhysicsSettings(FKawaiiPhysicsReference& KawaiiPhysics);                                       // [0x7dc4c70] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// FKawaiiPhysicsSettings GetPhysicsSettings(FKawaiiPhysicsReference& KawaiiPhysics);                                       // [0x7e2eaa0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetNeedWarmUp
-	// bool GetNeedWarmUp(FKawaiiPhysicsReference& KawaiiPhysics);                                                              // [0x7dc4bd0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// bool GetNeedWarmUp(FKawaiiPhysicsReference& KawaiiPhysics);                                                              // [0x7e2ea00] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetGravity
-	// FVector GetGravity(FKawaiiPhysicsReference& KawaiiPhysics);                                                              // [0x7dc4b20] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// FVector GetGravity(FKawaiiPhysicsReference& KawaiiPhysics);                                                              // [0x7e2e950] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetEnableWind
-	// bool GetEnableWind(FKawaiiPhysicsReference& KawaiiPhysics);                                                              // [0x7dc4a80] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// bool GetEnableWind(FKawaiiPhysicsReference& KawaiiPhysics);                                                              // [0x7e2e8b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetDummyBoneLength
-	// float GetDummyBoneLength(FKawaiiPhysicsReference& KawaiiPhysics);                                                        // [0x7dc49e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// float GetDummyBoneLength(FKawaiiPhysicsReference& KawaiiPhysics);                                                        // [0x7e2e810] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.GetAllowWorldCollision
-	// bool GetAllowWorldCollision(FKawaiiPhysicsReference& KawaiiPhysics);                                                     // [0x7dc4940] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// bool GetAllowWorldCollision(FKawaiiPhysicsReference& KawaiiPhysics);                                                     // [0x7e2e770] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.ConvertToKawaiiPhysicsPure
-	// void ConvertToKawaiiPhysicsPure(FAnimNodeReference& Node, FKawaiiPhysicsReference& KawaiiPhysics, bool& Result);         // [0x7dc47d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// void ConvertToKawaiiPhysicsPure(FAnimNodeReference& Node, FKawaiiPhysicsReference& KawaiiPhysics, bool& Result);         // [0x7e2e600] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/KawaiiPhysics.KawaiiPhysicsLibrary.ConvertToKawaiiPhysics
-	// FKawaiiPhysicsReference ConvertToKawaiiPhysics(FAnimNodeReference& Node, EAnimNodeReferenceConversionResult& Result);    // [0x7dc46d0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// FKawaiiPhysicsReference ConvertToKawaiiPhysics(FAnimNodeReference& Node, EAnimNodeReferenceConversionResult& Result);    // [0x7e2e500] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/KawaiiPhysics.CollisionLimitBase
@@ -352,3 +352,5 @@ struct FPlanarLimitData : FCollisionLimitDataBase
 };
 
 #pragma pack(pop)
+
+

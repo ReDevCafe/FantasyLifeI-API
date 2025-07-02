@@ -1,3246 +1,3363 @@
-#pragma once
-#define MATERIAL_DEVILS_FIN "imt01001080" // name_imt01001080 = Devil's Fin
-#define MATERIAL_MYSTERIA_MINERAL_WATER "imt01000010" // name_imt01000010 = Mysteria Mineral Water
-#define MATERIAL_PIRATE_CAPTAIN_BUTTONS "imt01002390" // name_imt01002390 = Pirate Captain Buttons
-#define MATERIAL_FARAWAY_SPRING_WATER "imt01000020" // name_imt01000020 = Faraway Spring Water
-#define MATERIAL_SEASHELL_BUTTONS "imt01002380" // name_imt01002380 = Seashell Buttons
-#define MATERIAL_TROPICA_DEEP_SEA_WATER "imt01000030" // name_imt01000030 = Tropica Deep Sea Water
-#define MATERIAL_DANDELION_PUFF "imt01002060" // name_imt01002060 = Dandelion Puff
-#define MATERIAL_SKELEGON_APPLIQUE "imt01003935" // name_imt01003935 = Skelegon AppliquE
-#define MATERIAL_BLUE_ANTHURIUM "imt01000400" // name_imt01000400 = Blue Anthurium
-#define MATERIAL_MINTY_ORE "imt01001380" // name_imt01001380 = Minty Ore
-#define MATERIAL_LIFEWEED "imt01000130" // name_imt01000130 = Lifeweed
-#define MATERIAL_BLACK_PEPPER "imt01004000" // name_imt01004000 = Black Pepper
-#define MATERIAL_DRAGONFLY "imt01000390" // name_imt01000390 = Dragonfly
-#define MATERIAL_ANCIENT_CORAL "imt01003430" // name_imt01003430 = Ancient Coral
-#define MATERIAL_TRIAL_CAVEDEW "imt01000040" // name_imt01000040 = Trial Cavedew
-#define MATERIAL_WHITE_ANTHURIUM "imt01000430" // name_imt01000430 = White Anthurium
-#define MATERIAL_HEALWEED "imt01000100" // name_imt01000100 = Healweed
-#define MATERIAL_YELLOW_ANTHURIUM "imt01000420" // name_imt01000420 = Yellow Anthurium
-#define MATERIAL_PARALYSIS_POWDER "imt01002480" // name_imt01002480 = Paralysis Powder
-#define MATERIAL_VITALWEED "imt01000110" // name_imt01000110 = Vitalweed
-#define MATERIAL_SUNNY_PUFF "imt01002070" // name_imt01002070 = Sunny Puff
-#define MATERIAL_RED_ANTHURIUM "imt01000410" // name_imt01000410 = Red Anthurium
-#define MATERIAL_QUALITY_MINTY_ORE "imt01001390" // name_imt01001390 = Quality Minty Ore
-#define MATERIAL_CUREWEED "imt01000120" // name_imt01000120 = Cureweed
-#define MATERIAL_CALMARYLLIS "imt01000470" // name_imt01000470 = Calmaryllis
-#define MATERIAL_SOULWEED "imt01000140" // name_imt01000140 = Soulweed
-#define MATERIAL_PURIFFODIL "imt01000460" // name_imt01000460 = Puriffodil
-#define MATERIAL_GOLDWEED "imt01000150" // name_imt01000150 = Goldweed
-#define MATERIAL_EVENING_GLORY "imt01000450" // name_imt01000450 = Evening Glory
-#define MATERIAL_ALCHEWEED "imt01000160" // name_imt01000160 = Alcheweed
-#define MATERIAL_BLACK_ANTHURIUM "imt01000440" // name_imt01000440 = Black Anthurium
-#define MATERIAL_ARCH_ALCHEWEED "imt01000170" // name_imt01000170 = Arch Alcheweed
-#define MATERIAL_WONDERFUL_RIBBON "imt01002410" // name_imt01002410 = Wonderful Ribbon
-#define MATERIAL_BLUE_STONE "imt01001330" // name_imt01001330 = Blue Stone
-#define MATERIAL_ULTIMA_ALCHEWEED "imt01000180" // name_imt01000180 = Ultima Alcheweed
-#define MATERIAL_RUSHDELION "imt01000480" // name_imt01000480 = Rushdelion
-#define MATERIAL_FORTUNES_FLUFF "imt01000490" // name_imt01000490 = Fortune's Fluff
-#define MATERIAL_VITABLOOM "imt01000500" // name_imt01000500 = Vitabloom
-#define MATERIAL_BUTTER "imt01004010" // name_imt01004010 = Butter
-#define MATERIAL_CHAMPION_BEETLE "imt01000380" // name_imt01000380 = Champion Beetle
-#define MATERIAL_GLITTERING_CORAL "imt01003420" // name_imt01003420 = Glittering Coral
-#define MATERIAL_MUSHROOM "imt01000050" // name_imt01000050 = Mushroom
-#define MATERIAL_BRILLIANT_FEATHER "imt01003680" // name_imt01003680 = Brilliant Feather
-#define MATERIAL_CACTUS_FISH "imt01000670" // name_imt01000670 = Cactus Fish
-#define MATERIAL_FOSSILSHROOM "imt01004890" // name_imt01004890 = Fossilshroom
-#define MATERIAL_STUNNING_CORAL "imt01003410" // name_imt01003410 = Stunning Coral
-#define MATERIAL_TRUFFLE "imt01000060" // name_imt01000060 = Truffle
-#define MATERIAL_SKELETON_FISH "imt01000980" // name_imt01000980 = Skeleton Fish
-#define MATERIAL_PRETTY_CORAL "imt01003400" // name_imt01003400 = Pretty Coral
-#define MATERIAL_DUFFLE "imt01000070" // name_imt01000070 = Duffle
-#define MATERIAL_BULLION_BEETLE "imt01000350" // name_imt01000350 = Bullion Beetle
-#define MATERIAL_BLACK_WOOL "imt01002330" // name_imt01002330 = Black Wool
-#define MATERIAL_SUBTERRANEAN_SCALES "imt01001010" // name_imt01001010 = Subterranean Scales
-#define MATERIAL_GIGAGA_TRUFFLE "imt01000080" // name_imt01000080 = Gigaga Truffle
-#define MATERIAL_WINDFALL_BEETLE "imt01000340" // name_imt01000340 = Windfall Beetle
-#define MATERIAL_ELDER_PINE_LOG "imt01001710" // name_imt01001710 = Elder Pine Log
-#define MATERIAL_ROYAL_EGGS "imt01002830" // name_imt01002830 = Royal Eggs
-#define MATERIAL_PINK_SILK "imt01002320" // name_imt01002320 = Pink Silk
-#define MATERIAL_TOP_CLASS_MUSHROOM "imt01000090" // name_imt01000090 = Top-Class Mushroom
-#define MATERIAL_RHINO_BEETLE "imt01000360" // name_imt01000360 = Rhino Beetle
-#define MATERIAL_ELDER_SUGAR_LOG "imt01001730" // name_imt01001730 = Elder Sugar Log
-#define MATERIAL_CHICKEN_EGGS "imt01002810" // name_imt01002810 = Chicken Eggs
-#define MATERIAL_MYSTERIA_MORPHO "imt01000320" // name_imt01000320 = Mysteria Morpho
-#define MATERIAL_ELDER_CHERRY_LOG "imt01001770" // name_imt01001770 = Elder Cherry Log
-#define MATERIAL_QUEEN_EGGS "imt01002850" // name_imt01002850 = Queen Eggs
-#define MATERIAL_CUTE_RIBBON "imt01002400" // name_imt01002400 = Cute Ribbon
-#define MATERIAL_YELLOW_STONE "imt01001320" // name_imt01001320 = Yellow Stone
-#define MATERIAL_BIG_EGG "imt01000190" // name_imt01000190 = Big Egg
-#define MATERIAL_MYSTERIA_COPPER "imt01001150" // name_imt01001150 = Mysteria Copper
-#define MATERIAL_QUETZAL_EGG "imt01000210" // name_imt01000210 = Quetzal Egg
-#define MATERIAL_BIGBEAK_EGG "imt01000200" // name_imt01000200 = Bigbeak Egg
-#define MATERIAL_ANIMAL_DROPPINGS "imt01000250" // name_imt01000250 = Animal Droppings
-#define MATERIAL_SULTAN_STONE "imt01004390" // name_imt01004390 = Sultan Stone
-#define MATERIAL_GOLDEN_DROPPINGS "imt01000260" // name_imt01000260 = Golden Droppings
-#define MATERIAL_PRINCESS_APPLIQUE "imt01003900" // name_imt01003900 = Princess AppliquE
-#define MATERIAL_CASHMERE "imt01002280" // name_imt01002280 = Cashmere
-#define MATERIAL_FARAWAY_IRON "imt01001160" // name_imt01001160 = Faraway Iron
-#define MATERIAL_LITTLE_SHELL "imt01000220" // name_imt01000220 = Little Shell
-#define MATERIAL_PIRATE_APPLIQUE "imt01003910" // name_imt01003910 = Pirate AppliquE
-#define MATERIAL_MARINE_SILK "imt01002290" // name_imt01002290 = Marine Silk
-#define MATERIAL_TROPICA_SILVER "imt01001170" // name_imt01001170 = Tropica Silver
-#define MATERIAL_DURABLE_SHELL "imt01000230" // name_imt01000230 = Durable Shell
-#define MATERIAL_VALUABLE_SHELL "imt01000240" // name_imt01000240 = Valuable Shell
-#define MATERIAL_COMMON_HOPPER "imt01000270" // name_imt01000270 = Common Hopper
-#define MATERIAL_ROYAL_HOPPER "imt01000280" // name_imt01000280 = Royal Hopper
-#define MATERIAL_DEMONIC_HOPPER "imt01000290" // name_imt01000290 = Demonic Hopper
-#define MATERIAL_BLACK_PAINT "imt01004090" // name_imt01004090 = Black Paint
-#define MATERIAL_WHITE_BUTTERFLY "imt01000300" // name_imt01000300 = White Butterfly
-#define MATERIAL_WHITE_PAINT "imt01004080" // name_imt01004080 = White Paint
-#define MATERIAL_YELLOW_BUTTERFLY "imt01000310" // name_imt01000310 = Yellow Butterfly
-#define MATERIAL_PENNY_BEETLE "imt01000330" // name_imt01000330 = Penny Beetle
-#define MATERIAL_BRUISER_BEETLE "imt01000370" // name_imt01000370 = Bruiser Beetle
-#define MATERIAL_SILK "imt01002260" // name_imt01002260 = Silk
-#define MATERIAL_SWOLEAN_GOLD "imt01001180" // name_imt01001180 = Swolean Gold
-#define MATERIAL_SUNNY_COTTON "imt01002270" // name_imt01002270 = Sunny Cotton
-#define MATERIAL_PLATINUM_ORE "imt01001190" // name_imt01001190 = Platinum Ore
-#define MATERIAL_MARINE_ORE "imt01001210" // name_imt01001210 = Marine Ore
-#define MATERIAL_MAGMA_ORE "imt01001200" // name_imt01001200 = Magma Ore
-#define MATERIAL_MAGIC_ORE "imt01001220" // name_imt01001220 = Magic Ore
-#define MATERIAL_WIND_MANA "imt01003630" // name_imt01003630 = Wind Mana
-#define MATERIAL_MYSTERIA_MASONRY "imt01004820" // name_imt01004820 = Mysteria Masonry
-#define MATERIAL_EARTH_MANA "imt01003620" // name_imt01003620 = Earth Mana
-#define MATERIAL_GOOD_MYSTERIA_MASONRY "imt01004830" // name_imt01004830 = Good Mysteria Masonry
-#define MATERIAL_PURPLE_CABBAGE "imt01002720" // name_imt01002720 = Purple Cabbage
-#define MATERIAL_SANDSTONE "imt01001400" // name_imt01001400 = Sandstone
-#define MATERIAL_WILD_BULL_HORN "imt01003530" // name_imt01003530 = Wild Bull Horn
-#define MATERIAL_HANIWA_STONE "imt01004900" // name_imt01004900 = Haniwa Stone
-#define MATERIAL_GEMINI_CABBAGE "imt01002730" // name_imt01002730 = Gemini Cabbage
-#define MATERIAL_FOSSIL_SHARD "imt01001410" // name_imt01001410 = Fossil Shard
-#define MATERIAL_POISON_POWDER "imt01002470" // name_imt01002470 = Poison Powder
-#define MATERIAL_DRAGON_LEG_BONE "imt01001350" // name_imt01001350 = Dragon Leg Bone
-#define MATERIAL_STRING "imt01002440" // name_imt01002440 = String
-#define MATERIAL_DRAGON_VERTEBRAE "imt01001360" // name_imt01001360 = Dragon Vertebrae
-#define MATERIAL_LEATHER_STRING "imt01002450" // name_imt01002450 = Leather String
-#define MATERIAL_DRAGON_SKULL "imt01001370" // name_imt01001370 = Dragon Skull
-#define MATERIAL_GODLY_CABBAGE "imt01002740" // name_imt01002740 = Godly Cabbage
-#define MATERIAL_FIRE_SHARD "imt01001460" // name_imt01001460 = Fire Shard
-#define MATERIAL_GREAT_SPIRIT_FLOWER "imt01002750" // name_imt01002750 = Great Spirit Flower
-#define MATERIAL_WIND_SHARD "imt01001470" // name_imt01001470 = Wind Shard
-#define MATERIAL_WATER_SHARD "imt01001480" // name_imt01001480 = Water Shard
-#define MATERIAL_EARTH_SHARD "imt01001490" // name_imt01001490 = Earth Shard
-#define MATERIAL_GOLDEN_STRING "imt01002460" // name_imt01002460 = Golden String
-#define MATERIAL_PURPLE_STONE "imt01001340" // name_imt01001340 = Purple Stone
-#define MATERIAL_ARMORED_ONION "imt01002700" // name_imt01002700 = Armored Onion
-#define MATERIAL_DARK_STONE "imt01001420" // name_imt01001420 = Dark Stone
-#define MATERIAL_TOPAZ "imt01001240" // name_imt01001240 = Topaz
-#define MATERIAL_AQUAMARINE "imt01001230" // name_imt01001230 = Aquamarine
-#define MATERIAL_AMETHYST "imt01001260" // name_imt01001260 = Amethyst
-#define MATERIAL_RUBY "imt01001250" // name_imt01001250 = Ruby
-#define MATERIAL_SAPPHIRE "imt01001280" // name_imt01001280 = Sapphire
-#define MATERIAL_EMERALD "imt01001270" // name_imt01001270 = Emerald
-#define MATERIAL_FLUFFY_RIBBON "imt01002420" // name_imt01002420 = Fluffy Ribbon
-#define MATERIAL_DIAMOND "imt01001300" // name_imt01001300 = Diamond
-#define MATERIAL_BLACK_ONYX "imt01001290" // name_imt01001290 = Black Onyx
-#define MATERIAL_CHAROITE "imt01004740" // name_imt01004740 = Charoite
-#define MATERIAL_FLAXEN_HAIR "imt01002770" // name_imt01002770 = Flaxen Hair
-#define MATERIAL_FLAME_RUBY "imt01001450" // name_imt01001450 = Flame Ruby
-#define MATERIAL_DIVINE_RIBBON "imt01002430" // name_imt01002430 = Divine Ribbon
-#define MATERIAL_ANCIENT_EMERALD "imt01001310" // name_imt01001310 = Ancient Emerald
-#define MATERIAL_CABBAGE "imt01002710" // name_imt01002710 = Cabbage
-#define MATERIAL_ANCIENT_ORB "imt01001430" // name_imt01001430 = Ancient Orb
-#define MATERIAL_NEARLY_INVISIBLE_TEARDROP "imt01002760" // name_imt01002760 = Nearly Invisible Teardrop
-#define MATERIAL_MAGMA_DRAGONSTONE "imt01001440" // name_imt01001440 = Magma Dragonstone
-#define MATERIAL_DARK_GEM "imt01004750" // name_imt01004750 = Dark Gem
-#define MATERIAL_FISH_SCALES "imt01003210" // name_imt01003210 = Fish Scales
-#define MATERIAL_SULTAN_HEART "imt01004400" // name_imt01004400 = Sultan Heart
-#define MATERIAL_GIANT_CLAWS "imt01003550" // name_imt01003550 = Giant Claws
-#define MATERIAL_LEGENDARY_SHINY_DIAMOND "imt01004960" // name_imt01004960 = Legendary Shiny Diamond
-#define MATERIAL_SPOOKY_SPUD "imt01002660" // name_imt01002660 = Spooky Spud
-#define MATERIAL_BRONZE_INGOT "imt01001500" // name_imt01001500 = Bronze Ingot
-#define MATERIAL_ONION "imt01002670" // name_imt01002670 = Onion
-#define MATERIAL_IRON_INGOT "imt01001510" // name_imt01001510 = Iron Ingot
-#define MATERIAL_BUSHY_BAATATO "imt01002640" // name_imt01002640 = Bushy Baatato
-#define MATERIAL_SILVER_INGOT "imt01001520" // name_imt01001520 = Silver Ingot
-#define MATERIAL_DANDY_POTATO "imt01002650" // name_imt01002650 = Dandy Potato
-#define MATERIAL_GOLD_INGOT "imt01001530" // name_imt01001530 = Gold Ingot
-#define MATERIAL_KAISER_PUMPKIN "imt01002620" // name_imt01002620 = Kaiser Pumpkin
-#define MATERIAL_PLATINUM_INGOT "imt01001540" // name_imt01001540 = Platinum Ingot
-#define MATERIAL_SMILEY_PUMPKIN "imt01002600" // name_imt01002600 = Smiley Pumpkin
-#define MATERIAL_MARINE_INGOT "imt01001560" // name_imt01001560 = Marine Ingot
-#define MATERIAL_POTATO "imt01002630" // name_imt01002630 = Potato
-#define MATERIAL_MAGMA_INGOT "imt01001550" // name_imt01001550 = Magma Ingot
-#define MATERIAL_GOURDY_PUMPKIN "imt01002610" // name_imt01002610 = Gourdy Pumpkin
-#define MATERIAL_MAGIC_INGOT "imt01001570" // name_imt01001570 = Magic Ingot
-#define MATERIAL_OAK_LOG "imt01001580" // name_imt01001580 = Oak Log
-#define MATERIAL_PALM_LOG "imt01001600" // name_imt01001600 = Palm Log
-#define MATERIAL_RADISHY_LEAF "imt01003520" // name_imt01003520 = Radishy Leaf
-#define MATERIAL_DESERT_LOG "imt01004910" // name_imt01004910 = Desert Log
-#define MATERIAL_PINE_LOG "imt01001590" // name_imt01001590 = Pine Log
-#define MATERIAL_STAR_CLUSTER "imt01002930" // name_imt01002930 = Star Cluster
-#define MATERIAL_CHERRY_LOG "imt01001650" // name_imt01001650 = Cherry Log
-#define MATERIAL_SUGAR_LOG "imt01001610" // name_imt01001610 = Sugar Log
-#define MATERIAL_LIFEFORCE_CLUSTER "imt01002950" // name_imt01002950 = Lifeforce Cluster
-#define MATERIAL_STARRY_LOG "imt01001630" // name_imt01001630 = Starry Log
-#define MATERIAL_HARD_CLAWS "imt01003290" // name_imt01003290 = Hard Claws
-#define MATERIAL_SKYTREE_LOG "imt01004480" // name_imt01004480 = Skytree Log
-#define MATERIAL_MOON_CLUSTER "imt01002920" // name_imt01002920 = Moon Cluster
-#define MATERIAL_DARKWOOD_LOG "imt01001640" // name_imt01001640 = Darkwood Log
-#define MATERIAL_FIRE_LOG "imt01001660" // name_imt01001660 = Fire Log
-#define MATERIAL_WIND_LOG "imt01001670" // name_imt01001670 = Wind Log
-#define MATERIAL_WATER_LOG "imt01001680" // name_imt01001680 = Water Log
-#define MATERIAL_EARTH_LOG "imt01001690" // name_imt01001690 = Earth Log
-#define MATERIAL_GIANT_THORN "imt01003540" // name_imt01003540 = Giant Thorn
-#define MATERIAL_LEGENDARY_DIVINE_LOG "imt01004970" // name_imt01004970 = Legendary Divine Log
-#define MATERIAL_ELDER_OAK_LOG "imt01001700" // name_imt01001700 = Elder Oak Log
-#define MATERIAL_FAINTLY_GLOWING_LEAF "imt01002800" // name_imt01002800 = Faintly Glowing Leaf
-#define MATERIAL_ELDER_PALM_LOG "imt01001720" // name_imt01001720 = Elder Palm Log
-#define MATERIAL_RED_GEL "imt01003510" // name_imt01003510 = Red Gel
-#define MATERIAL_ELDER_DESERT_LOG "imt01004920" // name_imt01004920 = Elder Desert Log
-#define MATERIAL_ELDER_STARRY_LOG "imt01001750" // name_imt01001750 = Elder Starry Log
-#define MATERIAL_ANIMAL_CLAWS "imt01003280" // name_imt01003280 = Animal Claws
-#define MATERIAL_ELDER_SKYTREE_LOG "imt01004490" // name_imt01004490 = Elder Skytree Log
-#define MATERIAL_ELDER_DARKWOOD_LOG "imt01001760" // name_imt01001760 = Elder Darkwood Log
-#define MATERIAL_ELDER_FIRE_LOG "imt01001780" // name_imt01001780 = Elder Fire Log
-#define MATERIAL_ELDER_WIND_LOG "imt01001790" // name_imt01001790 = Elder Wind Log
-#define MATERIAL_ELDER_WATER_LOG "imt01001800" // name_imt01001800 = Elder Water Log
-#define MATERIAL_ELDER_EARTH_LOG "imt01001810" // name_imt01001810 = Elder Earth Log
-#define MATERIAL_CHERRY_BRANCH "imt01002040" // name_imt01002040 = Cherry Branch
-#define MATERIAL_GIANTS_TREE_BARK "imt01002030" // name_imt01002030 = Giant's Tree Bark
-#define MATERIAL_MONSTER_MEAT "imt01003120" // name_imt01003120 = Monster Meat
-#define MATERIAL_CAVE_CATFISH "imt01004510" // name_imt01004510 = Cave Catfish
-#define MATERIAL_ANTIDOTE_BERRIES "imt01001940" // name_imt01001940 = Antidote Berries
-#define MATERIAL_DRAGON_MEAT "imt01003130" // name_imt01003130 = Dragon Meat
-#define MATERIAL_SKYTREE_LUMBER "imt01004500" // name_imt01004500 = Skytree Lumber
-#define MATERIAL_ANTIPARA_BERRIES "imt01001950" // name_imt01001950 = Antipara Berries
-#define MATERIAL_MUTTON "imt01003100" // name_imt01003100 = Mutton
-#define MATERIAL_KISSYFISH "imt01004530" // name_imt01004530 = Kissyfish
-#define MATERIAL_REJUVENATING_BERRIES "imt01001960" // name_imt01001960 = Rejuvenating Berries
-#define MATERIAL_DINO_MEAT "imt01003110" // name_imt01003110 = Dino Meat
-#define MATERIAL_FLYING_FISH "imt01004520" // name_imt01004520 = Flying Fish
-#define MATERIAL_WAKEUP_BERRIES "imt01001970" // name_imt01001970 = Wakeup Berries
-#define MATERIAL_PALM_NUTS "imt01002000" // name_imt01002000 = Palm Nuts
-#define MATERIAL_PINE_NUTS "imt01001980" // name_imt01001980 = Pine Nuts
-#define MATERIAL_SUGAR_NUTS "imt01001990" // name_imt01001990 = Sugar Nuts
-#define MATERIAL_GIANTS_TREE_NUTS "imt01002020" // name_imt01002020 = Giant's Tree Nuts
-#define MATERIAL_CHERRY_NECTAR "imt01002050" // name_imt01002050 = Cherry Nectar
-#define MATERIAL_BEEF "imt01003080" // name_imt01003080 = Beef
-#define MATERIAL_OAK_LUMBER "imt01001820" // name_imt01001820 = Oak Lumber
-#define MATERIAL_PALM_LUMBER "imt01001840" // name_imt01001840 = Palm Lumber
-#define MATERIAL_YELLOW_GEL "imt01003500" // name_imt01003500 = Yellow Gel
-#define MATERIAL_GODFISH "imt01000880" // name_imt01000880 = Godfish
-#define MATERIAL_DESERT_LUMBER "imt01004930" // name_imt01004930 = Desert Lumber
-#define MATERIAL_CHICKEN "imt01003090" // name_imt01003090 = Chicken
-#define MATERIAL_PINE_LUMBER "imt01001830" // name_imt01001830 = Pine Lumber
-#define MATERIAL_FARAWAY_RICE "imt01003030" // name_imt01003030 = Faraway Rice
-#define MATERIAL_CHERRY_LUMBER "imt01001890" // name_imt01001890 = Cherry Lumber
-#define MATERIAL_SUGAR_LUMBER "imt01001850" // name_imt01001850 = Sugar Lumber
-#define MATERIAL_STARRY_LUMBER "imt01001870" // name_imt01001870 = Starry Lumber
-#define MATERIAL_FARAWAY_WHEAT "imt01003020" // name_imt01003020 = Faraway Wheat
-#define MATERIAL_DARKWOOD_LUMBER "imt01001880" // name_imt01001880 = Darkwood Lumber
-#define MATERIAL_BIG_TAIL "imt01003160" // name_imt01003160 = Big Tail
-#define MATERIAL_GOLD_KOI "imt01004550" // name_imt01004550 = Gold Koi
-#define MATERIAL_FIRE_WOOD_LUMBER "imt01001900" // name_imt01001900 = Fire Wood Lumber
-#define MATERIAL_MONSTER_TAIL "imt01003170" // name_imt01003170 = Monster Tail
-#define MATERIAL_GREEN_FISH "imt01004540" // name_imt01004540 = Green Fish
-#define MATERIAL_WIND_WOOD_LUMBER "imt01001910" // name_imt01001910 = Wind Wood Lumber
-#define MATERIAL_WILD_BEAST_MEAT "imt01003140" // name_imt01003140 = Wild Beast Meat
-#define MATERIAL_CORRUPT_CARROT "imt01004570" // name_imt01004570 = Corrupt Carrot
-#define MATERIAL_WATER_WOOD_LUMBER "imt01001920" // name_imt01001920 = Water Wood Lumber
-#define MATERIAL_LITTLE_TAIL "imt01003150" // name_imt01003150 = Little Tail
-#define MATERIAL_SHADOW_CARROT "imt01004560" // name_imt01004560 = Shadow Carrot
-#define MATERIAL_EARTH_WOOD_LUMBER "imt01001930" // name_imt01001930 = Earth Wood Lumber
-#define MATERIAL_MYSTERIA_CARP "imt01000570" // name_imt01000570 = Mysteria Carp
-#define MATERIAL_MYSTERIA_CRUCIAN "imt01000560" // name_imt01000560 = Mysteria Crucian
-#define MATERIAL_CORNY_STICKER "imt01004210" // name_imt01004210 = Corny Sticker
-#define MATERIAL_FARAWAY_SWEETFISH "imt01000580" // name_imt01000580 = Faraway Sweetfish
-#define MATERIAL_TUNOCO_STICKER "imt01004200" // name_imt01004200 = Tunoco Sticker
-#define MATERIAL_LULAB_TROUT "imt01000590" // name_imt01000590 = Lulab Trout
-#define MATERIAL_SAND_FISH "imt01005010" // name_imt01005010 = Sand Fish
-#define MATERIAL_REDGILL "imt01005020" // name_imt01005020 = Redgill
-#define MATERIAL_PARASOL_FISH "imt01000610" // name_imt01000610 = Parasol Fish
-#define MATERIAL_LAVASHRIMP "imt01005030" // name_imt01005030 = Lavashrimp
-#define MATERIAL_MYSTERIA_KOI "imt01000790" // name_imt01000790 = Mysteria Koi
-#define MATERIAL_SARDINE "imt01000620" // name_imt01000620 = Sardine
-#define MATERIAL_TUNOCO_FISH "imt01000940" // name_imt01000940 = Tunoco Fish
-#define MATERIAL_ARTISAN_KING_SERIES "imt01004880" // name_arena_003 = Artisan King Series
-#define MATERIAL_MONSTER_CRYSTAL "imt01003690" // name_imt01003690 = Monster Crystal
-#define MATERIAL_PUFFERFISH "imt01000660" // name_imt01000660 = Pufferfish
-#define MATERIAL_CLOWNFISH "imt01000930" // name_imt01000930 = Clownfish
-#define MATERIAL_TUNA "imt01000630" // name_imt01000630 = Tuna
-#define MATERIAL_DUNEFIN_TUNA "imt01005000" // name_imt01005000 = Dunefin Tuna
-#define MATERIAL_TROPICA_BREAM "imt01000770" // name_imt01000770 = Tropica Bream
-#define MATERIAL_ANGELFISH "imt01000920" // name_imt01000920 = Angelfish
-#define MATERIAL_ELECTRIC_EEL "imt01000730" // name_imt01000730 = Electric Eel
-#define MATERIAL_SNEAKFISH "imt01000750" // name_imt01000750 = Sneakfish
-#define MATERIAL_BLUE_GEL "imt01003490" // name_imt01003490 = Blue Gel
-#define MATERIAL_BLACKGILL "imt01000910" // name_imt01000910 = Blackgill
-#define MATERIAL_EVIL_CARP "imt01000840" // name_imt01000840 = Evil Carp
-#define MATERIAL_QUARTZFISH "imt01000700" // name_imt01000700 = Quartzfish
-#define MATERIAL_FORAGER_KING_SERIES "imt01004870" // name_arena_002 = Forager King Series
-#define MATERIAL_RAINBOW_FEATHER "imt01003660" // name_imt01003660 = Rainbow Feather
-#define MATERIAL_SMELT "imt01000690" // name_imt01000690 = Smelt
-#define MATERIAL_SNEAKY_TUNA "imt01000740" // name_imt01000740 = Sneaky Tuna
-#define MATERIAL_HOT_SPRING_BREAM "imt01000850" // name_imt01000850 = Hot Spring Bream
-#define MATERIAL_DARKFISH "imt01004780" // name_imt01004780 = Darkfish
-#define MATERIAL_PLAINS_LORDFISH "imt01004600" // name_imt01004600 = Plains Lordfish
-#define MATERIAL_PLAINS_LORDFISH_MOSS "imt01004610" // name_imt01004610 = Plains Lordfish Moss
-#define MATERIAL_CHERRY_LORDFISH "imt01004620" // name_imt01004620 = Cherry Lordfish
-#define MATERIAL_CHERRY_LORDFISH_MOSS "imt01004630" // name_imt01004630 = Cherry Lordfish Moss
-#define MATERIAL_FOREST_LORDFISH "imt01000600" // name_imt01000600 = Forest Lordfish
-#define MATERIAL_TRIP_APPLIQUE "imt01003940" // name_imt01003940 = Trip AppliquE
-#define MATERIAL_FOREST_LORDFISH_MOSS "imt01001120" // name_imt01001120 = Forest Lordfish Moss
-#define MATERIAL_HIGH_FLYING_FISH "imt01004700" // name_imt01004700 = High-Flying Fish
-#define MATERIAL_NIMBUS_SCALES "imt01004710" // name_imt01004710 = Nimbus Scales
-#define MATERIAL_GIANT_TAIL "imt01003580" // name_imt01003580 = Giant Tail
-#define MATERIAL_SWORDFISH "imt01000800" // name_imt01000800 = Swordfish
-#define MATERIAL_KINGS_WOOL "imt01002340" // name_imt01002340 = King's Wool
-#define MATERIAL_SWORDFISH_FIN "imt01001060" // name_imt01001060 = Swordfish Fin
-#define MATERIAL_LEGENDARY_ROCKET_FISH "imt01004980" // name_imt01004980 = Legendary Rocket Fish
-#define MATERIAL_GOLDEN_SWORDFISH "imt01000830" // name_imt01000830 = Golden Swordfish
-#define MATERIAL_STARDUST_LINEN "imt01002350" // name_imt01002350 = Stardust Linen
-#define MATERIAL_GOLDEN_FIN "imt01001070" // name_imt01001070 = Golden Fin
-#define MATERIAL_LEGENDARY_KING_SPUD "imt01004990" // name_imt01004990 = Legendary King Spud
-#define MATERIAL_COLDWATER_TUNA "imt01000820" // name_imt01000820 = Coldwater Tuna
-#define MATERIAL_FLARE_CASHMERE "imt01002310" // name_imt01002310 = Flare Cashmere
-#define MATERIAL_ICY_SCALES "imt01001030" // name_imt01001030 = Icy Scales
-#define MATERIAL_RAINBOW_FLYING_FISH "imt01004660" // name_imt01004660 = Rainbow Flying Fish
-#define MATERIAL_SUGAR "imt01003970" // name_imt01003970 = Sugar
-#define MATERIAL_RAINBOW_FIN "imt01001110" // name_imt01001110 = Rainbow Fin
-#define MATERIAL_GREAT_LUCKY_BREAM "imt01004640" // name_imt01004640 = Great Lucky Bream
-#define MATERIAL_LUCKY_PEARL "imt01004650" // name_imt01004650 = Lucky Pearl
-#define MATERIAL_HAGRAM_APPLIQUE "imt01003950" // name_imt01003950 = Hagram AppliquE
-#define MATERIAL_GODFISH_MOSS "imt01001130" // name_imt01001130 = Godfish Moss
-#define MATERIAL_GREEN_GEL "imt01003480" // name_imt01003480 = Green Gel
-#define MATERIAL_POSEIDON_SWORDFISH "imt01000900" // name_imt01000900 = Poseidon Swordfish
-#define MATERIAL_SALT "imt01003960" // name_imt01003960 = Salt
-#define MATERIAL_POSEIDONS_FIN "imt01001100" // name_imt01001100 = Poseidon's Fin
-#define MATERIAL_BEELZEBUB_TUNA "imt01000870" // name_imt01000870 = Beelzebub Tuna
-#define MATERIAL_BASS_OF_DARKNESS "imt01000760" // name_imt01000760 = Bass of Darkness
-#define MATERIAL_LINEN "imt01002300" // name_imt01002300 = Linen
-#define MATERIAL_DARK_SCALES "imt01001020" // name_imt01001020 = Dark Scales
-#define MATERIAL_HERO_SERIES "imt01004860" // name_arena_001 = Hero Series
-#define MATERIAL_QUETZAL_TREASURE "imt01003670" // name_imt01003670 = Quetzal Treasure
-#define MATERIAL_BLUESCALE_LORDFISH "imt01000680" // name_imt01000680 = Bluescale Lordfish
-#define MATERIAL_DEEP_SEA_LORDFISH "imt01000720" // name_imt01000720 = Deep Sea Lordfish
-#define MATERIAL_WOODEN_BUTTONS "imt01002360" // name_imt01002360 = Wooden Buttons
-#define MATERIAL_ANTENNA_LANTERN "imt01001040" // name_imt01001040 = Antenna Lantern
-#define MATERIAL_CRYSTALLINE_BASS "imt01004680" // name_imt01004680 = Crystalline Bass
-#define MATERIAL_CRYSTALIZED_SCALE "imt01004690" // name_imt01004690 = Crystalized Scale
-#define MATERIAL_GIANT_HORN "imt01003590" // name_imt01003590 = Giant Horn
-#define MATERIAL_ERUPTUNA "imt01000810" // name_imt01000810 = Eruptuna
-#define MATERIAL_MAGMA_FIN "imt01005040" // name_imt01005040 = Magma Fin
-#define MATERIAL_CARROT "imt01002550" // name_imt01002550 = Carrot
-#define MATERIAL_THICK_SHELL "imt01003390" // name_imt01003390 = Thick Shell
-#define MATERIAL_CRIMSON_CARROT "imt01002560" // name_imt01002560 = Crimson Carrot
-#define MATERIAL_TURTLE_SHELL "imt01003380" // name_imt01003380 = Turtle Shell
-#define MATERIAL_HERMIT_CARROT "imt01002570" // name_imt01002570 = Hermit Carrot
-#define MATERIAL_COAL_BLACK_FEATHER "imt01003370" // name_imt01003370 = Coal-Black Feather
-#define MATERIAL_GIANT_MANDRAKE "imt01002580" // name_imt01002580 = Giant Mandrake
-#define MATERIAL_PALE_ONION "imt01002680" // name_imt01002680 = Pale Onion
-#define MATERIAL_DEMONION "imt01002690" // name_imt01002690 = Demonion
-#define MATERIAL_INVINCIBLE_ONIONSKIN "imt01002790" // name_imt01002790 = Invincible Onionskin
-#define MATERIAL_IMPECCABLE_STACHE "imt01002780" // name_imt01002780 = Impeccable Stache
-#define MATERIAL_RADISH "imt01002510" // name_imt01002510 = Radish
-#define MATERIAL_RAGING_RADISH "imt01002520" // name_imt01002520 = Raging Radish
-#define MATERIAL_MUNGUS_RADISH "imt01002530" // name_imt01002530 = Mungus Radish
-#define MATERIAL_GREAT_SPIRIT_RADISH "imt01002540" // name_imt01002540 = Great Spirit Radish
-#define MATERIAL_GLOSSY_FEATHER "imt01003360" // name_imt01003360 = Glossy Feather
-#define MATERIAL_PUMPKIN "imt01002590" // name_imt01002590 = Pumpkin
-#define MATERIAL_FALLEN_CARROT "imt01004580" // name_imt01004580 = Fallen Carrot
-#define MATERIAL_WICKED_MANDRAKE "imt01004790" // name_imt01004790 = Wicked Mandrake
-#define MATERIAL_AUBERGINE "imt01003040" // name_imt01003040 = Aubergine
-#define MATERIAL_TOMATO "imt01003050" // name_imt01003050 = Tomato
-#define MATERIAL_BROCCOLI "imt01003060" // name_imt01003060 = Broccoli
-#define MATERIAL_SWEETCORN "imt01003070" // name_imt01003070 = Sweetcorn
-#define MATERIAL_SHEEP_KINGS_FLEECE "imt01002200" // name_imt01002200 = Sheep King's Fleece
-#define MATERIAL_RED_PEPPERCORN "imt01003980" // name_imt01003980 = Red Peppercorn
-#define MATERIAL_VINEGAR "imt01003990" // name_imt01003990 = Vinegar
-#define MATERIAL_GINGER "imt01004020" // name_imt01004020 = Ginger
-#define MATERIAL_MUSTARD "imt01004030" // name_imt01004030 = Mustard
-#define MATERIAL_CURRY_SPICES "imt01004040" // name_imt01004040 = Curry Spices
-#define MATERIAL_MYTHICAL_MEAT "imt01003770" // name_imt01003770 = Mythical Meat
-#define MATERIAL_GHOST_MEAT "imt01003790" // name_imt01003790 = Ghost Meat
-#define MATERIAL_GIANT_FANG "imt01003560" // name_imt01003560 = Giant Fang
-#define MATERIAL_LEGENDARY_DON_MEAT "imt01004950" // name_imt01004950 = Legendary Don Meat
-#define MATERIAL_SUN_CLUSTER "imt01002940" // name_imt01002940 = Sun Cluster
-#define MATERIAL_GOLEM_FRAGMENT "imt01005100" // name_imt01005100 = Golem Fragment
-#define MATERIAL_EVIL_SHARD "imt01003830" // name_imt01003830 = Evil Shard
-#define MATERIAL_SHARP_CLAWS "imt01003300" // name_imt01003300 = Sharp Claws
-#define MATERIAL_DEADLY_CLAWS "imt01003310" // name_imt01003310 = Deadly Claws
-#define MATERIAL_ICY_CLAWS "imt01003800" // name_imt01003800 = Icy Claws
-#define MATERIAL_SMOLDERING_CLAWS "imt01005060" // name_imt01005060 = Smoldering Claws
-#define MATERIAL_ANIMAL_FANG "imt01003320" // name_imt01003320 = Animal Fang
-#define MATERIAL_THICK_FANG "imt01003330" // name_imt01003330 = Thick Fang
-#define MATERIAL_STRONG_FANG "imt01003340" // name_imt01003340 = Strong Fang
-#define MATERIAL_STURDY_FANG "imt01003350" // name_imt01003350 = Sturdy Fang
-#define MATERIAL_SMOLDERING_FANG "imt01005050" // name_imt01005050 = Smoldering Fang
-#define MATERIAL_WILD_ANTLER "imt01003720" // name_imt01003720 = Wild Antler
-#define MATERIAL_MONSTER_HIDE "imt01003200" // name_imt01003200 = Monster Hide
-#define MATERIAL_DRAGONTREE_HORN "imt01004410" // name_imt01004410 = Dragontree Horn
-#define MATERIAL_SKELETAL_HORN "imt01005080" // name_imt01005080 = Skeletal Horn
-#define MATERIAL_GIANT_SCALE "imt01003570" // name_imt01003570 = Giant Scale
-#define MATERIAL_LEGENDARY_DON_HORN "imt01004940" // name_imt01004940 = Legendary Don Horn
-#define MATERIAL_STEEL_SHELL "imt01003710" // name_imt01003710 = Steel Shell
-#define MATERIAL_ANIMAL_HIDE "imt01003180" // name_imt01003180 = Animal Hide
-#define MATERIAL_BEAST_HIDE "imt01003190" // name_imt01003190 = Beast Hide
-#define MATERIAL_SMOLDERING_HIDE "imt01005070" // name_imt01005070 = Smoldering Hide
-#define MATERIAL_SNAKE_SCALES "imt01003220" // name_imt01003220 = Snake Scales
-#define MATERIAL_PYTHON_SCALES "imt01003240" // name_imt01003240 = Python Scales
-#define MATERIAL_DRAGONTREE_WING "imt01004420" // name_imt01004420 = Dragontree Wing
-#define MATERIAL_RED_SERPENT_SCALES "imt01003230" // name_imt01003230 = Red Serpent Scales
-#define MATERIAL_NAPDRAGONS_SCALE "imt01003820" // name_imt01003820 = Napdragon's Scale
-#define MATERIAL_FLAMING_MOHAWK "imt01003850" // name_imt01003850 = Flaming Mohawk
-#define MATERIAL_STRAW_THREAD "imt01002080" // name_imt01002080 = Straw Thread
-#define MATERIAL_FLAX_THREAD "imt01002110" // name_imt01002110 = Flax Thread
-#define MATERIAL_SILK_THREAD "imt01002090" // name_imt01002090 = Silk Thread
-#define MATERIAL_MARINE_THREAD "imt01002100" // name_imt01002100 = Marine Thread
-#define MATERIAL_STARRY_THREAD "imt01002130" // name_imt01002130 = Starry Thread
-#define MATERIAL_PINK_SILK_THREAD "imt01002120" // name_imt01002120 = Pink Silk Thread
-#define MATERIAL_SHEEP_FLEECE "imt01002140" // name_imt01002140 = Sheep Fleece
-#define MATERIAL_BLACK_SHEEP_FLEECE "imt01002190" // name_imt01002190 = Black Sheep Fleece
-#define MATERIAL_GOAT_FLEECE "imt01002160" // name_imt01002160 = Goat Fleece
-#define MATERIAL_GOLDEN_GOAT_FLEECE "imt01002170" // name_imt01002170 = Golden Goat Fleece
-#define MATERIAL_NOBLE_GOAT_FLEECE "imt01003740" // name_imt01003740 = Noble Goat Fleece
-#define MATERIAL_WOVEN_STRAW_FABRIC "imt01002230" // name_imt01002230 = Woven Straw Fabric
-#define MATERIAL_DANDELION_COTTON "imt01002240" // name_imt01002240 = Dandelion Cotton
-#define MATERIAL_WOOL "imt01002250" // name_imt01002250 = Wool
-#define MATERIAL_METAL_BUTTONS "imt01002370" // name_imt01002370 = Metal Buttons
-#define MATERIAL_COMBUSTIBLE_POWDER "imt01002500" // name_imt01002500 = Combustible Powder
-#define MATERIAL_GHASTLY_POWDER "imt01003780" // name_imt01003780 = Ghastly Powder
-#define MATERIAL_MAGIC_POWDER "imt01003250" // name_imt01003250 = Magic Powder
-#define MATERIAL_DEMONIC_POWDER "imt01003260" // name_imt01003260 = Demonic Powder
-#define MATERIAL_DARK_FIRE "imt01004460" // name_imt01004460 = Dark Fire
-#define MATERIAL_SPIRITUAL_POWDER "imt01003270" // name_imt01003270 = Spiritual Powder
-#define MATERIAL_SUSPICIOUS_OBJECT "imt01003440" // name_imt01003440 = Suspicious Object
-#define MATERIAL_MYSTERIOUS_OBJECT "imt01003450" // name_imt01003450 = Mysterious Object
-#define MATERIAL_CURIOUS_OBJECT "imt01003460" // name_imt01003460 = Curious Object
-#define MATERIAL_WEIRD_OBJECT "imt01003470" // name_imt01003470 = Weird Object
-#define MATERIAL_EUREKA_ESSENCE "imt01004810" // name_imt01004810 = Eureka Essence
-#define MATERIAL_FIRE_MANA "imt01003600" // name_imt01003600 = Fire Mana
-#define MATERIAL_REDUX_STONE "imt01004800" // name_imt01004800 = Redux Stone
-#define MATERIAL_WATER_MANA "imt01003610" // name_imt01003610 = Water Mana
-#define MATERIAL_SECRET_PIRATES_TREASURE "imt01004850" // name_bulletin_board_002 = Secret Pirate's Treasure
-#define MATERIAL_LIGHT_MANA "imt01003640" // name_imt01003640 = Light Mana
-#define MATERIAL_SHADOW_MANA "imt01003650" // name_imt01003650 = Shadow Mana
-#define MATERIAL_FROST_CRYSTAL "imt01003700" // name_imt01003700 = Frost Crystal
-#define MATERIAL_ANCIENT_CORE "imt01003750" // name_imt01003750 = Ancient Core
-#define MATERIAL_ANCIENT_NUCLEUS "imt01003760" // name_imt01003760 = Ancient Nucleus
-#define MATERIAL_NAPDRAGONS_TEARDROP "imt01003810" // name_imt01003810 = Napdragon's Teardrop
-#define MATERIAL_GREAT_PRAIRIES_TEAR "imt01003840" // name_imt01003840 = Great Prairie's Tear
-#define MATERIAL_RED_PAINT "imt01004070" // name_imt01004070 = Red Paint
-#define MATERIAL_BLUE_PAINT "imt01004050" // name_imt01004050 = Blue Paint
-#define MATERIAL_YELLOW_PAINT "imt01004060" // name_imt01004060 = Yellow Paint
-#define MATERIAL_RAINBOW_PAINT "imt01004100" // name_imt01004100 = Rainbow Paint
-#define MATERIAL_APPLE_APPLIQUE "imt01003860" // name_imt01003860 = Apple AppliquE
-#define MATERIAL_HONEY_APPLIQUE "imt01003920" // name_imt01003920 = Honey AppliquE
-#define MATERIAL_FAIRY_APPLIQUE "imt01003870" // name_imt01003870 = Fairy AppliquE
-#define MATERIAL_SHIELD_APPLIQUE "imt01003880" // name_imt01003880 = Shield AppliquE
-#define MATERIAL_HERO_APPLIQUE "imt01003890" // name_imt01003890 = Hero AppliquE
-#define MATERIAL_SPIDER_STICKER "imt01004180" // name_imt01004180 = Spider Sticker
-#define MATERIAL_TORTORTOISE_STICKER "imt01004220" // name_imt01004220 = Tortortoise Sticker
-#define MATERIAL_WHITE_WOOLIE_STICKER "imt01004150" // name_imt01004150 = White Woolie Sticker
-#define MATERIAL_BLACK_WOOLIE_STICKER "imt01004160" // name_imt01004160 = Black Woolie Sticker
-#define MATERIAL_OAK_TREE_STICKER "imt01004230" // name_imt01004230 = Oak Tree Sticker
-#define MATERIAL_GOLEM_STICKER "imt01004240" // name_imt01004240 = Golem Sticker
-#define MATERIAL_MIMIC_STICKER "imt01004170" // name_imt01004170 = Mimic Sticker
-#define MATERIAL_DRAGON_STICKER "imt01004190" // name_imt01004190 = Dragon Sticker
-#define MATERIAL_SACK_OF_COPPER "imt01000510" // name_imt01000510 = Sack of Copper
-#define MATERIAL_SACK_OF_SILVER "imt01000520" // name_imt01000520 = Sack of Silver
-#define MATERIAL_SACK_OF_GOLD "imt01000530" // name_imt01000530 = Sack of Gold
-#define MATERIAL_SACK_OF_TREASURE "imt01000540" // name_imt01000540 = Sack of Treasure
-#define MATERIAL_SACK_OF_SECRETS "imt01000550" // name_imt01000550 = Sack of Secrets
-#define MATERIAL_HANIWA_JEWEL "imt01005090" // name_imt01005090 = Haniwa Jewel
-#define MATERIAL_SHADOW_SOAKED_HIDE "imt01004720" // name_imt01004720 = Shadow-Soaked Hide
-#define MATERIAL_DARK_MONSTER_CORE "imt01004730" // name_imt01004730 = Dark Monster Core
-#define MATERIAL_DARKTREE_BARK "imt01004760" // name_imt01004760 = Darktree Bark
-#define MATERIAL_DARKTREE_SAP "imt01004770" // name_imt01004770 = Darktree Sap
-#define MATERIAL_SWEET_FISH_PASTRY "imt01000780" // name_imt01000780 = Sweet Fish Pastry
-
-#define CONSUME_PRAIRIE_HONEY "ics01000020" // name_ics01000020 = Prairie Honey
-#define CONSUME_CHERRY_HONEY "ics01000030" // name_ics01000030 = Cherry Honey
-#define CONSUME_HEALING_POWDER "ics01000620" // name_ics01000620 = Healing Powder
-#define CONSUME_CASTELE_APPLE "ics01000130" // name_ics01000130 = Castele Apple
-#define CONSUME_TRIP_FIREWORKS "ics01000570" // name_ics01000570 = Trip Fireworks
-#define CONSUME_REMOTE_ISLAND_HONEY "ics01000040" // name_ics01000040 = Remote Island Honey
-#define CONSUME_SKELEGON_FIREWORKS "ics01000560" // name_ics01000560 = Skelegon Fireworks
-#define CONSUME_DARK_HONEY "ics01000050" // name_ics01000050 = Dark Honey
-#define CONSUME_YUELIA_FIREWORKS "ics01000550" // name_ics01000550 = Yuelia Fireworks
-#define CONSUME_MILK "ics01000060" // name_ics01000060 = Milk
-#define CONSUME_EXTRA_CREAMY_MILK "ics01000080" // name_ics01000080 = Extra Creamy Milk
-#define CONSUME_LEGENDARY_FEAST_PLUS "ics01003390" // name_ics01003390 = Legendary Feast +
-#define CONSUME_HI_HP_POTION_PLUS "ics01000610" // name_ics01000610 = Hi-HP Potion +
-#define CONSUME_TREASURE_GROVE_SAPLING "ics01003480" // name_ics01003480 = Treasure Grove Sapling
-#define CONSUME_UBER_RICH_MILK "ics01000100" // name_ics01000100 = Uber-Rich Milk
-#define CONSUME_MAXHEAL_DUST_PLUS "ics01000650" // name_ics01000650 = Maxheal Dust +
-#define CONSUME_RADISH_SEEDS "ics01000290" // name_ics01000290 = Radish Seeds
-#define CONSUME_STAR_APPLE "ics01000140" // name_ics01000140 = Star Apple
-#define CONSUME_MAXHEAL_DUST "ics01000640" // name_ics01000640 = Maxheal Dust
-#define CONSUME_GOLDEN_APPLE "ics01000150" // name_ics01000150 = Golden Apple
-#define CONSUME_PARALYZING_BOMB_PLUS "ics01001310" // name_ics01001310 = Paralyzing Bomb +
-#define CONSUME_RESISTANCE_SPRAY_PLUS "ics01000890" // name_ics01000890 = Resistance Spray +
-#define CONSUME_SP_POTION_PLUS "ics01000670" // name_ics01000670 = SP Potion +
-#define CONSUME_COCONUT "ics01000160" // name_ics01000160 = Coconut
-#define CONSUME_PARALYZING_BOMB "ics01001300" // name_ics01001300 = Paralyzing Bomb
-#define CONSUME_RESISTANCE_SPRAY "ics01000880" // name_ics01000880 = Resistance Spray
-#define CONSUME_SP_POTION "ics01000660" // name_ics01000660 = SP Potion
-#define CONSUME_CHERRY "ics01000170" // name_ics01000170 = Cherry
-#define CONSUME_RESISTANCE_AID_PLUS "ics01000870" // name_ics01000870 = Resistance Aid +
-#define CONSUME_SPARKLY_SUSHI_RICE_PLUS "ics01003310" // name_ics01003310 = Sparkly Sushi Rice +
-#define CONSUME_HI_SP_POTION_PLUS "ics01000690" // name_ics01000690 = Hi-SP Potion +
-#define CONSUME_VOLCANIC_STEW "ics01003400" // name_ics01003400 = Volcanic Stew
-#define CONSUME_ISLAND_PEAR "ics01000180" // name_ics01000180 = Island Pear
-#define CONSUME_RESISTANCE_AID "ics01000860" // name_ics01000860 = Resistance Aid
-#define CONSUME_SPARKLY_SUSHI_RICE "ics01003300" // name_ics01003300 = Sparkly Sushi Rice
-#define CONSUME_HI_SP_POTION "ics01000680" // name_ics01000680 = Hi-SP Potion
-#define CONSUME_ROYAL_FLAN_PLUS "ics01002530" // name_ics01002530 = Royal Flan +
-#define CONSUME_BEACH_WATERMELON "ics01000240" // name_ics01000240 = Beach Watermelon
-#define CONSUME_VOLCANIC_STEW_PLUS "ics01003410" // name_ics01003410 = Volcanic Stew +
-#define CONSUME_MYSTFRUIT "ics01000190" // name_ics01000190 = Mystfruit
-#define CONSUME_POWER_AID "ics01000820" // name_ics01000820 = Power Aid
-#define CONSUME_CARROT_SOUP_PLUS "ics01002570" // name_ics01002570 = Carrot Soup +
-#define CONSUME_PRAIRIE_GRAPES "ics01000200" // name_ics01000200 = Prairie Grapes
-#define CONSUME_POWER_AID_PLUS "ics01000830" // name_ics01000830 = Power Aid +
-#define CONSUME_CARROT_SOUP "ics01002560" // name_ics01002560 = Carrot Soup
-#define CONSUME_ISLAND_BANANA "ics01000210" // name_ics01000210 = Island Banana
-#define CONSUME_YAKITORI "ics01001380" // name_ics01001380 = Yakitori
-#define CONSUME_PANACEA "ics01000800" // name_ics01000800 = Panacea
-#define CONSUME_BOILED_EGG_PLUS "ics01002550" // name_ics01002550 = Boiled Egg +
-#define CONSUME_WILD_KIWI "ics01000220" // name_ics01000220 = Wild Kiwi
-#define CONSUME_YAKITORI_PLUS "ics01001390" // name_ics01001390 = Yakitori +
-#define CONSUME_PANACEA_PLUS "ics01000810" // name_ics01000810 = Panacea +
-#define CONSUME_BOILED_EGG "ics01002540" // name_ics01002540 = Boiled Egg
-#define CONSUME_CAVE_STRAWBERRIES "ics01000230" // name_ics01000230 = Cave Strawberries
-#define CONSUME_CARROT_SEEDS "ics01000320" // name_ics01000320 = Carrot Seeds
-#define CONSUME_ACQUA_PAZZA_PLUS "ics01003210" // name_ics01003210 = Acqua Pazza +
-#define CONSUME_DE_PARALYZER "ics01001160" // name_ics01001160 = De-Paralyzer
-#define CONSUME_LIFE_CURE_PLUS "ics01000790" // name_ics01000790 = Life Cure +
-#define CONSUME_PUMPKIN_SEEDS "ics01000350" // name_ics01000350 = Pumpkin Seeds
-#define CONSUME_ELIXIR "ics01000740" // name_ics01000740 = Elixir
-#define CONSUME_POTATO_SEEDS "ics01000380" // name_ics01000380 = Potato Seeds
-#define CONSUME_ONION_SEEDS "ics01000410" // name_ics01000410 = Onion Seeds
-#define CONSUME_CABBAGE_SEEDS "ics01000440" // name_ics01000440 = Cabbage Seeds
-#define CONSUME_FIREWORKS "ics01000520" // name_ics01000520 = Fireworks
-#define CONSUME_PLUM_BLOSSOM_FIREWORKS "ics01000530" // name_ics01000530 = Plum Blossom Fireworks
-#define CONSUME_COURTSHIP_FIREWORKS "ics01000540" // name_ics01000540 = Courtship Fireworks
-#define CONSUME_ONION_SOUP "ics01003000" // name_ics01003000 = Onion Soup
-#define CONSUME_HP_POTION "ics01000580" // name_ics01000580 = HP Potion
-#define CONSUME_ONION_SOUP_PLUS "ics01003010" // name_ics01003010 = Onion Soup +
-#define CONSUME_HP_POTION_PLUS "ics01000590" // name_ics01000590 = HP Potion +
-#define CONSUME_LEGENDARY_FEAST "ics01003380" // name_ics01003380 = Legendary Feast
-#define CONSUME_HI_HP_POTION "ics01000600" // name_ics01000600 = Hi-HP Potion
-#define CONSUME_HEALING_POWDER_PLUS "ics01000630" // name_ics01000630 = Healing Powder +
-#define CONSUME_LORDFISH_PLATTER "ics01003280" // name_ics01003280 = Lordfish Platter
-#define CONSUME_ENERGY_POWDER "ics01000700" // name_ics01000700 = Energy Powder
-#define CONSUME_LORDFISH_PLATTER_PLUS "ics01003290" // name_ics01003290 = Lordfish Platter +
-#define CONSUME_ENERGY_POWDER_PLUS "ics01000710" // name_ics01000710 = Energy Powder +
-#define CONSUME_HI_ENERGY_POWDER "ics01000720" // name_ics01000720 = Hi-Energy Powder
-#define CONSUME_HI_ENERGY_POWDER_PLUS "ics01000730" // name_ics01000730 = Hi-Energy Powder +
-#define CONSUME_ELIXIR_PLUS "ics01000750" // name_ics01000750 = Elixir +
-#define CONSUME_ANTI_FREEZE_PLUS "ics01001190" // name_ics01001190 = Anti-Freeze +
-#define CONSUME_SPRAYLIXIR "ics01000760" // name_ics01000760 = Spraylixir
-#define CONSUME_ANTI_FREEZE "ics01001180" // name_ics01001180 = Anti-Freeze
-#define CONSUME_SPRAYLIXIR_PLUS "ics01000770" // name_ics01000770 = Spraylixir +
-#define CONSUME_ACQUA_PAZZA "ics01003200" // name_ics01003200 = Acqua Pazza
-#define CONSUME_DE_PARALYZER_PLUS "ics01001170" // name_ics01001170 = De-Paralyzer +
-#define CONSUME_LIFE_CURE "ics01000780" // name_ics01000780 = Life Cure
-#define CONSUME_POWER_SPRAY "ics01000840" // name_ics01000840 = Power Spray
-#define CONSUME_POWER_SPRAY_PLUS "ics01000850" // name_ics01000850 = Power Spray +
-#define CONSUME_POISON_BOMB "ics01001280" // name_ics01001280 = Poison Bomb
-#define CONSUME_MAGIC_AID "ics01000900" // name_ics01000900 = Magic Aid
-#define CONSUME_POISON_BOMB_PLUS "ics01001290" // name_ics01001290 = Poison Bomb +
-#define CONSUME_MAGIC_AID_PLUS "ics01000910" // name_ics01000910 = Magic Aid +
-#define CONSUME_MAGIC_SPRAY "ics01000920" // name_ics01000920 = Magic Spray
-#define CONSUME_MAGIC_SPRAY_PLUS "ics01000930" // name_ics01000930 = Magic Spray +
-#define CONSUME_SEALING_POTION "ics01000940" // name_ics01000940 = Sealing Potion
-#define CONSUME_SEALING_POTION_PLUS "ics01000950" // name_ics01000950 = Sealing Potion +
-#define CONSUME_SEALING_SPRAY "ics01000960" // name_ics01000960 = Sealing Spray
-#define CONSUME_SEALING_SPRAY_PLUS "ics01000970" // name_ics01000970 = Sealing Spray +
-#define CONSUME_BURN_BE_GONE "ics01001200" // name_ics01001200 = Burn-Be-Gone
-#define CONSUME_DAREDEVIL_AID "ics01000980" // name_ics01000980 = Daredevil Aid
-#define CONSUME_BURN_BE_GONE_PLUS "ics01001210" // name_ics01001210 = Burn-Be-Gone +
-#define CONSUME_DAREDEVIL_AID_PLUS "ics01000990" // name_ics01000990 = Daredevil Aid +
-#define CONSUME_SASHIMI_SET_PLUS "ics01002210" // name_ics01002210 = Sashimi Set +
-#define CONSUME_CHARGE_UP_AID "ics01001000" // name_ics01001000 = Charge Up Aid
-#define CONSUME_SASHIMI_SET "ics01002200" // name_ics01002200 = Sashimi Set
-#define CONSUME_CHARGE_UP_AID_PLUS "ics01001010" // name_ics01001010 = Charge Up Aid +
-#define CONSUME_FLYING_SASHIMI_SET_PLUS "ics01002230" // name_ics01002230 = Flying Sashimi Set +
-#define CONSUME_CRIT_AID "ics01001020" // name_ics01001020 = Crit Aid
-#define CONSUME_FLYING_SASHIMI_SET "ics01002220" // name_ics01002220 = Flying Sashimi Set
-#define CONSUME_CRIT_AID_PLUS "ics01001030" // name_ics01001030 = Crit Aid +
-#define CONSUME_FANCY_SASHIMI_SET_PLUS "ics01002250" // name_ics01002250 = Fancy Sashimi Set +
-#define CONSUME_BERSERK_POTION "ics01001040" // name_ics01001040 = Berserk Potion
-#define CONSUME_FANCY_SASHIMI_SET "ics01002240" // name_ics01002240 = Fancy Sashimi Set
-#define CONSUME_BERSERK_POTION_PLUS "ics01001050" // name_ics01001050 = Berserk Potion +
-#define CONSUME_ANCIENT_SASHIMI_SET_PLUS "ics01002270" // name_ics01002270 = Ancient Sashimi Set +
-#define CONSUME_POISON_ANTIDOTE "ics01001060" // name_ics01001060 = Poison Antidote
-#define CONSUME_ANCIENT_SASHIMI_SET "ics01002260" // name_ics01002260 = Ancient Sashimi Set
-#define CONSUME_POISON_ANTIDOTE_PLUS "ics01001070" // name_ics01001070 = Poison Antidote +
-#define CONSUME_RAINBOW_PAELLA_PLUS "ics01002290" // name_ics01002290 = Rainbow Paella +
-#define CONSUME_PARALYSIS_ANTIDOTE "ics01001080" // name_ics01001080 = Paralysis Antidote
-#define CONSUME_RAINBOW_PAELLA "ics01002280" // name_ics01002280 = Rainbow Paella
-#define CONSUME_PARALYSIS_ANTIDOTE_PLUS "ics01001090" // name_ics01001090 = Paralysis Antidote +
-#define CONSUME_HIGH_FLYING_RAMEN_PLUS "ics01003270" // name_ics01003270 = High-Flying Ramen +
-#define CONSUME_FROZEN_REMEDY "ics01001100" // name_ics01001100 = Frozen Remedy
-#define CONSUME_HIGH_FLYING_RAMEN "ics01003260" // name_ics01003260 = High-Flying Ramen
-#define CONSUME_FROZEN_REMEDY_PLUS "ics01001110" // name_ics01001110 = Frozen Remedy +
-#define CONSUME_SNEAKY_SUPPER_PLUS "ics01003250" // name_ics01003250 = Sneaky Supper +
-#define CONSUME_BURNING_REMEDY "ics01001120" // name_ics01001120 = Burning Remedy
-#define CONSUME_SNEAKY_SUPPER "ics01003240" // name_ics01003240 = Sneaky Supper
-#define CONSUME_BURNING_REMEDY_PLUS "ics01001130" // name_ics01001130 = Burning Remedy +
-#define CONSUME_DEEP_FRIED_FISH_PLUS "ics01003230" // name_ics01003230 = Deep-Fried Fish +
-#define CONSUME_DETOXIFIER "ics01001140" // name_ics01001140 = Detoxifier
-#define CONSUME_DEEP_FRIED_FISH "ics01003220" // name_ics01003220 = Deep-Fried Fish
-#define CONSUME_DETOXIFIER_PLUS "ics01001150" // name_ics01001150 = Detoxifier +
-#define CONSUME_HEAL_ALL "ics01001220" // name_ics01001220 = Heal-All
-#define CONSUME_HEAL_ALL_PLUS "ics01001230" // name_ics01001230 = Heal-All +
-#define CONSUME_MINI_BOMB "ics01001240" // name_ics01001240 = Mini Bomb
-#define CONSUME_MINI_BOMB_PLUS "ics01001250" // name_ics01001250 = Mini Bomb +
-#define CONSUME_GREAT_BOMB "ics01001260" // name_ics01001260 = Great Bomb
-#define CONSUME_GREAT_BOMB_PLUS "ics01001270" // name_ics01001270 = Great Bomb +
-#define CONSUME_MEDIUM_BOMB "ics01001320" // name_ics01001320 = Medium Bomb
-#define CONSUME_MEDIUM_BOMB_PLUS "ics01001330" // name_ics01001330 = Medium Bomb +
-#define CONSUME_LOVE_BOMB "ics01001340" // name_ics01001340 = Love Bomb
-#define CONSUME_LOVE_BOMB_PLUS "ics01001350" // name_ics01001350 = Love Bomb +
-#define CONSUME_STEAK "ics01001360" // name_ics01001360 = Steak
-#define CONSUME_STEAK_PLUS "ics01001370" // name_ics01001370 = Steak +
-#define CONSUME_BOILED_VEGGIES_PLUS "ics01002610" // name_ics01002610 = Boiled Veggies +
-#define CONSUME_ROAST_MUTTON "ics01001400" // name_ics01001400 = Roast Mutton
-#define CONSUME_BOILED_VEGGIES "ics01002600" // name_ics01002600 = Boiled Veggies
-#define CONSUME_ROAST_MUTTON_PLUS "ics01001410" // name_ics01001410 = Roast Mutton +
-#define CONSUME_CORN_ON_THE_COB_PLUS "ics01002630" // name_ics01002630 = Corn on the Cob +
-#define CONSUME_HAMBURG_STEAK "ics01001420" // name_ics01001420 = Hamburg Steak
-#define CONSUME_CORN_ON_THE_COB "ics01002620" // name_ics01002620 = Corn on the Cob
-#define CONSUME_HAMBURG_STEAK_PLUS "ics01001430" // name_ics01001430 = Hamburg Steak +
-#define CONSUME_PUMPKIN_PIE_PLUS "ics01002650" // name_ics01002650 = Pumpkin Pie +
-#define CONSUME_JUICY_HAMBURG_STEAK "ics01001440" // name_ics01001440 = Juicy Hamburg Steak
-#define CONSUME_PUMPKIN_PIE "ics01002640" // name_ics01002640 = Pumpkin Pie
-#define CONSUME_JUICY_HAMBURG_STEAK_PLUS "ics01001450" // name_ics01001450 = Juicy Hamburg Steak +
-#define CONSUME_PIRATE_GUMBO_PLUS "ics01002670" // name_ics01002670 = Pirate Gumbo +
-#define CONSUME_ROYAL_HAMBURG_STEAK "ics01001460" // name_ics01001460 = Royal Hamburg Steak
-#define CONSUME_PIRATE_GUMBO "ics01002660" // name_ics01002660 = Pirate Gumbo
-#define CONSUME_ROYAL_HAMBURG_STEAK_PLUS "ics01001470" // name_ics01001470 = Royal Hamburg Steak +
-#define CONSUME_CABBAGE_ROLLS_PLUS "ics01002690" // name_ics01002690 = Cabbage Rolls +
-#define CONSUME_WINTER_STEW "ics01001480" // name_ics01001480 = Winter Stew
-#define CONSUME_CABBAGE_ROLLS "ics01002680" // name_ics01002680 = Cabbage Rolls
-#define CONSUME_WINTER_STEW_PLUS "ics01001490" // name_ics01001490 = Winter Stew +
-#define CONSUME_DARK_GIANT_STEW_PLUS "ics01002170" // name_ics01002170 = Dark Giant Stew +
-#define CONSUME_SOUTHERN_STEW "ics01001500" // name_ics01001500 = Southern Stew
-#define CONSUME_DARK_GIANT_STEW "ics01002160" // name_ics01002160 = Dark Giant Stew
-#define CONSUME_SOUTHERN_STEW_PLUS "ics01001510" // name_ics01001510 = Southern Stew +
-#define CONSUME_FIERY_FISH_STEW_PLUS "ics01002150" // name_ics01002150 = Fiery Fish Stew +
-#define CONSUME_AROMATIC_STEW "ics01001520" // name_ics01001520 = Aromatic Stew
-#define CONSUME_FIERY_FISH_STEW "ics01002140" // name_ics01002140 = Fiery Fish Stew
-#define CONSUME_AROMATIC_STEW_PLUS "ics01001530" // name_ics01001530 = Aromatic Stew +
-#define CONSUME_FROSTY_FISH_STEW_PLUS "ics01002130" // name_ics01002130 = Frosty Fish Stew +
-#define CONSUME_MONSTROGANOFF "ics01001540" // name_ics01001540 = Monstroganoff
-#define CONSUME_FROSTY_FISH_STEW "ics01002120" // name_ics01002120 = Frosty Fish Stew
-#define CONSUME_MONSTROGANOFF_PLUS "ics01001550" // name_ics01001550 = Monstroganoff +
-#define CONSUME_GREAT_PRAIRIE_STEW_PLUS "ics01002110" // name_ics01002110 = Great Prairie Stew +
-#define CONSUME_BANDIT_STEAK "ics01001560" // name_ics01001560 = Bandit Steak
-#define CONSUME_GREAT_PRAIRIE_STEW "ics01002100" // name_ics01002100 = Great Prairie Stew
-#define CONSUME_BANDIT_STEAK_PLUS "ics01001570" // name_ics01001570 = Bandit Steak +
-#define CONSUME_THICK_STEAK "ics01001580" // name_ics01001580 = Thick Steak
-#define CONSUME_THICK_STEAK_PLUS "ics01001590" // name_ics01001590 = Thick Steak +
-#define CONSUME_GOLDEN_FISH_HEAD_PLUS "ics01002010" // name_ics01002010 = Golden Fish Head +
-#define CONSUME_TASTY_YAKITORI "ics01001600" // name_ics01001600 = Tasty Yakitori
-#define CONSUME_GOLDEN_FISH_HEAD "ics01002000" // name_ics01002000 = Golden Fish Head
-#define CONSUME_TASTY_YAKITORI_PLUS "ics01001610" // name_ics01001610 = Tasty Yakitori +
-#define CONSUME_RAINBOW_TROUT_MEUNIERE_PLUS "ics01002030" // name_ics01002030 = Rainbow Trout MeuniEre +
-#define CONSUME_JUICY_MUTTON "ics01001620" // name_ics01001620 = Juicy Mutton
-#define CONSUME_RAINBOW_TROUT_MEUNIERE "ics01002020" // name_ics01002020 = Rainbow Trout MeuniEre
-#define CONSUME_JUICY_MUTTON_PLUS "ics01001630" // name_ics01001630 = Juicy Mutton +
-#define CONSUME_SWORDFISH_MEUNIERE_PLUS "ics01002050" // name_ics01002050 = Swordfish MeuniEre +
-#define CONSUME_ROAST_OF_LEGEND "ics01001640" // name_ics01001640 = Roast of Legend
-#define CONSUME_SWORDFISH_MEUNIERE "ics01002040" // name_ics01002040 = Swordfish MeuniEre
-#define CONSUME_ROAST_OF_LEGEND_PLUS "ics01001650" // name_ics01001650 = Roast of Legend +
-#define CONSUME_PORT_TOWN_GRATIN_PLUS "ics01002070" // name_ics01002070 = Port Town Gratin +
-#define CONSUME_CAMPFIRE_ROAST "ics01001660" // name_ics01001660 = Campfire Roast
-#define CONSUME_PORT_TOWN_GRATIN "ics01002060" // name_ics01002060 = Port Town Gratin
-#define CONSUME_CAMPFIRE_ROAST_PLUS "ics01001670" // name_ics01001670 = Campfire Roast +
-#define CONSUME_MOUNTAINEERS_STEW_PLUS "ics01002090" // name_ics01002090 = Mountaineer's Stew +
-#define CONSUME_GRILLED_CATFISH "ics01001680" // name_ics01001680 = Grilled Catfish
-#define CONSUME_MOUNTAINEERS_STEW "ics01002080" // name_ics01002080 = Mountaineer's Stew
-#define CONSUME_GRILLED_CATFISH_PLUS "ics01001690" // name_ics01001690 = Grilled Catfish +
-#define CONSUME_ROYAL_OMELET_PLUS "ics01002330" // name_ics01002330 = Royal Omelet +
-#define CONSUME_GRILLED_EEL "ics01001700" // name_ics01001700 = Grilled Eel
-#define CONSUME_ROYAL_OMELET "ics01002320" // name_ics01002320 = Royal Omelet
-#define CONSUME_GRILLED_EEL_PLUS "ics01001710" // name_ics01001710 = Grilled Eel +
-#define CONSUME_FLUFFY_OMELET_PLUS "ics01002310" // name_ics01002310 = Fluffy Omelet +
-#define CONSUME_GRILLED_TUNA_HEAD "ics01001720" // name_ics01001720 = Grilled Tuna Head
-#define CONSUME_FLUFFY_OMELET "ics01002300" // name_ics01002300 = Fluffy Omelet
-#define CONSUME_GRILLED_TUNA_HEAD_PLUS "ics01001730" // name_ics01001730 = Grilled Tuna Head +
-#define CONSUME_SPECIAL_OMELET_PLUS "ics01002370" // name_ics01002370 = Special Omelet +
-#define CONSUME_GRILLED_CRUCIAN "ics01001740" // name_ics01001740 = Grilled Crucian
-#define CONSUME_SPECIAL_OMELET "ics01002360" // name_ics01002360 = Special Omelet
-#define CONSUME_GRILLED_CRUCIAN_PLUS "ics01001750" // name_ics01001750 = Grilled Crucian +
-#define CONSUME_MAGICAL_OMELET_PLUS "ics01002350" // name_ics01002350 = Magical Omelet +
-#define CONSUME_TROUT_MEUNIERE "ics01001760" // name_ics01001760 = Trout MeuniEre
-#define CONSUME_MAGICAL_OMELET "ics01002340" // name_ics01002340 = Magical Omelet
-#define CONSUME_TROUT_MEUNIERE_PLUS "ics01001770" // name_ics01001770 = Trout MeuniEre +
-#define CONSUME_CAMPFIRE_FISH "ics01001780" // name_ics01001780 = Campfire Fish
-#define CONSUME_CAMPFIRE_FISH_PLUS "ics01001790" // name_ics01001790 = Campfire Fish +
-#define CONSUME_TUNA_SASHIMI "ics01001800" // name_ics01001800 = Tuna Sashimi
-#define CONSUME_TUNA_SASHIMI_PLUS "ics01001810" // name_ics01001810 = Tuna Sashimi +
-#define CONSUME_PUFFERFISH_SASHIMI "ics01001820" // name_ics01001820 = Pufferfish Sashimi
-#define CONSUME_PUFFERFISH_SASHIMI_PLUS "ics01001830" // name_ics01001830 = Pufferfish Sashimi +
-#define CONSUME_BREAM_SASHIMI "ics01001840" // name_ics01001840 = Bream Sashimi
-#define CONSUME_BREAM_SASHIMI_PLUS "ics01001850" // name_ics01001850 = Bream Sashimi +
-#define CONSUME_DRIED_TUNOCO_FISH "ics01001860" // name_ics01001860 = Dried Tunoco Fish
-#define CONSUME_DRIED_TUNOCO_FISH_PLUS "ics01001870" // name_ics01001870 = Dried Tunoco Fish +
-#define CONSUME_FISH_SOUP "ics01001880" // name_ics01001880 = Fish Soup
-#define CONSUME_FISH_SOUP_PLUS "ics01001890" // name_ics01001890 = Fish Soup +
-#define CONSUME_SEAFOOD_STEW "ics01001900" // name_ics01001900 = Seafood Stew
-#define CONSUME_SEAFOOD_STEW_PLUS "ics01001910" // name_ics01001910 = Seafood Stew +
-#define CONSUME_DRAGON_CURRY_PLUS "ics01002990" // name_ics01002990 = Dragon Curry +
-#define CONSUME_SARDINE_PATE "ics01001920" // name_ics01001920 = Sardine PAtE
-#define CONSUME_DRAGON_CURRY "ics01002980" // name_ics01002980 = Dragon Curry
-#define CONSUME_SARDINE_PATE_PLUS "ics01001930" // name_ics01001930 = Sardine PAtE +
-#define CONSUME_HALLOWEEN_CAKE_PLUS "ics01002930" // name_ics01002930 = Halloween Cake +
-#define CONSUME_SWORDFISH_HEAD "ics01001980" // name_ics01001980 = Swordfish Head
-#define CONSUME_HALLOWEEN_CAKE "ics01002920" // name_ics01002920 = Halloween Cake
-#define CONSUME_SWORDFISH_HEAD_PLUS "ics01001990" // name_ics01001990 = Swordfish Head +
-#define CONSUME_GHASTLY_STEW "ics01002180" // name_ics01002180 = Ghastly Stew
-#define CONSUME_GHASTLY_STEW_PLUS "ics01002190" // name_ics01002190 = Ghastly Stew +
-#define CONSUME_QUEENS_OMELET "ics01002380" // name_ics01002380 = Queen's Omelet
-#define CONSUME_QUEENS_OMELET_PLUS "ics01002390" // name_ics01002390 = Queen's Omelet +
-#define CONSUME_GIANT_FRIED_EGG "ics01002400" // name_ics01002400 = Giant Fried Egg
-#define CONSUME_GIANT_FRIED_EGG_PLUS "ics01002410" // name_ics01002410 = Giant Fried Egg +
-#define CONSUME_MUSHROOM_QUICHE "ics01002420" // name_ics01002420 = Mushroom Quiche
-#define CONSUME_MUSHROOM_QUICHE_PLUS "ics01002430" // name_ics01002430 = Mushroom Quiche +
-#define CONSUME_FOREST_QUICHE "ics01002440" // name_ics01002440 = Forest Quiche
-#define CONSUME_FOREST_QUICHE_PLUS "ics01002450" // name_ics01002450 = Forest Quiche +
-#define CONSUME_HONEY_QUICHE "ics01002460" // name_ics01002460 = Honey Quiche
-#define CONSUME_HONEY_QUICHE_PLUS "ics01002470" // name_ics01002470 = Honey Quiche +
-#define CONSUME_MAGICAL_FLAN "ics01002480" // name_ics01002480 = Magical Flan
-#define CONSUME_MAGICAL_FLAN_PLUS "ics01002490" // name_ics01002490 = Magical Flan +
-#define CONSUME_HONEY_FLAN "ics01002500" // name_ics01002500 = Honey Flan
-#define CONSUME_HONEY_FLAN_PLUS "ics01002510" // name_ics01002510 = Honey Flan +
-#define CONSUME_ROYAL_FLAN "ics01002520" // name_ics01002520 = Royal Flan
-#define CONSUME_TOMATO_SOUP "ics01002580" // name_ics01002580 = Tomato Soup
-#define CONSUME_TOMATO_SOUP_PLUS "ics01002590" // name_ics01002590 = Tomato Soup +
-#define CONSUME_PUMPKIN_SOUP "ics01002700" // name_ics01002700 = Pumpkin Soup
-#define CONSUME_PUMPKIN_SOUP_PLUS "ics01002710" // name_ics01002710 = Pumpkin Soup +
-#define CONSUME_VEGETABLE_STEW "ics01002720" // name_ics01002720 = Vegetable Stew
-#define CONSUME_VEGETABLE_STEW_PLUS "ics01002730" // name_ics01002730 = Vegetable Stew +
-#define CONSUME_DIVINE_AMBROSIA "ics01002740" // name_ics01002740 = Divine Ambrosia
-#define CONSUME_DIVINE_AMBROSIA_PLUS "ics01002750" // name_ics01002750 = Divine Ambrosia +
-#define CONSUME_APPLE_JUICE "ics01002760" // name_ics01002760 = Apple Juice
-#define CONSUME_APPLE_JUICE_PLUS "ics01002770" // name_ics01002770 = Apple Juice +
-#define CONSUME_SUMMER_NECTAR "ics01002780" // name_ics01002780 = Summer Nectar
-#define CONSUME_SUMMER_NECTAR_PLUS "ics01002790" // name_ics01002790 = Summer Nectar +
-#define CONSUME_MAGICAL_MILKSHAKE "ics01002800" // name_ics01002800 = Magical Milkshake
-#define CONSUME_MAGICAL_MILKSHAKE_PLUS "ics01002810" // name_ics01002810 = Magical Milkshake +
-#define CONSUME_WHEAT_JUICE "ics01002820" // name_ics01002820 = Wheat Juice
-#define CONSUME_WHEAT_JUICE_PLUS "ics01002830" // name_ics01002830 = Wheat Juice +
-#define CONSUME_RAINBOW_GELATO "ics01002840" // name_ics01002840 = Rainbow Gelato
-#define CONSUME_RAINBOW_GELATO_PLUS "ics01002850" // name_ics01002850 = Rainbow Gelato +
-#define CONSUME_UNADON "ics01002860" // name_ics01002860 = Unadon
-#define CONSUME_UNADON_PLUS "ics01002870" // name_ics01002870 = Unadon +
-#define CONSUME_GOLDEN_APPLE_PIE "ics01002880" // name_ics01002880 = Golden Apple Pie
-#define CONSUME_GOLDEN_APPLE_PIE_PLUS "ics01002890" // name_ics01002890 = Golden Apple Pie +
-#define CONSUME_APPLE_PIE "ics01002900" // name_ics01002900 = Apple Pie
-#define CONSUME_APPLE_PIE_PLUS "ics01002910" // name_ics01002910 = Apple Pie +
-#define CONSUME_CREAMY_CURRY "ics01002940" // name_ics01002940 = Creamy Curry
-#define CONSUME_CREAMY_CURRY_PLUS "ics01002950" // name_ics01002950 = Creamy Curry +
-#define CONSUME_PUMPKIN_FLAN "ics01002960" // name_ics01002960 = Pumpkin Flan
-#define CONSUME_PUMPKIN_FLAN_PLUS "ics01002970" // name_ics01002970 = Pumpkin Flan +
-#define CONSUME_SIMMERED_TUNA "ics01003020" // name_ics01003020 = Simmered Tuna
-#define CONSUME_SIMMERED_TUNA_PLUS "ics01003030" // name_ics01003030 = Simmered Tuna +
-#define CONSUME_LIVELY_ODEN_STEW "ics01003040" // name_ics01003040 = Lively Oden Stew
-#define CONSUME_LIVELY_ODEN_STEW_PLUS "ics01003050" // name_ics01003050 = Lively Oden Stew +
-#define CONSUME_BAKED_POTATO "ics01003060" // name_ics01003060 = Baked Potato
-#define CONSUME_BAKED_POTATO_PLUS "ics01003070" // name_ics01003070 = Baked Potato +
-#define CONSUME_ROYAL_POTATO_STEW "ics01003080" // name_ics01003080 = Royal Potato Stew
-#define CONSUME_ROYAL_POTATO_STEW_PLUS "ics01003090" // name_ics01003090 = Royal Potato Stew +
-#define CONSUME_RAGNAROK_SALAD "ics01003100" // name_ics01003100 = Ragnarok Salad
-#define CONSUME_RAGNAROK_SALAD_PLUS "ics01003110" // name_ics01003110 = Ragnarok Salad +
-#define CONSUME_HALLOWEEN_GRATIN "ics01003120" // name_ics01003120 = Halloween Gratin
-#define CONSUME_HALLOWEEN_GRATIN_PLUS "ics01003130" // name_ics01003130 = Halloween Gratin +
-#define CONSUME_BAGNA_CAUDA "ics01003140" // name_ics01003140 = Bagna CAuda
-#define CONSUME_BAGNA_CAUDA_PLUS "ics01003150" // name_ics01003150 = Bagna CAuda +
-#define CONSUME_FONDUE_SURPRISE "ics01003160" // name_ics01003160 = Fondue Surprise
-#define CONSUME_FONDUE_SURPRISE_PLUS "ics01003170" // name_ics01003170 = Fondue Surprise +
-#define CONSUME_HEARTY_SEAFOOD_SOUP "ics01003180" // name_ics01003180 = Hearty Seafood Soup
-#define CONSUME_HEARTY_SEAFOOD_SOUP_PLUS "ics01003190" // name_ics01003190 = Hearty Seafood Soup +
-#define CONSUME_SINISTER_SEAFOOD_BOWL "ics01003320" // name_ics01003320 = Sinister Seafood Bowl
-#define CONSUME_SINISTER_SEAFOOD_BOWL_PLUS "ics01003330" // name_ics01003330 = Sinister Seafood Bowl +
-#define CONSUME_FRUIT_PUNCH "ics01003340" // name_ics01003340 = Fruit Punch
-#define CONSUME_FRUIT_PUNCH_PLUS "ics01003350" // name_ics01003350 = Fruit Punch +
-#define CONSUME_SMOOTHIE "ics01003360" // name_ics01003360 = Smoothie
-#define CONSUME_SMOOTHIE_PLUS "ics01003370" // name_ics01003370 = Smoothie +
-#define CONSUME_RED_SOUP "ics01003420" // name_ics01003420 = Red Soup
-#define CONSUME_RED_SOUP_PLUS "ics01003430" // name_ics01003430 = Red Soup +
-#define CONSUME_NOMADS_STEW "ics01003440" // name_ics01003440 = Nomad's Stew
-#define CONSUME_NOMADS_STEW_PLUS "ics01003450" // name_ics01003450 = Nomad's Stew +
-#define CONSUME_SHADOW_CARROT_SEED "ics01003460" // name_ics01003460 = Shadow Carrot Seed
-#define CONSUME_SWEET_FISH_PASTRY "ics01003550" // name_imt01000780 = Sweet Fish Pastry
-#define CONSUME_TREASURE_GROVE_BRANCH_1  "ics01003560" // name_ics01003560 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_2  "ics01003570" // name_ics01003570 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_3  "ics01003580" // name_ics01003580 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_4  "ics01003590" // name_ics01003590 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_5  "ics01003600" // name_ics01003600 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_6  "ics01003610" // name_ics01003610 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_7  "ics01003620" // name_ics01003620 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_8  "ics01003630" // name_ics01003630 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_9  "ics01003640" // name_ics01003640 = Treasure Grove Branch
-#define CONSUME_TREASURE_GROVE_BRANCH_10 "ics01003650" // name_ics01003650 = Treasure Grove Branch
-#define CONSUME_CASHNUT "chestnut" // name_chestnut = Cashnut
-#define CONSUME_MONEY "Money" // None = NO_NAME
-#define CONSUME_EXPERIENCE "Exp" // None = NO_NAME
-
-#define IMPORTANT_DEMIEL_COLOR_1 "iky_chr002c02" // name_iky_chr002c02 = Demiel Color 1
-#define IMPORTANT_CLOTH_GEAR_PART "iky01000730" // name_iky01000730 = Cloth Gear Part
-#define IMPORTANT_ETERNIAN_FRUIT "iky01000200" // name_iky01000200 = Eternian Fruit
-#define IMPORTANT_FLUTE_OF_FLIGHT "iky01000550" // name_iky01000550 = Flute of Flight
-#define IMPORTANT_GODDESS_FRUIT "iky01000190" // name_iky01000190 = Goddess Fruit
-#define IMPORTANT_WAVE "iky02000110" // name_iky02000110 = Wave
-#define IMPORTANT_KIKYO_COLOR_3 "iky_chr003104" // name_iky_chr003104 = Kikyo Color 3
-#define IMPORTANT_MAKEOVER_BOX "iky04000040" // name_iky04000040 = Makeover Box
-#define IMPORTANT_TRAINEES_BRONZE_SWORD "iky01000470" // name_iky01000470 = Trainee's Bronze Sword
-#define IMPORTANT_ANCIENT_ROBOT_PARTS "iky01000360" // name_iky01000360 = Ancient Robot Parts
-#define IMPORTANT_WOODEN_GEAR_PART "iky01000720" // name_iky01000720 = Wooden Gear Part
-#define IMPORTANT_RAINBOW_GODDESS_FRUIT "iky01000210" // name_iky01000210 = Rainbow Goddess Fruit
-#define IMPORTANT_KLAUS_COLOR_1 "iky_chr002602" // name_iky_chr002602 = Klaus Color 1
-#define IMPORTANT_CLAP "iky02000130" // name_iky02000130 = Clap
-#define IMPORTANT_DELISH_FISH "iky01000450" // name_iky01000450 = Delish Fish
-#define IMPORTANT_JAKE_COLOR_3 "iky_chr000f04" // name_iky_chr000f04 = Jake Color 3
-#define IMPORTANT_CONGRATS_EXCLPNT "iky03000290" // name_iky03000290 = Congrats_EXCLPNT
-#define IMPORTANT_ANCIENT_ROBOT_ARM "iky01000340" // name_iky01000340 = Ancient Robot Arm
-#define IMPORTANT_INTERFERE_GEAR "iky01000700" // name_iky01000700 = Interfere Gear
-#define IMPORTANT_WATERING_CAN "iky01000230" // name_iky01000230 = Watering Can
-#define IMPORTANT_UPSET "iky02000140" // name_iky02000140 = Upset
-#define IMPORTANT_BEARHART_COLOR_2 "iky_chr001c03" // name_iky_chr001c03 = Bearhart Color 2
-#define IMPORTANT_SURPRISE_BOX "iky04000010" // name_iky04000010 = Surprise Box
-#define IMPORTANT_CELESTIAS_GIFT "iky01000420" // name_iky01000420 = Celestia's Gift
-#define IMPORTANT_MYSTERIOUS_SLATE "iky01000330" // name_iky01000330 = Mysterious Slate
-#define IMPORTANT_BOW "iky02000120" // name_iky02000120 = Bow
-#define IMPORTANT_FORTUNA_TOPAZ "iky01000440" // name_iky01000440 = Fortuna Topaz
-#define IMPORTANT_EXCLPNT "iky03000280" // name_iky03000280 = _EXCLPNT_EXCLPNT_EXCLPNT
-#define IMPORTANT_ANCIENT_ROBOT_OIL "iky01000350" // name_iky01000350 = Ancient Robot Oil
-#define IMPORTANT_WOO_HOO_EXCLPNT "iky02000100" // name_iky02000100 = Woo-hoo_EXCLPNT
-#define IMPORTANT_EYE_CATALOG_2 "iky01000381" // name_iky01000381 = Eye Catalog 2
-#define IMPORTANT_FEATHERWEIGHT_INGOT "iky01000460" // name_iky01000460 = Featherweight Ingot
-#define IMPORTANT_TOUR_COIN "iky01000370" // name_iky01000370 = Tour Coin
-#define IMPORTANT_FLOWY_CAPE "iky01000490" // name_iky01000490 = Flowy Cape
-#define IMPORTANT_TIME_TO_GO_EXCLPNT "iky03000250" // name_iky03000250 = Time to go_EXCLPNT
-#define IMPORTANT_EYE_CATALOG "iky01000380" // name_iky01000380 = Eye Catalog
-#define IMPORTANT_SOFT_WOOL "iky01000480" // name_iky01000480 = Soft Wool
-#define IMPORTANT_AWESOME_EXCLPNT "iky03000240" // name_iky03000240 = Awesome_EXCLPNT
-#define IMPORTANT_HAIR_CATALOG "iky01000390" // name_iky01000390 = Hair Catalog
-#define IMPORTANT_MEIME_COLOR_2 "iky_chr003203" // name_iky_chr003203 = Meime Color 2
-#define IMPORTANT_ECSTATIC "iky02000150" // name_iky02000150 = Ecstatic
-#define IMPORTANT_GRANTZ_COLOR_1 "iky_chr001a02" // name_iky_chr001a02 = Grantz Color 1
-#define IMPORTANT_GOLDEN_CELESTIAS_GIFT "iky01000430" // name_iky01000430 = Golden Celestia's Gift
-#define IMPORTANT_DUBIOUS_OBJECT "iky01000500" // name_iky01000500 = Dubious Object
-#define IMPORTANT_ROUGE_COLOR_2 "iky_chr001303" // name_iky_chr001303 = Rouge Color 2
-#define IMPORTANT_MEMORY_CHARM "iky01000510" // name_iky01000510 = Memory Charm
-#define IMPORTANT_STURDY_PALM_LOG "iky01000520" // name_iky01000520 = Sturdy Palm Log
-#define IMPORTANT_TIP_TOP_TOMATO "iky01000530" // name_iky01000530 = Tip-Top Tomato
-#define IMPORTANT_GOURMET_FLUFFY_OMELET "iky01000540" // name_iky01000540 = Gourmet Fluffy Omelet
-#define IMPORTANT_BRAY_COLOR_3 "iky_chr002004" // name_iky_chr002004 = Bray Color 3
-#define IMPORTANT_STOLEN_GOODS "iky01000560" // name_iky01000560 = Stolen Goods
-#define IMPORTANT_HYPER_HEALTHY_HONEY "iky01000570" // name_iky01000570 = Hyper Healthy Honey
-#define IMPORTANT_FLUFFY_FABRIC "iky01000580" // name_iky01000580 = Fluffy Fabric
-#define IMPORTANT_BESPOKE_TROPICAL_SOFA "iky01000590" // name_iky01000590 = Bespoke Tropical Sofa
-#define IMPORTANT_SUPER_SWEET_ONION "iky01000600" // name_iky01000600 = Super Sweet Onion
-#define IMPORTANT_REMS_LOST_PAINTING "iky01000610" // name_iky01000610 = Rem's Lost Painting
-#define IMPORTANT_SPIRIT_HOE "iky01000620" // name_iky01000620 = Spirit Hoe
-#define IMPORTANT_GREATSWORD_OF_TIME "iky01000630" // name_iky01000630 = Greatsword of Time
-#define IMPORTANT_INTERFERE_GEAR_RECIPE "iky01000640" // name_iky01000640 = Interfere Gear Recipe
-#define IMPORTANT_BRAY_COLOR_1 "iky_chr002002" // name_iky_chr002002 = Bray Color 1
-#define IMPORTANT_INTERFERE_GEAR_PLUS "iky01000650" // name_iky01000650 = Interfere Gear +
-#define IMPORTANT_ETERNIA_GEM "iky01000660" // name_iky01000660 = Eternia Gem
-#define IMPORTANT_DRAGONUT "iky01000670" // name_iky01000670 = Dragonut
-#define IMPORTANT_SOOTHING_WATER "iky01000680" // name_iky01000680 = Soothing Water
-#define IMPORTANT_SOPHIE_COLOR_3 "iky_chr002b04" // name_iky_chr002b04 = Sophie Color 3
-#define IMPORTANT_CROW_FEATHER "iky01000690" // name_iky01000690 = Crow Feather
-#define IMPORTANT_STONE_GEAR_PART "iky01000710" // name_iky01000710 = Stone Gear Part
-#define IMPORTANT_PINO_COLOR_3 "iky_chr002d04" // name_iky_chr002d04 = Pino Color 3
-#define IMPORTANT_ETERNIAN_ENERGY_STEW "iky01000740" // name_iky01000740 = Eternian Energy Stew
-#define IMPORTANT_ETERNIAN_LOG "iky01000750" // name_iky01000750 = Eternian Log
-#define IMPORTANT_ETERNIA_FERN "iky01000760" // name_iky01000760 = Eternia Fern
-#define IMPORTANT_ETERNIAN_FLYING_FISH "iky01000770" // name_iky01000770 = Eternian Flying Fish
-#define IMPORTANT_ETERNIAN_FLEECE "iky01000780" // name_iky01000780 = Eternian Fleece
-#define IMPORTANT_ART_COMPETITION_PAINTING "iky01000830" // name_iky01000830 = Art Competition Painting
-#define IMPORTANT_MONIKA_COLOR_1 "iky_chr000c02" // name_iky_chr000c02 = Monika Color 1
-#define IMPORTANT_SWIMMERS_PRIDE "iky01000840" // name_iky01000840 = Swimmer's Pride
-#define IMPORTANT_ODIN_COLOR_1 "iky_chr000702" // name_iky_chr000702 = Odin Color 1
-#define IMPORTANT_FRAJEEL_FIGURE_1_8_SCALE "iky01000790" // name_iky01000790 = Frajeel Figure (1/8 Scale)
-#define IMPORTANT_AHAB_COLOR_2 "iky_chr001e03" // name_iky_chr001e03 = Ahab Color 2
-#define IMPORTANT_FRAJEEL_COLLECTIBLE_PHOTOS "iky01000800" // name_iky01000800 = Frajeel Collectible Photos
-#define IMPORTANT_MACHO_MUSCLE_BODY_PILLOW "iky01000810" // name_iky01000810 = Macho Muscle Body Pillow
-#define IMPORTANT_FRAJEELS_UPLIFTING_CALENDAR "iky01000820" // name_iky01000820 = Frajeel's Uplifting Calendar
-#define IMPORTANT_GLENN_COLOR_3 "iky_chr000204" // name_iky_chr000204 = Glenn Color 3
-#define IMPORTANT_HAPPY_BOX "iky04000020" // name_iky04000020 = Happy Box
-#define IMPORTANT_HILDA_COLOR_1 "iky_chr001002" // name_iky_chr001002 = Hilda Color 1
-#define IMPORTANT_DREAMY_BOX "iky04000030" // name_iky04000030 = Dreamy Box
-#define IMPORTANT_SUPPORTIVE "iky02000160" // name_iky02000160 = Supportive
-#define IMPORTANT_BOASTING "iky02000170" // name_iky02000170 = Boasting
-#define IMPORTANT_FRANTIC "iky02000180" // name_iky02000180 = Frantic
-#define IMPORTANT_DEJECTED "iky02000190" // name_iky02000190 = Dejected
-#define IMPORTANT_COMMAND "iky02000200" // name_iky02000200 = Command
-#define IMPORTANT_SIT "iky02000210" // name_iky02000210 = Sit
-#define IMPORTANT_DUGLAS_COLOR_2 "iky_chr000a03" // name_iky_chr000a03 = Duglas Color 2
-#define IMPORTANT_CHEERY "iky02000220" // name_iky02000220 = Cheery
-#define IMPORTANT_LOOK_AROUND "iky02000230" // name_iky02000230 = Look Around
-#define IMPORTANT_SLOANE_COLOR_1 "iky_chr001902" // name_iky_chr001902 = Sloane Color 1
-#define IMPORTANT_DOZE_OFF "iky02000240" // name_iky02000240 = Doze Off
-#define IMPORTANT_YAWN "iky02000250" // name_iky02000250 = Yawn
-#define IMPORTANT_TERUHA_COLOR_2 "iky_chr001f03" // name_iky_chr001f03 = Teruha Color 2
-#define IMPORTANT_LAUGH "iky02000260" // name_iky02000260 = Laugh
-#define IMPORTANT_FANG_COLOR_2 "iky_chr001103" // name_iky_chr001103 = Fang Color 2
-#define IMPORTANT_ANGRY "iky02000270" // name_iky02000270 = Angry
-#define IMPORTANT_I_GET_IT_EXCLPNT "iky02000280" // name_iky02000280 = I Get It_EXCLPNT
-#define IMPORTANT_CORMELL_COLOR_1 "iky_chr002302" // name_iky_chr002302 = Cormell Color 1
-#define IMPORTANT_VICTORY_POSE "iky02000290" // name_iky02000290 = Victory Pose
-#define IMPORTANT_CROSS_ARMS "iky02000300" // name_iky02000300 = Cross Arms
-#define IMPORTANT_HAPPY_POSE "iky02000310" // name_iky02000310 = Happy Pose
-#define IMPORTANT_SUPERMODEL_POSE "iky02000320" // name_iky02000320 = Supermodel Pose
-#define IMPORTANT_THANKS_EXCLPNT "iky03000100" // name_iky03000100 = Thanks_EXCLPNT
-#define IMPORTANT_PIERRE_COLOR_1 "iky_chr002e02" // name_iky_chr002e02 = Pierre Color 1
-#define IMPORTANT_HOWDY_EXCLPNT "iky03000110" // name_iky03000110 = Howdy_EXCLPNT
-#define IMPORTANT_NICE_EXCLPNT "iky03000120" // name_iky03000120 = Nice_EXCLPNT
-#define IMPORTANT_KLAUS_COLOR_2 "iky_chr002603" // name_iky_chr002603 = Klaus Color 2
-#define IMPORTANT_OK_EXCLPNT "iky03000130" // name_iky03000130 = OK_EXCLPNT
-#define IMPORTANT_BEARHART_COLOR_1 "iky_chr001c02" // name_iky_chr001c02 = Bearhart Color 1
-#define IMPORTANT_NO_EXCLPNT "iky03000140" // name_iky03000140 = NO_EXCLPNT
-#define IMPORTANT_WAIT_UP_EXCLPNT "iky03000150" // name_iky03000150 = Wait up_EXCLPNT
-#define IMPORTANT_QSTMRK_EXCLPNT "iky03000160" // name_iky03000160 = QSTMRK_EXCLPNT
-#define IMPORTANT_OLIVIA_COLOR_1 "iky_chr000502" // name_iky_chr000502 = Olivia Color 1
-#define IMPORTANT_LETS_GO_HUNTING_EXCLPNT "iky03000170" // name_iky03000170 = Let's go hunting_EXCLPNT
-#define IMPORTANT_SLOANE_COLOR_3 "iky_chr001904" // name_iky_chr001904 = Sloane Color 3
-#define IMPORTANT_LETS_GO_GATHER_EXCLPNT "iky03000180" // name_iky03000180 = Let's go gather_EXCLPNT
-#define IMPORTANT_ISAAC_COLOR_2 "iky_chr000b03" // name_iky_chr000b03 = Isaac Color 2
-#define IMPORTANT_LETS_GO_CRAFT_EXCLPNT "iky03000190" // name_iky03000190 = Let's go craft_EXCLPNT
-#define IMPORTANT_NEED_HEALING_EXCLPNT "iky03000200" // name_iky03000200 = Need healing_EXCLPNT
-#define IMPORTANT_SNOW_COLOR_2 "iky_chr001203" // name_iky_chr001203 = Snow Color 2
-#define IMPORTANT_TAKE_THIS_EXCLPNT "iky03000210" // name_iky03000210 = Take this_EXCLPNT
-#define IMPORTANT_TOO_BAD "iky03000220" // name_iky03000220 = Too bad
-#define IMPORTANT_OOF "iky03000230" // name_iky03000230 = Oof
-#define IMPORTANT_YOU_READYQSTMRK "iky03000260" // name_iky03000260 = You readyQSTMRK
-#define IMPORTANT_QSTMRK "iky03000270" // name_iky03000270 = QSTMRK
-#define IMPORTANT_ONE_MORE_TIME_EXCLPNT "iky03000300" // name_iky03000300 = One more time_EXCLPNT
-#define IMPORTANT_SORRY "iky03000310" // name_iky03000310 = Sorry
-#define IMPORTANT_WELL_DONE_EXCLPNT "iky03000320" // name_iky03000320 = Well done_EXCLPNT
-#define IMPORTANT_THAT_WAS_FUN_EXCLPNT "iky03000330" // name_iky03000330 = That was fun_EXCLPNT
-#define IMPORTANT_EEP "iky03000340" // name_iky03000340 = Eep
-#define IMPORTANT_LETS_GOOO_EXCLPNT "iky03000350" // name_iky03000350 = Let's gooo_EXCLPNT
-#define IMPORTANT_AW_SHUCKS_EXCLPNT "iky03000360" // name_iky03000360 = Aw, shucks_EXCLPNT
-#define IMPORTANT_MWA_HA_HA "iky03000370" // name_iky03000370 = Mwa ha ha
-#define IMPORTANT_HEH_HEH_EXCLPNT "iky03000380" // name_iky03000380 = Heh heh_EXCLPNT
-#define IMPORTANT_EASY_PEASY_EXCLPNT "iky03000390" // name_iky03000390 = Easy-peasy_EXCLPNT
-#define IMPORTANT_FERN_COLOR_3 "iky_chr001404" // name_iky_chr001404 = Fern Color 3
-#define IMPORTANT_LAURA_COLOR_1 "iky_chr000102" // name_iky_chr000102 = Laura Color 1
-#define IMPORTANT_LAURA_COLOR_2 "iky_chr000103" // name_iky_chr000103 = Laura Color 2
-#define IMPORTANT_FERN_COLOR_1 "iky_chr001402" // name_iky_chr001402 = Fern Color 1
-#define IMPORTANT_LAURA_COLOR_3 "iky_chr000104" // name_iky_chr000104 = Laura Color 3
-#define IMPORTANT_GLENN_COLOR_1 "iky_chr000202" // name_iky_chr000202 = Glenn Color 1
-#define IMPORTANT_GLENN_COLOR_2 "iky_chr000203" // name_iky_chr000203 = Glenn Color 2
-#define IMPORTANT_LEILAH_COLOR_1 "iky_chr000302" // name_iky_chr000302 = Leilah Color 1
-#define IMPORTANT_LEILAH_COLOR_2 "iky_chr000303" // name_iky_chr000303 = Leilah Color 2
-#define IMPORTANT_LEILAH_COLOR_3 "iky_chr000304" // name_iky_chr000304 = Leilah Color 3
-#define IMPORTANT_COLIN_COLOR_1 "iky_chr000402" // name_iky_chr000402 = Colin Color 1
-#define IMPORTANT_COLIN_COLOR_2 "iky_chr000403" // name_iky_chr000403 = Colin Color 2
-#define IMPORTANT_COLIN_COLOR_3 "iky_chr000404" // name_iky_chr000404 = Colin Color 3
-#define IMPORTANT_OLIVIA_COLOR_2 "iky_chr000503" // name_iky_chr000503 = Olivia Color 2
-#define IMPORTANT_OLIVIA_COLOR_3 "iky_chr000504" // name_iky_chr000504 = Olivia Color 3
-#define IMPORTANT_DAEMON_COLOR_1 "iky_chr000602" // name_iky_chr000602 = Daemon Color 1
-#define IMPORTANT_DAEMON_COLOR_2 "iky_chr000603" // name_iky_chr000603 = Daemon Color 2
-#define IMPORTANT_DAEMON_COLOR_3 "iky_chr000604" // name_iky_chr000604 = Daemon Color 3
-#define IMPORTANT_ODIN_COLOR_2 "iky_chr000703" // name_iky_chr000703 = Odin Color 2
-#define IMPORTANT_ODIN_COLOR_3 "iky_chr000704" // name_iky_chr000704 = Odin Color 3
-#define IMPORTANT_DEVILISH_SQUARE "iky_icf01040080" // name_icf01040080 = Devilish Square
-#define IMPORTANT_TAYLOR_COLOR_2 "iky_chr002703" // name_iky_chr002703 = Taylor Color 2
-#define IMPORTANT_YUELIA_COLOR_1 "iky_chr000802" // name_iky_chr000802 = Yuelia Color 1
-#define IMPORTANT_TAYLOR_COLOR_1 "iky_chr002702" // name_iky_chr002702 = Taylor Color 1
-#define IMPORTANT_YUELIA_COLOR_2 "iky_chr000803" // name_iky_chr000803 = Yuelia Color 2
-#define IMPORTANT_YUELIA_COLOR_3 "iky_chr000804" // name_iky_chr000804 = Yuelia Color 3
-#define IMPORTANT_SHEA_COLOR_1 "iky_chr000902" // name_iky_chr000902 = Shea Color 1
-#define IMPORTANT_SHEA_COLOR_2 "iky_chr000903" // name_iky_chr000903 = Shea Color 2
-#define IMPORTANT_SHEA_COLOR_3 "iky_chr000904" // name_iky_chr000904 = Shea Color 3
-#define IMPORTANT_ANCIENT_SQUARE "iky_icf01040100" // name_icf01040100 = Ancient Square
-#define IMPORTANT_DUGLAS_COLOR_1 "iky_chr000a02" // name_iky_chr000a02 = Duglas Color 1
-#define IMPORTANT_DUGLAS_COLOR_3 "iky_chr000a04" // name_iky_chr000a04 = Duglas Color 3
-#define IMPORTANT_ISAAC_COLOR_1 "iky_chr000b02" // name_iky_chr000b02 = Isaac Color 1
-#define IMPORTANT_ISAAC_COLOR_3 "iky_chr000b04" // name_iky_chr000b04 = Isaac Color 3
-#define IMPORTANT_MONIKA_COLOR_2 "iky_chr000c03" // name_iky_chr000c03 = Monika Color 2
-#define IMPORTANT_MONIKA_COLOR_3 "iky_chr000c04" // name_iky_chr000c04 = Monika Color 3
-#define IMPORTANT_CHAKPO_COLOR_1 "iky_chr000d02" // name_iky_chr000d02 = Chakpo Color 1
-#define IMPORTANT_CHAKPO_COLOR_2 "iky_chr000d03" // name_iky_chr000d03 = Chakpo Color 2
-#define IMPORTANT_CHAKPO_COLOR_3 "iky_chr000d04" // name_iky_chr000d04 = Chakpo Color 3
-#define IMPORTANT_MUSTANG_COLOR_1 "iky_chr000e02" // name_iky_chr000e02 = Mustang Color 1
-#define IMPORTANT_MUSTANG_COLOR_2 "iky_chr000e03" // name_iky_chr000e03 = Mustang Color 2
-#define IMPORTANT_MUSTANG_COLOR_3 "iky_chr000e04" // name_iky_chr000e04 = Mustang Color 3
-#define IMPORTANT_JAKE_COLOR_1 "iky_chr000f02" // name_iky_chr000f02 = Jake Color 1
-#define IMPORTANT_JAKE_COLOR_2 "iky_chr000f03" // name_iky_chr000f03 = Jake Color 2
-#define IMPORTANT_HILDA_COLOR_2 "iky_chr001003" // name_iky_chr001003 = Hilda Color 2
-#define IMPORTANT_HILDA_COLOR_3 "iky_chr001004" // name_iky_chr001004 = Hilda Color 3
-#define IMPORTANT_FANG_COLOR_1 "iky_chr001102" // name_iky_chr001102 = Fang Color 1
-#define IMPORTANT_FANG_COLOR_3 "iky_chr001104" // name_iky_chr001104 = Fang Color 3
-#define IMPORTANT_MAGMIA_COLOR_3 "iky_chr002104" // name_iky_chr002104 = Magmia Color 3
-#define IMPORTANT_SNOW_COLOR_1 "iky_chr001202" // name_iky_chr001202 = Snow Color 1
-#define IMPORTANT_MAGMIA_COLOR_1 "iky_chr002102" // name_iky_chr002102 = Magmia Color 1
-#define IMPORTANT_SNOW_COLOR_3 "iky_chr001204" // name_iky_chr001204 = Snow Color 3
-#define IMPORTANT_ROUGE_COLOR_1 "iky_chr001302" // name_iky_chr001302 = Rouge Color 1
-#define IMPORTANT_ROUGE_COLOR_3 "iky_chr001304" // name_iky_chr001304 = Rouge Color 3
-#define IMPORTANT_FERN_COLOR_2 "iky_chr001403" // name_iky_chr001403 = Fern Color 2
-#define IMPORTANT_HAWKE_COLOR_1 "iky_chr001502" // name_iky_chr001502 = Hawke Color 1
-#define IMPORTANT_HAWKE_COLOR_2 "iky_chr001503" // name_iky_chr001503 = Hawke Color 2
-#define IMPORTANT_HAWKE_COLOR_3 "iky_chr001504" // name_iky_chr001504 = Hawke Color 3
-#define IMPORTANT_JERRY_COLOR_1 "iky_chr001602" // name_iky_chr001602 = Jerry Color 1
-#define IMPORTANT_JERRY_COLOR_2 "iky_chr001603" // name_iky_chr001603 = Jerry Color 2
-#define IMPORTANT_JERRY_COLOR_3 "iky_chr001604" // name_iky_chr001604 = Jerry Color 3
-#define IMPORTANT_CLIFF_COLOR_1 "iky_chr001702" // name_iky_chr001702 = Cliff Color 1
-#define IMPORTANT_CLIFF_COLOR_2 "iky_chr001703" // name_iky_chr001703 = Cliff Color 2
-#define IMPORTANT_CLIFF_COLOR_3 "iky_chr001704" // name_iky_chr001704 = Cliff Color 3
-#define IMPORTANT_HAZEL_COLOR_1 "iky_chr001802" // name_iky_chr001802 = Hazel Color 1
-#define IMPORTANT_HAZEL_COLOR_2 "iky_chr001803" // name_iky_chr001803 = Hazel Color 2
-#define IMPORTANT_HAZEL_COLOR_3 "iky_chr001804" // name_iky_chr001804 = Hazel Color 3
-#define IMPORTANT_SLOANE_COLOR_2 "iky_chr001903" // name_iky_chr001903 = Sloane Color 2
-#define IMPORTANT_GRANTZ_COLOR_2 "iky_chr001a03" // name_iky_chr001a03 = Grantz Color 2
-#define IMPORTANT_GRANTZ_COLOR_3 "iky_chr001a04" // name_iky_chr001a04 = Grantz Color 3
-#define IMPORTANT_SYLVIA_COLOR_1 "iky_chr001b02" // name_iky_chr001b02 = Sylvia Color 1
-#define IMPORTANT_SYLVIA_COLOR_2 "iky_chr001b03" // name_iky_chr001b03 = Sylvia Color 2
-#define IMPORTANT_SYLVIA_COLOR_3 "iky_chr001b04" // name_iky_chr001b04 = Sylvia Color 3
-#define IMPORTANT_BEARHART_COLOR_3 "iky_chr001c04" // name_iky_chr001c04 = Bearhart Color 3
-#define IMPORTANT_ORLANDO_COLOR_1 "iky_chr001d02" // name_iky_chr001d02 = Orlando Color 1
-#define IMPORTANT_ORLANDO_COLOR_2 "iky_chr001d03" // name_iky_chr001d03 = Orlando Color 2
-#define IMPORTANT_ORLANDO_COLOR_3 "iky_chr001d04" // name_iky_chr001d04 = Orlando Color 3
-#define IMPORTANT_AHAB_COLOR_1 "iky_chr001e02" // name_iky_chr001e02 = Ahab Color 1
-#define IMPORTANT_AHAB_COLOR_3 "iky_chr001e04" // name_iky_chr001e04 = Ahab Color 3
-#define IMPORTANT_TERUHA_COLOR_1 "iky_chr001f02" // name_iky_chr001f02 = Teruha Color 1
-#define IMPORTANT_TERUHA_COLOR_3 "iky_chr001f04" // name_iky_chr001f04 = Teruha Color 3
-#define IMPORTANT_BRAY_COLOR_2 "iky_chr002003" // name_iky_chr002003 = Bray Color 2
-#define IMPORTANT_MAGMIA_COLOR_2 "iky_chr002103" // name_iky_chr002103 = Magmia Color 2
-#define IMPORTANT_IAN_COLOR_1 "iky_chr002202" // name_iky_chr002202 = Ian Color 1
-#define IMPORTANT_IAN_COLOR_2 "iky_chr002203" // name_iky_chr002203 = Ian Color 2
-#define IMPORTANT_IAN_COLOR_3 "iky_chr002204" // name_iky_chr002204 = Ian Color 3
-#define IMPORTANT_CORMELL_COLOR_2 "iky_chr002303" // name_iky_chr002303 = Cormell Color 2
-#define IMPORTANT_CORMELL_COLOR_3 "iky_chr002304" // name_iky_chr002304 = Cormell Color 3
-#define IMPORTANT_CHERRY_COLOR_1 "iky_chr002402" // name_iky_chr002402 = Cherry Color 1
-#define IMPORTANT_CHERRY_COLOR_2 "iky_chr002403" // name_iky_chr002403 = Cherry Color 2
-#define IMPORTANT_CHERRY_COLOR_3 "iky_chr002404" // name_iky_chr002404 = Cherry Color 3
-#define IMPORTANT_KUNUGI_COLOR_1 "iky_chr002502" // name_iky_chr002502 = Kunugi Color 1
-#define IMPORTANT_KUNUGI_COLOR_2 "iky_chr002503" // name_iky_chr002503 = Kunugi Color 2
-#define IMPORTANT_KUNUGI_COLOR_3 "iky_chr002504" // name_iky_chr002504 = Kunugi Color 3
-#define IMPORTANT_KLAUS_COLOR_3 "iky_chr002604" // name_iky_chr002604 = Klaus Color 3
-#define IMPORTANT_TAYLOR_COLOR_3 "iky_chr002704" // name_iky_chr002704 = Taylor Color 3
-#define IMPORTANT_ALLAN_COLOR_1 "iky_chr002802" // name_iky_chr002802 = Allan Color 1
-#define IMPORTANT_ALLAN_COLOR_2 "iky_chr002803" // name_iky_chr002803 = Allan Color 2
-#define IMPORTANT_ALLAN_COLOR_3 "iky_chr002804" // name_iky_chr002804 = Allan Color 3
-#define IMPORTANT_NOMMIE_COLOR_1 "iky_chr002902" // name_iky_chr002902 = Nommie Color 1
-#define IMPORTANT_NOMMIE_COLOR_2 "iky_chr002903" // name_iky_chr002903 = Nommie Color 2
-#define IMPORTANT_NOMMIE_COLOR_3 "iky_chr002904" // name_iky_chr002904 = Nommie Color 3
-#define IMPORTANT_FLAMEL_COLOR_1 "iky_chr002a02" // name_iky_chr002a02 = Flamel Color 1
-#define IMPORTANT_FLAMEL_COLOR_2 "iky_chr002a03" // name_iky_chr002a03 = Flamel Color 2
-#define IMPORTANT_FLAMEL_COLOR_3 "iky_chr002a04" // name_iky_chr002a04 = Flamel Color 3
-#define IMPORTANT_SOPHIE_COLOR_1 "iky_chr002b02" // name_iky_chr002b02 = Sophie Color 1
-#define IMPORTANT_SOPHIE_COLOR_2 "iky_chr002b03" // name_iky_chr002b03 = Sophie Color 2
-#define IMPORTANT_DEMIEL_COLOR_2 "iky_chr002c03" // name_iky_chr002c03 = Demiel Color 2
-#define IMPORTANT_DEMIEL_COLOR_3 "iky_chr002c04" // name_iky_chr002c04 = Demiel Color 3
-#define IMPORTANT_PINO_COLOR_1 "iky_chr002d02" // name_iky_chr002d02 = Pino Color 1
-#define IMPORTANT_PINO_COLOR_2 "iky_chr002d03" // name_iky_chr002d03 = Pino Color 2
-#define IMPORTANT_DEVILISH_HOUSE_B "iky_icf01020112" // name_icf01020112 = Devilish House B
-#define IMPORTANT_PIERRE_COLOR_2 "iky_chr002e03" // name_iky_chr002e03 = Pierre Color 2
-#define IMPORTANT_PIERRE_COLOR_3 "iky_chr002e04" // name_iky_chr002e04 = Pierre Color 3
-#define IMPORTANT_ROISIN_COLOR_1 "iky_chr002f02" // name_iky_chr002f02 = Roisin Color 1
-#define IMPORTANT_ROISIN_COLOR_2 "iky_chr002f03" // name_iky_chr002f03 = Roisin Color 2
-#define IMPORTANT_ROISIN_COLOR_3 "iky_chr002f04" // name_iky_chr002f04 = Roisin Color 3
-#define IMPORTANT_KIKYO_COLOR_1 "iky_chr003102" // name_iky_chr003102 = Kikyo Color 1
-#define IMPORTANT_KIKYO_COLOR_2 "iky_chr003103" // name_iky_chr003103 = Kikyo Color 2
-#define IMPORTANT_MEIME_COLOR_1 "iky_chr003202" // name_iky_chr003202 = Meime Color 1
-#define IMPORTANT_MEIME_COLOR_3 "iky_chr003204" // name_iky_chr003204 = Meime Color 3
-#define IMPORTANT_BUTCH_COLOR_1 "iky_chr003402" // name_iky_chr003402 = Butch Color 1
-#define IMPORTANT_BUTCH_COLOR_2 "iky_chr003403" // name_iky_chr003403 = Butch Color 2
-#define IMPORTANT_BUTCH_COLOR_3 "iky_chr003404" // name_iky_chr003404 = Butch Color 3
-#define IMPORTANT_DEVILISH_SQUARE_1 "iky_test_00" // name_icf01040080 = Devilish Square
-#define IMPORTANT_SEABREEZE_SQUARE "iky_icf01040030" // name_icf01040030 = Seabreeze Square
-#define IMPORTANT_GRAFFITI_SQUARE "iky_icf01040070" // name_icf01040070 = Graffiti Square
-#define IMPORTANT_DEVILISH_HOUSE "iky_icf01020110" // name_icf01020110 = Devilish House
-#define IMPORTANT_DEVILISH_HOUSE_A "iky_icf01020111" // name_icf01020111 = Devilish House A
-#define IMPORTANT_HAIR_CATALOG_2 "iky01000391" // name_iky01000391 = Hair Catalog 2
-
-#define WEAPON_DRACONIC_GREATSWORD "iwp03000070" // name_iwp03000070 = Draconic Greatsword
-#define WEAPON_DRAGOONS_SWORD "iwp02000080" // name_iwp02000080 = Dragoon's Sword
-#define WEAPON_TREE_BRANCH "iwp01000010" // name_iwp01000010 = Tree Branch
-#define WEAPON_TOUGH_TREE_BRANCH "iwp06000020" // name_iwp06000020 = Tough Tree Branch
-#define WEAPON_CHERRY_STICK "iwp06000050" // name_iwp06000050 = Cherry Stick
-#define WEAPON_GREATSWORD_OF_TIME "iwp03000190" // name_iwp03000190 = Greatsword of Time
-#define WEAPON_NAPDRAGON_BOW "iwp05000220" // name_iwp05000220 = Napdragon Bow
-#define WEAPON_KITCHEN_KNIFE "iwp01000013" // name_iwp01000013 = Kitchen Knife
-#define WEAPON_FIRE_STICK "iwp06000060" // name_iwp06000060 = Fire Stick
-#define WEAPON_WIND_STICK "iwp06000070" // name_iwp06000070 = Wind Stick
-#define WEAPON_WATER_STICK "iwp06000080" // name_iwp06000080 = Water Stick
-#define WEAPON_EARTH_CLAYMORE "iwp03000140" // name_iwp03000140 = Earth Claymore
-#define WEAPON_EARTH_STICK "iwp06000090" // name_iwp06000090 = Earth Stick
-#define WEAPON_FIRE_CLAYMORE "iwp03000150" // name_iwp03000150 = Fire Claymore
-#define WEAPON_EXCALIBRANCH "iwp06000030" // name_iwp06000030 = Excalibranch
-#define WEAPON_GIANT_STICK "iwp06000100" // name_iwp06000100 = Giant Stick
-#define WEAPON_IRON_CLAYMORE "iwp03000040" // name_iwp03000040 = Iron Claymore
-#define WEAPON_NAPDRAGON_BOW_BT "iwp05000220_BT" // name_iwp05000220 = Napdragon Bow
-#define WEAPON_DRAGON_STICK "iwp06000110" // name_iwp06000110 = Dragon Stick
-#define WEAPON_SILVER_CLAYMORE "iwp03000050" // name_iwp03000050 = Silver Claymore
-#define WEAPON_ROASTED_CORN "iwp06000040" // name_iwp06000040 = Roasted Corn
-#define WEAPON_COBALT_DRAGONFANG "iwp03000180" // name_iwp03000180 = Cobalt Dragonfang
-#define WEAPON_SQUIRES_SWORD "iwp02000020" // name_iwp02000020 = Squire's Sword
-#define WEAPON_PINE_STAFF "iwp04000040" // name_iwp04000040 = Pine Staff
-#define WEAPON_LADLE "iwp01000012" // name_iwp01000012 = Ladle
-#define WEAPON_WEIRD_PAD "iwp01000014" // name_iwp01000014 = Weird Pad
-#define WEAPON_AQUA_SABER "iwp02000140" // name_iwp02000140 = Aqua Saber
-#define WEAPON_OLD_GUYS_CANE "iwp01000015" // name_iwp01000015 = Old Guy's Cane
-#define WEAPON_BOREAL_BLADE "iwp02000110" // name_iwp02000110 = Boreal Blade
-#define WEAPON_TONGS_HOT "iwp01000016" // name_iwp01000016 = Tongs (Hot)
-#define WEAPON_TONGS "iwp01000017" // name_iwp01000017 = Tongs
-#define WEAPON_SCARLET_SCOURGE "iwp03000100" // name_iwp03000100 = Scarlet Scourge
-#define WEAPON_HUNTERS_BOW "iwp05000160" // name_iwp05000160 = Hunter's Bow
-#define WEAPON_SPHERE_OF_MALETH "iwp01000018" // name_iwp01000023 = Sphere of Maleth
-#define WEAPON_SYLPHIDE "iwp03000170" // name_iwp03000170 = Sylphide
-#define WEAPON_INTERFERE_GEAR_PLUS "iwp01000019" // name_iky01000650 = Interfere Gear +
-#define WEAPON_BORROWED_SWORD "iwp02000010" // name_iwp02000010 = Borrowed Sword
-#define WEAPON_BRONZE_SWORD "iwp02000030" // name_iwp02000030 = Bronze Sword
-#define WEAPON_BORROWED_BOW "iwp05000010" // name_iwp05000010 = Borrowed Bow
-#define WEAPON_IRON_SWORD "iwp02000040" // name_iwp02000040 = Iron Sword
-#define WEAPON_SILVER_SWORD "iwp02000050" // name_iwp02000050 = Silver Sword
-#define WEAPON_FLAME_SABER "iwp02000130" // name_iwp02000130 = Flame Saber
-#define WEAPON_GALE_SABER "iwp02000150" // name_iwp02000150 = Gale Saber
-#define WEAPON_LEAF_SABER "iwp02000120" // name_iwp02000120 = Leaf Saber
-#define WEAPON_BORROWED_STAFF "iwp00000004" // name_iwp04000010 = Borrowed Staff
-#define WEAPON_WOLFS_FANG "iwp03000090" // name_iwp03000090 = Wolf's Fang
-#define WEAPON_GOLD_SWORD "iwp02000060" // name_iwp02000060 = Gold Sword
-#define WEAPON_BORROWED_STAFF_1 "iwp04000010" // name_iwp04000010 = Borrowed Staff
-#define WEAPON_DRAGONS_DESPAIR "iwp03000080" // name_iwp03000080 = Dragon's Despair
-#define WEAPON_SWORD_OF_DARKNESS "iwp02000070" // name_iwp02000070 = Sword of Darkness
-#define WEAPON_STARFALL_SWORD "iwp02000170" // name_iwp02000170 = Starfall Sword
-#define WEAPON_SWORD_OF_TIME "iwp02000190" // name_iwp02000190 = Sword of Time
-#define WEAPON_VERDANT_BLADE "iwp02000180" // name_iwp02000180 = Verdant Blade
-#define WEAPON_FLORAL_SWORD "iwp02000100" // name_iwp02000100 = Floral Sword
-#define WEAPON_BLACK_DRAGON_SWORD "iwp02000160" // name_iwp02000160 = Black Dragon Sword
-#define WEAPON_GOLD_CLAYMORE "iwp03000060" // name_iwp03000060 = Gold Claymore
-#define WEAPON_APPLE_SLICER "iwp02000090" // name_iwp02000090 = Apple Slicer
-#define WEAPON_ARCANITE_SWORD "iwp02000200" // name_iwp02000200 = Arcanite Sword
-#define WEAPON_APOCALYPSE_SWORD "iwp02000210" // name_iwp02000210 = Apocalypse Sword
-#define WEAPON_NAPDRAGON_CLAYMORE "iwp03000210" // name_iwp03000210 = Napdragon Claymore
-#define WEAPON_TRUE_SWORD_OF_TIME "iwp02000220" // name_iwp02000220 = True Sword of Time
-#define WEAPON_TRUE_GREATSWORD_OF_TIME "iwp03000200" // name_iwp03000200 = True Greatsword of Time
-#define WEAPON_NAPDRAGON_SWORD "iwp02000230" // name_iwp02000230 = Napdragon Sword
-#define WEAPON_BLACK_DRAGON_STAFF "iwp04000080" // name_iwp04000080 = Black Dragon Staff
-#define WEAPON_BORROWED_CLAYMORE "iwp03000010" // name_iwp03000010 = Borrowed Claymore
-#define WEAPON_NOVICES_CLAYMORE "iwp03000020" // name_iwp03000020 = Novice's Claymore
-#define WEAPON_BRONZE_CLAYMORE "iwp03000030" // name_iwp03000030 = Bronze Claymore
-#define WEAPON_WIND_CLAYMORE "iwp03000130" // name_iwp03000130 = Wind Claymore
-#define WEAPON_WATER_CLAYMORE "iwp03000160" // name_iwp03000160 = Water Claymore
-#define WEAPON_BLACK_DRAGON_BUSTER "iwp03000120" // name_iwp03000120 = Black Dragon Buster
-#define WEAPON_BLIZZARD_BUSTER "iwp03000110" // name_iwp03000110 = Blizzard Buster
-#define WEAPON_OAK_BOW "iwp05000020" // name_iwp05000020 = Oak Bow
-#define WEAPON_PINE_BOW "iwp05000030" // name_iwp05000030 = Pine Bow
-#define WEAPON_CHERRY_BOW "iwp05000040" // name_iwp05000040 = Cherry Bow
-#define WEAPON_BLAZE_BOW "iwp05000140" // name_iwp05000140 = Blaze Bow
-#define WEAPON_GALE_BOW "iwp05000120" // name_iwp05000120 = Gale Bow
-#define WEAPON_CRYSTAL_BOW "iwp05000150" // name_iwp05000150 = Crystal Bow
-#define WEAPON_LEAF_BOW "iwp05000130" // name_iwp05000130 = Leaf Bow
-#define WEAPON_SUGAR_BOW "iwp05000050" // name_iwp05000050 = Sugar Bow
-#define WEAPON_BLACK_DRAGON_BOW "iwp05000070" // name_iwp05000070 = Black Dragon Bow
-#define WEAPON_WARGODS_BOW "iwp05000170" // name_iwp05000170 = Wargod's Bow
-#define WEAPON_BOW_OF_TIME "iwp05000190" // name_iwp05000190 = Bow of Time
-#define WEAPON_PHOENIX_BOW "iwp05000060" // name_iwp05000060 = Phoenix Bow
-#define WEAPON_FALCONWING "iwp05000110" // name_iwp05000110 = Falconwing
-#define WEAPON_POSEIDONS_BOW "iwp05000080" // name_iwp05000080 = Poseidon's Bow
-#define WEAPON_SUNCATCHER "iwp05000100" // name_iwp05000100 = Suncatcher
-#define WEAPON_HEAVENLY_AEROSHOT "iwp05000090" // name_iwp05000090 = Heavenly Aeroshot
-#define WEAPON_TENEBRION "iwp05000200" // name_iwp05000200 = Tenebrion
-#define WEAPON_TRUE_BOW_OF_TIME "iwp05000210" // name_iwp05000210 = True Bow of Time
-#define WEAPON_NOVICES_STAFF "iwp04000020" // name_iwp04000020 = Novice's Staff
-#define WEAPON_OAK_STAFF "iwp04000030" // name_iwp04000030 = Oak Staff
-#define WEAPON_CHERRY_STAFF "iwp04000050" // name_iwp04000050 = Cherry Staff
-#define WEAPON_RED_DRAGON_STAFF "iwp04000090" // name_iwp04000090 = Red Dragon Staff
-#define WEAPON_SPOOKY_STAFF "iwp04000100" // name_iwp04000100 = Spooky Staff
-#define WEAPON_FROGGY_WAND "iwp04000110" // name_iwp04000110 = Froggy Wand
-#define WEAPON_SAGE_STAFF "iwp04000150" // name_iwp04000150 = Sage Staff
-#define WEAPON_SUGAR_STAFF "iwp04000060" // name_iwp04000060 = Sugar Staff
-#define WEAPON_MYSTICAL_STAFF "iwp04000070" // name_iwp04000070 = Mystical Staff
-#define WEAPON_STAFF_OF_TIME "iwp04000190" // name_iwp04000190 = Staff of Time
-#define WEAPON_INFERNAL_STAFF "iwp04000180" // name_iwp04000180 = Infernal Staff
-#define WEAPON_STAFF_OF_THE_ORACLE "iwp04000140" // name_iwp04000140 = Staff of the Oracle
-#define WEAPON_COCYTUS_ICEWAND "iwp04000160" // name_iwp04000160 = Cocytus Icewand
-#define WEAPON_HARVEST_SCEPTER "iwp04000170" // name_iwp04000170 = Harvest Scepter
-#define WEAPON_LUNA_INCANTA "iwp04000120" // name_iwp04000120 = Luna Incanta
-#define WEAPON_CHAOS_SCEPTER "iwp04000130" // name_iwp04000130 = Chaos Scepter
-#define WEAPON_TRUE_STAFF_OF_TIME "iwp04000200" // name_iwp04000200 = True Staff of Time
-#define WEAPON_NAPDRAGON_STAFF "iwp04000210" // name_iwp04000210 = Napdragon Staff
-#define WEAPON_TREE_BRANCH_1 "iwp00000000" // name_iwp01000010 = Tree Branch
-#define WEAPON_BORROWED_SWORD_1 "iwp00000001" // name_iwp02000010 = Borrowed Sword
-#define WEAPON_BORROWED_CLAYMOR_1 "iwp00000002" // name_iwp03000010 = Borrowed Claymore
-#define WEAPON_BORROWED_BOW_1 "iwp00000003" // name_iwp05000010 = Borrowed Bow
-#define WEAPON_NAPDRAGON_SWORD_BT "iwp02000230_BT" // name_iwp02000230 = Napdragon Sword
-#define WEAPON_NAPDRAGON_CLAYMORE_BT "iwp03000210_BT" // name_iwp03000210 = Napdragon Claymore
-#define WEAPON_NAPDRAGON_STAFF_BT "iwp04000210_BT" // name_iwp04000210 = Napdragon Staff
-
-#define LIFETOOLS_BORROWED_AXE "ilt01000010" // name_ilt01000010 = Borrowed Axe
-#define LIFETOOLS_OAK_AXE "ilt01000020" // name_ilt01000020 = Oak Axe
-#define LIFETOOLS_BORROWED_AXE_1 "ilt00000000" // name_ilt01000010 = Borrowed Axe
-#define LIFETOOLS_PINE_AXE "ilt01000030" // name_ilt01000030 = Pine Axe
-#define LIFETOOLS_WARRIORS_PICKAXE "ilt02000090" // name_ilt02000090 = Warrior's Pickaxe
-#define LIFETOOLS_CHERRY_AXE "ilt01000040" // name_ilt01000040 = Cherry Axe
-#define LIFETOOLS_EARTHLORDS_PICKAXE "ilt02000080" // name_ilt02000080 = Earthlord's Pickaxe
-#define LIFETOOLS_SUGAR_AXE "ilt01000050" // name_ilt01000050 = Sugar Axe
-#define LIFETOOLS_BEAR_CLEAVER "ilt01000060" // name_ilt01000060 = Bear Cleaver
-#define LIFETOOLS_SQUIRREL_AXE "ilt01000070" // name_ilt01000070 = Squirrel Axe
-#define LIFETOOLS_GOLD_PICKAXE "ilt02000050" // name_ilt02000050 = Gold Pickaxe
-#define LIFETOOLS_VERDANT_AXE "ilt01000080" // name_ilt01000080 = Verdant Axe
-#define LIFETOOLS_AXE_OF_TIME "ilt01000110" // name_ilt01000110 = Axe of Time
-#define LIFETOOLS_BORROWED_SAW_1 "ilt00000006" // name_ilt06000010 = Borrowed Saw
-#define LIFETOOLS_SILVER_PICKAXE "ilt02000040" // name_ilt02000040 = Silver Pickaxe
-#define LIFETOOLS_BLOSSOM_AXE "ilt01000090" // name_ilt01000090 = Blossom Axe
-#define LIFETOOLS_AVALANCHE_AXE "ilt01000100" // name_ilt01000100 = Avalanche Axe
-#define LIFETOOLS_TRUE_AXE_OF_TIME "ilt01000120" // name_ilt01000120 = True Axe of Time
-#define LIFETOOLS_BORROWED_PICKAXE "ilt02000010" // name_ilt02000010 = Borrowed Pickaxe
-#define LIFETOOLS_BRONZE_PICKAXE "ilt02000020" // name_ilt02000020 = Bronze Pickaxe
-#define LIFETOOLS_IRON_PICKAXE "ilt02000030" // name_ilt02000030 = Iron Pickaxe
-#define LIFETOOLS_MOUNTAIN_GOD_PICKAXE "ilt02000060" // name_ilt02000060 = Mountain God Pickaxe
-#define LIFETOOLS_CRYSTAL_PICKAXE "ilt02000070" // name_ilt02000070 = Crystal Pickaxe
-#define LIFETOOLS_PICKAXE_OF_TIME "ilt02000110" // name_ilt02000110 = Pickaxe of Time
-#define LIFETOOLS_SILVER_HOE "ilt04000040" // name_ilt04000040 = Silver Hoe
-#define LIFETOOLS_OAK_SAW "ilt06000020" // name_ilt06000020 = Oak Saw
-#define LIFETOOLS_DRAGONBREAKER "ilt02000100" // name_ilt02000100 = Dragonbreaker
-#define LIFETOOLS_GOLD_HOE "ilt04000050" // name_ilt04000050 = Gold Hoe
-#define LIFETOOLS_PINE_SAW "ilt06000030" // name_ilt06000030 = Pine Saw
-#define LIFETOOLS_TRUE_PICKAXE_OF_TIME "ilt02000120" // name_ilt02000120 = True Pickaxe of Time
-#define LIFETOOLS_WAVECRASH_HOE "ilt04000070" // name_ilt04000070 = Wavecrash Hoe
-#define LIFETOOLS_BORROWED_SAW "ilt06000010" // name_ilt06000010 = Borrowed Saw
-#define LIFETOOLS_BORROWED_ROD "ilt03000010" // name_ilt03000010 = Borrowed Rod
-#define LIFETOOLS_IRON_HAMMER "ilt08000030" // name_ilt08000030 = Iron Hammer
-#define LIFETOOLS_OAK_ROD "ilt03000020" // name_ilt03000020 = Oak Rod
-#define LIFETOOLS_BRONZE_HAMMER "ilt08000020" // name_ilt08000020 = Bronze Hammer
-#define LIFETOOLS_PINE_ROD "ilt03000030" // name_ilt03000030 = Pine Rod
-#define LIFETOOLS_TRUE_HOE_OF_TIME "ilt04000120" // name_ilt04000120 = True Hoe of Time
-#define LIFETOOLS_GOLD_HAMMER "ilt08000050" // name_ilt08000050 = Gold Hammer
-#define LIFETOOLS_CHERRY_ROD "ilt03000040" // name_ilt03000040 = Cherry Rod
-#define LIFETOOLS_TRUE_FRYING_PAN_OF_TIME "ilt10000120" // name_ilt10000120 = True Frying Pan of Time
-#define LIFETOOLS_SILVER_HAMMER "ilt08000040" // name_ilt08000040 = Silver Hammer
-#define LIFETOOLS_SUGAR_ROD "ilt03000050" // name_ilt03000050 = Sugar Rod
-#define LIFETOOLS_FRYING_PAN_OF_TIME "ilt10000110" // name_ilt10000110 = Frying Pan of Time
-#define LIFETOOLS_DIVINE_HOE "ilt04000100" // name_ilt04000100 = Divine Hoe
-#define LIFETOOLS_RED_DEVILS_HAMMER "ilt08000070" // name_ilt08000070 = Red Devil's Hammer
-#define LIFETOOLS_ANGLERS_OATH_ROD "ilt03000060" // name_ilt03000060 = Angler's Oath Rod
-#define LIFETOOLS_VENUS_FRYING_PAN "ilt10000100" // name_ilt10000100 = Venus Frying Pan
-#define LIFETOOLS_HOE_OF_TIME "ilt04000110" // name_ilt04000110 = Hoe of Time
-#define LIFETOOLS_CRYSTAL_HAMMER "ilt08000060" // name_ilt08000060 = Crystal Hammer
-#define LIFETOOLS_KOI_COLORED_ROD "ilt03000070" // name_ilt03000070 = Koi-Colored Rod
-#define LIFETOOLS_SWEET_HAMMER "ilt08000090" // name_ilt08000090 = Sweet Hammer
-#define LIFETOOLS_PLUM_BLOSSOM_ROD "ilt03000080" // name_ilt03000080 = Plum Blossom Rod
-#define LIFETOOLS_SUGAR_SAW "ilt06000050" // name_ilt06000050 = Sugar Saw
-#define LIFETOOLS_IRON_HOE "ilt04000030" // name_ilt04000030 = Iron Hoe
-#define LIFETOOLS_ROD_OF_TIME "ilt03000110" // name_ilt03000110 = Rod of Time
-#define LIFETOOLS_BLUE_DEVILS_HAMMER "ilt08000080" // name_ilt08000080 = Blue Devil's Hammer
-#define LIFETOOLS_APPLE_ROD "ilt03000090" // name_ilt03000090 = Apple Rod
-#define LIFETOOLS_BRONZE_HOE "ilt04000020" // name_ilt04000020 = Bronze Hoe
-#define LIFETOOLS_CHERRY_SAW "ilt06000040" // name_ilt06000040 = Cherry Saw
-#define LIFETOOLS_VIOLET_ROD "ilt03000100" // name_ilt03000100 = Violet Rod
-#define LIFETOOLS_TRUE_ROD_OF_TIME "ilt03000120" // name_ilt03000120 = True Rod of Time
-#define LIFETOOLS_ALI_BABA_SAW "ilt06000070" // name_ilt06000070 = Ali-Baba Saw
-#define LIFETOOLS_BORROWED_HOE "ilt04000010" // name_ilt04000010 = Borrowed Hoe
-#define LIFETOOLS_PLATINUM_HOE "ilt04000060" // name_ilt04000060 = Platinum Hoe
-#define LIFETOOLS_MAGMA_HOE "ilt04000080" // name_ilt04000080 = Magma Hoe
-#define LIFETOOLS_WIZARDS_HOE "ilt04000090" // name_ilt04000090 = Wizard's Hoe
-#define LIFETOOLS_BORROWED_HAMMER "ilt08000010" // name_ilt08000010 = Borrowed Hammer
-#define LIFETOOLS_IRON_FRYING_PAN "ilt10000030" // name_ilt10000030 = Iron Frying Pan
-#define LIFETOOLS_HAMMER_OF_TIME "ilt08000110" // name_ilt08000110 = Hammer of Time
-#define LIFETOOLS_BRONZE_FRYING_PAN "ilt10000020" // name_ilt10000020 = Bronze Frying Pan
-#define LIFETOOLS_GREAT_HAMMER "ilt08000100" // name_ilt08000100 = Great Hammer
-#define LIFETOOLS_TRUE_HAMMER_OF_TIME "ilt08000120" // name_ilt08000120 = True Hammer of Time
-#define LIFETOOLS_BEAVER_SAW "ilt06000060" // name_ilt06000060 = Beaver Saw
-#define LIFETOOLS_CORAL_SAW "ilt06000100" // name_ilt06000100 = Coral Saw
-#define LIFETOOLS_CHIEFS_SAW "ilt06000080" // name_ilt06000080 = Chief's Saw
-#define LIFETOOLS_SAW_OF_TIME "ilt06000110" // name_ilt06000110 = Saw of Time
-#define LIFETOOLS_BATTLE_CARPENTERS_SAW "ilt06000090" // name_ilt06000090 = Battle Carpenter's Saw
-#define LIFETOOLS_TRUE_SAW_OF_TIME "ilt06000120" // name_ilt06000120 = True Saw of Time
-#define LIFETOOLS_BORROWED_NEEDLE "ilt07000010" // name_ilt07000010 = Borrowed Needle
-#define LIFETOOLS_BRONZE_NEEDLE "ilt07000020" // name_ilt07000020 = Bronze Needle
-#define LIFETOOLS_IRON_NEEDLE "ilt07000030" // name_ilt07000030 = Iron Needle
-#define LIFETOOLS_SILVER_NEEDLE "ilt07000040" // name_ilt07000040 = Silver Needle
-#define LIFETOOLS_GOLD_NEEDLE "ilt07000050" // name_ilt07000050 = Gold Needle
-#define LIFETOOLS_DANDELION_NEEDLE "ilt07000060" // name_ilt07000060 = Dandelion Needle
-#define LIFETOOLS_WHITE_MOHAIRY_NEEDLE "ilt07000070" // name_ilt07000070 = White Mohairy Needle
-#define LIFETOOLS_BORROWED_NEEDLE_1 "ilt00000007" // name_ilt07000010 = Borrowed Needle
-#define LIFETOOLS_LULLABY_NEEDLE "ilt07000080" // name_ilt07000080 = Lullaby Needle
-#define LIFETOOLS_NEEDLE_OF_TIME "ilt07000110" // name_ilt07000110 = Needle of Time
-#define LIFETOOLS_ROYAL_NEEDLE "ilt07000090" // name_ilt07000090 = Royal Needle
-#define LIFETOOLS_SHAHRAZAD_NEEDLE "ilt07000100" // name_ilt07000100 = Shahrazad Needle
-#define LIFETOOLS_TRUE_NEEDLE_OF_TIME "ilt07000120" // name_ilt07000120 = True Needle of Time
-#define LIFETOOLS_BORROWED_FLASK "ilt11000010" // name_ilt11000010 = Borrowed Flask
-#define LIFETOOLS_SCIENCE_FLASK "ilt11000020" // name_ilt11000020 = Science Flask
-#define LIFETOOLS_INVENTORS_FLASK "ilt11000030" // name_ilt11000030 = Inventor's Flask
-#define LIFETOOLS_BUBBLING_FLASK "ilt11000040" // name_ilt11000040 = Bubbling Flask
-#define LIFETOOLS_HAZARDOUS_FLASK "ilt11000050" // name_ilt11000050 = Hazardous Flask
-#define LIFETOOLS_FURIOUS_FLASK "ilt11000060" // name_ilt11000060 = Furious Flask
-#define LIFETOOLS_MOONLIGHT_FLASK "ilt11000070" // name_ilt11000070 = Moonlight Flask
-#define LIFETOOLS_LOVE_FLASK "ilt11000080" // name_ilt11000080 = Love Flask
-#define LIFETOOLS_FLASK_OF_TIME "ilt11000110" // name_ilt11000110 = Flask of Time
-#define LIFETOOLS_EXPLOSIVE_FLASK "ilt11000090" // name_ilt11000090 = Explosive Flask
-#define LIFETOOLS_SUMMER_FLASK "ilt11000100" // name_ilt11000100 = Summer Flask
-#define LIFETOOLS_TRUE_FLASK_OF_TIME "ilt11000120" // name_ilt11000120 = True Flask of Time
-#define LIFETOOLS_BORROWED_FRYING_PAN "ilt10000010" // name_ilt10000010 = Borrowed Frying Pan
-#define LIFETOOLS_SILVER_FRYING_PAN "ilt10000040" // name_ilt10000040 = Silver Frying Pan
-#define LIFETOOLS_GOLD_FRYING_PAN "ilt10000050" // name_ilt10000050 = Gold Frying Pan
-#define LIFETOOLS_FLUFFY_FRYING_PAN "ilt10000060" // name_ilt10000060 = Fluffy Frying Pan
-#define LIFETOOLS_ROYAL_FRYING_PAN "ilt10000070" // name_ilt10000070 = Royal Frying Pan
-#define LIFETOOLS_POMME_PAN "ilt10000080" // name_ilt10000080 = Pomme Pan
-#define LIFETOOLS_JACK_O_VEGGIE "ilt10000090" // name_ilt10000090 = Jack-O'-Veggie
-#define LIFETOOLS_BORROWED_BRUSH "ilt09000010" // name_ilt09000010 = Borrowed Brush
-#define LIFETOOLS_OAK_BRUSH "ilt09000020" // name_ilt09000020 = Oak Brush
-#define LIFETOOLS_PINE_BRUSH "ilt09000030" // name_ilt09000030 = Pine Brush
-#define LIFETOOLS_CHERRY_BRUSH "ilt09000040" // name_ilt09000040 = Cherry Brush
-#define LIFETOOLS_SUGAR_BRUSH "ilt09000050" // name_ilt09000050 = Sugar Brush
-#define LIFETOOLS_JET_BLACK_QUILL "ilt09000060" // name_ilt09000060 = Jet Black Quill
-#define LIFETOOLS_QUETZAL_QUILL "ilt09000070" // name_ilt09000070 = Quetzal Quill
-#define LIFETOOLS_ANGELWING_BRUSH "ilt09000080" // name_ilt09000080 = Angelwing Brush
-#define LIFETOOLS_BRUSH_OF_TIME "ilt09000110" // name_ilt09000110 = Brush of Time
-#define LIFETOOLS_CELESTIAL_BRUSH "ilt09000090" // name_ilt09000090 = Celestial Brush
-#define LIFETOOLS_DRAGONBONE_BRUSH "ilt09000100" // name_ilt09000100 = Dragonbone Brush
-#define LIFETOOLS_TRUE_BRUSH_OF_TIME "ilt09000120" // name_ilt09000120 = True Brush of Time
-#define LIFETOOLS_BORROWED_PICKAXE_1 "ilt00000001" // name_ilt02000010 = Borrowed Pickaxe
-/// Jsp pq y'a une copie
-// #define LIFETOOLS_BORROWED_ROD "ilt00000002" // name_ilt03000010 = Borrowed Rod
-// #define LIFETOOLS_BORROWED_HOE "ilt00000003" // name_ilt04000010 = Borrowed Hoe
-// #define LIFETOOLS_BORROWED_FRYING_PAN "ilt00000004" // name_ilt10000010 = Borrowed Frying Pan
-// #define LIFETOOLS_BORROWED_HAMMER "ilt00000005" // name_ilt08000010 = Borrowed Hammer
-// #define LIFETOOLS_BORROWED_FLASK "ilt00000008" // name_ilt11000010 = Borrowed Flask
-// #define LIFETOOLS_BORROWED_BRUSH "ilt00000009" // name_ilt09000010 = Borrowed Brush
-
-#define ARMOR_GOLD_CUIRASS "iam01001060" // name_iam01001060 = Gold Cuirass
-#define ARMOR_INVISIBLE_HAT "iam00000000" // name_iam00000000 = Invisible Hat
-#define ARMOR_DIVINE_GAUNTLETS "iam01006240" // name_iam01006240 = Divine Gauntlets
-#define ARMOR_GOLD_SHIELD "iam01003470" // name_iam01003470 = Gold Shield
-#define ARMOR_INVISIBLE_CLOTHES "iam00000001" // name_iam00000001 = Invisible Clothes
-#define ARMOR_INVISIBLE_PANTS "iam00000002" // name_iam00000002 = Invisible Pants
-#define ARMOR_INVISIBLE_BANGLE "iam00000003" // name_iam00000003 = Invisible Bangle
-#define ARMOR_FALCONERS_BOOTS "iam01002880" // name_iam01002880 = Falconer's Boots
-#define ARMOR_SAILORS_PANTS "iam01000020" // name_iam01000020 = Sailor's Pants
-#define ARMOR_APOCALYPSE_SHIELD "iam01007040" // name_iam01007040 = Apocalypse Shield
-#define ARMOR_APOCALYPSE_BOOTS "iam01006300" // name_iam01006300 = Apocalypse Boots
-#define ARMOR_INVISIBLE_SHOES "iam00000004" // name_iam00000004 = Invisible Shoes
-#define ARMOR_GREEN_RIMMED_GLASSES "iam01003710" // name_iam01003710 = Green-Rimmed Glasses
-#define ARMOR_TUNOCO_BOOTS "iam01004360" // name_iam01004360 = Tunoco Boots
-#define ARMOR_IRON_GAUNTLETS "iam01000930" // name_iam01000930 = Iron Gauntlets
-#define ARMOR_EXPLORERS_CLOTHES "iam01007830" // name_iam01007830 = Explorer's Clothes
-#define ARMOR_CORNY_EARRINGS "iam01009050" // name_iam01009050 = Corny Earrings
-#define ARMOR_LEATHER_LEGGINGS "iam01000620" // name_iam01000620 = Leather Leggings
-#define ARMOR_INVISIBLE_CAPE "iam00000005" // name_iam00000005 = Invisible Cape
-#define ARMOR_DURABLE_CHARM "iam01004000" // name_iam01004000 = Durable Charm
-#define ARMOR_COUTURIERS_CLOTHES "iam01003210" // name_iam01003210 = Couturier's Clothes
-#define ARMOR_INVISIBLE_SPECS "iam00000006" // name_iam00000006 = Invisible Specs
-#define ARMOR_AZURE_WING_SHIELD "iam01007010" // name_iam01007010 = Azure Wing Shield
-#define ARMOR_GREEN_HIGHLAND_BERET "iam01006080" // name_iam01006080 = Green Highland Beret
-#define ARMOR_DARK_SULTANS_BANGLES "iam01006695" // name_iam01006695 = Dark Sultan's Bangles
-#define ARMOR_MARINERS_GLOVES "iam01003050" // name_iam01003050 = Mariner's Gloves
-#define ARMOR_BORROWED_SHIELD_1 "iam00000007" // name_iam01004950 = Borrowed Shield
-#define ARMOR_IRON_GREAVES "iam01000920" // name_iam01000920 = Iron Greaves
-#define ARMOR_EXPLORERS_HAT "iam01007820" // name_iam01007820 = Explorer's Hat
-#define ARMOR_SKELEGON_TALISMAN "iam01009040" // name_iam01009040 = Skelegon Talisman
-#define ARMOR_LEATHER_GAUNTLETS "iam01000630" // name_iam01000630 = Leather Gauntlets
-#define ARMOR_EXPLORERS_SHOES "iam01007840" // name_iam01007840 = Explorer's Shoes
-#define ARMOR_LEGIONARY_SANDALS "iam01004980" // name_iam01004980 = Legionary Sandals
-#define ARMOR_HAGRAM_STRAP "iam01009020" // name_iam01009020 = Hagram Strap
-#define ARMOR_RUGGED_CAP "iam01000650" // name_iam01000650 = Rugged Cap
-#define ARMOR_IRON_BOOTS "iam01000940" // name_iam01000940 = Iron Boots
-#define ARMOR_EXPLORERS_BACKPACK "iam01007850" // name_iam01007850 = Explorer's Backpack
-#define ARMOR_BEAST_CAP "iam01004990" // name_iam01004990 = Beast Cap
-#define ARMOR_TRIP_EARRINGS "iam01009030" // name_iam01009030 = Trip Earrings
-#define ARMOR_LEATHER_BOOTS "iam01000640" // name_iam01000640 = Leather Boots
-#define ARMOR_BORROWED_SHIELD "iam01004950" // name_iam01004950 = Borrowed Shield
-#define ARMOR_HEROS_SANDALS "iam01007890" // name_iam01007890 = Hero's Sandals
-#define ARMOR_RUGGED_GAUNTLETS "iam01000680" // name_iam01000680 = Rugged Gauntlets
-#define ARMOR_PINK_MAGIC_BOOTS "iam01006570" // name_iam01006570 = Pink Magic Boots
-#define ARMOR_WHITE_CAT_EARS "iam01006210" // name_iam01006210 = White Cat Ears
-#define ARMOR_PALADINS_SHIELD "iam01003420" // name_iam01003420 = Paladin's Shield
-#define ARMOR_COASTAL_BOOTS "iam01001480" // name_iam01001480 = Coastal Boots
-#define ARMOR_GOLD_HELM "iam01001050" // name_iam01001050 = Gold Helm
-#define ARMOR_BLACK_CAT_EARS "iam01006200" // name_iam01006200 = Black Cat Ears
-#define ARMOR_BRONZE_SHIELD "iam01003430" // name_iam01003430 = Bronze Shield
-#define ARMOR_COZY_HEADWEAR "iam01001490" // name_iam01001490 = Cozy Headwear
-#define ARMOR_APOCALYPSE_HELM "iam01006270" // name_iam01006270 = Apocalypse Helm
-#define ARMOR_IRON_SHIELD "iam01003440" // name_iam01003440 = Iron Shield
-#define ARMOR_DIVINE_WINGS "iam01006260" // name_iam01006260 = Divine Wings
-#define ARMOR_SILVER_SHIELD "iam01003450" // name_iam01003450 = Silver Shield
-#define ARMOR_DIVINE_BOOTS "iam01006250" // name_iam01006250 = Divine Boots
-#define ARMOR_BLOSSOM_BUCKLER "iam01003460" // name_iam01003460 = Blossom Buckler
-#define ARMOR_CAPTAINS_SHIELD "iam01003480" // name_iam01003480 = Captain's Shield
-#define ARMOR_UMBRAL_HOOD "iam01001420" // name_iam01001420 = Umbral Hood
-#define ARMOR_BEASTLY_BOOTS "iam01000740" // name_iam01000740 = Beastly Boots
-#define ARMOR_RED_DRAGON_SHIELD "iam01003510" // name_iam01003510 = Red Dragon Shield
-#define ARMOR_DESERT_GLOVES "iam01001570" // name_iam01001570 = Desert Gloves
-#define ARMOR_FOLK_DANCERS_BANGLE "iam01008090" // name_iam01008090 = Folk Dancer's Bangle
-#define ARMOR_OLD_MASTERS_APRON "iam01004120" // name_iam01004120 = Old Master's Apron
-#define ARMOR_SNAKESKIN_HELM "iam01000750" // name_iam01000750 = Snakeskin Helm
-#define ARMOR_KNIGHTS_OATH "iam01003500" // name_iam01003500 = Knight's Oath
-#define ARMOR_DESERT_BOTTOMS "iam01001560" // name_iam01001560 = Desert Bottoms
-#define ARMOR_FOLK_DANCERS_SARONG "iam01008080" // name_iam01008080 = Folk Dancer's Sarong
-#define ARMOR_OLD_MASTERS_SHOES "iam01004130" // name_iam01004130 = Old Master's Shoes
-#define ARMOR_SHIELD_OF_TIME "iam01007000" // name_iam01007000 = Shield of Time
-#define ARMOR_GREEN_HIGHLAND_TOP "iam01006090" // name_iam01006090 = Green Highland Top
-#define ARMOR_POMME_PROTECTOR "iam01003490" // name_iam01003490 = Pomme Protector
-#define ARMOR_UMBRAL_ROBE "iam01001430" // name_iam01001430 = Umbral Robe
-#define ARMOR_ABYSSAL_GUARDIAN "iam01007020" // name_iam01007020 = Abyssal Guardian
-#define ARMOR_ARCANITE_SHIELD "iam01007030" // name_iam01007030 = Arcanite Shield
-#define ARMOR_TRUE_SHIELD_OF_TIME "iam01007050" // name_iam01007050 = True Shield of Time
-#define ARMOR_HOLY_BOOTS "iam01001290" // name_iam01001290 = Holy Boots
-#define ARMOR_IRON_CUIRASS "iam01000910" // name_iam01000910 = Iron Cuirass
-#define ARMOR_BLOSSOM_CORSAGE "iam01009070" // name_iam01009070 = Blossom Corsage
-#define ARMOR_LEATHER_CAP "iam01000600" // name_iam01000600 = Leather Cap
-#define ARMOR_HOLY_GAUNTLETS "iam01001280" // name_iam01001280 = Holy Gauntlets
-#define ARMOR_IRON_HELM "iam01000900" // name_iam01000900 = Iron Helm
-#define ARMOR_ROYAL_CAPE "iam01007800" // name_iam01007800 = Royal Cape
-#define ARMOR_COG_BROOCH "iam01009060" // name_iam01009060 = Cog Brooch
-#define ARMOR_LEATHER_JERKIN "iam01000610" // name_iam01000610 = Leather Jerkin
-#define ARMOR_SNAKESKIN_MAIL "iam01000760" // name_iam01000760 = Snakeskin Mail
-#define ARMOR_SNAKESKIN_LEGGINGS "iam01000770" // name_iam01000770 = Snakeskin Leggings
-#define ARMOR_SNAKESKIN_GLOVES "iam01000780" // name_iam01000780 = Snakeskin Gloves
-#define ARMOR_SNAKESKIN_BOOTS "iam01000790" // name_iam01000790 = Snakeskin Boots
-#define ARMOR_HEROS_VEST "iam01007870" // name_iam01007870 = Hero's Vest
-#define ARMOR_EDWARDS_FOB_WATCH "iam01009010" // name_iam01009010 = Edward's Fob Watch
-#define ARMOR_DRAGONSLAYERS_ARMOR "iam01006590" // name_iam01006590 = Dragonslayer's Armor
-#define ARMOR_RUGGED_JERKIN "iam01000660" // name_iam01000660 = Rugged Jerkin
-#define ARMOR_REMS_LUCKY_CHARM "iam01009000" // name_iam01009000 = Rem's Lucky Charm
-#define ARMOR_HEROS_HEADBAND "iam01007860" // name_iam01007860 = Hero's Headband
-#define ARMOR_RUGGED_LEGGINGS "iam01000670" // name_iam01000670 = Rugged Leggings
-#define ARMOR_ALCHEMISTS_SHOES "iam01004940" // name_iam01004940 = Alchemist's Shoes
-#define ARMOR_HEROS_TROUSERS "iam01007880" // name_iam01007880 = Hero's Trousers
-#define ARMOR_RUGGED_BOOTS "iam01000690" // name_iam01000690 = Rugged Boots
-#define ARMOR_MERFOLK_HELM "iam01000800" // name_iam01000800 = Merfolk Helm
-#define ARMOR_MERFOLK_MAIL "iam01000810" // name_iam01000810 = Merfolk Mail
-#define ARMOR_MERFOLK_LEGGINGS "iam01000820" // name_iam01000820 = Merfolk Leggings
-#define ARMOR_ALCHEMISTS_PRIDE "iam01003890" // name_iam01003890 = Alchemist's Pride
-#define ARMOR_MERFOLK_GLOVES "iam01000830" // name_iam01000830 = Merfolk Gloves
-#define ARMOR_TAILORS_PRIDE "iam01003880" // name_iam01003880 = Tailor's Pride
-#define ARMOR_MERFOLK_BOOTS "iam01000840" // name_iam01000840 = Merfolk Boots
-#define ARMOR_GOLD_GREAVES "iam01001070" // name_iam01001070 = Gold Greaves
-#define ARMOR_GOLD_GAUNTLETS "iam01001080" // name_iam01001080 = Gold Gauntlets
-#define ARMOR_BIG_CATCH_VEST "iam01005220" // name_iam01005220 = Big Catch Vest
-#define ARMOR_GOLD_BOOTS "iam01001090" // name_iam01001090 = Gold Boots
-#define ARMOR_BIG_CATCH_PANTS "iam01005230" // name_iam01005230 = Big Catch Pants
-#define ARMOR_BEASTLY_CAP "iam01000700" // name_iam01000700 = Beastly Cap
-#define ARMOR_BEASTLY_JERKIN "iam01000710" // name_iam01000710 = Beastly Jerkin
-#define ARMOR_BEASTLY_LEGGINGS "iam01000720" // name_iam01000720 = Beastly Leggings
-#define ARMOR_BEASTLY_GAUNTLETS "iam01000730" // name_iam01000730 = Beastly Gauntlets
-#define ARMOR_TIDAL_HELM "iam01001200" // name_iam01001200 = Tidal Helm
-#define ARMOR_GOLD_ROUND_SPECS "iam01003660" // name_iam01003660 = Gold Round Specs
-#define ARMOR_HUNTERS_TRUNKS "iam01004470" // name_iam01004470 = Hunter's Trunks
-#define ARMOR_TIDAL_CUIRASS "iam01001210" // name_iam01001210 = Tidal Cuirass
-#define ARMOR_SILVER_ROUND_SPECS "iam01003670" // name_iam01003670 = Silver Round Specs
-#define ARMOR_HUNTERS_VEST "iam01004460" // name_iam01004460 = Hunter's Vest
-#define ARMOR_TIDAL_LEGGINGS "iam01001220" // name_iam01001220 = Tidal Leggings
-#define ARMOR_HUNTERS_HEADDRESS "iam01004450" // name_iam01004450 = Hunter's Headdress
-#define ARMOR_TIDAL_GAUNTLETS "iam01001230" // name_iam01001230 = Tidal Gauntlets
-#define ARMOR_BLACK_ROUND_SPECS "iam01003650" // name_iam01003650 = Black Round Specs
-#define ARMOR_MERCENARYS_SANDALS "iam01004440" // name_iam01004440 = Mercenary's Sandals
-#define ARMOR_TIDAL_BOOTS "iam01001240" // name_iam01001240 = Tidal Boots
-#define ARMOR_MERCENARYS_GLOVES "iam01004430" // name_iam01004430 = Mercenary's Gloves
-#define ARMOR_DEMON_WINGS "iam01003620" // name_iam01003620 = Demon Wings
-#define ARMOR_ARCANE_HELM "iam01001100" // name_iam01001100 = Arcane Helm
-#define ARMOR_ARCANE_CUIRASS "iam01001110" // name_iam01001110 = Arcane Cuirass
-#define ARMOR_ARCANE_GREAVES "iam01001120" // name_iam01001120 = Arcane Greaves
-#define ARMOR_ARCANE_GAUNTLETS "iam01001130" // name_iam01001130 = Arcane Gauntlets
-#define ARMOR_ARCANE_BOOTS "iam01001140" // name_iam01001140 = Arcane Boots
-#define ARMOR_PEGASUS_HELM "iam01002730" // name_iam01002730 = Pegasus Helm
-#define ARMOR_PEGASUS_PLATE_ARMOR "iam01002740" // name_iam01002740 = Pegasus Plate Armor
-#define ARMOR_PEGASUS_GAUNTLETS "iam01002750" // name_iam01002750 = Pegasus Gauntlets
-#define ARMOR_PEGASUS_BOOTS "iam01002760" // name_iam01002760 = Pegasus Boots
-#define ARMOR_PEGASUS_CAPE "iam01002770" // name_iam01002770 = Pegasus Cape
-#define ARMOR_DIVINE_HELM "iam01006220" // name_iam01006220 = Divine Helm
-#define ARMOR_HIGHLAND_LOAFERS "iam01002390" // name_iam01002390 = Highland Loafers
-#define ARMOR_DIVINE_PLATE_ARMOR "iam01006230" // name_iam01006230 = Divine Plate Armor
-#define ARMOR_HIGHLAND_KILT "iam01002380" // name_iam01002380 = Highland Kilt
-#define ARMOR_HUNTERS_HOOD "iam01000130" // name_iam01000130 = Hunter's Hood
-#define ARMOR_BATTLEBORN_CAPE "iam01002950" // name_iam01002950 = Battleborn Cape
-#define ARMOR_HUNTERS_BOLERO "iam01000140" // name_iam01000140 = Hunter's Bolero
-#define ARMOR_BATTLEBORN_LEGGINGS "iam01002920" // name_iam01002920 = Battleborn Leggings
-#define ARMOR_HUNTERS_PANTS "iam01000150" // name_iam01000150 = Hunter's Pants
-#define ARMOR_BATTLEBORN_GLOVES "iam01002930" // name_iam01002930 = Battleborn Gloves
-#define ARMOR_PLANTERS_HAT "iam01005480" // name_iam01005480 = Planter's Hat
-#define ARMOR_HUNTERS_SHOES "iam01000160" // name_iam01000160 = Hunter's Shoes
-#define ARMOR_BATTLEBORN_HELM "iam01002900" // name_iam01002900 = Battleborn Helm
-#define ARMOR_HIGHLAND_BERET "iam01002360" // name_iam01002360 = Highland Beret
-#define ARMOR_COASTAL_HEADWEAR "iam01001440" // name_iam01001440 = Coastal Headwear
-#define ARMOR_HIGHLAND_TOP "iam01002370" // name_iam01002370 = Highland Top
-#define ARMOR_COASTAL_BRIGANDINE "iam01001450" // name_iam01001450 = Coastal Brigandine
-#define ARMOR_COASTAL_BOTTOMS "iam01001460" // name_iam01001460 = Coastal Bottoms
-#define ARMOR_COASTAL_GLOVES "iam01001470" // name_iam01001470 = Coastal Gloves
-#define ARMOR_DANCERS_VEIL "iam01002400" // name_iam01002400 = Dancer's Veil
-#define ARMOR_DANCERS_GARB "iam01002410" // name_iam01002410 = Dancer's Garb
-#define ARMOR_DANCERS_BANGLES "iam01002420" // name_iam01002420 = Dancer's Bangles
-#define ARMOR_DANCERS_SHOES "iam01002430" // name_iam01002430 = Dancer's Shoes
-#define ARMOR_FLAME_HOOD "iam01001300" // name_iam01001300 = Flame Hood
-#define ARMOR_FLAME_ROBE "iam01001310" // name_iam01001310 = Flame Robe
-#define ARMOR_AQUA_HOOD "iam01001320" // name_iam01001320 = Aqua Hood
-#define ARMOR_PALADINS_PRIDE "iam01003780" // name_iam01003780 = Paladin's Pride
-#define ARMOR_MAGIC_DRESS "iam01006390" // name_iam01006390 = Magic Dress
-#define ARMOR_AQUA_ROBE "iam01001330" // name_iam01001330 = Aqua Robe
-#define ARMOR_MERCENARYS_PRIDE "iam01003790" // name_iam01003790 = Mercenary's Pride
-#define ARMOR_MAGIC_HAT "iam01006380" // name_iam01006380 = Magic Hat
-#define ARMOR_MAGICIANS_HEADWRAP "iam01004500" // name_iam01004500 = Magician's Headwrap
-#define ARMOR_BLUE_HIGHLAND_BERET "iam01006120" // name_iam01006120 = Blue Highland Beret
-#define ARMOR_MAGICIANS_ROBE "iam01004510" // name_iam01004510 = Magician's Robe
-#define ARMOR_BLUE_HIGHLAND_TOP "iam01006130" // name_iam01006130 = Blue Highland Top
-#define ARMOR_MINERS_CLOTHES "iam01004560" // name_iam01004560 = Miner's Clothes
-#define ARMOR_BLUE_HIGHLAND_KILT "iam01006140" // name_iam01006140 = Blue Highland Kilt
-#define ARMOR_SPELUNKER_HEADWEAR "iam01001590" // name_iam01001590 = Spelunker Headwear
-#define ARMOR_FOLK_DANCERS_VEST "iam01008070" // name_iam01008070 = Folk Dancer's Vest
-#define ARMOR_SPELUNKER_BRIGANDINE "iam01001600" // name_iam01001600 = Spelunker Brigandine
-#define ARMOR_SPELUNKER_BOTTOMS "iam01001610" // name_iam01001610 = Spelunker Bottoms
-#define ARMOR_SPELUNKER_GLOVES "iam01001620" // name_iam01001620 = Spelunker Gloves
-#define ARMOR_SPELUNKER_BOOTS "iam01001630" // name_iam01001630 = Spelunker Boots
-#define ARMOR_EARTH_HOOD "iam01001340" // name_iam01001340 = Earth Hood
-#define ARMOR_PALADINS_SANDALS "iam01004390" // name_iam01004390 = Paladin's Sandals
-#define ARMOR_EARTH_ROBE "iam01001350" // name_iam01001350 = Earth Robe
-#define ARMOR_PALADINS_CUIRASS "iam01004380" // name_iam01004380 = Paladin's Cuirass
-#define ARMOR_GALE_HOOD "iam01001360" // name_iam01001360 = Gale Hood
-#define ARMOR_GALE_ROBE "iam01001370" // name_iam01001370 = Gale Robe
-#define ARMOR_ROYAL_MAKERS_CAP "iam01007910" // name_iam01007910 = Royal Maker's Cap
-#define ARMOR_MARKSMANS_HEADDRESS "iam01005040" // name_iam01005040 = Marksman's Headdress
-#define ARMOR_FARMERS_BOOTS "iam01000510" // name_iam01000510 = Farmer's Boots
-#define ARMOR_ROYAL_MAKERS_TOP "iam01007920" // name_iam01007920 = Royal Maker's Top
-#define ARMOR_MARKSMANS_GLOVE "iam01005070" // name_iam01005070 = Marksman's Glove
-#define ARMOR_ROYAL_MAKERS_APRON "iam01007930" // name_iam01007930 = Royal Maker's Apron
-#define ARMOR_MARKSMANS_PANTS "iam01005060" // name_iam01005060 = Marksman's Pants
-#define ARMOR_ARTISTS_TOP "iam01000570" // name_iam01000570 = Artist's Top
-#define ARMOR_ROYAL_MAKERS_GLOVES "iam01007940" // name_iam01007940 = Royal Maker's Gloves
-#define ARMOR_ARTISTS_BERET "iam01000560" // name_iam01000560 = Artist's Beret
-#define ARMOR_ROYAL_MAKERS_SHOES "iam01007950" // name_iam01007950 = Royal Maker's Shoes
-#define ARMOR_BEAST_CLOTHES "iam01005000" // name_iam01005000 = Beast Clothes
-#define ARMOR_GRAND_MINERS_HELMET "iam01003080" // name_iam01003080 = Grand Miner's Helmet
-#define ARMOR_ANGELIC_HAT "iam01002700" // name_iam01002700 = Angelic Hat
-#define ARMOR_GRAND_MINERS_OUTFIT "iam01003090" // name_iam01003090 = Grand Miner's Outfit
-#define ARMOR_ANGELIC_DRESS "iam01002710" // name_iam01002710 = Angelic Dress
-#define ARMOR_ANGELIC_SANDALS "iam01002720" // name_iam01002720 = Angelic Sandals
-#define ARMOR_APOCALYPSE_GAUNTLETS "iam01006290" // name_iam01006290 = Apocalypse Gauntlets
-#define ARMOR_RADIANT_HOOD "iam01001400" // name_iam01001400 = Radiant Hood
-#define ARMOR_APOCALYPSE_ARMOR "iam01006280" // name_iam01006280 = Apocalypse Armor
-#define ARMOR_RADIANT_ROBE "iam01001410" // name_iam01001410 = Radiant Robe
-#define ARMOR_ROYAL_HEADWRAP "iam01007760" // name_iam01007760 = Royal Headwrap
-#define ARMOR_ROYAL_TUNIC "iam01007770" // name_iam01007770 = Royal Tunic
-#define ARMOR_ROYAL_BANGLES "iam01007780" // name_iam01007780 = Royal Bangles
-#define ARMOR_ROYAL_SANDALS "iam01007790" // name_iam01007790 = Royal Sandals
-#define ARMOR_TOPAZ_RING "iam01003950" // name_iam01003950 = Topaz Ring
-#define ARMOR_CHARM "iam01003990" // name_iam01003990 = Charm
-#define ARMOR_CORAL_NECKLACE "iam01004050" // name_iam01004050 = Coral Necklace
-#define ARMOR_FOREMANS_BANDANA "iam01003240" // name_iam01003240 = Foreman's Bandana
-#define ARMOR_SUNGLASSES "iam01003720" // name_iam01003720 = Sunglasses
-#define ARMOR_TUNOCO_GLOVES "iam01004350" // name_iam01004350 = Tunoco Gloves
-#define ARMOR_MAGES_HOOD "iam01001380" // name_iam01001380 = Mage's Hood
-#define ARMOR_AQUAMARINE_RING "iam01003930" // name_iam01003930 = Aquamarine Ring
-#define ARMOR_REINFORCED_CHARM "iam01004010" // name_iam01004010 = Reinforced Charm
-#define ARMOR_COUTURIERS_CAP "iam01003200" // name_iam01003200 = Couturier's Cap
-#define ARMOR_CLAW_NECKLACE "iam01004020" // name_iam01004020 = Claw Necklace
-#define ARMOR_COUTURIERS_LOAFERS "iam01003230" // name_iam01003230 = Couturier's Loafers
-#define ARMOR_BLACK_RIMMED_GLASSES "iam01003730" // name_iam01003730 = Black-Rimmed Glasses
-#define ARMOR_TUNOCO_PANTS "iam01004340" // name_iam01004340 = Tunoco Pants
-#define ARMOR_MAGES_ROBE "iam01001390" // name_iam01001390 = Mage's Robe
-#define ARMOR_LEGIONARY_CAPE "iam01004985" // name_iam01004985 = Legionary Cape
-#define ARMOR_AMETHYST_RING "iam01003940" // name_iam01003940 = Amethyst Ring
-#define ARMOR_RUGGED_NECKLACE "iam01004030" // name_iam01004030 = Rugged Necklace
-#define ARMOR_COUTURIERS_PINCUSHION "iam01003220" // name_iam01003220 = Couturier's Pincushion
-#define ARMOR_MARINE_NECKLACE "iam01004060" // name_iam01004060 = Marine Necklace
-#define ARMOR_FOREMANS_BOOTS "iam01003270" // name_iam01003270 = Foreman's Boots
-#define ARMOR_PROTECTIVE_GOGGLES "iam01003750" // name_iam01003750 = Protective Goggles
-#define ARMOR_TUNOCO_CAP "iam01004320" // name_iam01004320 = Tunoco Cap
-#define ARMOR_RUBY_RING "iam01003960" // name_iam01003960 = Ruby Ring
-#define ARMOR_SAPPHIRE_RING "iam01003970" // name_iam01003970 = Sapphire Ring
-#define ARMOR_EMERALD_RING "iam01003980" // name_iam01003980 = Emerald Ring
-#define ARMOR_FORAGER_KING_BANGLES "iam01007665" // name_iam01007660 = Forager King Bangles
-#define ARMOR_BEASTLY_NECKLACE "iam01004040" // name_iam01004040 = Beastly Necklace
-#define ARMOR_FOREMANS_OUTFIT "iam01003250" // name_iam01003250 = Foreman's Outfit
-#define ARMOR_SWIRLY_SPECS "iam01003680" // name_iam01003680 = Swirly Specs
-#define ARMOR_HUNTERS_SANDALS "iam01004490" // name_iam01004490 = Hunter's Sandals
-#define ARMOR_BLACK_ONYX_RING "iam01003900" // name_iam01003900 = Black Onyx Ring
-#define ARMOR_SEA_NECKLACE "iam01004070" // name_iam01004070 = Sea Necklace
-#define ARMOR_FOREMANS_GLOVES "iam01003260" // name_iam01003260 = Foreman's Gloves
-#define ARMOR_UMBRAL_CHOKER "iam01009090" // name_iam01009090 = Umbral Choker
-#define ARMOR_PALETTE_GLOVE "iam01005560" // name_iam01005560 = Palette Glove
-#define ARMOR_BRONZE_BREASTPLATE "iam01000040" // name_iam01000040 = Bronze Breastplate
-#define ARMOR_PALETTE_SANDALS "iam01005570" // name_iam01005570 = Palette Sandals
-#define ARMOR_BRONZE_LEGGINGS "iam01000050" // name_iam01000050 = Bronze Leggings
-#define ARMOR_PALETTE_CLOTHES "iam01005540" // name_iam01005540 = Palette Clothes
-#define ARMOR_BRONZE_GAUNTLETS "iam01000060" // name_iam01000060 = Bronze Gauntlets
-#define ARMOR_BRONZE_BOOTS "iam01000070" // name_iam01000070 = Bronze Boots
-#define ARMOR_BRONZE_HELM "iam01000080" // name_iam01000080 = Bronze Helm
-#define ARMOR_TEMPLARS_BOOTS "iam01002820" // name_iam01002820 = Templar's Boots
-#define ARMOR_WANDERERS_JERKIN "iam01000090" // name_iam01000090 = Wanderer's Jerkin
-#define ARMOR_TEMPLARS_CAPE "iam01002830" // name_iam01002830 = Templar's Cape
-#define ARMOR_WANDERERS_GREAVES "iam01000100" // name_iam01000100 = Wanderer's Greaves
-#define ARMOR_SORCERERS_HAT "iam01002960" // name_iam01002960 = Sorcerer's Hat
-#define ARMOR_WANDERERS_GAUNTLETS "iam01000110" // name_iam01000110 = Wanderer's Gauntlets
-#define ARMOR_SORCERERS_ROBE "iam01002970" // name_iam01002970 = Sorcerer's Robe
-#define ARMOR_WANDERERS_BOOTS "iam01000120" // name_iam01000120 = Wanderer's Boots
-#define ARMOR_BATTLEBORN_BOOTS "iam01002940" // name_iam01002940 = Battleborn Boots
-#define ARMOR_CARPENTERS_SANDALS "iam01004840" // name_iam01004840 = Carpenter's Sandals
-#define ARMOR_MAGIC_BOOTS "iam01006420" // name_iam01006420 = Magic Boots
-#define ARMOR_MERCHANTS_HEADWRAP "iam01008010" // name_iam01008010 = Merchant's Headwrap
-#define ARMOR_SHORT_GREEN_CAPE "iam01003590" // name_iam01003590 = Short Green Cape
-#define ARMOR_MERCHANTS_VEST "iam01008020" // name_iam01008020 = Merchant's Vest
-#define ARMOR_MERCHANTS_APRON "iam01008030" // name_iam01008030 = Merchant's Apron
-#define ARMOR_MERCHANTS_BANGLES "iam01008040" // name_iam01008040 = Merchant's Bangles
-#define ARMOR_MERCHANTS_BACKPACK "iam01008050" // name_iam01008050 = Merchant's Backpack
-#define ARMOR_RED_RIMMED_GLASSES "iam01003770" // name_iam01003770 = Red-Rimmed Glasses
-#define ARMOR_APOCALYPSE_WINGS "iam01006310" // name_iam01006310 = Apocalypse Wings
-#define ARMOR_BLUE_RIMMED_GLASSES "iam01003700" // name_iam01003700 = Blue-Rimmed Glasses
-#define ARMOR_PALADINS_HELM "iam01004370" // name_iam01004370 = Paladin's Helm
-#define ARMOR_GREEN_HIGHLAND_KILT "iam01006100" // name_iam01006100 = Green Highland Kilt
-#define ARMOR_WHITE_TUNOCO_CAP "iam01005950" // name_iam01005950 = White Tunoco Cap
-#define ARMOR_FORAGER_KING_SANDALS "iam01007660" // name_iam01007665 = Forager King Sandals
-#define ARMOR_TRADITIONAL_VEST "iam01008140" // name_iam01008140 = Traditional Vest
-#define ARMOR_BLUE_TUNOCO_BOOTS "iam01005940" // name_iam01005940 = Blue Tunoco Boots
-#define ARMOR_FORAGER_KING_CAPE "iam01007670" // name_iam01007670 = Forager King Cape
-#define ARMOR_TRADITIONAL_SARONG "iam01008150" // name_iam01008150 = Traditional Sarong
-#define ARMOR_MINI_SPECS "iam01003690" // name_iam01003690 = Mini Specs
-#define ARMOR_HUNTERS_GLOVE "iam01004480" // name_iam01004480 = Hunter's Glove
-#define ARMOR_DESERT_HEADWEAR "iam01001540" // name_iam01001540 = Desert Headwear
-#define ARMOR_OLD_MASTERS_BERET "iam01004110" // name_iam01004110 = Old Master's Beret
-#define ARMOR_CAPE "iam01003520" // name_iam01003520 = Cape
-#define ARMOR_DESERT_BRIGANDINE "iam01001550" // name_iam01001550 = Desert Brigandine
-#define ARMOR_SEA_CAPE "iam01003530" // name_iam01003530 = Sea Cape
-#define ARMOR_DESERT_BOOTS "iam01001580" // name_iam01001580 = Desert Boots
-#define ARMOR_FOLK_DANCERS_FLOWER "iam01008060" // name_iam01008060 = Folk Dancer's Flower
-#define ARMOR_DARK_BEASTS_HAT "iam01009100" // name_iam01009100 = Dark Beast's Hat
-#define ARMOR_BLUE_MAGIC_HAT "iam01006480" // name_iam01006480 = Blue Magic Hat
-#define ARMOR_DARK_BEASTS_CLOTHES "iam01009110" // name_iam01009110 = Dark Beast's Clothes
-#define ARMOR_BLUE_MAGIC_DRESS "iam01006490" // name_iam01006490 = Blue Magic Dress
-#define ARMOR_ALCHEMISTS_MONOCLE "iam01004900" // name_iam01004900 = Alchemist's Monocle
-#define ARMOR_BLUE_MAGIC_BOOTS "iam01006520" // name_iam01006520 = Blue Magic Boots
-#define ARMOR_ANGLERS_GOGGLES "iam01003740" // name_iam01003740 = Angler's Goggles
-#define ARMOR_TUNOCO_JERKIN "iam01004330" // name_iam01004330 = Tunoco Jerkin
-#define ARMOR_ALCHEMISTS_LAB_COAT "iam01004910" // name_iam01004910 = Alchemist's Lab Coat
-#define ARMOR_PINK_MAGIC_HAT "iam01006530" // name_iam01006530 = Pink Magic Hat
-#define ARMOR_LEGIONARY_HELMET "iam01004960" // name_iam01004960 = Legionary Helmet
-#define ARMOR_PINK_MAGIC_DRESS "iam01006540" // name_iam01006540 = Pink Magic Dress
-#define ARMOR_SHAMANS_TOP "iam01008110" // name_iam01008110 = Shaman's Top
-#define ARMOR_BLUE_TUNOCO_CAP "iam01005900" // name_iam01005900 = Blue Tunoco Cap
-#define ARMOR_SHAMANS_HEADDRESS "iam01008100" // name_iam01008100 = Shaman's Headdress
-#define ARMOR_BLUE_TUNOCO_JERKIN "iam01005910" // name_iam01005910 = Blue Tunoco Jerkin
-#define ARMOR_SHAMANS_BANGLES "iam01008130" // name_iam01008130 = Shaman's Bangles
-#define ARMOR_BLUE_TUNOCO_PANTS "iam01005920" // name_iam01005920 = Blue Tunoco Pants
-#define ARMOR_SHAMANS_SARONG "iam01008120" // name_iam01008120 = Shaman's Sarong
-#define ARMOR_BLUE_TUNOCO_GLOVES "iam01005930" // name_iam01005930 = Blue Tunoco Gloves
-#define ARMOR_DIAMOND_RING "iam01003910" // name_iam01003910 = Diamond Ring
-#define ARMOR_COZY_BRIGANDINE "iam01001500" // name_iam01001500 = Cozy Brigandine
-#define ARMOR_PUMPKIN_OVERALLS "iam01004150" // name_iam01004150 = Pumpkin Overalls
-#define ARMOR_LONG_PINK_CAPE "iam01003560" // name_iam01003560 = Long Pink Cape
-#define ARMOR_COZY_BOTTOMS "iam01001510" // name_iam01001510 = Cozy Bottoms
-#define ARMOR_PUMPKIN_HAT "iam01004140" // name_iam01004140 = Pumpkin Hat
-#define ARMOR_LONG_SKY_BLUE_CAPE "iam01003570" // name_iam01003570 = Long Sky Blue Cape
-#define ARMOR_COZY_GLOVES "iam01001520" // name_iam01001520 = Cozy Gloves
-#define ARMOR_WHITE_CAPE "iam01003540" // name_iam01003540 = White Cape
-#define ARMOR_COZY_BOOTS "iam01001530" // name_iam01001530 = Cozy Boots
-#define ARMOR_PUMPKIN_SHOES "iam01004160" // name_iam01004160 = Pumpkin Shoes
-#define ARMOR_LONG_CAPE "iam01003550" // name_iam01003550 = Long Cape
-#define ARMOR_WHITE_TUNOCO_JERKIN "iam01005960" // name_iam01005960 = White Tunoco Jerkin
-#define ARMOR_FORAGER_KING_VEST "iam01007650" // name_iam01007650 = Forager King Vest
-#define ARMOR_WHITE_TUNOCO_PANTS "iam01005970" // name_iam01005970 = White Tunoco Pants
-#define ARMOR_FORAGER_KING_HELM "iam01007640" // name_iam01007640 = Forager King Helm
-#define ARMOR_WHITE_TUNOCO_GLOVES "iam01005980" // name_iam01005980 = White Tunoco Gloves
-#define ARMOR_WHITE_TUNOCO_BOOTS "iam01005990" // name_iam01005990 = White Tunoco Boots
-#define ARMOR_SALAMANDER_HELM "iam01000850" // name_iam01000850 = Salamander Helm
-#define ARMOR_SALAMANDER_MAIL "iam01000860" // name_iam01000860 = Salamander Mail
-#define ARMOR_SALAMANDER_LEGGINGS "iam01000870" // name_iam01000870 = Salamander Leggings
-#define ARMOR_SALAMANDER_GLOVES "iam01000880" // name_iam01000880 = Salamander Gloves
-#define ARMOR_WOODCUTTERS_PRIDE "iam01003830" // name_iam01003830 = Woodcutter's Pride
-#define ARMOR_SALAMANDER_BOOTS "iam01000890" // name_iam01000890 = Salamander Boots
-#define ARMOR_MINERS_PRIDE "iam01003820" // name_iam01003820 = Miner's Pride
-#define ARMOR_INFERNO_HELM "iam01001150" // name_iam01001150 = Inferno Helm
-#define ARMOR_INFERNO_CUIRASS "iam01001160" // name_iam01001160 = Inferno Cuirass
-#define ARMOR_FLUFFY_HAT "iam01005380" // name_iam01005380 = Fluffy Hat
-#define ARMOR_INFERNO_LEGGINGS "iam01001170" // name_iam01001170 = Inferno Leggings
-#define ARMOR_FLUFFY_CLOTHES "iam01005390" // name_iam01005390 = Fluffy Clothes
-#define ARMOR_INFERNO_GAUNTLETS "iam01001180" // name_iam01001180 = Inferno Gauntlets
-#define ARMOR_SAWYERS_GLOVES "iam01005360" // name_iam01005360 = Sawyer's Gloves
-#define ARMOR_INFERNO_BOOTS "iam01001190" // name_iam01001190 = Inferno Boots
-#define ARMOR_SAWYERS_SANDALS "iam01005370" // name_iam01005370 = Sawyer's Sandals
-#define ARMOR_HOLY_HELM "iam01001250" // name_iam01001250 = Holy Helm
-#define ARMOR_MERCENARYS_TRUNKS "iam01004420" // name_iam01004420 = Mercenary's Trunks
-#define ARMOR_DRAGON_WINGS "iam01003630" // name_iam01003630 = Dragon Wings
-#define ARMOR_HOLY_CUIRASS "iam01001260" // name_iam01001260 = Holy Cuirass
-#define ARMOR_MERCENARYS_TOP "iam01004410" // name_iam01004410 = Mercenary's Top
-#define ARMOR_SHORT_YELLOW_CAPE "iam01003600" // name_iam01003600 = Short Yellow Cape
-#define ARMOR_HOLY_LEGGINGS "iam01001270" // name_iam01001270 = Holy Leggings
-#define ARMOR_MERCENARYS_HEADWRAP "iam01004400" // name_iam01004400 = Mercenary's Headwrap
-#define ARMOR_ANGELIC_WINGS "iam01003610" // name_iam01003610 = Angelic Wings
-#define ARMOR_LEGIONARY_ARMOR "iam01004970" // name_iam01004970 = Legionary Armor
-#define ARMOR_MASTER_CHEFS_OUTFIT "iam01003000" // name_iam01003000 = Master Chef's Outfit
-#define ARMOR_TEMPLARS_HELM "iam01002780" // name_iam01002780 = Templar's Helm
-#define ARMOR_MASTER_CHEFS_SHOES "iam01003010" // name_iam01003010 = Master Chef's Shoes
-#define ARMOR_TEMPLARS_CUIRASS "iam01002790" // name_iam01002790 = Templar's Cuirass
-#define ARMOR_TEMPLARS_PLATE_LEGS "iam01002800" // name_iam01002800 = Templar's Plate Legs
-#define ARMOR_TEMPLARS_GAUNTLETS "iam01002810" // name_iam01002810 = Templar's Gauntlets
-#define ARMOR_MERCENARYS_SCARF "iam01004441" // name_iam01004441 = Mercenary's Scarf
-#define ARMOR_BEAST_GLOVES "iam01005020" // name_iam01005020 = Beast Gloves
-#define ARMOR_BEAST_SANDALS "iam01005030" // name_iam01005030 = Beast Sandals
-#define ARMOR_PLANTERS_CLOTHES "iam01005490" // name_iam01005490 = Planter's Clothes
-#define ARMOR_BATTLEBORN_CUIRASS "iam01002910" // name_iam01002910 = Battleborn Cuirass
-#define ARMOR_MARKSMANS_VEST "iam01005050" // name_iam01005050 = Marksman's Vest
-#define ARMOR_HEROS_SCARF "iam01007900" // name_iam01007900 = Hero's Scarf
-#define ARMOR_MARKSMANS_SANDALS "iam01005080" // name_iam01005080 = Marksman's Sandals
-#define ARMOR_FALCONERS_HAT "iam01002840" // name_iam01002840 = Falconer's Hat
-#define ARMOR_FALCONERS_TUNIC "iam01002850" // name_iam01002850 = Falconer's Tunic
-#define ARMOR_FALCONERS_PANTS "iam01002860" // name_iam01002860 = Falconer's Pants
-#define ARMOR_FALCONERS_GLOVES "iam01002870" // name_iam01002870 = Falconer's Gloves
-#define ARMOR_FALCONERS_CLOAK "iam01002890" // name_iam01002890 = Falconer's Cloak
-#define ARMOR_SAILORS_BOOTS "iam01000030" // name_iam01000030 = Sailor's Boots
-#define ARMOR_PLANTERS_GLOVES "iam01005510" // name_iam01005510 = Planter's Gloves
-#define ARMOR_PIRATE_BANDANA "iam01006160" // name_iam01006160 = Pirate Bandana
-#define ARMOR_MAGICIANS_SHOES "iam01004540" // name_iam01004540 = Magician's Shoes
-#define ARMOR_CONJURERS_HOOD "iam01005090" // name_iam01005090 = Conjurer's Hood
-#define ARMOR_CONJURERS_ROBE "iam01005100" // name_iam01005100 = Conjurer's Robe
-#define ARMOR_CONJURERS_GLOVES "iam01005105" // name_iam01005105 = Conjurer's Gloves
-#define ARMOR_CONJURERS_SHOES "iam01005110" // name_iam01005110 = Conjurer's Shoes
-#define ARMOR_CONJURERS_CAPE "iam01005115" // name_iam01005115 = Conjurer's Cape
-#define ARMOR_SORCERERS_SHOES "iam01002980" // name_iam01002980 = Sorcerer's Shoes
-#define ARMOR_RED_PIRATE_BANDANA "iam01006170" // name_iam01006170 = Red Pirate Bandana
-#define ARMOR_MINERS_HELMET "iam01004550" // name_iam01004550 = Miner's Helmet
-#define ARMOR_MINERS_SHOES "iam01004590" // name_iam01004590 = Miner's Shoes
-#define ARMOR_EXCAVATORS_HELMET "iam01005120" // name_iam01005120 = Excavator's Helmet
-#define ARMOR_EXCAVATORS_CLOTHES "iam01005130" // name_iam01005130 = Excavator's Clothes
-#define ARMOR_EXCAVATORS_GLOVES "iam01005140" // name_iam01005140 = Excavator's Gloves
-#define ARMOR_EXCAVATORS_BOOTS "iam01005150" // name_iam01005150 = Excavator's Boots
-#define ARMOR_EXCAVATORS_SCARF "iam01005160" // name_iam01005160 = Excavator's Scarf
-#define ARMOR_GRAND_MINERS_GLOVES "iam01003100" // name_iam01003100 = Grand Miner's Gloves
-#define ARMOR_GRAND_MINERS_BOOTS "iam01003110" // name_iam01003110 = Grand Miner's Boots
-#define ARMOR_WOODCUTTERS_CAP "iam01004600" // name_iam01004600 = Woodcutter's Cap
-#define ARMOR_WOODCUTTERS_CLOTHES "iam01004610" // name_iam01004610 = Woodcutter's Clothes
-#define ARMOR_WOODCUTTERS_GLOVES "iam01004630" // name_iam01004630 = Woodcutter's Gloves
-#define ARMOR_WOODCUTTERS_SHOES "iam01004640" // name_iam01004640 = Woodcutter's Shoes
-#define ARMOR_LUSH_HAT "iam01005170" // name_iam01005170 = Lush Hat
-#define ARMOR_LUSH_CLOTHES "iam01005180" // name_iam01005180 = Lush Clothes
-#define ARMOR_LUSH_GLOVES "iam01005190" // name_iam01005190 = Lush Gloves
-#define ARMOR_LUSH_SHOES "iam01005200" // name_iam01005200 = Lush Shoes
-#define ARMOR_FORESTERS_CAP "iam01003120" // name_iam01003120 = Forester's Cap
-#define ARMOR_FORESTERS_COAT "iam01003130" // name_iam01003130 = Forester's Coat
-#define ARMOR_FORESTERS_GLOVES "iam01003140" // name_iam01003140 = Forester's Gloves
-#define ARMOR_FORESTERS_BOOTS "iam01003150" // name_iam01003150 = Forester's Boots
-#define ARMOR_ANGLERS_HAT "iam01004650" // name_iam01004650 = Angler's Hat
-#define ARMOR_ANGLERS_VEST "iam01004660" // name_iam01004660 = Angler's Vest
-#define ARMOR_ANGLERS_TRUNKS "iam01004670" // name_iam01004670 = Angler's Trunks
-#define ARMOR_ANGLERS_SANDALS "iam01004690" // name_iam01004690 = Angler's Sandals
-#define ARMOR_BIG_CATCH_CAP "iam01005210" // name_iam01005210 = Big Catch Cap
-#define ARMOR_BIG_CATCH_GLOVES "iam01005240" // name_iam01005240 = Big Catch Gloves
-#define ARMOR_MARINERS_SCARF "iam01003070" // name_iam01003070 = Mariner's Scarf
-#define ARMOR_BIG_CATCH_SANDALS "iam01005245" // name_iam01005245 = Big Catch Sandals
-#define ARMOR_MARINERS_CAP "iam01003020" // name_iam01003020 = Mariner's Cap
-#define ARMOR_MARINERS_VEST "iam01003030" // name_iam01003030 = Mariner's Vest
-#define ARMOR_MARINERS_PANTS "iam01003040" // name_iam01003040 = Mariner's Pants
-#define ARMOR_MARINERS_SANDALS "iam01003060" // name_iam01003060 = Mariner's Sandals
-#define ARMOR_FARMERS_HAT "iam01000480" // name_iam01000480 = Farmer's Hat
-#define ARMOR_FARMERS_CLOTHES "iam01000490" // name_iam01000490 = Farmer's Clothes
-#define ARMOR_SAILORS_HAT "iam01000000" // name_iam01000000 = Sailor's Hat
-#define ARMOR_PLANTERS_SHOES "iam01005520" // name_iam01005520 = Planter's Shoes
-#define ARMOR_PUMPKIN_GLOVES "iam01004155" // name_iam01004155 = Pumpkin Gloves
-#define ARMOR_SWABBIES_BOOTS "iam01006070" // name_iam01006070 = Swabbie's Boots
-#define ARMOR_COOKS_HAT "iam01004700" // name_iam01004700 = Cook's Hat
-#define ARMOR_COOKS_APRON "iam01004710" // name_iam01004710 = Cook's Apron
-#define ARMOR_COOKS_MITTENS "iam01004730" // name_iam01004730 = Cook's Mittens
-#define ARMOR_COOKS_SHOES "iam01004740" // name_iam01004740 = Cook's Shoes
-#define ARMOR_SOUS_CHEFS_HAT "iam01005250" // name_iam01005250 = Sous Chef's Hat
-#define ARMOR_SOUS_CHEFS_OUTFIT "iam01005260" // name_iam01005260 = Sous Chef's Outfit
-#define ARMOR_SOUS_CHEFS_MITTENS "iam01005270" // name_iam01005270 = Sous Chef's Mittens
-#define ARMOR_SOUS_CHEFS_SHOES "iam01005280" // name_iam01005280 = Sous Chef's Shoes
-#define ARMOR_MASTER_CHEFS_HAT "iam01002990" // name_iam01002990 = Master Chef's Hat
-#define ARMOR_BLACKSMITHS_BANDANA "iam01004750" // name_iam01004750 = Blacksmith's Bandana
-#define ARMOR_BLACKSMITHS_APRON "iam01004760" // name_iam01004760 = Blacksmith's Apron
-#define ARMOR_BLACKSMITHS_GLOVES "iam01004780" // name_iam01004780 = Blacksmith's Gloves
-#define ARMOR_BLACKSMITHS_SHOES "iam01004790" // name_iam01004790 = Blacksmith's Shoes
-#define ARMOR_ANCIENT_MECH_HELM "iam01005290" // name_iam01005290 = Ancient Mech Helm
-#define ARMOR_ANCIENT_MECH_APRON "iam01005300" // name_iam01005300 = Ancient Mech Apron
-#define ARMOR_ANCIENT_MECH_GLOVES "iam01005310" // name_iam01005310 = Ancient Mech Gloves
-#define ARMOR_ANCIENT_MECH_BOOTS "iam01005320" // name_iam01005320 = Ancient Mech Boots
-#define ARMOR_FORGEMASTERS_HELM "iam01003280" // name_iam01003280 = Forgemaster's Helm
-#define ARMOR_FARMERS_PRIDE "iam01004090" // name_iam01004090 = Farmer's Pride
-#define ARMOR_FORGEMASTERS_OUTFIT "iam01003290" // name_iam01003290 = Forgemaster's Outfit
-#define ARMOR_ARTISTS_PRIDE "iam01004080" // name_iam01004080 = Artist's Pride
-#define ARMOR_ARTISTS_GLOVE "iam01000581" // name_iam01000581 = Artist's Glove
-#define ARMOR_RESEARCHERS_SHOES "iam01005470" // name_iam01005470 = Researcher's Shoes
-#define ARMOR_FORGEMASTERS_GLOVES "iam01003300" // name_iam01003300 = Forgemaster's Gloves
-#define ARMOR_RESEARCHERS_GLOVES "iam01005460" // name_iam01005460 = Researcher's Gloves
-#define ARMOR_FORGEMASTERS_BOOTS "iam01003310" // name_iam01003310 = Forgemaster's Boots
-#define ARMOR_CARPENTERS_BANDANA "iam01004800" // name_iam01004800 = Carpenter's Bandana
-#define ARMOR_BLACK_MAGIC_BOOTS "iam01006470" // name_iam01006470 = Black Magic Boots
-#define ARMOR_CARPENTERS_TOP "iam01004810" // name_iam01004810 = Carpenter's Top
-#define ARMOR_BLACK_MAGIC_DRESS "iam01006440" // name_iam01006440 = Black Magic Dress
-#define ARMOR_CARPENTERS_PANTS "iam01004820" // name_iam01004820 = Carpenter's Pants
-#define ARMOR_CARPENTERS_GLOVES "iam01004830" // name_iam01004830 = Carpenter's Gloves
-#define ARMOR_SAWYERS_HELMET "iam01005330" // name_iam01005330 = Sawyer's Helmet
-#define ARMOR_SAWYERS_OUTFIT "iam01005340" // name_iam01005340 = Sawyer's Outfit
-#define ARMOR_BLACK_MAGIC_HAT "iam01006430" // name_iam01006430 = Black Magic Hat
-#define ARMOR_TAILORS_CAP "iam01004850" // name_iam01004850 = Tailor's Cap
-#define ARMOR_TAILORS_TOP "iam01004860" // name_iam01004860 = Tailor's Top
-#define ARMOR_TAILORS_SMOCK "iam01004870" // name_iam01004870 = Tailor's Smock
-#define ARMOR_TAILORS_SANDALS "iam01004890" // name_iam01004890 = Tailor's Sandals
-#define ARMOR_FLUFFY_SHOES "iam01005420" // name_iam01005420 = Fluffy Shoes
-#define ARMOR_RESEARCHERS_HAT "iam01005430" // name_iam01005430 = Researcher's Hat
-#define ARMOR_RESEARCHERS_CLOTHES "iam01005440" // name_iam01005440 = Researcher's Clothes
-#define ARMOR_ARTIFICERS_HAT "iam01003160" // name_iam01003160 = Artificer's Hat
-#define ARMOR_ARTIFICERS_COAT "iam01003170" // name_iam01003170 = Artificer's Coat
-#define ARMOR_CARROTELLA_HANDS "iam01002600" // name_iam01002600 = Carrotella Hands
-#define ARMOR_ARTIFICERS_SHOES "iam01003180" // name_iam01003180 = Artificer's Shoes
-#define ARMOR_CARROTELLA_CLOGS "iam01002610" // name_iam01002610 = Carrotella Clogs
-#define ARMOR_ARTIFICERS_GOGGLES "iam01003190" // name_iam01003190 = Artificer's Goggles
-#define ARMOR_ARTISTS_APRON "iam01000580" // name_iam01000580 = Artist's Apron
-#define ARMOR_ARTISTS_SANDALS "iam01000590" // name_iam01000590 = Artist's Sandals
-#define ARMOR_SAILORS_TOP "iam01000010" // name_iam01000010 = Sailor's Top
-#define ARMOR_PALETTE_BERET "iam01005530" // name_iam01005530 = Palette Beret
-#define ARMOR_OLD_MASTERS_GLOVE "iam01004125" // name_iam01004125 = Old Master's Glove
-#define ARMOR_HEROS_BANGLES "iam01007885" // name_iam01007885 = Hero's Bangles
-#define ARMOR_ARTISAN_KING_BANDANA "iam01007700" // name_iam01007700 = Artisan King Bandana
-#define ARMOR_ARTISAN_KING_SMOCK "iam01007710" // name_iam01007710 = Artisan King Smock
-#define ARMOR_ARTISAN_KING_GLOVES "iam01007720" // name_iam01007720 = Artisan King Gloves
-#define ARMOR_ARTISAN_KING_SHOES "iam01007730" // name_iam01007730 = Artisan King Shoes
-#define ARMOR_STEEL_BEASTS_HELM "iam01006830" // name_iam01006830 = Steel Beast's Helm
-#define ARMOR_STEEL_BEASTS_OUTFIT "iam01006840" // name_iam01006840 = Steel Beast's Outfit
-#define ARMOR_STEEL_BEASTS_GLOVES "iam01006860" // name_iam01006860 = Steel Beast's Gloves
-#define ARMOR_STEEL_BEASTS_BOOTS "iam01006870" // name_iam01006870 = Steel Beast's Boots
-#define ARMOR_STEEL_BEASTS_WINGS "iam01006880" // name_iam01006880 = Steel Beast's Wings
-#define ARMOR_DARK_BEASTS_GLOVES "iam01009130" // name_iam01009130 = Dark Beast's Gloves
-#define ARMOR_DARK_BEASTS_SHOES "iam01009140" // name_iam01009140 = Dark Beast's Shoes
-#define ARMOR_DARK_BEASTS_SCARF "iam01009150" // name_iam01009150 = Dark Beast's Scarf
-#define ARMOR_HUNTERS_PRIDE "iam01003800" // name_iam01003800 = Hunter's Pride
-#define ARMOR_MAGICIANS_PRIDE "iam01003810" // name_iam01003810 = Magician's Pride
-#define ARMOR_ANGLERS_PRIDE "iam01003840" // name_iam01003840 = Angler's Pride
-#define ARMOR_COOKS_PRIDE "iam01003850" // name_iam01003850 = Cook's Pride
-#define ARMOR_BLACKSMITHS_PRIDE "iam01003860" // name_iam01003860 = Blacksmith's Pride
-#define ARMOR_CARPENTERS_PRIDE "iam01003870" // name_iam01003870 = Carpenter's Pride
-#define ARMOR_CHIC_SAILORS_HAT "iam01006000" // name_iam01006000 = Chic Sailor's Hat
-#define ARMOR_CHIC_SAILORS_TOP "iam01006010" // name_iam01006010 = Chic Sailor's Top
-#define ARMOR_CHIC_SAILORS_PANTS "iam01006020" // name_iam01006020 = Chic Sailor's Pants
-#define ARMOR_CHIC_SAILORS_BOOTS "iam01006030" // name_iam01006030 = Chic Sailor's Boots
-#define ARMOR_SWABBIES_HAT "iam01006040" // name_iam01006040 = Swabbie's Hat
-#define ARMOR_SWABBIES_TOP "iam01006050" // name_iam01006050 = Swabbie's Top
-#define ARMOR_SWABBIES_PANTS "iam01006060" // name_iam01006060 = Swabbie's Pants
-#define ARMOR_BLUE_PIRATE_BANDANA "iam01006180" // name_iam01006180 = Blue Pirate Bandana
-#define ARMOR_WOLF_EARS "iam01006190" // name_iam01006190 = Wolf Ears
-#define ARMOR_DRAGON_WHELP_HEAD "iam01002440" // name_iam01002440 = Dragon Whelp Head
-#define ARMOR_DRAGON_SOUL "iam01002450" // name_iam01002450 = Dragon Soul
-#define ARMOR_DRAGON_SCRATCHERS "iam01002460" // name_iam01002460 = Dragon Scratchers
-#define ARMOR_DRAGON_STOMPERS "iam01002470" // name_iam01002470 = Dragon Stompers
-#define ARMOR_CARROTELLA_HEAD "iam01002580" // name_iam01002580 = Carrotella Head
-#define ARMOR_CARROTELLA_COSTUME "iam01002590" // name_iam01002590 = Carrotella Costume
-#define ARMOR_SHORT_CAPE "iam01003580" // name_iam01003580 = Short Cape
-#define ARMOR_ADORABLE_EYEPATCH "iam01003760" // name_iam01003760 = Adorable Eyepatch
-#define ARMOR_FRAJEEL_EMBLEM "iam01009080" // name_iam01009080 = Frajeel Emblem
-#define ARMOR_CORSAGE "iam01003410" // name_iam01003410 = Corsage
-#define ARMOR_DRAGONSLAYERS_GAUNTLETS "iam01006600" // name_iam01006600 = Dragonslayer's Gauntlets
-#define ARMOR_DRAGONSLAYERS_BOOTS "iam01006610" // name_iam01006610 = Dragonslayer's Boots
-#define ARMOR_DRAGONSLAYERS_CAPE "iam01006620" // name_iam01006620 = Dragonslayer's Cape
-#define ARMOR_ROYAL_POMME_BARRETTE "iam01006630" // name_iam01006630 = Royal Pomme Barrette
-#define ARMOR_ROYAL_POMME_CLOTHES "iam01006640" // name_iam01006640 = Royal Pomme Clothes
-#define ARMOR_ROYAL_POMME_GLOVES "iam01006660" // name_iam01006660 = Royal Pomme Gloves
-#define ARMOR_ROYAL_POMME_BOOTS "iam01006670" // name_iam01006670 = Royal Pomme Boots
-#define ARMOR_DARK_SULTANS_OUTFIT "iam01006690" // name_iam01006690 = Dark Sultan's Outfit
-#define ARMOR_DARK_SULTANS_BOOTS "iam01006700" // name_iam01006700 = Dark Sultan's Boots
-#define ARMOR_SEALING_ROBE "iam01006740" // name_iam01006740 = Sealing Robe
-#define ARMOR_SEALING_BOOTS "iam01006750" // name_iam01006750 = Sealing Boots
-#define ARMOR_MERC_IDOLS_BERET "iam01006780" // name_iam01006780 = Merc Idol's Beret
-#define ARMOR_MERC_IDOLS_DRESS "iam01006790" // name_iam01006790 = Merc Idol's Dress
-#define ARMOR_MERC_IDOLS_GLOVES "iam01006810" // name_iam01006810 = Merc Idol's Gloves
-#define ARMOR_MERC_IDOLS_BOOTS "iam01006820" // name_iam01006820 = Merc Idol's Boots
-#define ARMOR_PIRATE_PRINCESS_HAT "iam01008160" // name_iam01008160 = Pirate Princess Hat
-#define ARMOR_PIRATE_PRINCESS_DRESS "iam01008170" // name_iam01008170 = Pirate Princess Dress
-#define ARMOR_PIRATE_PRINCESS_GLOVES "iam01008180" // name_iam01008180 = Pirate Princess Gloves
-#define ARMOR_PIRATE_PRINCESS_BOOTS "iam01008190" // name_iam01008190 = Pirate Princess Boots
-#define ARMOR_PRINCESS_HAIR_ORNAMENT "iam01008200" // name_iam01008200 = Princess Hair Ornament
-#define ARMOR_PRINCESS_TOP "iam01008210" // name_iam01008210 = Princess Top
-#define ARMOR_PRINCESS_SKIRT "iam01008220" // name_iam01008220 = Princess Skirt
-#define ARMOR_PRINCESS_BANGLES "iam01008230" // name_iam01008230 = Princess Bangles
-#define ARMOR_PRINCESS_SANDALS "iam01008240" // name_iam01008240 = Princess Sandals
-#define ARMOR_FLUTTER_CHARM "iam02000000" // name_iam02000000 = Flutter Charm
-#define ARMOR_ETHEREAL_GIRLS_DRESS "iam02000010" // name_iam02000010 = Ethereal Girl's Dress
-#define ARMOR_ETHEREAL_GIRLS_SANDALS "iam02000020" // name_iam02000020 = Ethereal Girl's Sandals
-#define ARMOR_ARCHEOLOGISTS_HAT "iam02000030" // name_iam02000030 = Archeologist's Hat
-#define ARMOR_ARCHEOLOGISTS_COAT "iam02000040" // name_iam02000040 = Archeologist's Coat
-#define ARMOR_ARCHEOLOGISTS_BOOTS "iam02000050" // name_iam02000050 = Archeologist's Boots
-#define ARMOR_TRIPS_HELMET "iam02000060" // name_iam02000060 = Trip's Helmet
-#define ARMOR_RACCOON_HEAD "iam02000070" // name_iam02000070 = Raccoon Head
-#define ARMOR_RACCOON_OUTFIT "iam02000080" // name_iam02000080 = Raccoon Outfit
-#define ARMOR_RACCOON_MITTENS "iam02000090" // name_iam02000090 = Raccoon Mittens
-#define ARMOR_RACCOON_SLIPPERS "iam02000100" // name_iam02000100 = Raccoon Slippers
-#define ARMOR_ELITE_GOGGLES "iam02000110" // name_iam02000110 = Elite Goggles
-#define ARMOR_EERIE_HOOD "iam02000120" // name_iam02000120 = Eerie Hood
-#define ARMOR_EERIE_ROBE "iam02000130" // name_iam02000130 = Eerie Robe
-
-#define CRAFT_UNDERWORLD_RUG_1 "ico01060190_01" // name_ico01060190 = Underworld Rug
-#define CRAFT_WHEELBARROW "ico01090430" // name_ico01090430 = Wheelbarrow
-#define CRAFT_CARROT_FARM "ico06040010" // name_ico06040010 = Carrot Farm
-#define CRAFT_ELEGANT_ICEWOLF_STATUE "ico05010170" // name_ico05010170 = Elegant Icewolf Statue
-#define CRAFT_PORT_TOWN_HOUSE_1 "icf01020051" // name_icf01020050 = Port Town House
-#define CRAFT_PLAINS_LORDFISH_PRINT_1 "ico02010720_01" // name_ico02010720 = Plains Lordfish Print
-#define CRAFT_HANGING_SCROLL "ico02010670" // name_ico02010670 = Hanging Scroll
-#define CRAFT_REED_SCREEN_WALL "ico01070011" // name_ico01070011 = Reed Screen Wall
-#define CRAFT_MYSTERIA_MINERAL_WATER "test_planned_construct" // name_imt01000010 = Mysteria Mineral Water
-#define CRAFT_BIG_PORT_TOWN_HOUSE_1 "icf01020064" // name_icf01020060 = Big Port Town House
-#define CRAFT_RUSTIC_JAR_1 "ico01090190_01" // name_ico01090190 = Rustic Jar
-#define CRAFT_BLUE_TAPESTRY "ico02010560" // name_ico02010560 = Blue Tapestry
-#define CRAFT_WOODEN_FENCE "ico04040040" // name_ico04040040 = Wooden Fence
-#define CRAFT_RADISH_FARM "ico06040020" // name_ico06040020 = Radish Farm
-#define CRAFT_BIG_STARRY_NIGHT_HOUSE_1 "icf01020081" // name_icf01020080 = Big Starry Night House
-#define CRAFT_PUMPKIN_FARM "ico06040030" // name_ico06040030 = Pumpkin Farm
-#define CRAFT_PIRATE_SHIP_FLOOR "ico01080050" // name_ico01080050 = Pirate Ship Floor
-#define CRAFT_PIRATE_MAT_1 "ico01060160_01" // name_ico01060160 = Pirate Mat
-#define CRAFT_LOG_FLOOR_1 "ico01080140_01" // name_ico01080140 = Log Floor
-#define CRAFT_NIGHTTIME_PAINTING "ico01091540" // name_ico01091540 = Nighttime Painting
-#define CRAFT_THATCHED_HOUSE_B "icf01021032" // name_icf01020032 = Thatched House B
-#define CRAFT_MERCENARYS_BOUNTY "ico01090460" // name_ico01090460 = Mercenary's Bounty
-#define CRAFT_POTATO_FARM "ico06040040" // name_ico06040040 = Potato Farm
-#define CRAFT_CUPBOARD_1 "ico01090750_01" // name_ico01090750 = Cupboard
-#define CRAFT_TEA_SET_1 "ico03010110_01" // name_ico03010110 = Tea Set
-#define CRAFT_STONE_BLOCK_WALL "ico04040020" // name_ico04040020 = Stone Block Wall
-#define CRAFT_MARINE_FLOOR "ico01080040" // name_ico01080040 = Marine Floor
-#define CRAFT_YARN_BALL_1 "ico03010890_01" // name_ico03010890 = Yarn Ball
-#define CRAFT_MEMORY_BOARD_1 "ico02020100_01" // name_ico02020100 = Memory Board
-#define CRAFT_PLUSHLING_TREE_POT "ico01091550" // name_ico01091550 = Plushling Tree Pot
-#define CRAFT_BIG_THATCHED_HOUSE "icf01020043" // name_icf01020040 = Big Thatched House
-#define CRAFT_SIMPLE_HEDGE "ico04040030" // name_ico04040030 = Simple Hedge
-#define CRAFT_GRINDSTONE_1 "ico01091239_01" // name_ico01091239 = Grindstone
-#define CRAFT_MAGIC_CAULDRON "ico01090470" // name_ico01090470 = Magic Cauldron
-#define CRAFT_ONION_FARM "ico06040050" // name_ico06040050 = Onion Farm
-#define CRAFT_CABBAGE_FARM "ico06040060" // name_ico06040060 = Cabbage Farm
-#define CRAFT_SEAFOOD_BANQUET "ico03010280" // name_ico03010280 = Seafood Banquet
-#define CRAFT_PALADINS_CREST "ico01090450" // name_ico01090450 = Paladin's Crest
-#define CRAFT_SHADOW_CARROT_FARM "ico06040070" // name_ico06040070 = Shadow Carrot Farm
-#define CRAFT_LOG_WALL_1 "ico01070140_01" // name_ico01070140 = Log Wall
-#define CRAFT_FRUIT_BUFFET "ico03010290" // name_ico03010290 = Fruit Buffet
-#define CRAFT_TROPICAL_FENCE "ico04040010" // name_ico04040010 = Tropical Fence
-#define CRAFT_WOODEN_WATERING_CAN "ico01090070" // name_ico01090070 = Wooden Watering Can
-#define CRAFT_BIG_PORT_TOWN_HOUSE_2 "icf01020061" // name_icf01020060 = Big Port Town House
-#define CRAFT_STEWING_POT "ico01090540" // name_ico01090540 = Stewing Pot
-#define CRAFT_TRAY_OF_APPLES "ico03010300" // name_ico03010300 = Tray of Apples
-#define CRAFT_BRICK_HOUSE_1 "icf01020010" // name_icf01020010 = Brick House
-#define CRAFT_FISHING_ROD_STAND "ico01090530" // name_ico01090530 = Fishing Rod Stand
-#define CRAFT_SALUD_GLASS "ico03010370" // name_ico03010370 = Salud Glass
-#define CRAFT_BIG_PORT_TOWN_HOUSE_3 "icf01020060" // name_icf01020060 = Big Port Town House
-#define CRAFT_BRICK_HOUSE_2 "icf01020011" // name_icf01020010 = Brick House
-#define CRAFT_DRAGON_DOLL "ico03010860" // name_ico03010860 = Dragon Doll
-#define CRAFT_PLATE_OF_ROASTED_BIRD "ico03010030" // name_ico03010030 = Plate of Roasted Bird
-#define CRAFT_BRICK_HOUSE_3 "icf01020012" // name_icf01020010 = Brick House
-#define CRAFT_NOBLE_DRESS "ico01090670" // name_ico01090670 = Noble Dress
-#define CRAFT_BIG_PORT_TOWN_HOUSE_4 "icf01020062" // name_icf01020060 = Big Port Town House
-#define CRAFT_WHITE_BUTTERFLY_SOFA "ico01020100" // name_ico01020100 = White Butterfly Sofa
-#define CRAFT_PORT_TOWN_BRIDGE "icf03030010" // name_icf03030010 = Port Town Bridge
-#define CRAFT_BRICK_HOUSE_4 "icf01020013" // name_icf01020010 = Brick House
-#define CRAFT_FISHING_ROD_STAND_1 "ico01090530_01" // name_ico01090530 = Fishing Rod Stand
-#define CRAFT_SCIENCE_EQUIPMENT "ico03010330" // name_ico03010330 = Science Equipment
-#define CRAFT_BIG_BRICK_HOUSE_1 "icf01020020" // name_icf01020020 = Big Brick House
-#define CRAFT_ISLAND_MAP_BOARD "ico02010060" // name_ico02010060 = Island Map Board
-#define CRAFT_STARRY_NIGHT_HOUSE_1 "icf01020072" // name_icf01020070 = Starry Night House
-#define CRAFT_BARREL_1 "ico01090180_01" // name_ico01090180 = Barrel
-#define CRAFT_HIGH_FLYING_FISH_PRINT "ico02010770" // name_ico02010770 = High-Flying Fish Print
-#define CRAFT_BIG_BRICK_HOUSE_2 "icf01020021" // name_icf01020020 = Big Brick House
-#define CRAFT_PIRATE_SHIP_WALL_1 "ico01070050_01" // name_ico01070050 = Pirate Ship Wall
-#define CRAFT_BLACK_WOLF_DOLL "ico05010110" // name_ico05010110 = Black Wolf Doll
-#define CRAFT_ROCK_COLLECTION "ico01091290" // name_ico01091290 = Rock Collection
-#define CRAFT_STARRY_NIGHT_HOUSE_2 "icf01020071" // name_icf01020070 = Starry Night House
-#define CRAFT_BOWL_OF_ASSORTED_FRUIT "ico03010040" // name_ico03010040 = Bowl of Assorted Fruit
-#define CRAFT_BIG_BRICK_HOUSE_3 "icf01020022" // name_icf01020020 = Big Brick House
-#define CRAFT_MISPLACED_HAMMER "ico01090600" // name_ico01090600 = Misplaced Hammer
-#define CRAFT_FRESH_FISH "ico01090520" // name_ico01090520 = Fresh Fish
-#define CRAFT_ELEGANT_CLOTH "ico03010360" // name_ico03010360 = Elegant Cloth
-#define CRAFT_STARRY_NIGHT_HOUSE_3 "icf01020070" // name_icf01020070 = Starry Night House
-#define CRAFT_BIG_BRICK_HOUSE_4 "icf01020023" // name_icf01020020 = Big Brick House
-#define CRAFT_BIRD_CAGE "ico03010870" // name_ico03010870 = Bird Cage
-#define CRAFT_TOOL_HOOK "ico02010080" // name_ico02010080 = Tool Hook
-#define CRAFT_FOREST_HOUSE_1 "icf01020092" // name_icf01020090 = Forest House
-#define CRAFT_ORE_COLLECTION "ico01090560" // name_ico01090560 = Ore Collection
-#define CRAFT_SEWING_SET "ico03010320" // name_ico03010320 = Sewing Set
-#define CRAFT_THATCHED_HOUSE_1 "icf01020030" // name_icf01020030 = Thatched House
-#define CRAFT_STARRY_NIGHT_SOFA "ico01020180" // name_ico01020180 = Starry Night Sofa
-#define CRAFT_FOREST_HOUSE_2 "icf01020093" // name_icf01020090 = Forest House
-#define CRAFT_TROPICAL_WOODEN_DESK "ico01030390" // name_ico01030390 = Tropical Wooden Desk
-#define CRAFT_BREEZY_WEATHERVANE "ico05010150" // name_ico05010150 = Breezy Weathervane
-#define CRAFT_ANTIQUE_ABACUS_1 "ico03010590_01" // name_ico03010590 = Antique Abacus
-#define CRAFT_THATCHED_HOUSE_2 "icf01020031" // name_icf01020030 = Thatched House
-#define CRAFT_TALL_GRASS "ico04080020" // name_ico04080020 = Tall Grass
-#define CRAFT_FOREST_HOUSE_3 "icf01020090" // name_icf01020090 = Forest House
-#define CRAFT_THATCHED_HOUSE_3 "icf01020032" // name_icf01020030 = Thatched House
-#define CRAFT_NIGHTMARE_BED_1 "ico01040090_01" // name_ico01040090 = Nightmare Bed
-#define CRAFT_FOREST_HOUSE_4 "icf01020091" // name_icf01020090 = Forest House
-#define CRAFT_GREAT_LUCKY_BREAM_PRINT "ico02010740" // name_ico02010740 = Great Lucky Bream Print
-#define CRAFT_HAY "ico01090080" // name_ico01090080 = Hay
-#define CRAFT_THATCHED_HOUSE_4 "icf01020033" // name_icf01020030 = Thatched House
-#define CRAFT_FRESH_VEGETABLES "ico01090510" // name_ico01090510 = Fresh Vegetables
-#define CRAFT_MENU_STAND "ico03010350" // name_ico03010350 = Menu Stand
-#define CRAFT_BIG_THATCHED_HOUSE_1 "icf01020040" // name_icf01020040 = Big Thatched House
-#define CRAFT_RAINBOW_FLYING_FISH_PRINT "ico02010750" // name_ico02010750 = Rainbow Flying Fish Print
-#define CRAFT_WOODEN_BUCKET "ico01090090" // name_ico01090090 = Wooden Bucket
-#define CRAFT_BIG_THATCHED_HOUSE_2 "icf01020041" // name_icf01020040 = Big Thatched House
-#define CRAFT_BIG_THATCHED_HOUSE_3 "icf01020042" // name_icf01020040 = Big Thatched House
-#define CRAFT_PHONOGRAPH "ico03010340" // name_ico03010340 = Phonograph
-#define CRAFT_BEELZEBUB_TUNA_PRINT_1 "ico02010370_01" // name_ico02010370 = Beelzebub Tuna Print
-#define CRAFT_PORT_TOWN_HOUSE_2 "icf01020050" // name_icf01020050 = Port Town House
-#define CRAFT_GOLD_CANDLESTICK "ico03010070" // name_ico03010070 = Gold Candlestick
-#define CRAFT_PORT_TOWN_HOUSE_3 "icf01020052" // name_icf01020050 = Port Town House
-#define CRAFT_PAINT_BUCKET "ico01090630" // name_ico01090630 = Paint Bucket
-#define CRAFT_SAWING_TABLE "ico01090290" // name_ico01090290 = Sawing Table
-#define CRAFT_BRICK_HOUSE_C "icf01021013" // name_icf01020013 = Brick House C
-#define CRAFT_RED_FLOWER_ORNAMENT "ico02010280" // name_ico02010280 = Red Flower Ornament
-#define CRAFT_PORT_TOWN_HOUSE_4 "icf01020054" // name_icf01020050 = Port Town House
-#define CRAFT_PASTEL_MAT "ico01060121" // name_ico01060121 = Pastel Mat
-#define CRAFT_BIG_DEVILISH_HOUSE_1 "icf01020122" // name_icf01020120 = Big Devilish House
-#define CRAFT_PLATE_OF_APPLES "ico03010610" // name_ico03010610 = Plate of Apples
-#define CRAFT_CLASSIC_BENCH "ico01020080" // name_ico01020080 = Classic Bench
-#define CRAFT_STARRY_NIGHT_HOUSE_4 "icf01020074" // name_icf01020070 = Starry Night House
-#define CRAFT_RED_FLOWER_SHRUB_1 "ico04050430_01" // name_ico04050430 = Red Flower Shrub
-#define CRAFT_BENCH_PRESS "ico03010390" // name_ico03010390 = Bench Press
-#define CRAFT_BIG_STARRY_NIGHT_HOUSE_2 "icf01020080" // name_icf01020080 = Big Starry Night House
-#define CRAFT_BIG_STARRY_NIGHT_HOUSE_3 "icf01020082" // name_icf01020080 = Big Starry Night House
-#define CRAFT_STRANGERS_COFFIN "ico01091010" // name_ico01091010 = Stranger's Coffin
-#define CRAFT_WOODEN_LOW_TABLE "ico01030150" // name_ico01030150 = Wooden Low Table
-#define CRAFT_STOVE_1 "ico01091236_01" // name_ico01091236 = Stove
-#define CRAFT_REGAL_TABLE "ico01030400" // name_ico01030400 = Regal Table
-#define CRAFT_BIG_STARRY_NIGHT_HOUSE_4 "icf01020084" // name_icf01020080 = Big Starry Night House
-#define CRAFT_BIG_FOREST_HOUSE_1 "icf01020100" // name_icf01020100 = Big Forest House
-#define CRAFT_PORT_TOWN_WARDROBE "ico01090770" // name_ico01090770 = Port Town Wardrobe
-#define CRAFT_CANDLE "ico03010130" // name_ico03010130 = Candle
-#define CRAFT_BIG_FOREST_HOUSE_2 "icf01020101" // name_icf01020100 = Big Forest House
-#define CRAFT_BEELZEBUB_TUNA_PRINT "ico02010370" // name_ico02010370 = Beelzebub Tuna Print
-#define CRAFT_WOVEN_CASTELE_RUG_1 "ico01060110_01" // name_ico01060110 = Woven Castele Rug
-#define CRAFT_BIG_FOREST_HOUSE_3 "icf01020102" // name_icf01020100 = Big Forest House
-#define CRAFT_HANGING_DRIED_FISH "ico02010630" // name_ico02010630 = Hanging Dried Fish
-#define CRAFT_BIG_FOREST_HOUSE_4 "icf01020103" // name_icf01020100 = Big Forest House
-#define CRAFT_FOREST_BED "ico01040100" // name_ico01040100 = Forest Bed
-#define CRAFT_HUNTERS_TROPHY "ico03010460" // name_ico03010460 = Hunter's Trophy
-#define CRAFT_TROPICAL_STONE_BENCH_1 "ico01020030_01" // name_ico01020030 = Tropical Stone Bench
-#define CRAFT_DEVILISH_HOUSE_1 "icf01020110" // name_icf01020110 = Devilish House
-#define CRAFT_DECORATIVE_SHIELDS "ico02010600" // name_ico02010600 = Decorative Shields
-#define CRAFT_DEVILISH_HOUSE_2 "icf01020111" // name_icf01020110 = Devilish House
-#define CRAFT_DEVILISH_HOUSE_3 "icf01020112" // name_icf01020110 = Devilish House
-#define CRAFT_PINT_OF_WHEAT_JUICE "ico03010660" // name_ico03010660 = Pint of Wheat Juice
-#define CRAFT_YOUNG_KINGS_RUG_1 "ico01060410_01" // name_ico01060410 = Young King's Rug
-#define CRAFT_BLUESCALE_LORDFISH_PRINT_1 "ico02010450_01" // name_ico02010450 = Bluescale Lordfish Print
-#define CRAFT_TRIPS_PERCH "ico01091680" // name_ico01091680 = Trip's Perch
-#define CRAFT_HAMMOCK "ico01040130" // name_ico01040130 = Hammock
-#define CRAFT_MAGICIANS_TROPHY "ico03010450" // name_ico03010450 = Magician's Trophy
-#define CRAFT_BIG_DEVILISH_HOUSE_2 "icf01020120" // name_icf01020120 = Big Devilish House
-#define CRAFT_BIG_DEVILISH_HOUSE_3 "icf01020121" // name_icf01020120 = Big Devilish House
-#define CRAFT_GLASS_OF_TROPICAL_JUICE "ico03010950" // name_ico03010950 = Glass of Tropical Juice
-#define CRAFT_BRICK_HOUSE_5 "icf01021010" // name_icf01020010 = Brick House
-#define CRAFT_FISHING_ROD_RACK_1 "ico02010490_01" // name_ico02010490 = Fishing Rod Rack
-#define CRAFT_BRICK_HOUSE_A "icf01021011" // name_icf01020011 = Brick House A
-#define CRAFT_DECORATIVE_EQUIPMENT "ico01090710" // name_ico01090710 = Decorative Equipment
-#define CRAFT_PEN_AND_RULER "ico03010150" // name_ico03010150 = Pen and Ruler
-#define CRAFT_BRICK_HOUSE_B "icf01021012" // name_icf01020012 = Brick House B
-#define CRAFT_THATCHED_HOUSE_5 "icf01021030" // name_icf01020030 = Thatched House
-#define CRAFT_PORT_TOWN_WARDROBE_1 "ico01090770_01" // name_ico01090770 = Port Town Wardrobe
-#define CRAFT_ROUND_WOODEN_TABLE_1 "ico01030120_01" // name_ico01030120 = Round Wooden Table
-#define CRAFT_THATCHED_HOUSE_A "icf01021031" // name_icf01020031 = Thatched House A
-#define CRAFT_THATCHED_HOUSE_C "icf01021033" // name_icf01020033 = Thatched House C
-#define CRAFT_PORT_TOWN_HOUSE_5 "icf01021050" // name_icf01020050 = Port Town House
-#define CRAFT_PORT_TOWN_HOUSE_A "icf01021051" // name_icf01020051 = Port Town House A
-#define CRAFT_TROPICAL_WOODEN_BENCH "ico01020040" // name_ico01020040 = Tropical Wooden Bench
-#define CRAFT_POTTED_COCONUT_1 "ico01090330_01" // name_ico01090330 = Potted Coconut
-#define CRAFT_HAGRAM_DOLL "ico03010190" // name_ico03010190 = Hagram Doll
-#define CRAFT_PORT_TOWN_HOUSE_B "icf01021052" // name_icf01020052 = Port Town House B
-#define CRAFT_SEAFOOD_BANQUET_1 "ico03010280_01" // name_ico03010280 = Seafood Banquet
-#define CRAFT_GREEN_SPOOKY_LAMP "ico01091562" // name_ico01091562 = Green Spooky Lamp
-#define CRAFT_PORT_TOWN_HOUSE_C "icf01021054" // name_icf01020054 = Port Town House C
-#define CRAFT_STARRY_NIGHT_HOUSE_5 "icf01021070" // name_icf01020070 = Starry Night House
-#define CRAFT_ROUND_WOODEN_TABLE "ico01030120" // name_ico01030120 = Round Wooden Table
-#define CRAFT_STARRY_NIGHT_HOUSE_A "icf01021071" // name_icf01020071 = Starry Night House A
-#define CRAFT_STARRY_NIGHT_HOUSE_B "icf01021072" // name_icf01020072 = Starry Night House B
-#define CRAFT_CORN_RESERVE "ico02020110" // name_ico02020110 = Corn Reserve
-#define CRAFT_DECORATIVE_FOLDING_FAN_1 "ico02010650_01" // name_ico02010650 = Decorative Folding Fan
-#define CRAFT_STARRY_NIGHT_HOUSE_C "icf01021074" // name_icf01020074 = Starry Night House C
-#define CRAFT_FOREST_HOUSE_5 "icf01021090" // name_icf01020090 = Forest House
-#define CRAFT_WOODEN_STAND "ico01030100" // name_ico01030100 = Wooden Stand
-#define CRAFT_FOREST_HOUSE_A "icf01021091" // name_icf01020091 = Forest House A
-#define CRAFT_PIRATE_CHEST "ico01090790" // name_ico01090790 = Pirate Chest
-#define CRAFT_FOREST_HOUSE_B "icf01021092" // name_icf01020092 = Forest House B
-#define CRAFT_FOREST_BRIDGE "icf03050010" // name_icf03050010 = Forest Bridge
-#define CRAFT_ISLAND_SIGN "ico01090210" // name_ico01090210 = Island Sign
-#define CRAFT_FOREST_HOUSE_C "icf01021093" // name_icf01020093 = Forest House C
-#define CRAFT_MUSEUM_TABLE "ico01030450" // name_ico01030450 = Museum Table
-#define CRAFT_DEVILISH_HOUSE_4 "icf01021110" // name_icf01020110 = Devilish House
-#define CRAFT_POTTED_CACTUS "ico01090340" // name_ico01090340 = Potted Cactus
-#define CRAFT_DEVILISH_HOUSE_A "icf01021111" // name_icf01020111 = Devilish House A
-#define CRAFT_DEVILISH_HOUSE_B "icf01021112" // name_icf01020112 = Devilish House B
-#define CRAFT_PINK_FLOWER_VASE_1 "ico01090351_01" // name_ico01090351 = Pink Flower Vase
-#define CRAFT_NIGHTTIME_PAINTING_1 "ico01091540_01" // name_ico01091540 = Nighttime Painting
-#define CRAFT_BRICK_GUILD_OFFICE "icf01010012" // name_icf01010012 = Brick Guild Office
-#define CRAFT_PIRATE_SHIP_FLOOR_1 "ico01080050_01" // name_ico01080050 = Pirate Ship Floor
-#define CRAFT_SWEET_WALL "ico01070220" // name_ico01070220 = Sweet Wall
-#define CRAFT_THATCHED_GUILD_OFFICE "icf01010021" // name_icf01010021 = Thatched Guild Office
-#define CRAFT_DESERT_CACTUS "ico04050450" // name_ico04050450 = Desert Cactus
-#define CRAFT_HAY_TROUGH "ico01091400" // name_ico01091400 = Hay Trough
-#define CRAFT_STONE_SQUARE "icf01040010" // name_icf01040010 = Stone Square
-#define CRAFT_RED_PATTERN_RUG "ico01060310" // name_ico01060310 = Red Pattern Rug
-#define CRAFT_BALLOON_ART "ico01091430" // name_ico01091430 = Balloon Art
-#define CRAFT_BRICK_SQUARE "icf01040020" // name_icf01040020 = Brick Square
-#define CRAFT_PASTEL_WOVEN_RUG "ico01060320" // name_ico01060320 = Pastel Woven Rug
-#define CRAFT_PASTEL_WOVEN_MAT "ico01060330" // name_ico01060330 = Pastel Woven Mat
-#define CRAFT_CELESTIAS_GIFT_IN_VASE_1 "ico01090360_01" // name_ico01090360 = Celestia's Gift in Vase
-#define CRAFT_HEROS_MANNEQUIN "ico01091420" // name_ico01091420 = Hero's Mannequin
-#define CRAFT_SEABREEZE_SQUARE "icf01040030" // name_icf01040030 = Seabreeze Square
-#define CRAFT_GRAND_STANDING_TORCH "ico01091470" // name_ico01091470 = Grand Standing Torch
-#define CRAFT_PLUSHLING_SQUARE "icf01040060" // name_icf01040060 = Plushling Square
-#define CRAFT_BIG_LEAF_RUG "ico01060360" // name_ico01060360 = Big Leaf Rug
-#define CRAFT_SWORD_PATTERN_RUG "ico01060370" // name_ico01060370 = Sword Pattern Rug
-#define CRAFT_GRANDFATHER_CLOCK_1 "ico01090650_01" // name_ico01090650 = Grandfather Clock
-#define CRAFT_BREAKFAST_SET_1 "ico03010010_01" // name_ico03010010 = Breakfast Set
-#define CRAFT_WEAPON_STAND "ico01091460" // name_ico01091460 = Weapon Stand
-#define CRAFT_GRAFFITI_SQUARE "icf01040070" // name_icf01040070 = Graffiti Square
-#define CRAFT_GUITAR "ico01091490" // name_ico01091490 = Guitar
-#define CRAFT_DEVILISH_SQUARE "icf01040080" // name_icf01040080 = Devilish Square
-#define CRAFT_REGAL_RUG "ico01060380" // name_ico01060380 = Regal Rug
-#define CRAFT_WHEAT_JUICE_ON_TAP "ico01091480" // name_ico01091480 = Wheat Juice on Tap
-#define CRAFT_GREEN_SQUARE "icf01040090" // name_icf01040090 = Green Square
-#define CRAFT_ROYAL_CAPITAL_MAT "ico01060390" // name_ico01060390 = Royal Capital Mat
-#define CRAFT_FOREST_STAIRS "icf02050010" // name_icf02050010 = Forest Stairs
-#define CRAFT_ANCIENT_SQUARE "icf01040100" // name_icf01040100 = Ancient Square
-#define CRAFT_MAT_OF_DARKNESS "ico01060200" // name_ico01060200 = Mat of Darkness
-#define CRAFT_STONE_STAIRS "icf02010010" // name_icf02010010 = Stone Stairs
-#define CRAFT_TROPICAL_FLOWER_MAT "ico01060070" // name_ico01060070 = Tropical Flower Mat
-#define CRAFT_SMELTER_1 "ico01091238_01" // name_ico01091238 = Smelter
-#define CRAFT_ARCHED_GATE "ico01091580" // name_ico01091580 = Arched Gate
-#define CRAFT_CHAIR_OF_ATONEMENT "ico01020210" // name_ico01020210 = Chair of Atonement
-#define CRAFT_TILED_CHEST_1 "ico01030200_01" // name_ico01030200 = Tiled Chest
-#define CRAFT_WOODEN_STAIRS "icf02020010" // name_icf02020010 = Wooden Stairs
-#define CRAFT_PLUSHLING_FOUNTAIN_1 "ico04050190_01" // name_ico04050190 = Plushling Fountain
-#define CRAFT_PALADINS_TROPHY_1 "ico03010430_01" // name_ico03010430 = Paladin's Trophy
-#define CRAFT_FOREST_SOFA "ico01020220" // name_ico01020220 = Forest Sofa
-#define CRAFT_BED_OF_TERROR_1 "ico01040150_01" // name_ico01040150 = Bed of Terror
-#define CRAFT_BRICK_STAIRS "icf02020020" // name_icf02020020 = Brick Stairs
-#define CRAFT_TILED_CABINET "ico01030210" // name_ico01030210 = Tiled Cabinet
-#define CRAFT_STARRY_NIGHT_RUG_1 "ico01060170_01" // name_ico01060170 = Starry Night Rug
-#define CRAFT_REGAL_FLOOR_1 "ico01080150_01" // name_ico01080150 = Regal Floor
-#define CRAFT_PORT_TOWN_STAIRS "icf02030010" // name_icf02030010 = Port Town Stairs
-#define CRAFT_PASTEL_BED_1 "ico01040051_01" // name_ico01040051 = Pastel Bed
-#define CRAFT_HOMELY_FLOWER_BASKET "ico05010050" // name_ico05010050 = Homely Flower Basket
-#define CRAFT_CRATE "ico01090170" // name_ico01090170 = Crate
-#define CRAFT_DARKWOOD_TREE "ico06010090" // name_ico06010090 = Darkwood Tree
-#define CRAFT_DEVILISH_BRIDGE "icf03040020" // name_icf03040020 = Devilish Bridge
-#define CRAFT_STARRY_NIGHT_STAIRS "icf02040010" // name_icf02040010 = Starry Night Stairs
-#define CRAFT_STARRY_NIGHT_BRIDGE "icf03040010" // name_icf03040010 = Starry Night Bridge
-#define CRAFT_DEVILISH_STAIRS "icf02040020" // name_icf02040020 = Devilish Stairs
-#define CRAFT_WOODEN_WATERING_CAN_1 "ico01090070_01" // name_ico01090070 = Wooden Watering Can
-#define CRAFT_PRAIRIE_SLOPE "icf04010010" // name_icf04010010 = Prairie Slope
-#define CRAFT_DESERT_CACTUS_1 "ico04050450_01" // name_ico04050450 = Desert Cactus
-#define CRAFT_TEA_SET "ico03010110" // name_ico03010110 = Tea Set
-#define CRAFT_STONE_BRIDGE "icf03010010" // name_icf03010010 = Stone Bridge
-#define CRAFT_CUPBOARD "ico01090750" // name_ico01090750 = Cupboard
-#define CRAFT_ENCHANTED_WALL_1 "ico01070070_01" // name_ico01070070 = Enchanted Wall
-#define CRAFT_SIGN_BOARD "ico02010260" // name_ico02010260 = Sign Board
-#define CRAFT_WALL_LAMP_1 "ico02020050_01" // name_ico02020050 = Wall Lamp
-#define CRAFT_WOODEN_BRIDGE "icf03020010" // name_icf03020010 = Wooden Bridge
-#define CRAFT_FISH_TRAP_1 "ico01091310_01" // name_ico01091310 = Fish Trap
-#define CRAFT_BRICK_BRIDGE "icf03020020" // name_icf03020020 = Brick Bridge
-#define CRAFT_POTTED_PALM_TREE "ico01090660" // name_ico01090660 = Potted Palm Tree
-#define CRAFT_BLANK_CANVAS_1 "ico01090110_01" // name_ico01090110 = Blank Canvas
-#define CRAFT_WOODEN_DINING_SET "ico03010020" // name_ico03010020 = Wooden Dining Set
-#define CRAFT_GALLERY "icf01030010" // name_icf01030010 = Gallery
-#define CRAFT_STARRY_NIGHT_CABINET "ico01090830" // name_ico01090830 = Starry Night Cabinet
-#define CRAFT_MAGICIANS_TROPHY_1 "ico03010450_01" // name_ico03010450 = Magician's Trophy
-#define CRAFT_ANTIQUE_TROPICAL_MAT "ico01060280" // name_ico01060280 = Antique Tropical Mat
-#define CRAFT_DIRT_ROAD "icf05010000" // name_icf05010000 = Dirt Road
-#define CRAFT_LOVEY_DOVEY_LAMP "ico05010430" // name_ico05010430 = Lovey-Dovey Lamp
-#define CRAFT_HAMMOCK_1 "ico01040130_01" // name_ico01040130 = Hammock
-#define CRAFT_TRIPS_PERCH_1 "ico01091680_01" // name_ico01091680 = Trip's Perch
-#define CRAFT_STARRY_NIGHT_CHEST "ico01090820" // name_ico01090820 = Starry Night Chest
-#define CRAFT_BLUE_PATTERN_RUG "ico01060290" // name_ico01060290 = Blue Pattern Rug
-#define CRAFT_MYSTERIAN_ROAD "icf05010010" // name_icf05010010 = Mysterian Road
-#define CRAFT_SECRETIVE_MASK "ico05010420" // name_ico05010420 = Secretive Mask
-#define CRAFT_STARRY_NIGHT_WARDROBE "ico01090810" // name_ico01090810 = Starry Night Wardrobe
-#define CRAFT_RANOAHS_THRONE "ico01020400" // name_ico01020400 = Ranoah's Throne
-#define CRAFT_FOREST_SOFA_1 "ico01020220_01" // name_ico01020220 = Forest Sofa
-#define CRAFT_FARAWAY_ROAD "icf05010020" // name_icf05010020 = Faraway Road
-#define CRAFT_BIG_OL__BOMB "ico05010410" // name_ico05010410 = Big Ol' Bomb
-#define CRAFT_PIRATE_CABINET "ico01090800" // name_ico01090800 = Pirate Cabinet
-#define CRAFT_WOODEN_CABINET_1 "ico01030170_01" // name_ico01030170 = Wooden Cabinet
-#define CRAFT_TROPICA_ROAD "icf05010030" // name_icf05010030 = Tropica Road
-#define CRAFT_SNACKY_PIE "ico05010400" // name_ico05010400 = Snacky Pie
-#define CRAFT_MUSEUM_CHAIR "ico01020410" // name_ico01020410 = Museum Chair
-#define CRAFT_STONE_WORKBENCH "ico01100010" // name_ico01100010 = Stone Workbench
-#define CRAFT_SWOLEAN_ROAD "icf05010040" // name_icf05010040 = Swolean Road
-#define CRAFT_FOREST_WARDROBE "ico01090870" // name_ico01090870 = Forest Wardrobe
-#define CRAFT_OMINOUS_CABINET "ico01090860" // name_ico01090860 = Ominous Cabinet
-#define CRAFT_DESERT_ROAD "icf05010050" // name_icf05010050 = Desert Road
-#define CRAFT_SCARECORN "ico05010460" // name_ico05010460 = Scarecorn
-#define CRAFT_DARKNESS_EATING_CHEST "ico01090850" // name_ico01090850 = Darkness-Eating Chest
-#define CRAFT_DEVILISH_ROAD "icf05010060" // name_icf05010060 = Devilish Road
-#define CRAFT_BIG_BROTHER_BUST "ico05010450" // name_ico05010450 = Big Brother Bust
-#define CRAFT_WOODEN_WORKBENCH "ico01100020" // name_ico01100020 = Wooden Workbench
-#define CRAFT_BEACH_ROAD "icf05010070" // name_icf05010070 = Beach Road
-#define CRAFT_LEAFY_WATERING_CAN "ico05010440" // name_ico05010440 = Leafy Watering Can
-#define CRAFT_OTHERWORLDLY_WARDROBE "ico01090840" // name_ico01090840 = Otherworldly Wardrobe
-#define CRAFT_THICK_NOVEL "ico03010161" // name_ico03010161 = Thick Novel
-#define CRAFT_FRESH_FISH_ON_A_TRAY "ico03010680" // name_ico03010680 = Fresh Fish on a Tray
-#define CRAFT_IVY_SWINGSET "ico04060020" // name_ico04060020 = Ivy Swingset
-#define CRAFT_TROPICAL_SOFA "ico01020010" // name_ico01020010 = Tropical Sofa
-#define CRAFT_RELAXING_SWINGSET "ico04060010" // name_ico04060010 = Relaxing Swingset
-#define CRAFT_TROPICAL_CHAIR "ico01020020" // name_ico01020020 = Tropical Chair
-#define CRAFT_TROPICAL_STONE_BENCH "ico01020030" // name_ico01020030 = Tropical Stone Bench
-#define CRAFT_ROUND_WOODEN_CHAIR "ico01020070" // name_ico01020070 = Round Wooden Chair
-#define CRAFT_REED_SCREEN_WALL_1 "ico01070011_01" // name_ico01070011 = Reed Screen Wall
-#define CRAFT_FLOWER_BASKET "ico03010600" // name_ico03010600 = Flower Basket
-#define CRAFT_WOODEN_BENCH "ico01020090" // name_ico01020090 = Wooden Bench
-#define CRAFT_SULTANS_CHAIR "ico01020110" // name_ico01020110 = Sultan's Chair
-#define CRAFT_WOODEN_SOFA "ico01020120" // name_ico01020120 = Wooden Sofa
-#define CRAFT_WOODEN_SIDE_TABLE "ico01090610" // name_ico01090610 = Wooden Side Table
-#define CRAFT_PASTEL_SOFA "ico01020121" // name_ico01020121 = Pastel Sofa
-#define CRAFT_WOODEN_CHAIR "ico01020130" // name_ico01020130 = Wooden Chair
-#define CRAFT_FEATHER_ORNAMENT_1 "ico02010480_01" // name_ico02010480 = Feather Ornament
-#define CRAFT_PASTEL_CHAIR "ico01020131" // name_ico01020131 = Pastel Chair
-#define CRAFT_LIGHT_BLUE_TAPESTRY "ico02010290" // name_ico02010290 = Light Blue Tapestry
-#define CRAFT_COPPER_CANDLESTICK "ico03010071" // name_ico03010071 = Copper Candlestick
-#define CRAFT_PORT_TOWN_COUCH "ico01020140" // name_ico01020140 = Port Town Couch
-#define CRAFT_PORT_TOWN_CHAIR "ico01020150" // name_ico01020150 = Port Town Chair
-#define CRAFT_PIRATE_BENCH "ico01020160" // name_ico01020160 = Pirate Bench
-#define CRAFT_PIRATE_CHAIR "ico01020170" // name_ico01020170 = Pirate Chair
-#define CRAFT_STARRY_NIGHT_CHAIR "ico01020190" // name_ico01020190 = Starry Night Chair
-#define CRAFT_SURFING_LEAFE_STATUE "ico01091590" // name_ico01091590 = Surfing Leafe Statue
-#define CRAFT_PASTEL_LOW_TABLE "ico01030151" // name_ico01030151 = Pastel Low Table
-#define CRAFT_TREACHEROUS_SOFA "ico01020200" // name_ico01020200 = Treacherous Sofa
-#define CRAFT_WOODLAND_FLOOR "ico01080080" // name_ico01080080 = Woodland Floor
-#define CRAFT_WHITE_WOOLIE_TROPHY "ico01060060" // name_ico01060060 = White Woolie Trophy
-#define CRAFT_FOREST_CHAIR "ico01020230" // name_ico01020230 = Forest Chair
-#define CRAFT_WOODEN_PARTITION "ico01091510" // name_ico01091510 = Wooden Partition
-#define CRAFT_BEACH_CHAIR "ico01020280" // name_ico01020280 = Beach Chair
-#define CRAFT_SEABREEZE_BENCH "ico01020310" // name_ico01020310 = Seabreeze Bench
-#define CRAFT_PILE_OF_CORN "ico03010780" // name_ico03010780 = Pile of Corn
-#define CRAFT_DESERT_BENCH "ico01020330" // name_ico01020330 = Desert Bench
-#define CRAFT_BENCH_OF_THE_CHOSEN "ico01020350" // name_ico01020350 = Bench of the Chosen
-#define CRAFT_BAMBOO_BENCH "ico01020370" // name_ico01020370 = Bamboo Bench
-#define CRAFT_REGAL_SOFA "ico01020380" // name_ico01020380 = Regal Sofa
-#define CRAFT_COLORFUL_CLOTH "ico03010720" // name_ico03010720 = Colorful Cloth
-#define CRAFT_REGAL_CHAIR "ico01020390" // name_ico01020390 = Regal Chair
-#define CRAFT_CORN_DRYING_RACK "ico01091150" // name_ico01091150 = Corn Drying Rack
-#define CRAFT_FISH_ROASTING_CAMPFIRE "ico04050080" // name_ico04050080 = Fish Roasting Campfire
-#define CRAFT_TROPICAL_TABLE "ico01030010" // name_ico01030010 = Tropical Table
-#define CRAFT_OMINOUS_CABINET_1 "ico01090860_01" // name_ico01090860 = Ominous Cabinet
-#define CRAFT_BASKET_OF_CORN "ico01091160" // name_ico01091160 = Basket of Corn
-#define CRAFT_TROPICAL_LOW_TABLE "ico01030020" // name_ico01030020 = Tropical Low Table
-#define CRAFT_OLD_CASTELE_WALL_1 "ico01070030_01" // name_ico01070030 = Old Castele Wall
-#define CRAFT_BOXES_OF_ORE "ico01091233" // name_ico01091233 = Boxes of Ore
-#define CRAFT_HEARTH_WITH_CORN "ico01091170" // name_ico01091170 = Hearth With Corn
-#define CRAFT_FOREST_LOW_TABLE_1 "ico01030290_01" // name_ico01030290 = Forest Low Table
-#define CRAFT_JOVIAL_MASK_1 "ico02020010_01" // name_ico02020010 = Jovial Mask
-#define CRAFT_TROPICAL_CHEST "ico01030030" // name_ico01030030 = Tropical Chest
-#define CRAFT_SWORDFIGHTERS_BARREL_1 "ico01091350_01" // name_ico01091350 = Swordfighter's Barrel
-#define CRAFT_REGAL_BLUE_BED "ico01040040" // name_ico01040040 = Regal Blue Bed
-#define CRAFT_ARTISTS_TROPHY "ico03010560" // name_ico03010560 = Artist's Trophy
-#define CRAFT_LEAFE_ORNAMENT_1 "ico03010410_01" // name_ico03010410 = Leafe Ornament
-#define CRAFT_WOODEN_RACK "ico01030090" // name_ico01030090 = Wooden Rack
-#define CRAFT_WOODEN_DRAWER "ico01030130" // name_ico01030130 = Wooden Drawer
-#define CRAFT_WOODEN_DINING_TABLE "ico01030140" // name_ico01030140 = Wooden Dining Table
-#define CRAFT_PASTEL_TABLE "ico01030141" // name_ico01030141 = Pastel Table
-#define CRAFT_WOODEN_CHEST "ico01030160" // name_ico01030160 = Wooden Chest
-#define CRAFT_STRAW_RUG_1 "ico01060430_01" // name_ico01060430 = Straw Rug
-#define CRAFT_UNFAMILIAR_MAP_1 "ico02010470_01" // name_ico02010470 = Unfamiliar Map
-#define CRAFT_PASTEL_CHEST "ico01030161" // name_ico01030161 = Pastel Chest
-#define CRAFT_WOODEN_CABINET "ico01030170" // name_ico01030170 = Wooden Cabinet
-#define CRAFT_PIRATE_WARDROBE "ico01090780" // name_ico01090780 = Pirate Wardrobe
-#define CRAFT_ORE_COLLECTION_1 "ico01090560_01" // name_ico01090560 = Ore Collection
-#define CRAFT_SEWING_SET_1 "ico03010320_01" // name_ico03010320 = Sewing Set
-#define CRAFT_PASTEL_CABINET "ico01030171" // name_ico01030171 = Pastel Cabinet
-#define CRAFT_TILED_DINING_TABLE "ico01030180" // name_ico01030180 = Tiled Dining Table
-#define CRAFT_TILED_LOW_TABLE "ico01030190" // name_ico01030190 = Tiled Low Table
-#define CRAFT_BALLOON_ART_1 "ico01091430_01" // name_ico01091430 = Balloon Art
-#define CRAFT_PASTEL_WOVEN_RUG_1 "ico01060320_01" // name_ico01060320 = Pastel Woven Rug
-#define CRAFT_BLACK_KNIGHTS_SWORD "ico05010040" // name_ico05010040 = Black Knight's Sword
-#define CRAFT_DOVE_PENDULUM_CLOCK "ico02020080" // name_ico02020080 = Dove Pendulum Clock
-#define CRAFT_SMELTER "ico01091238" // name_ico01091238 = Smelter
-#define CRAFT_ARTSY_DESK_1 "ico01090730_01" // name_ico01090730 = Artsy Desk
-#define CRAFT_CLASSIC_LAMP_1 "ico03010170_01" // name_ico03010170 = Classic Lamp
-#define CRAFT_TILED_CHEST "ico01030200" // name_ico01030200 = Tiled Chest
-#define CRAFT_FOREST_WALL "ico01070080" // name_ico01070080 = Forest Wall
-#define CRAFT_TROPICAL_SOFA_1 "ico01020010_01" // name_ico01020010 = Tropical Sofa
-#define CRAFT_IVY_SWINGSET_1 "ico04060020_01" // name_ico04060020 = Ivy Swingset
-#define CRAFT_FRESH_FISH_ON_A_TRAY_1 "ico03010680_01" // name_ico03010680 = Fresh Fish on a Tray
-#define CRAFT_PIRATE_DINING_TABLE "ico01030220" // name_ico01030220 = Pirate Dining Table
-#define CRAFT_STEWING_POT_1 "ico01090540_01" // name_ico01090540 = Stewing Pot
-#define CRAFT_TRAY_OF_APPLES_1 "ico03010300_01" // name_ico03010300 = Tray of Apples
-#define CRAFT_PIRATE_LOW_TABLE "ico01030230" // name_ico01030230 = Pirate Low Table
-#define CRAFT_STARRY_NIGHT_TABLE "ico01030240" // name_ico01030240 = Starry Night Table
-#define CRAFT_WOODEN_DRAWER_1 "ico01030130_01" // name_ico01030130 = Wooden Drawer
-#define CRAFT_HAY_BALE "ico01091390" // name_ico01091390 = Hay Bale
-#define CRAFT_SIGN_BOARD_1 "ico02010260_01" // name_ico02010260 = Sign Board
-#define CRAFT_FREE_SPIRITED_CAP "ico05010010" // name_ico05010010 = Free-Spirited Cap
-#define CRAFT_STARRY_NIGHT_LOW_TABLE "ico01030250" // name_ico01030250 = Starry Night Low Table
-#define CRAFT_BLOODTHIRSTY_TABLE "ico01030260" // name_ico01030260 = Bloodthirsty Table
-#define CRAFT_ANTIQUE_TROPICAL_MAT_1 "ico01060280_01" // name_ico01060280 = Antique Tropical Mat
-#define CRAFT_OCCULT_LOW_TABLE "ico01030270" // name_ico01030270 = Occult Low Table
-#define CRAFT_FRESH_VEGETABLES_1 "ico01090510_01" // name_ico01090510 = Fresh Vegetables
-#define CRAFT_MENU_STAND_1 "ico03010350_01" // name_ico03010350 = Menu Stand
-#define CRAFT_BOUNTIFUL_HARVEST_BOX "ico01091340" // name_ico01091340 = Bountiful Harvest Box
-#define CRAFT_FOREST_DINING_TABLE "ico01030280" // name_ico01030280 = Forest Dining Table
-#define CRAFT_NATURAL_WALL "ico01070020" // name_ico01070020 = Natural Wall
-#define CRAFT_JOVIAL_MASK "ico02020010" // name_ico02020010 = Jovial Mask
-#define CRAFT_SWORDFIGHTERS_BARREL "ico01091350" // name_ico01091350 = Swordfighter's Barrel
-#define CRAFT_FOREST_LOW_TABLE "ico01030290" // name_ico01030290 = Forest Low Table
-#define CRAFT_OLD_CASTELE_WALL "ico01070030" // name_ico01070030 = Old Castele Wall
-#define CRAFT_CUP_OF_COCONUT_JUICE "ico03011000" // name_ico03011000 = Cup of Coconut Juice
-#define CRAFT_INGOT_PILE "ico01091240" // name_ico01091240 = Ingot Pile
-#define CRAFT_FOREST_CABINET "ico01030300" // name_ico01030300 = Forest Cabinet
-#define CRAFT_ROYAL_CAPITAL_WALL "ico01070160" // name_ico01070160 = Royal Capital Wall
-#define CRAFT_ARCHERY_TARGET_1 "ico04050210_01" // name_ico04050210 = Archery Target?
-#define CRAFT_SLEEPY_PILLOW "ico05010190" // name_ico05010190 = Sleepy Pillow
-#define CRAFT_CHALKBOARD "ico01091210" // name_ico01091210 = Chalkboard
-#define CRAFT_PARASOL_TABLE "ico01030350" // name_ico01030350 = Parasol Table
-#define CRAFT_SWORDFISH_TAPESTRY "ico01091220" // name_ico01091220 = Swordfish Tapestry
-#define CRAFT_STONE_COUNTERTOP "ico01030360" // name_ico01030360 = Stone Countertop
-#define CRAFT_BENCH_OF_THE_CHOSEN_1 "ico01020350_01" // name_ico01020350 = Bench of the Chosen
-#define CRAFT_CLOVER_RUG_1 "ico01060210_01" // name_ico01060210 = Clover Rug
-#define CRAFT_SPINNING_WHEEL "ico01091230" // name_ico01091230 = Spinning Wheel
-#define CRAFT_LONG_STONE_COUNTERTOP "ico01030370" // name_ico01030370 = Long Stone Countertop
-#define CRAFT_SHORE_WALL "ico01070110" // name_ico01070110 = Shore Wall
-#define CRAFT_WOODEN_SHELF "ico01030380" // name_ico01030380 = Wooden Shelf
-#define CRAFT_FOREST_FENCE_1 "ico04040100_01" // name_ico04040100 = Forest Fence
-#define CRAFT_REGAL_LOW_TABLE "ico01030410" // name_ico01030410 = Regal Low Table
-#define CRAFT_MENU_BOARD "ico01090250" // name_ico01090250 = Menu Board
-#define CRAFT_REGAL_CHEST "ico01030420" // name_ico01030420 = Regal Chest
-#define CRAFT_REGAL_CABINET "ico01030430" // name_ico01030430 = Regal Cabinet
-#define CRAFT_WORKERS_DESK "ico01090270" // name_ico01090270 = Worker's Desk
-#define CRAFT_TEA_TABLE "ico01030440" // name_ico01030440 = Tea Table
-#define CRAFT_WOVEN_SACK "ico01090200" // name_ico01090200 = Woven Sack
-#define CRAFT_FISH_DRYING_RACK "ico01091180" // name_ico01091180 = Fish Drying Rack
-#define CRAFT_TROPICAL_BED "ico01040010" // name_ico01040010 = Tropical Bed
-#define CRAFT_CARPENTERS_TROPHY "ico03010530" // name_ico03010530 = Carpenter's Trophy
-#define CRAFT_STONE_FLOWER_BED "ico04050050" // name_ico04050050 = Stone Flower Bed
-#define CRAFT_WOODEN_BED "ico01040050" // name_ico01040050 = Wooden Bed
-#define CRAFT_BIG_CACTUS "ico03010570" // name_ico03010570 = Big Cactus
-#define CRAFT_REGAL_FLOOR "ico01080150" // name_ico01080150 = Regal Floor
-#define CRAFT_STARRY_NIGHT_RUG "ico01060170" // name_ico01060170 = Starry Night Rug
-#define CRAFT_PASTEL_BED "ico01040051" // name_ico01040051 = Pastel Bed
-#define CRAFT_LUMINOUS_PAINTING_1 "ico02010310_01" // name_ico02010310 = Luminous Painting
-#define CRAFT_PORT_TOWN_BED "ico01040060" // name_ico01040060 = Port Town Bed
-#define CRAFT_TAILORS_TROPHY "ico03010540" // name_ico03010540 = Tailor's Trophy
-#define CRAFT_PASTEL_RUG "ico01060111" // name_ico01060111 = Pastel Rug
-#define CRAFT_PIRATE_BERTH "ico01040070" // name_ico01040070 = Pirate Berth
-#define CRAFT_ALCHEMISTS_TROPHY "ico03010550" // name_ico03010550 = Alchemist's Trophy
-#define CRAFT_TROPICAL_FLOWER_POT "ico04050030" // name_ico04050030 = Tropical Flower Pot
-#define CRAFT_WOODEN_RACK_1 "ico01030090_01" // name_ico01030090 = Wooden Rack
-#define CRAFT_STARRY_NIGHT_BED "ico01040080" // name_ico01040080 = Starry Night Bed
-#define CRAFT_SCIENCE_EQUIPMENT_1 "ico03010330_01" // name_ico03010330 = Science Equipment
-#define CRAFT_NIGHTMARE_BED "ico01040090" // name_ico01040090 = Nightmare Bed
-#define CRAFT_BEACH_BED "ico01040140" // name_ico01040140 = Beach Bed
-#define CRAFT_CELESTIAL_GLOBE "ico03010420" // name_ico03010420 = Celestial Globe
-#define CRAFT_WOODEN_FLOWER_BED "ico04050180" // name_ico04050180 = Wooden Flower Bed
-#define CRAFT_BED_OF_TERROR "ico01040150" // name_ico01040150 = Bed of Terror
-#define CRAFT_PALADINS_TROPHY "ico03010430" // name_ico03010430 = Paladin's Trophy
-#define CRAFT_PLUSHLING_FOUNTAIN "ico04050190" // name_ico04050190 = Plushling Fountain
-#define CRAFT_NOSTALGIC_ORNAMENT "ico03010400" // name_ico03010400 = Nostalgic Ornament
-#define CRAFT_REGAL_BED "ico01040160" // name_ico01040160 = Regal Bed
-#define CRAFT_BLUE_PATTERN_RUG_1 "ico01060290_01" // name_ico01060290 = Blue Pattern Rug
-#define CRAFT_TROPICAL_RUG "ico01060010" // name_ico01060010 = Tropical Rug
-#define CRAFT_TROPICAL_MAT "ico01060020" // name_ico01060020 = Tropical Mat
-#define CRAFT_BLUE_SPOOKY_LAMP_1 "ico01091561_01" // name_ico01091561 = Blue Spooky Lamp
-#define CRAFT_DESERT_FLOOR "ico01080060" // name_ico01080060 = Desert Floor
-#define CRAFT_CUTE_RUG "ico01060080" // name_ico01060080 = Cute Rug
-#define CRAFT_STATUE_OF_FRAJEEL "ico01091570" // name_ico01091570 = Statue of Frajeel
-#define CRAFT_UNSETTLING_STONE_FLOOR "ico01080070" // name_ico01080070 = Unsettling Stone Floor
-#define CRAFT_FLEUR_DE_LIS_MAT "ico01060090" // name_ico01060090 = Fleur-de-lis Mat
-#define CRAFT_SPOOKY_LAMP "ico01091560" // name_ico01091560 = Spooky Lamp
-#define CRAFT_HALF_SAWED_LOG_1 "ico01091234_01" // name_ico01091234 = Half-Sawed Log
-#define CRAFT_PECULIAR_MAT "ico01060100" // name_ico01060100 = Peculiar Mat
-#define CRAFT_WOVEN_CASTELE_RUG "ico01060110" // name_ico01060110 = Woven Castele Rug
-#define CRAFT_WOVEN_CASTELE_MAT "ico01060120" // name_ico01060120 = Woven Castele Mat
-#define CRAFT_SHORE_FLOOR "ico01080110" // name_ico01080110 = Shore Floor
-#define CRAFT_PORT_TOWN_RUG "ico01060130" // name_ico01060130 = Port Town Rug
-#define CRAFT_ROYAL_CAPITAL_FLOOR "ico01080160" // name_ico01080160 = Royal Capital Floor
-#define CRAFT_PORT_TOWN_MAT "ico01060140" // name_ico01060140 = Port Town Mat
-#define CRAFT_STARRY_GARDEN_FLOOR "ico01080170" // name_ico01080170 = Starry Garden Floor
-#define CRAFT_SHIP_DECK_RUG "ico01060150" // name_ico01060150 = Ship Deck Rug
-#define CRAFT_LOG_FLOOR "ico01080140" // name_ico01080140 = Log Floor
-#define CRAFT_PIRATE_MAT "ico01060160" // name_ico01060160 = Pirate Mat
-#define CRAFT_STARRY_NIGHT_MAT "ico01060180" // name_ico01060180 = Starry Night Mat
-#define CRAFT_WOODEN_WORKBENCH_1 "ico01100020_01" // name_ico01100020 = Wooden Workbench
-#define CRAFT_UNDERWORLD_RUG "ico01060190" // name_ico01060190 = Underworld Rug
-#define CRAFT_CLOVER_RUG "ico01060210" // name_ico01060210 = Clover Rug
-#define CRAFT_LEAF_MAT "ico01060220" // name_ico01060220 = Leaf Mat
-#define CRAFT_LITTLE_BROTHER_BUST "ico05010490" // name_ico05010490 = Little Brother Bust
-#define CRAFT_SPIRAL_MAT "ico01060300" // name_ico01060300 = Spiral Mat
-#define CRAFT_PALADINS_MANNEQUIN "ico01091410" // name_ico01091410 = Paladin's Mannequin
-#define CRAFT_GREEN_RUG "ico01060340" // name_ico01060340 = Green Rug
-#define CRAFT_BLUE_BANNER "ico01091450" // name_ico01091450 = Blue Banner
-#define CRAFT_TAILORS_TROPHY_1 "ico03010540_01" // name_ico03010540 = Tailor's Trophy
-#define CRAFT_STRAW_MAT "ico01060350" // name_ico01060350 = Straw Mat
-#define CRAFT_PORT_TOWN_BED_1 "ico01040060_01" // name_ico01040060 = Port Town Bed
-#define CRAFT_DECORATIVE_CURTAIN "ico01091440" // name_ico01091440 = Decorative Curtain
-#define CRAFT_GODFISH_PRINT "ico02010440" // name_ico02010440 = Godfish Print
-#define CRAFT_STARRY_EYED_RUG "ico01060400" // name_ico01060400 = Starry-Eyed Rug
-#define CRAFT_BLUESCALE_LORDFISH_PRINT "ico02010450" // name_ico02010450 = Bluescale Lordfish Print
-#define CRAFT_YOUNG_KINGS_RUG "ico01060410" // name_ico01060410 = Young King's Rug
-#define CRAFT_FAMILY_PORTRAIT "ico02010460" // name_ico02010460 = Family Portrait
-#define CRAFT_ORANGE_RUG "ico01060420" // name_ico01060420 = Orange Rug
-#define CRAFT_UNFAMILIAR_MAP "ico02010470" // name_ico02010470 = Unfamiliar Map
-#define CRAFT_STRAW_RUG "ico01060430" // name_ico01060430 = Straw Rug
-#define CRAFT_FOREST_LORDFISH_PRINT "ico02010400" // name_ico02010400 = Forest Lordfish Print
-#define CRAFT_SOFT_RUSH_RUG "ico01060440" // name_ico01060440 = Soft Rush Rug
-#define CRAFT_COLDWATER_TUNA_PRINT "ico02010410" // name_ico02010410 = Coldwater Tuna Print
-#define CRAFT_FLOWERY_RUG "ico01060450" // name_ico01060450 = Flowery Rug
-#define CRAFT_MYSTERIOUS_DOOR "ico01091370" // name_ico01091370 = Mysterious Door
-#define CRAFT_WOODEN_SHELF_1 "ico01030380_01" // name_ico01030380 = Wooden Shelf
-#define CRAFT_TROPICAL_WALL "ico01070010" // name_ico01070010 = Tropical Wall
-#define CRAFT_GREEN_WREATH "ico02010610" // name_ico02010610 = Green Wreath
-#define CRAFT_PASTEL_CHEST_1 "ico01030161_01" // name_ico01030161 = Pastel Chest
-#define CRAFT_PASTEL_WALL "ico01070031" // name_ico01070031 = Pastel Wall
-#define CRAFT_HAT_HOOK "ico02020060" // name_ico02020060 = Hat Hook
-#define CRAFT_LIDDED_JAR "ico01091320" // name_ico01091320 = Lidded Jar
-#define CRAFT_PLASTER_WALL "ico01070040" // name_ico01070040 = Plaster Wall
-#define CRAFT_SPOOKY_LAMP_1 "ico01091560_01" // name_ico01091560 = Spooky Lamp
-#define CRAFT_FLEUR_DE_LIS_MAT_1 "ico01060090_01" // name_ico01060090 = Fleur-de-lis Mat
-#define CRAFT_UNSETTLING_STONE_FLOOR_1 "ico01080070_01" // name_ico01080070 = Unsettling Stone Floor
-#define CRAFT_STACKED_CRATES "ico01091330" // name_ico01091330 = Stacked Crates
-#define CRAFT_PIRATE_SHIP_WALL "ico01070050" // name_ico01070050 = Pirate Ship Wall
-#define CRAFT_MUSTACHIOED_HELMET "ico05010080" // name_ico05010080 = Mustachioed Helmet
-#define CRAFT_NATURAL_CHAIR "ico01091300" // name_ico01091300 = Natural Chair
-#define CRAFT_AL_MAAJIKAN_WALL "ico01070060" // name_ico01070060 = Al Maajikan Wall
-#define CRAFT_KNIGHT_FLAN "ico05010090" // name_ico05010090 = Knight Flan
-#define CRAFT_WALL_LAMP "ico02020050" // name_ico02020050 = Wall Lamp
-#define CRAFT_FISH_TRAP "ico01091310" // name_ico01091310 = Fish Trap
-#define CRAFT_ENCHANTED_WALL "ico01070070" // name_ico01070070 = Enchanted Wall
-#define CRAFT_REGAL_CHAIR_1 "ico01020390_01" // name_ico01020390 = Regal Chair
-#define CRAFT_FRAJEELS_PROTEIN "ico03011020" // name_ico03011020 = Frajeel's Protein
-#define CRAFT_TILED_CABINET_1 "ico01030210_01" // name_ico01030210 = Tiled Cabinet
-#define CRAFT_BARRELS_OF_WHEAT_JUICE "ico01091260" // name_ico01091260 = Barrels of Wheat Juice
-#define CRAFT_LOG_WALL "ico01070140" // name_ico01070140 = Log Wall
-#define CRAFT_REMS_COCONUT_BENTO_BOX "ico03011030" // name_ico03011030 = Rem's Coconut Bento Box
-#define CRAFT_NOTICE_BOARD "ico01091270" // name_ico01091270 = Notice Board
-#define CRAFT_REGAL_WALLPAPER "ico01070150" // name_ico01070150 = Regal Wallpaper
-#define CRAFT_ORE_NAMENT_1 "ico01091232_01" // name_ico01091232 = Ore-nament
-#define CRAFT_IKEBANA "ico03011010" // name_ico03011010 = Ikebana
-#define CRAFT_LOG_FLOWER_BOX "ico01091250" // name_ico01091250 = Log Flower Box
-#define CRAFT_STARRY_GARDEN_WALL "ico01070170" // name_ico01070170 = Starry Garden Wall
-#define CRAFT_TEA_HOUSE_WALL "ico01070190" // name_ico01070190 = Tea House Wall
-#define CRAFT_JOINED_WOOD_FLOOR "ico01080010" // name_ico01080010 = Joined Wood Floor
-#define CRAFT_HARP "ico01091500" // name_ico01091500 = Harp
-#define CRAFT_STONE_TILE_FLOOR "ico01080020" // name_ico01080020 = Stone Tile Floor
-#define CRAFT_FLOWER_PAINTING "ico01091530" // name_ico01091530 = Flower Painting
-#define CRAFT_HAT_HOOK_1 "ico02020060_01" // name_ico02020060 = Hat Hook
-#define CRAFT_TROPHY "ico01091520" // name_ico01091520 = Trophy
-#define CRAFT_LIDDED_JAR_1 "ico01091320_01" // name_ico01091320 = Lidded Jar
-#define CRAFT_WOODEN_FLOOR "ico01080030" // name_ico01080030 = Wooden Floor
-#define CRAFT_BEACH_CHAIR_1 "ico01020280_01" // name_ico01020280 = Beach Chair
-#define CRAFT_WOODEN_PARTITION_1 "ico01091510_01" // name_ico01091510 = Wooden Partition
-#define CRAFT_MODEST_GARLAND "ico02010590" // name_ico02010590 = Modest Garland
-#define CRAFT_PASTEL_FLOOR "ico01080031" // name_ico01080031 = Pastel Floor
-#define CRAFT_HAY_TROUGH_1 "ico01091400_01" // name_ico01091400 = Hay Trough
-#define CRAFT_TEA_HOUSE_FLOOR "ico01080190" // name_ico01080190 = Tea House Floor
-#define CRAFT_RED_PATTERN_RUG_1 "ico01060310_01" // name_ico01060310 = Red Pattern Rug
-#define CRAFT_SULTANS_TOILET_1 "ico01090920_01" // name_ico01090920 = Sultan's Toilet
-#define CRAFT_TROPICAL_DRESSER "ico01090010" // name_ico01090010 = Tropical Dresser
-#define CRAFT_TROPICAL_CABINET "ico01090020" // name_ico01090020 = Tropical Cabinet
-#define CRAFT_BOUNTIFUL_HARVEST_RACK "ico01090050" // name_ico01090050 = Bountiful Harvest Rack
-#define CRAFT_POSTER_OF_FRAJEEL "ico02010790" // name_ico02010790 = Poster of Frajeel
-#define CRAFT_BLANK_CANVAS "ico01090110" // name_ico01090110 = Blank Canvas
-#define CRAFT_TEA_HOUSE_WALL_1 "ico01070190_01" // name_ico01070190 = Tea House Wall
-#define CRAFT_RUSTIC_STANDING_TORCH "ico01090150" // name_ico01090150 = Rustic Standing Torch
-#define CRAFT_STACK_OF_FIREWOOD "ico01090160" // name_ico01090160 = Stack of Firewood
-#define CRAFT_STARRY_TREE "ico06010080" // name_ico06010080 = Starry Tree
-#define CRAFT_BARREL "ico01090180" // name_ico01090180 = Barrel
-#define CRAFT_CHERRY_TREE "ico06010060" // name_ico06010060 = Cherry Tree
-#define CRAFT_DESERT_BENCH_1 "ico01020330_01" // name_ico01020330 = Desert Bench
-#define CRAFT_RUSTIC_JAR "ico01090190" // name_ico01090190 = Rustic Jar
-#define CRAFT_SUGAR_TREE "ico06010070" // name_ico06010070 = Sugar Tree
-#define CRAFT_SURFBOARD "ico01090280" // name_ico01090280 = Surfboard
-#define CRAFT_SANSEVIERIA_PLANT "ico01090320" // name_ico01090320 = Sansevieria Plant
-#define CRAFT_POTTED_COCONUT "ico01090330" // name_ico01090330 = Potted Coconut
-#define CRAFT_PASTEL_TABLE_1 "ico01030141_01" // name_ico01030141 = Pastel Table
-#define CRAFT_WHITE_FLOWER_VASE "ico01090350" // name_ico01090350 = White Flower Vase
-#define CRAFT_PINK_FLOWER_VASE "ico01090351" // name_ico01090351 = Pink Flower Vase
-#define CRAFT_COUNTRY_WOOD_POT "ico05010250" // name_ico05010250 = Country Wood Pot
-#define CRAFT_OCCULT_LOW_TABLE_1 "ico01030270_01" // name_ico01030270 = Occult Low Table
-#define CRAFT_CELESTIAS_GIFT_IN_VASE "ico01090360" // name_ico01090360 = Celestia's Gift in Vase
-#define CRAFT_TREASURE_CHEST "ico01090380" // name_ico01090380 = Treasure Chest
-#define CRAFT_WOODCUTTERS_STUMP "ico01090420" // name_ico01090420 = Woodcutter's Stump
-#define CRAFT_FLOATIE_RING_1 "ico01090970_01" // name_ico01090970 = Floatie Ring
-#define CRAFT_PORT_TOWN_FENCE "ico04040060" // name_ico04040060 = Port Town Fence
-#define CRAFT_MAGIC_BROOM "ico01090480" // name_ico01090480 = Magic Broom
-#define CRAFT_MINERS_TOOLS "ico01090490" // name_ico01090490 = Miner's Tools
-#define CRAFT_PIRATE_CHAIR_1 "ico01020170_01" // name_ico01020170 = Pirate Chair
-#define CRAFT_STRANGERS_GRAVE "ico04050330" // name_ico04050330 = Stranger's Grave
-#define CRAFT_BOTTLE_SET "ico03010310" // name_ico03010310 = Bottle Set
-#define CRAFT_WHITE_FLOWER_VASE_1 "ico01090350_01" // name_ico01090350 = White Flower Vase
-#define CRAFT_FARMING_TOOL_STAND "ico01090550" // name_ico01090550 = Farming Tool Stand
-#define CRAFT_EGG_SHELF "ico01091235" // name_ico01091235 = Egg Shelf
-#define CRAFT_SEWING_MACHINE "ico01090580" // name_ico01090580 = Sewing Machine
-#define CRAFT_HEROS_MANNEQUIN_1 "ico01091420_01" // name_ico01091420 = Hero's Mannequin
-#define CRAFT_PASTEL_WOVEN_MAT_1 "ico01060330_01" // name_ico01060330 = Pastel Woven Mat
-#define CRAFT_WOODCUTTERS_TOOLS_1 "ico02010230_01" // name_ico02010230 = Woodcutter's Tools
-#define CRAFT_TAILORS_MANNEQUIN "ico01090590" // name_ico01090590 = Tailor's Mannequin
-#define CRAFT_COCONUT_PLANT "ico01090620" // name_ico01090620 = Coconut Plant
-#define CRAFT_WOODEN_PALETTE "ico03010060" // name_ico03010060 = Wooden Palette
-#define CRAFT_DRAFTING_TABLE "ico01090640" // name_ico01090640 = Drafting Table
-#define CRAFT_WOVEN_CASTELE_MAT_1 "ico01060120_01" // name_ico01060120 = Woven Castele Mat
-#define CRAFT_GRANDFATHER_CLOCK "ico01090650" // name_ico01090650 = Grandfather Clock
-#define CRAFT_BREAKFAST_SET "ico03010010" // name_ico03010010 = Breakfast Set
-#define CRAFT_WOODEN_TRINKET_SHELF "ico01090680" // name_ico01090680 = Wooden Trinket Shelf
-#define CRAFT_WOODEN_BOOKCASE "ico01090700" // name_ico01090700 = Wooden Bookcase
-#define CRAFT_CARPENTERS_TOOLS "ico03010140" // name_ico03010140 = Carpenter's Tools
-#define CRAFT_ALCHEMY_TABLE "ico01090720" // name_ico01090720 = Alchemy Table
-#define CRAFT_ENCYCLOPEDIA "ico03010160" // name_ico03010160 = Encyclopedia
-#define CRAFT_ARTSY_DESK "ico01090730" // name_ico01090730 = Artsy Desk
-#define CRAFT_CLASSIC_LAMP "ico03010170" // name_ico03010170 = Classic Lamp
-#define CRAFT_FULL_COURSE_DINNER "ico03010100" // name_ico03010100 = Full-Course Dinner
-#define CRAFT_STONE_OVEN_1 "ico01091237_01" // name_ico01091237 = Stone Oven
-#define CRAFT_COUNTRY_SHELF "ico01090740" // name_ico01090740 = Country Shelf
-#define CRAFT_WOODEN_WARDROBE "ico01090760" // name_ico01090760 = Wooden Wardrobe
-#define CRAFT_LETTER_SET "ico03010120" // name_ico03010120 = Letter Set
-#define CRAFT_PASTEL_WARDROBE "ico01090761" // name_ico01090761 = Pastel Wardrobe
-#define CRAFT_SHAMANS_PAINTING "ico05010480" // name_ico05010480 = Shaman's Painting
-#define CRAFT_PARASOL_TABLE_1 "ico01030350_01" // name_ico01030350 = Parasol Table
-#define CRAFT_TRIPS_ARTSY_PORTRAIT "ico01091700" // name_ico01091700 = Trip's Artsy Portrait
-#define CRAFT_FOREST_CHEST "ico01090880" // name_ico01090880 = Forest Chest
-#define CRAFT_CHALKBOARD_1 "ico01091210_01" // name_ico01091210 = Chalkboard
-#define CRAFT_STARRY_NIGHT_WARDROBE_1 "ico01090810_01" // name_ico01090810 = Starry Night Wardrobe
-#define CRAFT_SULTANS_TOILET "ico01090920" // name_ico01090920 = Sultan's Toilet
-#define CRAFT_BEACH_BALL "ico01090960" // name_ico01090960 = Beach Ball
-#define CRAFT_FLOATIE_RING "ico01090970" // name_ico01090970 = Floatie Ring
-#define CRAFT_PLATINUM_DEPOSIT "ico06020050" // name_ico06020050 = Platinum Deposit
-#define CRAFT_GLASS_FLOAT_1 "ico03010900_01" // name_ico03010900 = Glass Float
-#define CRAFT_PILE_OF_PIRATE_TREASURE "ico01091080" // name_ico01091080 = Pile of Pirate Treasure
-#define CRAFT_TAIKO_DRUM "ico01091130" // name_ico01091130 = Taiko Drum
-#define CRAFT_STACKED_STONE_SLABS "ico03010580" // name_ico03010580 = Stacked Stone Slabs
-#define CRAFT_PALACE_WALL_1 "ico04040080_01" // name_ico04040080 = Palace Wall
-#define CRAFT_TRIP_DOLL_1 "ico03010200_01" // name_ico03010200 = Trip Doll
-#define CRAFT_TROPICAL_VASE "ico01091140" // name_ico01091140 = Tropical Vase
-#define CRAFT_MEAT_ROASTING_CAMPFIRE "ico04050090" // name_ico04050090 = Meat Roasting Campfire
-#define CRAFT_HEARTH_WITH_FISH "ico01091190" // name_ico01091190 = Hearth With Fish
-#define CRAFT_BLACKSMITHS_TROPHY "ico03010520" // name_ico03010520 = Blacksmith's Trophy
-#define CRAFT_RED_FLOWER_POT "ico04050040" // name_ico04050040 = Red Flower Pot
-#define CRAFT_TROPICAL_FLOWER_WREATH "ico02010110_01" // name_ico02010110 = Tropical Flower Wreath
-#define CRAFT_PLATE_OF_ROASTED_CORN_1 "ico03010630_01" // name_ico03010630 = Plate of Roasted Corn
-#define CRAFT_PLATE_OF_HOMEMADE_CAKE "ico03011040" // name_ico03011040 = Plate of Homemade Cake
-#define CRAFT_WITCHS_BROOM "ico05010180" // name_ico05010180 = Witch's Broom
-#define CRAFT_BEAKER_SET "ico01091200" // name_ico01091200 = Beaker Set
-#define CRAFT_TAILORED_CLOTHES "ico01091231" // name_ico01091231 = Tailored Clothes
-#define CRAFT_ORE_NAMENT "ico01091232" // name_ico01091232 = Ore-nament
-#define CRAFT_HALF_SAWED_LOG "ico01091234" // name_ico01091234 = Half-Sawed Log
-#define CRAFT_STOVE "ico01091236" // name_ico01091236 = Stove
-#define CRAFT_STONE_OVEN "ico01091237" // name_ico01091237 = Stone Oven
-#define CRAFT_QUIRKY_HAMMER "ico05010300" // name_ico05010300 = Quirky Hammer
-#define CRAFT_BIBLIOPHILES_BOOKCASE_1 "ico01091280_01" // name_ico01091280 = Bibliophile's Bookcase
-#define CRAFT_GRINDSTONE "ico01091239" // name_ico01091239 = Grindstone
-#define CRAFT_EASY_GOING_SHIELD "ico05010100" // name_ico05010100 = Easy-Going Shield
-#define CRAFT_BIBLIOPHILES_BOOKCASE "ico01091280" // name_ico01091280 = Bibliophile's Bookcase
-#define CRAFT_LANCERS_BARREL "ico01091360" // name_ico01091360 = Lancer's Barrel
-#define CRAFT_DRIED_FISH_RESERVE "ico02010550" // name_ico02010550 = Dried Fish Reserve
-#define CRAFT_BLUE_SPOOKY_LAMP "ico01091561" // name_ico01091561 = Blue Spooky Lamp
-#define CRAFT_RED_SPOOKY_LAMP "ico01091563" // name_ico01091563 = Red Spooky Lamp
-#define CRAFT_PLUSHLING_STATUE "ico01091600" // name_ico01091600 = Plushling Statue
-#define CRAFT_BRICK_LINED_SHRUB "ico04050170" // name_ico04050170 = Brick Lined Shrub
-#define CRAFT_TURTLE_AND_LEAFE_STATUE "ico01091610" // name_ico01091610 = Turtle and Leafe Statue
-#define CRAFT_MERMAID_STATUE "ico01091620" // name_ico01091620 = Mermaid Statue
-#define CRAFT_SWORDFISH_SKELETON_1 "ico02010530_01" // name_ico02010530 = Swordfish Skeleton
-#define CRAFT_OWL_STATUE "ico01091630" // name_ico01091630 = Owl Statue
-#define CRAFT_ANCIENT_ROBOT_MODEL "ico01091650" // name_ico01091650 = Ancient Robot Model
-#define CRAFT_WOODCUTTERS_TROPHY "ico03010480" // name_ico03010480 = Woodcutter's Trophy
-#define CRAFT_ETERNIA_WINDMILL "ico04050120" // name_ico04050120 = Eternia Windmill
-#define CRAFT_TILED_LOW_TABLE_1 "ico01030190_01" // name_ico01030190 = Tiled Low Table
-#define CRAFT_BECKONING_STREETLAMP_1 "ico04010060_01" // name_ico04010060 = Beckoning Streetlamp
-#define CRAFT_ROYAL_FAMILY_PORTRAIT_1 "ico02010130_01" // name_ico02010130 = Royal Family Portrait
-#define CRAFT_LEAFE_TOPIARY "ico01091660" // name_ico01091660 = Leafe Topiary
-#define CRAFT_WOODEN_CLOTHESLINE "ico04050110" // name_ico04050110 = Wooden Clothesline
-#define CRAFT_STANDING_TORCH_WITH_FLAG "ico01091670" // name_ico01091670 = Standing Torch With Flag
-#define CRAFT_TRIPS_COOL_PORTRAIT "ico01091690" // name_ico01091690 = Trip's Cool Portrait
-#define CRAFT_MERCENARYS_TROPHY "ico03010440" // name_ico03010440 = Mercenary's Trophy
-#define CRAFT_TROPICAL_FLOWER_POT_1 "ico04050030_01" // name_ico04050030 = Tropical Flower Pot
-#define CRAFT_ALCHEMISTS_TROPHY_1 "ico03010550_01" // name_ico03010550 = Alchemist's Trophy
-#define CRAFT_PIRATE_BERTH_1 "ico01040070_01" // name_ico01040070 = Pirate Berth
-#define CRAFT_SHIPWHEEL_TAPESTRY "ico02010070" // name_ico02010070 = Shipwheel Tapestry
-#define CRAFT_FRESHLY_PICKED_WREATH "ico02010100" // name_ico02010100 = Freshly Picked Wreath
-#define CRAFT_STARRY_NIGHT_STREETLAMP "ico04010050" // name_ico04010050 = Starry Night Streetlamp
-#define CRAFT_TROPICAL_FLOWER_WREATH_1 "ico02010110" // name_ico02010110 = Tropical Flower Wreath
-#define CRAFT_PORTRAIT_OF_ERIK "ico02010120" // name_ico02010120 = Portrait of Erik
-#define CRAFT_FOREST_LILY_LIGHT "ico04010070" // name_ico04010070 = Forest Lily Light
-#define CRAFT_SWORDFISH_TAPESTRY_1 "ico01091220_01" // name_ico01091220 = Swordfish Tapestry
-#define CRAFT_ROYAL_FAMILY_PORTRAIT "ico02010130" // name_ico02010130 = Royal Family Portrait
-#define CRAFT_BECKONING_STREETLAMP "ico04010060" // name_ico04010060 = Beckoning Streetlamp
-#define CRAFT_FISH_FOR_LIFE_FLAG "ico02010200" // name_ico02010200 = Fish-for-Life Flag
-#define CRAFT_SHORE_WALL_1 "ico01070110_01" // name_ico01070110 = Shore Wall
-#define CRAFT_GREATSWORD_OF_YORE "ico02010210" // name_ico02010210 = Greatsword of Yore
-#define CRAFT_LONG_STONE_COUNTERTOP_1 "ico01030370_01" // name_ico01030370 = Long Stone Countertop
-#define CRAFT_WOODEN_CLOTHESLINE_1 "ico04050110_01" // name_ico04050110 = Wooden Clothesline
-#define CRAFT_HUNTERS_GEAR "ico02010220" // name_ico02010220 = Hunter's Gear
-#define CRAFT_LEAFE_TOPIARY_1 "ico01091660_01" // name_ico01091660 = Leafe Topiary
-#define CRAFT_WOODCUTTERS_TOOLS "ico02010230" // name_ico02010230 = Woodcutter's Tools
-#define CRAFT_KITCHEN_UTENSILS "ico02010240" // name_ico02010240 = Kitchen Utensils
-#define CRAFT_ARTISANS_TOOLBOX_1 "ico03010710_01" // name_ico03010710 = Artisan's Toolbox
-#define CRAFT_DARTBOARD "ico02010300" // name_ico02010300 = Dartboard
-#define CRAFT_MINERS_TOOLS_1 "ico01090490_01" // name_ico01090490 = Miner's Tools
-#define CRAFT_STRANGERS_GRAVE_1 "ico04050330_01" // name_ico04050330 = Stranger's Grave
-#define CRAFT_LUMINOUS_PAINTING "ico02010310" // name_ico02010310 = Luminous Painting
-#define CRAFT_SWORDFISH_PRINT "ico02010320" // name_ico02010320 = Swordfish Print
-#define CRAFT_BLUE_TAPESTRY_1 "ico02010560_01" // name_ico02010560 = Blue Tapestry
-#define CRAFT_GOLDEN_SWORDFISH_PRINT "ico02010340" // name_ico02010340 = Golden Swordfish Print
-#define CRAFT_BASS_OF_DARKNESS_PRINT "ico02010360" // name_ico02010360 = Bass of Darkness Print
-#define CRAFT_POSEIDON_SWORDFISH_PRINT "ico02010380" // name_ico02010380 = Poseidon Swordfish Print
-#define CRAFT_DEEP_SEA_LORDFISH_PRINT "ico02010430" // name_ico02010430 = Deep Sea Lordfish Print
-#define CRAFT_FEATHER_ORNAMENT "ico02010480" // name_ico02010480 = Feather Ornament
-#define CRAFT_FISHING_ROD_RACK "ico02010490" // name_ico02010490 = Fishing Rod Rack
-#define CRAFT_RUSTIC_WOVEN_TAPESTRY "ico02010500" // name_ico02010500 = Rustic Woven Tapestry
-#define CRAFT_TROPICAL_LOW_TABLE_1 "ico01030020_01" // name_ico01030020 = Tropical Low Table
-#define CRAFT_BIG_FISHING_HOOK "ico02010510" // name_ico02010510 = Big Fishing Hook
-#define CRAFT_FISHING_NET "ico02010520" // name_ico02010520 = Fishing Net
-#define CRAFT_SWORDFISH_SKELETON "ico02010530" // name_ico02010530 = Swordfish Skeleton
-#define CRAFT_FISH_SKELETON "ico02010540" // name_ico02010540 = Fish Skeleton
-#define CRAFT_WOODEN_BOOKCASE_1 "ico01090700_01" // name_ico01090700 = Wooden Bookcase
-#define CRAFT_CARPENTERS_TOOLS_1 "ico03010140_01" // name_ico03010140 = Carpenter's Tools
-#define CRAFT_BLUE_DECORATIVE_FEATHER "ico02010570" // name_ico02010570 = Blue Decorative Feather
-#define CRAFT_PASTEL_GARLAND "ico02010580" // name_ico02010580 = Pastel Garland
-#define CRAFT_CROWN_WALL_DECORATION "ico02010620" // name_ico02010620 = Crown Wall Decoration
-#define CRAFT_PLATE_OF_POPCORN_1 "ico03010640_01" // name_ico03010640 = Plate of Popcorn
-#define CRAFT_DECORATIVE_FOLDING_FAN "ico02010650" // name_ico02010650 = Decorative Folding Fan
-#define CRAFT_FANCY_WALL_ART "ico02010660" // name_ico02010660 = Fancy Wall Art
-#define CRAFT_SHIP_DECK_RUG_1 "ico01060150_01" // name_ico01060150 = Ship Deck Rug
-#define CRAFT_STARRY_GARDEN_FLOOR_1 "ico01080170_01" // name_ico01080170 = Starry Garden Floor
-#define CRAFT_NOSTALGIC_PAINTING "ico02010680" // name_ico02010680 = Nostalgic Painting
-#define CRAFT_BLACK_DRAGON_PAINTING "ico02010690" // name_ico02010690 = Black Dragon Painting
-#define CRAFT_WEIRD_MONITOR "ico02010700" // name_ico02010700 = Weird Monitor
-#define CRAFT_DRIED_LEAF_ART "ico02010710" // name_ico02010710 = Dried Leaf Art
-#define CRAFT_WORKERS_DESK_1 "ico01090270_01" // name_ico01090270 = Worker's Desk
-#define CRAFT_REGAL_CABINET_1 "ico01030430_01" // name_ico01030430 = Regal Cabinet
-#define CRAFT_PLAINS_LORDFISH_PRINT "ico02010720" // name_ico02010720 = Plains Lordfish Print
-#define CRAFT_DARTBOARD_1 "ico02010300_01" // name_ico02010300 = Dartboard
-#define CRAFT_CHERRY_LORDFISH_PRINT "ico02010730" // name_ico02010730 = Cherry Lordfish Print
-#define CRAFT_CRYSTALLINE_BASS_PRINT "ico02010760" // name_ico02010760 = Crystalline Bass Print
-#define CRAFT_MEMORY_BOARD "ico02020100" // name_ico02020100 = Memory Board
-#define CRAFT_YARN_BALL "ico03010890" // name_ico03010890 = Yarn Ball
-#define CRAFT_WALL_CANDLE "ico02020120" // name_ico02020120 = Wall Candle
-#define CRAFT_MOUNTED_SHELF "ico02020130" // name_ico02020130 = Mounted Shelf
-#define CRAFT_DIG_IN_DINING_SET "ico03010090" // name_ico03010090 = Dig-In Dining Set
-#define CRAFT_MYSTERIOUS_DOOR_1 "ico01091370_01" // name_ico01091370 = Mysterious Door
-#define CRAFT_STANDING_LAMP "ico03010180" // name_ico03010180 = Standing Lamp
-#define CRAFT_TRIP_DOLL "ico03010200" // name_ico03010200 = Trip Doll
-#define CRAFT_PALACE_WALL "ico04040080" // name_ico04040080 = Palace Wall
-#define CRAFT_SWORDFISH_PRINT_1 "ico02010320_01" // name_ico02010320 = Swordfish Print
-#define CRAFT_PLUSHLING_DOLL "ico03010220" // name_ico03010220 = Plushling Doll
-#define CRAFT_HOURGLASS "ico03010230" // name_ico03010230 = Hourglass
-#define CRAFT_AFTERNOON_TEA_SET "ico03010270" // name_ico03010270 = Afternoon Tea Set
-#define CRAFT_PASTEL_MAT_1 "ico01060121_01" // name_ico01060121 = Pastel Mat
-#define CRAFT_LEAFE_ORNAMENT "ico03010410" // name_ico03010410 = Leafe Ornament
-#define CRAFT_MINERS_TROPHY "ico03010470" // name_ico03010470 = Miner's Trophy
-#define CRAFT_FARMERS_TROPHY "ico03010490" // name_ico03010490 = Farmer's Trophy
-#define CRAFT_STONE_PILLAR "ico04050130" // name_ico04050130 = Stone Pillar
-#define CRAFT_ROYAL_CAPITAL_WALL_1 "ico01070160_01" // name_ico01070160 = Royal Capital Wall
-#define CRAFT_FOREST_CABINET_1 "ico01030300_01" // name_ico01030300 = Forest Cabinet
-#define CRAFT_ANGLERS_TROPHY "ico03010500" // name_ico03010500 = Angler's Trophy
-#define CRAFT_WELL "ico04050060" // name_ico04050060 = Well
-#define CRAFT_COOKS_TROPHY "ico03010510" // name_ico03010510 = Cook's Trophy
-#define CRAFT_CAMPFIRE "ico04050070" // name_ico04050070 = Campfire
-#define CRAFT_ANTIQUE_ABACUS "ico03010590" // name_ico03010590 = Antique Abacus
-#define CRAFT_SHIPWHEEL_TAPESTRY_1 "ico02010070_01" // name_ico02010070 = Shipwheel Tapestry
-#define CRAFT_PLATE_OF_ROASTED_FISH "ico03010620" // name_ico03010620 = Plate of Roasted Fish
-#define CRAFT_WOODEN_LOW_TABLE_1 "ico01030150_01" // name_ico01030150 = Wooden Low Table
-#define CRAFT_MODEST_GARLAND_1 "ico02010590_01" // name_ico02010590 = Modest Garland
-#define CRAFT_PLATE_OF_ROASTED_CORN "ico03010630" // name_ico03010630 = Plate of Roasted Corn
-#define CRAFT_PLATE_OF_POPCORN "ico03010640" // name_ico03010640 = Plate of Popcorn
-#define CRAFT_BOWL_OF_BUTTERED_CORN "ico03010650" // name_ico03010650 = Bowl of Buttered Corn
-#define CRAFT_RED_SPOOKY_LAMP_1 "ico01091563_01" // name_ico01091563 = Red Spooky Lamp
-#define CRAFT_KNIFE_AND_CUTTING_BOARD "ico03010670" // name_ico03010670 = Knife and Cutting Board
-#define CRAFT_MILLSTONE "ico03010700" // name_ico03010700 = Millstone
-#define CRAFT_ARTISANS_TOOLBOX "ico03010710" // name_ico03010710 = Artisan's Toolbox
-#define CRAFT_WOODEN_SOFA_1 "ico01020120_01" // name_ico01020120 = Wooden Sofa
-#define CRAFT_INCENSE_BURNER "ico03010740" // name_ico03010740 = Incense Burner
-#define CRAFT_SPOOL_SET "ico03010750" // name_ico03010750 = Spool Set
-#define CRAFT_STACKED_BOOKS "ico03010760" // name_ico03010760 = Stacked Books
-#define CRAFT_FLASK_SET "ico03010770" // name_ico03010770 = Flask Set
-#define CRAFT_HAND_WOVEN_BASKET "ico03010800" // name_ico03010800 = Hand Woven Basket
-#define CRAFT_BIRDY_HELMET "ico03010810" // name_ico03010810 = Birdy Helmet
-#define CRAFT_WHITE_BUTTERFLY_SOFA_1 "ico01020100_01" // name_ico01020100 = White Butterfly Sofa
-#define CRAFT_BIRDY_ARMOR_SET "ico03010820" // name_ico03010820 = Birdy Armor Set
-#define CRAFT_BOX_OF_SHIELDS "ico03010830" // name_ico03010830 = Box of Shields
-#define CRAFT_DECORATIVE_SWORDS "ico03010840" // name_ico03010840 = Decorative Swords
-#define CRAFT_MAGIC_BROOM_1 "ico01090480_01" // name_ico01090480 = Magic Broom
-#define CRAFT_HAGRAM_PARTS "ico03010850" // name_ico03010850 = Hagram Parts
-#define CRAFT_GLASS_FLOAT "ico03010900" // name_ico03010900 = Glass Float
-#define CRAFT_LEANING_SLAB "ico03010920" // name_ico03010920 = Leaning Slab
-#define CRAFT_FLOWERY_RUG_1 "ico01060450_01" // name_ico01060450 = Flowery Rug
-#define CRAFT_COLDWATER_TUNA_PRINT_1 "ico02010410_01" // name_ico02010410 = Coldwater Tuna Print
-#define CRAFT_POT_OF_WATER "ico03010930" // name_ico03010930 = Pot of Water
-#define CRAFT_PLATE_OF_SPIRIT_SALAD "ico03010940" // name_ico03010940 = Plate of Spirit Salad
-#define CRAFT_MIGHTY_MEAT_BOARD "ico03010960" // name_ico03010960 = Mighty Meat Board
-#define CRAFT_STARRY_NIGHT_TABLE_1 "ico01030240_01" // name_ico01030240 = Starry Night Table
-#define CRAFT_PLATE_OF_ROYAL_RICE "ico03010970" // name_ico03010970 = Plate of Royal Rice
-#define CRAFT_PLATE_OF_TRIP_CAKE "ico03010980" // name_ico03010980 = Plate of Trip Cake
-#define CRAFT_GLORIOUS_SHRUB "ico04050460" // name_ico04050460 = Glorious Shrub
-#define CRAFT_COLMS_LEFTOVER_DONUTS "ico03010990" // name_ico03010990 = Colm's Leftover Donuts
-#define CRAFT_DESERT_TOWER "ico04050470" // name_ico04050470 = Desert Tower
-#define CRAFT_STONE_TORCH "ico04010010" // name_ico04010010 = Stone Torch
-#define CRAFT_CLASSIC_STREETLAMP "ico04010020" // name_ico04010020 = Classic Streetlamp
-#define CRAFT_ETERNIA_WINDMILL_1 "ico04050120_01" // name_ico04050120 = Eternia Windmill
-#define CRAFT_WOODCUTTERS_TROPHY_1 "ico03010480_01" // name_ico03010480 = Woodcutter's Trophy
-#define CRAFT_ANCIENT_ROBOT_MODEL_1 "ico01091650_01" // name_ico01091650 = Ancient Robot Model
-#define CRAFT_PORT_TOWN_STREETLAMP "ico04010030" // name_ico04010030 = Port Town Streetlamp
-#define CRAFT_CURSED_FENCE "ico04040090" // name_ico04040090 = Cursed Fence
-#define CRAFT_FOREST_FENCE "ico04040100" // name_ico04040100 = Forest Fence
-#define CRAFT_PORT_TOWN_WALL "ico04040110" // name_ico04040110 = Port Town Wall
-#define CRAFT_TRAINING_DUMMY "ico04050200" // name_ico04050200 = Training Dummy
-#define CRAFT_ARCHERY_TARGET "ico04050210" // name_ico04050210 = Archery Target?
-#define CRAFT_RED_FLOWER_SHRUB "ico04050430" // name_ico04050430 = Red Flower Shrub
-#define CRAFT_SEASIDE_SHRUB "ico04050440" // name_ico04050440 = Seaside Shrub
-#define CRAFT_CORNY_BOTTLE "ico05010160" // name_ico05010160 = Corny Bottle
-#define CRAFT_GREEN_GRASS "ico04080010" // name_ico04080010 = Green Grass
-#define CRAFT_SMALL_TREE "ico04080030" // name_ico04080030 = Small Tree
-#define CRAFT_ALCHEMY_TABLE_1 "ico01090720_01" // name_ico01090720 = Alchemy Table
-#define CRAFT_ENCYCLOPEDIA_1 "ico03010160_01" // name_ico03010160 = Encyclopedia
-#define CRAFT_BERETED_TARGET "ico05010140" // name_ico05010140 = Bereted Target
-#define CRAFT_PLUSHLING_LADY_DOLL "ico05010130" // name_ico05010130 = Plushling Lady Doll
-#define CRAFT_SAPLING "ico04080040" // name_ico04080040 = Sapling
-#define CRAFT_SNOWY_IDOL "ico05010120" // name_ico05010120 = Snowy Idol
-#define CRAFT_YOUNG_TREE "ico04080050" // name_ico04080050 = Young Tree
-#define CRAFT_LOG_FLOWER_BOX_1 "ico01091250_01" // name_ico01091250 = Log Flower Box
-#define CRAFT_IKEBANA_1 "ico03011010_01" // name_ico03011010 = Ikebana
-#define CRAFT_ERUPTUNA_PRINT "ico02010780" // name_ico02010780 = Eruptuna Print
-#define CRAFT_PIRATE_PRINCESS_FLAG "ico05010020" // name_ico05010020 = Pirate Princess Flag
-#define CRAFT_COCONUT_PLANT_1 "ico01090620_01" // name_ico01090620 = Coconut Plant
-#define CRAFT_MAAJIK_DAEMON_STATUE "ico05010030" // name_ico05010030 = Maajik Daemon Statue
-#define CRAFT_STARRY_NIGHT_CABINET_1 "ico01090830_01" // name_ico01090830 = Starry Night Cabinet
-#define CRAFT_DRAGONSLAYERS_SWORD "ico05010060" // name_ico05010060 = Dragonslayer's Sword
-#define CRAFT_FORTUNE_CAT_DOLL "ico05010070" // name_ico05010070 = Fortune Cat Doll
-#define CRAFT_STURDY_WHEELBARROW "ico05010200" // name_ico05010200 = Sturdy Wheelbarrow
-#define CRAFT_CHEERY_WHEAT_JUICE "ico05010210" // name_ico05010210 = Cheery Wheat Juice
-#define CRAFT_COLD_CRYSTAL "ico05010220" // name_ico05010220 = Cold Crystal
-#define CRAFT_HEFTY_BEAR_CARVING "ico05010230" // name_ico05010230 = Hefty Bear Carving
-#define CRAFT_SOOTHING_BASKET "ico05010240" // name_ico05010240 = Soothing Basket
-#define CRAFT_OLD_MAN_ANCHOR "ico05010260" // name_ico05010260 = Old Man Anchor
-#define CRAFT_ANGLERS_HOOD "ico05010270" // name_ico05010270 = Angler's Hood
-#define CRAFT_PORT_TOWN_RUG_1 "ico01060130_01" // name_ico01060130 = Port Town Rug
-#define CRAFT_SHORE_FLOOR_1 "ico01080110_01" // name_ico01080110 = Shore Floor
-#define CRAFT_GRACEFUL_CARP_BANNER "ico05010280" // name_ico05010280 = Graceful Carp Banner
-#define CRAFT_BLUE_DEMONS_TILE "ico05010290" // name_ico05010290 = Blue Demon's Tile
-#define CRAFT_BAMBOO_BENCH_1 "ico01020370_01" // name_ico01020370 = Bamboo Bench
-#define CRAFT_GRAND_STANDING_TORCH_1 "ico01091470_01" // name_ico01091470 = Grand Standing Torch
-#define CRAFT_FRESH_FACED_HELM "ico05010310" // name_ico05010310 = Fresh-Faced Helm
-#define CRAFT_BIG_LEAF_RUG_1 "ico01060360_01" // name_ico01060360 = Big Leaf Rug
-#define CRAFT_CASH_CAT "ico05010320" // name_ico05010320 = Cash Cat
-#define CRAFT_FLUFFY_BEAVER_DOLL "ico05010330" // name_ico05010330 = Fluffy Beaver Doll
-#define CRAFT_WOODEN_DINING_TABLE_1 "ico01030140_01" // name_ico01030140 = Wooden Dining Table
-#define CRAFT_ODD_DRESSER "ico05010340" // name_ico05010340 = Odd Dresser
-#define CRAFT_DANDY_BAT_HAT "ico05010350" // name_ico05010350 = Dandy Bat Hat
-#define CRAFT_WHOLESOME_YARN_BASKET "ico05010360" // name_ico05010360 = Wholesome Yarn Basket
-#define CRAFT_WOOLY_CHAIR "ico05010370" // name_ico05010370 = Wooly Chair
-#define CRAFT_COOK_O_LANTERN "ico05010380" // name_ico05010380 = Cook O'Lantern
-#define CRAFT_ROYAL_YUMMY_STEW "ico05010390" // name_ico05010390 = Royal Yummy Stew
-#define CRAFT_GRACEFUL_FAN "ico05010500" // name_ico05010500 = Graceful Fan
-#define CRAFT_OAK_TREE "ico06010010" // name_ico06010010 = Oak Tree
-#define CRAFT_TROPICAL_CABINET_1 "ico01090020_01" // name_ico01090020 = Tropical Cabinet
-#define CRAFT_STONE_WORKBENCH_1 "ico01100010_01" // name_ico01100010 = Stone Workbench
-#define CRAFT_APPLE_TREE "ico06010020" // name_ico06010020 = Apple Tree
-#define CRAFT_CHERRY_FRUIT_TREE "ico06010030" // name_ico06010030 = Cherry Fruit Tree
-#define CRAFT_PEAR_TREE "ico06010040" // name_ico06010040 = Pear Tree
-#define CRAFT_PINE_TREE "ico06010050" // name_ico06010050 = Pine Tree
-#define CRAFT_PALM_TREE "ico06010110" // name_ico06010110 = Palm Tree
-#define CRAFT_MERCENARYS_BOUNTY_1 "ico01090460_01" // name_ico01090460 = Mercenary's Bounty
-#define CRAFT_STONE_BLOCK_WALL_1 "ico04040020_01" // name_ico04040020 = Stone Block Wall
-#define CRAFT_PALM_FRUIT_TREE "ico06010120" // name_ico06010120 = Palm Fruit Tree
-#define CRAFT_COPPER_DEPOSIT "ico06020010" // name_ico06020010 = Copper Deposit
-#define CRAFT_IRON_ORE_DEPOSIT "ico06020020" // name_ico06020020 = Iron Ore Deposit
-#define CRAFT_SILVER_ORE_DEPOSIT "ico06020030" // name_ico06020030 = Silver Ore Deposit
-#define CRAFT_GOLD_DEPOSIT "ico06020040" // name_ico06020040 = Gold Deposit
-#define CRAFT_MAGIC_ORE_DEPOSIT "ico06020060" // name_ico06020060 = Magic Ore Deposit
-#define CRAFT_TROPICAL_CHAIR_1 "ico01020020_01" // name_ico01020020 = Tropical Chair
-#define CRAFT_TROPICAL_WOODEN_BENCH_1 "ico01020040_01" // name_ico01020040 = Tropical Wooden Bench
-#define CRAFT_ROUND_WOODEN_CHAIR_1 "ico01020070_01" // name_ico01020070 = Round Wooden Chair
-#define CRAFT_CLASSIC_BENCH_1 "ico01020080_01" // name_ico01020080 = Classic Bench
-#define CRAFT_WOODEN_BENCH_1 "ico01020090_01" // name_ico01020090 = Wooden Bench
-#define CRAFT_SULTANS_CHAIR_1 "ico01020110_01" // name_ico01020110 = Sultan's Chair
-#define CRAFT_PASTEL_SOFA_1 "ico01020121_01" // name_ico01020121 = Pastel Sofa
-#define CRAFT_WOODEN_CHAIR_1 "ico01020130_01" // name_ico01020130 = Wooden Chair
-#define CRAFT_LIGHT_BLUE_TAPESTRY_1 "ico02010290_01" // name_ico02010290 = Light Blue Tapestry
-#define CRAFT_PASTEL_CHAIR_1 "ico01020131_01" // name_ico01020131 = Pastel Chair
-#define CRAFT_PORT_TOWN_COUCH_1 "ico01020140_01" // name_ico01020140 = Port Town Couch
-#define CRAFT_PORT_TOWN_CHAIR_1 "ico01020150_01" // name_ico01020150 = Port Town Chair
-#define CRAFT_PIRATE_BENCH_1 "ico01020160_01" // name_ico01020160 = Pirate Bench
-#define CRAFT_STARRY_NIGHT_SOFA_1 "ico01020180_01" // name_ico01020180 = Starry Night Sofa
-#define CRAFT_STARRY_NIGHT_CHAIR_1 "ico01020190_01" // name_ico01020190 = Starry Night Chair
-#define CRAFT_TREACHEROUS_SOFA_1 "ico01020200_01" // name_ico01020200 = Treacherous Sofa
-#define CRAFT_PASTEL_LOW_TABLE_1 "ico01030151_01" // name_ico01030151 = Pastel Low Table
-#define CRAFT_SURFING_LEAFE_STATUE_1 "ico01091590_01" // name_ico01091590 = Surfing Leafe Statue
-#define CRAFT_WHITE_WOOLIE_TROPHY_1 "ico01060060_01" // name_ico01060060 = White Woolie Trophy
-#define CRAFT_WOODLAND_FLOOR_1 "ico01080080_01" // name_ico01080080 = Woodland Floor
-#define CRAFT_CHAIR_OF_ATONEMEN_1 "ico01020210_01" // name_ico01020210 = Chair of Atonement
-#define CRAFT_ARCHED_GATE_1 "ico01091580_01" // name_ico01091580 = Arched Gate
-#define CRAFT_TROPICAL_FLOWER_MAT_1 "ico01060070_01" // name_ico01060070 = Tropical Flower Mat
-#define CRAFT_FOREST_CHAIR_1 "ico01020230_01" // name_ico01020230 = Forest Chair
-#define CRAFT_SEABREEZE_BENCH_1 "ico01020310_01" // name_ico01020310 = Seabreeze Bench
-#define CRAFT_REGAL_SOFA_1 "ico01020380_01" // name_ico01020380 = Regal Sofa
-#define CRAFT_RANOAHS_THRONE_1 "ico01020400_01" // name_ico01020400 = Ranoah's Throne
-#define CRAFT_MUSEUM_CHAIR_1 "ico01020410_01" // name_ico01020410 = Museum Chair
-#define CRAFT_TROPICAL_TABLE_1 "ico01030010_01" // name_ico01030010 = Tropical Table
-#define CRAFT_TROPICAL_CHEST_1 "ico01030030_01" // name_ico01030030 = Tropical Chest
-#define CRAFT_WOODEN_STAND_1 "ico01030100_01" // name_ico01030100 = Wooden Stand
-#define CRAFT_WOODEN_CHEST_1 "ico01030160_01" // name_ico01030160 = Wooden Chest
-#define CRAFT_PIRATE_WARDROBE_1 "ico01090780_01" // name_ico01090780 = Pirate Wardrobe
-#define CRAFT_PASTEL_CABINET_1 "ico01030171_01" // name_ico01030171 = Pastel Cabinet
-#define CRAFT_TILED_DINING_TABLE_1 "ico01030180_01" // name_ico01030180 = Tiled Dining Table
-#define CRAFT_FOREST_WALL_1 "ico01070080_01" // name_ico01070080 = Forest Wall
-#define CRAFT_PIRATE_DINING_TABLE_1 "ico01030220_01" // name_ico01030220 = Pirate Dining Table
-#define CRAFT_PIRATE_LOW_TABLE_1 "ico01030230_01" // name_ico01030230 = Pirate Low Table
-#define CRAFT_STARRY_NIGHT_LOW_TABLE_1 "ico01030250_01" // name_ico01030250 = Starry Night Low Table
-#define CRAFT_BLOODTHIRSTY_TABLE_1 "ico01030260_01" // name_ico01030260 = Bloodthirsty Table
-#define CRAFT_NATURAL_WALL_1 "ico01070020_01" // name_ico01070020 = Natural Wall
-#define CRAFT_FOREST_DINING_TABLE_1 "ico01030280_01" // name_ico01030280 = Forest Dining Table
-#define CRAFT_STONE_COUNTERTOP_1 "ico01030360_01" // name_ico01030360 = Stone Countertop
-#define CRAFT_TROPICAL_WOODEN_DESK_1 "ico01030390_01" // name_ico01030390 = Tropical Wooden Desk
-#define CRAFT_REGAL_TABLE_1 "ico01030400_01" // name_ico01030400 = Regal Table
-#define CRAFT_MENU_BOARD_1 "ico01090250_01" // name_ico01090250 = Menu Board
-#define CRAFT_REGAL_LOW_TABLE_1 "ico01030410_01" // name_ico01030410 = Regal Low Table
-#define CRAFT_REGAL_CHEST_1 "ico01030420_01" // name_ico01030420 = Regal Chest
-#define CRAFT_WOVEN_SACK_1 "ico01090200_01" // name_ico01090200 = Woven Sack
-#define CRAFT_TEA_TABLE_1 "ico01030440_01" // name_ico01030440 = Tea Table
-#define CRAFT_ISLAND_SIGN_1 "ico01090210_01" // name_ico01090210 = Island Sign
-#define CRAFT_MUSEUM_TABLE_1 "ico01030450_01" // name_ico01030450 = Museum Table
-#define CRAFT_STONE_FLOWER_BED_1 "ico04050050_01" // name_ico04050050 = Stone Flower Bed
-#define CRAFT_CARPENTERS_TROPHY_1 "ico03010530_01" // name_ico03010530 = Carpenter's Trophy
-#define CRAFT_TROPICAL_BED_1 "ico01040010_01" // name_ico01040010 = Tropical Bed
-#define CRAFT_FISH_DRYING_RACK_1 "ico01091180_01" // name_ico01091180 = Fish Drying Rack
-#define CRAFT_ARTISTS_TROPHY_1 "ico03010560_01" // name_ico03010560 = Artist's Trophy
-#define CRAFT_REGAL_BLUE_BED_1 "ico01040040_01" // name_ico01040040 = Regal Blue Bed
-#define CRAFT_BIG_CACTUS_1 "ico03010570_01" // name_ico03010570 = Big Cactus
-#define CRAFT_WOODEN_BED_1 "ico01040050_01" // name_ico01040050 = Wooden Bed
-#define CRAFT_STARRY_NIGHT_BED_1 "ico01040080_01" // name_ico01040080 = Starry Night Bed
-#define CRAFT_HUNTERS_TROPHY_1 "ico03010460_01" // name_ico03010460 = Hunter's Trophy
-#define CRAFT_FOREST_BED_1 "ico01040100_01" // name_ico01040100 = Forest Bed
-#define CRAFT_WOODEN_FLOWER_BED_1 "ico04050180_01" // name_ico04050180 = Wooden Flower Bed
-#define CRAFT_CELESTIAL_GLOBE_1 "ico03010420_01" // name_ico03010420 = Celestial Globe
-#define CRAFT_BEACH_BED_1 "ico01040140_01" // name_ico01040140 = Beach Bed
-#define CRAFT_NOSTALGIC_ORNAMENT_1 "ico03010400_01" // name_ico03010400 = Nostalgic Ornament
-#define CRAFT_REGAL_BED_1 "ico01040160_01" // name_ico01040160 = Regal Bed
-#define CRAFT_TROPICAL_RUG_1 "ico01060010_01" // name_ico01060010 = Tropical Rug
-#define CRAFT_TROPICAL_MAT_1 "ico01060020_01" // name_ico01060020 = Tropical Mat
-#define CRAFT_STATUE_OF_FRAJEEL_1 "ico01091570_01" // name_ico01091570 = Statue of Frajeel
-#define CRAFT_CUTE_RUG_1 "ico01060080_01" // name_ico01060080 = Cute Rug
-#define CRAFT_DESERT_FLOOR_1 "ico01080060_01" // name_ico01080060 = Desert Floor
-#define CRAFT_PECULIAR_MAT_1 "ico01060100_01" // name_ico01060100 = Peculiar Mat
-#define CRAFT_PASTEL_RUG_1 "ico01060111_01" // name_ico01060111 = Pastel Rug
-#define CRAFT_PORT_TOWN_MAT_1 "ico01060140_01" // name_ico01060140 = Port Town Mat
-#define CRAFT_ROYAL_CAPITAL_FLOOR_1 "ico01080160_01" // name_ico01080160 = Royal Capital Floor
-#define CRAFT_STARRY_NIGHT_MAT_1 "ico01060180_01" // name_ico01060180 = Starry Night Mat
-#define CRAFT_MAT_OF_DARKNESS_1 "ico01060200_01" // name_ico01060200 = Mat of Darkness
-#define CRAFT_LEAF_MAT_1 "ico01060220_01" // name_ico01060220 = Leaf Mat
-#define CRAFT_PALADINS_MANNEQUIN_1 "ico01091410_01" // name_ico01091410 = Paladin's Mannequin
-#define CRAFT_SPIRAL_MAT_1 "ico01060300_01" // name_ico01060300 = Spiral Mat
-#define CRAFT_BLUE_BANNER_1 "ico01091450_01" // name_ico01091450 = Blue Banner
-#define CRAFT_GREEN_RUG_1 "ico01060340_01" // name_ico01060340 = Green Rug
-#define CRAFT_DECORATIVE_CURTAIN_1 "ico01091440_01" // name_ico01091440 = Decorative Curtain
-#define CRAFT_STRAW_MAT_1 "ico01060350_01" // name_ico01060350 = Straw Mat
-#define CRAFT_WEAPON_STAND_1 "ico01091460_01" // name_ico01091460 = Weapon Stand
-#define CRAFT_SWORD_PATTERN_RUG_1 "ico01060370_01" // name_ico01060370 = Sword Pattern Rug
-#define CRAFT_GUITAR_1 "ico01091490_01" // name_ico01091490 = Guitar
-#define CRAFT_REGAL_RUG_1 "ico01060380_01" // name_ico01060380 = Regal Rug
-#define CRAFT_WHEAT_JUICE_ON_TAP_1 "ico01091480_01" // name_ico01091480 = Wheat Juice on Tap
-#define CRAFT_ROYAL_CAPITAL_MAT_1 "ico01060390_01" // name_ico01060390 = Royal Capital Mat
-#define CRAFT_STARRY_EYED_RUG_1 "ico01060400_01" // name_ico01060400 = Starry-Eyed Rug
-#define CRAFT_GODFISH_PRINT_1 "ico02010440_01" // name_ico02010440 = Godfish Print
-#define CRAFT_ORANGE_RUG_1 "ico01060420_01" // name_ico01060420 = Orange Rug
-#define CRAFT_FAMILY_PORTRAIT_1 "ico02010460_01" // name_ico02010460 = Family Portrait
-#define CRAFT_SOFT_RUSH_RUG_1 "ico01060440_01" // name_ico01060440 = Soft Rush Rug
-#define CRAFT_FOREST_LORDFISH_PRINT_1 "ico02010400_01" // name_ico02010400 = Forest Lordfish Print
-#define CRAFT_TROPICAL_WALL_1 "ico01070010_01" // name_ico01070010 = Tropical Wall
-#define CRAFT_PASTEL_WALL_1 "ico01070031_01" // name_ico01070031 = Pastel Wall
-#define CRAFT_PLASTER_WALL_1 "ico01070040_01" // name_ico01070040 = Plaster Wall
-#define CRAFT_AL_MAAJIKAN_WALL_1 "ico01070060_01" // name_ico01070060 = Al Maajikan Wall
-#define CRAFT_REGAL_WALLPAPER_1 "ico01070150_01" // name_ico01070150 = Regal Wallpaper
-#define CRAFT_STARRY_GARDEN_WALL_1 "ico01070170_01" // name_ico01070170 = Starry Garden Wall
-#define CRAFT_SWEET_WALL_1 "ico01070220_01" // name_ico01070220 = Sweet Wall
-#define CRAFT_HARP_1 "ico01091500_01" // name_ico01091500 = Harp
-#define CRAFT_JOINED_WOOD_FLOOR_1 "ico01080010_01" // name_ico01080010 = Joined Wood Floor
-#define CRAFT_FLOWER_PAINTING_1 "ico01091530_01" // name_ico01091530 = Flower Painting
-#define CRAFT_STONE_TILE_FLOOR_1 "ico01080020_01" // name_ico01080020 = Stone Tile Floor
-#define CRAFT_TROPHY_1 "ico01091520_01" // name_ico01091520 = Trophy
-#define CRAFT_WOODEN_FLOOR_1 "ico01080030_01" // name_ico01080030 = Wooden Floor
-#define CRAFT_PASTEL_FLOOR_1 "ico01080031_01" // name_ico01080031 = Pastel Floor
-#define CRAFT_PLUSHLING_TREE_POT_1 "ico01091550_01" // name_ico01091550 = Plushling Tree Pot
-#define CRAFT_MARINE_FLOOR_1 "ico01080040_01" // name_ico01080040 = Marine Floor
-#define CRAFT_TEA_HOUSE_FLOOR_1 "ico01080190_01" // name_ico01080190 = Tea House Floor
-#define CRAFT_TROPICAL_DRESSER_1 "ico01090010_01" // name_ico01090010 = Tropical Dresser
-#define CRAFT_POSTER_OF_FRAJEEL_1 "ico02010790_01" // name_ico02010790 = Poster of Frajeel
-#define CRAFT_BOUNTIFUL_HARVEST_RACK_1 "ico01090050_01" // name_ico01090050 = Bountiful Harvest Rack
-#define CRAFT_GREAT_LUCKY_BREAM_PRINT_1 "ico02010740_01" // name_ico02010740 = Great Lucky Bream Print
-#define CRAFT_HAY_1 "ico01090080_01" // name_ico01090080 = Hay
-#define CRAFT_RAINBOW_FLYING_FISH_PRINT_1 "ico02010750_01" // name_ico02010750 = Rainbow Flying Fish Print
-#define CRAFT_WOODEN_BUCKET_1 "ico01090090_01" // name_ico01090090 = Wooden Bucket
-#define CRAFT_RUSTIC_STANDING_TORCH_1 "ico01090150_01" // name_ico01090150 = Rustic Standing Torch
-#define CRAFT_STACK_OF_FIREWOOD_1 "ico01090160_01" // name_ico01090160 = Stack of Firewood
-#define CRAFT_CRATE_1 "ico01090170_01" // name_ico01090170 = Crate
-#define CRAFT_SURFBOARD_1 "ico01090280_01" // name_ico01090280 = Surfboard
-#define CRAFT_SAWING_TABLE_1 "ico01090290_01" // name_ico01090290 = Sawing Table
-#define CRAFT_SANSEVIERIA_PLANT_1 "ico01090320_01" // name_ico01090320 = Sansevieria Plant
-#define CRAFT_POTTED_CACTUS_1 "ico01090340_01" // name_ico01090340 = Potted Cactus
-#define CRAFT_TREASURE_CHEST_1 "ico01090380_01" // name_ico01090380 = Treasure Chest
-#define CRAFT_WOODCUTTERS_STUMP_1 "ico01090420_01" // name_ico01090420 = Woodcutter's Stump
-#define CRAFT_WHEELBARROW_1 "ico01090430_01" // name_ico01090430 = Wheelbarrow
-#define CRAFT_PALADINS_CREST_1 "ico01090450_01" // name_ico01090450 = Paladin's Crest
-#define CRAFT_MAGIC_CAULDRON_1 "ico01090470_01" // name_ico01090470 = Magic Cauldron
-#define CRAFT_FRESH_FISH_1 "ico01090520_01" // name_ico01090520 = Fresh Fish
-#define CRAFT_FARMING_TOOL_STAND_1 "ico01090550_01" // name_ico01090550 = Farming Tool Stand
-#define CRAFT_SEWING_MACHINE_1 "ico01090580_01" // name_ico01090580 = Sewing Machine
-#define CRAFT_EGG_SHELF_1 "ico01091235_01" // name_ico01091235 = Egg Shelf
-#define CRAFT_TAILORS_MANNEQUIN_1 "ico01090590_01" // name_ico01090590 = Tailor's Mannequin
-#define CRAFT_MISPLACED_HAMMER_1 "ico01090600_01" // name_ico01090600 = Misplaced Hammer
-#define CRAFT_WOODEN_SIDE_TABLE_1 "ico01090610_01" // name_ico01090610 = Wooden Side Table
-#define CRAFT_PAINT_BUCKET_1 "ico01090630_01" // name_ico01090630 = Paint Bucket
-#define CRAFT_DRAFTING_TABLE_1 "ico01090640_01" // name_ico01090640 = Drafting Table
-#define CRAFT_POTTED_PALM_TREE_1 "ico01090660_01" // name_ico01090660 = Potted Palm Tree
-#define CRAFT_NOBLE_DRESS_1 "ico01090670_01" // name_ico01090670 = Noble Dress
-#define CRAFT_WOODEN_TRINKET_SHELF_1 "ico01090680_01" // name_ico01090680 = Wooden Trinket Shelf
-#define CRAFT_DECORATIVE_EQUIPMENT_1 "ico01090710_01" // name_ico01090710 = Decorative Equipment
-#define CRAFT_COUNTRY_SHELF_1 "ico01090740_01" // name_ico01090740 = Country Shelf
-#define CRAFT_WOODEN_WARDROBE_1 "ico01090760_01" // name_ico01090760 = Wooden Wardrobe
-#define CRAFT_PASTEL_WARDROBE_1 "ico01090761_01" // name_ico01090761 = Pastel Wardrobe
-#define CRAFT_PIRATE_CHEST_1 "ico01090790_01" // name_ico01090790 = Pirate Chest
-#define CRAFT_PIRATE_CABINET_1 "ico01090800_01" // name_ico01090800 = Pirate Cabinet
-#define CRAFT_STARRY_NIGHT_CHEST_1 "ico01090820_01" // name_ico01090820 = Starry Night Chest
-#define CRAFT_OTHERWORLDLY_WARDROBE_1 "ico01090840_01" // name_ico01090840 = Otherworldly Wardrobe
-#define CRAFT_DARKNESS_EATING_CHEST_1 "ico01090850_01" // name_ico01090850 = Darkness-Eating Chest
-#define CRAFT_FOREST_WARDROBE_1 "ico01090870_01" // name_ico01090870 = Forest Wardrobe
-#define CRAFT_FOREST_CHEST_1 "ico01090880_01" // name_ico01090880 = Forest Chest
-#define CRAFT_BEACH_BALL_1 "ico01090960_01" // name_ico01090960 = Beach Ball
-#define CRAFT_STRANGERS_COFFIN_1 "ico01091010_01" // name_ico01091010 = Stranger's Coffin
-#define CRAFT_PILE_OF_PIRATE_TREASURE_1 "ico01091080_01" // name_ico01091080 = Pile of Pirate Treasure
-#define CRAFT_STACKED_STONE_SLABS_1 "ico03010580_01" // name_ico03010580 = Stacked Stone Slabs
-#define CRAFT_TAIKO_DRUM_1 "ico01091130_01" // name_ico01091130 = Taiko Drum
-#define CRAFT_MEAT_ROASTING_CAMPFIRE_1 "ico04050090_01" // name_ico04050090 = Meat Roasting Campfire
-#define CRAFT_TROPICAL_VASE_1 "ico01091140_01" // name_ico01091140 = Tropical Vase
-#define CRAFT_FISH_ROASTING_CAMPFIRE_1 "ico04050080_01" // name_ico04050080 = Fish Roasting Campfire
-#define CRAFT_CORN_DRYING_RACK_1 "ico01091150_01" // name_ico01091150 = Corn Drying Rack
-#define CRAFT_BASKET_OF_CORN_1 "ico01091160_01" // name_ico01091160 = Basket of Corn
-#define CRAFT_HEARTH_WITH_CORN_1 "ico01091170_01" // name_ico01091170 = Hearth With Corn
-#define CRAFT_BOXES_OF_ORE_1 "ico01091233_01" // name_ico01091233 = Boxes of Ore
-#define CRAFT_RED_FLOWER_POT_1 "ico04050040_01" // name_ico04050040 = Red Flower Pot
-#define CRAFT_BLACKSMITHS_TROPHY_1 "ico03010520_01" // name_ico03010520 = Blacksmith's Trophy
-#define CRAFT_HEARTH_WITH_FISH_1 "ico01091190_01" // name_ico01091190 = Hearth With Fish
-#define CRAFT_BEAKER_SET_1 "ico01091200_01" // name_ico01091200 = Beaker Set
-#define CRAFT_SPINNING_WHEEL_1 "ico01091230_01" // name_ico01091230 = Spinning Wheel
-#define CRAFT_TAILORED_CLOTHES_1 "ico01091231_01" // name_ico01091231 = Tailored Clothes
-#define CRAFT_INGOT_PILE_1 "ico01091240_01" // name_ico01091240 = Ingot Pile
-#define CRAFT_BARRELS_OF_WHEAT_JUICE_1 "ico01091260_01" // name_ico01091260 = Barrels of Wheat Juice
-#define CRAFT_NOTICE_BOARD_1 "ico01091270_01" // name_ico01091270 = Notice Board
-#define CRAFT_ROCK_COLLECTION_1 "ico01091290_01" // name_ico01091290 = Rock Collection
-#define CRAFT_NATURAL_CHAIR_1 "ico01091300_01" // name_ico01091300 = Natural Chair
-#define CRAFT_STACKED_CRATES_1 "ico01091330_01" // name_ico01091330 = Stacked Crates
-#define CRAFT_BOUNTIFUL_HARVEST_BOX_1 "ico01091340_01" // name_ico01091340 = Bountiful Harvest Box
-#define CRAFT_LANCERS_BARREL_1 "ico01091360_01" // name_ico01091360 = Lancer's Barrel
-#define CRAFT_HAY_BALE_1 "ico01091390_01" // name_ico01091390 = Hay Bale
-#define CRAFT_GREEN_SPOOKY_LAMP_1 "ico01091562_01" // name_ico01091562 = Green Spooky Lamp
-#define CRAFT_BRICK_LINED_SHRUB_1 "ico04050170_01" // name_ico04050170 = Brick Lined Shrub
-#define CRAFT_PLUSHLING_STATUE_1 "ico01091600_01" // name_ico01091600 = Plushling Statue
-#define CRAFT_TURTLE_AND_LEAFE_STATUE_1 "ico01091610_01" // name_ico01091610 = Turtle and Leafe Statue
-#define CRAFT_MERMAID_STATUE_1 "ico01091620_01" // name_ico01091620 = Mermaid Statue
-#define CRAFT_OWL_STATUE_1 "ico01091630_01" // name_ico01091630 = Owl Statue
-#define CRAFT_STANDING_TORCH_WITH_FLAG_1 "ico01091670_01" // name_ico01091670 = Standing Torch With Flag
-#define CRAFT_MERCENARYS_TROPHY_1 "ico03010440_01" // name_ico03010440 = Mercenary's Trophy
-#define CRAFT_TRIPS_COOL_PORTRAIT_1 "ico01091690_01" // name_ico01091690 = Trip's Cool Portrait
-#define CRAFT_TRIPS_ARTSY_PORTRAIT_1 "ico01091700_01" // name_ico01091700 = Trip's Artsy Portrait
-#define CRAFT_ISLAND_MAP_BOARD_1 "ico02010060_01" // name_ico02010060 = Island Map Board
-#define CRAFT_TOOL_HOOK_1 "ico02010080_01" // name_ico02010080 = Tool Hook
-#define CRAFT_STARRY_NIGHT_STREETLAMP_1 "ico04010050_01" // name_ico04010050 = Starry Night Streetlamp
-#define CRAFT_FRESHLY_PICKED_WREATH_1 "ico02010100_01" // name_ico02010100 = Freshly Picked Wreath
-#define CRAFT_FOREST_LILY_LIGHT_1 "ico04010070_01" // name_ico04010070 = Forest Lily Light
-#define CRAFT_PORTRAIT_OF_ERIK_1 "ico02010120_01" // name_ico02010120 = Portrait of Erik
-#define CRAFT_FISH_FOR_LIFE_FLAG_1 "ico02010200_01" // name_ico02010200 = Fish-for-Life Flag
-#define CRAFT_GREATSWORD_OF_YORE_1 "ico02010210_01" // name_ico02010210 = Greatsword of Yore
-#define CRAFT_HUNTERS_GEAR_1 "ico02010220_01" // name_ico02010220 = Hunter's Gear
-#define CRAFT_KITCHEN_UTENSILS_1 "ico02010240_01" // name_ico02010240 = Kitchen Utensils
-#define CRAFT_RED_FLOWER_ORNAMENT_1 "ico02010280_01" // name_ico02010280 = Red Flower Ornament
-#define CRAFT_GOLDEN_SWORDFISH_PRINT_1 "ico02010340_01" // name_ico02010340 = Golden Swordfish Print
-#define CRAFT_BASS_OF_DARKNESS_PRINT_1 "ico02010360_01" // name_ico02010360 = Bass of Darkness Print
-#define CRAFT_POSEIDON_SWORDFISH_PRINT_1 "ico02010380_01" // name_ico02010380 = Poseidon Swordfish Print
-#define CRAFT_DEEP_SEA_LORDFISH_PRINT_1 "ico02010430_01" // name_ico02010430 = Deep Sea Lordfish Print
-#define CRAFT_RUSTIC_WOVEN_TAPESTRY_1 "ico02010500_01" // name_ico02010500 = Rustic Woven Tapestry
-#define CRAFT_BIG_FISHING_HOOK_1 "ico02010510_01" // name_ico02010510 = Big Fishing Hook
-#define CRAFT_FISHING_NET_1 "ico02010520_01" // name_ico02010520 = Fishing Net
-#define CRAFT_FISH_SKELETON_1 "ico02010540_01" // name_ico02010540 = Fish Skeleton
-#define CRAFT_DRIED_FISH_RESERVE_1 "ico02010550_01" // name_ico02010550 = Dried Fish Reserve
-#define CRAFT_BLUE_DECORATIVE_FEATHER_1 "ico02010570_01" // name_ico02010570 = Blue Decorative Feather
-#define CRAFT_PASTEL_GARLAND_1 "ico02010580_01" // name_ico02010580 = Pastel Garland
-#define CRAFT_DECORATIVE_SHIELDS_1 "ico02010600_01" // name_ico02010600 = Decorative Shields
-#define CRAFT_GREEN_WREATH_1 "ico02010610_01" // name_ico02010610 = Green Wreath
-#define CRAFT_CROWN_WALL_DECORATION_1 "ico02010620_01" // name_ico02010620 = Crown Wall Decoration
-#define CRAFT_HANGING_DRIED_FISH_1 "ico02010630_01" // name_ico02010630 = Hanging Dried Fish
-#define CRAFT_FANCY_WALL_ART_1 "ico02010660_01" // name_ico02010660 = Fancy Wall Art
-#define CRAFT_HANGING_SCROLL_1 "ico02010670_01" // name_ico02010670 = Hanging Scroll
-#define CRAFT_NOSTALGIC_PAINTING_1 "ico02010680_01" // name_ico02010680 = Nostalgic Painting
-#define CRAFT_BLACK_DRAGON_PAINTING_1 "ico02010690_01" // name_ico02010690 = Black Dragon Painting
-#define CRAFT_WEIRD_MONITOR_1 "ico02010700_01" // name_ico02010700 = Weird Monitor
-#define CRAFT_DRIED_LEAF_ART_1 "ico02010710_01" // name_ico02010710 = Dried Leaf Art
-#define CRAFT_CHERRY_LORDFISH_PRINT_1 "ico02010730_01" // name_ico02010730 = Cherry Lordfish Print
-#define CRAFT_CRYSTALLINE_BASS_PRINT_1 "ico02010760_01" // name_ico02010760 = Crystalline Bass Print
-#define CRAFT_HIGH_FLYING_FISH_PRINT_1 "ico02010770_01" // name_ico02010770 = High-Flying Fish Print
-#define CRAFT_DOVE_PENDULUM_CLOCK_1 "ico02020080_01" // name_ico02020080 = Dove Pendulum Clock
-#define CRAFT_CORN_RESERVE_1 "ico02020110_01" // name_ico02020110 = Corn Reserve
-#define CRAFT_WALL_CANDLE_1 "ico02020120_01" // name_ico02020120 = Wall Candle
-#define CRAFT_MOUNTED_SHELF_1 "ico02020130_01" // name_ico02020130 = Mounted Shelf
-#define CRAFT_WOODEN_DINING_SET_1 "ico03010020_01" // name_ico03010020 = Wooden Dining Set
-#define CRAFT_PLATE_OF_ROASTED_BIRD_1 "ico03010030_01" // name_ico03010030 = Plate of Roasted Bird
-#define CRAFT_BOWL_OF_ASSORTED_FRUIT_1 "ico03010040_01" // name_ico03010040 = Bowl of Assorted Fruit
-#define CRAFT_WOODEN_PALETTE_1 "ico03010060_01" // name_ico03010060 = Wooden Palette
-#define CRAFT_GOLD_CANDLESTICK_1 "ico03010070_01" // name_ico03010070 = Gold Candlestick
-#define CRAFT_COPPER_CANDLESTICK_1 "ico03010071_01" // name_ico03010071 = Copper Candlestick
-#define CRAFT_DIG_IN_DINING_SET_1 "ico03010090_01" // name_ico03010090 = Dig-In Dining Set
-#define CRAFT_FULL_COURSE_DINNER_1 "ico03010100_01" // name_ico03010100 = Full-Course Dinner
-#define CRAFT_LETTER_SET_1 "ico03010120_01" // name_ico03010120 = Letter Set
-#define CRAFT_CANDLE_1 "ico03010130_01" // name_ico03010130 = Candle
-#define CRAFT_PEN_AND_RULER_1 "ico03010150_01" // name_ico03010150 = Pen and Ruler
-#define CRAFT_THICK_NOVEL_1 "ico03010161_01" // name_ico03010161 = Thick Novel
-#define CRAFT_STANDING_LAMP_1 "ico03010180_01" // name_ico03010180 = Standing Lamp
-#define CRAFT_HAGRAM_DOLL_1 "ico03010190_01" // name_ico03010190 = Hagram Doll
-#define CRAFT_PLUSHLING_DOLL_1 "ico03010220_01" // name_ico03010220 = Plushling Doll
-#define CRAFT_HOURGLASS_1 "ico03010230_01" // name_ico03010230 = Hourglass
-#define CRAFT_AFTERNOON_TEA_SET_1 "ico03010270_01" // name_ico03010270 = Afternoon Tea Set
-#define CRAFT_TROPICAL_FENCE_1 "ico04040010_01" // name_ico04040010 = Tropical Fence
-#define CRAFT_FRUIT_BUFFET_1 "ico03010290_01" // name_ico03010290 = Fruit Buffet
-#define CRAFT_BOTTLE_SET_1 "ico03010310_01" // name_ico03010310 = Bottle Set
-#define CRAFT_PHONOGRAPH_1 "ico03010340_01" // name_ico03010340 = Phonograph
-#define CRAFT_ELEGANT_CLOTH_1 "ico03010360_01" // name_ico03010360 = Elegant Cloth
-#define CRAFT_SALUD_GLASS_1 "ico03010370_01" // name_ico03010370 = Salud Glass
-#define CRAFT_BENCH_PRESS_1 "ico03010390_01" // name_ico03010390 = Bench Press
-#define CRAFT_MINERS_TROPHY_1 "ico03010470_01" // name_ico03010470 = Miner's Trophy
-#define CRAFT_STONE_PILLAR_1 "ico04050130_01" // name_ico04050130 = Stone Pillar
-#define CRAFT_FARMERS_TROPHY_1 "ico03010490_01" // name_ico03010490 = Farmer's Trophy
-#define CRAFT_WELL_1 "ico04050060_01" // name_ico04050060 = Well
-#define CRAFT_ANGLERS_TROPHY_1 "ico03010500_01" // name_ico03010500 = Angler's Trophy
-#define CRAFT_CAMPFIRE_1 "ico04050070_01" // name_ico04050070 = Campfire
-#define CRAFT_COOKS_TROPHY_1 "ico03010510_01" // name_ico03010510 = Cook's Trophy
-#define CRAFT_FLOWER_BASKET_1 "ico03010600_01" // name_ico03010600 = Flower Basket
-#define CRAFT_PLATE_OF_APPLES_1 "ico03010610_01" // name_ico03010610 = Plate of Apples
-#define CRAFT_PLATE_OF_ROASTED_FISH_1 "ico03010620_01" // name_ico03010620 = Plate of Roasted Fish
-#define CRAFT_BOWL_OF_BUTTERED_CORN_1 "ico03010650_01" // name_ico03010650 = Bowl of Buttered Corn
-#define CRAFT_PINT_OF_WHEAT_JUICE_1 "ico03010660_01" // name_ico03010660 = Pint of Wheat Juice
-#define CRAFT_KNIFE_AND_CUTTING_BOARD_1 "ico03010670_01" // name_ico03010670 = Knife and Cutting Board
-#define CRAFT_MILLSTONE_1 "ico03010700_01" // name_ico03010700 = Millstone
-#define CRAFT_COLORFUL_CLOTH_1 "ico03010720_01" // name_ico03010720 = Colorful Cloth
-#define CRAFT_INCENSE_BURNER_1 "ico03010740_01" // name_ico03010740 = Incense Burner
-#define CRAFT_SPOOL_SET_1 "ico03010750_01" // name_ico03010750 = Spool Set
-#define CRAFT_STACKED_BOOKS_1 "ico03010760_01" // name_ico03010760 = Stacked Books
-#define CRAFT_FLASK_SET_1 "ico03010770_01" // name_ico03010770 = Flask Set
-#define CRAFT_PILE_OF_CORN_1 "ico03010780_01" // name_ico03010780 = Pile of Corn
-#define CRAFT_HAND_WOVEN_BASKET_1 "ico03010800_01" // name_ico03010800 = Hand Woven Basket
-#define CRAFT_BIRDY_HELMET_1 "ico03010810_01" // name_ico03010810 = Birdy Helmet
-#define CRAFT_BIRDY_ARMOR_SET_1 "ico03010820_01" // name_ico03010820 = Birdy Armor Set
-#define CRAFT_BOX_OF_SHIELDS_1 "ico03010830_01" // name_ico03010830 = Box of Shields
-#define CRAFT_DECORATIVE_SWORDS_1 "ico03010840_01" // name_ico03010840 = Decorative Swords
-#define CRAFT_HAGRAM_PARTS_1 "ico03010850_01" // name_ico03010850 = Hagram Parts
-#define CRAFT_DRAGON_DOLL_1 "ico03010860_01" // name_ico03010860 = Dragon Doll
-#define CRAFT_BIRD_CAGE_1 "ico03010870_01" // name_ico03010870 = Bird Cage
-#define CRAFT_LEANING_SLAB_1 "ico03010920_01" // name_ico03010920 = Leaning Slab
-#define CRAFT_POT_OF_WATER_1 "ico03010930_01" // name_ico03010930 = Pot of Water
-#define CRAFT_PLATE_OF_SPIRIT_SALAD_1 "ico03010940_01" // name_ico03010940 = Plate of Spirit Salad
-#define CRAFT_GLASS_OF_TROPICAL_JUICE_1 "ico03010950_01" // name_ico03010950 = Glass of Tropical Juice
-#define CRAFT_MIGHTY_MEAT_BOARD_1 "ico03010960_01" // name_ico03010960 = Mighty Meat Board
-#define CRAFT_PLATE_OF_ROYAL_RICE_1 "ico03010970_01" // name_ico03010970 = Plate of Royal Rice
-#define CRAFT_GLORIOUS_SHRUB_1 "ico04050460_01" // name_ico04050460 = Glorious Shrub
-#define CRAFT_PLATE_OF_TRIP_CAKE_1 "ico03010980_01" // name_ico03010980 = Plate of Trip Cake
-#define CRAFT_DESERT_TOWER_1 "ico04050470_01" // name_ico04050470 = Desert Tower
-#define CRAFT_COLMS_LEFTOVER_DONUTS_1 "ico03010990_01" // name_ico03010990 = Colm's Leftover Donuts
-#define CRAFT_CUP_OF_COCONUT_JUICE_1 "ico03011000_01" // name_ico03011000 = Cup of Coconut Juice
-#define CRAFT_FRAJEELS_PROTEIN_1 "ico03011020_01" // name_ico03011020 = Frajeel's Protein
-#define CRAFT_REMS_COCONUT_BENTO_BOX_1 "ico03011030_01" // name_ico03011030 = Rem's Coconut Bento Box
-#define CRAFT_STONE_TORCH_1 "ico04010010_01" // name_ico04010010 = Stone Torch
-#define CRAFT_CLASSIC_STREETLAMP_1 "ico04010020_01" // name_ico04010020 = Classic Streetlamp
-#define CRAFT_PORT_TOWN_STREETLAMP_1 "ico04010030_01" // name_ico04010030 = Port Town Streetlamp
-#define CRAFT_SIMPLE_HEDGE_1 "ico04040030_01" // name_ico04040030 = Simple Hedge
-#define CRAFT_WOODEN_FENCE_1 "ico04040040_01" // name_ico04040040 = Wooden Fence
-#define CRAFT_PORT_TOWN_FENCE_1 "ico04040060_01" // name_ico04040060 = Port Town Fence
-#define CRAFT_CURSED_FENCE_1 "ico04040090_01" // name_ico04040090 = Cursed Fence
-#define CRAFT_PORT_TOWN_WALL_1 "ico04040110_01" // name_ico04040110 = Port Town Wall
-#define CRAFT_TRAINING_DUMMY_1 "ico04050200_01" // name_ico04050200 = Training Dummy
-#define CRAFT_SEASIDE_SHRUB_1 "ico04050440_01" // name_ico04050440 = Seaside Shrub
-#define CRAFT_RELAXING_SWINGSET_1 "ico04060010_01" // name_ico04060010 = Relaxing Swingset
-#define CRAFT_GREEN_GRASS_1 "ico04080010_01" // name_ico04080010 = Green Grass
-#define CRAFT_TALL_GRASS_1 "ico04080020_01" // name_ico04080020 = Tall Grass
-#define CRAFT_SMALL_TREE_1 "ico04080030_01" // name_ico04080030 = Small Tree
-#define CRAFT_SAPLING_1 "ico04080040_01" // name_ico04080040 = Sapling
-#define CRAFT_YOUNG_TREE_1 "ico04080050_01" // name_ico04080050 = Young Tree
-#define CRAFT_ERUPTUNA_PRINT_1 "ico02010780_01" // name_ico02010780 = Eruptuna Print
-#define CRAFT_PLATE_OF_HOMEMADE_CAKE_1 "ico03011040_01" // name_ico03011040 = Plate of Homemade Cake
-
-#define KIT_BUILDING_KIT_1 "kit001010" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_2 "kit002090" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_3 "kit001020" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_4 "kit002080" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_5 "kit001030" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_6 "kit001040" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_7 "kit001050" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_8 "kit001190" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_9 "kit001060" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_10 "kit001180" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_11 "kit001070" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_12 "kit002030" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_13 "kit001170" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_14 "kit001080" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_15 "kit002020" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_16 "kit001160" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_17 "kit001090" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_18 "kit002040" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_19 "kit001100" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_20 "kit002050" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_21 "kit001110" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_22 "kit002060" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_23 "kit001120" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_24 "kit002070" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_25 "kit001130" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_26 "kit001140" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_27 "kit002010" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_28 "kit001150" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_29 "kit001200" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_30 "kit001210" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_31 "kit001220" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_32 "kit001230" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_33 "kit002100" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_34 "kit002110" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_35 "kit002120" // name_kit100101 = Building Kit
-#define KIT_RELOCATION_KIT_1 "kit100180" // name_kit000100 = Relocation Kit
-#define KIT_BUILDING_KIT_36 "kit002130" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_37 "kit002140" // name_kit100101 = Building Kit
-#define KIT_BUILDING_KIT_38 "kit002150" // name_kit100101 = Building Kit
-#define KIT_RELOCATION_KIT_2 "kit102090" // name_kit000100 = Relocation Kit
-#define KIT_BUILDING_KIT_39 "kit003010" // name_kit100101 = Building Kit
-#define KIT_RELOCATION_KIT_3 "kit102060" // name_kit000100 = Relocation Kit
-#define KIT_CARROT_FARM_KIT "kit004010" // name_kit000200 = Carrot Farm Kit
-#define KIT_RELOCATION_KIT_4 "kit102050" // name_kit000100 = Relocation Kit
-#define KIT_RADISH_FARM_KIT "kit004020" // name_kit000201 = Radish Farm Kit
-#define KIT_RELOCATION_KIT_5 "kit102040" // name_kit000100 = Relocation Kit
-#define KIT_PUMPKIN_FARM_KIT "kit004030" // name_kit000202 = Pumpkin Farm Kit
-#define KIT_RELOCATION_KIT_6 "kit102030" // name_kit000100 = Relocation Kit
-#define KIT_POTATO_FARM_KIT "kit004040" // name_kit000203 = Potato Farm Kit
-#define KIT_RELOCATION_KIT_7 "kit102020" // name_kit000100 = Relocation Kit
-#define KIT_ONION_FARM_KIT "kit004050" // name_kit000204 = Onion Farm Kit
-#define KIT_RELOCATION_KIT_8 "kit102010" // name_kit000100 = Relocation Kit
-#define KIT_CABBAGE_FARM_KIT "kit004060" // name_kit000205 = Cabbage Farm Kit
-#define KIT_SHADOW_CARROT_FARM_KIT "kit004070" // name_kit000206 = Shadow Carrot Farm Kit
-#define KIT_RELOCATION_KIT_9 "kit101080" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_10 "kit100010" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_11 "kit100020" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_12 "kit100030" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_13 "kit100040" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_14 "kit100050" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_15 "kit100060" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_16 "kit100070" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_17 "kit101010" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_18 "kit100080" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_19 "kit100090" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_20 "kit100100" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_21 "kit100110" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_22 "kit100120" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_23 "kit100130" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_24 "kit100140" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_25 "kit100150" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_27 "kit100160" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_28 "kit100170" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_29 "kit100190" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_30 "kit100200" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_31 "kit100210" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_32 "kit100220" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_33 "kit100230" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_34 "kit100240" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_35 "kit100250" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_36 "kit100260" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_37 "kit100270" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_38 "kit100280" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_39 "kit100290" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_40 "kit100300" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_41 "kit100310" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_42 "kit100320" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_43 "kit100330" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_44 "kit100340" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_45 "kit100350" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_46 "kit101190" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_47 "kit100360" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_48 "kit101180" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_49 "kit100370" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_50 "kit101170" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_51 "kit100380" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_52 "kit101160" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_53 "kit100390" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_54 "kit100400" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_55 "kit100410" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_56 "kit100420" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_57 "kit100430" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_58 "kit100440" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_59 "kit100450" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_60 "kit100460" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_61 "kit101020" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_62 "kit101030" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_63 "kit101040" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_64 "kit101050" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_65 "kit101060" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_66 "kit101070" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_67 "kit101090" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_68 "kit101100" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_69 "kit101110" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_70 "kit101120" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_71 "kit101130" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_72 "kit101140" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_73 "kit101150" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_74 "kit101200" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_75 "kit101210" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_76 "kit101220" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_77 "kit101230" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_78 "kit102070" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_79 "kit102080" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_80 "kit102100" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_81 "kit102110" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_82 "kit102120" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_83 "kit102130" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_84 "kit102140" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_85 "kit102150" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_86 "kit103010" // name_kit000100 = Relocation Kit
-#define KIT_FARM_RELOCATION_KIT "kit104010" // name_kit100200 = Farm Relocation Kit
-#define KIT_RELOCATION_KIT_87 "kit105010" // name_kit000100 = Relocation Kit
-#define KIT_RELOCATION_KIT_88 "kit105020" // name_kit000100 = Relocation Kit
-
-#define VEHICLE_BLACK_HORSE_SADDLE "ive000202" // name_ive000202 = Black Horse Saddle
-#define VEHICLE_TORTORTOISE_SADDLE "ive000101" // name_ive000101 = Tortortoise Saddle
-#define VEHICLE_BROWN_HORSE_SADDLE "ive000201" // name_ive000201 = Brown Horse Saddle
-#define VEHICLE_TURTLE_SADDLE "ive000102" // name_ive000102 = Turtle Saddle
-#define VEHICLE_FOREST_PANTHER_SADDLE "ive000302" // name_ive000302 = Forest Panther Saddle
-#define VEHICLE_WHITE_HORSE_SADDLE "ive000203" // name_ive000203 = White Horse Saddle
-#define VEHICLE_BLACK_PANTHER_SADDLE "ive000301" // name_ive000301 = Black Panther Saddle
-#define VEHICLE_CAMEL "ive000401" // name_ive000401 = Camel
-#define VEHICLE_WHITE_WOOLIE_SADDLE "ive000501" // name_ive000501 = White Woolie Saddle
-#define VEHICLE_KING_WOOLIE_SADDLE "ive000502" // name_ive000502 = King Woolie Saddle
-#define VEHICLE_CASHMEER_SADDLE "ive000503" // name_ive000503 = Cashmeer Saddle
-#define VEHICLE_WHITE_RUNNER_SADDLE "ive000601" // name_ive000601 = White Runner Saddle
-#define VEHICLE_TAURUS_SADDLE "ive000701" // name_ive000701 = Taurus Saddle
-#define VEHICLE_NAPDRAGON_CRUISER_RED "ive000801" // name_ive000801 = Napdragon Cruiser RED
-#define VEHICLE_NAPDRAGON_CRUISER_BLK "ive000802" // name_ive000802 = Napdragon Cruiser BLK
-#define VEHICLE_FLYING_SHIP "ive000901" // name_ive000901 = Flying Ship
-#define VEHICLE_MINI_NAPDRAGON "ive000702" // name_ive000702 = Mini Napdragon
-
-#define POWERUP_SOUPED_UP_STRANGELING_1 "ipu_chr001f00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_2 "ipu_chr000100" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_3 "ipu_chr001e00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_4 "ipu_chr000200" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_5 "ipu_chr001d00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_6 "ipu_chr000300" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_7 "ipu_chr001c00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_8 "ipu_chr000400" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_9 "ipu_chr001b00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_10 "ipu_chr000500" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_11 "ipu_chr001a00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_12 "ipu_chr000600" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_13 "ipu_chr000700" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_14 "ipu_chr000800" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_15 "ipu_chr000900" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_16 "ipu_chr001600" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_17 "ipu_chr000a00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_18 "ipu_chr001500" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_19 "ipu_chr000b00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_20 "ipu_chr001400" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_21 "ipu_chr000c00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_22 "ipu_chr001300" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_23 "ipu_chr000d00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_24 "ipu_chr001200" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_25 "ipu_chr000e00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_26 "ipu_chr001100" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_27 "ipu_chr000f00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_28 "ipu_chr001000" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_29 "ipu_chr001700" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_30 "ipu_chr001800" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_31 "ipu_chr001900" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_32 "ipu_chr002000" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_33 "ipu_chr002100" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_34 "ipu_chr002200" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_35 "ipu_chr002300" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_36 "ipu_chr002400" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_37 "ipu_chr002500" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_38 "ipu_chr002600" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_39 "ipu_chr002700" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_40 "ipu_chr002800" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_41 "ipu_chr002900" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_42 "ipu_chr003200" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_43 "ipu_chr002a00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_45 "ipu_chr003100" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_46 "ipu_chr002b00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_47 "ipu_chr002c00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_48 "ipu_chr002d00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_49 "ipu_chr002e00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_50 "ipu_chr002f00" // name_tamagemono_power = Souped Up Strangeling
-#define POWERUP_SOUPED_UP_STRANGELING_51 "ipu_chr003400" // name_tamagemono_power = Souped Up Strangeling
+#define MATERIAL_MYSTERIA_MINERAL_WATER imt01000010  // Quality: 0 Rarity: 1
+#define MATERIAL_FARAWAY_SPRING_WATER imt01000020  // Quality: 0 Rarity: 2
+#define MATERIAL_TROPICA_DEEP_SEA_WATER imt01000030  // Quality: 0 Rarity: 3
+#define MATERIAL_TRIAL_CAVEDEW imt01000040  // Quality: 0 Rarity: 4
+#define MATERIAL_HEALWEED imt01000100  // Quality: 0 Rarity: 1
+#define MATERIAL_VITALWEED imt01000110  // Quality: 0 Rarity: 1
+#define MATERIAL_CUREWEED imt01000120  // Quality: 0 Rarity: 1
+#define MATERIAL_LIFEWEED imt01000130  // Quality: 0 Rarity: 2
+#define MATERIAL_SOULWEED imt01000140  // Quality: 0 Rarity: 2
+#define MATERIAL_GOLDWEED imt01000150  // Quality: 0 Rarity: 3
+#define MATERIAL_ALCHEWEED imt01000160  // Quality: 0 Rarity: 1
+#define MATERIAL_ARCH_ALCHEWEED imt01000170  // Quality: 0 Rarity: 2
+#define MATERIAL_ULTIMA_ALCHEWEED imt01000180  // Quality: 0 Rarity: 4
+#define MATERIAL_RED_ANTHURIUM imt01000410  // Quality: 0 Rarity: 1
+#define MATERIAL_BLUE_ANTHURIUM imt01000400  // Quality: 0 Rarity: 2
+#define MATERIAL_YELLOW_ANTHURIUM imt01000420  // Quality: 0 Rarity: 3
+#define MATERIAL_WHITE_ANTHURIUM imt01000430  // Quality: 0 Rarity: 4
+#define MATERIAL_BLACK_ANTHURIUM imt01000440  // Quality: 0 Rarity: 4
+#define MATERIAL_EVENING_GLORY imt01000450  // Quality: 0 Rarity: 1
+#define MATERIAL_PURIFFODIL imt01000460  // Quality: 0 Rarity: 2
+#define MATERIAL_CALMARYLLIS imt01000470  // Quality: 0 Rarity: 3
+#define MATERIAL_RUSHDELION imt01000480  // Quality: 0 Rarity: 2
+#define MATERIAL_FORTUNES_FLUFF imt01000490  // Quality: 0 Rarity: 3
+#define MATERIAL_VITABLOOM imt01000500  // Quality: 0 Rarity: 4
+#define MATERIAL_DANDELION_PUFF imt01002060  // Quality: 0 Rarity: 1
+#define MATERIAL_SUNNY_PUFF imt01002070  // Quality: 0 Rarity: 3
+#define MATERIAL_MUSHROOM imt01000050  // Quality: 0 Rarity: 1
+#define MATERIAL_FOSSILSHROOM imt01004890  // Quality: 0 Rarity: 1
+#define MATERIAL_TRUFFLE imt01000060  // Quality: 0 Rarity: 3
+#define MATERIAL_DUFFLE imt01000070  // Quality: 0 Rarity: 1
+#define MATERIAL_GIGAGA_TRUFFLE imt01000080  // Quality: 0 Rarity: 4
+#define MATERIAL_TOP_CLASS_MUSHROOM imt01000090  // Quality: 0 Rarity: 5
+#define MATERIAL_CHICKEN_EGGS imt01002810  // Quality: 0 Rarity: 1
+#define MATERIAL_ROYAL_EGGS imt01002830  // Quality: 0 Rarity: 3
+#define MATERIAL_QUEEN_EGGS imt01002850  // Quality: 0 Rarity: 4
+#define MATERIAL_BIG_EGG imt01000190  // Quality: 0 Rarity: 3
+#define MATERIAL_QUETZAL_EGG imt01000210  // Quality: 0 Rarity: 3
+#define MATERIAL_BIGBEAK_EGG imt01000200  // Quality: 0 Rarity: 5
+#define MATERIAL_ANIMAL_DROPPINGS imt01000250  // Quality: 0 Rarity: 1
+#define MATERIAL_GOLDEN_DROPPINGS imt01000260  // Quality: 0 Rarity: 3
+#define MATERIAL_LITTLE_SHELL imt01000220  // Quality: 0 Rarity: 1
+#define MATERIAL_DURABLE_SHELL imt01000230  // Quality: 0 Rarity: 3
+#define MATERIAL_VALUABLE_SHELL imt01000240  // Quality: 0 Rarity: 5
+#define MATERIAL_PRETTY_CORAL imt01003400  // Quality: 0 Rarity: 1
+#define MATERIAL_STUNNING_CORAL imt01003410  // Quality: 0 Rarity: 2
+#define MATERIAL_GLITTERING_CORAL imt01003420  // Quality: 0 Rarity: 3
+#define MATERIAL_ANCIENT_CORAL imt01003430  // Quality: 0 Rarity: 4
+#define MATERIAL_COMMON_HOPPER imt01000270  // Quality: 0 Rarity: 1
+#define MATERIAL_ROYAL_HOPPER imt01000280  // Quality: 0 Rarity: 2
+#define MATERIAL_DEMONIC_HOPPER imt01000290  // Quality: 0 Rarity: 3
+#define MATERIAL_WHITE_BUTTERFLY imt01000300  // Quality: 0 Rarity: 1
+#define MATERIAL_YELLOW_BUTTERFLY imt01000310  // Quality: 0 Rarity: 2
+#define MATERIAL_MYSTERIA_MORPHO imt01000320  // Quality: 0 Rarity: 3
+#define MATERIAL_PENNY_BEETLE imt01000330  // Quality: 0 Rarity: 1
+#define MATERIAL_WINDFALL_BEETLE imt01000340  // Quality: 0 Rarity: 2
+#define MATERIAL_BULLION_BEETLE imt01000350  // Quality: 0 Rarity: 3
+#define MATERIAL_RHINO_BEETLE imt01000360  // Quality: 0 Rarity: 2
+#define MATERIAL_BRUISER_BEETLE imt01000370  // Quality: 0 Rarity: 3
+#define MATERIAL_CHAMPION_BEETLE imt01000380  // Quality: 0 Rarity: 4
+#define MATERIAL_DRAGONFLY imt01000390  // Quality: 0 Rarity: 4
+#define MATERIAL_MYSTERIA_COPPER imt01001150  // Quality: 0 Rarity: 1
+#define MATERIAL_FARAWAY_IRON imt01001160  // Quality: 0 Rarity: 2
+#define MATERIAL_TROPICA_SILVER imt01001170  // Quality: 0 Rarity: 3
+#define MATERIAL_SWOLEAN_GOLD imt01001180  // Quality: 0 Rarity: 4
+#define MATERIAL_PLATINUM_ORE imt01001190  // Quality: 0 Rarity: 3
+#define MATERIAL_MARINE_ORE imt01001210  // Quality: 0 Rarity: 4
+#define MATERIAL_MAGMA_ORE imt01001200  // Quality: 0 Rarity: 4
+#define MATERIAL_MAGIC_ORE imt01001220  // Quality: 0 Rarity: 5
+#define MATERIAL_MYSTERIA_MASONRY imt01004820  // Quality: 0 Rarity: 1
+#define MATERIAL_GOOD_MYSTERIA_MASONRY imt01004830  // Quality: 0 Rarity: 2
+#define MATERIAL_MINTY_ORE imt01001380  // Quality: 0 Rarity: 1
+#define MATERIAL_QUALITY_MINTY_ORE imt01001390  // Quality: 0 Rarity: 2
+#define MATERIAL_SANDSTONE imt01001400  // Quality: 0 Rarity: 2
+#define MATERIAL_HANIWA_STONE imt01004900  // Quality: 0 Rarity: 1
+#define MATERIAL_FOSSIL_SHARD imt01001410  // Quality: 0 Rarity: 3
+#define MATERIAL_DRAGON_LEG_BONE imt01001350  // Quality: 0 Rarity: 4
+#define MATERIAL_DRAGON_VERTEBRAE imt01001360  // Quality: 0 Rarity: 4
+#define MATERIAL_DRAGON_SKULL imt01001370  // Quality: 0 Rarity: 4
+#define MATERIAL_FIRE_SHARD imt01001460  // Quality: 0 Rarity: 4
+#define MATERIAL_WIND_SHARD imt01001470  // Quality: 0 Rarity: 4
+#define MATERIAL_WATER_SHARD imt01001480  // Quality: 0 Rarity: 4
+#define MATERIAL_EARTH_SHARD imt01001490  // Quality: 0 Rarity: 4
+#define MATERIAL_YELLOW_STONE imt01001320  // Quality: 0 Rarity: 1
+#define MATERIAL_BLUE_STONE imt01001330  // Quality: 0 Rarity: 2
+#define MATERIAL_PURPLE_STONE imt01001340  // Quality: 0 Rarity: 3
+#define MATERIAL_DARK_STONE imt01001420  // Quality: 0 Rarity: 4
+#define MATERIAL_SULTAN_STONE imt01004390  // Quality: 0 Rarity: 4
+#define MATERIAL_TOPAZ imt01001240  // Quality: 0 Rarity: 3
+#define MATERIAL_AQUAMARINE imt01001230  // Quality: 0 Rarity: 2
+#define MATERIAL_AMETHYST imt01001260  // Quality: 0 Rarity: 3
+#define MATERIAL_RUBY imt01001250  // Quality: 0 Rarity: 4
+#define MATERIAL_SAPPHIRE imt01001280  // Quality: 0 Rarity: 4
+#define MATERIAL_EMERALD imt01001270  // Quality: 0 Rarity: 4
+#define MATERIAL_DIAMOND imt01001300  // Quality: 0 Rarity: 4
+#define MATERIAL_BLACK_ONYX imt01001290  // Quality: 0 Rarity: 4
+#define MATERIAL_CHAROITE imt01004740  // Quality: 0 Rarity: 4
+#define MATERIAL_FLAME_RUBY imt01001450  // Quality: 0 Rarity: 4
+#define MATERIAL_ANCIENT_EMERALD imt01001310  // Quality: 0 Rarity: 5
+#define MATERIAL_ANCIENT_ORB imt01001430  // Quality: 0 Rarity: 5
+#define MATERIAL_MAGMA_DRAGONSTONE imt01001440  // Quality: 0 Rarity: 5
+#define MATERIAL_DARK_GEM imt01004750  // Quality: 0 Rarity: 5
+#define MATERIAL_SULTAN_HEART imt01004400  // Quality: 0 Rarity: 5
+#define MATERIAL_LEGENDARY_SHINY_DIAMOND imt01004960  // Quality: 0 Rarity: 5
+#define MATERIAL_BRONZE_INGOT imt01001500  // Quality: 0 Rarity: 1
+#define MATERIAL_IRON_INGOT imt01001510  // Quality: 0 Rarity: 2
+#define MATERIAL_SILVER_INGOT imt01001520  // Quality: 0 Rarity: 3
+#define MATERIAL_GOLD_INGOT imt01001530  // Quality: 0 Rarity: 4
+#define MATERIAL_PLATINUM_INGOT imt01001540  // Quality: 0 Rarity: 4
+#define MATERIAL_MARINE_INGOT imt01001560  // Quality: 0 Rarity: 4
+#define MATERIAL_MAGMA_INGOT imt01001550  // Quality: 0 Rarity: 4
+#define MATERIAL_MAGIC_INGOT imt01001570  // Quality: 0 Rarity: 5
+#define MATERIAL_OAK_LOG imt01001580  // Quality: 0 Rarity: 1
+#define MATERIAL_PALM_LOG imt01001600  // Quality: 0 Rarity: 1
+#define MATERIAL_DESERT_LOG imt01004910  // Quality: 0 Rarity: 1
+#define MATERIAL_PINE_LOG imt01001590  // Quality: 0 Rarity: 2
+#define MATERIAL_CHERRY_LOG imt01001650  // Quality: 0 Rarity: 2
+#define MATERIAL_SUGAR_LOG imt01001610  // Quality: 0 Rarity: 3
+#define MATERIAL_STARRY_LOG imt01001630  // Quality: 0 Rarity: 4
+#define MATERIAL_SKYTREE_LOG imt01004480  // Quality: 0 Rarity: 4
+#define MATERIAL_DARKWOOD_LOG imt01001640  // Quality: 0 Rarity: 4
+#define MATERIAL_FIRE_LOG imt01001660  // Quality: 0 Rarity: 3
+#define MATERIAL_WIND_LOG imt01001670  // Quality: 0 Rarity: 3
+#define MATERIAL_WATER_LOG imt01001680  // Quality: 0 Rarity: 3
+#define MATERIAL_EARTH_LOG imt01001690  // Quality: 0 Rarity: 3
+#define MATERIAL_LEGENDARY_DIVINE_LOG imt01004970  // Quality: 0 Rarity: 5
+#define MATERIAL_ELDER_OAK_LOG imt01001700  // Quality: 0 Rarity: 2
+#define MATERIAL_ELDER_PALM_LOG imt01001720  // Quality: 0 Rarity: 2
+#define MATERIAL_ELDER_DESERT_LOG imt01004920  // Quality: 0 Rarity: 2
+#define MATERIAL_ELDER_PINE_LOG imt01001710  // Quality: 0 Rarity: 3
+#define MATERIAL_ELDER_CHERRY_LOG imt01001770  // Quality: 0 Rarity: 3
+#define MATERIAL_ELDER_SUGAR_LOG imt01001730  // Quality: 0 Rarity: 4
+#define MATERIAL_ELDER_STARRY_LOG imt01001750  // Quality: 0 Rarity: 5
+#define MATERIAL_ELDER_SKYTREE_LOG imt01004490  // Quality: 0 Rarity: 5
+#define MATERIAL_ELDER_DARKWOOD_LOG imt01001760  // Quality: 0 Rarity: 5
+#define MATERIAL_ELDER_FIRE_LOG imt01001780  // Quality: 0 Rarity: 4
+#define MATERIAL_ELDER_WIND_LOG imt01001790  // Quality: 0 Rarity: 4
+#define MATERIAL_ELDER_WATER_LOG imt01001800  // Quality: 0 Rarity: 4
+#define MATERIAL_ELDER_EARTH_LOG imt01001810  // Quality: 0 Rarity: 4
+#define MATERIAL_CHERRY_BRANCH imt01002040  // Quality: 0 Rarity: 4
+#define MATERIAL_GIANTS_TREE_BARK imt01002030  // Quality: 0 Rarity: 5
+#define MATERIAL_ANTIDOTE_BERRIES imt01001940  // Quality: 0 Rarity: 2
+#define MATERIAL_ANTIPARA_BERRIES imt01001950  // Quality: 0 Rarity: 2
+#define MATERIAL_REJUVENATING_BERRIES imt01001960  // Quality: 0 Rarity: 2
+#define MATERIAL_WAKEUP_BERRIES imt01001970  // Quality: 0 Rarity: 2
+#define MATERIAL_PALM_NUTS imt01002000  // Quality: 0 Rarity: 1
+#define MATERIAL_PINE_NUTS imt01001980  // Quality: 0 Rarity: 2
+#define MATERIAL_SUGAR_NUTS imt01001990  // Quality: 0 Rarity: 3
+#define MATERIAL_GIANTS_TREE_NUTS imt01002020  // Quality: 0 Rarity: 5
+#define MATERIAL_CHERRY_NECTAR imt01002050  // Quality: 0 Rarity: 4
+#define MATERIAL_OAK_LUMBER imt01001820  // Quality: 0 Rarity: 1
+#define MATERIAL_PALM_LUMBER imt01001840  // Quality: 0 Rarity: 1
+#define MATERIAL_DESERT_LUMBER imt01004930  // Quality: 0 Rarity: 1
+#define MATERIAL_PINE_LUMBER imt01001830  // Quality: 0 Rarity: 2
+#define MATERIAL_CHERRY_LUMBER imt01001890  // Quality: 0 Rarity: 2
+#define MATERIAL_SUGAR_LUMBER imt01001850  // Quality: 0 Rarity: 3
+#define MATERIAL_STARRY_LUMBER imt01001870  // Quality: 0 Rarity: 4
+#define MATERIAL_SKYTREE_LUMBER imt01004500  // Quality: 0 Rarity: 4
+#define MATERIAL_DARKWOOD_LUMBER imt01001880  // Quality: 0 Rarity: 4
+#define MATERIAL_FIRE_WOOD_LUMBER imt01001900  // Quality: 0 Rarity: 3
+#define MATERIAL_WIND_WOOD_LUMBER imt01001910  // Quality: 0 Rarity: 3
+#define MATERIAL_WATER_WOOD_LUMBER imt01001920  // Quality: 0 Rarity: 3
+#define MATERIAL_EARTH_WOOD_LUMBER imt01001930  // Quality: 0 Rarity: 3
+#define MATERIAL_MYSTERIA_CARP imt01000570  // Quality: 0 Rarity: 1
+#define MATERIAL_MYSTERIA_CRUCIAN imt01000560  // Quality: 0 Rarity: 1
+#define MATERIAL_FARAWAY_SWEETFISH imt01000580  // Quality: 0 Rarity: 2
+#define MATERIAL_LULAB_TROUT imt01000590  // Quality: 0 Rarity: 2
+#define MATERIAL_SAND_FISH imt01005010  // Quality: 0 Rarity: 2
+#define MATERIAL_REDGILL imt01005020  // Quality: 0 Rarity: 2
+#define MATERIAL_PARASOL_FISH imt01000610  // Quality: 0 Rarity: 2
+#define MATERIAL_GREEN_FISH imt01004540  // Quality: 0 Rarity: 2
+#define MATERIAL_KISSYFISH imt01004530  // Quality: 0 Rarity: 3
+#define MATERIAL_LAVASHRIMP imt01005030  // Quality: 0 Rarity: 3
+#define MATERIAL_MYSTERIA_KOI imt01000790  // Quality: 0 Rarity: 2
+#define MATERIAL_GOLD_KOI imt01004550  // Quality: 0 Rarity: 3
+#define MATERIAL_SARDINE imt01000620  // Quality: 0 Rarity: 1
+#define MATERIAL_TUNOCO_FISH imt01000940  // Quality: 0 Rarity: 1
+#define MATERIAL_PUFFERFISH imt01000660  // Quality: 0 Rarity: 1
+#define MATERIAL_CLOWNFISH imt01000930  // Quality: 0 Rarity: 2
+#define MATERIAL_FLYING_FISH imt01004520  // Quality: 0 Rarity: 3
+#define MATERIAL_TUNA imt01000630  // Quality: 0 Rarity: 2
+#define MATERIAL_DUNEFIN_TUNA imt01005000  // Quality: 0 Rarity: 3
+#define MATERIAL_TROPICA_BREAM imt01000770  // Quality: 0 Rarity: 3
+#define MATERIAL_ANGELFISH imt01000920  // Quality: 0 Rarity: 3
+#define MATERIAL_ELECTRIC_EEL imt01000730  // Quality: 0 Rarity: 3
+#define MATERIAL_SNEAKFISH imt01000750  // Quality: 0 Rarity: 2
+#define MATERIAL_BLACKGILL imt01000910  // Quality: 0 Rarity: 3
+#define MATERIAL_CACTUS_FISH imt01000670  // Quality: 0 Rarity: 3
+#define MATERIAL_EVIL_CARP imt01000840  // Quality: 0 Rarity: 3
+#define MATERIAL_QUARTZFISH imt01000700  // Quality: 0 Rarity: 3
+#define MATERIAL_SMELT imt01000690  // Quality: 0 Rarity: 3
+#define MATERIAL_SNEAKY_TUNA imt01000740  // Quality: 0 Rarity: 3
+#define MATERIAL_CAVE_CATFISH imt01004510  // Quality: 0 Rarity: 3
+#define MATERIAL_SKELETON_FISH imt01000980  // Quality: 0 Rarity: 4
+#define MATERIAL_HOT_SPRING_BREAM imt01000850  // Quality: 0 Rarity: 4
+#define MATERIAL_DARKFISH imt01004780  // Quality: 0 Rarity: 5
+#define MATERIAL_PLAINS_LORDFISH imt01004600  // Quality: 0 Rarity: 2
+#define MATERIAL_PLAINS_LORDFISH_MOSS imt01004610  // Quality: 0 Rarity: 2
+#define MATERIAL_CHERRY_LORDFISH imt01004620  // Quality: 0 Rarity: 3
+#define MATERIAL_CHERRY_LORDFISH_MOSS imt01004630  // Quality: 0 Rarity: 3
+#define MATERIAL_FOREST_LORDFISH imt01000600  // Quality: 0 Rarity: 3
+#define MATERIAL_FOREST_LORDFISH_MOSS imt01001120  // Quality: 0 Rarity: 3
+#define MATERIAL_HIGH_FLYING_FISH imt01004700  // Quality: 0 Rarity: 5
+#define MATERIAL_NIMBUS_SCALES imt01004710  // Quality: 0 Rarity: 5
+#define MATERIAL_SWORDFISH imt01000800  // Quality: 0 Rarity: 4
+#define MATERIAL_SWORDFISH_FIN imt01001060  // Quality: 0 Rarity: 4
+#define MATERIAL_GOLDEN_SWORDFISH imt01000830  // Quality: 0 Rarity: 4
+#define MATERIAL_GOLDEN_FIN imt01001070  // Quality: 0 Rarity: 4
+#define MATERIAL_COLDWATER_TUNA imt01000820  // Quality: 0 Rarity: 4
+#define MATERIAL_ICY_SCALES imt01001030  // Quality: 0 Rarity: 4
+#define MATERIAL_RAINBOW_FLYING_FISH imt01004660  // Quality: 0 Rarity: 5
+#define MATERIAL_RAINBOW_FIN imt01001110  // Quality: 0 Rarity: 5
+#define MATERIAL_GREAT_LUCKY_BREAM imt01004640  // Quality: 0 Rarity: 5
+#define MATERIAL_LUCKY_PEARL imt01004650  // Quality: 0 Rarity: 5
+#define MATERIAL_GODFISH imt01000880  // Quality: 0 Rarity: 5
+#define MATERIAL_GODFISH_MOSS imt01001130  // Quality: 0 Rarity: 5
+#define MATERIAL_POSEIDON_SWORDFISH imt01000900  // Quality: 0 Rarity: 5
+#define MATERIAL_POSEIDONS_FIN imt01001100  // Quality: 0 Rarity: 5
+#define MATERIAL_BEELZEBUB_TUNA imt01000870  // Quality: 0 Rarity: 5
+#define MATERIAL_DEVILS_FIN imt01001080  // Quality: 0 Rarity: 5
+#define MATERIAL_BASS_OF_DARKNESS imt01000760  // Quality: 0 Rarity: 4
+#define MATERIAL_DARK_SCALES imt01001020  // Quality: 0 Rarity: 4
+#define MATERIAL_BLUESCALE_LORDFISH imt01000680  // Quality: 0 Rarity: 4
+#define MATERIAL_SUBTERRANEAN_SCALES imt01001010  // Quality: 0 Rarity: 4
+#define MATERIAL_DEEP_SEA_LORDFISH imt01000720  // Quality: 0 Rarity: 5
+#define MATERIAL_ANTENNA_LANTERN imt01001040  // Quality: 0 Rarity: 5
+#define MATERIAL_CRYSTALLINE_BASS imt01004680  // Quality: 0 Rarity: 5
+#define MATERIAL_CRYSTALIZED_SCALE imt01004690  // Quality: 0 Rarity: 5
+#define MATERIAL_ERUPTUNA imt01000810  // Quality: 0 Rarity: 4
+#define MATERIAL_MAGMA_FIN imt01005040  // Quality: 0 Rarity: 4
+#define MATERIAL_LEGENDARY_ROCKET_FISH imt01004980  // Quality: 0 Rarity: 5
+#define MATERIAL_CARROT imt01002550  // Quality: 0 Rarity: 1
+#define MATERIAL_CRIMSON_CARROT imt01002560  // Quality: 0 Rarity: 2
+#define MATERIAL_HERMIT_CARROT imt01002570  // Quality: 0 Rarity: 3
+#define MATERIAL_GIANT_MANDRAKE imt01002580  // Quality: 0 Rarity: 4
+#define MATERIAL_NEARLY_INVISIBLE_TEARDROP imt01002760  // Quality: 0 Rarity: 5
+#define MATERIAL_ONION imt01002670  // Quality: 0 Rarity: 1
+#define MATERIAL_PALE_ONION imt01002680  // Quality: 0 Rarity: 2
+#define MATERIAL_DEMONION imt01002690  // Quality: 0 Rarity: 3
+#define MATERIAL_ARMORED_ONION imt01002700  // Quality: 0 Rarity: 4
+#define MATERIAL_INVINCIBLE_ONIONSKIN imt01002790  // Quality: 0 Rarity: 5
+#define MATERIAL_POTATO imt01002630  // Quality: 0 Rarity: 1
+#define MATERIAL_BUSHY_BAATATO imt01002640  // Quality: 0 Rarity: 2
+#define MATERIAL_DANDY_POTATO imt01002650  // Quality: 0 Rarity: 3
+#define MATERIAL_SPOOKY_SPUD imt01002660  // Quality: 0 Rarity: 4
+#define MATERIAL_IMPECCABLE_STACHE imt01002780  // Quality: 0 Rarity: 5
+#define MATERIAL_RADISH imt01002510  // Quality: 0 Rarity: 1
+#define MATERIAL_RAGING_RADISH imt01002520  // Quality: 0 Rarity: 2
+#define MATERIAL_MUNGUS_RADISH imt01002530  // Quality: 0 Rarity: 3
+#define MATERIAL_GREAT_SPIRIT_RADISH imt01002540  // Quality: 0 Rarity: 4
+#define MATERIAL_GREAT_SPIRIT_FLOWER imt01002750  // Quality: 0 Rarity: 5
+#define MATERIAL_PUMPKIN imt01002590  // Quality: 0 Rarity: 1
+#define MATERIAL_SMILEY_PUMPKIN imt01002600  // Quality: 0 Rarity: 2
+#define MATERIAL_GOURDY_PUMPKIN imt01002610  // Quality: 0 Rarity: 3
+#define MATERIAL_KAISER_PUMPKIN imt01002620  // Quality: 0 Rarity: 4
+#define MATERIAL_FLAXEN_HAIR imt01002770  // Quality: 0 Rarity: 5
+#define MATERIAL_CABBAGE imt01002710  // Quality: 0 Rarity: 1
+#define MATERIAL_PURPLE_CABBAGE imt01002720  // Quality: 0 Rarity: 2
+#define MATERIAL_GEMINI_CABBAGE imt01002730  // Quality: 0 Rarity: 3
+#define MATERIAL_GODLY_CABBAGE imt01002740  // Quality: 0 Rarity: 4
+#define MATERIAL_FAINTLY_GLOWING_LEAF imt01002800  // Quality: 0 Rarity: 5
+#define MATERIAL_SHADOW_CARROT imt01004560  // Quality: 0 Rarity: 2
+#define MATERIAL_CORRUPT_CARROT imt01004570  // Quality: 0 Rarity: 3
+#define MATERIAL_FALLEN_CARROT imt01004580  // Quality: 0 Rarity: 4
+#define MATERIAL_WICKED_MANDRAKE imt01004790  // Quality: 0 Rarity: 5
+#define MATERIAL_LEGENDARY_KING_SPUD imt01004990  // Quality: 0 Rarity: 5
+#define MATERIAL_RADISHY_LEAF imt01003520  // Quality: 0 Rarity: 2
+#define MATERIAL_AUBERGINE imt01003040  // Quality: 0 Rarity: 1
+#define MATERIAL_TOMATO imt01003050  // Quality: 0 Rarity: 1
+#define MATERIAL_BROCCOLI imt01003060  // Quality: 0 Rarity: 1
+#define MATERIAL_SWEETCORN imt01003070  // Quality: 0 Rarity: 1
+#define MATERIAL_FARAWAY_WHEAT imt01003020  // Quality: 0 Rarity: 1
+#define MATERIAL_FARAWAY_RICE imt01003030  // Quality: 0 Rarity: 1
+#define MATERIAL_SALT imt01003960  // Quality: 0 Rarity: 1
+#define MATERIAL_SUGAR imt01003970  // Quality: 0 Rarity: 1
+#define MATERIAL_RED_PEPPERCORN imt01003980  // Quality: 0 Rarity: 1
+#define MATERIAL_VINEGAR imt01003990  // Quality: 0 Rarity: 1
+#define MATERIAL_BLACK_PEPPER imt01004000  // Quality: 0 Rarity: 1
+#define MATERIAL_BUTTER imt01004010  // Quality: 0 Rarity: 1
+#define MATERIAL_GINGER imt01004020  // Quality: 0 Rarity: 1
+#define MATERIAL_MUSTARD imt01004030  // Quality: 0 Rarity: 1
+#define MATERIAL_CURRY_SPICES imt01004040  // Quality: 0 Rarity: 1
+#define MATERIAL_BEEF imt01003080  // Quality: 0 Rarity: 1
+#define MATERIAL_CHICKEN imt01003090  // Quality: 0 Rarity: 1
+#define MATERIAL_MUTTON imt01003100  // Quality: 0 Rarity: 1
+#define MATERIAL_DINO_MEAT imt01003110  // Quality: 0 Rarity: 4
+#define MATERIAL_MONSTER_MEAT imt01003120  // Quality: 0 Rarity: 4
+#define MATERIAL_DRAGON_MEAT imt01003130  // Quality: 0 Rarity: 3
+#define MATERIAL_WILD_BEAST_MEAT imt01003140  // Quality: 0 Rarity: 3
+#define MATERIAL_MYTHICAL_MEAT imt01003770  // Quality: 0 Rarity: 4
+#define MATERIAL_GHOST_MEAT imt01003790  // Quality: 0 Rarity: 3
+#define MATERIAL_LEGENDARY_DON_MEAT imt01004950  // Quality: 0 Rarity: 5
+#define MATERIAL_LITTLE_TAIL imt01003150  // Quality: 0 Rarity: 1
+#define MATERIAL_BIG_TAIL imt01003160  // Quality: 0 Rarity: 2
+#define MATERIAL_MONSTER_TAIL imt01003170  // Quality: 0 Rarity: 3
+#define MATERIAL_GIANT_TAIL imt01003580  // Quality: 0 Rarity: 4
+#define MATERIAL_MOON_CLUSTER imt01002920  // Quality: 0 Rarity: 4
+#define MATERIAL_STAR_CLUSTER imt01002930  // Quality: 0 Rarity: 3
+#define MATERIAL_SUN_CLUSTER imt01002940  // Quality: 0 Rarity: 4
+#define MATERIAL_LIFEFORCE_CLUSTER imt01002950  // Quality: 0 Rarity: 3
+#define MATERIAL_GOLEM_FRAGMENT imt01005100  // Quality: 0 Rarity: 4
+#define MATERIAL_EVIL_SHARD imt01003830  // Quality: 0 Rarity: 4
+#define MATERIAL_ANIMAL_CLAWS imt01003280  // Quality: 0 Rarity: 1
+#define MATERIAL_HARD_CLAWS imt01003290  // Quality: 0 Rarity: 2
+#define MATERIAL_SHARP_CLAWS imt01003300  // Quality: 0 Rarity: 3
+#define MATERIAL_DEADLY_CLAWS imt01003310  // Quality: 0 Rarity: 3
+#define MATERIAL_GIANT_CLAWS imt01003550  // Quality: 0 Rarity: 4
+#define MATERIAL_ICY_CLAWS imt01003800  // Quality: 0 Rarity: 4
+#define MATERIAL_SMOLDERING_CLAWS imt01005060  // Quality: 0 Rarity: 3
+#define MATERIAL_ANIMAL_FANG imt01003320  // Quality: 0 Rarity: 1
+#define MATERIAL_THICK_FANG imt01003330  // Quality: 0 Rarity: 2
+#define MATERIAL_STRONG_FANG imt01003340  // Quality: 0 Rarity: 3
+#define MATERIAL_STURDY_FANG imt01003350  // Quality: 0 Rarity: 4
+#define MATERIAL_GIANT_FANG imt01003560  // Quality: 0 Rarity: 4
+#define MATERIAL_SMOLDERING_FANG imt01005050  // Quality: 0 Rarity: 5
+#define MATERIAL_WILD_BULL_HORN imt01003530  // Quality: 0 Rarity: 5
+#define MATERIAL_GIANT_HORN imt01003590  // Quality: 0 Rarity: 4
+#define MATERIAL_WILD_ANTLER imt01003720  // Quality: 0 Rarity: 5
+#define MATERIAL_DRAGONTREE_HORN imt01004410  // Quality: 0 Rarity: 5
+#define MATERIAL_SKELETAL_HORN imt01005080  // Quality: 0 Rarity: 5
+#define MATERIAL_LEGENDARY_DON_HORN imt01004940  // Quality: 0 Rarity: 5
+#define MATERIAL_TURTLE_SHELL imt01003380  // Quality: 0 Rarity: 2
+#define MATERIAL_THICK_SHELL imt01003390  // Quality: 0 Rarity: 3
+#define MATERIAL_STEEL_SHELL imt01003710  // Quality: 0 Rarity: 4
+#define MATERIAL_ANIMAL_HIDE imt01003180  // Quality: 0 Rarity: 1
+#define MATERIAL_BEAST_HIDE imt01003190  // Quality: 0 Rarity: 2
+#define MATERIAL_MONSTER_HIDE imt01003200  // Quality: 0 Rarity: 3
+#define MATERIAL_SMOLDERING_HIDE imt01005070  // Quality: 0 Rarity: 3
+#define MATERIAL_FISH_SCALES imt01003210  // Quality: 0 Rarity: 1
+#define MATERIAL_SNAKE_SCALES imt01003220  // Quality: 0 Rarity: 1
+#define MATERIAL_PYTHON_SCALES imt01003240  // Quality: 0 Rarity: 2
+#define MATERIAL_RED_SERPENT_SCALES imt01003230  // Quality: 0 Rarity: 3
+#define MATERIAL_GIANT_SCALE imt01003570  // Quality: 0 Rarity: 4
+#define MATERIAL_NAPDRAGONS_SCALE imt01003820  // Quality: 0 Rarity: 3
+#define MATERIAL_GLOSSY_FEATHER imt01003360  // Quality: 0 Rarity: 3
+#define MATERIAL_COAL_BLACK_FEATHER imt01003370  // Quality: 0 Rarity: 3
+#define MATERIAL_RAINBOW_FEATHER imt01003660  // Quality: 0 Rarity: 5
+#define MATERIAL_BRILLIANT_FEATHER imt01003680  // Quality: 0 Rarity: 4
+#define MATERIAL_GIANT_THORN imt01003540  // Quality: 0 Rarity: 4
+#define MATERIAL_FLAMING_MOHAWK imt01003850  // Quality: 0 Rarity: 4
+#define MATERIAL_DRAGONTREE_WING imt01004420  // Quality: 0 Rarity: 4
+#define MATERIAL_STRAW_THREAD imt01002080  // Quality: 0 Rarity: 1
+#define MATERIAL_FLAX_THREAD imt01002110  // Quality: 0 Rarity: 3
+#define MATERIAL_SILK_THREAD imt01002090  // Quality: 0 Rarity: 2
+#define MATERIAL_MARINE_THREAD imt01002100  // Quality: 0 Rarity: 3
+#define MATERIAL_STARRY_THREAD imt01002130  // Quality: 0 Rarity: 3
+#define MATERIAL_PINK_SILK_THREAD imt01002120  // Quality: 0 Rarity: 4
+#define MATERIAL_GLITTERING_SILK_THREAD imt01005110  // Quality: 0 Rarity: 4
+#define MATERIAL_SHEEP_FLEECE imt01002140  // Quality: 0 Rarity: 1
+#define MATERIAL_BLACK_SHEEP_FLEECE imt01002190  // Quality: 0 Rarity: 1
+#define MATERIAL_GOAT_FLEECE imt01002160  // Quality: 0 Rarity: 1
+#define MATERIAL_GOLDEN_GOAT_FLEECE imt01002170  // Quality: 0 Rarity: 3
+#define MATERIAL_NOBLE_GOAT_FLEECE imt01003740  // Quality: 0 Rarity: 4
+#define MATERIAL_SHEEP_KINGS_FLEECE imt01002200  // Quality: 0 Rarity: 5
+#define MATERIAL_WOVEN_STRAW_FABRIC imt01002230  // Quality: 0 Rarity: 1
+#define MATERIAL_DANDELION_COTTON imt01002240  // Quality: 0 Rarity: 1
+#define MATERIAL_SUNNY_COTTON imt01002270  // Quality: 0 Rarity: 3
+#define MATERIAL_SILK imt01002260  // Quality: 0 Rarity: 2
+#define MATERIAL_LINEN imt01002300  // Quality: 0 Rarity: 2
+#define MATERIAL_MARINE_SILK imt01002290  // Quality: 0 Rarity: 3
+#define MATERIAL_STARDUST_LINEN imt01002350  // Quality: 0 Rarity: 3
+#define MATERIAL_PINK_SILK imt01002320  // Quality: 0 Rarity: 4
+#define MATERIAL_GLITTERING_SILK imt01005120  // Quality: 0 Rarity: 4
+#define MATERIAL_WOOL imt01002250  // Quality: 0 Rarity: 1
+#define MATERIAL_BLACK_WOOL imt01002330  // Quality: 0 Rarity: 1
+#define MATERIAL_CASHMERE imt01002280  // Quality: 0 Rarity: 2
+#define MATERIAL_FLARE_CASHMERE imt01002310  // Quality: 0 Rarity: 3
+#define MATERIAL_KINGS_WOOL imt01002340  // Quality: 0 Rarity: 5
+#define MATERIAL_WOODEN_BUTTONS imt01002360  // Quality: 0 Rarity: 1
+#define MATERIAL_METAL_BUTTONS imt01002370  // Quality: 0 Rarity: 1
+#define MATERIAL_SEASHELL_BUTTONS imt01002380  // Quality: 0 Rarity: 2
+#define MATERIAL_PIRATE_CAPTAIN_BUTTONS imt01002390  // Quality: 0 Rarity: 3
+#define MATERIAL_CUTE_RIBBON imt01002400  // Quality: 0 Rarity: 3
+#define MATERIAL_WONDERFUL_RIBBON imt01002410  // Quality: 0 Rarity: 2
+#define MATERIAL_FLUFFY_RIBBON imt01002420  // Quality: 0 Rarity: 3
+#define MATERIAL_DIVINE_RIBBON imt01002430  // Quality: 0 Rarity: 3
+#define MATERIAL_STRING imt01002440  // Quality: 0 Rarity: 1
+#define MATERIAL_LEATHER_STRING imt01002450  // Quality: 0 Rarity: 1
+#define MATERIAL_GOLDEN_STRING imt01002460  // Quality: 0 Rarity: 2
+#define MATERIAL_POISON_POWDER imt01002470  // Quality: 0 Rarity: 1
+#define MATERIAL_PARALYSIS_POWDER imt01002480  // Quality: 0 Rarity: 1
+#define MATERIAL_COMBUSTIBLE_POWDER imt01002500  // Quality: 0 Rarity: 2
+#define MATERIAL_GHASTLY_POWDER imt01003780  // Quality: 0 Rarity: 4
+#define MATERIAL_MAGIC_POWDER imt01003250  // Quality: 0 Rarity: 1
+#define MATERIAL_DEMONIC_POWDER imt01003260  // Quality: 0 Rarity: 2
+#define MATERIAL_SPIRITUAL_POWDER imt01003270  // Quality: 0 Rarity: 3
+#define MATERIAL_SUSPICIOUS_OBJECT imt01003440  // Quality: 0 Rarity: 1
+#define MATERIAL_MYSTERIOUS_OBJECT imt01003450  // Quality: 0 Rarity: 2
+#define MATERIAL_CURIOUS_OBJECT imt01003460  // Quality: 0 Rarity: 3
+#define MATERIAL_WEIRD_OBJECT imt01003470  // Quality: 0 Rarity: 4
+#define MATERIAL_RED_GEL imt01003510  // Quality: 0 Rarity: 2
+#define MATERIAL_BLUE_GEL imt01003490  // Quality: 0 Rarity: 2
+#define MATERIAL_YELLOW_GEL imt01003500  // Quality: 0 Rarity: 1
+#define MATERIAL_GREEN_GEL imt01003480  // Quality: 0 Rarity: 1
+#define MATERIAL_FIRE_MANA imt01003600  // Quality: 0 Rarity: 5
+#define MATERIAL_WATER_MANA imt01003610  // Quality: 0 Rarity: 5
+#define MATERIAL_EARTH_MANA imt01003620  // Quality: 0 Rarity: 5
+#define MATERIAL_WIND_MANA imt01003630  // Quality: 0 Rarity: 5
+#define MATERIAL_LIGHT_MANA imt01003640  // Quality: 0 Rarity: 5
+#define MATERIAL_SHADOW_MANA imt01003650  // Quality: 0 Rarity: 5
+#define MATERIAL_MONSTER_CRYSTAL imt01003690  // Quality: 0 Rarity: 4
+#define MATERIAL_FROST_CRYSTAL imt01003700  // Quality: 0 Rarity: 4
+#define MATERIAL_ANCIENT_CORE imt01003750  // Quality: 0 Rarity: 4
+#define MATERIAL_ANCIENT_NUCLEUS imt01003760  // Quality: 0 Rarity: 4
+#define MATERIAL_NAPDRAGONS_TEARDROP imt01003810  // Quality: 0 Rarity: 4
+#define MATERIAL_GREAT_PRAIRIES_TEAR imt01003840  // Quality: 0 Rarity: 4
+#define MATERIAL_QUETZAL_TREASURE imt01003670  // Quality: 0 Rarity: 3
+#define MATERIAL_RED_PAINT imt01004070  // Quality: 0 Rarity: 1
+#define MATERIAL_BLUE_PAINT imt01004050  // Quality: 0 Rarity: 2
+#define MATERIAL_YELLOW_PAINT imt01004060  // Quality: 0 Rarity: 3
+#define MATERIAL_WHITE_PAINT imt01004080  // Quality: 0 Rarity: 4
+#define MATERIAL_BLACK_PAINT imt01004090  // Quality: 0 Rarity: 4
+#define MATERIAL_RAINBOW_PAINT imt01004100  // Quality: 0 Rarity: 5
+#define MATERIAL_APPLE_APPLIQU imt01003860  // Quality: 0 Rarity: 3
+#define MATERIAL_HONEY_APPLIQU imt01003920  // Quality: 0 Rarity: 3
+#define MATERIAL_FAIRY_APPLIQU imt01003870  // Quality: 0 Rarity: 3
+#define MATERIAL_SHIELD_APPLIQU imt01003880  // Quality: 0 Rarity: 3
+#define MATERIAL_HERO_APPLIQU imt01003890  // Quality: 0 Rarity: 3
+#define MATERIAL_PIRATE_APPLIQU imt01003910  // Quality: 0 Rarity: 4
+#define MATERIAL_PRINCESS_APPLIQU imt01003900  // Quality: 0 Rarity: 4
+#define MATERIAL_TRIP_APPLIQU imt01003940  // Quality: 0 Rarity: 5
+#define MATERIAL_SKELEGON_APPLIQU imt01003935  // Quality: 0 Rarity: 5
+#define MATERIAL_HAGRAM_APPLIQU imt01003950  // Quality: 0 Rarity: 5
+#define MATERIAL_SPIDER_STICKER imt01004180  // Quality: 0 Rarity: 3
+#define MATERIAL_TORTORTOISE_STICKER imt01004220  // Quality: 0 Rarity: 3
+#define MATERIAL_WHITE_WOOLIE_STICKER imt01004150  // Quality: 0 Rarity: 3
+#define MATERIAL_BLACK_WOOLIE_STICKER imt01004160  // Quality: 0 Rarity: 3
+#define MATERIAL_OAK_TREE_STICKER imt01004230  // Quality: 0 Rarity: 4
+#define MATERIAL_GOLEM_STICKER imt01004240  // Quality: 0 Rarity: 4
+#define MATERIAL_MIMIC_STICKER imt01004170  // Quality: 0 Rarity: 4
+#define MATERIAL_CORNY_STICKER imt01004210  // Quality: 0 Rarity: 4
+#define MATERIAL_TUNOCO_STICKER imt01004200  // Quality: 0 Rarity: 4
+#define MATERIAL_DRAGON_STICKER imt01004190  // Quality: 0 Rarity: 5
+#define MATERIAL_SACK_OF_COPPER imt01000510  // Quality: 0 Rarity: 1
+#define MATERIAL_SACK_OF_SILVER imt01000520  // Quality: 0 Rarity: 2
+#define MATERIAL_SACK_OF_GOLD imt01000530  // Quality: 0 Rarity: 3
+#define MATERIAL_SACK_OF_TREASURE imt01000540  // Quality: 0 Rarity: 4
+#define MATERIAL_SACK_OF_SECRETS imt01000550  // Quality: 0 Rarity: 5
+#define MATERIAL_HANIWA_JEWEL imt01005090  // Quality: 0 Rarity: 3
+#define MATERIAL_DARK_FIRE imt01004460  // Quality: 0 Rarity: 3
+#define MATERIAL_SHADOW_SOAKED_HIDE imt01004720  // Quality: 0 Rarity: 4
+#define MATERIAL_DARK_MONSTER_CORE imt01004730  // Quality: 0 Rarity: 4
+#define MATERIAL_DARKTREE_BARK imt01004760  // Quality: 0 Rarity: 4
+#define MATERIAL_DARKTREE_SAP imt01004770  // Quality: 0 Rarity: 4
+#define MATERIAL_REDUX_STONE imt01004800  // Quality: 0 Rarity: 1
+#define MATERIAL_EUREKA_ESSENCE imt01004810  // Quality: 0 Rarity: 1
+#define MATERIAL_HERO_SERIES imt01004860  // Quality: 0 Rarity: 5
+#define MATERIAL_FORAGER_KING_SERIES imt01004870  // Quality: 0 Rarity: 5
+#define MATERIAL_ARTISAN_KING_SERIES imt01004880  // Quality: 0 Rarity: 5
+#define MATERIAL_SECRET_PIRATES_TREASURE imt01004850  // Quality: 0 Rarity: 1
+#define MATERIAL_SWEET_FISH_PASTRY imt01000780  // Quality: 0 Rarity: 1
+#define CONSUME_PRAIRIE_HONEY ics01000020  // Quality: 0 Rarity: 1
+#define CONSUME_CHERRY_HONEY ics01000030  // Quality: 0 Rarity: 2
+#define CONSUME_REMOTE_ISLAND_HONEY ics01000040  // Quality: 0 Rarity: 3
+#define CONSUME_DARK_HONEY ics01000050  // Quality: 0 Rarity: 3
+#define CONSUME_MILK ics01000060  // Quality: 0 Rarity: 1
+#define CONSUME_EXTRA_CREAMY_MILK ics01000080  // Quality: 0 Rarity: 3
+#define CONSUME_UBER_RICH_MILK ics01000100  // Quality: 0 Rarity: 4
+#define CONSUME_CASTELE_APPLE ics01000130  // Quality: 0 Rarity: 1
+#define CONSUME_STAR_APPLE ics01000140  // Quality: 0 Rarity: 2
+#define CONSUME_GOLDEN_APPLE ics01000150  // Quality: 0 Rarity: 4
+#define CONSUME_COCONUT ics01000160  // Quality: 0 Rarity: 1
+#define CONSUME_CHERRY ics01000170  // Quality: 0 Rarity: 1
+#define CONSUME_ISLAND_PEAR ics01000180  // Quality: 0 Rarity: 1
+#define CONSUME_MYSTFRUIT ics01000190  // Quality: 0 Rarity: 1
+#define CONSUME_PRAIRIE_GRAPES ics01000200  // Quality: 0 Rarity: 1
+#define CONSUME_ISLAND_BANANA ics01000210  // Quality: 0 Rarity: 1
+#define CONSUME_WILD_KIWI ics01000220  // Quality: 0 Rarity: 1
+#define CONSUME_CAVE_STRAWBERRIES ics01000230  // Quality: 0 Rarity: 1
+#define CONSUME_BEACH_WATERMELON ics01000240  // Quality: 0 Rarity: 1
+#define CONSUME_RADISH_SEEDS ics01000290  // Quality: 0 Rarity: 1
+#define CONSUME_CARROT_SEEDS ics01000320  // Quality: 0 Rarity: 1
+#define CONSUME_PUMPKIN_SEEDS ics01000350  // Quality: 0 Rarity: 1
+#define CONSUME_POTATO_SEEDS ics01000380  // Quality: 0 Rarity: 1
+#define CONSUME_ONION_SEEDS ics01000410  // Quality: 0 Rarity: 1
+#define CONSUME_CABBAGE_SEEDS ics01000440  // Quality: 0 Rarity: 1
+#define CONSUME_FIREWORKS ics01000520  // Quality: 0 Rarity: 3
+#define CONSUME_PLUM_BLOSSOM_FIREWORKS ics01000530  // Quality: 0 Rarity: 3
+#define CONSUME_COURTSHIP_FIREWORKS ics01000540  // Quality: 0 Rarity: 4
+#define CONSUME_YUELIA_FIREWORKS ics01000550  // Quality: 0 Rarity: 4
+#define CONSUME_SKELEGON_FIREWORKS ics01000560  // Quality: 0 Rarity: 4
+#define CONSUME_TRIP_FIREWORKS ics01000570  // Quality: 0 Rarity: 4
+#define CONSUME_HP_POTION ics01000580  // Quality: 0 Rarity: 1
+#define CONSUME_HP_POTION_PLUS ics01000590  // Quality: 3 Rarity: 1
+#define CONSUME_HI_HP_POTION ics01000600  // Quality: 0 Rarity: 3
+#define CONSUME_HI_HP_POTION_PLUS ics01000610  // Quality: 3 Rarity: 3
+#define CONSUME_HEALING_POWDER ics01000620  // Quality: 0 Rarity: 2
+#define CONSUME_HEALING_POWDER_PLUS ics01000630  // Quality: 3 Rarity: 2
+#define CONSUME_MAXHEAL_DUST ics01000640  // Quality: 0 Rarity: 3
+#define CONSUME_MAXHEAL_DUST_PLUS ics01000650  // Quality: 3 Rarity: 3
+#define CONSUME_SP_POTION ics01000660  // Quality: 0 Rarity: 1
+#define CONSUME_SP_POTION_PLUS ics01000670  // Quality: 3 Rarity: 1
+#define CONSUME_HI_SP_POTION ics01000680  // Quality: 0 Rarity: 3
+#define CONSUME_HI_SP_POTION_PLUS ics01000690  // Quality: 3 Rarity: 3
+#define CONSUME_ENERGY_POWDER ics01000700  // Quality: 0 Rarity: 2
+#define CONSUME_ENERGY_POWDER_PLUS ics01000710  // Quality: 3 Rarity: 2
+#define CONSUME_HI_ENERGY_POWDER ics01000720  // Quality: 0 Rarity: 3
+#define CONSUME_HI_ENERGY_POWDER_PLUS ics01000730  // Quality: 3 Rarity: 3
+#define CONSUME_ELIXIR ics01000740  // Quality: 0 Rarity: 5
+#define CONSUME_ELIXIR_PLUS ics01000750  // Quality: 3 Rarity: 5
+#define CONSUME_SPRAYLIXIR ics01000760  // Quality: 0 Rarity: 5
+#define CONSUME_SPRAYLIXIR_PLUS ics01000770  // Quality: 3 Rarity: 5
+#define CONSUME_LIFE_CURE ics01000780  // Quality: 0 Rarity: 3
+#define CONSUME_LIFE_CURE_PLUS ics01000790  // Quality: 3 Rarity: 3
+#define CONSUME_PANACEA ics01000800  // Quality: 0 Rarity: 4
+#define CONSUME_PANACEA_PLUS ics01000810  // Quality: 3 Rarity: 4
+#define CONSUME_POWER_AID ics01000820  // Quality: 0 Rarity: 3
+#define CONSUME_POWER_AID_PLUS ics01000830  // Quality: 3 Rarity: 3
+#define CONSUME_POWER_SPRAY ics01000840  // Quality: 0 Rarity: 3
+#define CONSUME_POWER_SPRAY_PLUS ics01000850  // Quality: 3 Rarity: 3
+#define CONSUME_RESISTANCE_AID ics01000860  // Quality: 0 Rarity: 3
+#define CONSUME_RESISTANCE_AID_PLUS ics01000870  // Quality: 3 Rarity: 3
+#define CONSUME_RESISTANCE_SPRAY ics01000880  // Quality: 0 Rarity: 3
+#define CONSUME_RESISTANCE_SPRAY_PLUS ics01000890  // Quality: 3 Rarity: 3
+#define CONSUME_MAGIC_AID ics01000900  // Quality: 0 Rarity: 3
+#define CONSUME_MAGIC_AID_PLUS ics01000910  // Quality: 3 Rarity: 3
+#define CONSUME_MAGIC_SPRAY ics01000920  // Quality: 0 Rarity: 4
+#define CONSUME_MAGIC_SPRAY_PLUS ics01000930  // Quality: 3 Rarity: 4
+#define CONSUME_SEALING_POTION ics01000940  // Quality: 0 Rarity: 3
+#define CONSUME_SEALING_POTION_PLUS ics01000950  // Quality: 3 Rarity: 3
+#define CONSUME_SEALING_SPRAY ics01000960  // Quality: 0 Rarity: 4
+#define CONSUME_SEALING_SPRAY_PLUS ics01000970  // Quality: 3 Rarity: 4
+#define CONSUME_DAREDEVIL_AID ics01000980  // Quality: 0 Rarity: 4
+#define CONSUME_DAREDEVIL_AID_PLUS ics01000990  // Quality: 3 Rarity: 4
+#define CONSUME_CHARGE_UP_AID ics01001000  // Quality: 0 Rarity: 4
+#define CONSUME_CHARGE_UP_AID_PLUS ics01001010  // Quality: 3 Rarity: 4
+#define CONSUME_CRIT_AID ics01001020  // Quality: 0 Rarity: 4
+#define CONSUME_CRIT_AID_PLUS ics01001030  // Quality: 3 Rarity: 4
+#define CONSUME_BERSERK_POTION ics01001040  // Quality: 0 Rarity: 4
+#define CONSUME_BERSERK_POTION_PLUS ics01001050  // Quality: 3 Rarity: 4
+#define CONSUME_POISON_ANTIDOTE ics01001060  // Quality: 0 Rarity: 2
+#define CONSUME_POISON_ANTIDOTE_PLUS ics01001070  // Quality: 3 Rarity: 2
+#define CONSUME_PARALYSIS_ANTIDOTE ics01001080  // Quality: 0 Rarity: 3
+#define CONSUME_PARALYSIS_ANTIDOTE_PLUS ics01001090  // Quality: 3 Rarity: 3
+#define CONSUME_FROZEN_REMEDY ics01001100  // Quality: 0 Rarity: 3
+#define CONSUME_FROZEN_REMEDY_PLUS ics01001110  // Quality: 3 Rarity: 3
+#define CONSUME_BURNING_REMEDY ics01001120  // Quality: 0 Rarity: 3
+#define CONSUME_BURNING_REMEDY_PLUS ics01001130  // Quality: 3 Rarity: 3
+#define CONSUME_DETOXIFIER ics01001140  // Quality: 0 Rarity: 3
+#define CONSUME_DETOXIFIER_PLUS ics01001150  // Quality: 3 Rarity: 3
+#define CONSUME_DE_PARALYZER ics01001160  // Quality: 0 Rarity: 3
+#define CONSUME_DE_PARALYZER_PLUS ics01001170  // Quality: 3 Rarity: 3
+#define CONSUME_ANTI_FREEZE ics01001180  // Quality: 0 Rarity: 3
+#define CONSUME_ANTI_FREEZE_PLUS ics01001190  // Quality: 3 Rarity: 3
+#define CONSUME_BURN_BE_GONE ics01001200  // Quality: 0 Rarity: 3
+#define CONSUME_BURN_BE_GONE_PLUS ics01001210  // Quality: 3 Rarity: 3
+#define CONSUME_HEAL_ALL ics01001220  // Quality: 0 Rarity: 4
+#define CONSUME_HEAL_ALL_PLUS ics01001230  // Quality: 3 Rarity: 4
+#define CONSUME_MINI_BOMB ics01001240  // Quality: 0 Rarity: 1
+#define CONSUME_MINI_BOMB_PLUS ics01001250  // Quality: 3 Rarity: 1
+#define CONSUME_GREAT_BOMB ics01001260  // Quality: 0 Rarity: 3
+#define CONSUME_GREAT_BOMB_PLUS ics01001270  // Quality: 3 Rarity: 3
+#define CONSUME_POISON_BOMB ics01001280  // Quality: 0 Rarity: 3
+#define CONSUME_POISON_BOMB_PLUS ics01001290  // Quality: 3 Rarity: 3
+#define CONSUME_PARALYZING_BOMB ics01001300  // Quality: 0 Rarity: 2
+#define CONSUME_PARALYZING_BOMB_PLUS ics01001310  // Quality: 3 Rarity: 2
+#define CONSUME_MEDIUM_BOMB ics01001320  // Quality: 0 Rarity: 3
+#define CONSUME_MEDIUM_BOMB_PLUS ics01001330  // Quality: 3 Rarity: 3
+#define CONSUME_LOVE_BOMB ics01001340  // Quality: 0 Rarity: 3
+#define CONSUME_LOVE_BOMB_PLUS ics01001350  // Quality: 3 Rarity: 3
+#define CONSUME_STEAK ics01001360  // Quality: 0 Rarity: 2
+#define CONSUME_STEAK_PLUS ics01001370  // Quality: 3 Rarity: 2
+#define CONSUME_YAKITORI ics01001380  // Quality: 0 Rarity: 1
+#define CONSUME_YAKITORI_PLUS ics01001390  // Quality: 3 Rarity: 1
+#define CONSUME_ROAST_MUTTON ics01001400  // Quality: 0 Rarity: 2
+#define CONSUME_ROAST_MUTTON_PLUS ics01001410  // Quality: 3 Rarity: 2
+#define CONSUME_HAMBURG_STEAK ics01001420  // Quality: 0 Rarity: 2
+#define CONSUME_HAMBURG_STEAK_PLUS ics01001430  // Quality: 3 Rarity: 2
+#define CONSUME_JUICY_HAMBURG_STEAK ics01001440  // Quality: 0 Rarity: 2
+#define CONSUME_JUICY_HAMBURG_STEAK_PLUS ics01001450  // Quality: 3 Rarity: 2
+#define CONSUME_ROYAL_HAMBURG_STEAK ics01001460  // Quality: 0 Rarity: 3
+#define CONSUME_ROYAL_HAMBURG_STEAK_PLUS ics01001470  // Quality: 3 Rarity: 3
+#define CONSUME_WINTER_STEW ics01001480  // Quality: 0 Rarity: 4
+#define CONSUME_WINTER_STEW_PLUS ics01001490  // Quality: 3 Rarity: 4
+#define CONSUME_SOUTHERN_STEW ics01001500  // Quality: 0 Rarity: 3
+#define CONSUME_SOUTHERN_STEW_PLUS ics01001510  // Quality: 3 Rarity: 3
+#define CONSUME_AROMATIC_STEW ics01001520  // Quality: 0 Rarity: 5
+#define CONSUME_AROMATIC_STEW_PLUS ics01001530  // Quality: 3 Rarity: 5
+#define CONSUME_MONSTROGANOFF ics01001540  // Quality: 0 Rarity: 5
+#define CONSUME_MONSTROGANOFF_PLUS ics01001550  // Quality: 3 Rarity: 5
+#define CONSUME_BANDIT_STEAK ics01001560  // Quality: 0 Rarity: 2
+#define CONSUME_BANDIT_STEAK_PLUS ics01001570  // Quality: 3 Rarity: 2
+#define CONSUME_THICK_STEAK ics01001580  // Quality: 0 Rarity: 3
+#define CONSUME_THICK_STEAK_PLUS ics01001590  // Quality: 3 Rarity: 3
+#define CONSUME_TASTY_YAKITORI ics01001600  // Quality: 0 Rarity: 3
+#define CONSUME_TASTY_YAKITORI_PLUS ics01001610  // Quality: 3 Rarity: 3
+#define CONSUME_JUICY_MUTTON ics01001620  // Quality: 0 Rarity: 3
+#define CONSUME_JUICY_MUTTON_PLUS ics01001630  // Quality: 3 Rarity: 3
+#define CONSUME_ROAST_OF_LEGEND ics01001640  // Quality: 0 Rarity: 5
+#define CONSUME_ROAST_OF_LEGEND_PLUS ics01001650  // Quality: 3 Rarity: 5
+#define CONSUME_CAMPFIRE_ROAST ics01001660  // Quality: 0 Rarity: 4
+#define CONSUME_CAMPFIRE_ROAST_PLUS ics01001670  // Quality: 3 Rarity: 4
+#define CONSUME_GRILLED_CATFISH ics01001680  // Quality: 0 Rarity: 2
+#define CONSUME_GRILLED_CATFISH_PLUS ics01001690  // Quality: 3 Rarity: 2
+#define CONSUME_GRILLED_EEL ics01001700  // Quality: 0 Rarity: 4
+#define CONSUME_GRILLED_EEL_PLUS ics01001710  // Quality: 3 Rarity: 4
+#define CONSUME_GRILLED_TUNA_HEAD ics01001720  // Quality: 0 Rarity: 2
+#define CONSUME_GRILLED_TUNA_HEAD_PLUS ics01001730  // Quality: 3 Rarity: 2
+#define CONSUME_GRILLED_CRUCIAN ics01001740  // Quality: 0 Rarity: 1
+#define CONSUME_GRILLED_CRUCIAN_PLUS ics01001750  // Quality: 3 Rarity: 1
+#define CONSUME_TROUT_MEUNI  ics01001760  // Quality: 0 Rarity: 3
+#define CONSUME_TROUT_MEUNI _PLUS ics01001770  // Quality: 3 Rarity: 3
+#define CONSUME_CAMPFIRE_FISH ics01001780  // Quality: 0 Rarity: 2
+#define CONSUME_CAMPFIRE_FISH_PLUS ics01001790  // Quality: 3 Rarity: 2
+#define CONSUME_TUNA_SASHIMI ics01001800  // Quality: 0 Rarity: 3
+#define CONSUME_TUNA_SASHIMI_PLUS ics01001810  // Quality: 3 Rarity: 3
+#define CONSUME_PUFFERFISH_SASHIMI ics01001820  // Quality: 0 Rarity: 2
+#define CONSUME_PUFFERFISH_SASHIMI_PLUS ics01001830  // Quality: 3 Rarity: 2
+#define CONSUME_BREAM_SASHIMI ics01001840  // Quality: 0 Rarity: 3
+#define CONSUME_BREAM_SASHIMI_PLUS ics01001850  // Quality: 3 Rarity: 3
+#define CONSUME_DRIED_TUNOCO_FISH ics01001860  // Quality: 0 Rarity: 2
+#define CONSUME_DRIED_TUNOCO_FISH_PLUS ics01001870  // Quality: 3 Rarity: 2
+#define CONSUME_FISH_SOUP ics01001880  // Quality: 0 Rarity: 3
+#define CONSUME_FISH_SOUP_PLUS ics01001890  // Quality: 3 Rarity: 3
+#define CONSUME_SEAFOOD_STEW ics01001900  // Quality: 0 Rarity: 4
+#define CONSUME_SEAFOOD_STEW_PLUS ics01001910  // Quality: 3 Rarity: 4
+#define CONSUME_SARDINE_P  ics01001920  // Quality: 0 Rarity: 1
+#define CONSUME_SARDINE_P _PLUS ics01001930  // Quality: 3 Rarity: 1
+#define CONSUME_SWORDFISH_HEAD ics01001980  // Quality: 0 Rarity: 4
+#define CONSUME_SWORDFISH_HEAD_PLUS ics01001990  // Quality: 3 Rarity: 4
+#define CONSUME_GOLDEN_FISH_HEAD ics01002000  // Quality: 0 Rarity: 5
+#define CONSUME_GOLDEN_FISH_HEAD_PLUS ics01002010  // Quality: 3 Rarity: 5
+#define CONSUME_RAINBOW_TROUT_MEUNI  ics01002020  // Quality: 0 Rarity: 5
+#define CONSUME_RAINBOW_TROUT_MEUNI _PLUS ics01002030  // Quality: 3 Rarity: 5
+#define CONSUME_SWORDFISH_MEUNI  ics01002040  // Quality: 0 Rarity: 3
+#define CONSUME_SWORDFISH_MEUNI _PLUS ics01002050  // Quality: 3 Rarity: 3
+#define CONSUME_PORT_TOWN_GRATIN ics01002060  // Quality: 0 Rarity: 5
+#define CONSUME_PORT_TOWN_GRATIN_PLUS ics01002070  // Quality: 3 Rarity: 5
+#define CONSUME_MOUNTAINEERS_STEW ics01002080  // Quality: 0 Rarity: 2
+#define CONSUME_MOUNTAINEERS_STEW_PLUS ics01002090  // Quality: 3 Rarity: 2
+#define CONSUME_GREAT_PRAIRIE_STEW ics01002100  // Quality: 0 Rarity: 3
+#define CONSUME_GREAT_PRAIRIE_STEW_PLUS ics01002110  // Quality: 3 Rarity: 3
+#define CONSUME_FROSTY_FISH_STEW ics01002120  // Quality: 0 Rarity: 5
+#define CONSUME_FROSTY_FISH_STEW_PLUS ics01002130  // Quality: 3 Rarity: 5
+#define CONSUME_FIERY_FISH_STEW ics01002140  // Quality: 0 Rarity: 5
+#define CONSUME_FIERY_FISH_STEW_PLUS ics01002150  // Quality: 3 Rarity: 5
+#define CONSUME_DARK_GIANT_STEW ics01002160  // Quality: 0 Rarity: 5
+#define CONSUME_DARK_GIANT_STEW_PLUS ics01002170  // Quality: 3 Rarity: 5
+#define CONSUME_GHASTLY_STEW ics01002180  // Quality: 0 Rarity: 4
+#define CONSUME_GHASTLY_STEW_PLUS ics01002190  // Quality: 3 Rarity: 4
+#define CONSUME_SASHIMI_SET ics01002200  // Quality: 0 Rarity: 4
+#define CONSUME_SASHIMI_SET_PLUS ics01002210  // Quality: 3 Rarity: 4
+#define CONSUME_FLYING_SASHIMI_SET ics01002220  // Quality: 0 Rarity: 5
+#define CONSUME_FLYING_SASHIMI_SET_PLUS ics01002230  // Quality: 3 Rarity: 5
+#define CONSUME_FANCY_SASHIMI_SET ics01002240  // Quality: 0 Rarity: 5
+#define CONSUME_FANCY_SASHIMI_SET_PLUS ics01002250  // Quality: 3 Rarity: 5
+#define CONSUME_ANCIENT_SASHIMI_SET ics01002260  // Quality: 0 Rarity: 5
+#define CONSUME_ANCIENT_SASHIMI_SET_PLUS ics01002270  // Quality: 3 Rarity: 5
+#define CONSUME_RAINBOW_PAELLA ics01002280  // Quality: 0 Rarity: 5
+#define CONSUME_RAINBOW_PAELLA_PLUS ics01002290  // Quality: 3 Rarity: 5
+#define CONSUME_FLUFFY_OMELET ics01002300  // Quality: 0 Rarity: 2
+#define CONSUME_FLUFFY_OMELET_PLUS ics01002310  // Quality: 3 Rarity: 2
+#define CONSUME_ROYAL_OMELET ics01002320  // Quality: 0 Rarity: 3
+#define CONSUME_ROYAL_OMELET_PLUS ics01002330  // Quality: 3 Rarity: 3
+#define CONSUME_MAGICAL_OMELET ics01002340  // Quality: 0 Rarity: 2
+#define CONSUME_MAGICAL_OMELET_PLUS ics01002350  // Quality: 3 Rarity: 2
+#define CONSUME_SPECIAL_OMELET ics01002360  // Quality: 0 Rarity: 5
+#define CONSUME_SPECIAL_OMELET_PLUS ics01002370  // Quality: 3 Rarity: 5
+#define CONSUME_QUEENS_OMELET ics01002380  // Quality: 0 Rarity: 4
+#define CONSUME_QUEENS_OMELET_PLUS ics01002390  // Quality: 3 Rarity: 4
+#define CONSUME_GIANT_FRIED_EGG ics01002400  // Quality: 0 Rarity: 3
+#define CONSUME_GIANT_FRIED_EGG_PLUS ics01002410  // Quality: 3 Rarity: 3
+#define CONSUME_MUSHROOM_QUICHE ics01002420  // Quality: 0 Rarity: 2
+#define CONSUME_MUSHROOM_QUICHE_PLUS ics01002430  // Quality: 3 Rarity: 2
+#define CONSUME_FOREST_QUICHE ics01002440  // Quality: 0 Rarity: 3
+#define CONSUME_FOREST_QUICHE_PLUS ics01002450  // Quality: 3 Rarity: 3
+#define CONSUME_HONEY_QUICHE ics01002460  // Quality: 0 Rarity: 4
+#define CONSUME_HONEY_QUICHE_PLUS ics01002470  // Quality: 3 Rarity: 4
+#define CONSUME_MAGICAL_FLAN ics01002480  // Quality: 0 Rarity: 3
+#define CONSUME_MAGICAL_FLAN_PLUS ics01002490  // Quality: 3 Rarity: 3
+#define CONSUME_HONEY_FLAN ics01002500  // Quality: 0 Rarity: 2
+#define CONSUME_HONEY_FLAN_PLUS ics01002510  // Quality: 3 Rarity: 2
+#define CONSUME_ROYAL_FLAN ics01002520  // Quality: 0 Rarity: 3
+#define CONSUME_ROYAL_FLAN_PLUS ics01002530  // Quality: 3 Rarity: 3
+#define CONSUME_BOILED_EGG ics01002540  // Quality: 0 Rarity: 1
+#define CONSUME_BOILED_EGG_PLUS ics01002550  // Quality: 3 Rarity: 1
+#define CONSUME_CARROT_SOUP ics01002560  // Quality: 0 Rarity: 1
+#define CONSUME_CARROT_SOUP_PLUS ics01002570  // Quality: 3 Rarity: 1
+#define CONSUME_TOMATO_SOUP ics01002580  // Quality: 0 Rarity: 2
+#define CONSUME_TOMATO_SOUP_PLUS ics01002590  // Quality: 3 Rarity: 2
+#define CONSUME_BOILED_VEGGIES ics01002600  // Quality: 0 Rarity: 3
+#define CONSUME_BOILED_VEGGIES_PLUS ics01002610  // Quality: 3 Rarity: 3
+#define CONSUME_CORN_ON_THE_COB ics01002620  // Quality: 0 Rarity: 2
+#define CONSUME_CORN_ON_THE_COB_PLUS ics01002630  // Quality: 3 Rarity: 2
+#define CONSUME_PUMPKIN_PIE ics01002640  // Quality: 0 Rarity: 4
+#define CONSUME_PUMPKIN_PIE_PLUS ics01002650  // Quality: 3 Rarity: 4
+#define CONSUME_PIRATE_GUMBO ics01002660  // Quality: 0 Rarity: 4
+#define CONSUME_PIRATE_GUMBO_PLUS ics01002670  // Quality: 3 Rarity: 4
+#define CONSUME_CABBAGE_ROLLS ics01002680  // Quality: 0 Rarity: 3
+#define CONSUME_CABBAGE_ROLLS_PLUS ics01002690  // Quality: 3 Rarity: 3
+#define CONSUME_PUMPKIN_SOUP ics01002700  // Quality: 0 Rarity: 4
+#define CONSUME_PUMPKIN_SOUP_PLUS ics01002710  // Quality: 3 Rarity: 4
+#define CONSUME_VEGETABLE_STEW ics01002720  // Quality: 0 Rarity: 3
+#define CONSUME_VEGETABLE_STEW_PLUS ics01002730  // Quality: 3 Rarity: 3
+#define CONSUME_DIVINE_AMBROSIA ics01002740  // Quality: 0 Rarity: 5
+#define CONSUME_DIVINE_AMBROSIA_PLUS ics01002750  // Quality: 3 Rarity: 5
+#define CONSUME_APPLE_JUICE ics01002760  // Quality: 0 Rarity: 1
+#define CONSUME_APPLE_JUICE_PLUS ics01002770  // Quality: 3 Rarity: 1
+#define CONSUME_SUMMER_NECTAR ics01002780  // Quality: 0 Rarity: 3
+#define CONSUME_SUMMER_NECTAR_PLUS ics01002790  // Quality: 3 Rarity: 3
+#define CONSUME_MAGICAL_MILKSHAKE ics01002800  // Quality: 0 Rarity: 5
+#define CONSUME_MAGICAL_MILKSHAKE_PLUS ics01002810  // Quality: 3 Rarity: 5
+#define CONSUME_WHEAT_JUICE ics01002820  // Quality: 0 Rarity: 2
+#define CONSUME_WHEAT_JUICE_PLUS ics01002830  // Quality: 3 Rarity: 2
+#define CONSUME_RAINBOW_GELATO ics01002840  // Quality: 0 Rarity: 4
+#define CONSUME_RAINBOW_GELATO_PLUS ics01002850  // Quality: 3 Rarity: 4
+#define CONSUME_UNADON ics01002860  // Quality: 0 Rarity: 5
+#define CONSUME_UNADON_PLUS ics01002870  // Quality: 3 Rarity: 5
+#define CONSUME_GOLDEN_APPLE_PIE ics01002880  // Quality: 0 Rarity: 4
+#define CONSUME_GOLDEN_APPLE_PIE_PLUS ics01002890  // Quality: 3 Rarity: 4
+#define CONSUME_APPLE_PIE ics01002900  // Quality: 0 Rarity: 3
+#define CONSUME_APPLE_PIE_PLUS ics01002910  // Quality: 3 Rarity: 3
+#define CONSUME_HALLOWEEN_CAKE ics01002920  // Quality: 0 Rarity: 3
+#define CONSUME_HALLOWEEN_CAKE_PLUS ics01002930  // Quality: 3 Rarity: 3
+#define CONSUME_CREAMY_CURRY ics01002940  // Quality: 0 Rarity: 4
+#define CONSUME_CREAMY_CURRY_PLUS ics01002950  // Quality: 3 Rarity: 4
+#define CONSUME_PUMPKIN_FLAN ics01002960  // Quality: 0 Rarity: 1
+#define CONSUME_PUMPKIN_FLAN_PLUS ics01002970  // Quality: 3 Rarity: 1
+#define CONSUME_DRAGON_CURRY ics01002980  // Quality: 0 Rarity: 4
+#define CONSUME_DRAGON_CURRY_PLUS ics01002990  // Quality: 3 Rarity: 4
+#define CONSUME_ONION_SOUP ics01003000  // Quality: 0 Rarity: 4
+#define CONSUME_ONION_SOUP_PLUS ics01003010  // Quality: 3 Rarity: 4
+#define CONSUME_SIMMERED_TUNA ics01003020  // Quality: 0 Rarity: 2
+#define CONSUME_SIMMERED_TUNA_PLUS ics01003030  // Quality: 3 Rarity: 2
+#define CONSUME_LIVELY_ODEN_STEW ics01003040  // Quality: 0 Rarity: 3
+#define CONSUME_LIVELY_ODEN_STEW_PLUS ics01003050  // Quality: 3 Rarity: 3
+#define CONSUME_BAKED_POTATO ics01003060  // Quality: 0 Rarity: 3
+#define CONSUME_BAKED_POTATO_PLUS ics01003070  // Quality: 3 Rarity: 3
+#define CONSUME_ROYAL_POTATO_STEW ics01003080  // Quality: 0 Rarity: 5
+#define CONSUME_ROYAL_POTATO_STEW_PLUS ics01003090  // Quality: 3 Rarity: 5
+#define CONSUME_RAGNAROK_SALAD ics01003100  // Quality: 0 Rarity: 5
+#define CONSUME_RAGNAROK_SALAD_PLUS ics01003110  // Quality: 3 Rarity: 5
+#define CONSUME_HALLOWEEN_GRATIN ics01003120  // Quality: 0 Rarity: 5
+#define CONSUME_HALLOWEEN_GRATIN_PLUS ics01003130  // Quality: 3 Rarity: 5
+#define CONSUME_BAGNA_C A ics01003140  // Quality: 0 Rarity: 3
+#define CONSUME_BAGNA_C A_PLUS ics01003150  // Quality: 3 Rarity: 3
+#define CONSUME_FONDUE_SURPRISE ics01003160  // Quality: 0 Rarity: 5
+#define CONSUME_FONDUE_SURPRISE_PLUS ics01003170  // Quality: 3 Rarity: 5
+#define CONSUME_HEARTY_SEAFOOD_SOUP ics01003180  // Quality: 0 Rarity: 5
+#define CONSUME_HEARTY_SEAFOOD_SOUP_PLUS ics01003190  // Quality: 3 Rarity: 5
+#define CONSUME_ACQUA_PAZZA ics01003200  // Quality: 0 Rarity: 4
+#define CONSUME_ACQUA_PAZZA_PLUS ics01003210  // Quality: 3 Rarity: 4
+#define CONSUME_DEEP_FRIED_FISH ics01003220  // Quality: 0 Rarity: 4
+#define CONSUME_DEEP_FRIED_FISH_PLUS ics01003230  // Quality: 3 Rarity: 4
+#define CONSUME_SNEAKY_SUPPER ics01003240  // Quality: 0 Rarity: 4
+#define CONSUME_SNEAKY_SUPPER_PLUS ics01003250  // Quality: 3 Rarity: 4
+#define CONSUME_HIGH_FLYING_RAMEN ics01003260  // Quality: 0 Rarity: 5
+#define CONSUME_HIGH_FLYING_RAMEN_PLUS ics01003270  // Quality: 3 Rarity: 5
+#define CONSUME_LORDFISH_PLATTER ics01003280  // Quality: 0 Rarity: 5
+#define CONSUME_LORDFISH_PLATTER_PLUS ics01003290  // Quality: 3 Rarity: 5
+#define CONSUME_SPARKLY_SUSHI_RICE ics01003300  // Quality: 0 Rarity: 5
+#define CONSUME_SPARKLY_SUSHI_RICE_PLUS ics01003310  // Quality: 3 Rarity: 5
+#define CONSUME_SINISTER_SEAFOOD_BOWL ics01003320  // Quality: 0 Rarity: 4
+#define CONSUME_SINISTER_SEAFOOD_BOWL_PLUS ics01003330  // Quality: 3 Rarity: 4
+#define CONSUME_FRUIT_PUNCH ics01003340  // Quality: 0 Rarity: 3
+#define CONSUME_FRUIT_PUNCH_PLUS ics01003350  // Quality: 3 Rarity: 3
+#define CONSUME_SMOOTHIE ics01003360  // Quality: 0 Rarity: 3
+#define CONSUME_SMOOTHIE_PLUS ics01003370  // Quality: 3 Rarity: 3
+#define CONSUME_LEGENDARY_FEAST ics01003380  // Quality: 0 Rarity: 5
+#define CONSUME_LEGENDARY_FEAST_PLUS ics01003390  // Quality: 3 Rarity: 5
+#define CONSUME_VOLCANIC_STEW ics01003400  // Quality: 0 Rarity: 5
+#define CONSUME_VOLCANIC_STEW_PLUS ics01003410  // Quality: 3 Rarity: 5
+#define CONSUME_RED_SOUP ics01003420  // Quality: 0 Rarity: 2
+#define CONSUME_RED_SOUP_PLUS ics01003430  // Quality: 3 Rarity: 2
+#define CONSUME_NOMADS_STEW ics01003440  // Quality: 0 Rarity: 3
+#define CONSUME_NOMADS_STEW_PLUS ics01003450  // Quality: 3 Rarity: 3
+#define CONSUME_SHADOW_CARROT_SEED ics01003460  // Quality: 0 Rarity: 2
+#define CONSUME_TREASURE_GROVE_SAPLING ics01003480  // Quality: 0 Rarity: 3
+#define CONSUME_SWEET_FISH_PASTRY ics01003550  // Quality: 0 Rarity: 1
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003560  // Quality: 0 Rarity: 1
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003570  // Quality: 0 Rarity: 1
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003580  // Quality: 0 Rarity: 2
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003590  // Quality: 0 Rarity: 2
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003600  // Quality: 0 Rarity: 3
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003610  // Quality: 0 Rarity: 3
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003620  // Quality: 0 Rarity: 4
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003630  // Quality: 0 Rarity: 4
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003640  // Quality: 0 Rarity: 5
+#define CONSUME_TREASURE_GROVE_BRANCH ics01003650  // Quality: 0 Rarity: 5
+#define CONSUME_MONEY Money  // Quality: 0 Rarity: 0
+#define CONSUME_EXPERIENCE Exp  // Quality: 0 Rarity: 0
+#define CONSUME_CASHNUT chestnut  // Quality: 0 Rarity: 0
+#define IMPORTANT_GODDESS_FRUIT iky01000190  // Quality: 0 Rarity: 0
+#define IMPORTANT_ETERNIAN_FRUIT iky01000200  // Quality: 0 Rarity: 0
+#define IMPORTANT_RAINBOW_GODDESS_FRUIT iky01000210  // Quality: 0 Rarity: 0
+#define IMPORTANT_WATERING_CAN iky01000230  // Quality: 0 Rarity: 0
+#define IMPORTANT_MYSTERIOUS_SLATE iky01000330  // Quality: 0 Rarity: 0
+#define IMPORTANT_ANCIENT_ROBOT_ARM iky01000340  // Quality: 0 Rarity: 0
+#define IMPORTANT_ANCIENT_ROBOT_OIL iky01000350  // Quality: 0 Rarity: 0
+#define IMPORTANT_ANCIENT_ROBOT_PARTS iky01000360  // Quality: 0 Rarity: 0
+#define IMPORTANT_TOUR_COIN iky01000370  // Quality: 0 Rarity: 0
+#define IMPORTANT_EYE_CATALOG iky01000380  // Quality: 0 Rarity: 5
+#define IMPORTANT_HAIR_CATALOG iky01000390  // Quality: 0 Rarity: 5
+#define IMPORTANT_CELESTIAS_GIFT iky01000420  // Quality: 0 Rarity: 0
+#define IMPORTANT_GOLDEN_CELESTIAS_GIFT iky01000430  // Quality: 0 Rarity: 0
+#define IMPORTANT_FORTUNA_TOPAZ iky01000440  // Quality: 0 Rarity: 0
+#define IMPORTANT_DELISH_FISH iky01000450  // Quality: 0 Rarity: 0
+#define IMPORTANT_FEATHERWEIGHT_INGOT iky01000460  // Quality: 0 Rarity: 0
+#define IMPORTANT_TRAINEES_BRONZE_SWORD iky01000470  // Quality: 0 Rarity: 0
+#define IMPORTANT_SOFT_WOOL iky01000480  // Quality: 0 Rarity: 0
+#define IMPORTANT_FLOWY_CAPE iky01000490  // Quality: 0 Rarity: 0
+#define IMPORTANT_DUBIOUS_OBJECT iky01000500  // Quality: 0 Rarity: 0
+#define IMPORTANT_MEMORY_CHARM iky01000510  // Quality: 0 Rarity: 0
+#define IMPORTANT_STURDY_PALM_LOG iky01000520  // Quality: 0 Rarity: 0
+#define IMPORTANT_TIP_TOP_TOMATO iky01000530  // Quality: 0 Rarity: 0
+#define IMPORTANT_GOURMET_FLUFFY_OMELET iky01000540  // Quality: 0 Rarity: 0
+#define IMPORTANT_FLUTE_OF_FLIGHT iky01000550  // Quality: 0 Rarity: 0
+#define IMPORTANT_STOLEN_GOODS iky01000560  // Quality: 0 Rarity: 0
+#define IMPORTANT_HYPER_HEALTHY_HONEY iky01000570  // Quality: 0 Rarity: 0
+#define IMPORTANT_FLUFFY_FABRIC iky01000580  // Quality: 0 Rarity: 0
+#define IMPORTANT_BESPOKE_TROPICAL_SOFA iky01000590  // Quality: 0 Rarity: 0
+#define IMPORTANT_SUPER_SWEET_ONION iky01000600  // Quality: 0 Rarity: 0
+#define IMPORTANT_REMS_LOST_PAINTING iky01000610  // Quality: 0 Rarity: 0
+#define IMPORTANT_SPIRIT_HOE iky01000620  // Quality: 0 Rarity: 0
+#define IMPORTANT_GREATSWORD_OF_TIME iky01000630  // Quality: 0 Rarity: 0
+#define IMPORTANT_INTERFERE_GEAR_RECIPE iky01000640  // Quality: 0 Rarity: 0
+#define IMPORTANT_INTERFERE_GEAR_PLUS iky01000650  // Quality: 0 Rarity: 0
+#define IMPORTANT_ETERNIA_GEM iky01000660  // Quality: 0 Rarity: 0
+#define IMPORTANT_DRAGONUT iky01000670  // Quality: 0 Rarity: 0
+#define IMPORTANT_SOOTHING_WATER iky01000680  // Quality: 0 Rarity: 0
+#define IMPORTANT_CROW_FEATHER iky01000690  // Quality: 0 Rarity: 0
+#define IMPORTANT_INTERFERE_GEAR iky01000700  // Quality: 0 Rarity: 0
+#define IMPORTANT_STONE_GEAR_PART iky01000710  // Quality: 0 Rarity: 0
+#define IMPORTANT_WOODEN_GEAR_PART iky01000720  // Quality: 0 Rarity: 0
+#define IMPORTANT_CLOTH_GEAR_PART iky01000730  // Quality: 0 Rarity: 0
+#define IMPORTANT_ETERNIAN_ENERGY_STEW iky01000740  // Quality: 0 Rarity: 0
+#define IMPORTANT_ETERNIAN_LOG iky01000750  // Quality: 0 Rarity: 0
+#define IMPORTANT_ETERNIA_FERN iky01000760  // Quality: 0 Rarity: 0
+#define IMPORTANT_ETERNIAN_FLYING_FISH iky01000770  // Quality: 0 Rarity: 0
+#define IMPORTANT_ETERNIAN_FLEECE iky01000780  // Quality: 0 Rarity: 0
+#define IMPORTANT_ART_COMPETITION_PAINTING iky01000830  // Quality: 0 Rarity: 0
+#define IMPORTANT_SWIMMERS_PRIDE iky01000840  // Quality: 0 Rarity: 0
+#define IMPORTANT_FRAJEEL_FIGURE_1_8_SCALE iky01000790  // Quality: 0 Rarity: 0
+#define IMPORTANT_FRAJEEL_COLLECTIBLE_PHOTOS iky01000800  // Quality: 0 Rarity: 0
+#define IMPORTANT_MACHO_MUSCLE_BODY_PILLOW iky01000810  // Quality: 0 Rarity: 0
+#define IMPORTANT_FRAJEELS_UPLIFTING_CALENDAR iky01000820  // Quality: 0 Rarity: 0
+#define IMPORTANT_SURPRISE_BOX iky04000010  // Quality: 0 Rarity: 2
+#define IMPORTANT_HAPPY_BOX iky04000020  // Quality: 0 Rarity: 3
+#define IMPORTANT_DREAMY_BOX iky04000030  // Quality: 0 Rarity: 4
+#define IMPORTANT_MAKEOVER_BOX iky04000040  // Quality: 0 Rarity: 5
+#define IMPORTANT_WOO_HOOEXCL iky02000100  // Quality: 0 Rarity: 0
+#define IMPORTANT_WAVE iky02000110  // Quality: 0 Rarity: 0
+#define IMPORTANT_BOW iky02000120  // Quality: 0 Rarity: 0
+#define IMPORTANT_CLAP iky02000130  // Quality: 0 Rarity: 0
+#define IMPORTANT_UPSET iky02000140  // Quality: 0 Rarity: 0
+#define IMPORTANT_ECSTATIC iky02000150  // Quality: 0 Rarity: 0
+#define IMPORTANT_SUPPORTIVE iky02000160  // Quality: 0 Rarity: 0
+#define IMPORTANT_BOASTING iky02000170  // Quality: 0 Rarity: 0
+#define IMPORTANT_FRANTIC iky02000180  // Quality: 0 Rarity: 0
+#define IMPORTANT_DEJECTED iky02000190  // Quality: 0 Rarity: 0
+#define IMPORTANT_COMMAND iky02000200  // Quality: 0 Rarity: 0
+#define IMPORTANT_SIT iky02000210  // Quality: 0 Rarity: 0
+#define IMPORTANT_CHEERY iky02000220  // Quality: 0 Rarity: 0
+#define IMPORTANT_LOOK_AROUND iky02000230  // Quality: 0 Rarity: 0
+#define IMPORTANT_DOZE_OFF iky02000240  // Quality: 0 Rarity: 0
+#define IMPORTANT_YAWN iky02000250  // Quality: 0 Rarity: 0
+#define IMPORTANT_LAUGH iky02000260  // Quality: 0 Rarity: 0
+#define IMPORTANT_ANGRY iky02000270  // Quality: 0 Rarity: 0
+#define IMPORTANT_I_GET_ITEXCL iky02000280  // Quality: 0 Rarity: 0
+#define IMPORTANT_VICTORY_POSE iky02000290  // Quality: 0 Rarity: 0
+#define IMPORTANT_CROSS_ARMS iky02000300  // Quality: 0 Rarity: 0
+#define IMPORTANT_HAPPY_POSE iky02000310  // Quality: 0 Rarity: 0
+#define IMPORTANT_SUPERMODEL_POSE iky02000320  // Quality: 0 Rarity: 0
+#define IMPORTANT_THANKSEXCL iky03000100  // Quality: 0 Rarity: 0
+#define IMPORTANT_HOWDYEXCL iky03000110  // Quality: 0 Rarity: 0
+#define IMPORTANT_NICEEXCL iky03000120  // Quality: 0 Rarity: 0
+#define IMPORTANT_OKEXCL iky03000130  // Quality: 0 Rarity: 0
+#define IMPORTANT_NOEXCL iky03000140  // Quality: 0 Rarity: 0
+#define IMPORTANT_WAIT_UPEXCL iky03000150  // Quality: 0 Rarity: 0
+#define IMPORTANT_INTEREXCL iky03000160  // Quality: 0 Rarity: 0
+#define IMPORTANT_LETS_GO_HUNTINGEXCL iky03000170  // Quality: 0 Rarity: 0
+#define IMPORTANT_LETS_GO_GATHEREXCL iky03000180  // Quality: 0 Rarity: 0
+#define IMPORTANT_LETS_GO_CRAFTEXCL iky03000190  // Quality: 0 Rarity: 0
+#define IMPORTANT_NEED_HEALINGEXCL iky03000200  // Quality: 0 Rarity: 0
+#define IMPORTANT_TAKE_THISEXCL iky03000210  // Quality: 0 Rarity: 0
+#define IMPORTANT_TOO_BAD. iky03000220  // Quality: 0 Rarity: 0
+#define IMPORTANT_OOF... iky03000230  // Quality: 0 Rarity: 0
+#define IMPORTANT_AWESOMEEXCL iky03000240  // Quality: 0 Rarity: 0
+#define IMPORTANT_TIME_TO_GOEXCL iky03000250  // Quality: 0 Rarity: 0
+#define IMPORTANT_YOU_READYINTER iky03000260  // Quality: 0 Rarity: 0
+#define IMPORTANT_INTER iky03000270  // Quality: 0 Rarity: 0
+#define IMPORTANT_EXCLEXCLEXCL iky03000280  // Quality: 0 Rarity: 0
+#define IMPORTANT_CONGRATSEXCL iky03000290  // Quality: 0 Rarity: 0
+#define IMPORTANT_ONE_MORE_TIMEEXCL iky03000300  // Quality: 0 Rarity: 0
+#define IMPORTANT_SORRY... iky03000310  // Quality: 0 Rarity: 0
+#define IMPORTANT_WELL_DONEEXCL iky03000320  // Quality: 0 Rarity: 0
+#define IMPORTANT_THAT_WAS_FUNEXCL iky03000330  // Quality: 0 Rarity: 0
+#define IMPORTANT_EEP... iky03000340  // Quality: 0 Rarity: 0
+#define IMPORTANT_LETS_GOOOEXCL iky03000350  // Quality: 0 Rarity: 0
+#define IMPORTANT_AW,_SHUCKSEXCL iky03000360  // Quality: 0 Rarity: 0
+#define IMPORTANT_MWA_HA_HA... iky03000370  // Quality: 0 Rarity: 0
+#define IMPORTANT_HEH_HEHEXCL iky03000380  // Quality: 0 Rarity: 0
+#define IMPORTANT_EASY_PEASYEXCL iky03000390  // Quality: 0 Rarity: 0
+#define IMPORTANT_LAURA_COLOR_1 iky_chr000102  // Quality: 0 Rarity: 5
+#define IMPORTANT_LAURA_COLOR_2 iky_chr000103  // Quality: 0 Rarity: 5
+#define IMPORTANT_LAURA_COLOR_3 iky_chr000104  // Quality: 0 Rarity: 5
+#define IMPORTANT_GLENN_COLOR_1 iky_chr000202  // Quality: 0 Rarity: 5
+#define IMPORTANT_GLENN_COLOR_2 iky_chr000203  // Quality: 0 Rarity: 5
+#define IMPORTANT_GLENN_COLOR_3 iky_chr000204  // Quality: 0 Rarity: 5
+#define IMPORTANT_LEILAH_COLOR_1 iky_chr000302  // Quality: 0 Rarity: 5
+#define IMPORTANT_LEILAH_COLOR_2 iky_chr000303  // Quality: 0 Rarity: 5
+#define IMPORTANT_LEILAH_COLOR_3 iky_chr000304  // Quality: 0 Rarity: 5
+#define IMPORTANT_COLIN_COLOR_1 iky_chr000402  // Quality: 0 Rarity: 5
+#define IMPORTANT_COLIN_COLOR_2 iky_chr000403  // Quality: 0 Rarity: 5
+#define IMPORTANT_COLIN_COLOR_3 iky_chr000404  // Quality: 0 Rarity: 5
+#define IMPORTANT_OLIVIA_COLOR_1 iky_chr000502  // Quality: 0 Rarity: 5
+#define IMPORTANT_OLIVIA_COLOR_2 iky_chr000503  // Quality: 0 Rarity: 5
+#define IMPORTANT_OLIVIA_COLOR_3 iky_chr000504  // Quality: 0 Rarity: 5
+#define IMPORTANT_DAEMON_COLOR_1 iky_chr000602  // Quality: 0 Rarity: 5
+#define IMPORTANT_DAEMON_COLOR_2 iky_chr000603  // Quality: 0 Rarity: 5
+#define IMPORTANT_DAEMON_COLOR_3 iky_chr000604  // Quality: 0 Rarity: 5
+#define IMPORTANT_ODIN_COLOR_1 iky_chr000702  // Quality: 0 Rarity: 5
+#define IMPORTANT_ODIN_COLOR_2 iky_chr000703  // Quality: 0 Rarity: 5
+#define IMPORTANT_ODIN_COLOR_3 iky_chr000704  // Quality: 0 Rarity: 5
+#define IMPORTANT_YUELIA_COLOR_1 iky_chr000802  // Quality: 0 Rarity: 5
+#define IMPORTANT_YUELIA_COLOR_2 iky_chr000803  // Quality: 0 Rarity: 5
+#define IMPORTANT_YUELIA_COLOR_3 iky_chr000804  // Quality: 0 Rarity: 5
+#define IMPORTANT_SHEA_COLOR_1 iky_chr000902  // Quality: 0 Rarity: 5
+#define IMPORTANT_SHEA_COLOR_2 iky_chr000903  // Quality: 0 Rarity: 5
+#define IMPORTANT_SHEA_COLOR_3 iky_chr000904  // Quality: 0 Rarity: 5
+#define IMPORTANT_DUGLAS_COLOR_1 iky_chr000a02  // Quality: 0 Rarity: 5
+#define IMPORTANT_DUGLAS_COLOR_2 iky_chr000a03  // Quality: 0 Rarity: 5
+#define IMPORTANT_DUGLAS_COLOR_3 iky_chr000a04  // Quality: 0 Rarity: 5
+#define IMPORTANT_ISAAC_COLOR_1 iky_chr000b02  // Quality: 0 Rarity: 5
+#define IMPORTANT_ISAAC_COLOR_2 iky_chr000b03  // Quality: 0 Rarity: 5
+#define IMPORTANT_ISAAC_COLOR_3 iky_chr000b04  // Quality: 0 Rarity: 5
+#define IMPORTANT_MONIKA_COLOR_1 iky_chr000c02  // Quality: 0 Rarity: 5
+#define IMPORTANT_MONIKA_COLOR_2 iky_chr000c03  // Quality: 0 Rarity: 5
+#define IMPORTANT_MONIKA_COLOR_3 iky_chr000c04  // Quality: 0 Rarity: 5
+#define IMPORTANT_CHAKPO_COLOR_1 iky_chr000d02  // Quality: 0 Rarity: 5
+#define IMPORTANT_CHAKPO_COLOR_2 iky_chr000d03  // Quality: 0 Rarity: 5
+#define IMPORTANT_CHAKPO_COLOR_3 iky_chr000d04  // Quality: 0 Rarity: 5
+#define IMPORTANT_MUSTANG_COLOR_1 iky_chr000e02  // Quality: 0 Rarity: 5
+#define IMPORTANT_MUSTANG_COLOR_2 iky_chr000e03  // Quality: 0 Rarity: 5
+#define IMPORTANT_MUSTANG_COLOR_3 iky_chr000e04  // Quality: 0 Rarity: 5
+#define IMPORTANT_JAKE_COLOR_1 iky_chr000f02  // Quality: 0 Rarity: 5
+#define IMPORTANT_JAKE_COLOR_2 iky_chr000f03  // Quality: 0 Rarity: 5
+#define IMPORTANT_JAKE_COLOR_3 iky_chr000f04  // Quality: 0 Rarity: 5
+#define IMPORTANT_HILDA_COLOR_1 iky_chr001002  // Quality: 0 Rarity: 5
+#define IMPORTANT_HILDA_COLOR_2 iky_chr001003  // Quality: 0 Rarity: 5
+#define IMPORTANT_HILDA_COLOR_3 iky_chr001004  // Quality: 0 Rarity: 5
+#define IMPORTANT_FANG_COLOR_1 iky_chr001102  // Quality: 0 Rarity: 5
+#define IMPORTANT_FANG_COLOR_2 iky_chr001103  // Quality: 0 Rarity: 5
+#define IMPORTANT_FANG_COLOR_3 iky_chr001104  // Quality: 0 Rarity: 5
+#define IMPORTANT_SNOW_COLOR_1 iky_chr001202  // Quality: 0 Rarity: 5
+#define IMPORTANT_SNOW_COLOR_2 iky_chr001203  // Quality: 0 Rarity: 5
+#define IMPORTANT_SNOW_COLOR_3 iky_chr001204  // Quality: 0 Rarity: 5
+#define IMPORTANT_ROUGE_COLOR_1 iky_chr001302  // Quality: 0 Rarity: 5
+#define IMPORTANT_ROUGE_COLOR_2 iky_chr001303  // Quality: 0 Rarity: 5
+#define IMPORTANT_ROUGE_COLOR_3 iky_chr001304  // Quality: 0 Rarity: 5
+#define IMPORTANT_FERN_COLOR_1 iky_chr001402  // Quality: 0 Rarity: 5
+#define IMPORTANT_FERN_COLOR_2 iky_chr001403  // Quality: 0 Rarity: 5
+#define IMPORTANT_FERN_COLOR_3 iky_chr001404  // Quality: 0 Rarity: 5
+#define IMPORTANT_HAWKE_COLOR_1 iky_chr001502  // Quality: 0 Rarity: 5
+#define IMPORTANT_HAWKE_COLOR_2 iky_chr001503  // Quality: 0 Rarity: 5
+#define IMPORTANT_HAWKE_COLOR_3 iky_chr001504  // Quality: 0 Rarity: 5
+#define IMPORTANT_JERRY_COLOR_1 iky_chr001602  // Quality: 0 Rarity: 5
+#define IMPORTANT_JERRY_COLOR_2 iky_chr001603  // Quality: 0 Rarity: 5
+#define IMPORTANT_JERRY_COLOR_3 iky_chr001604  // Quality: 0 Rarity: 5
+#define IMPORTANT_CLIFF_COLOR_1 iky_chr001702  // Quality: 0 Rarity: 5
+#define IMPORTANT_CLIFF_COLOR_2 iky_chr001703  // Quality: 0 Rarity: 5
+#define IMPORTANT_CLIFF_COLOR_3 iky_chr001704  // Quality: 0 Rarity: 5
+#define IMPORTANT_HAZEL_COLOR_1 iky_chr001802  // Quality: 0 Rarity: 5
+#define IMPORTANT_HAZEL_COLOR_2 iky_chr001803  // Quality: 0 Rarity: 5
+#define IMPORTANT_HAZEL_COLOR_3 iky_chr001804  // Quality: 0 Rarity: 5
+#define IMPORTANT_SLOANE_COLOR_1 iky_chr001902  // Quality: 0 Rarity: 5
+#define IMPORTANT_SLOANE_COLOR_2 iky_chr001903  // Quality: 0 Rarity: 5
+#define IMPORTANT_SLOANE_COLOR_3 iky_chr001904  // Quality: 0 Rarity: 5
+#define IMPORTANT_GRANTZ_COLOR_1 iky_chr001a02  // Quality: 0 Rarity: 5
+#define IMPORTANT_GRANTZ_COLOR_2 iky_chr001a03  // Quality: 0 Rarity: 5
+#define IMPORTANT_GRANTZ_COLOR_3 iky_chr001a04  // Quality: 0 Rarity: 5
+#define IMPORTANT_SYLVIA_COLOR_1 iky_chr001b02  // Quality: 0 Rarity: 5
+#define IMPORTANT_SYLVIA_COLOR_2 iky_chr001b03  // Quality: 0 Rarity: 5
+#define IMPORTANT_SYLVIA_COLOR_3 iky_chr001b04  // Quality: 0 Rarity: 5
+#define IMPORTANT_BEARHART_COLOR_1 iky_chr001c02  // Quality: 0 Rarity: 5
+#define IMPORTANT_BEARHART_COLOR_2 iky_chr001c03  // Quality: 0 Rarity: 5
+#define IMPORTANT_BEARHART_COLOR_3 iky_chr001c04  // Quality: 0 Rarity: 5
+#define IMPORTANT_ORLANDO_COLOR_1 iky_chr001d02  // Quality: 0 Rarity: 5
+#define IMPORTANT_ORLANDO_COLOR_2 iky_chr001d03  // Quality: 0 Rarity: 5
+#define IMPORTANT_ORLANDO_COLOR_3 iky_chr001d04  // Quality: 0 Rarity: 5
+#define IMPORTANT_AHAB_COLOR_1 iky_chr001e02  // Quality: 0 Rarity: 5
+#define IMPORTANT_AHAB_COLOR_2 iky_chr001e03  // Quality: 0 Rarity: 5
+#define IMPORTANT_AHAB_COLOR_3 iky_chr001e04  // Quality: 0 Rarity: 5
+#define IMPORTANT_TERUHA_COLOR_1 iky_chr001f02  // Quality: 0 Rarity: 5
+#define IMPORTANT_TERUHA_COLOR_2 iky_chr001f03  // Quality: 0 Rarity: 5
+#define IMPORTANT_TERUHA_COLOR_3 iky_chr001f04  // Quality: 0 Rarity: 5
+#define IMPORTANT_BRAY_COLOR_1 iky_chr002002  // Quality: 0 Rarity: 5
+#define IMPORTANT_BRAY_COLOR_2 iky_chr002003  // Quality: 0 Rarity: 5
+#define IMPORTANT_BRAY_COLOR_3 iky_chr002004  // Quality: 0 Rarity: 5
+#define IMPORTANT_MAGMIA_COLOR_1 iky_chr002102  // Quality: 0 Rarity: 5
+#define IMPORTANT_MAGMIA_COLOR_2 iky_chr002103  // Quality: 0 Rarity: 5
+#define IMPORTANT_MAGMIA_COLOR_3 iky_chr002104  // Quality: 0 Rarity: 5
+#define IMPORTANT_IAN_COLOR_1 iky_chr002202  // Quality: 0 Rarity: 5
+#define IMPORTANT_IAN_COLOR_2 iky_chr002203  // Quality: 0 Rarity: 5
+#define IMPORTANT_IAN_COLOR_3 iky_chr002204  // Quality: 0 Rarity: 5
+#define IMPORTANT_CORMELL_COLOR_1 iky_chr002302  // Quality: 0 Rarity: 5
+#define IMPORTANT_CORMELL_COLOR_2 iky_chr002303  // Quality: 0 Rarity: 5
+#define IMPORTANT_CORMELL_COLOR_3 iky_chr002304  // Quality: 0 Rarity: 5
+#define IMPORTANT_CHERRY_COLOR_1 iky_chr002402  // Quality: 0 Rarity: 5
+#define IMPORTANT_CHERRY_COLOR_2 iky_chr002403  // Quality: 0 Rarity: 5
+#define IMPORTANT_CHERRY_COLOR_3 iky_chr002404  // Quality: 0 Rarity: 5
+#define IMPORTANT_KUNUGI_COLOR_1 iky_chr002502  // Quality: 0 Rarity: 5
+#define IMPORTANT_KUNUGI_COLOR_2 iky_chr002503  // Quality: 0 Rarity: 5
+#define IMPORTANT_KUNUGI_COLOR_3 iky_chr002504  // Quality: 0 Rarity: 5
+#define IMPORTANT_KLAUS_COLOR_1 iky_chr002602  // Quality: 0 Rarity: 5
+#define IMPORTANT_KLAUS_COLOR_2 iky_chr002603  // Quality: 0 Rarity: 5
+#define IMPORTANT_KLAUS_COLOR_3 iky_chr002604  // Quality: 0 Rarity: 5
+#define IMPORTANT_TAYLOR_COLOR_1 iky_chr002702  // Quality: 0 Rarity: 5
+#define IMPORTANT_TAYLOR_COLOR_2 iky_chr002703  // Quality: 0 Rarity: 5
+#define IMPORTANT_TAYLOR_COLOR_3 iky_chr002704  // Quality: 0 Rarity: 5
+#define IMPORTANT_ALLAN_COLOR_1 iky_chr002802  // Quality: 0 Rarity: 5
+#define IMPORTANT_ALLAN_COLOR_2 iky_chr002803  // Quality: 0 Rarity: 5
+#define IMPORTANT_ALLAN_COLOR_3 iky_chr002804  // Quality: 0 Rarity: 5
+#define IMPORTANT_NOMMIE_COLOR_1 iky_chr002902  // Quality: 0 Rarity: 5
+#define IMPORTANT_NOMMIE_COLOR_2 iky_chr002903  // Quality: 0 Rarity: 5
+#define IMPORTANT_NOMMIE_COLOR_3 iky_chr002904  // Quality: 0 Rarity: 5
+#define IMPORTANT_FLAMEL_COLOR_1 iky_chr002a02  // Quality: 0 Rarity: 5
+#define IMPORTANT_FLAMEL_COLOR_2 iky_chr002a03  // Quality: 0 Rarity: 5
+#define IMPORTANT_FLAMEL_COLOR_3 iky_chr002a04  // Quality: 0 Rarity: 5
+#define IMPORTANT_SOPHIE_COLOR_1 iky_chr002b02  // Quality: 0 Rarity: 5
+#define IMPORTANT_SOPHIE_COLOR_2 iky_chr002b03  // Quality: 0 Rarity: 5
+#define IMPORTANT_SOPHIE_COLOR_3 iky_chr002b04  // Quality: 0 Rarity: 5
+#define IMPORTANT_DEMIEL_COLOR_1 iky_chr002c02  // Quality: 0 Rarity: 5
+#define IMPORTANT_DEMIEL_COLOR_2 iky_chr002c03  // Quality: 0 Rarity: 5
+#define IMPORTANT_DEMIEL_COLOR_3 iky_chr002c04  // Quality: 0 Rarity: 5
+#define IMPORTANT_PINO_COLOR_1 iky_chr002d02  // Quality: 0 Rarity: 5
+#define IMPORTANT_PINO_COLOR_2 iky_chr002d03  // Quality: 0 Rarity: 5
+#define IMPORTANT_PINO_COLOR_3 iky_chr002d04  // Quality: 0 Rarity: 5
+#define IMPORTANT_PIERRE_COLOR_1 iky_chr002e02  // Quality: 0 Rarity: 5
+#define IMPORTANT_PIERRE_COLOR_2 iky_chr002e03  // Quality: 0 Rarity: 5
+#define IMPORTANT_PIERRE_COLOR_3 iky_chr002e04  // Quality: 0 Rarity: 5
+#define IMPORTANT_ROISIN_COLOR_1 iky_chr002f02  // Quality: 0 Rarity: 5
+#define IMPORTANT_ROISIN_COLOR_2 iky_chr002f03  // Quality: 0 Rarity: 5
+#define IMPORTANT_ROISIN_COLOR_3 iky_chr002f04  // Quality: 0 Rarity: 5
+#define IMPORTANT_KIKYO_COLOR_1 iky_chr003102  // Quality: 0 Rarity: 5
+#define IMPORTANT_KIKYO_COLOR_2 iky_chr003103  // Quality: 0 Rarity: 5
+#define IMPORTANT_KIKYO_COLOR_3 iky_chr003104  // Quality: 0 Rarity: 5
+#define IMPORTANT_MEIME_COLOR_1 iky_chr003202  // Quality: 0 Rarity: 5
+#define IMPORTANT_MEIME_COLOR_2 iky_chr003203  // Quality: 0 Rarity: 5
+#define IMPORTANT_MEIME_COLOR_3 iky_chr003204  // Quality: 0 Rarity: 5
+#define IMPORTANT_BUTCH_COLOR_1 iky_chr003402  // Quality: 0 Rarity: 5
+#define IMPORTANT_BUTCH_COLOR_2 iky_chr003403  // Quality: 0 Rarity: 5
+#define IMPORTANT_BUTCH_COLOR_3 iky_chr003404  // Quality: 0 Rarity: 5
+#define IMPORTANT_DEVILISH_SQUARE iky_test_00  // Quality: 0 Rarity: 0
+#define IMPORTANT_SEABREEZE_SQUARE iky_icf01040030  // Quality: 0 Rarity: 5
+#define IMPORTANT_GRAFFITI_SQUARE iky_icf01040070  // Quality: 0 Rarity: 5
+#define IMPORTANT_DEVILISH_SQUARE iky_icf01040080  // Quality: 0 Rarity: 5
+#define IMPORTANT_ANCIENT_SQUARE iky_icf01040100  // Quality: 0 Rarity: 5
+#define IMPORTANT_DEVILISH_HOUSE iky_icf01020110  // Quality: 0 Rarity: 5
+#define IMPORTANT_DEVILISH_HOUSE_A iky_icf01020111  // Quality: 0 Rarity: 5
+#define IMPORTANT_DEVILISH_HOUSE_B iky_icf01020112  // Quality: 0 Rarity: 5
+#define IMPORTANT_EYE_CATALOG_2 iky01000381  // Quality: 0 Rarity: 5
+#define IMPORTANT_HAIR_CATALOG_2 iky01000391  // Quality: 0 Rarity: 5
+#define IMPORTANT_GODDESS_SQUARE iky_icf01040040  // Quality: 0 Rarity: 5
+#define IMPORTANT_DIVINE_SQUARE iky_icf01040050  // Quality: 0 Rarity: 5
+#define WEAPON_TREE_BRANCH iwp01000010  // Quality: 0 Rarity: 0
+#define WEAPON_TOUGH_TREE_BRANCH iwp06000020  // Quality: 0 Rarity: 0
+#define WEAPON_CHERRY_STICK iwp06000050  // Quality: 0 Rarity: 0
+#define WEAPON_FIRE_STICK iwp06000060  // Quality: 0 Rarity: 0
+#define WEAPON_WIND_STICK iwp06000070  // Quality: 0 Rarity: 0
+#define WEAPON_WATER_STICK iwp06000080  // Quality: 0 Rarity: 0
+#define WEAPON_EARTH_STICK iwp06000090  // Quality: 0 Rarity: 0
+#define WEAPON_EXCALIBRANCH iwp06000030  // Quality: 0 Rarity: 0
+#define WEAPON_GIANT_STICK iwp06000100  // Quality: 0 Rarity: 0
+#define WEAPON_DRAGON_STICK iwp06000110  // Quality: 0 Rarity: 0
+#define WEAPON_ROASTED_CORN iwp06000040  // Quality: 0 Rarity: 0
+#define WEAPON_LADLE iwp01000012  // Quality: 0 Rarity: 0
+#define WEAPON_KITCHEN_KNIFE iwp01000013  // Quality: 0 Rarity: 0
+#define WEAPON_WEIRD_PAD iwp01000014  // Quality: 0 Rarity: 0
+#define WEAPON_OLD_GUYS_CANE iwp01000015  // Quality: 0 Rarity: 0
+#define WEAPON_TONGS_HOT iwp01000016  // Quality: 0 Rarity: 0
+#define WEAPON_TONGS iwp01000017  // Quality: 0 Rarity: 0
+#define WEAPON_SPHERE_OF_MALETH iwp01000018  // Quality: 0 Rarity: 0
+#define WEAPON_INTERFERE_GEAR_PLUS iwp01000019  // Quality: 0 Rarity: 0
+#define WEAPON_BORROWED_SWORD iwp02000010  // Quality: 0 Rarity: 0
+#define WEAPON_SQUIRES_SWORD iwp02000020  // Quality: 0 Rarity: 0
+#define WEAPON_BRONZE_SWORD iwp02000030  // Quality: 0 Rarity: 0
+#define WEAPON_IRON_SWORD iwp02000040  // Quality: 0 Rarity: 0
+#define WEAPON_SILVER_SWORD iwp02000050  // Quality: 0 Rarity: 0
+#define WEAPON_FLAME_SABER iwp02000130  // Quality: 0 Rarity: 0
+#define WEAPON_GALE_SABER iwp02000150  // Quality: 0 Rarity: 0
+#define WEAPON_AQUA_SABER iwp02000140  // Quality: 0 Rarity: 0
+#define WEAPON_LEAF_SABER iwp02000120  // Quality: 0 Rarity: 0
+#define WEAPON_GOLD_SWORD iwp02000060  // Quality: 0 Rarity: 0
+#define WEAPON_SWORD_OF_DARKNESS iwp02000070  // Quality: 0 Rarity: 0
+#define WEAPON_STARFALL_SWORD iwp02000170  // Quality: 0 Rarity: 0
+#define WEAPON_SWORD_OF_TIME iwp02000190  // Quality: 0 Rarity: 0
+#define WEAPON_DRAGOONS_SWORD iwp02000080  // Quality: 0 Rarity: 0
+#define WEAPON_VERDANT_BLADE iwp02000180  // Quality: 0 Rarity: 0
+#define WEAPON_BOREAL_BLADE iwp02000110  // Quality: 0 Rarity: 0
+#define WEAPON_FLORAL_SWORD iwp02000100  // Quality: 0 Rarity: 0
+#define WEAPON_BLACK_DRAGON_SWORD iwp02000160  // Quality: 0 Rarity: 0
+#define WEAPON_APPLE_SLICER iwp02000090  // Quality: 0 Rarity: 0
+#define WEAPON_ARCANITE_SWORD iwp02000200  // Quality: 0 Rarity: 0
+#define WEAPON_APOCALYPSE_SWORD iwp02000210  // Quality: 0 Rarity: 0
+#define WEAPON_TRUE_SWORD_OF_TIME iwp02000220  // Quality: 0 Rarity: 0
+#define WEAPON_NAPDRAGON_SWORD iwp02000230  // Quality: 0 Rarity: 0
+#define WEAPON_BORROWED_CLAYMORE iwp03000010  // Quality: 0 Rarity: 0
+#define WEAPON_NOVICES_CLAYMORE iwp03000020  // Quality: 0 Rarity: 0
+#define WEAPON_BRONZE_CLAYMORE iwp03000030  // Quality: 0 Rarity: 0
+#define WEAPON_IRON_CLAYMORE iwp03000040  // Quality: 0 Rarity: 0
+#define WEAPON_SILVER_CLAYMORE iwp03000050  // Quality: 0 Rarity: 0
+#define WEAPON_FIRE_CLAYMORE iwp03000150  // Quality: 0 Rarity: 0
+#define WEAPON_WIND_CLAYMORE iwp03000130  // Quality: 0 Rarity: 0
+#define WEAPON_WATER_CLAYMORE iwp03000160  // Quality: 0 Rarity: 0
+#define WEAPON_EARTH_CLAYMORE iwp03000140  // Quality: 0 Rarity: 0
+#define WEAPON_GOLD_CLAYMORE iwp03000060  // Quality: 0 Rarity: 0
+#define WEAPON_BLACK_DRAGON_BUSTER iwp03000120  // Quality: 0 Rarity: 0
+#define WEAPON_SYLPHIDE iwp03000170  // Quality: 0 Rarity: 0
+#define WEAPON_GREATSWORD_OF_TIME iwp03000190  // Quality: 0 Rarity: 0
+#define WEAPON_SCARLET_SCOURGE iwp03000100  // Quality: 0 Rarity: 0
+#define WEAPON_COBALT_DRAGONFANG iwp03000180  // Quality: 0 Rarity: 0
+#define WEAPON_BLIZZARD_BUSTER iwp03000110  // Quality: 0 Rarity: 0
+#define WEAPON_WOLFS_FANG iwp03000090  // Quality: 0 Rarity: 0
+#define WEAPON_DRACONIC_GREATSWORD iwp03000070  // Quality: 0 Rarity: 0
+#define WEAPON_DRAGONS_DESPAIR iwp03000080  // Quality: 0 Rarity: 0
+#define WEAPON_TRUE_GREATSWORD_OF_TIME iwp03000200  // Quality: 0 Rarity: 0
+#define WEAPON_NAPDRAGON_CLAYMORE iwp03000210  // Quality: 0 Rarity: 0
+#define WEAPON_BORROWED_BOW iwp05000010  // Quality: 0 Rarity: 0
+#define WEAPON_HUNTERS_BOW iwp05000160  // Quality: 0 Rarity: 0
+#define WEAPON_OAK_BOW iwp05000020  // Quality: 0 Rarity: 0
+#define WEAPON_PINE_BOW iwp05000030  // Quality: 0 Rarity: 0
+#define WEAPON_CHERRY_BOW iwp05000040  // Quality: 0 Rarity: 0
+#define WEAPON_BLAZE_BOW iwp05000140  // Quality: 0 Rarity: 0
+#define WEAPON_GALE_BOW iwp05000120  // Quality: 0 Rarity: 0
+#define WEAPON_CRYSTAL_BOW iwp05000150  // Quality: 0 Rarity: 0
+#define WEAPON_LEAF_BOW iwp05000130  // Quality: 0 Rarity: 0
+#define WEAPON_SUGAR_BOW iwp05000050  // Quality: 0 Rarity: 0
+#define WEAPON_BLACK_DRAGON_BOW iwp05000070  // Quality: 0 Rarity: 0
+#define WEAPON_WARGODS_BOW iwp05000170  // Quality: 0 Rarity: 0
+#define WEAPON_BOW_OF_TIME iwp05000190  // Quality: 0 Rarity: 0
+#define WEAPON_PHOENIX_BOW iwp05000060  // Quality: 0 Rarity: 0
+#define WEAPON_FALCONWING iwp05000110  // Quality: 0 Rarity: 0
+#define WEAPON_POSEIDONS_BOW iwp05000080  // Quality: 0 Rarity: 0
+#define WEAPON_SUNCATCHER iwp05000100  // Quality: 0 Rarity: 0
+#define WEAPON_HEAVENLY_AEROSHOT iwp05000090  // Quality: 0 Rarity: 0
+#define WEAPON_TENEBRION iwp05000200  // Quality: 0 Rarity: 0
+#define WEAPON_TRUE_BOW_OF_TIME iwp05000210  // Quality: 0 Rarity: 0
+#define WEAPON_NAPDRAGON_BOW iwp05000220  // Quality: 0 Rarity: 0
+#define WEAPON_BORROWED_STAFF iwp04000010  // Quality: 0 Rarity: 0
+#define WEAPON_NOVICES_STAFF iwp04000020  // Quality: 0 Rarity: 0
+#define WEAPON_OAK_STAFF iwp04000030  // Quality: 0 Rarity: 0
+#define WEAPON_PINE_STAFF iwp04000040  // Quality: 0 Rarity: 0
+#define WEAPON_CHERRY_STAFF iwp04000050  // Quality: 0 Rarity: 0
+#define WEAPON_RED_DRAGON_STAFF iwp04000090  // Quality: 0 Rarity: 0
+#define WEAPON_SPOOKY_STAFF iwp04000100  // Quality: 0 Rarity: 0
+#define WEAPON_FROGGY_WAND iwp04000110  // Quality: 0 Rarity: 0
+#define WEAPON_SAGE_STAFF iwp04000150  // Quality: 0 Rarity: 0
+#define WEAPON_SUGAR_STAFF iwp04000060  // Quality: 0 Rarity: 0
+#define WEAPON_MYSTICAL_STAFF iwp04000070  // Quality: 0 Rarity: 0
+#define WEAPON_BLACK_DRAGON_STAFF iwp04000080  // Quality: 0 Rarity: 0
+#define WEAPON_STAFF_OF_TIME iwp04000190  // Quality: 0 Rarity: 0
+#define WEAPON_INFERNAL_STAFF iwp04000180  // Quality: 0 Rarity: 0
+#define WEAPON_STAFF_OF_THE_ORACLE iwp04000140  // Quality: 0 Rarity: 0
+#define WEAPON_COCYTUS_ICEWAND iwp04000160  // Quality: 0 Rarity: 0
+#define WEAPON_HARVEST_SCEPTER iwp04000170  // Quality: 0 Rarity: 0
+#define WEAPON_LUNA_INCANTA iwp04000120  // Quality: 0 Rarity: 0
+#define WEAPON_CHAOS_SCEPTER iwp04000130  // Quality: 0 Rarity: 0
+#define WEAPON_TRUE_STAFF_OF_TIME iwp04000200  // Quality: 0 Rarity: 0
+#define WEAPON_NAPDRAGON_STAFF iwp04000210  // Quality: 0 Rarity: 0
+#define WEAPON_TREE_BRANCH iwp00000000  // Quality: 0 Rarity: 0
+#define WEAPON_BORROWED_SWORD iwp00000001  // Quality: 0 Rarity: 0
+#define WEAPON_BORROWED_CLAYMORE iwp00000002  // Quality: 0 Rarity: 0
+#define WEAPON_BORROWED_BOW iwp00000003  // Quality: 0 Rarity: 0
+#define WEAPON_BORROWED_STAFF iwp00000004  // Quality: 0 Rarity: 0
+#define WEAPON_NAPDRAGON_SWORD iwp02000230_BT  // Quality: 0 Rarity: 0
+#define WEAPON_NAPDRAGON_CLAYMORE iwp03000210_BT  // Quality: 0 Rarity: 0
+#define WEAPON_NAPDRAGON_BOW iwp05000220_BT  // Quality: 0 Rarity: 0
+#define WEAPON_NAPDRAGON_STAFF iwp04000210_BT  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_AXE ilt01000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_OAK_AXE ilt01000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_PINE_AXE ilt01000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CHERRY_AXE ilt01000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SUGAR_AXE ilt01000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BEAR_CLEAVER ilt01000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SQUIRREL_AXE ilt01000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_VERDANT_AXE ilt01000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_AXE_OF_TIME ilt01000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BLOSSOM_AXE ilt01000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_AVALANCHE_AXE ilt01000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_AXE_OF_TIME ilt01000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_PICKAXE ilt02000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BRONZE_PICKAXE ilt02000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_IRON_PICKAXE ilt02000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SILVER_PICKAXE ilt02000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_GOLD_PICKAXE ilt02000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_MOUNTAIN_GOD_PICKAXE ilt02000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CRYSTAL_PICKAXE ilt02000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_EARTHLORDS_PICKAXE ilt02000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_PICKAXE_OF_TIME ilt02000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_WARRIORS_PICKAXE ilt02000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_DRAGONBREAKER ilt02000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_PICKAXE_OF_TIME ilt02000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_ROD ilt03000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_OAK_ROD ilt03000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_PINE_ROD ilt03000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CHERRY_ROD ilt03000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SUGAR_ROD ilt03000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_ANGLERS_OATH_ROD ilt03000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_KOI_COLORED_ROD ilt03000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_PLUM_BLOSSOM_ROD ilt03000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_ROD_OF_TIME ilt03000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_APPLE_ROD ilt03000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_VIOLET_ROD ilt03000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_ROD_OF_TIME ilt03000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_HOE ilt04000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BRONZE_HOE ilt04000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_IRON_HOE ilt04000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SILVER_HOE ilt04000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_GOLD_HOE ilt04000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_PLATINUM_HOE ilt04000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_WAVECRASH_HOE ilt04000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_MAGMA_HOE ilt04000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_HOE_OF_TIME ilt04000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_WIZARDS_HOE ilt04000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_DIVINE_HOE ilt04000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_HOE_OF_TIME ilt04000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_HAMMER ilt08000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BRONZE_HAMMER ilt08000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_IRON_HAMMER ilt08000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SILVER_HAMMER ilt08000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_GOLD_HAMMER ilt08000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CRYSTAL_HAMMER ilt08000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BLUE_DEVILS_HAMMER ilt08000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_RED_DEVILS_HAMMER ilt08000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_HAMMER_OF_TIME ilt08000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SWEET_HAMMER ilt08000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_GREAT_HAMMER ilt08000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_HAMMER_OF_TIME ilt08000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_SAW ilt06000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_OAK_SAW ilt06000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_PINE_SAW ilt06000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CHERRY_SAW ilt06000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SUGAR_SAW ilt06000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BEAVER_SAW ilt06000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CORAL_SAW ilt06000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CHIEFS_SAW ilt06000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SAW_OF_TIME ilt06000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BATTLE_CARPENTERS_SAW ilt06000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_ALI_BABA_SAW ilt06000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_SAW_OF_TIME ilt06000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_NEEDLE ilt07000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BRONZE_NEEDLE ilt07000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_IRON_NEEDLE ilt07000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SILVER_NEEDLE ilt07000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_GOLD_NEEDLE ilt07000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_DANDELION_NEEDLE ilt07000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_WHITE_MOHAIRY_NEEDLE ilt07000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_LULLABY_NEEDLE ilt07000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_NEEDLE_OF_TIME ilt07000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_ROYAL_NEEDLE ilt07000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SHAHRAZAD_NEEDLE ilt07000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_NEEDLE_OF_TIME ilt07000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_FLASK ilt11000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SCIENCE_FLASK ilt11000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_INVENTORS_FLASK ilt11000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BUBBLING_FLASK ilt11000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_HAZARDOUS_FLASK ilt11000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_FURIOUS_FLASK ilt11000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_MOONLIGHT_FLASK ilt11000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_LOVE_FLASK ilt11000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_FLASK_OF_TIME ilt11000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_EXPLOSIVE_FLASK ilt11000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SUMMER_FLASK ilt11000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_FLASK_OF_TIME ilt11000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_FRYING_PAN ilt10000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BRONZE_FRYING_PAN ilt10000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_IRON_FRYING_PAN ilt10000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SILVER_FRYING_PAN ilt10000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_GOLD_FRYING_PAN ilt10000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_FLUFFY_FRYING_PAN ilt10000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_ROYAL_FRYING_PAN ilt10000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_POMME_PAN ilt10000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_FRYING_PAN_OF_TIME ilt10000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_JACK_O_VEGGIE ilt10000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_VENUS_FRYING_PAN ilt10000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_FRYING_PAN_OF_TIME ilt10000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_BRUSH ilt09000010  // Quality: 0 Rarity: 0
+#define LIFETOOLS_OAK_BRUSH ilt09000020  // Quality: 0 Rarity: 0
+#define LIFETOOLS_PINE_BRUSH ilt09000030  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CHERRY_BRUSH ilt09000040  // Quality: 0 Rarity: 0
+#define LIFETOOLS_SUGAR_BRUSH ilt09000050  // Quality: 0 Rarity: 0
+#define LIFETOOLS_JET_BLACK_QUILL ilt09000060  // Quality: 0 Rarity: 0
+#define LIFETOOLS_QUETZAL_QUILL ilt09000070  // Quality: 0 Rarity: 0
+#define LIFETOOLS_ANGELWING_BRUSH ilt09000080  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BRUSH_OF_TIME ilt09000110  // Quality: 0 Rarity: 0
+#define LIFETOOLS_CELESTIAL_BRUSH ilt09000090  // Quality: 0 Rarity: 0
+#define LIFETOOLS_DRAGONBONE_BRUSH ilt09000100  // Quality: 0 Rarity: 0
+#define LIFETOOLS_TRUE_BRUSH_OF_TIME ilt09000120  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_AXE ilt00000000  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_PICKAXE ilt00000001  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_ROD ilt00000002  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_HOE ilt00000003  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_FRYING_PAN ilt00000004  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_HAMMER ilt00000005  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_SAW ilt00000006  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_NEEDLE ilt00000007  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_FLASK ilt00000008  // Quality: 0 Rarity: 0
+#define LIFETOOLS_BORROWED_BRUSH ilt00000009  // Quality: 0 Rarity: 0
+#define ARMOR_INVISIBLE_HAT iam00000000  // Quality: 0 Rarity: 0
+#define ARMOR_INVISIBLE_CLOTHES iam00000001  // Quality: 0 Rarity: 0
+#define ARMOR_INVISIBLE_PANTS iam00000002  // Quality: 0 Rarity: 0
+#define ARMOR_INVISIBLE_BANGLE iam00000003  // Quality: 0 Rarity: 0
+#define ARMOR_INVISIBLE_SHOES iam00000004  // Quality: 0 Rarity: 0
+#define ARMOR_INVISIBLE_CAPE iam00000005  // Quality: 0 Rarity: 0
+#define ARMOR_INVISIBLE_SPECS iam00000006  // Quality: 0 Rarity: 0
+#define ARMOR_BORROWED_SHIELD iam00000007  // Quality: 0 Rarity: 0
+#define ARMOR_EXPLORERS_HAT iam01007820  // Quality: 0 Rarity: 1
+#define ARMOR_EXPLORERS_CLOTHES iam01007830  // Quality: 0 Rarity: 1
+#define ARMOR_EXPLORERS_SHOES iam01007840  // Quality: 0 Rarity: 1
+#define ARMOR_EXPLORERS_BACKPACK iam01007850  // Quality: 0 Rarity: 1
+#define ARMOR_BORROWED_SHIELD iam01004950  // Quality: 0 Rarity: 0
+#define ARMOR_PALADINS_SHIELD iam01003420  // Quality: 0 Rarity: 0
+#define ARMOR_BRONZE_SHIELD iam01003430  // Quality: 0 Rarity: 0
+#define ARMOR_IRON_SHIELD iam01003440  // Quality: 0 Rarity: 0
+#define ARMOR_SILVER_SHIELD iam01003450  // Quality: 0 Rarity: 0
+#define ARMOR_BLOSSOM_BUCKLER iam01003460  // Quality: 0 Rarity: 0
+#define ARMOR_GOLD_SHIELD iam01003470  // Quality: 0 Rarity: 0
+#define ARMOR_CAPTAINS_SHIELD iam01003480  // Quality: 0 Rarity: 0
+#define ARMOR_RED_DRAGON_SHIELD iam01003510  // Quality: 0 Rarity: 0
+#define ARMOR_KNIGHTS_OATH iam01003500  // Quality: 0 Rarity: 0
+#define ARMOR_SHIELD_OF_TIME iam01007000  // Quality: 0 Rarity: 0
+#define ARMOR_POMME_PROTECTOR iam01003490  // Quality: 0 Rarity: 0
+#define ARMOR_AZURE_WING_SHIELD iam01007010  // Quality: 0 Rarity: 0
+#define ARMOR_ABYSSAL_GUARDIAN iam01007020  // Quality: 0 Rarity: 0
+#define ARMOR_ARCANITE_SHIELD iam01007030  // Quality: 0 Rarity: 0
+#define ARMOR_APOCALYPSE_SHIELD iam01007040  // Quality: 0 Rarity: 0
+#define ARMOR_TRUE_SHIELD_OF_TIME iam01007050  // Quality: 0 Rarity: 0
+#define ARMOR_LEATHER_CAP iam01000600  // Quality: 0 Rarity: 1
+#define ARMOR_LEATHER_JERKIN iam01000610  // Quality: 0 Rarity: 1
+#define ARMOR_LEATHER_LEGGINGS iam01000620  // Quality: 0 Rarity: 1
+#define ARMOR_LEATHER_GAUNTLETS iam01000630  // Quality: 0 Rarity: 1
+#define ARMOR_LEATHER_BOOTS iam01000640  // Quality: 0 Rarity: 1
+#define ARMOR_IRON_HELM iam01000900  // Quality: 0 Rarity: 2
+#define ARMOR_IRON_CUIRASS iam01000910  // Quality: 0 Rarity: 2
+#define ARMOR_IRON_GREAVES iam01000920  // Quality: 0 Rarity: 2
+#define ARMOR_IRON_GAUNTLETS iam01000930  // Quality: 0 Rarity: 2
+#define ARMOR_IRON_BOOTS iam01000940  // Quality: 0 Rarity: 2
+#define ARMOR_SNAKESKIN_HELM iam01000750  // Quality: 0 Rarity: 2
+#define ARMOR_SNAKESKIN_MAIL iam01000760  // Quality: 0 Rarity: 2
+#define ARMOR_SNAKESKIN_LEGGINGS iam01000770  // Quality: 0 Rarity: 2
+#define ARMOR_SNAKESKIN_GLOVES iam01000780  // Quality: 0 Rarity: 2
+#define ARMOR_SNAKESKIN_BOOTS iam01000790  // Quality: 0 Rarity: 2
+#define ARMOR_RUGGED_CAP iam01000650  // Quality: 0 Rarity: 3
+#define ARMOR_RUGGED_JERKIN iam01000660  // Quality: 0 Rarity: 3
+#define ARMOR_RUGGED_LEGGINGS iam01000670  // Quality: 0 Rarity: 3
+#define ARMOR_RUGGED_GAUNTLETS iam01000680  // Quality: 0 Rarity: 3
+#define ARMOR_RUGGED_BOOTS iam01000690  // Quality: 0 Rarity: 3
+#define ARMOR_MERFOLK_HELM iam01000800  // Quality: 0 Rarity: 3
+#define ARMOR_MERFOLK_MAIL iam01000810  // Quality: 0 Rarity: 3
+#define ARMOR_MERFOLK_LEGGINGS iam01000820  // Quality: 0 Rarity: 3
+#define ARMOR_MERFOLK_GLOVES iam01000830  // Quality: 0 Rarity: 3
+#define ARMOR_MERFOLK_BOOTS iam01000840  // Quality: 0 Rarity: 3
+#define ARMOR_GOLD_HELM iam01001050  // Quality: 0 Rarity: 4
+#define ARMOR_GOLD_CUIRASS iam01001060  // Quality: 0 Rarity: 4
+#define ARMOR_GOLD_GREAVES iam01001070  // Quality: 0 Rarity: 4
+#define ARMOR_GOLD_GAUNTLETS iam01001080  // Quality: 0 Rarity: 4
+#define ARMOR_GOLD_BOOTS iam01001090  // Quality: 0 Rarity: 4
+#define ARMOR_BEASTLY_CAP iam01000700  // Quality: 0 Rarity: 4
+#define ARMOR_BEASTLY_JERKIN iam01000710  // Quality: 0 Rarity: 4
+#define ARMOR_BEASTLY_LEGGINGS iam01000720  // Quality: 0 Rarity: 4
+#define ARMOR_BEASTLY_GAUNTLETS iam01000730  // Quality: 0 Rarity: 4
+#define ARMOR_BEASTLY_BOOTS iam01000740  // Quality: 0 Rarity: 4
+#define ARMOR_TIDAL_HELM iam01001200  // Quality: 0 Rarity: 4
+#define ARMOR_TIDAL_CUIRASS iam01001210  // Quality: 0 Rarity: 4
+#define ARMOR_TIDAL_LEGGINGS iam01001220  // Quality: 0 Rarity: 4
+#define ARMOR_TIDAL_GAUNTLETS iam01001230  // Quality: 0 Rarity: 4
+#define ARMOR_TIDAL_BOOTS iam01001240  // Quality: 0 Rarity: 4
+#define ARMOR_ARCANE_HELM iam01001100  // Quality: 0 Rarity: 5
+#define ARMOR_ARCANE_CUIRASS iam01001110  // Quality: 0 Rarity: 5
+#define ARMOR_ARCANE_GREAVES iam01001120  // Quality: 0 Rarity: 5
+#define ARMOR_ARCANE_GAUNTLETS iam01001130  // Quality: 0 Rarity: 5
+#define ARMOR_ARCANE_BOOTS iam01001140  // Quality: 0 Rarity: 5
+#define ARMOR_PEGASUS_HELM iam01002730  // Quality: 0 Rarity: 5
+#define ARMOR_PEGASUS_PLATE_ARMOR iam01002740  // Quality: 0 Rarity: 5
+#define ARMOR_PEGASUS_GAUNTLETS iam01002750  // Quality: 0 Rarity: 5
+#define ARMOR_PEGASUS_BOOTS iam01002760  // Quality: 0 Rarity: 5
+#define ARMOR_PEGASUS_CAPE iam01002770  // Quality: 0 Rarity: 5
+#define ARMOR_DIVINE_HELM iam01006220  // Quality: 0 Rarity: 5
+#define ARMOR_DIVINE_PLATE_ARMOR iam01006230  // Quality: 0 Rarity: 5
+#define ARMOR_DIVINE_GAUNTLETS iam01006240  // Quality: 0 Rarity: 5
+#define ARMOR_DIVINE_BOOTS iam01006250  // Quality: 0 Rarity: 5
+#define ARMOR_DIVINE_WINGS iam01006260  // Quality: 0 Rarity: 5
+#define ARMOR_HUNTERS_HOOD iam01000130  // Quality: 0 Rarity: 2
+#define ARMOR_HUNTERS_BOLERO iam01000140  // Quality: 0 Rarity: 2
+#define ARMOR_HUNTERS_PANTS iam01000150  // Quality: 0 Rarity: 2
+#define ARMOR_HUNTERS_SHOES iam01000160  // Quality: 0 Rarity: 2
+#define ARMOR_COASTAL_HEADWEAR iam01001440  // Quality: 0 Rarity: 2
+#define ARMOR_COASTAL_BRIGANDINE iam01001450  // Quality: 0 Rarity: 2
+#define ARMOR_COASTAL_BOTTOMS iam01001460  // Quality: 0 Rarity: 2
+#define ARMOR_COASTAL_GLOVES iam01001470  // Quality: 0 Rarity: 2
+#define ARMOR_COASTAL_BOOTS iam01001480  // Quality: 0 Rarity: 2
+#define ARMOR_DANCERS_VEIL iam01002400  // Quality: 0 Rarity: 3
+#define ARMOR_DANCERS_GARB iam01002410  // Quality: 0 Rarity: 3
+#define ARMOR_DANCERS_BANGLES iam01002420  // Quality: 0 Rarity: 3
+#define ARMOR_DANCERS_SHOES iam01002430  // Quality: 0 Rarity: 3
+#define ARMOR_FLAME_HOOD iam01001300  // Quality: 0 Rarity: 4
+#define ARMOR_FLAME_ROBE iam01001310  // Quality: 0 Rarity: 4
+#define ARMOR_AQUA_HOOD iam01001320  // Quality: 0 Rarity: 4
+#define ARMOR_AQUA_ROBE iam01001330  // Quality: 0 Rarity: 4
+#define ARMOR_BLUE_HIGHLAND_BERET iam01006120  // Quality: 0 Rarity: 4
+#define ARMOR_BLUE_HIGHLAND_TOP iam01006130  // Quality: 0 Rarity: 4
+#define ARMOR_BLUE_HIGHLAND_KILT iam01006140  // Quality: 0 Rarity: 4
+#define ARMOR_SPELUNKER_HEADWEAR iam01001590  // Quality: 0 Rarity: 4
+#define ARMOR_SPELUNKER_BRIGANDINE iam01001600  // Quality: 0 Rarity: 4
+#define ARMOR_SPELUNKER_BOTTOMS iam01001610  // Quality: 0 Rarity: 4
+#define ARMOR_SPELUNKER_GLOVES iam01001620  // Quality: 0 Rarity: 4
+#define ARMOR_SPELUNKER_BOOTS iam01001630  // Quality: 0 Rarity: 4
+#define ARMOR_EARTH_HOOD iam01001340  // Quality: 0 Rarity: 4
+#define ARMOR_EARTH_ROBE iam01001350  // Quality: 0 Rarity: 4
+#define ARMOR_GALE_HOOD iam01001360  // Quality: 0 Rarity: 4
+#define ARMOR_GALE_ROBE iam01001370  // Quality: 0 Rarity: 4
+#define ARMOR_ROYAL_MAKERS_CAP iam01007910  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_MAKERS_TOP iam01007920  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_MAKERS_APRON iam01007930  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_MAKERS_GLOVES iam01007940  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_MAKERS_SHOES iam01007950  // Quality: 0 Rarity: 5
+#define ARMOR_ANGELIC_HAT iam01002700  // Quality: 0 Rarity: 5
+#define ARMOR_ANGELIC_DRESS iam01002710  // Quality: 0 Rarity: 5
+#define ARMOR_ANGELIC_SANDALS iam01002720  // Quality: 0 Rarity: 5
+#define ARMOR_RADIANT_HOOD iam01001400  // Quality: 0 Rarity: 5
+#define ARMOR_RADIANT_ROBE iam01001410  // Quality: 0 Rarity: 5
+#define ARMOR_UMBRAL_HOOD iam01001420  // Quality: 0 Rarity: 5
+#define ARMOR_UMBRAL_ROBE iam01001430  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_HEADWRAP iam01007760  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_TUNIC iam01007770  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_BANGLES iam01007780  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_SANDALS iam01007790  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_CAPE iam01007800  // Quality: 0 Rarity: 5
+#define ARMOR_GREEN_RIMMED_GLASSES iam01003710  // Quality: 0 Rarity: 1
+#define ARMOR_TOPAZ_RING iam01003950  // Quality: 0 Rarity: 2
+#define ARMOR_CHARM iam01003990  // Quality: 0 Rarity: 1
+#define ARMOR_CORAL_NECKLACE iam01004050  // Quality: 0 Rarity: 1
+#define ARMOR_SUNGLASSES iam01003720  // Quality: 0 Rarity: 2
+#define ARMOR_AQUAMARINE_RING iam01003930  // Quality: 0 Rarity: 2
+#define ARMOR_REINFORCED_CHARM iam01004010  // Quality: 0 Rarity: 2
+#define ARMOR_CLAW_NECKLACE iam01004020  // Quality: 0 Rarity: 2
+#define ARMOR_SILVER_ROUND_SPECS iam01003670  // Quality: 0 Rarity: 3
+#define ARMOR_BLACK_RIMMED_GLASSES iam01003730  // Quality: 0 Rarity: 4
+#define ARMOR_AMETHYST_RING iam01003940  // Quality: 0 Rarity: 3
+#define ARMOR_RUGGED_NECKLACE iam01004030  // Quality: 0 Rarity: 3
+#define ARMOR_MARINE_NECKLACE iam01004060  // Quality: 0 Rarity: 3
+#define ARMOR_PROTECTIVE_GOGGLES iam01003750  // Quality: 0 Rarity: 4
+#define ARMOR_GOLD_ROUND_SPECS iam01003660  // Quality: 0 Rarity: 4
+#define ARMOR_COG_BROOCH iam01009060  // Quality: 0 Rarity: 4
+#define ARMOR_RUBY_RING iam01003960  // Quality: 0 Rarity: 4
+#define ARMOR_SAPPHIRE_RING iam01003970  // Quality: 0 Rarity: 4
+#define ARMOR_EMERALD_RING iam01003980  // Quality: 0 Rarity: 4
+#define ARMOR_BEASTLY_NECKLACE iam01004040  // Quality: 0 Rarity: 4
+#define ARMOR_SWIRLY_SPECS iam01003680  // Quality: 0 Rarity: 5
+#define ARMOR_BLOSSOM_CORSAGE iam01009070  // Quality: 0 Rarity: 5
+#define ARMOR_BLACK_ONYX_RING iam01003900  // Quality: 0 Rarity: 5
+#define ARMOR_SEA_NECKLACE iam01004070  // Quality: 0 Rarity: 4
+#define ARMOR_UMBRAL_CHOKER iam01009090  // Quality: 0 Rarity: 5
+#define ARMOR_BRONZE_BREASTPLATE iam01000040  // Quality: 0 Rarity: 2
+#define ARMOR_BRONZE_LEGGINGS iam01000050  // Quality: 0 Rarity: 2
+#define ARMOR_BRONZE_GAUNTLETS iam01000060  // Quality: 0 Rarity: 2
+#define ARMOR_BRONZE_BOOTS iam01000070  // Quality: 0 Rarity: 2
+#define ARMOR_BRONZE_HELM iam01000080  // Quality: 0 Rarity: 2
+#define ARMOR_WANDERERS_JERKIN iam01000090  // Quality: 0 Rarity: 2
+#define ARMOR_WANDERERS_GREAVES iam01000100  // Quality: 0 Rarity: 2
+#define ARMOR_WANDERERS_GAUNTLETS iam01000110  // Quality: 0 Rarity: 2
+#define ARMOR_WANDERERS_BOOTS iam01000120  // Quality: 0 Rarity: 2
+#define ARMOR_HIGHLAND_BERET iam01002360  // Quality: 0 Rarity: 2
+#define ARMOR_HIGHLAND_TOP iam01002370  // Quality: 0 Rarity: 2
+#define ARMOR_HIGHLAND_KILT iam01002380  // Quality: 0 Rarity: 2
+#define ARMOR_HIGHLAND_LOAFERS iam01002390  // Quality: 0 Rarity: 2
+#define ARMOR_MAGIC_HAT iam01006380  // Quality: 0 Rarity: 2
+#define ARMOR_MAGIC_DRESS iam01006390  // Quality: 0 Rarity: 2
+#define ARMOR_MAGIC_BOOTS iam01006420  // Quality: 0 Rarity: 2
+#define ARMOR_MERCHANTS_HEADWRAP iam01008010  // Quality: 0 Rarity: 1
+#define ARMOR_MERCHANTS_VEST iam01008020  // Quality: 0 Rarity: 1
+#define ARMOR_MERCHANTS_APRON iam01008030  // Quality: 0 Rarity: 1
+#define ARMOR_MERCHANTS_BANGLES iam01008040  // Quality: 0 Rarity: 1
+#define ARMOR_MERCHANTS_BACKPACK iam01008050  // Quality: 0 Rarity: 1
+#define ARMOR_RED_RIMMED_GLASSES iam01003770  // Quality: 0 Rarity: 1
+#define ARMOR_BLUE_RIMMED_GLASSES iam01003700  // Quality: 0 Rarity: 1
+#define ARMOR_GREEN_HIGHLAND_BERET iam01006080  // Quality: 0 Rarity: 3
+#define ARMOR_GREEN_HIGHLAND_TOP iam01006090  // Quality: 0 Rarity: 3
+#define ARMOR_GREEN_HIGHLAND_KILT iam01006100  // Quality: 0 Rarity: 3
+#define ARMOR_TRADITIONAL_VEST iam01008140  // Quality: 0 Rarity: 2
+#define ARMOR_TRADITIONAL_SARONG iam01008150  // Quality: 0 Rarity: 2
+#define ARMOR_MINI_SPECS iam01003690  // Quality: 0 Rarity: 2
+#define ARMOR_DESERT_HEADWEAR iam01001540  // Quality: 0 Rarity: 3
+#define ARMOR_DESERT_BRIGANDINE iam01001550  // Quality: 0 Rarity: 3
+#define ARMOR_DESERT_BOTTOMS iam01001560  // Quality: 0 Rarity: 3
+#define ARMOR_DESERT_GLOVES iam01001570  // Quality: 0 Rarity: 3
+#define ARMOR_DESERT_BOOTS iam01001580  // Quality: 0 Rarity: 3
+#define ARMOR_BLUE_MAGIC_HAT iam01006480  // Quality: 0 Rarity: 3
+#define ARMOR_BLUE_MAGIC_DRESS iam01006490  // Quality: 0 Rarity: 3
+#define ARMOR_BLUE_MAGIC_BOOTS iam01006520  // Quality: 0 Rarity: 3
+#define ARMOR_TUNOCO_CAP iam01004320  // Quality: 0 Rarity: 2
+#define ARMOR_TUNOCO_JERKIN iam01004330  // Quality: 0 Rarity: 2
+#define ARMOR_TUNOCO_PANTS iam01004340  // Quality: 0 Rarity: 2
+#define ARMOR_TUNOCO_GLOVES iam01004350  // Quality: 0 Rarity: 2
+#define ARMOR_TUNOCO_BOOTS iam01004360  // Quality: 0 Rarity: 2
+#define ARMOR_FOLK_DANCERS_FLOWER iam01008060  // Quality: 0 Rarity: 3
+#define ARMOR_FOLK_DANCERS_VEST iam01008070  // Quality: 0 Rarity: 3
+#define ARMOR_FOLK_DANCERS_SARONG iam01008080  // Quality: 0 Rarity: 3
+#define ARMOR_FOLK_DANCERS_BANGLE iam01008090  // Quality: 0 Rarity: 3
+#define ARMOR_BLACK_ROUND_SPECS iam01003650  // Quality: 0 Rarity: 3
+#define ARMOR_PINK_MAGIC_HAT iam01006530  // Quality: 0 Rarity: 4
+#define ARMOR_PINK_MAGIC_DRESS iam01006540  // Quality: 0 Rarity: 4
+#define ARMOR_PINK_MAGIC_BOOTS iam01006570  // Quality: 0 Rarity: 4
+#define ARMOR_BLUE_TUNOCO_CAP iam01005900  // Quality: 0 Rarity: 3
+#define ARMOR_BLUE_TUNOCO_JERKIN iam01005910  // Quality: 0 Rarity: 3
+#define ARMOR_BLUE_TUNOCO_PANTS iam01005920  // Quality: 0 Rarity: 3
+#define ARMOR_BLUE_TUNOCO_GLOVES iam01005930  // Quality: 0 Rarity: 3
+#define ARMOR_BLUE_TUNOCO_BOOTS iam01005940  // Quality: 0 Rarity: 3
+#define ARMOR_SHAMANS_HEADDRESS iam01008100  // Quality: 0 Rarity: 4
+#define ARMOR_SHAMANS_TOP iam01008110  // Quality: 0 Rarity: 4
+#define ARMOR_SHAMANS_SARONG iam01008120  // Quality: 0 Rarity: 4
+#define ARMOR_SHAMANS_BANGLES iam01008130  // Quality: 0 Rarity: 4
+#define ARMOR_DIAMOND_RING iam01003910  // Quality: 0 Rarity: 4
+#define ARMOR_COZY_HEADWEAR iam01001490  // Quality: 0 Rarity: 5
+#define ARMOR_COZY_BRIGANDINE iam01001500  // Quality: 0 Rarity: 5
+#define ARMOR_COZY_BOTTOMS iam01001510  // Quality: 0 Rarity: 5
+#define ARMOR_COZY_GLOVES iam01001520  // Quality: 0 Rarity: 5
+#define ARMOR_COZY_BOOTS iam01001530  // Quality: 0 Rarity: 5
+#define ARMOR_WHITE_TUNOCO_CAP iam01005950  // Quality: 0 Rarity: 4
+#define ARMOR_WHITE_TUNOCO_JERKIN iam01005960  // Quality: 0 Rarity: 4
+#define ARMOR_WHITE_TUNOCO_PANTS iam01005970  // Quality: 0 Rarity: 4
+#define ARMOR_WHITE_TUNOCO_GLOVES iam01005980  // Quality: 0 Rarity: 4
+#define ARMOR_WHITE_TUNOCO_BOOTS iam01005990  // Quality: 0 Rarity: 4
+#define ARMOR_SALAMANDER_HELM iam01000850  // Quality: 0 Rarity: 5
+#define ARMOR_SALAMANDER_MAIL iam01000860  // Quality: 0 Rarity: 5
+#define ARMOR_SALAMANDER_LEGGINGS iam01000870  // Quality: 0 Rarity: 5
+#define ARMOR_SALAMANDER_GLOVES iam01000880  // Quality: 0 Rarity: 5
+#define ARMOR_SALAMANDER_BOOTS iam01000890  // Quality: 0 Rarity: 5
+#define ARMOR_INFERNO_HELM iam01001150  // Quality: 0 Rarity: 5
+#define ARMOR_INFERNO_CUIRASS iam01001160  // Quality: 0 Rarity: 5
+#define ARMOR_INFERNO_LEGGINGS iam01001170  // Quality: 0 Rarity: 5
+#define ARMOR_INFERNO_GAUNTLETS iam01001180  // Quality: 0 Rarity: 5
+#define ARMOR_INFERNO_BOOTS iam01001190  // Quality: 0 Rarity: 5
+#define ARMOR_HOLY_HELM iam01001250  // Quality: 0 Rarity: 5
+#define ARMOR_HOLY_CUIRASS iam01001260  // Quality: 0 Rarity: 5
+#define ARMOR_HOLY_LEGGINGS iam01001270  // Quality: 0 Rarity: 5
+#define ARMOR_HOLY_GAUNTLETS iam01001280  // Quality: 0 Rarity: 5
+#define ARMOR_HOLY_BOOTS iam01001290  // Quality: 0 Rarity: 5
+#define ARMOR_MAGES_HOOD iam01001380  // Quality: 0 Rarity: 5
+#define ARMOR_MAGES_ROBE iam01001390  // Quality: 0 Rarity: 5
+#define ARMOR_DURABLE_CHARM iam01004000  // Quality: 0 Rarity: 4
+#define ARMOR_PALADINS_HELM iam01004370  // Quality: 0 Rarity: 1
+#define ARMOR_PALADINS_CUIRASS iam01004380  // Quality: 0 Rarity: 1
+#define ARMOR_PALADINS_SANDALS iam01004390  // Quality: 0 Rarity: 1
+#define ARMOR_LEGIONARY_HELMET iam01004960  // Quality: 0 Rarity: 3
+#define ARMOR_LEGIONARY_ARMOR iam01004970  // Quality: 0 Rarity: 3
+#define ARMOR_LEGIONARY_SANDALS iam01004980  // Quality: 0 Rarity: 3
+#define ARMOR_LEGIONARY_CAPE iam01004985  // Quality: 0 Rarity: 3
+#define ARMOR_TEMPLARS_HELM iam01002780  // Quality: 0 Rarity: 5
+#define ARMOR_TEMPLARS_CUIRASS iam01002790  // Quality: 0 Rarity: 5
+#define ARMOR_TEMPLARS_PLATE_LEGS iam01002800  // Quality: 0 Rarity: 5
+#define ARMOR_TEMPLARS_GAUNTLETS iam01002810  // Quality: 0 Rarity: 5
+#define ARMOR_TEMPLARS_BOOTS iam01002820  // Quality: 0 Rarity: 5
+#define ARMOR_TEMPLARS_CAPE iam01002830  // Quality: 0 Rarity: 5
+#define ARMOR_MERCENARYS_HEADWRAP iam01004400  // Quality: 0 Rarity: 1
+#define ARMOR_MERCENARYS_TOP iam01004410  // Quality: 0 Rarity: 1
+#define ARMOR_MERCENARYS_TRUNKS iam01004420  // Quality: 0 Rarity: 1
+#define ARMOR_MERCENARYS_GLOVES iam01004430  // Quality: 0 Rarity: 1
+#define ARMOR_MERCENARYS_SANDALS iam01004440  // Quality: 0 Rarity: 1
+#define ARMOR_MERCENARYS_SCARF iam01004441  // Quality: 0 Rarity: 1
+#define ARMOR_BEAST_CAP iam01004990  // Quality: 0 Rarity: 3
+#define ARMOR_BEAST_CLOTHES iam01005000  // Quality: 0 Rarity: 3
+#define ARMOR_BEAST_GLOVES iam01005020  // Quality: 0 Rarity: 3
+#define ARMOR_BEAST_SANDALS iam01005030  // Quality: 0 Rarity: 3
+#define ARMOR_BATTLEBORN_HELM iam01002900  // Quality: 0 Rarity: 5
+#define ARMOR_BATTLEBORN_CUIRASS iam01002910  // Quality: 0 Rarity: 5
+#define ARMOR_BATTLEBORN_LEGGINGS iam01002920  // Quality: 0 Rarity: 5
+#define ARMOR_BATTLEBORN_GLOVES iam01002930  // Quality: 0 Rarity: 5
+#define ARMOR_BATTLEBORN_BOOTS iam01002940  // Quality: 0 Rarity: 5
+#define ARMOR_BATTLEBORN_CAPE iam01002950  // Quality: 0 Rarity: 5
+#define ARMOR_HUNTERS_HEADDRESS iam01004450  // Quality: 0 Rarity: 1
+#define ARMOR_HUNTERS_VEST iam01004460  // Quality: 0 Rarity: 1
+#define ARMOR_HUNTERS_TRUNKS iam01004470  // Quality: 0 Rarity: 1
+#define ARMOR_HUNTERS_GLOVE iam01004480  // Quality: 0 Rarity: 1
+#define ARMOR_HUNTERS_SANDALS iam01004490  // Quality: 0 Rarity: 1
+#define ARMOR_MARKSMANS_HEADDRESS iam01005040  // Quality: 0 Rarity: 3
+#define ARMOR_MARKSMANS_VEST iam01005050  // Quality: 0 Rarity: 3
+#define ARMOR_MARKSMANS_PANTS iam01005060  // Quality: 0 Rarity: 3
+#define ARMOR_MARKSMANS_GLOVE iam01005070  // Quality: 0 Rarity: 3
+#define ARMOR_MARKSMANS_SANDALS iam01005080  // Quality: 0 Rarity: 3
+#define ARMOR_FALCONERS_HAT iam01002840  // Quality: 0 Rarity: 5
+#define ARMOR_FALCONERS_TUNIC iam01002850  // Quality: 0 Rarity: 5
+#define ARMOR_FALCONERS_PANTS iam01002860  // Quality: 0 Rarity: 5
+#define ARMOR_FALCONERS_GLOVES iam01002870  // Quality: 0 Rarity: 5
+#define ARMOR_FALCONERS_BOOTS iam01002880  // Quality: 0 Rarity: 5
+#define ARMOR_FALCONERS_CLOAK iam01002890  // Quality: 0 Rarity: 5
+#define ARMOR_MAGICIANS_HEADWRAP iam01004500  // Quality: 0 Rarity: 1
+#define ARMOR_MAGICIANS_ROBE iam01004510  // Quality: 0 Rarity: 1
+#define ARMOR_MAGICIANS_SHOES iam01004540  // Quality: 0 Rarity: 1
+#define ARMOR_CONJURERS_HOOD iam01005090  // Quality: 0 Rarity: 3
+#define ARMOR_CONJURERS_ROBE iam01005100  // Quality: 0 Rarity: 3
+#define ARMOR_CONJURERS_GLOVES iam01005105  // Quality: 0 Rarity: 3
+#define ARMOR_CONJURERS_SHOES iam01005110  // Quality: 0 Rarity: 3
+#define ARMOR_CONJURERS_CAPE iam01005115  // Quality: 0 Rarity: 3
+#define ARMOR_SORCERERS_HAT iam01002960  // Quality: 0 Rarity: 5
+#define ARMOR_SORCERERS_ROBE iam01002970  // Quality: 0 Rarity: 5
+#define ARMOR_SORCERERS_SHOES iam01002980  // Quality: 0 Rarity: 5
+#define ARMOR_MINERS_HELMET iam01004550  // Quality: 0 Rarity: 1
+#define ARMOR_MINERS_CLOTHES iam01004560  // Quality: 0 Rarity: 1
+#define ARMOR_MINERS_SHOES iam01004590  // Quality: 0 Rarity: 1
+#define ARMOR_EXCAVATORS_HELMET iam01005120  // Quality: 0 Rarity: 3
+#define ARMOR_EXCAVATORS_CLOTHES iam01005130  // Quality: 0 Rarity: 3
+#define ARMOR_EXCAVATORS_GLOVES iam01005140  // Quality: 0 Rarity: 3
+#define ARMOR_EXCAVATORS_BOOTS iam01005150  // Quality: 0 Rarity: 3
+#define ARMOR_EXCAVATORS_SCARF iam01005160  // Quality: 0 Rarity: 3
+#define ARMOR_GRAND_MINERS_HELMET iam01003080  // Quality: 0 Rarity: 5
+#define ARMOR_GRAND_MINERS_OUTFIT iam01003090  // Quality: 0 Rarity: 5
+#define ARMOR_GRAND_MINERS_GLOVES iam01003100  // Quality: 0 Rarity: 5
+#define ARMOR_GRAND_MINERS_BOOTS iam01003110  // Quality: 0 Rarity: 5
+#define ARMOR_WOODCUTTERS_CAP iam01004600  // Quality: 0 Rarity: 1
+#define ARMOR_WOODCUTTERS_CLOTHES iam01004610  // Quality: 0 Rarity: 1
+#define ARMOR_WOODCUTTERS_GLOVES iam01004630  // Quality: 0 Rarity: 1
+#define ARMOR_WOODCUTTERS_SHOES iam01004640  // Quality: 0 Rarity: 1
+#define ARMOR_LUSH_HAT iam01005170  // Quality: 0 Rarity: 3
+#define ARMOR_LUSH_CLOTHES iam01005180  // Quality: 0 Rarity: 3
+#define ARMOR_LUSH_GLOVES iam01005190  // Quality: 0 Rarity: 3
+#define ARMOR_LUSH_SHOES iam01005200  // Quality: 0 Rarity: 3
+#define ARMOR_FORESTERS_CAP iam01003120  // Quality: 0 Rarity: 5
+#define ARMOR_FORESTERS_COAT iam01003130  // Quality: 0 Rarity: 5
+#define ARMOR_FORESTERS_GLOVES iam01003140  // Quality: 0 Rarity: 5
+#define ARMOR_FORESTERS_BOOTS iam01003150  // Quality: 0 Rarity: 5
+#define ARMOR_ANGLERS_HAT iam01004650  // Quality: 0 Rarity: 1
+#define ARMOR_ANGLERS_VEST iam01004660  // Quality: 0 Rarity: 1
+#define ARMOR_ANGLERS_TRUNKS iam01004670  // Quality: 0 Rarity: 1
+#define ARMOR_ANGLERS_SANDALS iam01004690  // Quality: 0 Rarity: 1
+#define ARMOR_BIG_CATCH_CAP iam01005210  // Quality: 0 Rarity: 3
+#define ARMOR_BIG_CATCH_VEST iam01005220  // Quality: 0 Rarity: 3
+#define ARMOR_BIG_CATCH_PANTS iam01005230  // Quality: 0 Rarity: 3
+#define ARMOR_BIG_CATCH_GLOVES iam01005240  // Quality: 0 Rarity: 3
+#define ARMOR_BIG_CATCH_SANDALS iam01005245  // Quality: 0 Rarity: 3
+#define ARMOR_MARINERS_CAP iam01003020  // Quality: 0 Rarity: 5
+#define ARMOR_MARINERS_VEST iam01003030  // Quality: 0 Rarity: 5
+#define ARMOR_MARINERS_PANTS iam01003040  // Quality: 0 Rarity: 5
+#define ARMOR_MARINERS_GLOVES iam01003050  // Quality: 0 Rarity: 5
+#define ARMOR_MARINERS_SANDALS iam01003060  // Quality: 0 Rarity: 5
+#define ARMOR_MARINERS_SCARF iam01003070  // Quality: 0 Rarity: 5
+#define ARMOR_FARMERS_HAT iam01000480  // Quality: 0 Rarity: 1
+#define ARMOR_FARMERS_CLOTHES iam01000490  // Quality: 0 Rarity: 1
+#define ARMOR_FARMERS_BOOTS iam01000510  // Quality: 0 Rarity: 1
+#define ARMOR_PLANTERS_HAT iam01005480  // Quality: 0 Rarity: 3
+#define ARMOR_PLANTERS_CLOTHES iam01005490  // Quality: 0 Rarity: 3
+#define ARMOR_PLANTERS_GLOVES iam01005510  // Quality: 0 Rarity: 3
+#define ARMOR_PLANTERS_SHOES iam01005520  // Quality: 0 Rarity: 3
+#define ARMOR_PUMPKIN_HAT iam01004140  // Quality: 0 Rarity: 5
+#define ARMOR_PUMPKIN_OVERALLS iam01004150  // Quality: 0 Rarity: 5
+#define ARMOR_PUMPKIN_GLOVES iam01004155  // Quality: 0 Rarity: 5
+#define ARMOR_PUMPKIN_SHOES iam01004160  // Quality: 0 Rarity: 5
+#define ARMOR_COOKS_HAT iam01004700  // Quality: 0 Rarity: 1
+#define ARMOR_COOKS_APRON iam01004710  // Quality: 0 Rarity: 1
+#define ARMOR_COOKS_MITTENS iam01004730  // Quality: 0 Rarity: 1
+#define ARMOR_COOKS_SHOES iam01004740  // Quality: 0 Rarity: 1
+#define ARMOR_SOUS_CHEFS_HAT iam01005250  // Quality: 0 Rarity: 3
+#define ARMOR_SOUS_CHEFS_OUTFIT iam01005260  // Quality: 0 Rarity: 3
+#define ARMOR_SOUS_CHEFS_MITTENS iam01005270  // Quality: 0 Rarity: 3
+#define ARMOR_SOUS_CHEFS_SHOES iam01005280  // Quality: 0 Rarity: 3
+#define ARMOR_MASTER_CHEFS_HAT iam01002990  // Quality: 0 Rarity: 5
+#define ARMOR_MASTER_CHEFS_OUTFIT iam01003000  // Quality: 0 Rarity: 5
+#define ARMOR_MASTER_CHEFS_SHOES iam01003010  // Quality: 0 Rarity: 5
+#define ARMOR_BLACKSMITHS_BANDANA iam01004750  // Quality: 0 Rarity: 1
+#define ARMOR_BLACKSMITHS_APRON iam01004760  // Quality: 0 Rarity: 1
+#define ARMOR_BLACKSMITHS_GLOVES iam01004780  // Quality: 0 Rarity: 1
+#define ARMOR_BLACKSMITHS_SHOES iam01004790  // Quality: 0 Rarity: 1
+#define ARMOR_ANCIENT_MECH_HELM iam01005290  // Quality: 0 Rarity: 3
+#define ARMOR_ANCIENT_MECH_APRON iam01005300  // Quality: 0 Rarity: 3
+#define ARMOR_ANCIENT_MECH_GLOVES iam01005310  // Quality: 0 Rarity: 3
+#define ARMOR_ANCIENT_MECH_BOOTS iam01005320  // Quality: 0 Rarity: 3
+#define ARMOR_FORGEMASTERS_HELM iam01003280  // Quality: 0 Rarity: 5
+#define ARMOR_FORGEMASTERS_OUTFIT iam01003290  // Quality: 0 Rarity: 5
+#define ARMOR_FORGEMASTERS_GLOVES iam01003300  // Quality: 0 Rarity: 5
+#define ARMOR_FORGEMASTERS_BOOTS iam01003310  // Quality: 0 Rarity: 5
+#define ARMOR_CARPENTERS_BANDANA iam01004800  // Quality: 0 Rarity: 1
+#define ARMOR_CARPENTERS_TOP iam01004810  // Quality: 0 Rarity: 1
+#define ARMOR_CARPENTERS_PANTS iam01004820  // Quality: 0 Rarity: 1
+#define ARMOR_CARPENTERS_GLOVES iam01004830  // Quality: 0 Rarity: 1
+#define ARMOR_CARPENTERS_SANDALS iam01004840  // Quality: 0 Rarity: 1
+#define ARMOR_SAWYERS_HELMET iam01005330  // Quality: 0 Rarity: 3
+#define ARMOR_SAWYERS_OUTFIT iam01005340  // Quality: 0 Rarity: 3
+#define ARMOR_SAWYERS_GLOVES iam01005360  // Quality: 0 Rarity: 3
+#define ARMOR_SAWYERS_SANDALS iam01005370  // Quality: 0 Rarity: 3
+#define ARMOR_FOREMANS_BANDANA iam01003240  // Quality: 0 Rarity: 5
+#define ARMOR_FOREMANS_OUTFIT iam01003250  // Quality: 0 Rarity: 5
+#define ARMOR_FOREMANS_GLOVES iam01003260  // Quality: 0 Rarity: 5
+#define ARMOR_FOREMANS_BOOTS iam01003270  // Quality: 0 Rarity: 5
+#define ARMOR_TAILORS_CAP iam01004850  // Quality: 0 Rarity: 1
+#define ARMOR_TAILORS_TOP iam01004860  // Quality: 0 Rarity: 1
+#define ARMOR_TAILORS_SMOCK iam01004870  // Quality: 0 Rarity: 1
+#define ARMOR_TAILORS_SANDALS iam01004890  // Quality: 0 Rarity: 1
+#define ARMOR_FLUFFY_HAT iam01005380  // Quality: 0 Rarity: 3
+#define ARMOR_FLUFFY_CLOTHES iam01005390  // Quality: 0 Rarity: 3
+#define ARMOR_FLUFFY_SHOES iam01005420  // Quality: 0 Rarity: 3
+#define ARMOR_COUTURIERS_CAP iam01003200  // Quality: 0 Rarity: 5
+#define ARMOR_COUTURIERS_CLOTHES iam01003210  // Quality: 0 Rarity: 5
+#define ARMOR_COUTURIERS_PINCUSHION iam01003220  // Quality: 0 Rarity: 5
+#define ARMOR_COUTURIERS_LOAFERS iam01003230  // Quality: 0 Rarity: 5
+#define ARMOR_ALCHEMISTS_MONOCLE iam01004900  // Quality: 0 Rarity: 1
+#define ARMOR_ALCHEMISTS_LAB_COAT iam01004910  // Quality: 0 Rarity: 1
+#define ARMOR_ALCHEMISTS_SHOES iam01004940  // Quality: 0 Rarity: 1
+#define ARMOR_RESEARCHERS_HAT iam01005430  // Quality: 0 Rarity: 3
+#define ARMOR_RESEARCHERS_CLOTHES iam01005440  // Quality: 0 Rarity: 3
+#define ARMOR_RESEARCHERS_GLOVES iam01005460  // Quality: 0 Rarity: 3
+#define ARMOR_RESEARCHERS_SHOES iam01005470  // Quality: 0 Rarity: 3
+#define ARMOR_ARTIFICERS_HAT iam01003160  // Quality: 0 Rarity: 5
+#define ARMOR_ARTIFICERS_COAT iam01003170  // Quality: 0 Rarity: 5
+#define ARMOR_ARTIFICERS_SHOES iam01003180  // Quality: 0 Rarity: 5
+#define ARMOR_ARTIFICERS_GOGGLES iam01003190  // Quality: 0 Rarity: 5
+#define ARMOR_ARTISTS_BERET iam01000560  // Quality: 0 Rarity: 1
+#define ARMOR_ARTISTS_TOP iam01000570  // Quality: 0 Rarity: 1
+#define ARMOR_ARTISTS_APRON iam01000580  // Quality: 0 Rarity: 1
+#define ARMOR_ARTISTS_GLOVE iam01000581  // Quality: 0 Rarity: 1
+#define ARMOR_ARTISTS_SANDALS iam01000590  // Quality: 0 Rarity: 1
+#define ARMOR_PALETTE_BERET iam01005530  // Quality: 0 Rarity: 3
+#define ARMOR_PALETTE_CLOTHES iam01005540  // Quality: 0 Rarity: 3
+#define ARMOR_PALETTE_GLOVE iam01005560  // Quality: 0 Rarity: 3
+#define ARMOR_PALETTE_SANDALS iam01005570  // Quality: 0 Rarity: 3
+#define ARMOR_OLD_MASTERS_BERET iam01004110  // Quality: 0 Rarity: 5
+#define ARMOR_OLD_MASTERS_APRON iam01004120  // Quality: 0 Rarity: 5
+#define ARMOR_OLD_MASTERS_GLOVE iam01004125  // Quality: 0 Rarity: 5
+#define ARMOR_OLD_MASTERS_SHOES iam01004130  // Quality: 0 Rarity: 5
+#define ARMOR_HEROS_HEADBAND iam01007860  // Quality: 0 Rarity: 5
+#define ARMOR_HEROS_VEST iam01007870  // Quality: 0 Rarity: 5
+#define ARMOR_HEROS_TROUSERS iam01007880  // Quality: 0 Rarity: 5
+#define ARMOR_HEROS_BANGLES iam01007885  // Quality: 0 Rarity: 5
+#define ARMOR_HEROS_SANDALS iam01007890  // Quality: 0 Rarity: 5
+#define ARMOR_HEROS_SCARF iam01007900  // Quality: 0 Rarity: 5
+#define ARMOR_FORAGER_KING_HELM iam01007640  // Quality: 0 Rarity: 5
+#define ARMOR_FORAGER_KING_VEST iam01007650  // Quality: 0 Rarity: 5
+#define ARMOR_FORAGER_KING_BANGLES iam01007665  // Quality: 0 Rarity: 5
+#define ARMOR_FORAGER_KING_SANDALS iam01007660  // Quality: 0 Rarity: 5
+#define ARMOR_FORAGER_KING_CAPE iam01007670  // Quality: 0 Rarity: 5
+#define ARMOR_ARTISAN_KING_BANDANA iam01007700  // Quality: 0 Rarity: 5
+#define ARMOR_ARTISAN_KING_SMOCK iam01007710  // Quality: 0 Rarity: 5
+#define ARMOR_ARTISAN_KING_GLOVES iam01007720  // Quality: 0 Rarity: 5
+#define ARMOR_ARTISAN_KING_SHOES iam01007730  // Quality: 0 Rarity: 5
+#define ARMOR_BLACK_MAGIC_HAT iam01006430  // Quality: 0 Rarity: 4
+#define ARMOR_BLACK_MAGIC_DRESS iam01006440  // Quality: 0 Rarity: 4
+#define ARMOR_BLACK_MAGIC_BOOTS iam01006470  // Quality: 0 Rarity: 4
+#define ARMOR_APOCALYPSE_HELM iam01006270  // Quality: 0 Rarity: 5
+#define ARMOR_APOCALYPSE_ARMOR iam01006280  // Quality: 0 Rarity: 5
+#define ARMOR_APOCALYPSE_GAUNTLETS iam01006290  // Quality: 0 Rarity: 5
+#define ARMOR_APOCALYPSE_BOOTS iam01006300  // Quality: 0 Rarity: 5
+#define ARMOR_APOCALYPSE_WINGS iam01006310  // Quality: 0 Rarity: 5
+#define ARMOR_STEEL_BEASTS_HELM iam01006830  // Quality: 0 Rarity: 5
+#define ARMOR_STEEL_BEASTS_OUTFIT iam01006840  // Quality: 0 Rarity: 5
+#define ARMOR_STEEL_BEASTS_GLOVES iam01006860  // Quality: 0 Rarity: 5
+#define ARMOR_STEEL_BEASTS_BOOTS iam01006870  // Quality: 0 Rarity: 5
+#define ARMOR_STEEL_BEASTS_WINGS iam01006880  // Quality: 0 Rarity: 5
+#define ARMOR_DARK_BEASTS_HAT iam01009100  // Quality: 0 Rarity: 5
+#define ARMOR_DARK_BEASTS_CLOTHES iam01009110  // Quality: 0 Rarity: 5
+#define ARMOR_DARK_BEASTS_GLOVES iam01009130  // Quality: 0 Rarity: 5
+#define ARMOR_DARK_BEASTS_SHOES iam01009140  // Quality: 0 Rarity: 5
+#define ARMOR_DARK_BEASTS_SCARF iam01009150  // Quality: 0 Rarity: 5
+#define ARMOR_PALADINS_PRIDE iam01003780  // Quality: 0 Rarity: 5
+#define ARMOR_MERCENARYS_PRIDE iam01003790  // Quality: 0 Rarity: 5
+#define ARMOR_HUNTERS_PRIDE iam01003800  // Quality: 0 Rarity: 5
+#define ARMOR_MAGICIANS_PRIDE iam01003810  // Quality: 0 Rarity: 5
+#define ARMOR_MINERS_PRIDE iam01003820  // Quality: 0 Rarity: 5
+#define ARMOR_WOODCUTTERS_PRIDE iam01003830  // Quality: 0 Rarity: 5
+#define ARMOR_ANGLERS_PRIDE iam01003840  // Quality: 0 Rarity: 5
+#define ARMOR_FARMERS_PRIDE iam01004090  // Quality: 0 Rarity: 5
+#define ARMOR_COOKS_PRIDE iam01003850  // Quality: 0 Rarity: 5
+#define ARMOR_BLACKSMITHS_PRIDE iam01003860  // Quality: 0 Rarity: 5
+#define ARMOR_CARPENTERS_PRIDE iam01003870  // Quality: 0 Rarity: 5
+#define ARMOR_TAILORS_PRIDE iam01003880  // Quality: 0 Rarity: 5
+#define ARMOR_ALCHEMISTS_PRIDE iam01003890  // Quality: 0 Rarity: 5
+#define ARMOR_ARTISTS_PRIDE iam01004080  // Quality: 0 Rarity: 5
+#define ARMOR_SAILORS_HAT iam01000000  // Quality: 0 Rarity: 2
+#define ARMOR_SAILORS_TOP iam01000010  // Quality: 0 Rarity: 2
+#define ARMOR_SAILORS_PANTS iam01000020  // Quality: 0 Rarity: 2
+#define ARMOR_SAILORS_BOOTS iam01000030  // Quality: 0 Rarity: 2
+#define ARMOR_CHIC_SAILORS_HAT iam01006000  // Quality: 0 Rarity: 4
+#define ARMOR_CHIC_SAILORS_TOP iam01006010  // Quality: 0 Rarity: 4
+#define ARMOR_CHIC_SAILORS_PANTS iam01006020  // Quality: 0 Rarity: 4
+#define ARMOR_CHIC_SAILORS_BOOTS iam01006030  // Quality: 0 Rarity: 4
+#define ARMOR_SWABBIES_HAT iam01006040  // Quality: 0 Rarity: 4
+#define ARMOR_SWABBIES_TOP iam01006050  // Quality: 0 Rarity: 4
+#define ARMOR_SWABBIES_PANTS iam01006060  // Quality: 0 Rarity: 4
+#define ARMOR_SWABBIES_BOOTS iam01006070  // Quality: 0 Rarity: 4
+#define ARMOR_PIRATE_BANDANA iam01006160  // Quality: 0 Rarity: 4
+#define ARMOR_RED_PIRATE_BANDANA iam01006170  // Quality: 0 Rarity: 4
+#define ARMOR_BLUE_PIRATE_BANDANA iam01006180  // Quality: 0 Rarity: 4
+#define ARMOR_WOLF_EARS iam01006190  // Quality: 0 Rarity: 4
+#define ARMOR_BLACK_CAT_EARS iam01006200  // Quality: 0 Rarity: 4
+#define ARMOR_WHITE_CAT_EARS iam01006210  // Quality: 0 Rarity: 4
+#define ARMOR_DRAGON_WHELP_HEAD iam01002440  // Quality: 0 Rarity: 4
+#define ARMOR_DRAGON_SOUL iam01002450  // Quality: 0 Rarity: 4
+#define ARMOR_DRAGON_SCRATCHERS iam01002460  // Quality: 0 Rarity: 4
+#define ARMOR_DRAGON_STOMPERS iam01002470  // Quality: 0 Rarity: 4
+#define ARMOR_CARROTELLA_HEAD iam01002580  // Quality: 0 Rarity: 3
+#define ARMOR_CARROTELLA_COSTUME iam01002590  // Quality: 0 Rarity: 3
+#define ARMOR_CARROTELLA_HANDS iam01002600  // Quality: 0 Rarity: 3
+#define ARMOR_CARROTELLA_CLOGS iam01002610  // Quality: 0 Rarity: 3
+#define ARMOR_CAPE iam01003520  // Quality: 0 Rarity: 1
+#define ARMOR_WHITE_CAPE iam01003540  // Quality: 0 Rarity: 2
+#define ARMOR_SHORT_CAPE iam01003580  // Quality: 0 Rarity: 1
+#define ARMOR_SHORT_GREEN_CAPE iam01003590  // Quality: 0 Rarity: 2
+#define ARMOR_SHORT_YELLOW_CAPE iam01003600  // Quality: 0 Rarity: 3
+#define ARMOR_LONG_CAPE iam01003550  // Quality: 0 Rarity: 1
+#define ARMOR_LONG_PINK_CAPE iam01003560  // Quality: 0 Rarity: 2
+#define ARMOR_LONG_SKY_BLUE_CAPE iam01003570  // Quality: 0 Rarity: 3
+#define ARMOR_SEA_CAPE iam01003530  // Quality: 0 Rarity: 3
+#define ARMOR_ANGELIC_WINGS iam01003610  // Quality: 0 Rarity: 4
+#define ARMOR_ADORABLE_EYEPATCH iam01003760  // Quality: 0 Rarity: 5
+#define ARMOR_DEMON_WINGS iam01003620  // Quality: 0 Rarity: 4
+#define ARMOR_DRAGON_WINGS iam01003630  // Quality: 0 Rarity: 5
+#define ARMOR_TRIP_EARRINGS iam01009030  // Quality: 0 Rarity: 5
+#define ARMOR_HAGRAM_STRAP iam01009020  // Quality: 0 Rarity: 5
+#define ARMOR_SKELEGON_TALISMAN iam01009040  // Quality: 0 Rarity: 5
+#define ARMOR_CORNY_EARRINGS iam01009050  // Quality: 0 Rarity: 3
+#define ARMOR_EDWARDS_FOB_WATCH iam01009010  // Quality: 0 Rarity: 5
+#define ARMOR_FRAJEEL_EMBLEM iam01009080  // Quality: 0 Rarity: 4
+#define ARMOR_CORSAGE iam01003410  // Quality: 0 Rarity: 1
+#define ARMOR_ANGLERS_GOGGLES iam01003740  // Quality: 0 Rarity: 4
+#define ARMOR_DRAGONSLAYERS_ARMOR iam01006590  // Quality: 0 Rarity: 5
+#define ARMOR_DRAGONSLAYERS_GAUNTLETS iam01006600  // Quality: 0 Rarity: 5
+#define ARMOR_DRAGONSLAYERS_BOOTS iam01006610  // Quality: 0 Rarity: 5
+#define ARMOR_DRAGONSLAYERS_CAPE iam01006620  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_POMME_BARRETTE iam01006630  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_POMME_CLOTHES iam01006640  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_POMME_GLOVES iam01006660  // Quality: 0 Rarity: 5
+#define ARMOR_ROYAL_POMME_BOOTS iam01006670  // Quality: 0 Rarity: 5
+#define ARMOR_DARK_SULTANS_OUTFIT iam01006690  // Quality: 0 Rarity: 5
+#define ARMOR_DARK_SULTANS_BANGLES iam01006695  // Quality: 0 Rarity: 5
+#define ARMOR_DARK_SULTANS_BOOTS iam01006700  // Quality: 0 Rarity: 5
+#define ARMOR_SEALING_ROBE iam01006740  // Quality: 0 Rarity: 5
+#define ARMOR_SEALING_BOOTS iam01006750  // Quality: 0 Rarity: 5
+#define ARMOR_MERC_IDOLS_BERET iam01006780  // Quality: 0 Rarity: 5
+#define ARMOR_MERC_IDOLS_DRESS iam01006790  // Quality: 0 Rarity: 5
+#define ARMOR_MERC_IDOLS_GLOVES iam01006810  // Quality: 0 Rarity: 5
+#define ARMOR_MERC_IDOLS_BOOTS iam01006820  // Quality: 0 Rarity: 5
+#define ARMOR_PIRATE_PRINCESS_HAT iam01008160  // Quality: 0 Rarity: 5
+#define ARMOR_PIRATE_PRINCESS_DRESS iam01008170  // Quality: 0 Rarity: 5
+#define ARMOR_PIRATE_PRINCESS_GLOVES iam01008180  // Quality: 0 Rarity: 5
+#define ARMOR_PIRATE_PRINCESS_BOOTS iam01008190  // Quality: 0 Rarity: 5
+#define ARMOR_PRINCESS_HAIR_ORNAMENT iam01008200  // Quality: 0 Rarity: 5
+#define ARMOR_PRINCESS_TOP iam01008210  // Quality: 0 Rarity: 5
+#define ARMOR_PRINCESS_SKIRT iam01008220  // Quality: 0 Rarity: 5
+#define ARMOR_PRINCESS_BANGLES iam01008230  // Quality: 0 Rarity: 5
+#define ARMOR_PRINCESS_SANDALS iam01008240  // Quality: 0 Rarity: 5
+#define ARMOR_REMS_LUCKY_CHARM iam01009000  // Quality: 0 Rarity: 5
+#define ARMOR_FLUTTER_CHARM iam02000000  // Quality: 0 Rarity: 5
+#define ARMOR_ETHEREAL_GIRLS_DRESS iam02000010  // Quality: 0 Rarity: 5
+#define ARMOR_ETHEREAL_GIRLS_SANDALS iam02000020  // Quality: 0 Rarity: 5
+#define ARMOR_ARCHEOLOGISTS_HAT iam02000030  // Quality: 0 Rarity: 5
+#define ARMOR_ARCHEOLOGISTS_COAT iam02000040  // Quality: 0 Rarity: 5
+#define ARMOR_ARCHEOLOGISTS_BOOTS iam02000050  // Quality: 0 Rarity: 5
+#define ARMOR_TRIPS_HELMET iam02000060  // Quality: 0 Rarity: 5
+#define ARMOR_RACCOON_HEAD iam02000070  // Quality: 0 Rarity: 5
+#define ARMOR_RACCOON_OUTFIT iam02000080  // Quality: 0 Rarity: 5
+#define ARMOR_RACCOON_MITTENS iam02000090  // Quality: 0 Rarity: 5
+#define ARMOR_RACCOON_SLIPPERS iam02000100  // Quality: 0 Rarity: 5
+#define ARMOR_ELITE_GOGGLES iam02000110  // Quality: 0 Rarity: 5
+#define ARMOR_EERIE_HOOD iam02000120  // Quality: 0 Rarity: 5
+#define ARMOR_EERIE_ROBE iam02000130  // Quality: 0 Rarity: 5
+#define ARMOR_MODERN_GIRLS_HAT iam03000010  // Quality: 0 Rarity: 4
+#define ARMOR_MODERN_GIRLS_CLOTHES iam03000020  // Quality: 0 Rarity: 4
+#define ARMOR_MODERN_GIRLS_BOOTS iam03000030  // Quality: 0 Rarity: 4
+#define ARMOR_RETRO_BOYS_HAT iam03000040  // Quality: 0 Rarity: 4
+#define ARMOR_RETRO_BOYS_CLOTHES iam03000050  // Quality: 0 Rarity: 4
+#define ARMOR_RETRO_BOYS_SANDALS iam03000060  // Quality: 0 Rarity: 4
+#define ARMOR_SWEET_HAIRBAND iam03000070  // Quality: 0 Rarity: 4
+#define ARMOR_SWEET_RIBBON_DRESS iam03000080  // Quality: 0 Rarity: 4
+#define ARMOR_SWEET_SHOES iam03000090  // Quality: 0 Rarity: 4
+#define RECIPE_CARROT_FARM ico06040010  // Quality: 0 Rarity: 1
+#define RECIPE_RADISH_FARM ico06040020  // Quality: 0 Rarity: 1
+#define RECIPE_PUMPKIN_FARM ico06040030  // Quality: 0 Rarity: 1
+#define RECIPE_POTATO_FARM ico06040040  // Quality: 0 Rarity: 1
+#define RECIPE_ONION_FARM ico06040050  // Quality: 0 Rarity: 1
+#define RECIPE_CABBAGE_FARM ico06040060  // Quality: 0 Rarity: 1
+#define RECIPE_SHADOW_CARROT_FARM ico06040070  // Quality: 0 Rarity: 1
+#define RECIPE_MYSTERIA_MINERAL_WATER test_planned_construct  // Quality: 0 Rarity: 0
+#define RECIPE_BRICK_HOUSE icf01020010  // Quality: 0 Rarity: 1
+#define RECIPE_BRICK_HOUSE icf01020011  // Quality: 0 Rarity: 1
+#define RECIPE_BRICK_HOUSE icf01020012  // Quality: 0 Rarity: 1
+#define RECIPE_BRICK_HOUSE icf01020013  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_BRICK_HOUSE icf01020020  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_BRICK_HOUSE icf01020021  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_BRICK_HOUSE icf01020022  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_BRICK_HOUSE icf01020023  // Quality: 0 Rarity: 1
+#define RECIPE_THATCHED_HOUSE icf01020030  // Quality: 0 Rarity: 1
+#define RECIPE_THATCHED_HOUSE icf01020031  // Quality: 0 Rarity: 1
+#define RECIPE_THATCHED_HOUSE icf01020032  // Quality: 0 Rarity: 1
+#define RECIPE_THATCHED_HOUSE icf01020033  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_THATCHED_HOUSE icf01020040  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_THATCHED_HOUSE icf01020041  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_THATCHED_HOUSE icf01020042  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_THATCHED_HOUSE icf01020043  // Quality: 0 Rarity: 1
+#define RECIPE_PORT_TOWN_HOUSE icf01020050  // Quality: 0 Rarity: 1
+#define RECIPE_PORT_TOWN_HOUSE icf01020051  // Quality: 0 Rarity: 1
+#define RECIPE_PORT_TOWN_HOUSE icf01020052  // Quality: 0 Rarity: 1
+#define RECIPE_PORT_TOWN_HOUSE icf01020054  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_PORT_TOWN_HOUSE icf01020060  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_PORT_TOWN_HOUSE icf01020061  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_PORT_TOWN_HOUSE icf01020062  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_PORT_TOWN_HOUSE icf01020064  // Quality: 0 Rarity: 1
+#define RECIPE_STARRY_NIGHT_HOUSE icf01020070  // Quality: 0 Rarity: 1
+#define RECIPE_STARRY_NIGHT_HOUSE icf01020071  // Quality: 0 Rarity: 1
+#define RECIPE_STARRY_NIGHT_HOUSE icf01020072  // Quality: 0 Rarity: 1
+#define RECIPE_STARRY_NIGHT_HOUSE icf01020074  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_STARRY_NIGHT_HOUSE icf01020080  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_STARRY_NIGHT_HOUSE icf01020081  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_STARRY_NIGHT_HOUSE icf01020082  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_STARRY_NIGHT_HOUSE icf01020084  // Quality: 0 Rarity: 1
+#define RECIPE_FOREST_HOUSE icf01020090  // Quality: 0 Rarity: 1
+#define RECIPE_FOREST_HOUSE icf01020091  // Quality: 0 Rarity: 1
+#define RECIPE_FOREST_HOUSE icf01020092  // Quality: 0 Rarity: 1
+#define RECIPE_FOREST_HOUSE icf01020093  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_FOREST_HOUSE icf01020100  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_FOREST_HOUSE icf01020101  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_FOREST_HOUSE icf01020102  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_FOREST_HOUSE icf01020103  // Quality: 0 Rarity: 1
+#define RECIPE_DEVILISH_HOUSE icf01020110  // Quality: 0 Rarity: 1
+#define RECIPE_DEVILISH_HOUSE icf01020111  // Quality: 0 Rarity: 1
+#define RECIPE_DEVILISH_HOUSE icf01020112  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_DEVILISH_HOUSE icf01020120  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_DEVILISH_HOUSE icf01020121  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_DEVILISH_HOUSE icf01020122  // Quality: 0 Rarity: 1
+#define RECIPE_BRICK_HOUSE icf01021010  // Quality: 0 Rarity: 3
+#define RECIPE_BRICK_HOUSE_A icf01021011  // Quality: 0 Rarity: 3
+#define RECIPE_BRICK_HOUSE_B icf01021012  // Quality: 0 Rarity: 3
+#define RECIPE_BRICK_HOUSE_C icf01021013  // Quality: 0 Rarity: 5
+#define RECIPE_THATCHED_HOUSE icf01021030  // Quality: 0 Rarity: 3
+#define RECIPE_THATCHED_HOUSE_A icf01021031  // Quality: 0 Rarity: 3
+#define RECIPE_THATCHED_HOUSE_B icf01021032  // Quality: 0 Rarity: 3
+#define RECIPE_THATCHED_HOUSE_C icf01021033  // Quality: 0 Rarity: 5
+#define RECIPE_PORT_TOWN_HOUSE icf01021050  // Quality: 0 Rarity: 3
+#define RECIPE_PORT_TOWN_HOUSE_A icf01021051  // Quality: 0 Rarity: 3
+#define RECIPE_PORT_TOWN_HOUSE_B icf01021052  // Quality: 0 Rarity: 3
+#define RECIPE_PORT_TOWN_HOUSE_C icf01021054  // Quality: 0 Rarity: 5
+#define RECIPE_STARRY_NIGHT_HOUSE icf01021070  // Quality: 0 Rarity: 4
+#define RECIPE_STARRY_NIGHT_HOUSE_A icf01021071  // Quality: 0 Rarity: 4
+#define RECIPE_STARRY_NIGHT_HOUSE_B icf01021072  // Quality: 0 Rarity: 4
+#define RECIPE_STARRY_NIGHT_HOUSE_C icf01021074  // Quality: 0 Rarity: 5
+#define RECIPE_FOREST_HOUSE icf01021090  // Quality: 0 Rarity: 3
+#define RECIPE_FOREST_HOUSE_A icf01021091  // Quality: 0 Rarity: 3
+#define RECIPE_FOREST_HOUSE_B icf01021092  // Quality: 0 Rarity: 3
+#define RECIPE_FOREST_HOUSE_C icf01021093  // Quality: 0 Rarity: 5
+#define RECIPE_DEVILISH_HOUSE icf01021110  // Quality: 0 Rarity: 5
+#define RECIPE_DEVILISH_HOUSE_A icf01021111  // Quality: 0 Rarity: 5
+#define RECIPE_DEVILISH_HOUSE_B icf01021112  // Quality: 0 Rarity: 5
+#define RECIPE_BRICK_GUILD_OFFICE icf01010012  // Quality: 0 Rarity: 1
+#define RECIPE_THATCHED_GUILD_OFFICE icf01010021  // Quality: 0 Rarity: 1
+#define RECIPE_STONE_SQUARE icf01040010  // Quality: 0 Rarity: 2
+#define RECIPE_BRICK_SQUARE icf01040020  // Quality: 0 Rarity: 3
+#define RECIPE_SEABREEZE_SQUARE icf01040030  // Quality: 0 Rarity: 4
+#define RECIPE_PLUSHLING_SQUARE icf01040060  // Quality: 0 Rarity: 5
+#define RECIPE_GRAFFITI_SQUARE icf01040070  // Quality: 0 Rarity: 5
+#define RECIPE_DEVILISH_SQUARE icf01040080  // Quality: 0 Rarity: 5
+#define RECIPE_GREEN_SQUARE icf01040090  // Quality: 0 Rarity: 3
+#define RECIPE_ANCIENT_SQUARE icf01040100  // Quality: 0 Rarity: 3
+#define RECIPE_STONE_STAIRS icf02010010  // Quality: 0 Rarity: 1
+#define RECIPE_WOODEN_STAIRS icf02020010  // Quality: 0 Rarity: 1
+#define RECIPE_BRICK_STAIRS icf02020020  // Quality: 0 Rarity: 1
+#define RECIPE_PORT_TOWN_STAIRS icf02030010  // Quality: 0 Rarity: 1
+#define RECIPE_STARRY_NIGHT_STAIRS icf02040010  // Quality: 0 Rarity: 1
+#define RECIPE_FOREST_STAIRS icf02050010  // Quality: 0 Rarity: 1
+#define RECIPE_DEVILISH_STAIRS icf02040020  // Quality: 0 Rarity: 1
+#define RECIPE_PRAIRIE_SLOPE icf04010010  // Quality: 0 Rarity: 1
+#define RECIPE_STONE_BRIDGE icf03010010  // Quality: 0 Rarity: 1
+#define RECIPE_WOODEN_BRIDGE icf03020010  // Quality: 0 Rarity: 1
+#define RECIPE_BRICK_BRIDGE icf03020020  // Quality: 0 Rarity: 1
+#define RECIPE_PORT_TOWN_BRIDGE icf03030010  // Quality: 0 Rarity: 1
+#define RECIPE_STARRY_NIGHT_BRIDGE icf03040010  // Quality: 0 Rarity: 1
+#define RECIPE_DEVILISH_BRIDGE icf03040020  // Quality: 0 Rarity: 1
+#define RECIPE_FOREST_BRIDGE icf03050010  // Quality: 0 Rarity: 1
+#define RECIPE_GALLERY icf01030010  // Quality: 0 Rarity: 5
+#define RECIPE_DIRT_ROAD icf05010000  // Quality: 0 Rarity: 0
+#define RECIPE_MYSTERIAN_ROAD icf05010010  // Quality: 0 Rarity: 0
+#define RECIPE_FARAWAY_ROAD icf05010020  // Quality: 0 Rarity: 0
+#define RECIPE_TROPICA_ROAD icf05010030  // Quality: 0 Rarity: 0
+#define RECIPE_SWOLEAN_ROAD icf05010040  // Quality: 0 Rarity: 0
+#define RECIPE_DESERT_ROAD icf05010050  // Quality: 0 Rarity: 0
+#define RECIPE_DEVILISH_ROAD icf05010060  // Quality: 0 Rarity: 0
+#define RECIPE_BEACH_ROAD icf05010070  // Quality: 0 Rarity: 0
+#define RECIPE_TROPICAL_SOFA ico01020010  // Quality: 0 Rarity: 1
+#define RECIPE_TROPICAL_CHAIR ico01020020  // Quality: 0 Rarity: 1
+#define RECIPE_TROPICAL_STONE_BENCH ico01020030  // Quality: 0 Rarity: 1
+#define RECIPE_TROPICAL_WOODEN_BENCH ico01020040  // Quality: 0 Rarity: 2
+#define RECIPE_ROUND_WOODEN_CHAIR ico01020070  // Quality: 0 Rarity: 3
+#define RECIPE_CLASSIC_BENCH ico01020080  // Quality: 0 Rarity: 3
+#define RECIPE_WOODEN_BENCH ico01020090  // Quality: 0 Rarity: 2
+#define RECIPE_WHITE_BUTTERFLY_SOFA ico01020100  // Quality: 0 Rarity: 4
+#define RECIPE_SULTANS_CHAIR ico01020110  // Quality: 0 Rarity: 5
+#define RECIPE_WOODEN_SOFA ico01020120  // Quality: 0 Rarity: 4
+#define RECIPE_PASTEL_SOFA ico01020121  // Quality: 0 Rarity: 3
+#define RECIPE_WOODEN_CHAIR ico01020130  // Quality: 0 Rarity: 4
+#define RECIPE_PASTEL_CHAIR ico01020131  // Quality: 0 Rarity: 3
+#define RECIPE_PORT_TOWN_COUCH ico01020140  // Quality: 0 Rarity: 4
+#define RECIPE_PORT_TOWN_CHAIR ico01020150  // Quality: 0 Rarity: 4
+#define RECIPE_PIRATE_BENCH ico01020160  // Quality: 0 Rarity: 3
+#define RECIPE_PIRATE_CHAIR ico01020170  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_NIGHT_SOFA ico01020180  // Quality: 0 Rarity: 4
+#define RECIPE_STARRY_NIGHT_CHAIR ico01020190  // Quality: 0 Rarity: 4
+#define RECIPE_TREACHEROUS_SOFA ico01020200  // Quality: 0 Rarity: 5
+#define RECIPE_CHAIR_OF_ATONEMENT ico01020210  // Quality: 0 Rarity: 5
+#define RECIPE_FOREST_SOFA ico01020220  // Quality: 0 Rarity: 2
+#define RECIPE_FOREST_CHAIR ico01020230  // Quality: 0 Rarity: 3
+#define RECIPE_BEACH_CHAIR ico01020280  // Quality: 0 Rarity: 4
+#define RECIPE_SEABREEZE_BENCH ico01020310  // Quality: 0 Rarity: 4
+#define RECIPE_DESERT_BENCH ico01020330  // Quality: 0 Rarity: 5
+#define RECIPE_BENCH_OF_THE_CHOSEN ico01020350  // Quality: 0 Rarity: 5
+#define RECIPE_BAMBOO_BENCH ico01020370  // Quality: 0 Rarity: 2
+#define RECIPE_REGAL_SOFA ico01020380  // Quality: 0 Rarity: 2
+#define RECIPE_REGAL_CHAIR ico01020390  // Quality: 0 Rarity: 2
+#define RECIPE_RANOAHS_THRONE ico01020400  // Quality: 0 Rarity: 5
+#define RECIPE_MUSEUM_CHAIR ico01020410  // Quality: 0 Rarity: 5
+#define RECIPE_TROPICAL_TABLE ico01030010  // Quality: 0 Rarity: 1
+#define RECIPE_TROPICAL_LOW_TABLE ico01030020  // Quality: 0 Rarity: 1
+#define RECIPE_TROPICAL_CHEST ico01030030  // Quality: 0 Rarity: 1
+#define RECIPE_WOODEN_RACK ico01030090  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_STAND ico01030100  // Quality: 0 Rarity: 2
+#define RECIPE_ROUND_WOODEN_TABLE ico01030120  // Quality: 0 Rarity: 4
+#define RECIPE_WOODEN_DRAWER ico01030130  // Quality: 0 Rarity: 3
+#define RECIPE_WOODEN_DINING_TABLE ico01030140  // Quality: 0 Rarity: 3
+#define RECIPE_PASTEL_TABLE ico01030141  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_LOW_TABLE ico01030150  // Quality: 0 Rarity: 3
+#define RECIPE_PASTEL_LOW_TABLE ico01030151  // Quality: 0 Rarity: 1
+#define RECIPE_WOODEN_CHEST ico01030160  // Quality: 0 Rarity: 3
+#define RECIPE_PASTEL_CHEST ico01030161  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_CABINET ico01030170  // Quality: 0 Rarity: 4
+#define RECIPE_PASTEL_CABINET ico01030171  // Quality: 0 Rarity: 1
+#define RECIPE_TILED_DINING_TABLE ico01030180  // Quality: 0 Rarity: 3
+#define RECIPE_TILED_LOW_TABLE ico01030190  // Quality: 0 Rarity: 3
+#define RECIPE_TILED_CHEST ico01030200  // Quality: 0 Rarity: 4
+#define RECIPE_TILED_CABINET ico01030210  // Quality: 0 Rarity: 4
+#define RECIPE_PIRATE_DINING_TABLE ico01030220  // Quality: 0 Rarity: 4
+#define RECIPE_PIRATE_LOW_TABLE ico01030230  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_NIGHT_TABLE ico01030240  // Quality: 0 Rarity: 4
+#define RECIPE_STARRY_NIGHT_LOW_TABLE ico01030250  // Quality: 0 Rarity: 4
+#define RECIPE_BLOODTHIRSTY_TABLE ico01030260  // Quality: 0 Rarity: 5
+#define RECIPE_OCCULT_LOW_TABLE ico01030270  // Quality: 0 Rarity: 5
+#define RECIPE_FOREST_DINING_TABLE ico01030280  // Quality: 0 Rarity: 1
+#define RECIPE_FOREST_LOW_TABLE ico01030290  // Quality: 0 Rarity: 1
+#define RECIPE_FOREST_CABINET ico01030300  // Quality: 0 Rarity: 3
+#define RECIPE_PARASOL_TABLE ico01030350  // Quality: 0 Rarity: 4
+#define RECIPE_STONE_COUNTERTOP ico01030360  // Quality: 0 Rarity: 1
+#define RECIPE_LONG_STONE_COUNTERTOP ico01030370  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_SHELF ico01030380  // Quality: 0 Rarity: 1
+#define RECIPE_TROPICAL_WOODEN_DESK ico01030390  // Quality: 0 Rarity: 2
+#define RECIPE_REGAL_TABLE ico01030400  // Quality: 0 Rarity: 2
+#define RECIPE_REGAL_LOW_TABLE ico01030410  // Quality: 0 Rarity: 2
+#define RECIPE_REGAL_CHEST ico01030420  // Quality: 0 Rarity: 3
+#define RECIPE_REGAL_CABINET ico01030430  // Quality: 0 Rarity: 1
+#define RECIPE_TEA_TABLE ico01030440  // Quality: 0 Rarity: 4
+#define RECIPE_MUSEUM_TABLE ico01030450  // Quality: 0 Rarity: 5
+#define RECIPE_TROPICAL_BED ico01040010  // Quality: 0 Rarity: 1
+#define RECIPE_REGAL_BLUE_BED ico01040040  // Quality: 0 Rarity: 4
+#define RECIPE_WOODEN_BED ico01040050  // Quality: 0 Rarity: 4
+#define RECIPE_PASTEL_BED ico01040051  // Quality: 0 Rarity: 3
+#define RECIPE_PORT_TOWN_BED ico01040060  // Quality: 0 Rarity: 4
+#define RECIPE_PIRATE_BERTH ico01040070  // Quality: 0 Rarity: 4
+#define RECIPE_STARRY_NIGHT_BED ico01040080  // Quality: 0 Rarity: 4
+#define RECIPE_NIGHTMARE_BED ico01040090  // Quality: 0 Rarity: 5
+#define RECIPE_FOREST_BED ico01040100  // Quality: 0 Rarity: 2
+#define RECIPE_HAMMOCK ico01040130  // Quality: 0 Rarity: 3
+#define RECIPE_BEACH_BED ico01040140  // Quality: 0 Rarity: 4
+#define RECIPE_BED_OF_TERROR ico01040150  // Quality: 0 Rarity: 5
+#define RECIPE_REGAL_BED ico01040160  // Quality: 0 Rarity: 3
+#define RECIPE_TROPICAL_RUG ico01060010  // Quality: 0 Rarity: 1
+#define RECIPE_TROPICAL_MAT ico01060020  // Quality: 0 Rarity: 1
+#define RECIPE_WHITE_WOOLIE_TROPHY ico01060060  // Quality: 0 Rarity: 5
+#define RECIPE_TROPICAL_FLOWER_MAT ico01060070  // Quality: 0 Rarity: 2
+#define RECIPE_CUTE_RUG ico01060080  // Quality: 0 Rarity: 1
+#define RECIPE_FLEUR_DE_LIS_MAT ico01060090  // Quality: 0 Rarity: 4
+#define RECIPE_PECULIAR_MAT ico01060100  // Quality: 0 Rarity: 3
+#define RECIPE_WOVEN_CASTELE_RUG ico01060110  // Quality: 0 Rarity: 2
+#define RECIPE_PASTEL_RUG ico01060111  // Quality: 0 Rarity: 4
+#define RECIPE_WOVEN_CASTELE_MAT ico01060120  // Quality: 0 Rarity: 2
+#define RECIPE_PASTEL_MAT ico01060121  // Quality: 0 Rarity: 4
+#define RECIPE_PORT_TOWN_RUG ico01060130  // Quality: 0 Rarity: 4
+#define RECIPE_PORT_TOWN_MAT ico01060140  // Quality: 0 Rarity: 3
+#define RECIPE_SHIP_DECK_RUG ico01060150  // Quality: 0 Rarity: 3
+#define RECIPE_PIRATE_MAT ico01060160  // Quality: 0 Rarity: 4
+#define RECIPE_STARRY_NIGHT_RUG ico01060170  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_NIGHT_MAT ico01060180  // Quality: 0 Rarity: 3
+#define RECIPE_UNDERWORLD_RUG ico01060190  // Quality: 0 Rarity: 4
+#define RECIPE_MAT_OF_DARKNESS ico01060200  // Quality: 0 Rarity: 4
+#define RECIPE_CLOVER_RUG ico01060210  // Quality: 0 Rarity: 2
+#define RECIPE_LEAF_MAT ico01060220  // Quality: 0 Rarity: 2
+#define RECIPE_ANTIQUE_TROPICAL_MAT ico01060280  // Quality: 0 Rarity: 1
+#define RECIPE_BLUE_PATTERN_RUG ico01060290  // Quality: 0 Rarity: 3
+#define RECIPE_SPIRAL_MAT ico01060300  // Quality: 0 Rarity: 2
+#define RECIPE_RED_PATTERN_RUG ico01060310  // Quality: 0 Rarity: 2
+#define RECIPE_PASTEL_WOVEN_RUG ico01060320  // Quality: 0 Rarity: 2
+#define RECIPE_PASTEL_WOVEN_MAT ico01060330  // Quality: 0 Rarity: 2
+#define RECIPE_GREEN_RUG ico01060340  // Quality: 0 Rarity: 1
+#define RECIPE_STRAW_MAT ico01060350  // Quality: 0 Rarity: 2
+#define RECIPE_BIG_LEAF_RUG ico01060360  // Quality: 0 Rarity: 2
+#define RECIPE_SWORD_PATTERN_RUG ico01060370  // Quality: 0 Rarity: 3
+#define RECIPE_REGAL_RUG ico01060380  // Quality: 0 Rarity: 2
+#define RECIPE_ROYAL_CAPITAL_MAT ico01060390  // Quality: 0 Rarity: 2
+#define RECIPE_STARRY_EYED_RUG ico01060400  // Quality: 0 Rarity: 4
+#define RECIPE_YOUNG_KINGS_RUG ico01060410  // Quality: 0 Rarity: 4
+#define RECIPE_ORANGE_RUG ico01060420  // Quality: 0 Rarity: 3
+#define RECIPE_STRAW_RUG ico01060430  // Quality: 0 Rarity: 1
+#define RECIPE_SOFT_RUSH_RUG ico01060440  // Quality: 0 Rarity: 2
+#define RECIPE_FLOWERY_RUG ico01060450  // Quality: 0 Rarity: 4
+#define RECIPE_TROPICAL_WALL ico01070010  // Quality: 0 Rarity: 1
+#define RECIPE_REED_SCREEN_WALL ico01070011  // Quality: 0 Rarity: 2
+#define RECIPE_NATURAL_WALL ico01070020  // Quality: 0 Rarity: 3
+#define RECIPE_OLD_CASTELE_WALL ico01070030  // Quality: 0 Rarity: 3
+#define RECIPE_PASTEL_WALL ico01070031  // Quality: 0 Rarity: 4
+#define RECIPE_PLASTER_WALL ico01070040  // Quality: 0 Rarity: 4
+#define RECIPE_PIRATE_SHIP_WALL ico01070050  // Quality: 0 Rarity: 3
+#define RECIPE_AL_MAAJIKAN_WALL ico01070060  // Quality: 0 Rarity: 4
+#define RECIPE_ENCHANTED_WALL ico01070070  // Quality: 0 Rarity: 5
+#define RECIPE_FOREST_WALL ico01070080  // Quality: 0 Rarity: 3
+#define RECIPE_SHORE_WALL ico01070110  // Quality: 0 Rarity: 4
+#define RECIPE_LOG_WALL ico01070140  // Quality: 0 Rarity: 2
+#define RECIPE_REGAL_WALLPAPER ico01070150  // Quality: 0 Rarity: 2
+#define RECIPE_ROYAL_CAPITAL_WALL ico01070160  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_GARDEN_WALL ico01070170  // Quality: 0 Rarity: 5
+#define RECIPE_TEA_HOUSE_WALL ico01070190  // Quality: 0 Rarity: 4
+#define RECIPE_SWEET_WALL ico01070220  // Quality: 0 Rarity: 3
+#define RECIPE_JOINED_WOOD_FLOOR ico01080010  // Quality: 0 Rarity: 1
+#define RECIPE_STONE_TILE_FLOOR ico01080020  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_FLOOR ico01080030  // Quality: 0 Rarity: 3
+#define RECIPE_PASTEL_FLOOR ico01080031  // Quality: 0 Rarity: 4
+#define RECIPE_MARINE_FLOOR ico01080040  // Quality: 0 Rarity: 4
+#define RECIPE_PIRATE_SHIP_FLOOR ico01080050  // Quality: 0 Rarity: 3
+#define RECIPE_DESERT_FLOOR ico01080060  // Quality: 0 Rarity: 4
+#define RECIPE_UNSETTLING_STONE_FLOOR ico01080070  // Quality: 0 Rarity: 5
+#define RECIPE_WOODLAND_FLOOR ico01080080  // Quality: 0 Rarity: 3
+#define RECIPE_SHORE_FLOOR ico01080110  // Quality: 0 Rarity: 3
+#define RECIPE_LOG_FLOOR ico01080140  // Quality: 0 Rarity: 2
+#define RECIPE_REGAL_FLOOR ico01080150  // Quality: 0 Rarity: 2
+#define RECIPE_ROYAL_CAPITAL_FLOOR ico01080160  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_GARDEN_FLOOR ico01080170  // Quality: 0 Rarity: 5
+#define RECIPE_TEA_HOUSE_FLOOR ico01080190  // Quality: 0 Rarity: 4
+#define RECIPE_TROPICAL_DRESSER ico01090010  // Quality: 0 Rarity: 1
+#define RECIPE_TROPICAL_CABINET ico01090020  // Quality: 0 Rarity: 2
+#define RECIPE_BOUNTIFUL_HARVEST_RACK ico01090050  // Quality: 0 Rarity: 3
+#define RECIPE_WOODEN_WATERING_CAN ico01090070  // Quality: 0 Rarity: 1
+#define RECIPE_HAY ico01090080  // Quality: 0 Rarity: 1
+#define RECIPE_WOODEN_BUCKET ico01090090  // Quality: 0 Rarity: 1
+#define RECIPE_BLANK_CANVAS ico01090110  // Quality: 0 Rarity: 2
+#define RECIPE_RUSTIC_STANDING_TORCH ico01090150  // Quality: 0 Rarity: 1
+#define RECIPE_STACK_OF_FIREWOOD ico01090160  // Quality: 0 Rarity: 1
+#define RECIPE_CRATE ico01090170  // Quality: 0 Rarity: 1
+#define RECIPE_BARREL ico01090180  // Quality: 0 Rarity: 2
+#define RECIPE_RUSTIC_JAR ico01090190  // Quality: 0 Rarity: 1
+#define RECIPE_WOVEN_SACK ico01090200  // Quality: 0 Rarity: 1
+#define RECIPE_ISLAND_SIGN ico01090210  // Quality: 0 Rarity: 1
+#define RECIPE_MENU_BOARD ico01090250  // Quality: 0 Rarity: 3
+#define RECIPE_WORKERS_DESK ico01090270  // Quality: 0 Rarity: 3
+#define RECIPE_SURFBOARD ico01090280  // Quality: 0 Rarity: 4
+#define RECIPE_SAWING_TABLE ico01090290  // Quality: 0 Rarity: 3
+#define RECIPE_SANSEVIERIA_PLANT ico01090320  // Quality: 0 Rarity: 3
+#define RECIPE_POTTED_COCONUT ico01090330  // Quality: 0 Rarity: 2
+#define RECIPE_POTTED_CACTUS ico01090340  // Quality: 0 Rarity: 4
+#define RECIPE_WHITE_FLOWER_VASE ico01090350  // Quality: 0 Rarity: 3
+#define RECIPE_PINK_FLOWER_VASE ico01090351  // Quality: 0 Rarity: 4
+#define RECIPE_CELESTIAS_GIFT_IN_VASE ico01090360  // Quality: 0 Rarity: 5
+#define RECIPE_TREASURE_CHEST ico01090380  // Quality: 0 Rarity: 2
+#define RECIPE_WOODCUTTERS_STUMP ico01090420  // Quality: 0 Rarity: 2
+#define RECIPE_WHEELBARROW ico01090430  // Quality: 0 Rarity: 3
+#define RECIPE_PALADINS_CREST ico01090450  // Quality: 0 Rarity: 4
+#define RECIPE_MERCENARYS_BOUNTY ico01090460  // Quality: 0 Rarity: 4
+#define RECIPE_MAGIC_CAULDRON ico01090470  // Quality: 0 Rarity: 5
+#define RECIPE_MAGIC_BROOM ico01090480  // Quality: 0 Rarity: 4
+#define RECIPE_MINERS_TOOLS ico01090490  // Quality: 0 Rarity: 3
+#define RECIPE_FRESH_VEGETABLES ico01090510  // Quality: 0 Rarity: 2
+#define RECIPE_FRESH_FISH ico01090520  // Quality: 0 Rarity: 1
+#define RECIPE_FISHING_ROD_STAND ico01090530  // Quality: 0 Rarity: 3
+#define RECIPE_STEWING_POT ico01090540  // Quality: 0 Rarity: 3
+#define RECIPE_FARMING_TOOL_STAND ico01090550  // Quality: 0 Rarity: 3
+#define RECIPE_ORE_COLLECTION ico01090560  // Quality: 0 Rarity: 2
+#define RECIPE_SEWING_MACHINE ico01090580  // Quality: 0 Rarity: 2
+#define RECIPE_TAILORS_MANNEQUIN ico01090590  // Quality: 0 Rarity: 2
+#define RECIPE_MISPLACED_HAMMER ico01090600  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_SIDE_TABLE ico01090610  // Quality: 0 Rarity: 1
+#define RECIPE_COCONUT_PLANT ico01090620  // Quality: 0 Rarity: 1
+#define RECIPE_PAINT_BUCKET ico01090630  // Quality: 0 Rarity: 2
+#define RECIPE_DRAFTING_TABLE ico01090640  // Quality: 0 Rarity: 2
+#define RECIPE_GRANDFATHER_CLOCK ico01090650  // Quality: 0 Rarity: 4
+#define RECIPE_POTTED_PALM_TREE ico01090660  // Quality: 0 Rarity: 3
+#define RECIPE_NOBLE_DRESS ico01090670  // Quality: 0 Rarity: 5
+#define RECIPE_WOODEN_TRINKET_SHELF ico01090680  // Quality: 0 Rarity: 4
+#define RECIPE_WOODEN_BOOKCASE ico01090700  // Quality: 0 Rarity: 4
+#define RECIPE_DECORATIVE_EQUIPMENT ico01090710  // Quality: 0 Rarity: 4
+#define RECIPE_ALCHEMY_TABLE ico01090720  // Quality: 0 Rarity: 4
+#define RECIPE_ARTSY_DESK ico01090730  // Quality: 0 Rarity: 2
+#define RECIPE_COUNTRY_SHELF ico01090740  // Quality: 0 Rarity: 3
+#define RECIPE_CUPBOARD ico01090750  // Quality: 0 Rarity: 3
+#define RECIPE_WOODEN_WARDROBE ico01090760  // Quality: 0 Rarity: 4
+#define RECIPE_PASTEL_WARDROBE ico01090761  // Quality: 0 Rarity: 2
+#define RECIPE_PORT_TOWN_WARDROBE ico01090770  // Quality: 0 Rarity: 4
+#define RECIPE_PIRATE_WARDROBE ico01090780  // Quality: 0 Rarity: 4
+#define RECIPE_PIRATE_CHEST ico01090790  // Quality: 0 Rarity: 3
+#define RECIPE_PIRATE_CABINET ico01090800  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_NIGHT_WARDROBE ico01090810  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_NIGHT_CHEST ico01090820  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_NIGHT_CABINET ico01090830  // Quality: 0 Rarity: 4
+#define RECIPE_OTHERWORLDLY_WARDROBE ico01090840  // Quality: 0 Rarity: 4
+#define RECIPE_DARKNESS_EATING_CHEST ico01090850  // Quality: 0 Rarity: 5
+#define RECIPE_OMINOUS_CABINET ico01090860  // Quality: 0 Rarity: 3
+#define RECIPE_FOREST_WARDROBE ico01090870  // Quality: 0 Rarity: 3
+#define RECIPE_FOREST_CHEST ico01090880  // Quality: 0 Rarity: 3
+#define RECIPE_SULTANS_TOILET ico01090920  // Quality: 0 Rarity: 5
+#define RECIPE_BEACH_BALL ico01090960  // Quality: 0 Rarity: 2
+#define RECIPE_FLOATIE_RING ico01090970  // Quality: 0 Rarity: 3
+#define RECIPE_STRANGERS_COFFIN ico01091010  // Quality: 0 Rarity: 5
+#define RECIPE_PILE_OF_PIRATE_TREASURE ico01091080  // Quality: 0 Rarity: 4
+#define RECIPE_TAIKO_DRUM ico01091130  // Quality: 0 Rarity: 2
+#define RECIPE_TROPICAL_VASE ico01091140  // Quality: 0 Rarity: 2
+#define RECIPE_CORN_DRYING_RACK ico01091150  // Quality: 0 Rarity: 2
+#define RECIPE_BASKET_OF_CORN ico01091160  // Quality: 0 Rarity: 2
+#define RECIPE_HEARTH_WITH_CORN ico01091170  // Quality: 0 Rarity: 2
+#define RECIPE_FISH_DRYING_RACK ico01091180  // Quality: 0 Rarity: 1
+#define RECIPE_HEARTH_WITH_FISH ico01091190  // Quality: 0 Rarity: 2
+#define RECIPE_BEAKER_SET ico01091200  // Quality: 0 Rarity: 4
+#define RECIPE_CHALKBOARD ico01091210  // Quality: 0 Rarity: 4
+#define RECIPE_SWORDFISH_TAPESTRY ico01091220  // Quality: 0 Rarity: 3
+#define RECIPE_SPINNING_WHEEL ico01091230  // Quality: 0 Rarity: 2
+#define RECIPE_TAILORED_CLOTHES ico01091231  // Quality: 0 Rarity: 4
+#define RECIPE_ORE_NAMENT ico01091232  // Quality: 0 Rarity: 4
+#define RECIPE_BOXES_OF_ORE ico01091233  // Quality: 0 Rarity: 3
+#define RECIPE_HALF_SAWED_LOG ico01091234  // Quality: 0 Rarity: 2
+#define RECIPE_EGG_SHELF ico01091235  // Quality: 0 Rarity: 2
+#define RECIPE_STOVE ico01091236  // Quality: 0 Rarity: 2
+#define RECIPE_STONE_OVEN ico01091237  // Quality: 0 Rarity: 3
+#define RECIPE_SMELTER ico01091238  // Quality: 0 Rarity: 4
+#define RECIPE_GRINDSTONE ico01091239  // Quality: 0 Rarity: 1
+#define RECIPE_INGOT_PILE ico01091240  // Quality: 0 Rarity: 2
+#define RECIPE_LOG_FLOWER_BOX ico01091250  // Quality: 0 Rarity: 3
+#define RECIPE_BARRELS_OF_WHEAT_JUICE ico01091260  // Quality: 0 Rarity: 3
+#define RECIPE_NOTICE_BOARD ico01091270  // Quality: 0 Rarity: 2
+#define RECIPE_BIBLIOPHILES_BOOKCASE ico01091280  // Quality: 0 Rarity: 2
+#define RECIPE_ROCK_COLLECTION ico01091290  // Quality: 0 Rarity: 1
+#define RECIPE_NATURAL_CHAIR ico01091300  // Quality: 0 Rarity: 1
+#define RECIPE_FISH_TRAP ico01091310  // Quality: 0 Rarity: 1
+#define RECIPE_LIDDED_JAR ico01091320  // Quality: 0 Rarity: 1
+#define RECIPE_STACKED_CRATES ico01091330  // Quality: 0 Rarity: 2
+#define RECIPE_BOUNTIFUL_HARVEST_BOX ico01091340  // Quality: 0 Rarity: 3
+#define RECIPE_SWORDFIGHTERS_BARREL ico01091350  // Quality: 0 Rarity: 1
+#define RECIPE_LANCERS_BARREL ico01091360  // Quality: 0 Rarity: 2
+#define RECIPE_MYSTERIOUS_DOOR ico01091370  // Quality: 0 Rarity: 5
+#define RECIPE_HAY_BALE ico01091390  // Quality: 0 Rarity: 2
+#define RECIPE_HAY_TROUGH ico01091400  // Quality: 0 Rarity: 2
+#define RECIPE_PALADINS_MANNEQUIN ico01091410  // Quality: 0 Rarity: 2
+#define RECIPE_HEROS_MANNEQUIN ico01091420  // Quality: 0 Rarity: 4
+#define RECIPE_BALLOON_ART ico01091430  // Quality: 0 Rarity: 5
+#define RECIPE_DECORATIVE_CURTAIN ico01091440  // Quality: 0 Rarity: 4
+#define RECIPE_BLUE_BANNER ico01091450  // Quality: 0 Rarity: 3
+#define RECIPE_WEAPON_STAND ico01091460  // Quality: 0 Rarity: 4
+#define RECIPE_GRAND_STANDING_TORCH ico01091470  // Quality: 0 Rarity: 2
+#define RECIPE_WHEAT_JUICE_ON_TAP ico01091480  // Quality: 0 Rarity: 2
+#define RECIPE_GUITAR ico01091490  // Quality: 0 Rarity: 2
+#define RECIPE_HARP ico01091500  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_PARTITION ico01091510  // Quality: 0 Rarity: 1
+#define RECIPE_TROPHY ico01091520  // Quality: 0 Rarity: 4
+#define RECIPE_FLOWER_PAINTING ico01091530  // Quality: 0 Rarity: 3
+#define RECIPE_NIGHTTIME_PAINTING ico01091540  // Quality: 0 Rarity: 3
+#define RECIPE_PLUSHLING_TREE_POT ico01091550  // Quality: 0 Rarity: 2
+#define RECIPE_SPOOKY_LAMP ico01091560  // Quality: 0 Rarity: 4
+#define RECIPE_BLUE_SPOOKY_LAMP ico01091561  // Quality: 0 Rarity: 5
+#define RECIPE_GREEN_SPOOKY_LAMP ico01091562  // Quality: 0 Rarity: 5
+#define RECIPE_RED_SPOOKY_LAMP ico01091563  // Quality: 0 Rarity: 5
+#define RECIPE_STATUE_OF_FRAJEEL ico01091570  // Quality: 0 Rarity: 5
+#define RECIPE_ARCHED_GATE ico01091580  // Quality: 0 Rarity: 5
+#define RECIPE_SURFING_LEAFE_STATUE ico01091590  // Quality: 0 Rarity: 4
+#define RECIPE_PLUSHLING_STATUE ico01091600  // Quality: 0 Rarity: 3
+#define RECIPE_TURTLE_AND_LEAFE_STATUE ico01091610  // Quality: 0 Rarity: 4
+#define RECIPE_MERMAID_STATUE ico01091620  // Quality: 0 Rarity: 4
+#define RECIPE_OWL_STATUE ico01091630  // Quality: 0 Rarity: 4
+#define RECIPE_ANCIENT_ROBOT_MODEL ico01091650  // Quality: 0 Rarity: 5
+#define RECIPE_LEAFE_TOPIARY ico01091660  // Quality: 0 Rarity: 4
+#define RECIPE_STANDING_TORCH_WITH_FLAG ico01091670  // Quality: 0 Rarity: 3
+#define RECIPE_TRIPS_PERCH ico01091680  // Quality: 0 Rarity: 5
+#define RECIPE_TRIPS_COOL_PORTRAIT ico01091690  // Quality: 0 Rarity: 2
+#define RECIPE_TRIPS_ARTSY_PORTRAIT ico01091700  // Quality: 0 Rarity: 1
+#define RECIPE_STONE_WORKBENCH ico01100010  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_WORKBENCH ico01100020  // Quality: 0 Rarity: 1
+#define RECIPE_ISLAND_MAP_BOARD ico02010060  // Quality: 0 Rarity: 2
+#define RECIPE_SHIPWHEEL_TAPESTRY ico02010070  // Quality: 0 Rarity: 3
+#define RECIPE_TOOL_HOOK ico02010080  // Quality: 0 Rarity: 2
+#define RECIPE_FRESHLY_PICKED_WREATH ico02010100  // Quality: 0 Rarity: 4
+#define RECIPE_TROPICAL_FLOWER_WREATH ico02010110  // Quality: 0 Rarity: 3
+#define RECIPE_PORTRAIT_OF_ERIK ico02010120  // Quality: 0 Rarity: 5
+#define RECIPE_ROYAL_FAMILY_PORTRAIT ico02010130  // Quality: 0 Rarity: 5
+#define RECIPE_FISH_FOR_LIFE_FLAG ico02010200  // Quality: 0 Rarity: 4
+#define RECIPE_GREATSWORD_OF_YORE ico02010210  // Quality: 0 Rarity: 5
+#define RECIPE_HUNTERS_GEAR ico02010220  // Quality: 0 Rarity: 3
+#define RECIPE_WOODCUTTERS_TOOLS ico02010230  // Quality: 0 Rarity: 3
+#define RECIPE_KITCHEN_UTENSILS ico02010240  // Quality: 0 Rarity: 3
+#define RECIPE_SIGN_BOARD ico02010260  // Quality: 0 Rarity: 1
+#define RECIPE_RED_FLOWER_ORNAMENT ico02010280  // Quality: 0 Rarity: 1
+#define RECIPE_LIGHT_BLUE_TAPESTRY ico02010290  // Quality: 0 Rarity: 2
+#define RECIPE_DARTBOARD ico02010300  // Quality: 0 Rarity: 3
+#define RECIPE_LUMINOUS_PAINTING ico02010310  // Quality: 0 Rarity: 5
+#define RECIPE_SWORDFISH_PRINT ico02010320  // Quality: 0 Rarity: 4
+#define RECIPE_GOLDEN_SWORDFISH_PRINT ico02010340  // Quality: 0 Rarity: 5
+#define RECIPE_BASS_OF_DARKNESS_PRINT ico02010360  // Quality: 0 Rarity: 4
+#define RECIPE_BEELZEBUB_TUNA_PRINT ico02010370  // Quality: 0 Rarity: 5
+#define RECIPE_POSEIDON_SWORDFISH_PRINT ico02010380  // Quality: 0 Rarity: 4
+#define RECIPE_FOREST_LORDFISH_PRINT ico02010400  // Quality: 0 Rarity: 4
+#define RECIPE_COLDWATER_TUNA_PRINT ico02010410  // Quality: 0 Rarity: 4
+#define RECIPE_DEEP_SEA_LORDFISH_PRINT ico02010430  // Quality: 0 Rarity: 4
+#define RECIPE_GODFISH_PRINT ico02010440  // Quality: 0 Rarity: 5
+#define RECIPE_BLUESCALE_LORDFISH_PRINT ico02010450  // Quality: 0 Rarity: 4
+#define RECIPE_FAMILY_PORTRAIT ico02010460  // Quality: 0 Rarity: 5
+#define RECIPE_UNFAMILIAR_MAP ico02010470  // Quality: 0 Rarity: 5
+#define RECIPE_FEATHER_ORNAMENT ico02010480  // Quality: 0 Rarity: 2
+#define RECIPE_FISHING_ROD_RACK ico02010490  // Quality: 0 Rarity: 1
+#define RECIPE_RUSTIC_WOVEN_TAPESTRY ico02010500  // Quality: 0 Rarity: 1
+#define RECIPE_BIG_FISHING_HOOK ico02010510  // Quality: 0 Rarity: 2
+#define RECIPE_FISHING_NET ico02010520  // Quality: 0 Rarity: 2
+#define RECIPE_SWORDFISH_SKELETON ico02010530  // Quality: 0 Rarity: 5
+#define RECIPE_FISH_SKELETON ico02010540  // Quality: 0 Rarity: 2
+#define RECIPE_DRIED_FISH_RESERVE ico02010550  // Quality: 0 Rarity: 1
+#define RECIPE_BLUE_TAPESTRY ico02010560  // Quality: 0 Rarity: 2
+#define RECIPE_BLUE_DECORATIVE_FEATHER ico02010570  // Quality: 0 Rarity: 2
+#define RECIPE_PASTEL_GARLAND ico02010580  // Quality: 0 Rarity: 3
+#define RECIPE_MODEST_GARLAND ico02010590  // Quality: 0 Rarity: 3
+#define RECIPE_DECORATIVE_SHIELDS ico02010600  // Quality: 0 Rarity: 3
+#define RECIPE_GREEN_WREATH ico02010610  // Quality: 0 Rarity: 2
+#define RECIPE_CROWN_WALL_DECORATION ico02010620  // Quality: 0 Rarity: 3
+#define RECIPE_HANGING_DRIED_FISH ico02010630  // Quality: 0 Rarity: 1
+#define RECIPE_DECORATIVE_FOLDING_FAN ico02010650  // Quality: 0 Rarity: 4
+#define RECIPE_FANCY_WALL_ART ico02010660  // Quality: 0 Rarity: 3
+#define RECIPE_HANGING_SCROLL ico02010670  // Quality: 0 Rarity: 3
+#define RECIPE_NOSTALGIC_PAINTING ico02010680  // Quality: 0 Rarity: 5
+#define RECIPE_BLACK_DRAGON_PAINTING ico02010690  // Quality: 0 Rarity: 5
+#define RECIPE_WEIRD_MONITOR ico02010700  // Quality: 0 Rarity: 4
+#define RECIPE_DRIED_LEAF_ART ico02010710  // Quality: 0 Rarity: 2
+#define RECIPE_PLAINS_LORDFISH_PRINT ico02010720  // Quality: 0 Rarity: 4
+#define RECIPE_CHERRY_LORDFISH_PRINT ico02010730  // Quality: 0 Rarity: 4
+#define RECIPE_GREAT_LUCKY_BREAM_PRINT ico02010740  // Quality: 0 Rarity: 4
+#define RECIPE_RAINBOW_FLYING_FISH_PRINT ico02010750  // Quality: 0 Rarity: 4
+#define RECIPE_CRYSTALLINE_BASS_PRINT ico02010760  // Quality: 0 Rarity: 4
+#define RECIPE_HIGH_FLYING_FISH_PRINT ico02010770  // Quality: 0 Rarity: 4
+#define RECIPE_JOVIAL_MASK ico02020010  // Quality: 0 Rarity: 1
+#define RECIPE_WALL_LAMP ico02020050  // Quality: 0 Rarity: 2
+#define RECIPE_HAT_HOOK ico02020060  // Quality: 0 Rarity: 2
+#define RECIPE_DOVE_PENDULUM_CLOCK ico02020080  // Quality: 0 Rarity: 3
+#define RECIPE_MEMORY_BOARD ico02020100  // Quality: 0 Rarity: 5
+#define RECIPE_CORN_RESERVE ico02020110  // Quality: 0 Rarity: 2
+#define RECIPE_WALL_CANDLE ico02020120  // Quality: 0 Rarity: 3
+#define RECIPE_MOUNTED_SHELF ico02020130  // Quality: 0 Rarity: 2
+#define RECIPE_BREAKFAST_SET ico03010010  // Quality: 0 Rarity: 3
+#define RECIPE_WOODEN_DINING_SET ico03010020  // Quality: 0 Rarity: 1
+#define RECIPE_PLATE_OF_ROASTED_BIRD ico03010030  // Quality: 0 Rarity: 2
+#define RECIPE_BOWL_OF_ASSORTED_FRUIT ico03010040  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_PALETTE ico03010060  // Quality: 0 Rarity: 3
+#define RECIPE_GOLD_CANDLESTICK ico03010070  // Quality: 0 Rarity: 4
+#define RECIPE_COPPER_CANDLESTICK ico03010071  // Quality: 0 Rarity: 1
+#define RECIPE_DIG_IN_DINING_SET ico03010090  // Quality: 0 Rarity: 2
+#define RECIPE_FULL_COURSE_DINNER ico03010100  // Quality: 0 Rarity: 4
+#define RECIPE_TEA_SET ico03010110  // Quality: 0 Rarity: 1
+#define RECIPE_LETTER_SET ico03010120  // Quality: 0 Rarity: 2
+#define RECIPE_CANDLE ico03010130  // Quality: 0 Rarity: 1
+#define RECIPE_CARPENTERS_TOOLS ico03010140  // Quality: 0 Rarity: 2
+#define RECIPE_PEN_AND_RULER ico03010150  // Quality: 0 Rarity: 1
+#define RECIPE_ENCYCLOPEDIA ico03010160  // Quality: 0 Rarity: 1
+#define RECIPE_THICK_NOVEL ico03010161  // Quality: 0 Rarity: 4
+#define RECIPE_CLASSIC_LAMP ico03010170  // Quality: 0 Rarity: 3
+#define RECIPE_STANDING_LAMP ico03010180  // Quality: 0 Rarity: 2
+#define RECIPE_HAGRAM_DOLL ico03010190  // Quality: 0 Rarity: 5
+#define RECIPE_TRIP_DOLL ico03010200  // Quality: 0 Rarity: 5
+#define RECIPE_PLUSHLING_DOLL ico03010220  // Quality: 0 Rarity: 4
+#define RECIPE_HOURGLASS ico03010230  // Quality: 0 Rarity: 1
+#define RECIPE_AFTERNOON_TEA_SET ico03010270  // Quality: 0 Rarity: 4
+#define RECIPE_SEAFOOD_BANQUET ico03010280  // Quality: 0 Rarity: 5
+#define RECIPE_FRUIT_BUFFET ico03010290  // Quality: 0 Rarity: 2
+#define RECIPE_TRAY_OF_APPLES ico03010300  // Quality: 0 Rarity: 2
+#define RECIPE_BOTTLE_SET ico03010310  // Quality: 0 Rarity: 1
+#define RECIPE_SEWING_SET ico03010320  // Quality: 0 Rarity: 1
+#define RECIPE_SCIENCE_EQUIPMENT ico03010330  // Quality: 0 Rarity: 2
+#define RECIPE_PHONOGRAPH ico03010340  // Quality: 0 Rarity: 5
+#define RECIPE_MENU_STAND ico03010350  // Quality: 0 Rarity: 3
+#define RECIPE_ELEGANT_CLOTH ico03010360  // Quality: 0 Rarity: 3
+#define RECIPE_SALUD_GLASS ico03010370  // Quality: 0 Rarity: 2
+#define RECIPE_BENCH_PRESS ico03010390  // Quality: 0 Rarity: 5
+#define RECIPE_NOSTALGIC_ORNAMENT ico03010400  // Quality: 0 Rarity: 5
+#define RECIPE_LEAFE_ORNAMENT ico03010410  // Quality: 0 Rarity: 5
+#define RECIPE_CELESTIAL_GLOBE ico03010420  // Quality: 0 Rarity: 5
+#define RECIPE_PALADINS_TROPHY ico03010430  // Quality: 0 Rarity: 5
+#define RECIPE_MERCENARYS_TROPHY ico03010440  // Quality: 0 Rarity: 5
+#define RECIPE_MAGICIANS_TROPHY ico03010450  // Quality: 0 Rarity: 5
+#define RECIPE_HUNTERS_TROPHY ico03010460  // Quality: 0 Rarity: 5
+#define RECIPE_MINERS_TROPHY ico03010470  // Quality: 0 Rarity: 5
+#define RECIPE_WOODCUTTERS_TROPHY ico03010480  // Quality: 0 Rarity: 5
+#define RECIPE_FARMERS_TROPHY ico03010490  // Quality: 0 Rarity: 5
+#define RECIPE_ANGLERS_TROPHY ico03010500  // Quality: 0 Rarity: 5
+#define RECIPE_COOKS_TROPHY ico03010510  // Quality: 0 Rarity: 5
+#define RECIPE_BLACKSMITHS_TROPHY ico03010520  // Quality: 0 Rarity: 5
+#define RECIPE_CARPENTERS_TROPHY ico03010530  // Quality: 0 Rarity: 5
+#define RECIPE_TAILORS_TROPHY ico03010540  // Quality: 0 Rarity: 5
+#define RECIPE_ALCHEMISTS_TROPHY ico03010550  // Quality: 0 Rarity: 5
+#define RECIPE_ARTISTS_TROPHY ico03010560  // Quality: 0 Rarity: 5
+#define RECIPE_BIG_CACTUS ico03010570  // Quality: 0 Rarity: 4
+#define RECIPE_STACKED_STONE_SLABS ico03010580  // Quality: 0 Rarity: 2
+#define RECIPE_ANTIQUE_ABACUS ico03010590  // Quality: 0 Rarity: 3
+#define RECIPE_FLOWER_BASKET ico03010600  // Quality: 0 Rarity: 3
+#define RECIPE_PLATE_OF_APPLES ico03010610  // Quality: 0 Rarity: 3
+#define RECIPE_PLATE_OF_ROASTED_FISH ico03010620  // Quality: 0 Rarity: 2
+#define RECIPE_PLATE_OF_ROASTED_CORN ico03010630  // Quality: 0 Rarity: 1
+#define RECIPE_PLATE_OF_POPCORN ico03010640  // Quality: 0 Rarity: 1
+#define RECIPE_BOWL_OF_BUTTERED_CORN ico03010650  // Quality: 0 Rarity: 2
+#define RECIPE_PINT_OF_WHEAT_JUICE ico03010660  // Quality: 0 Rarity: 2
+#define RECIPE_KNIFE_AND_CUTTING_BOARD ico03010670  // Quality: 0 Rarity: 2
+#define RECIPE_FRESH_FISH_ON_A_TRAY ico03010680  // Quality: 0 Rarity: 2
+#define RECIPE_MILLSTONE ico03010700  // Quality: 0 Rarity: 1
+#define RECIPE_ARTISANS_TOOLBOX ico03010710  // Quality: 0 Rarity: 1
+#define RECIPE_COLORFUL_CLOTH ico03010720  // Quality: 0 Rarity: 2
+#define RECIPE_INCENSE_BURNER ico03010740  // Quality: 0 Rarity: 3
+#define RECIPE_SPOOL_SET ico03010750  // Quality: 0 Rarity: 2
+#define RECIPE_STACKED_BOOKS ico03010760  // Quality: 0 Rarity: 2
+#define RECIPE_FLASK_SET ico03010770  // Quality: 0 Rarity: 1
+#define RECIPE_PILE_OF_CORN ico03010780  // Quality: 0 Rarity: 2
+#define RECIPE_HAND_WOVEN_BASKET ico03010800  // Quality: 0 Rarity: 1
+#define RECIPE_BIRDY_HELMET ico03010810  // Quality: 0 Rarity: 3
+#define RECIPE_BIRDY_ARMOR_SET ico03010820  // Quality: 0 Rarity: 3
+#define RECIPE_BOX_OF_SHIELDS ico03010830  // Quality: 0 Rarity: 4
+#define RECIPE_DECORATIVE_SWORDS ico03010840  // Quality: 0 Rarity: 3
+#define RECIPE_HAGRAM_PARTS ico03010850  // Quality: 0 Rarity: 4
+#define RECIPE_DRAGON_DOLL ico03010860  // Quality: 0 Rarity: 5
+#define RECIPE_BIRD_CAGE ico03010870  // Quality: 0 Rarity: 2
+#define RECIPE_YARN_BALL ico03010890  // Quality: 0 Rarity: 1
+#define RECIPE_GLASS_FLOAT ico03010900  // Quality: 0 Rarity: 2
+#define RECIPE_LEANING_SLAB ico03010920  // Quality: 0 Rarity: 2
+#define RECIPE_POT_OF_WATER ico03010930  // Quality: 0 Rarity: 1
+#define RECIPE_PLATE_OF_SPIRIT_SALAD ico03010940  // Quality: 0 Rarity: 5
+#define RECIPE_GLASS_OF_TROPICAL_JUICE ico03010950  // Quality: 0 Rarity: 5
+#define RECIPE_MIGHTY_MEAT_BOARD ico03010960  // Quality: 0 Rarity: 5
+#define RECIPE_PLATE_OF_ROYAL_RICE ico03010970  // Quality: 0 Rarity: 5
+#define RECIPE_PLATE_OF_TRIP_CAKE ico03010980  // Quality: 0 Rarity: 5
+#define RECIPE_COLMS_LEFTOVER_DONUTS ico03010990  // Quality: 0 Rarity: 3
+#define RECIPE_CUP_OF_COCONUT_JUICE ico03011000  // Quality: 0 Rarity: 3
+#define RECIPE_IKEBANA ico03011010  // Quality: 0 Rarity: 5
+#define RECIPE_FRAJEELS_PROTEIN ico03011020  // Quality: 0 Rarity: 3
+#define RECIPE_REMS_COCONUT_BENTO_BOX ico03011030  // Quality: 0 Rarity: 5
+#define RECIPE_STONE_TORCH ico04010010  // Quality: 0 Rarity: 2
+#define RECIPE_CLASSIC_STREETLAMP ico04010020  // Quality: 0 Rarity: 4
+#define RECIPE_PORT_TOWN_STREETLAMP ico04010030  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_NIGHT_STREETLAMP ico04010050  // Quality: 0 Rarity: 4
+#define RECIPE_BECKONING_STREETLAMP ico04010060  // Quality: 0 Rarity: 5
+#define RECIPE_FOREST_LILY_LIGHT ico04010070  // Quality: 0 Rarity: 2
+#define RECIPE_TROPICAL_FENCE ico04040010  // Quality: 0 Rarity: 2
+#define RECIPE_STONE_BLOCK_WALL ico04040020  // Quality: 0 Rarity: 1
+#define RECIPE_SIMPLE_HEDGE ico04040030  // Quality: 0 Rarity: 1
+#define RECIPE_WOODEN_FENCE ico04040040  // Quality: 0 Rarity: 3
+#define RECIPE_PORT_TOWN_FENCE ico04040060  // Quality: 0 Rarity: 3
+#define RECIPE_PALACE_WALL ico04040080  // Quality: 0 Rarity: 3
+#define RECIPE_CURSED_FENCE ico04040090  // Quality: 0 Rarity: 5
+#define RECIPE_FOREST_FENCE ico04040100  // Quality: 0 Rarity: 1
+#define RECIPE_PORT_TOWN_WALL ico04040110  // Quality: 0 Rarity: 3
+#define RECIPE_TROPICAL_FLOWER_POT ico04050030  // Quality: 0 Rarity: 1
+#define RECIPE_RED_FLOWER_POT ico04050040  // Quality: 0 Rarity: 2
+#define RECIPE_STONE_FLOWER_BED ico04050050  // Quality: 0 Rarity: 2
+#define RECIPE_WELL ico04050060  // Quality: 0 Rarity: 2
+#define RECIPE_CAMPFIRE ico04050070  // Quality: 0 Rarity: 1
+#define RECIPE_FISH_ROASTING_CAMPFIRE ico04050080  // Quality: 0 Rarity: 2
+#define RECIPE_MEAT_ROASTING_CAMPFIRE ico04050090  // Quality: 0 Rarity: 2
+#define RECIPE_WOODEN_CLOTHESLINE ico04050110  // Quality: 0 Rarity: 1
+#define RECIPE_ETERNIA_WINDMILL ico04050120  // Quality: 0 Rarity: 2
+#define RECIPE_STONE_PILLAR ico04050130  // Quality: 0 Rarity: 2
+#define RECIPE_BRICK_LINED_SHRUB ico04050170  // Quality: 0 Rarity: 3
+#define RECIPE_WOODEN_FLOWER_BED ico04050180  // Quality: 0 Rarity: 4
+#define RECIPE_PLUSHLING_FOUNTAIN ico04050190  // Quality: 0 Rarity: 5
+#define RECIPE_TRAINING_DUMMY ico04050200  // Quality: 0 Rarity: 3
+#define RECIPE_ARCHERY_TARGETINTER ico04050210  // Quality: 0 Rarity: 3
+#define RECIPE_STRANGERS_GRAVE ico04050330  // Quality: 0 Rarity: 4
+#define RECIPE_RED_FLOWER_SHRUB ico04050430  // Quality: 0 Rarity: 2
+#define RECIPE_SEASIDE_SHRUB ico04050440  // Quality: 0 Rarity: 2
+#define RECIPE_DESERT_CACTUS ico04050450  // Quality: 0 Rarity: 3
+#define RECIPE_GLORIOUS_SHRUB ico04050460  // Quality: 0 Rarity: 5
+#define RECIPE_DESERT_TOWER ico04050470  // Quality: 0 Rarity: 3
+#define RECIPE_RELAXING_SWINGSET ico04060010  // Quality: 0 Rarity: 4
+#define RECIPE_IVY_SWINGSET ico04060020  // Quality: 0 Rarity: 5
+#define RECIPE_GREEN_GRASS ico04080010  // Quality: 0 Rarity: 1
+#define RECIPE_TALL_GRASS ico04080020  // Quality: 0 Rarity: 1
+#define RECIPE_SMALL_TREE ico04080030  // Quality: 0 Rarity: 1
+#define RECIPE_SAPLING ico04080040  // Quality: 0 Rarity: 1
+#define RECIPE_YOUNG_TREE ico04080050  // Quality: 0 Rarity: 1
+#define RECIPE_ERUPTUNA_PRINT ico02010780  // Quality: 0 Rarity: 4
+#define RECIPE_POSTER_OF_FRAJEEL ico02010790  // Quality: 0 Rarity: 4
+#define RECIPE_PLATE_OF_HOMEMADE_CAKE ico03011040  // Quality: 0 Rarity: 5
+#define RECIPE_SPIRIT_CLOCK ico02010800  // Quality: 0 Rarity: 3
+#define RECIPE_RED_LEAFE_LANTERN ico03011050  // Quality: 0 Rarity: 3
+#define RECIPE_YELLOW_LEAFE_LANTERN ico03011051  // Quality: 0 Rarity: 3
+#define RECIPE_BLUE_LEAFE_LANTERN ico03011052  // Quality: 0 Rarity: 3
+#define RECIPE_HONEWORT_CHAIR ico01020420  // Quality: 0 Rarity: 5
+#define RECIPE_GINKGO_CHAIR ico01020421  // Quality: 0 Rarity: 5
+#define RECIPE_DICOT_CHAIR ico01020422  // Quality: 0 Rarity: 5
+#define RECIPE_PLUSHLING_LOUNGE_CHAIR ico01020430  // Quality: 0 Rarity: 5
+#define RECIPE_MEMORY_OF_TROPICA_PANEL ico01091720  // Quality: 0 Rarity: 0
+#define RECIPE_CHILLY_TABLE ico01030460  // Quality: 0 Rarity: 4
+#define RECIPE_GINGKO_TOPIARY_FLOWER_POT ico01091661  // Quality: 0 Rarity: 4
+#define RECIPE_DICOT_TOPIARY_FLOWER_POT ico01091662  // Quality: 0 Rarity: 4
+#define RECIPE_PASTEL_FLOWER_PAINTING ico02010811  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_BED ico01040052  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_SOFA ico01020122  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_TABLE ico01030142  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_LOW_TABLE ico01030152  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_CHAIR ico01020132  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_WARDROBE ico01090762  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_CHEST ico01030162  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_CABINET ico01030172  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_RUG ico01060112  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_MAT ico01060122  // Quality: 0 Rarity: 0
+#define RECIPE_SKY_BLUE_WALL ico01070032  // Quality: 0 Rarity: 0
+#define RECIPE_BLUE_FLOWER_PAINTING ico02010812  // Quality: 0 Rarity: 0
+#define RECIPE_BLUE_FLOWER_VASE ico01090352  // Quality: 0 Rarity: 0
+#define RECIPE_DIFFICULT_WORKBOOKS ico03010162  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_BED ico01040053  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_SOFA ico01020123  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_TABLE ico01030143  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_LOW_TABLE ico01030153  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_CHAIR ico01020133  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_WARDROBE ico01090763  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_CHEST ico01030163  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_CABINET ico01030173  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_RUG ico01060113  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_MAT ico01060123  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_WALL ico01070033  // Quality: 0 Rarity: 0
+#define RECIPE_MINT_FLOWER_PAINTING ico02010813  // Quality: 0 Rarity: 0
+#define RECIPE_GREEN_FLOWER_VASE ico01090353  // Quality: 0 Rarity: 0
+#define RECIPE_EXCELLENT_GUIDEBOOKS ico03010163  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_BED ico01040054  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_SOFA ico01020124  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_TABLE ico01030144  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_LOW_TABLE ico01030154  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_CHAIR ico01020134  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_WARDROBE ico01090764  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_CHEST ico01030164  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_CABINET ico01030174  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_RUG ico01060114  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_MAT ico01060124  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_WALL ico01070034  // Quality: 0 Rarity: 0
+#define RECIPE_CITRUS_FLOWER_PAINTING ico02010814  // Quality: 0 Rarity: 0
+#define RECIPE_YELLOW_FLOWER_VASE ico01090354  // Quality: 0 Rarity: 0
+#define RECIPE_HEAVY_LOGBOOKS ico03010164  // Quality: 0 Rarity: 0
+#define RECIPE_GODDESS_SQUARE icf01040040  // Quality: 0 Rarity: 5
+#define RECIPE_DIVINE_SQUARE icf01040050  // Quality: 0 Rarity: 5
+#define RECIPE_FREE_SPIRITED_CAP ico05010010  // Quality: 0 Rarity: 0
+#define RECIPE_PIRATE_PRINCESS_FLAG ico05010020  // Quality: 0 Rarity: 0
+#define RECIPE_MAAJIK_DAEMON_STATUE ico05010030  // Quality: 0 Rarity: 0
+#define RECIPE_BLACK_KNIGHTS_SWORD ico05010040  // Quality: 0 Rarity: 0
+#define RECIPE_HOMELY_FLOWER_BASKET ico05010050  // Quality: 0 Rarity: 0
+#define RECIPE_DRAGONSLAYERS_SWORD ico05010060  // Quality: 0 Rarity: 0
+#define RECIPE_FORTUNE_CAT_DOLL ico05010070  // Quality: 0 Rarity: 0
+#define RECIPE_MUSTACHIOED_HELMET ico05010080  // Quality: 0 Rarity: 0
+#define RECIPE_KNIGHT_FLAN ico05010090  // Quality: 0 Rarity: 0
+#define RECIPE_EASY_GOING_SHIELD ico05010100  // Quality: 0 Rarity: 0
+#define RECIPE_BLACK_WOLF_DOLL ico05010110  // Quality: 0 Rarity: 0
+#define RECIPE_SNOWY_IDOL ico05010120  // Quality: 0 Rarity: 0
+#define RECIPE_PLUSHLING_LADY_DOLL ico05010130  // Quality: 0 Rarity: 0
+#define RECIPE_BERETED_TARGET ico05010140  // Quality: 0 Rarity: 0
+#define RECIPE_BREEZY_WEATHERVANE ico05010150  // Quality: 0 Rarity: 0
+#define RECIPE_CORNY_BOTTLE ico05010160  // Quality: 0 Rarity: 0
+#define RECIPE_ELEGANT_ICEWOLF_STATUE ico05010170  // Quality: 0 Rarity: 0
+#define RECIPE_WITCHS_BROOM ico05010180  // Quality: 0 Rarity: 0
+#define RECIPE_SLEEPY_PILLOW ico05010190  // Quality: 0 Rarity: 0
+#define RECIPE_STURDY_WHEELBARROW ico05010200  // Quality: 0 Rarity: 0
+#define RECIPE_CHEERY_WHEAT_JUICE ico05010210  // Quality: 0 Rarity: 0
+#define RECIPE_COLD_CRYSTAL ico05010220  // Quality: 0 Rarity: 0
+#define RECIPE_HEFTY_BEAR_CARVING ico05010230  // Quality: 0 Rarity: 0
+#define RECIPE_SOOTHING_BASKET ico05010240  // Quality: 0 Rarity: 0
+#define RECIPE_COUNTRY_WOOD_POT ico05010250  // Quality: 0 Rarity: 0
+#define RECIPE_OLD_MAN_ANCHOR ico05010260  // Quality: 0 Rarity: 0
+#define RECIPE_ANGLERS_HOOD ico05010270  // Quality: 0 Rarity: 0
+#define RECIPE_GRACEFUL_CARP_BANNER ico05010280  // Quality: 0 Rarity: 0
+#define RECIPE_BLUE_DEMONS_TILE ico05010290  // Quality: 0 Rarity: 0
+#define RECIPE_QUIRKY_HAMMER ico05010300  // Quality: 0 Rarity: 0
+#define RECIPE_FRESH_FACED_HELM ico05010310  // Quality: 0 Rarity: 0
+#define RECIPE_CASH_CAT ico05010320  // Quality: 0 Rarity: 0
+#define RECIPE_FLUFFY_BEAVER_DOLL ico05010330  // Quality: 0 Rarity: 0
+#define RECIPE_ODD_DRESSER ico05010340  // Quality: 0 Rarity: 0
+#define RECIPE_DANDY_BAT_HAT ico05010350  // Quality: 0 Rarity: 0
+#define RECIPE_WHOLESOME_YARN_BASKET ico05010360  // Quality: 0 Rarity: 0
+#define RECIPE_WOOLY_CHAIR ico05010370  // Quality: 0 Rarity: 0
+#define RECIPE_COOK_OLANTERN ico05010380  // Quality: 0 Rarity: 0
+#define RECIPE_ROYAL_YUMMY_STEW ico05010390  // Quality: 0 Rarity: 0
+#define RECIPE_SNACKY_PIE ico05010400  // Quality: 0 Rarity: 0
+#define RECIPE_BIG_OL_BOMB ico05010410  // Quality: 0 Rarity: 0
+#define RECIPE_SECRETIVE_MASK ico05010420  // Quality: 0 Rarity: 0
+#define RECIPE_LOVEY_DOVEY_LAMP ico05010430  // Quality: 0 Rarity: 0
+#define RECIPE_LEAFY_WATERING_CAN ico05010440  // Quality: 0 Rarity: 0
+#define RECIPE_BIG_BROTHER_BUST ico05010450  // Quality: 0 Rarity: 0
+#define RECIPE_SCARECORN ico05010460  // Quality: 0 Rarity: 0
+#define RECIPE_SHAMANS_PAINTING ico05010480  // Quality: 0 Rarity: 0
+#define RECIPE_LITTLE_BROTHER_BUST ico05010490  // Quality: 0 Rarity: 0
+#define RECIPE_GRACEFUL_FAN ico05010500  // Quality: 0 Rarity: 0
+#define RECIPE_OAK_TREE ico06010010  // Quality: 0 Rarity: 1
+#define RECIPE_APPLE_TREE ico06010020  // Quality: 0 Rarity: 2
+#define RECIPE_CHERRY_FRUIT_TREE ico06010030  // Quality: 0 Rarity: 4
+#define RECIPE_PEAR_TREE ico06010040  // Quality: 0 Rarity: 3
+#define RECIPE_PINE_TREE ico06010050  // Quality: 0 Rarity: 2
+#define RECIPE_CHERRY_TREE ico06010060  // Quality: 0 Rarity: 3
+#define RECIPE_SUGAR_TREE ico06010070  // Quality: 0 Rarity: 3
+#define RECIPE_STARRY_TREE ico06010080  // Quality: 0 Rarity: 4
+#define RECIPE_DARKWOOD_TREE ico06010090  // Quality: 0 Rarity: 5
+#define RECIPE_PALM_TREE ico06010110  // Quality: 0 Rarity: 1
+#define RECIPE_PALM_FRUIT_TREE ico06010120  // Quality: 0 Rarity: 2
+#define RECIPE_COPPER_DEPOSIT ico06020010  // Quality: 0 Rarity: 1
+#define RECIPE_IRON_ORE_DEPOSIT ico06020020  // Quality: 0 Rarity: 2
+#define RECIPE_SILVER_ORE_DEPOSIT ico06020030  // Quality: 0 Rarity: 3
+#define RECIPE_GOLD_DEPOSIT ico06020040  // Quality: 0 Rarity: 4
+#define RECIPE_PLATINUM_DEPOSIT ico06020050  // Quality: 0 Rarity: 4
+#define RECIPE_MAGIC_ORE_DEPOSIT ico06020060  // Quality: 0 Rarity: 5
+#define RECIPE_TROPICAL_SOFA ico01020010_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPICAL_CHAIR ico01020020_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPICAL_STONE_BENCH ico01020030_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPICAL_WOODEN_BENCH ico01020040_01  // Quality: 3 Rarity: 2
+#define RECIPE_ROUND_WOODEN_CHAIR ico01020070_01  // Quality: 3 Rarity: 3
+#define RECIPE_CLASSIC_BENCH ico01020080_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOODEN_BENCH ico01020090_01  // Quality: 3 Rarity: 2
+#define RECIPE_WHITE_BUTTERFLY_SOFA ico01020100_01  // Quality: 3 Rarity: 4
+#define RECIPE_SULTANS_CHAIR ico01020110_01  // Quality: 3 Rarity: 5
+#define RECIPE_WOODEN_SOFA ico01020120_01  // Quality: 3 Rarity: 4
+#define RECIPE_PASTEL_SOFA ico01020121_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOODEN_CHAIR ico01020130_01  // Quality: 3 Rarity: 4
+#define RECIPE_PASTEL_CHAIR ico01020131_01  // Quality: 3 Rarity: 3
+#define RECIPE_PORT_TOWN_COUCH ico01020140_01  // Quality: 3 Rarity: 4
+#define RECIPE_PORT_TOWN_CHAIR ico01020150_01  // Quality: 3 Rarity: 4
+#define RECIPE_PIRATE_BENCH ico01020160_01  // Quality: 3 Rarity: 3
+#define RECIPE_PIRATE_CHAIR ico01020170_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_NIGHT_SOFA ico01020180_01  // Quality: 3 Rarity: 4
+#define RECIPE_STARRY_NIGHT_CHAIR ico01020190_01  // Quality: 3 Rarity: 4
+#define RECIPE_TREACHEROUS_SOFA ico01020200_01  // Quality: 3 Rarity: 5
+#define RECIPE_CHAIR_OF_ATONEMENT ico01020210_01  // Quality: 3 Rarity: 5
+#define RECIPE_FOREST_SOFA ico01020220_01  // Quality: 3 Rarity: 2
+#define RECIPE_FOREST_CHAIR ico01020230_01  // Quality: 3 Rarity: 3
+#define RECIPE_BEACH_CHAIR ico01020280_01  // Quality: 3 Rarity: 4
+#define RECIPE_SEABREEZE_BENCH ico01020310_01  // Quality: 3 Rarity: 4
+#define RECIPE_DESERT_BENCH ico01020330_01  // Quality: 3 Rarity: 5
+#define RECIPE_BENCH_OF_THE_CHOSEN ico01020350_01  // Quality: 3 Rarity: 5
+#define RECIPE_BAMBOO_BENCH ico01020370_01  // Quality: 3 Rarity: 2
+#define RECIPE_REGAL_SOFA ico01020380_01  // Quality: 3 Rarity: 2
+#define RECIPE_REGAL_CHAIR ico01020390_01  // Quality: 3 Rarity: 2
+#define RECIPE_RANOAHS_THRONE ico01020400_01  // Quality: 3 Rarity: 5
+#define RECIPE_MUSEUM_CHAIR ico01020410_01  // Quality: 3 Rarity: 5
+#define RECIPE_TROPICAL_TABLE ico01030010_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPICAL_LOW_TABLE ico01030020_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPICAL_CHEST ico01030030_01  // Quality: 3 Rarity: 1
+#define RECIPE_WOODEN_RACK ico01030090_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_STAND ico01030100_01  // Quality: 3 Rarity: 2
+#define RECIPE_ROUND_WOODEN_TABLE ico01030120_01  // Quality: 3 Rarity: 4
+#define RECIPE_WOODEN_DRAWER ico01030130_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOODEN_DINING_TABLE ico01030140_01  // Quality: 3 Rarity: 3
+#define RECIPE_PASTEL_TABLE ico01030141_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_LOW_TABLE ico01030150_01  // Quality: 3 Rarity: 3
+#define RECIPE_PASTEL_LOW_TABLE ico01030151_01  // Quality: 3 Rarity: 1
+#define RECIPE_WOODEN_CHEST ico01030160_01  // Quality: 3 Rarity: 3
+#define RECIPE_PASTEL_CHEST ico01030161_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_CABINET ico01030170_01  // Quality: 3 Rarity: 4
+#define RECIPE_PASTEL_CABINET ico01030171_01  // Quality: 3 Rarity: 1
+#define RECIPE_TILED_DINING_TABLE ico01030180_01  // Quality: 3 Rarity: 3
+#define RECIPE_TILED_LOW_TABLE ico01030190_01  // Quality: 3 Rarity: 3
+#define RECIPE_TILED_CHEST ico01030200_01  // Quality: 3 Rarity: 4
+#define RECIPE_TILED_CABINET ico01030210_01  // Quality: 3 Rarity: 4
+#define RECIPE_PIRATE_DINING_TABLE ico01030220_01  // Quality: 3 Rarity: 4
+#define RECIPE_PIRATE_LOW_TABLE ico01030230_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_NIGHT_TABLE ico01030240_01  // Quality: 3 Rarity: 4
+#define RECIPE_STARRY_NIGHT_LOW_TABLE ico01030250_01  // Quality: 3 Rarity: 4
+#define RECIPE_BLOODTHIRSTY_TABLE ico01030260_01  // Quality: 3 Rarity: 5
+#define RECIPE_OCCULT_LOW_TABLE ico01030270_01  // Quality: 3 Rarity: 5
+#define RECIPE_FOREST_DINING_TABLE ico01030280_01  // Quality: 3 Rarity: 1
+#define RECIPE_FOREST_LOW_TABLE ico01030290_01  // Quality: 3 Rarity: 1
+#define RECIPE_FOREST_CABINET ico01030300_01  // Quality: 3 Rarity: 3
+#define RECIPE_PARASOL_TABLE ico01030350_01  // Quality: 3 Rarity: 4
+#define RECIPE_STONE_COUNTERTOP ico01030360_01  // Quality: 3 Rarity: 1
+#define RECIPE_LONG_STONE_COUNTERTOP ico01030370_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_SHELF ico01030380_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPICAL_WOODEN_DESK ico01030390_01  // Quality: 3 Rarity: 2
+#define RECIPE_REGAL_TABLE ico01030400_01  // Quality: 3 Rarity: 2
+#define RECIPE_REGAL_LOW_TABLE ico01030410_01  // Quality: 3 Rarity: 2
+#define RECIPE_REGAL_CHEST ico01030420_01  // Quality: 3 Rarity: 3
+#define RECIPE_REGAL_CABINET ico01030430_01  // Quality: 3 Rarity: 1
+#define RECIPE_TEA_TABLE ico01030440_01  // Quality: 3 Rarity: 4
+#define RECIPE_MUSEUM_TABLE ico01030450_01  // Quality: 3 Rarity: 5
+#define RECIPE_TROPICAL_BED ico01040010_01  // Quality: 3 Rarity: 1
+#define RECIPE_REGAL_BLUE_BED ico01040040_01  // Quality: 3 Rarity: 4
+#define RECIPE_WOODEN_BED ico01040050_01  // Quality: 3 Rarity: 4
+#define RECIPE_PASTEL_BED ico01040051_01  // Quality: 3 Rarity: 3
+#define RECIPE_PORT_TOWN_BED ico01040060_01  // Quality: 3 Rarity: 4
+#define RECIPE_PIRATE_BERTH ico01040070_01  // Quality: 3 Rarity: 4
+#define RECIPE_STARRY_NIGHT_BED ico01040080_01  // Quality: 3 Rarity: 4
+#define RECIPE_NIGHTMARE_BED ico01040090_01  // Quality: 3 Rarity: 5
+#define RECIPE_FOREST_BED ico01040100_01  // Quality: 3 Rarity: 2
+#define RECIPE_HAMMOCK ico01040130_01  // Quality: 3 Rarity: 3
+#define RECIPE_BEACH_BED ico01040140_01  // Quality: 3 Rarity: 4
+#define RECIPE_BED_OF_TERROR ico01040150_01  // Quality: 3 Rarity: 5
+#define RECIPE_REGAL_BED ico01040160_01  // Quality: 3 Rarity: 3
+#define RECIPE_TROPICAL_RUG ico01060010_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPICAL_MAT ico01060020_01  // Quality: 3 Rarity: 1
+#define RECIPE_WHITE_WOOLIE_TROPHY ico01060060_01  // Quality: 3 Rarity: 5
+#define RECIPE_TROPICAL_FLOWER_MAT ico01060070_01  // Quality: 3 Rarity: 2
+#define RECIPE_CUTE_RUG ico01060080_01  // Quality: 3 Rarity: 1
+#define RECIPE_FLEUR_DE_LIS_MAT ico01060090_01  // Quality: 3 Rarity: 4
+#define RECIPE_PECULIAR_MAT ico01060100_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOVEN_CASTELE_RUG ico01060110_01  // Quality: 3 Rarity: 2
+#define RECIPE_PASTEL_RUG ico01060111_01  // Quality: 3 Rarity: 4
+#define RECIPE_WOVEN_CASTELE_MAT ico01060120_01  // Quality: 3 Rarity: 2
+#define RECIPE_PASTEL_MAT ico01060121_01  // Quality: 3 Rarity: 4
+#define RECIPE_PORT_TOWN_RUG ico01060130_01  // Quality: 3 Rarity: 4
+#define RECIPE_PORT_TOWN_MAT ico01060140_01  // Quality: 3 Rarity: 3
+#define RECIPE_SHIP_DECK_RUG ico01060150_01  // Quality: 3 Rarity: 3
+#define RECIPE_PIRATE_MAT ico01060160_01  // Quality: 3 Rarity: 4
+#define RECIPE_STARRY_NIGHT_RUG ico01060170_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_NIGHT_MAT ico01060180_01  // Quality: 3 Rarity: 3
+#define RECIPE_UNDERWORLD_RUG ico01060190_01  // Quality: 3 Rarity: 4
+#define RECIPE_MAT_OF_DARKNESS ico01060200_01  // Quality: 3 Rarity: 4
+#define RECIPE_CLOVER_RUG ico01060210_01  // Quality: 3 Rarity: 2
+#define RECIPE_LEAF_MAT ico01060220_01  // Quality: 3 Rarity: 2
+#define RECIPE_ANTIQUE_TROPICAL_MAT ico01060280_01  // Quality: 3 Rarity: 1
+#define RECIPE_BLUE_PATTERN_RUG ico01060290_01  // Quality: 3 Rarity: 3
+#define RECIPE_SPIRAL_MAT ico01060300_01  // Quality: 3 Rarity: 2
+#define RECIPE_RED_PATTERN_RUG ico01060310_01  // Quality: 3 Rarity: 2
+#define RECIPE_PASTEL_WOVEN_RUG ico01060320_01  // Quality: 3 Rarity: 2
+#define RECIPE_PASTEL_WOVEN_MAT ico01060330_01  // Quality: 3 Rarity: 2
+#define RECIPE_GREEN_RUG ico01060340_01  // Quality: 3 Rarity: 1
+#define RECIPE_STRAW_MAT ico01060350_01  // Quality: 3 Rarity: 2
+#define RECIPE_BIG_LEAF_RUG ico01060360_01  // Quality: 3 Rarity: 2
+#define RECIPE_SWORD_PATTERN_RUG ico01060370_01  // Quality: 3 Rarity: 3
+#define RECIPE_REGAL_RUG ico01060380_01  // Quality: 3 Rarity: 2
+#define RECIPE_ROYAL_CAPITAL_MAT ico01060390_01  // Quality: 3 Rarity: 2
+#define RECIPE_STARRY_EYED_RUG ico01060400_01  // Quality: 3 Rarity: 4
+#define RECIPE_YOUNG_KINGS_RUG ico01060410_01  // Quality: 3 Rarity: 4
+#define RECIPE_ORANGE_RUG ico01060420_01  // Quality: 3 Rarity: 3
+#define RECIPE_STRAW_RUG ico01060430_01  // Quality: 3 Rarity: 1
+#define RECIPE_SOFT_RUSH_RUG ico01060440_01  // Quality: 3 Rarity: 2
+#define RECIPE_FLOWERY_RUG ico01060450_01  // Quality: 3 Rarity: 4
+#define RECIPE_TROPICAL_WALL ico01070010_01  // Quality: 3 Rarity: 1
+#define RECIPE_REED_SCREEN_WALL ico01070011_01  // Quality: 3 Rarity: 2
+#define RECIPE_NATURAL_WALL ico01070020_01  // Quality: 3 Rarity: 3
+#define RECIPE_OLD_CASTELE_WALL ico01070030_01  // Quality: 3 Rarity: 3
+#define RECIPE_PASTEL_WALL ico01070031_01  // Quality: 3 Rarity: 4
+#define RECIPE_PLASTER_WALL ico01070040_01  // Quality: 3 Rarity: 4
+#define RECIPE_PIRATE_SHIP_WALL ico01070050_01  // Quality: 3 Rarity: 3
+#define RECIPE_AL_MAAJIKAN_WALL ico01070060_01  // Quality: 3 Rarity: 4
+#define RECIPE_ENCHANTED_WALL ico01070070_01  // Quality: 3 Rarity: 5
+#define RECIPE_FOREST_WALL ico01070080_01  // Quality: 3 Rarity: 3
+#define RECIPE_SHORE_WALL ico01070110_01  // Quality: 3 Rarity: 4
+#define RECIPE_LOG_WALL ico01070140_01  // Quality: 3 Rarity: 2
+#define RECIPE_REGAL_WALLPAPER ico01070150_01  // Quality: 3 Rarity: 2
+#define RECIPE_ROYAL_CAPITAL_WALL ico01070160_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_GARDEN_WALL ico01070170_01  // Quality: 3 Rarity: 5
+#define RECIPE_TEA_HOUSE_WALL ico01070190_01  // Quality: 3 Rarity: 4
+#define RECIPE_SWEET_WALL ico01070220_01  // Quality: 3 Rarity: 3
+#define RECIPE_JOINED_WOOD_FLOOR ico01080010_01  // Quality: 3 Rarity: 1
+#define RECIPE_STONE_TILE_FLOOR ico01080020_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_FLOOR ico01080030_01  // Quality: 3 Rarity: 3
+#define RECIPE_PASTEL_FLOOR ico01080031_01  // Quality: 3 Rarity: 4
+#define RECIPE_MARINE_FLOOR ico01080040_01  // Quality: 3 Rarity: 4
+#define RECIPE_PIRATE_SHIP_FLOOR ico01080050_01  // Quality: 3 Rarity: 3
+#define RECIPE_DESERT_FLOOR ico01080060_01  // Quality: 3 Rarity: 4
+#define RECIPE_UNSETTLING_STONE_FLOOR ico01080070_01  // Quality: 3 Rarity: 5
+#define RECIPE_WOODLAND_FLOOR ico01080080_01  // Quality: 3 Rarity: 3
+#define RECIPE_SHORE_FLOOR ico01080110_01  // Quality: 3 Rarity: 3
+#define RECIPE_LOG_FLOOR ico01080140_01  // Quality: 3 Rarity: 2
+#define RECIPE_REGAL_FLOOR ico01080150_01  // Quality: 3 Rarity: 2
+#define RECIPE_ROYAL_CAPITAL_FLOOR ico01080160_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_GARDEN_FLOOR ico01080170_01  // Quality: 3 Rarity: 5
+#define RECIPE_TEA_HOUSE_FLOOR ico01080190_01  // Quality: 3 Rarity: 4
+#define RECIPE_TROPICAL_DRESSER ico01090010_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPICAL_CABINET ico01090020_01  // Quality: 3 Rarity: 2
+#define RECIPE_BOUNTIFUL_HARVEST_RACK ico01090050_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOODEN_WATERING_CAN ico01090070_01  // Quality: 3 Rarity: 1
+#define RECIPE_HAY ico01090080_01  // Quality: 3 Rarity: 1
+#define RECIPE_WOODEN_BUCKET ico01090090_01  // Quality: 3 Rarity: 1
+#define RECIPE_BLANK_CANVAS ico01090110_01  // Quality: 3 Rarity: 2
+#define RECIPE_RUSTIC_STANDING_TORCH ico01090150_01  // Quality: 3 Rarity: 1
+#define RECIPE_STACK_OF_FIREWOOD ico01090160_01  // Quality: 3 Rarity: 1
+#define RECIPE_CRATE ico01090170_01  // Quality: 3 Rarity: 1
+#define RECIPE_BARREL ico01090180_01  // Quality: 3 Rarity: 2
+#define RECIPE_RUSTIC_JAR ico01090190_01  // Quality: 3 Rarity: 1
+#define RECIPE_WOVEN_SACK ico01090200_01  // Quality: 3 Rarity: 1
+#define RECIPE_ISLAND_SIGN ico01090210_01  // Quality: 3 Rarity: 1
+#define RECIPE_MENU_BOARD ico01090250_01  // Quality: 3 Rarity: 3
+#define RECIPE_WORKERS_DESK ico01090270_01  // Quality: 3 Rarity: 3
+#define RECIPE_SURFBOARD ico01090280_01  // Quality: 3 Rarity: 4
+#define RECIPE_SAWING_TABLE ico01090290_01  // Quality: 3 Rarity: 3
+#define RECIPE_SANSEVIERIA_PLANT ico01090320_01  // Quality: 3 Rarity: 3
+#define RECIPE_POTTED_COCONUT ico01090330_01  // Quality: 3 Rarity: 2
+#define RECIPE_POTTED_CACTUS ico01090340_01  // Quality: 3 Rarity: 4
+#define RECIPE_WHITE_FLOWER_VASE ico01090350_01  // Quality: 3 Rarity: 3
+#define RECIPE_PINK_FLOWER_VASE ico01090351_01  // Quality: 3 Rarity: 4
+#define RECIPE_CELESTIAS_GIFT_IN_VASE ico01090360_01  // Quality: 3 Rarity: 5
+#define RECIPE_TREASURE_CHEST ico01090380_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODCUTTERS_STUMP ico01090420_01  // Quality: 3 Rarity: 2
+#define RECIPE_WHEELBARROW ico01090430_01  // Quality: 3 Rarity: 3
+#define RECIPE_PALADINS_CREST ico01090450_01  // Quality: 3 Rarity: 4
+#define RECIPE_MERCENARYS_BOUNTY ico01090460_01  // Quality: 3 Rarity: 4
+#define RECIPE_MAGIC_CAULDRON ico01090470_01  // Quality: 3 Rarity: 5
+#define RECIPE_MAGIC_BROOM ico01090480_01  // Quality: 3 Rarity: 4
+#define RECIPE_MINERS_TOOLS ico01090490_01  // Quality: 3 Rarity: 3
+#define RECIPE_FRESH_VEGETABLES ico01090510_01  // Quality: 3 Rarity: 2
+#define RECIPE_FRESH_FISH ico01090520_01  // Quality: 3 Rarity: 1
+#define RECIPE_FISHING_ROD_STAND ico01090530_01  // Quality: 3 Rarity: 3
+#define RECIPE_STEWING_POT ico01090540_01  // Quality: 3 Rarity: 3
+#define RECIPE_FARMING_TOOL_STAND ico01090550_01  // Quality: 3 Rarity: 3
+#define RECIPE_ORE_COLLECTION ico01090560_01  // Quality: 3 Rarity: 2
+#define RECIPE_SEWING_MACHINE ico01090580_01  // Quality: 3 Rarity: 2
+#define RECIPE_TAILORS_MANNEQUIN ico01090590_01  // Quality: 3 Rarity: 2
+#define RECIPE_MISPLACED_HAMMER ico01090600_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_SIDE_TABLE ico01090610_01  // Quality: 3 Rarity: 1
+#define RECIPE_COCONUT_PLANT ico01090620_01  // Quality: 3 Rarity: 1
+#define RECIPE_PAINT_BUCKET ico01090630_01  // Quality: 3 Rarity: 2
+#define RECIPE_DRAFTING_TABLE ico01090640_01  // Quality: 3 Rarity: 2
+#define RECIPE_GRANDFATHER_CLOCK ico01090650_01  // Quality: 3 Rarity: 4
+#define RECIPE_POTTED_PALM_TREE ico01090660_01  // Quality: 3 Rarity: 3
+#define RECIPE_NOBLE_DRESS ico01090670_01  // Quality: 3 Rarity: 5
+#define RECIPE_WOODEN_TRINKET_SHELF ico01090680_01  // Quality: 3 Rarity: 4
+#define RECIPE_WOODEN_BOOKCASE ico01090700_01  // Quality: 3 Rarity: 4
+#define RECIPE_DECORATIVE_EQUIPMENT ico01090710_01  // Quality: 3 Rarity: 4
+#define RECIPE_ALCHEMY_TABLE ico01090720_01  // Quality: 3 Rarity: 4
+#define RECIPE_ARTSY_DESK ico01090730_01  // Quality: 3 Rarity: 2
+#define RECIPE_COUNTRY_SHELF ico01090740_01  // Quality: 3 Rarity: 3
+#define RECIPE_CUPBOARD ico01090750_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOODEN_WARDROBE ico01090760_01  // Quality: 3 Rarity: 4
+#define RECIPE_PASTEL_WARDROBE ico01090761_01  // Quality: 3 Rarity: 2
+#define RECIPE_PORT_TOWN_WARDROBE ico01090770_01  // Quality: 3 Rarity: 4
+#define RECIPE_PIRATE_WARDROBE ico01090780_01  // Quality: 3 Rarity: 4
+#define RECIPE_PIRATE_CHEST ico01090790_01  // Quality: 3 Rarity: 3
+#define RECIPE_PIRATE_CABINET ico01090800_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_NIGHT_WARDROBE ico01090810_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_NIGHT_CHEST ico01090820_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_NIGHT_CABINET ico01090830_01  // Quality: 3 Rarity: 4
+#define RECIPE_OTHERWORLDLY_WARDROBE ico01090840_01  // Quality: 3 Rarity: 4
+#define RECIPE_DARKNESS_EATING_CHEST ico01090850_01  // Quality: 3 Rarity: 5
+#define RECIPE_OMINOUS_CABINET ico01090860_01  // Quality: 3 Rarity: 3
+#define RECIPE_FOREST_WARDROBE ico01090870_01  // Quality: 3 Rarity: 3
+#define RECIPE_FOREST_CHEST ico01090880_01  // Quality: 3 Rarity: 3
+#define RECIPE_SULTANS_TOILET ico01090920_01  // Quality: 3 Rarity: 5
+#define RECIPE_BEACH_BALL ico01090960_01  // Quality: 3 Rarity: 2
+#define RECIPE_FLOATIE_RING ico01090970_01  // Quality: 3 Rarity: 3
+#define RECIPE_STRANGERS_COFFIN ico01091010_01  // Quality: 3 Rarity: 5
+#define RECIPE_PILE_OF_PIRATE_TREASURE ico01091080_01  // Quality: 3 Rarity: 4
+#define RECIPE_TAIKO_DRUM ico01091130_01  // Quality: 3 Rarity: 2
+#define RECIPE_TROPICAL_VASE ico01091140_01  // Quality: 3 Rarity: 2
+#define RECIPE_CORN_DRYING_RACK ico01091150_01  // Quality: 3 Rarity: 2
+#define RECIPE_BASKET_OF_CORN ico01091160_01  // Quality: 3 Rarity: 2
+#define RECIPE_HEARTH_WITH_CORN ico01091170_01  // Quality: 3 Rarity: 2
+#define RECIPE_FISH_DRYING_RACK ico01091180_01  // Quality: 3 Rarity: 1
+#define RECIPE_HEARTH_WITH_FISH ico01091190_01  // Quality: 3 Rarity: 2
+#define RECIPE_BEAKER_SET ico01091200_01  // Quality: 3 Rarity: 4
+#define RECIPE_CHALKBOARD ico01091210_01  // Quality: 3 Rarity: 4
+#define RECIPE_SWORDFISH_TAPESTRY ico01091220_01  // Quality: 3 Rarity: 3
+#define RECIPE_SPINNING_WHEEL ico01091230_01  // Quality: 3 Rarity: 2
+#define RECIPE_TAILORED_CLOTHES ico01091231_01  // Quality: 3 Rarity: 4
+#define RECIPE_ORE_NAMENT ico01091232_01  // Quality: 3 Rarity: 4
+#define RECIPE_BOXES_OF_ORE ico01091233_01  // Quality: 3 Rarity: 3
+#define RECIPE_HALF_SAWED_LOG ico01091234_01  // Quality: 3 Rarity: 2
+#define RECIPE_EGG_SHELF ico01091235_01  // Quality: 3 Rarity: 2
+#define RECIPE_STOVE ico01091236_01  // Quality: 3 Rarity: 2
+#define RECIPE_STONE_OVEN ico01091237_01  // Quality: 3 Rarity: 3
+#define RECIPE_SMELTER ico01091238_01  // Quality: 3 Rarity: 4
+#define RECIPE_GRINDSTONE ico01091239_01  // Quality: 3 Rarity: 1
+#define RECIPE_INGOT_PILE ico01091240_01  // Quality: 3 Rarity: 2
+#define RECIPE_LOG_FLOWER_BOX ico01091250_01  // Quality: 3 Rarity: 3
+#define RECIPE_BARRELS_OF_WHEAT_JUICE ico01091260_01  // Quality: 3 Rarity: 3
+#define RECIPE_NOTICE_BOARD ico01091270_01  // Quality: 3 Rarity: 2
+#define RECIPE_BIBLIOPHILES_BOOKCASE ico01091280_01  // Quality: 3 Rarity: 2
+#define RECIPE_ROCK_COLLECTION ico01091290_01  // Quality: 3 Rarity: 1
+#define RECIPE_NATURAL_CHAIR ico01091300_01  // Quality: 3 Rarity: 1
+#define RECIPE_FISH_TRAP ico01091310_01  // Quality: 3 Rarity: 1
+#define RECIPE_LIDDED_JAR ico01091320_01  // Quality: 3 Rarity: 1
+#define RECIPE_STACKED_CRATES ico01091330_01  // Quality: 3 Rarity: 2
+#define RECIPE_BOUNTIFUL_HARVEST_BOX ico01091340_01  // Quality: 3 Rarity: 3
+#define RECIPE_SWORDFIGHTERS_BARREL ico01091350_01  // Quality: 3 Rarity: 1
+#define RECIPE_LANCERS_BARREL ico01091360_01  // Quality: 3 Rarity: 2
+#define RECIPE_MYSTERIOUS_DOOR ico01091370_01  // Quality: 3 Rarity: 5
+#define RECIPE_HAY_BALE ico01091390_01  // Quality: 3 Rarity: 2
+#define RECIPE_HAY_TROUGH ico01091400_01  // Quality: 3 Rarity: 2
+#define RECIPE_PALADINS_MANNEQUIN ico01091410_01  // Quality: 3 Rarity: 2
+#define RECIPE_HEROS_MANNEQUIN ico01091420_01  // Quality: 3 Rarity: 4
+#define RECIPE_BALLOON_ART ico01091430_01  // Quality: 3 Rarity: 5
+#define RECIPE_DECORATIVE_CURTAIN ico01091440_01  // Quality: 3 Rarity: 4
+#define RECIPE_BLUE_BANNER ico01091450_01  // Quality: 3 Rarity: 3
+#define RECIPE_WEAPON_STAND ico01091460_01  // Quality: 3 Rarity: 4
+#define RECIPE_GRAND_STANDING_TORCH ico01091470_01  // Quality: 3 Rarity: 2
+#define RECIPE_WHEAT_JUICE_ON_TAP ico01091480_01  // Quality: 3 Rarity: 2
+#define RECIPE_GUITAR ico01091490_01  // Quality: 3 Rarity: 2
+#define RECIPE_HARP ico01091500_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_PARTITION ico01091510_01  // Quality: 3 Rarity: 1
+#define RECIPE_TROPHY ico01091520_01  // Quality: 3 Rarity: 4
+#define RECIPE_FLOWER_PAINTING ico01091530_01  // Quality: 3 Rarity: 3
+#define RECIPE_NIGHTTIME_PAINTING ico01091540_01  // Quality: 3 Rarity: 3
+#define RECIPE_PLUSHLING_TREE_POT ico01091550_01  // Quality: 3 Rarity: 2
+#define RECIPE_SPOOKY_LAMP ico01091560_01  // Quality: 3 Rarity: 4
+#define RECIPE_BLUE_SPOOKY_LAMP ico01091561_01  // Quality: 3 Rarity: 5
+#define RECIPE_GREEN_SPOOKY_LAMP ico01091562_01  // Quality: 3 Rarity: 5
+#define RECIPE_RED_SPOOKY_LAMP ico01091563_01  // Quality: 3 Rarity: 5
+#define RECIPE_STATUE_OF_FRAJEEL ico01091570_01  // Quality: 3 Rarity: 5
+#define RECIPE_ARCHED_GATE ico01091580_01  // Quality: 3 Rarity: 5
+#define RECIPE_SURFING_LEAFE_STATUE ico01091590_01  // Quality: 3 Rarity: 4
+#define RECIPE_PLUSHLING_STATUE ico01091600_01  // Quality: 3 Rarity: 3
+#define RECIPE_TURTLE_AND_LEAFE_STATUE ico01091610_01  // Quality: 3 Rarity: 4
+#define RECIPE_MERMAID_STATUE ico01091620_01  // Quality: 3 Rarity: 4
+#define RECIPE_OWL_STATUE ico01091630_01  // Quality: 3 Rarity: 4
+#define RECIPE_ANCIENT_ROBOT_MODEL ico01091650_01  // Quality: 3 Rarity: 5
+#define RECIPE_LEAFE_TOPIARY ico01091660_01  // Quality: 3 Rarity: 4
+#define RECIPE_STANDING_TORCH_WITH_FLAG ico01091670_01  // Quality: 3 Rarity: 3
+#define RECIPE_TRIPS_PERCH ico01091680_01  // Quality: 3 Rarity: 5
+#define RECIPE_TRIPS_COOL_PORTRAIT ico01091690_01  // Quality: 3 Rarity: 2
+#define RECIPE_TRIPS_ARTSY_PORTRAIT ico01091700_01  // Quality: 3 Rarity: 1
+#define RECIPE_STONE_WORKBENCH ico01100010_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_WORKBENCH ico01100020_01  // Quality: 3 Rarity: 1
+#define RECIPE_ISLAND_MAP_BOARD ico02010060_01  // Quality: 3 Rarity: 2
+#define RECIPE_SHIPWHEEL_TAPESTRY ico02010070_01  // Quality: 3 Rarity: 3
+#define RECIPE_TOOL_HOOK ico02010080_01  // Quality: 3 Rarity: 2
+#define RECIPE_FRESHLY_PICKED_WREATH ico02010100_01  // Quality: 3 Rarity: 4
+#define RECIPE_TROPICAL_FLOWER_WREATH ico02010110_01  // Quality: 3 Rarity: 3
+#define RECIPE_PORTRAIT_OF_ERIK ico02010120_01  // Quality: 3 Rarity: 5
+#define RECIPE_ROYAL_FAMILY_PORTRAIT ico02010130_01  // Quality: 3 Rarity: 5
+#define RECIPE_FISH_FOR_LIFE_FLAG ico02010200_01  // Quality: 3 Rarity: 4
+#define RECIPE_GREATSWORD_OF_YORE ico02010210_01  // Quality: 3 Rarity: 5
+#define RECIPE_HUNTERS_GEAR ico02010220_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOODCUTTERS_TOOLS ico02010230_01  // Quality: 3 Rarity: 3
+#define RECIPE_KITCHEN_UTENSILS ico02010240_01  // Quality: 3 Rarity: 3
+#define RECIPE_SIGN_BOARD ico02010260_01  // Quality: 3 Rarity: 1
+#define RECIPE_RED_FLOWER_ORNAMENT ico02010280_01  // Quality: 3 Rarity: 1
+#define RECIPE_LIGHT_BLUE_TAPESTRY ico02010290_01  // Quality: 3 Rarity: 2
+#define RECIPE_DARTBOARD ico02010300_01  // Quality: 3 Rarity: 3
+#define RECIPE_LUMINOUS_PAINTING ico02010310_01  // Quality: 3 Rarity: 5
+#define RECIPE_SWORDFISH_PRINT ico02010320_01  // Quality: 3 Rarity: 4
+#define RECIPE_GOLDEN_SWORDFISH_PRINT ico02010340_01  // Quality: 3 Rarity: 5
+#define RECIPE_BASS_OF_DARKNESS_PRINT ico02010360_01  // Quality: 3 Rarity: 4
+#define RECIPE_BEELZEBUB_TUNA_PRINT ico02010370_01  // Quality: 3 Rarity: 5
+#define RECIPE_POSEIDON_SWORDFISH_PRINT ico02010380_01  // Quality: 3 Rarity: 4
+#define RECIPE_FOREST_LORDFISH_PRINT ico02010400_01  // Quality: 3 Rarity: 4
+#define RECIPE_COLDWATER_TUNA_PRINT ico02010410_01  // Quality: 3 Rarity: 4
+#define RECIPE_DEEP_SEA_LORDFISH_PRINT ico02010430_01  // Quality: 3 Rarity: 4
+#define RECIPE_GODFISH_PRINT ico02010440_01  // Quality: 3 Rarity: 5
+#define RECIPE_BLUESCALE_LORDFISH_PRINT ico02010450_01  // Quality: 3 Rarity: 4
+#define RECIPE_FAMILY_PORTRAIT ico02010460_01  // Quality: 3 Rarity: 5
+#define RECIPE_UNFAMILIAR_MAP ico02010470_01  // Quality: 3 Rarity: 5
+#define RECIPE_FEATHER_ORNAMENT ico02010480_01  // Quality: 3 Rarity: 2
+#define RECIPE_FISHING_ROD_RACK ico02010490_01  // Quality: 3 Rarity: 1
+#define RECIPE_RUSTIC_WOVEN_TAPESTRY ico02010500_01  // Quality: 3 Rarity: 1
+#define RECIPE_BIG_FISHING_HOOK ico02010510_01  // Quality: 3 Rarity: 2
+#define RECIPE_FISHING_NET ico02010520_01  // Quality: 3 Rarity: 2
+#define RECIPE_SWORDFISH_SKELETON ico02010530_01  // Quality: 3 Rarity: 5
+#define RECIPE_FISH_SKELETON ico02010540_01  // Quality: 3 Rarity: 2
+#define RECIPE_DRIED_FISH_RESERVE ico02010550_01  // Quality: 3 Rarity: 1
+#define RECIPE_BLUE_TAPESTRY ico02010560_01  // Quality: 3 Rarity: 2
+#define RECIPE_BLUE_DECORATIVE_FEATHER ico02010570_01  // Quality: 3 Rarity: 2
+#define RECIPE_PASTEL_GARLAND ico02010580_01  // Quality: 3 Rarity: 3
+#define RECIPE_MODEST_GARLAND ico02010590_01  // Quality: 3 Rarity: 3
+#define RECIPE_DECORATIVE_SHIELDS ico02010600_01  // Quality: 3 Rarity: 3
+#define RECIPE_GREEN_WREATH ico02010610_01  // Quality: 3 Rarity: 2
+#define RECIPE_CROWN_WALL_DECORATION ico02010620_01  // Quality: 3 Rarity: 3
+#define RECIPE_HANGING_DRIED_FISH ico02010630_01  // Quality: 3 Rarity: 1
+#define RECIPE_DECORATIVE_FOLDING_FAN ico02010650_01  // Quality: 3 Rarity: 4
+#define RECIPE_FANCY_WALL_ART ico02010660_01  // Quality: 3 Rarity: 3
+#define RECIPE_HANGING_SCROLL ico02010670_01  // Quality: 3 Rarity: 3
+#define RECIPE_NOSTALGIC_PAINTING ico02010680_01  // Quality: 3 Rarity: 5
+#define RECIPE_BLACK_DRAGON_PAINTING ico02010690_01  // Quality: 3 Rarity: 5
+#define RECIPE_WEIRD_MONITOR ico02010700_01  // Quality: 3 Rarity: 4
+#define RECIPE_DRIED_LEAF_ART ico02010710_01  // Quality: 3 Rarity: 2
+#define RECIPE_PLAINS_LORDFISH_PRINT ico02010720_01  // Quality: 3 Rarity: 4
+#define RECIPE_CHERRY_LORDFISH_PRINT ico02010730_01  // Quality: 3 Rarity: 4
+#define RECIPE_GREAT_LUCKY_BREAM_PRINT ico02010740_01  // Quality: 3 Rarity: 4
+#define RECIPE_RAINBOW_FLYING_FISH_PRINT ico02010750_01  // Quality: 3 Rarity: 4
+#define RECIPE_CRYSTALLINE_BASS_PRINT ico02010760_01  // Quality: 3 Rarity: 4
+#define RECIPE_HIGH_FLYING_FISH_PRINT ico02010770_01  // Quality: 3 Rarity: 4
+#define RECIPE_JOVIAL_MASK ico02020010_01  // Quality: 3 Rarity: 1
+#define RECIPE_WALL_LAMP ico02020050_01  // Quality: 3 Rarity: 2
+#define RECIPE_HAT_HOOK ico02020060_01  // Quality: 3 Rarity: 2
+#define RECIPE_DOVE_PENDULUM_CLOCK ico02020080_01  // Quality: 3 Rarity: 3
+#define RECIPE_MEMORY_BOARD ico02020100_01  // Quality: 3 Rarity: 5
+#define RECIPE_CORN_RESERVE ico02020110_01  // Quality: 3 Rarity: 2
+#define RECIPE_WALL_CANDLE ico02020120_01  // Quality: 3 Rarity: 3
+#define RECIPE_MOUNTED_SHELF ico02020130_01  // Quality: 3 Rarity: 2
+#define RECIPE_BREAKFAST_SET ico03010010_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOODEN_DINING_SET ico03010020_01  // Quality: 3 Rarity: 1
+#define RECIPE_PLATE_OF_ROASTED_BIRD ico03010030_01  // Quality: 3 Rarity: 2
+#define RECIPE_BOWL_OF_ASSORTED_FRUIT ico03010040_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_PALETTE ico03010060_01  // Quality: 3 Rarity: 3
+#define RECIPE_GOLD_CANDLESTICK ico03010070_01  // Quality: 3 Rarity: 4
+#define RECIPE_COPPER_CANDLESTICK ico03010071_01  // Quality: 3 Rarity: 1
+#define RECIPE_DIG_IN_DINING_SET ico03010090_01  // Quality: 3 Rarity: 2
+#define RECIPE_FULL_COURSE_DINNER ico03010100_01  // Quality: 3 Rarity: 4
+#define RECIPE_TEA_SET ico03010110_01  // Quality: 3 Rarity: 1
+#define RECIPE_LETTER_SET ico03010120_01  // Quality: 3 Rarity: 2
+#define RECIPE_CANDLE ico03010130_01  // Quality: 3 Rarity: 1
+#define RECIPE_CARPENTERS_TOOLS ico03010140_01  // Quality: 3 Rarity: 2
+#define RECIPE_PEN_AND_RULER ico03010150_01  // Quality: 3 Rarity: 1
+#define RECIPE_ENCYCLOPEDIA ico03010160_01  // Quality: 3 Rarity: 1
+#define RECIPE_THICK_NOVEL ico03010161_01  // Quality: 3 Rarity: 4
+#define RECIPE_CLASSIC_LAMP ico03010170_01  // Quality: 3 Rarity: 3
+#define RECIPE_STANDING_LAMP ico03010180_01  // Quality: 3 Rarity: 2
+#define RECIPE_HAGRAM_DOLL ico03010190_01  // Quality: 3 Rarity: 5
+#define RECIPE_TRIP_DOLL ico03010200_01  // Quality: 3 Rarity: 5
+#define RECIPE_PLUSHLING_DOLL ico03010220_01  // Quality: 3 Rarity: 4
+#define RECIPE_HOURGLASS ico03010230_01  // Quality: 3 Rarity: 1
+#define RECIPE_AFTERNOON_TEA_SET ico03010270_01  // Quality: 3 Rarity: 4
+#define RECIPE_SEAFOOD_BANQUET ico03010280_01  // Quality: 3 Rarity: 5
+#define RECIPE_FRUIT_BUFFET ico03010290_01  // Quality: 3 Rarity: 2
+#define RECIPE_TRAY_OF_APPLES ico03010300_01  // Quality: 3 Rarity: 2
+#define RECIPE_BOTTLE_SET ico03010310_01  // Quality: 3 Rarity: 1
+#define RECIPE_SEWING_SET ico03010320_01  // Quality: 3 Rarity: 1
+#define RECIPE_SCIENCE_EQUIPMENT ico03010330_01  // Quality: 3 Rarity: 2
+#define RECIPE_PHONOGRAPH ico03010340_01  // Quality: 3 Rarity: 5
+#define RECIPE_MENU_STAND ico03010350_01  // Quality: 3 Rarity: 3
+#define RECIPE_ELEGANT_CLOTH ico03010360_01  // Quality: 3 Rarity: 3
+#define RECIPE_SALUD_GLASS ico03010370_01  // Quality: 3 Rarity: 2
+#define RECIPE_BENCH_PRESS ico03010390_01  // Quality: 3 Rarity: 5
+#define RECIPE_NOSTALGIC_ORNAMENT ico03010400_01  // Quality: 3 Rarity: 5
+#define RECIPE_LEAFE_ORNAMENT ico03010410_01  // Quality: 3 Rarity: 5
+#define RECIPE_CELESTIAL_GLOBE ico03010420_01  // Quality: 3 Rarity: 5
+#define RECIPE_PALADINS_TROPHY ico03010430_01  // Quality: 3 Rarity: 5
+#define RECIPE_MERCENARYS_TROPHY ico03010440_01  // Quality: 3 Rarity: 5
+#define RECIPE_MAGICIANS_TROPHY ico03010450_01  // Quality: 3 Rarity: 5
+#define RECIPE_HUNTERS_TROPHY ico03010460_01  // Quality: 3 Rarity: 5
+#define RECIPE_MINERS_TROPHY ico03010470_01  // Quality: 3 Rarity: 5
+#define RECIPE_WOODCUTTERS_TROPHY ico03010480_01  // Quality: 3 Rarity: 5
+#define RECIPE_FARMERS_TROPHY ico03010490_01  // Quality: 3 Rarity: 5
+#define RECIPE_ANGLERS_TROPHY ico03010500_01  // Quality: 3 Rarity: 5
+#define RECIPE_COOKS_TROPHY ico03010510_01  // Quality: 3 Rarity: 5
+#define RECIPE_BLACKSMITHS_TROPHY ico03010520_01  // Quality: 3 Rarity: 5
+#define RECIPE_CARPENTERS_TROPHY ico03010530_01  // Quality: 3 Rarity: 5
+#define RECIPE_TAILORS_TROPHY ico03010540_01  // Quality: 3 Rarity: 5
+#define RECIPE_ALCHEMISTS_TROPHY ico03010550_01  // Quality: 3 Rarity: 5
+#define RECIPE_ARTISTS_TROPHY ico03010560_01  // Quality: 3 Rarity: 5
+#define RECIPE_BIG_CACTUS ico03010570_01  // Quality: 3 Rarity: 4
+#define RECIPE_STACKED_STONE_SLABS ico03010580_01  // Quality: 3 Rarity: 2
+#define RECIPE_ANTIQUE_ABACUS ico03010590_01  // Quality: 3 Rarity: 3
+#define RECIPE_FLOWER_BASKET ico03010600_01  // Quality: 3 Rarity: 3
+#define RECIPE_PLATE_OF_APPLES ico03010610_01  // Quality: 3 Rarity: 3
+#define RECIPE_PLATE_OF_ROASTED_FISH ico03010620_01  // Quality: 3 Rarity: 2
+#define RECIPE_PLATE_OF_ROASTED_CORN ico03010630_01  // Quality: 3 Rarity: 1
+#define RECIPE_PLATE_OF_POPCORN ico03010640_01  // Quality: 3 Rarity: 1
+#define RECIPE_BOWL_OF_BUTTERED_CORN ico03010650_01  // Quality: 3 Rarity: 2
+#define RECIPE_PINT_OF_WHEAT_JUICE ico03010660_01  // Quality: 3 Rarity: 2
+#define RECIPE_KNIFE_AND_CUTTING_BOARD ico03010670_01  // Quality: 3 Rarity: 2
+#define RECIPE_FRESH_FISH_ON_A_TRAY ico03010680_01  // Quality: 3 Rarity: 2
+#define RECIPE_MILLSTONE ico03010700_01  // Quality: 3 Rarity: 1
+#define RECIPE_ARTISANS_TOOLBOX ico03010710_01  // Quality: 3 Rarity: 1
+#define RECIPE_COLORFUL_CLOTH ico03010720_01  // Quality: 3 Rarity: 2
+#define RECIPE_INCENSE_BURNER ico03010740_01  // Quality: 3 Rarity: 3
+#define RECIPE_SPOOL_SET ico03010750_01  // Quality: 3 Rarity: 2
+#define RECIPE_STACKED_BOOKS ico03010760_01  // Quality: 3 Rarity: 2
+#define RECIPE_FLASK_SET ico03010770_01  // Quality: 3 Rarity: 1
+#define RECIPE_PILE_OF_CORN ico03010780_01  // Quality: 3 Rarity: 2
+#define RECIPE_HAND_WOVEN_BASKET ico03010800_01  // Quality: 3 Rarity: 1
+#define RECIPE_BIRDY_HELMET ico03010810_01  // Quality: 3 Rarity: 3
+#define RECIPE_BIRDY_ARMOR_SET ico03010820_01  // Quality: 3 Rarity: 3
+#define RECIPE_BOX_OF_SHIELDS ico03010830_01  // Quality: 3 Rarity: 4
+#define RECIPE_DECORATIVE_SWORDS ico03010840_01  // Quality: 3 Rarity: 3
+#define RECIPE_HAGRAM_PARTS ico03010850_01  // Quality: 3 Rarity: 4
+#define RECIPE_DRAGON_DOLL ico03010860_01  // Quality: 3 Rarity: 5
+#define RECIPE_BIRD_CAGE ico03010870_01  // Quality: 3 Rarity: 2
+#define RECIPE_YARN_BALL ico03010890_01  // Quality: 3 Rarity: 1
+#define RECIPE_GLASS_FLOAT ico03010900_01  // Quality: 3 Rarity: 2
+#define RECIPE_LEANING_SLAB ico03010920_01  // Quality: 3 Rarity: 2
+#define RECIPE_POT_OF_WATER ico03010930_01  // Quality: 3 Rarity: 1
+#define RECIPE_PLATE_OF_SPIRIT_SALAD ico03010940_01  // Quality: 3 Rarity: 5
+#define RECIPE_GLASS_OF_TROPICAL_JUICE ico03010950_01  // Quality: 3 Rarity: 5
+#define RECIPE_MIGHTY_MEAT_BOARD ico03010960_01  // Quality: 3 Rarity: 5
+#define RECIPE_PLATE_OF_ROYAL_RICE ico03010970_01  // Quality: 3 Rarity: 5
+#define RECIPE_PLATE_OF_TRIP_CAKE ico03010980_01  // Quality: 3 Rarity: 5
+#define RECIPE_COLMS_LEFTOVER_DONUTS ico03010990_01  // Quality: 3 Rarity: 3
+#define RECIPE_CUP_OF_COCONUT_JUICE ico03011000_01  // Quality: 3 Rarity: 3
+#define RECIPE_IKEBANA ico03011010_01  // Quality: 3 Rarity: 5
+#define RECIPE_FRAJEELS_PROTEIN ico03011020_01  // Quality: 3 Rarity: 3
+#define RECIPE_REMS_COCONUT_BENTO_BOX ico03011030_01  // Quality: 3 Rarity: 5
+#define RECIPE_STONE_TORCH ico04010010_01  // Quality: 3 Rarity: 2
+#define RECIPE_CLASSIC_STREETLAMP ico04010020_01  // Quality: 3 Rarity: 4
+#define RECIPE_PORT_TOWN_STREETLAMP ico04010030_01  // Quality: 3 Rarity: 3
+#define RECIPE_STARRY_NIGHT_STREETLAMP ico04010050_01  // Quality: 3 Rarity: 4
+#define RECIPE_BECKONING_STREETLAMP ico04010060_01  // Quality: 3 Rarity: 5
+#define RECIPE_FOREST_LILY_LIGHT ico04010070_01  // Quality: 3 Rarity: 2
+#define RECIPE_TROPICAL_FENCE ico04040010_01  // Quality: 3 Rarity: 2
+#define RECIPE_STONE_BLOCK_WALL ico04040020_01  // Quality: 3 Rarity: 1
+#define RECIPE_SIMPLE_HEDGE ico04040030_01  // Quality: 3 Rarity: 1
+#define RECIPE_WOODEN_FENCE ico04040040_01  // Quality: 3 Rarity: 3
+#define RECIPE_PORT_TOWN_FENCE ico04040060_01  // Quality: 3 Rarity: 3
+#define RECIPE_PALACE_WALL ico04040080_01  // Quality: 3 Rarity: 3
+#define RECIPE_CURSED_FENCE ico04040090_01  // Quality: 3 Rarity: 5
+#define RECIPE_FOREST_FENCE ico04040100_01  // Quality: 3 Rarity: 1
+#define RECIPE_PORT_TOWN_WALL ico04040110_01  // Quality: 3 Rarity: 3
+#define RECIPE_TROPICAL_FLOWER_POT ico04050030_01  // Quality: 3 Rarity: 1
+#define RECIPE_RED_FLOWER_POT ico04050040_01  // Quality: 3 Rarity: 2
+#define RECIPE_STONE_FLOWER_BED ico04050050_01  // Quality: 3 Rarity: 2
+#define RECIPE_WELL ico04050060_01  // Quality: 3 Rarity: 2
+#define RECIPE_CAMPFIRE ico04050070_01  // Quality: 3 Rarity: 1
+#define RECIPE_FISH_ROASTING_CAMPFIRE ico04050080_01  // Quality: 3 Rarity: 2
+#define RECIPE_MEAT_ROASTING_CAMPFIRE ico04050090_01  // Quality: 3 Rarity: 2
+#define RECIPE_WOODEN_CLOTHESLINE ico04050110_01  // Quality: 3 Rarity: 1
+#define RECIPE_ETERNIA_WINDMILL ico04050120_01  // Quality: 3 Rarity: 2
+#define RECIPE_STONE_PILLAR ico04050130_01  // Quality: 3 Rarity: 2
+#define RECIPE_BRICK_LINED_SHRUB ico04050170_01  // Quality: 3 Rarity: 3
+#define RECIPE_WOODEN_FLOWER_BED ico04050180_01  // Quality: 3 Rarity: 4
+#define RECIPE_PLUSHLING_FOUNTAIN ico04050190_01  // Quality: 3 Rarity: 5
+#define RECIPE_TRAINING_DUMMY ico04050200_01  // Quality: 3 Rarity: 3
+#define RECIPE_ARCHERY_TARGETINTER ico04050210_01  // Quality: 3 Rarity: 3
+#define RECIPE_STRANGERS_GRAVE ico04050330_01  // Quality: 3 Rarity: 4
+#define RECIPE_RED_FLOWER_SHRUB ico04050430_01  // Quality: 3 Rarity: 2
+#define RECIPE_SEASIDE_SHRUB ico04050440_01  // Quality: 3 Rarity: 2
+#define RECIPE_DESERT_CACTUS ico04050450_01  // Quality: 3 Rarity: 3
+#define RECIPE_GLORIOUS_SHRUB ico04050460_01  // Quality: 3 Rarity: 5
+#define RECIPE_DESERT_TOWER ico04050470_01  // Quality: 3 Rarity: 3
+#define RECIPE_RELAXING_SWINGSET ico04060010_01  // Quality: 3 Rarity: 4
+#define RECIPE_IVY_SWINGSET ico04060020_01  // Quality: 3 Rarity: 5
+#define RECIPE_GREEN_GRASS ico04080010_01  // Quality: 3 Rarity: 1
+#define RECIPE_TALL_GRASS ico04080020_01  // Quality: 3 Rarity: 1
+#define RECIPE_SMALL_TREE ico04080030_01  // Quality: 3 Rarity: 1
+#define RECIPE_SAPLING ico04080040_01  // Quality: 3 Rarity: 1
+#define RECIPE_YOUNG_TREE ico04080050_01  // Quality: 3 Rarity: 1
+#define RECIPE_ERUPTUNA_PRINT ico02010780_01  // Quality: 3 Rarity: 4
+#define RECIPE_POSTER_OF_FRAJEEL ico02010790_01  // Quality: 3 Rarity: 4
+#define RECIPE_PLATE_OF_HOMEMADE_CAKE ico03011040_01  // Quality: 3 Rarity: 5
+#define RECIPE_SPIRIT_CLOCK ico02010800_01  // Quality: 3 Rarity: 3
+#define RECIPE_RED_LEAFE_LANTERN ico03011050_01  // Quality: 3 Rarity: 3
+#define RECIPE_YELLOW_LEAFE_LANTERN ico03011051_01  // Quality: 3 Rarity: 3
+#define RECIPE_BLUE_LEAFE_LANTERN ico03011052_01  // Quality: 3 Rarity: 3
+#define RECIPE_HONEWORT_CHAIR ico01020420_01  // Quality: 3 Rarity: 5
+#define RECIPE_GINKGO_CHAIR ico01020421_01  // Quality: 3 Rarity: 5
+#define RECIPE_DICOT_CHAIR ico01020422_01  // Quality: 3 Rarity: 5
+#define RECIPE_PLUSHLING_LOUNGE_CHAIR ico01020430_01  // Quality: 3 Rarity: 5
+#define RECIPE_MEMORY_OF_TROPICA_PANEL ico01091720_01  // Quality: 3 Rarity: 0
+#define RECIPE_CHILLY_TABLE ico01030460_01  // Quality: 3 Rarity: 4
+#define RECIPE_GINGKO_TOPIARY_FLOWER_POT ico01091661_01  // Quality: 3 Rarity: 4
+#define RECIPE_DICOT_TOPIARY_FLOWER_POT ico01091662_01  // Quality: 3 Rarity: 4
+#define RECIPE_PASTEL_FLOWER_PAINTING ico02010811_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_BED ico01040052_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_SOFA ico01020122_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_TABLE ico01030142_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_LOW_TABLE ico01030152_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_CHAIR ico01020132_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_WARDROBE ico01090762_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_CHEST ico01030162_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_CABINET ico01030172_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_RUG ico01060112_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_MAT ico01060122_01  // Quality: 3 Rarity: 0
+#define RECIPE_SKY_BLUE_WALL ico01070032_01  // Quality: 3 Rarity: 0
+#define RECIPE_BLUE_FLOWER_PAINTING ico02010812_01  // Quality: 3 Rarity: 0
+#define RECIPE_BLUE_FLOWER_VASE ico01090352_01  // Quality: 3 Rarity: 0
+#define RECIPE_DIFFICULT_WORKBOOKS ico03010162_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_BED ico01040053_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_SOFA ico01020123_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_TABLE ico01030143_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_LOW_TABLE ico01030153_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_CHAIR ico01020133_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_WARDROBE ico01090763_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_CHEST ico01030163_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_CABINET ico01030173_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_RUG ico01060113_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_MAT ico01060123_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_WALL ico01070033_01  // Quality: 3 Rarity: 0
+#define RECIPE_MINT_FLOWER_PAINTING ico02010813_01  // Quality: 3 Rarity: 0
+#define RECIPE_GREEN_FLOWER_VASE ico01090353_01  // Quality: 3 Rarity: 0
+#define RECIPE_EXCELLENT_GUIDEBOOKS ico03010163_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_BED ico01040054_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_SOFA ico01020124_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_TABLE ico01030144_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_LOW_TABLE ico01030154_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_CHAIR ico01020134_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_WARDROBE ico01090764_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_CHEST ico01030164_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_CABINET ico01030174_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_RUG ico01060114_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_MAT ico01060124_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_WALL ico01070034_01  // Quality: 3 Rarity: 0
+#define RECIPE_CITRUS_FLOWER_PAINTING ico02010814_01  // Quality: 3 Rarity: 0
+#define RECIPE_YELLOW_FLOWER_VASE ico01090354_01  // Quality: 3 Rarity: 0
+#define RECIPE_HEAVY_LOGBOOKS ico03010164_01  // Quality: 3 Rarity: 0
+#define KIT_BUILDING_KIT kit001010  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001020  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001030  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001040  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001050  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001060  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001070  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001080  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001090  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001100  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001110  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001120  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001130  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001140  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001150  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001160  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001170  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001180  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001190  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001200  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001210  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001220  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit001230  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002010  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002020  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002030  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002040  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002050  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002060  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002070  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002080  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002090  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002100  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002110  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002120  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002130  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002140  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit002150  // Quality: 0 Rarity: 0
+#define KIT_BUILDING_KIT kit003010  // Quality: 0 Rarity: 0
+#define KIT_CARROT_FARM_KIT kit004010  // Quality: 0 Rarity: 0
+#define KIT_RADISH_FARM_KIT kit004020  // Quality: 0 Rarity: 0
+#define KIT_PUMPKIN_FARM_KIT kit004030  // Quality: 0 Rarity: 0
+#define KIT_POTATO_FARM_KIT kit004040  // Quality: 0 Rarity: 0
+#define KIT_ONION_FARM_KIT kit004050  // Quality: 0 Rarity: 0
+#define KIT_CABBAGE_FARM_KIT kit004060  // Quality: 0 Rarity: 0
+#define KIT_SHADOW_CARROT_FARM_KIT kit004070  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100010  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100020  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100030  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100040  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100050  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100060  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100070  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100080  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100090  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100100  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100110  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100120  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100130  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100140  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100150  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100160  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100170  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100180  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100190  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100200  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100210  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100220  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100230  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100240  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100250  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100260  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100270  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100280  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100290  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100300  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100310  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100320  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100330  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100340  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100350  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100360  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100370  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100380  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100390  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100400  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100410  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100420  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100430  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100440  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100450  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit100460  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101010  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101020  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101030  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101040  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101050  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101060  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101070  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101080  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101090  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101100  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101110  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101120  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101130  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101140  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101150  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101160  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101170  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101180  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101190  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101200  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101210  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101220  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit101230  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102010  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102020  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102030  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102040  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102050  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102060  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102070  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102080  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102090  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102100  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102110  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102120  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102130  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102140  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit102150  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit103010  // Quality: 0 Rarity: 0
+#define KIT_FARM_RELOCATION_KIT kit104010  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit105010  // Quality: 0 Rarity: 0
+#define KIT_RELOCATION_KIT kit105020  // Quality: 0 Rarity: 0
+#define VEHICLE_TORTORTOISE_SADDLE ive000101  // Quality: 0 Rarity: 0
+#define VEHICLE_TURTLE_SADDLE ive000102  // Quality: 0 Rarity: 0
+#define VEHICLE_BROWN_HORSE_SADDLE ive000201  // Quality: 0 Rarity: 0
+#define VEHICLE_BLACK_HORSE_SADDLE ive000202  // Quality: 0 Rarity: 0
+#define VEHICLE_WHITE_HORSE_SADDLE ive000203  // Quality: 0 Rarity: 0
+#define VEHICLE_BLACK_PANTHER_SADDLE ive000301  // Quality: 0 Rarity: 0
+#define VEHICLE_FOREST_PANTHER_SADDLE ive000302  // Quality: 0 Rarity: 0
+#define VEHICLE_CAMEL ive000401  // Quality: 0 Rarity: 0
+#define VEHICLE_WHITE_WOOLIE_SADDLE ive000501  // Quality: 0 Rarity: 0
+#define VEHICLE_KING_WOOLIE_SADDLE ive000502  // Quality: 0 Rarity: 0
+#define VEHICLE_CASHMEER_SADDLE ive000503  // Quality: 0 Rarity: 0
+#define VEHICLE_WHITE_RUNNER_SADDLE ive000601  // Quality: 0 Rarity: 0
+#define VEHICLE_TAURUS_SADDLE ive000701  // Quality: 0 Rarity: 0
+#define VEHICLE_NAPDRAGON_CRUISER_RED ive000801  // Quality: 0 Rarity: 0
+#define VEHICLE_NAPDRAGON_CRUISER_BLK ive000802  // Quality: 0 Rarity: 0
+#define VEHICLE_FLYING_SHIP ive000901  // Quality: 0 Rarity: 0
+#define VEHICLE_MINI_NAPDRAGON ive000702  // Quality: 0 Rarity: 0
+#define VEHICLE_UNICORN ive000204  // Quality: 0 Rarity: 0
+#define VEHICLE_PEGASUS ive000205  // Quality: 0 Rarity: 0
+#define VEHICLE_UNICORN ive000206  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000100  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000200  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000300  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000400  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000500  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000600  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000700  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000800  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000900  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000a00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000b00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000c00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000d00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000e00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr000f00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001000  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001100  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001200  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001300  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001400  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001500  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001600  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001700  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001800  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001900  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001a00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001b00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001c00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001d00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001e00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr001f00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002000  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002100  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002200  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002300  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002400  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002500  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002600  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002700  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002800  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002900  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002a00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002b00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002c00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002d00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002e00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr002f00  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr003100  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr003200  // Quality: 0 Rarity: 0
+#define POWERUP_SOUPED_UP_STRANGELING ipu_chr003400  // Quality: 0 Rarity: 0

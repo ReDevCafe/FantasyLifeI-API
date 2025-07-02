@@ -278,3 +278,5 @@ struct FRigUnit_ParameterAtPercentage : FRigUnit_ControlRigSplineBase
 };
 
 #pragma pack(pop)
+
+

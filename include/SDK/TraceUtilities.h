@@ -21,31 +21,33 @@ public:
 
 	/// Functions
 	// Function /Script/TraceUtilities.TraceUtilLibrary.TraceMarkRegionStart
-	// void TraceMarkRegionStart(FString Name);                                                                                 // [0x5451230] Final|Native|Static|Public|BlueprintCallable 
+	// void TraceMarkRegionStart(FString Name);                                                                                 // [0x54a0eb0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.TraceMarkRegionEnd
-	// void TraceMarkRegionEnd(FString Name);                                                                                   // [0x5451230] Final|Native|Static|Public|BlueprintCallable 
+	// void TraceMarkRegionEnd(FString Name);                                                                                   // [0x54a0eb0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.TraceBookmark
-	// void TraceBookmark(FString Name);                                                                                        // [0x5451230] Final|Native|Static|Public|BlueprintCallable 
+	// void TraceBookmark(FString Name);                                                                                        // [0x54a0eb0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.ToggleChannel
-	// bool ToggleChannel(FString ChannelName, bool Enabled);                                                                   // [0x88b8920] Final|Native|Static|Public|BlueprintCallable 
+	// bool ToggleChannel(FString ChannelName, bool Enabled);                                                                   // [0x8922940] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.StopTracing
-	// bool StopTracing();                                                                                                      // [0x88b8530] Final|Native|Static|Public|BlueprintCallable 
+	// bool StopTracing();                                                                                                      // [0x8922550] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.StartTraceToFile
-	// bool StartTraceToFile(FString Filename, TArray<FString>& Channels);                                                      // [0x88b8740] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// bool StartTraceToFile(FString Filename, TArray<FString>& Channels);                                                      // [0x8922760] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.StartTraceSendTo
-	// bool StartTraceSendTo(FString Target, TArray<FString>& Channels);                                                        // [0x88b8560] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// bool StartTraceSendTo(FString Target, TArray<FString>& Channels);                                                        // [0x8922580] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.ResumeTracing
-	// bool ResumeTracing();                                                                                                    // [0x5435b40] Final|Native|Static|Public|BlueprintCallable 
+	// bool ResumeTracing();                                                                                                    // [0x5485730] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.PauseTracing
-	// bool PauseTracing();                                                                                                     // [0x5435b40] Final|Native|Static|Public|BlueprintCallable 
+	// bool PauseTracing();                                                                                                     // [0x5485730] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.IsTracing
-	// bool IsTracing();                                                                                                        // [0x88b8530] Final|Native|Static|Public|BlueprintCallable 
+	// bool IsTracing();                                                                                                        // [0x8922550] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.IsChannelEnabled
-	// bool IsChannelEnabled(FString ChannelName);                                                                              // [0x838cc40] Final|Native|Static|Public|BlueprintCallable 
+	// bool IsChannelEnabled(FString ChannelName);                                                                              // [0x83f6b70] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.GetEnabledChannels
-	// TArray<FString> GetEnabledChannels();                                                                                    // [0x88b8340] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<FString> GetEnabledChannels();                                                                                    // [0x8922360] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TraceUtilities.TraceUtilLibrary.GetAllChannels
-	// TArray<FString> GetAllChannels();                                                                                        // [0x7ff8fc0] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<FString> GetAllChannels();                                                                                        // [0x8062ef0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 #pragma pack(pop)
+
+

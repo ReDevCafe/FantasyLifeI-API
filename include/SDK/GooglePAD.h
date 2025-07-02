@@ -94,39 +94,41 @@ public:
 
 	/// Functions
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.ShowConfirmationDialog
-	// EGooglePADErrorCode ShowConfirmationDialog();                                                                            // [0x83a25f0] Final|Native|Static|Public|BlueprintCallable 
+	// EGooglePADErrorCode ShowConfirmationDialog();                                                                            // [0x840c520] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.ShowCellularDataConfirmation
-	// EGooglePADErrorCode ShowCellularDataConfirmation();                                                                      // [0x83a25f0] Final|Native|Static|Public|BlueprintCallable 
+	// EGooglePADErrorCode ShowCellularDataConfirmation();                                                                      // [0x840c520] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.RequestRemoval
-	// EGooglePADErrorCode RequestRemoval(FString Name);                                                                        // [0x83a2560] Final|Native|Static|Public|BlueprintCallable 
+	// EGooglePADErrorCode RequestRemoval(FString Name);                                                                        // [0x840c490] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.RequestInfo
-	// EGooglePADErrorCode RequestInfo(TArray<FString> AssetPacks);                                                             // [0x83a20e0] Final|Native|Static|Public|BlueprintCallable 
+	// EGooglePADErrorCode RequestInfo(TArray<FString> AssetPacks);                                                             // [0x840c010] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.RequestDownload
-	// EGooglePADErrorCode RequestDownload(TArray<FString> AssetPacks);                                                         // [0x83a20e0] Final|Native|Static|Public|BlueprintCallable 
+	// EGooglePADErrorCode RequestDownload(TArray<FString> AssetPacks);                                                         // [0x840c010] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.ReleaseDownloadState
-	// void ReleaseDownloadState(int32_t State);                                                                                // [0x5414b50] Final|Native|Static|Public|BlueprintCallable 
+	// void ReleaseDownloadState(int32_t State);                                                                                // [0x5464740] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.ReleaseAssetPackLocation
-	// void ReleaseAssetPackLocation(int32_t Location);                                                                         // [0x5414b50] Final|Native|Static|Public|BlueprintCallable 
+	// void ReleaseAssetPackLocation(int32_t Location);                                                                         // [0x5464740] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetTotalBytesToDownload
-	// int32_t GetTotalBytesToDownload(int32_t State);                                                                          // [0x4ec14e0] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetTotalBytesToDownload(int32_t State);                                                                          // [0x4f10cb0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetStorageMethod
-	// EGooglePADStorageMethod GetStorageMethod(int32_t Location);                                                              // [0x83a24e0] Final|Native|Static|Public|BlueprintCallable 
+	// EGooglePADStorageMethod GetStorageMethod(int32_t Location);                                                              // [0x840c410] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetShowConfirmationDialogStatus
-	// EGooglePADErrorCode GetShowConfirmationDialogStatus(EGooglePADConfirmationDialogStatus& Status);                         // [0x83a2440] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// EGooglePADErrorCode GetShowConfirmationDialogStatus(EGooglePADConfirmationDialogStatus& Status);                         // [0x840c370] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetShowCellularDataConfirmationStatus
-	// EGooglePADErrorCode GetShowCellularDataConfirmationStatus(EGooglePADCellularDataConfirmStatus& Status);                  // [0x83a2440] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// EGooglePADErrorCode GetShowCellularDataConfirmationStatus(EGooglePADCellularDataConfirmStatus& Status);                  // [0x840c370] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetDownloadStatus
-	// EGooglePADDownloadStatus GetDownloadStatus(int32_t State);                                                               // [0x83a23c0] Final|Native|Static|Public|BlueprintCallable 
+	// EGooglePADDownloadStatus GetDownloadStatus(int32_t State);                                                               // [0x840c2f0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetDownloadState
-	// EGooglePADErrorCode GetDownloadState(FString Name, int32_t& State);                                                      // [0x83a21f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// EGooglePADErrorCode GetDownloadState(FString Name, int32_t& State);                                                      // [0x840c120] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetBytesDownloaded
-	// int32_t GetBytesDownloaded(int32_t State);                                                                               // [0x4ec14e0] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetBytesDownloaded(int32_t State);                                                                               // [0x4f10cb0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetAssetsPath
-	// FString GetAssetsPath(int32_t Location);                                                                                 // [0x83a22e0] Final|Native|Static|Public|BlueprintCallable 
+	// FString GetAssetsPath(int32_t Location);                                                                                 // [0x840c210] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.GetAssetPackLocation
-	// EGooglePADErrorCode GetAssetPackLocation(FString Name, int32_t& Location);                                               // [0x83a21f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// EGooglePADErrorCode GetAssetPackLocation(FString Name, int32_t& Location);                                               // [0x840c120] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GooglePAD.GooglePADFunctionLibrary.CancelDownload
-	// EGooglePADErrorCode CancelDownload(TArray<FString> AssetPacks);                                                          // [0x83a20e0] Final|Native|Static|Public|BlueprintCallable 
+	// EGooglePADErrorCode CancelDownload(TArray<FString> AssetPacks);                                                          // [0x840c010] Final|Native|Static|Public|BlueprintCallable 
 };
 
 #pragma pack(pop)
+
+

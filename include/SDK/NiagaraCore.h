@@ -50,3 +50,5 @@ struct FNiagaraCompileHash
 };
 
 #pragma pack(pop)
+
+
