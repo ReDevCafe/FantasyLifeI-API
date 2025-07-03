@@ -33,23 +33,12 @@ class Logger
 
     public:
         Logger(
-            const std::string& prefix,
-            std::function<void(const std::string&)> logFunc
-        ) : 
-            prefix("[" + prefix + "] "),
-            logFunc(std::move(logFunc))
-        {
-            createFile();
-        }
-
-        // Usefull only when you have your own console
-        Logger(
             const std::string& prefix
             ) :
             prefix("[" + prefix + "] "),
             logFunc([](const std::string& msg) { std::cout << msg; }) 
         {
-            createFile();
+            createFile(prefix);
         }
 
 #if MLDEBUG
@@ -69,7 +58,7 @@ class Logger
         void error(Args&&... args) { log("\033[31m", std::forward<Args>(args)...); }
 
     private:
-        void createFile()
+        void createFile(const std::string& prefix = "")
         {
             std::time_t now = std::time(nullptr);
             std::tm timeinfo{};
@@ -77,7 +66,7 @@ class Logger
 
             char buf[64];
             std::strftime(buf, sizeof(buf), "%Y-%m-%d.%H.%M.%S", &timeinfo);
-            std::string filename = "../../../Logs/FliML-" + std::string(buf) + ".log";
+            std::string filename = "../../../Logs/FliML-" + prefix + std::string(buf) + ".log";
             std::filesystem::create_directories("../../../Logs");
 
             logFile.open(filename, std::ios::out | std::ios::trunc);
