@@ -10,6 +10,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD_REQUIRED YES
 )
 
+target_compile_definitions(${PROJECT_NAME} PRIVATE LOADERCOMPILE)
 option(MLDEBUG "Enable ModLoader debug code" OFF)
 
 if(MLDEBUG)

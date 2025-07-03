@@ -11,10 +11,10 @@
     #include "Patcher/Patches/EventHook.hpp"
 
 #ifdef _WIN32
-  #ifdef MODCOMPILE
-    #define ML_API __declspec(dllimport)
-  #else
+  #ifdef LOADERCOMPILE
     #define ML_API __declspec(dllexport)
+  #else
+    #define ML_API __declspec(dllimport)
   #endif
 #else
   #define ML_API
