@@ -17,7 +17,9 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameData->initOthersData();
 
     gameCache = new GameCache();
+    Sleep(10000);
     modEnvironnement = new ModEnvironnement("../../../Mods");
+    modEnvironnement->PreLoad();
 
     gameCache->PostLoadCache();
     modEnvironnement->PostLoad();

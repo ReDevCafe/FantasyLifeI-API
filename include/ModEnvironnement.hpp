@@ -23,16 +23,16 @@ class ModEnvironnement
 {
     public:
         ModEnvironnement(std::string modDirs = "../../../Mods");
-        ~ModEnvironnement() = default;
+        ~ModEnvironnement() { Free(); };
 
-        void PostLoad();
-        void Free();
+        void                    PreLoad();
+        void                    PostLoad();
+        void                    Free();
     private:
-        void PreLoad();
-        int SetupEnvironnement(std::string modDirs);
+        int                     SetupEnvironnement(std::string modDirs);
 
         ModMetaData             parseModMeta(std::filesystem::path filename);
-        std::vector<ModObject*> resolveOrder(std::vector<ModObject>& mods);
+        void                    resolveOrder(std::vector<ModObject*> mods);
 
         std::vector<ModObject*> _modsList;
         std::vector<LibHandle> _modLibList;

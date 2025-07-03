@@ -3,10 +3,10 @@
     #define ENTITYSTATS_HPP_
 
     #include "../GameObjectProxy.hpp"
-
     #include <stdexcept>
+    #include "Export.h"
 
-class EntityStats : public GameObjectProxy<FGDCharaParameter> {
+class ML_API EntityStats : public GameObjectProxy<FGDCharaParameter> {
     public:
         EntityStats(FGDCharaParameter &parameter) : GameObjectProxy(parameter) {};
         void setPhysicalAttack(ELifeType life, int32_t physicalAttack);

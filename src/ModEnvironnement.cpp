@@ -32,26 +32,27 @@ ModMetaData ModEnvironnement::parseModMeta(std::filesystem::path filename)
 	return meta;
 }
 
-std::vector<ModObject*> ModEnvironnement::resolveOrder(std::vector<ModObject>& mods)
+void ModEnvironnement::resolveOrder(std::vector<ModObject*> mods)
 {
     const size_t N = mods.size();
+
     std::unordered_map<std::string, ModObject*> nameMap;
     nameMap.reserve(N);
-    for(auto& m : mods) nameMap.emplace(m.getMeta().name, &m);
+    for (auto& m : mods)
+        nameMap.emplace(m->getMeta().name, m);
 
     std::unordered_map<ModObject*, size_t> indegree;
-    indegree.reserve(N);
-
     std::unordered_map<ModObject*, std::vector<ModObject*>> dependents;
+    indegree.reserve(N);
     dependents.reserve(N);
 
-    for(auto& m : mods)
+    for (auto& m : mods) 
     {
-        ModObject* pm = &m;
-        for(auto& depName : m.getMeta().dependencies)
-        {
+        ModObject* pm = m;
+        for (auto& depName : m->getMeta().dependencies) {
             auto it = nameMap.find(depName);
-            if(it == nameMap.end()) throw std::runtime_error("Missing dependency: " + depName);
+            if (it == nameMap.end())
+                throw std::runtime_error("Missing dependency: " + depName);
 
             ModObject* dep = it->second;
             dependents[dep].push_back(pm);
@@ -60,33 +61,33 @@ std::vector<ModObject*> ModEnvironnement::resolveOrder(std::vector<ModObject>& m
     }
 
     std::queue<ModObject*> q;
-    q = {};
-    for(auto& [obj, deg] : indegree)
-        if(deg == 0) q.push(obj);
+    for (auto& m : mods)
+    {
+        ModObject* pm = m;
+        if (indegree[pm] == 0)
+            q.push(pm);
+    }
 
     std::vector<ModObject*> sorted;
     sorted.reserve(N);
 
-    while(!q.empty())
+    while (!q.empty()) 
     {
-        ModObject* cur = q.front();
-        q.pop();
-
+        ModObject* cur = q.front(); q.pop();
         sorted.push_back(cur);
 
-        for(ModObject* child : dependents[cur])
-            if(--indegree[child] == 0)
+        for (ModObject* child : dependents[cur]) 
+            if (--indegree[child] == 0)
                 q.push(child);
     }
 
-    if(sorted.size() != N)
-    {
-        for(auto& [obj, deg] : indegree)
-            if(deg > 0)
+    if (sorted.size() != N) 
+        for (auto& [obj, deg] : indegree) 
+            if (deg > 0)
                 throw std::runtime_error("Cyclic dependency involving " + obj->getMeta().name);
-    }
+        
 
-    return sorted;
+    _modsList = std::move(sorted);
 }
 
 int ModEnvironnement::SetupEnvironnement(std::string modDirs)
@@ -98,7 +99,7 @@ int ModEnvironnement::SetupEnvironnement(std::string modDirs)
         return 0;
     }
     
-    std::vector<ModObject> tempModList;
+    std::vector<ModObject*> tempModList;
     for (const auto& entry : std::filesystem::directory_iterator(modDirs))
     {
         if (!std::filesystem::is_directory(entry))
@@ -115,8 +116,8 @@ int ModEnvironnement::SetupEnvironnement(std::string modDirs)
             return 0;
         }
 
-        ModObject mod(parseModMeta(modJsonPath), entryPath);
-        std::filesystem::path modLibPath = entryPath / (mod.getMeta().name + ".mod");
+        ModObject* mod = new ModObject(parseModMeta(modJsonPath), entryPath);
+        std::filesystem::path modLibPath = entryPath / (mod->getMeta().name + ".mod");
         if (!std::filesystem::exists(modLibPath))
         {
             ModLoader::logger->error("Invalid mod packet inside of",  entryPath, " Missing: ", modLibPath);
@@ -126,7 +127,7 @@ int ModEnvironnement::SetupEnvironnement(std::string modDirs)
         tempModList.push_back(mod);
     }
 
-    _modsList = resolveOrder(tempModList);
+    resolveOrder(tempModList);
     return 1;
 }
 
@@ -134,7 +135,7 @@ void ModEnvironnement::PreLoad()
 {
     for(auto* m : _modsList)
     {
-        ModLoader::logger->verbose("Loading mod: ", m->getMeta().name, " v", m->getMeta().version);
+        ModLoader::logger->info("Loading mod: ", m->getMeta().name, " v", m->getMeta().version);
         std::filesystem::path modLibPath = m->GetPath() / (m->getMeta().name + ".mod");
 
         LibHandle lib = LoadLib(modLibPath.string());
@@ -168,6 +169,14 @@ void ModEnvironnement::PostLoad()
 
 void ModEnvironnement::Free()
 {
+    for(auto* mod : _modsList)
+        delete mod;
+    _modsList.clear();
+
+    _modPTRList.clear();
+
     for(auto* lib : _modLibList)
         CloseLib(lib);
+    _modsList.clear();
+
 }

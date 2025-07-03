@@ -3,7 +3,7 @@
 
     #include "ItemData.hpp"
 
-class ItemConsumeData : public ItemData 
+class ML_API ItemConsumeData : public ItemData 
 {
     public:
         ItemConsumeData(FGDItemConsumeData& data) : ItemData(data){};

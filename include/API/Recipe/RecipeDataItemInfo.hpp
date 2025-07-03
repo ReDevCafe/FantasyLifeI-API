@@ -2,8 +2,9 @@
     #define RECIPEDATAITEMINFO
 
     #include "API/Item/ItemData.hpp"
+    #include "Export.h"
 
-class RecipeDataItemInfo : public GameObjectProxy<FGDRecipeData_ItemInfo>
+class ML_API RecipeDataItemInfo : public GameObjectProxy<FGDRecipeData_ItemInfo>
 {
     private:
         FGDRecipeData_ItemInfo dataObj;

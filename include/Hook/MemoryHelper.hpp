@@ -8,7 +8,9 @@
     #define NOMINMAX
     #include <windows.h>
 
-class MemoryHelper {
+    #include "Export.h"
+
+class ML_API MemoryHelper {
     public:
         static uintptr_t findFreeMemory(uintptr_t address, uint8_t length);
         static bool isFree(uintptr_t address,  uint8_t length);

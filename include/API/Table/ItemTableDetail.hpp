@@ -1,10 +1,12 @@
-#ifndef ITEMTABLEDETAIL_HPP
+#ifndef ITEMTABLEDETAIL_HPP`
     #define ITEMTABLEDETAIL_HPP
 
     #include "API/GameObjectProxy.hpp"
     #include "API/Item/ItemData.hpp"
 
-class ItemTableDetail : public GameObjectProxy<FGDStItem_ItemTableDetail>
+    #include "Export.h"
+
+class ML_API ItemTableDetail : public GameObjectProxy<FGDStItem_ItemTableDetail>
 {
     public:
     ItemTableDetail(FGDStItem_ItemTableDetail& data) : GameObjectProxy(data)

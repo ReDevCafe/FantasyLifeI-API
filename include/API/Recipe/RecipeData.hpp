@@ -1,12 +1,13 @@
 #ifndef RECIPEDATA_HPP
-#define RECIPEDATA_HPP
+    #define RECIPEDATA_HPP
 
-#include "RecipeDataLifeParamInfo.hpp"
-#include "RecipeDataItemInfo.hpp"
-#include "API/Recipe/RecipeDataRewardData.hpp"
-#include <vector>
+    #include "RecipeDataLifeParamInfo.hpp"
+    #include "RecipeDataItemInfo.hpp"
+    #include "API/Recipe/RecipeDataRewardData.hpp"
+    #include <vector>
+    #include "Export.h"
 
-class RecipeData : GameObjectProxy<FGDRecipeData>
+class ML_API RecipeData : GameObjectProxy<FGDRecipeData>
 {
 public:
     RecipeData(FGDRecipeData &data) 

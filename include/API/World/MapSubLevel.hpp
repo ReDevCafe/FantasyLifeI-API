@@ -2,8 +2,9 @@
     #define MAPSUBLEVEL_HPP
 
     #include "API/GameObjectProxy.hpp"
+    #include "Export.h"
 
-class MapSubLevel : public GameObjectProxy<FGDMapSubLevel>
+class ML_API MapSubLevel : public GameObjectProxy<FGDMapSubLevel>
 {
     public:
     MapSubLevel(FGDMapSubLevel& data) : GameObjectProxy(data)

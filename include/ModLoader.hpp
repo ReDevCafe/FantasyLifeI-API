@@ -9,16 +9,7 @@
     #include "Hook/MemoryHelper.hpp"
     #include "Patcher/Patcher.hpp"
     #include "Patcher/Patches/EventHook.hpp"
-
-#ifdef _WIN32
-  #ifdef MODCOMPILE
-    #define ML_API __declspec(dllimport)
-  #else
-    #define ML_API __declspec(dllexport)
-  #endif
-#else
-  #define ML_API
-#endif
+    #include "Export.h"
 
 class ML_API ModLoader {
     public:

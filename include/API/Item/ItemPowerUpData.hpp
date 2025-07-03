@@ -2,7 +2,7 @@
     #define ITEMPOWERUPDATA_HPP
     #include "ItemData.hpp"
 
-class ItemPowerUpData : public ItemData
+class ML_API ItemPowerUpData : public ItemData
 {
     public:
         ItemPowerUpData(FGDItemPowerUpData& data) : ItemData(data){};

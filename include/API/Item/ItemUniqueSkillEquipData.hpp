@@ -4,7 +4,7 @@
     #include "ItemEquipData.hpp"
     #include "API/Skill/SkillData.hpp"
 
-class ItemUniqueSkillEquipData : public ItemEquipData
+class ML_API ItemUniqueSkillEquipData : public ItemEquipData
 {
     public:
         ItemUniqueSkillEquipData(FGDItemUniqueSkillEquipData& data) : ItemEquipData(data){};

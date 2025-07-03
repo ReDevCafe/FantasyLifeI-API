@@ -3,8 +3,9 @@
 
     #include "API/GameObjectProxy.hpp"
     #include "API/Table/ItemTableDetail.hpp"
+    #include "Export.h"
 
-class CommonItemTableSetting : public GameObjectProxy<FGDCommonItemTableSetting>
+class ML_API CommonItemTableSetting : public GameObjectProxy<FGDCommonItemTableSetting>
 {
     public:
     CommonItemTableSetting(FGDCommonItemTableSetting& data) : GameObjectProxy(data)

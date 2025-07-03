@@ -4,7 +4,7 @@
     #include "ItemUniqueSkillEquipData.hpp"
     #include <vector>
 
-class ItemWeaponData : public ItemUniqueSkillEquipData
+class ML_API ItemWeaponData : public ItemUniqueSkillEquipData
 {
     public:
         ItemWeaponData(FGDItemWeaponData& data) : ItemUniqueSkillEquipData(data){};

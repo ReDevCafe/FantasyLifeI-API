@@ -3,8 +3,9 @@
 
     #include "API/GameObjectProxy.hpp"
     #include "API/Language.hpp"
+    #include "Export.h"
 
-class CharaData : GameObjectProxy<FGDCharaData>
+class ML_API CharaData : GameObjectProxy<FGDCharaData>
 {
     public:
     CharaData(FGDCharaData& data) : GameObjectProxy(data)

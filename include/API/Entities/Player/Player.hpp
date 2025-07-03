@@ -5,8 +5,9 @@
     #include "../EntityStats.hpp"
     #include "../EntityStatus.hpp"
     #include <cstddef>
+    #include "Export.h"
 
-class Player {
+class ML_API Player {
     public:
         Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV);
         ~Player() = default;

@@ -2,8 +2,9 @@
     #define RECIPEDATALIFEPARAMINFO_HPP
 
     #include "API/GameObjectProxy.hpp"
+    #include "Export.h"
 
-class RecipeDataLifeParamInfo : GameObjectProxy<FGDRecipeData_LifeParamInfo>
+class ML_API RecipeDataLifeParamInfo : GameObjectProxy<FGDRecipeData_LifeParamInfo>
 {
     public:
         RecipeDataLifeParamInfo(FGDRecipeData_LifeParamInfo& data) : GameObjectProxy(data){};

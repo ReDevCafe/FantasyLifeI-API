@@ -5,8 +5,9 @@
     #include "CommonPickStatusParam.hpp"
     #include "API/Common/CommonPickParamData.hpp"
     #include <string>
+    #include "Export.h"
 
-class CommonPickParamData : GameObjectProxy<FGDCommonPickParamData>
+class ML_API CommonPickParamData : GameObjectProxy<FGDCommonPickParamData>
 {
     public:
         CommonPickParamData(FGDCommonPickParamData& data) : 

@@ -3,8 +3,9 @@
     
     #include "API/Language.hpp"
     #include "API/GameObjectProxy.hpp"
+    #include "Export.h"
 
-class LifeData : public GameObjectProxy<FGDLifeData>
+class ML_API LifeData : public GameObjectProxy<FGDLifeData>
 {   
     public:
         LifeData(FGDLifeData &data) : GameObjectProxy(data){};

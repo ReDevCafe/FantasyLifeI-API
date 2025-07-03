@@ -2,8 +2,9 @@
     #define ENTITYSTATUS_HPP_
 
     #include "API/GameObjectProxy.hpp"
+    #include "Export.h"
 
-class EntityStatus {
+class ML_API EntityStatus {
     public:
         EntityStatus(FCharaStatusP &permanentStatus, FAvatarCharaStatusV &volatileStatus) : _permanentStatus(permanentStatus), _volatileStatus(volatileStatus) {}
         void setHP(uint32_t hp);

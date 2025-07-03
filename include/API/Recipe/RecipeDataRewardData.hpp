@@ -3,8 +3,9 @@
 
     #include "API/GameObjectProxy.hpp"
     #include "API/Item/ItemData.hpp"
+    #include "Export.h"
 
-class RecipeDataRewardData : public GameObjectProxy<FGDRecipeData_RewardData>
+class ML_API RecipeDataRewardData : public GameObjectProxy<FGDRecipeData_RewardData>
 {
     public:
         RecipeDataRewardData(FGDRecipeData_RewardData& data) : GameObjectProxy(data){};

@@ -5,9 +5,9 @@
     #include "API/Language.hpp"
     #include <vector>
     #include "SkillEffectInfo.hpp"
-
+    #include "Export.h"
 //TODO: Check how FGDSkillData works
-class SkillData : public GameObjectProxy<FGDSkillData>
+class ML_API SkillData : public GameObjectProxy<FGDSkillData>
 {
     public:
         SkillData(FGDSkillData& data) : 

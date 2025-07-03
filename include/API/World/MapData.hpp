@@ -3,8 +3,9 @@
 
     #include "API/World/MapDataSubMapData.hpp"
     #include "API/Language.hpp"
+    #include "Export.h"
 
-class MapData : public GameObjectProxy<FGDMapData>
+class ML_API MapData : public GameObjectProxy<FGDMapData>
 {
     public:
     MapData(FGDMapData& data) : GameObjectProxy(data)

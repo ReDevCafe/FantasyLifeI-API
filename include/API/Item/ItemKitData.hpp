@@ -4,7 +4,7 @@
     #include "ItemData.hpp"
 
 // useless but okay
-class ItemKitData : public ItemData
+class ML_API ItemKitData : public ItemData
 {
     public:
         ItemKitData(FGDItemKitData& data) : ItemData(data){};

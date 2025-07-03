@@ -1,6 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.6)
 PROJECT(FantasyLifeI-ModLoader LANGUAGES CXX C)
 
+set(VERSION 1.00)
 add_subdirectory(DllProxy)
 add_library(${PROJECT_NAME} SHARED src/ModLoader.cpp)
 
@@ -10,6 +11,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD_REQUIRED YES
 )
 
+target_compile_definitions(${PROJECT_NAME} PRIVATE MLCOMPILED)
+target_compile_definitions(${PROJECT_NAME} PRIVATE MLVERSION=\"${VERSION}\")
 option(MLDEBUG "Enable ModLoader debug code" OFF)
 
 if(MLDEBUG)

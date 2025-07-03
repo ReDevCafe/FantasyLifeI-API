@@ -4,7 +4,7 @@
     #include "ItemData.hpp"
     #include <vector>
 
-class ItemEquipData : public ItemData
+class ML_API ItemEquipData : public ItemData
 {
     public:
         ItemEquipData(FGDItemEquipData& data) 

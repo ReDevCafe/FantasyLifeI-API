@@ -3,7 +3,7 @@
 
     #include "ItemUniqueSkillEquipData.hpp"
 
-class ItemLifeToolsData : public  ItemUniqueSkillEquipData
+class ML_API ItemLifeToolsData : public  ItemUniqueSkillEquipData
 {
     public:
         ItemLifeToolsData(FGDItemLifeToolsData& data) : ItemUniqueSkillEquipData(data){}

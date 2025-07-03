@@ -7,6 +7,7 @@
     #include <any>
     #include <stdexcept>
     #include "windows.h"
+    #include "Export.h"
 
 const std::string EventTypeNames[] = {"None", "ClickEvent"};
 
@@ -15,7 +16,8 @@ enum EventType {
     ClickEvent
 };
 
-class EventHandler {
+
+class ML_API EventHandler {
     public:
 
         template<typename...Args>
