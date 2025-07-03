@@ -249,7 +249,7 @@
 #define SPIN_MASTER "ps_alchemy_action_roll_01" // Spin Master
 #define SPIN_MASTER "ps_alchemy_action_roll_02" // Spin Master
 #define SPIN_MASTER "ps_alchemy_action_roll_03" // Spin Master
-#define EUREKA! "ps_alchemy_recipe_up_01" // Eureka!
+#define EUREKA "ps_alchemy_recipe_up_01" // EurekaEXCL
 #define OUT_OF_THIN_AIR "ps_alchemy_item_power_up_01" // Out of Thin Air
 #define IMPROV_ART "rel_art_recipe_01" // Improv Art
 #define PRO_IMPROV_ART "rel_art_recipe_02" // Pro Improv Art
@@ -272,7 +272,7 @@
 #define HOLD_MASTER "ps_art_action_longpress_02" // Hold Master
 #define HOLD_MASTER "ps_art_action_longpress_03" // Hold Master
 #define CERTIFIED_ARTISTE "ps_art_recipe_up_01" // Certified Artiste
-#define ART_GOES_KA_BLAAAM! "ps_art_item_power_up_01" // Art Goes KA-BLAAAM!
+#define ART_GOES_KA_BLAAAM "ps_art_item_power_up_01" // Art Goes KA-BLAAAMEXCL
 #define HP_PLUS "ps_hp_up_01" // HP PLUS
 #define HP_PLUS "ps_hp_up_02" // HP PLUS
 #define HP_PLUS "ps_hp_up_03" // HP PLUS
@@ -708,7 +708,7 @@
 #define PLANT_ART_CRAFTER "es_recipe_up_art_04" // Plant Art Crafter
 #define INDOOR_FURNITURE_CRAFTER "es_recipe_up_art_05" // Indoor Furniture Crafter
 #define OUTDOOR_FURNITURE_CRAFTER "es_recipe_up_art_06" // Outdoor Furniture Crafter
-#define ATTACK/MAGIC_ATTACK_PLUS "es_attack_magicattack_up01" // Attack/Magic Attack PLUS
+#define ATTACK_MAGIC_ATTACK_PLUS "es_attack_magicattack_up01" // Attack/Magic Attack PLUS
 #define GATHERING_PLUS "es_collect_up01" // Gathering PLUS
 #define CRAFT_PLUS "es_production_up01" // Craft PLUS
 #define GATHERING_PLUS "es_collect_up_add01" // Gathering PLUS
@@ -762,11 +762,11 @@
 #define CALL_OF_THE_LAND "ps_life0002_chr001100_passive02" // Call of the Land
 #define FROZEN_MARCH "as_life0002_chr001200_special01" // Frozen March
 #define TWINKLING_STAGE "ps_life0002_chr001200_passive01" // Twinkling Stage
-#define ENCORE! "ps_life0002_chr001200_passive02" // Encore!
+#define ENCOREEXCL "ps_life0002_chr001200_passive02" // EncoreEXCL
 #define INVIGORATING_WAR_CRY "as_life0002_chr001300_special01" // Invigorating War Cry
 #define ADRENALINE_JUNKIE "ps_life0002_chr001300_passive01" // Adrenaline Junkie
-#define I_GOT_THIS! "ps_life0002_chr001300_passive02" // I Got This!
-#define SPIRITS_OF_THE_LAND! "as_life0003_chr000300_special01" // Spirits of the Land!
+#define I_GOT_THISEXCL "ps_life0002_chr001300_passive02" // I Got ThisEXCL
+#define SPIRITS_OF_THE_LANDEXCL "as_life0003_chr000300_special01" // Spirits of the LandEXCL
 #define SECRET_STRENGTH "ps_life0003_chr000300_passive01" // Secret Strength
 #define GUARDIAN_OF_THE_FOREST "ps_life0003_chr000300_passive02" // Guardian of the Forest
 #define PHOENIX_ARROW "as_life0003_chr001400_special01" // Phoenix Arrow
@@ -787,8 +787,8 @@
 #define ABSOLUTE_ZERO "as_life0004_chr001700_special01" // Absolute Zero
 #define ICY_GRASP "ps_life0004_chr001700_passive01" // Icy Grasp
 #define LONE_ICEWOLF "ps_life0004_chr001700_passive02" // Lone Icewolf
-#define TOO_BAD,_WRONG_ANSWER! "as_life0004_chr001800_special01" // Too Bad, Wrong Answer!
-#define POP_QUIZ! "ps_life0004_chr001800_passive01" // Pop Quiz!
+#define TOO_BAD_WRONG_ANSWEREXCL "as_life0004_chr001800_special01" // Too Bad, Wrong AnswerEXCL
+#define POP_QUIZEXCL "ps_life0004_chr001800_passive01" // Pop QuizEXCL
 #define LAW_OF_THE_FLAME "ps_life0004_chr001800_passive02" // Law of the Flame
 #define REJUVENATING_WIND "as_life0004_chr001900_special01" // Rejuvenating Wind
 #define ENERGIZING_MAGIC "ps_life0004_chr001900_passive01" // Energizing Magic
@@ -803,8 +803,8 @@
 #define GAIA_S_WHISPER "ps_life0005_chr001a00_passive01" // Gaia's Whisper
 #define GAIA_S_CALLING "ps_life0005_chr001a00_passive02" // Gaia's Calling
 #define DIGGIN__THE_DREAM "as_life0005_chr000a00_special01" // Diggin' the Dream
-#define LET_S_ROCK! "ps_life0005_chr000a00_passive01" // Let's Rock!
-#define THE_THREE_GS_OF_MINING! "ps_life0005_chr000a00_passive02" // The Three Gs of Mining!
+#define LET_S_ROCKEXCL "ps_life0005_chr000a00_passive01" // Let's RockEXCL
+#define THE_THREE_GS_OF_MININGEXCL "ps_life0005_chr000a00_passive02" // The Three Gs of MiningEXCL
 #define WILL_OF_THE_EARTH "as_life0006_chr000c00_special01" // Will of the Earth
 #define THE_FOREST_S_WISDOM "ps_life0006_chr000c00_passive01" // The Forest's Wisdom
 #define A_BREATHING_FOREST "ps_life0006_chr000c00_passive02" // A Breathing Forest
@@ -824,14 +824,14 @@
 #define HOOK_SET "ps_life0007_chr001f00_passive01" // Hook-Set
 #define FACE_TO_FISH "ps_life0007_chr001f00_passive02" // Face-to-Fish
 #define HARVEST_HYMN "as_life0008_chr002f00_special01" // Harvest Hymn
-#define BEFORE_THE_CORNIES_COME! "ps_life0008_chr002f00_passive01" // Before the Cornies Come!
-#define BEFORE_THE_CORNELLAS_COME! "ps_life0008_chr002f00_passive02" // Before the Cornellas Come!
+#define BEFORE_THE_CORNIES_COMEEXCL "ps_life0008_chr002f00_passive01" // Before the Cornies ComeEXCL
+#define BEFORE_THE_CORNELLAS_COMEEXCL "ps_life0008_chr002f00_passive02" // Before the Cornellas ComeEXCL
 #define BEYOND_OUR_DIFFERENCES "as_life0008_chr002d00_special01" // Beyond Our Differences
 #define FOREST_DWELLER_S_POWER "ps_life0008_chr002d00_passive01" // Forest-Dweller's Power
 #define LIVE_IN_HARMONY "ps_life0008_chr002d00_passive02" // Live in Harmony
 #define BROTHER_S_POTENTIAL "as_life0008_chr003400_special01" // Brother's Potential
-#define ELBOW_GREASE! "ps_life0008_chr003400_passive01" // Elbow Grease!
-#define MORE_ELBOW_GREASE! "ps_life0008_chr003400_passive02" // More Elbow Grease!
+#define ELBOW_GREASEEXCL "ps_life0008_chr003400_passive01" // Elbow GreaseEXCL
+#define MORE_ELBOW_GREASEEXCL "ps_life0008_chr003400_passive02" // More Elbow GreaseEXCL
 #define FIELD_KITCHEN "abi_cook_chr000d00_tension_01" // Field Kitchen
 #define VEGGIE_LOVER "ps_cook_chr000d00_recipe_up_01" // Veggie Lover
 #define LOW_AND_SLOW "ps_cook_chr000d00_speed_up_01" // Low and Slow

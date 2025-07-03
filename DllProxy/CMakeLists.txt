@@ -7,7 +7,6 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     OUTPUT_NAME "version"
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED YES
-    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC

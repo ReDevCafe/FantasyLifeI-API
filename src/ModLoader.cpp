@@ -1,8 +1,8 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
 
-GameData *ModLoader::gameData = nullptr;
-GameCache *ModLoader::gameCache = nullptr;
+ML_API GameData *ModLoader::gameData = nullptr;
+ML_API GameCache *ModLoader::gameCache = nullptr;
 Logger *ModLoader::logger = nullptr;
 ModEnvironnement *ModLoader::modEnvironnement = nullptr;
 

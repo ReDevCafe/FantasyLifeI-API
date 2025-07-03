@@ -10,13 +10,26 @@
     #include "Patcher/Patcher.hpp"
     #include "Patcher/Patches/EventHook.hpp"
 
-class ModLoader {
+#ifdef _WIN32
+  #ifdef MODCOMPILE
+    #define ML_API __declspec(dllimport)
+  #else
+    #define ML_API __declspec(dllexport)
+  #endif
+#else
+  #define ML_API
+#endif
+
+class ML_API ModLoader {
     public:
         static GameData *gameData;
         static GameCache *gameCache;
+
         static ModEnvironnement *modEnvironnement;
         static Logger *logger; 
+        
         static DWORD WINAPI init(LPVOID lpParam);
+
     protected:
     private:
 };
