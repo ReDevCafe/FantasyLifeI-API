@@ -1,8 +1,8 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
 
-ML_API GameData *ModLoader::gameData = nullptr;
-ML_API GameCache *ModLoader::gameCache = nullptr;
+GameData *ModLoader::gameData = nullptr;
+GameCache *ModLoader::gameCache = nullptr;
 Logger *ModLoader::logger = nullptr;
 ModEnvironnement *ModLoader::modEnvironnement = nullptr;
 
@@ -17,7 +17,6 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameData->initOthersData();
 
     gameCache = new GameCache();
-    Sleep(10000);
     modEnvironnement = new ModEnvironnement("../../../Mods");
     modEnvironnement->PreLoad();
 

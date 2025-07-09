@@ -1,6 +1,8 @@
-#include "ModEnvironnement.hpp"
+#include "Mod/ModEnvironnement.hpp"
 #include "ModLoader.hpp"
 #include <set>
+#include "Mod/ThreadPool.hpp"
+#include <latch>
 
 using json = nlohmann::json;
 
@@ -41,7 +43,7 @@ void ModEnvironnement::resolveOrder(std::vector<ModObject*> mods)
     for (auto& m : mods)
         nameMap.emplace(m->getMeta().name, m);
 
-    std::unordered_map<ModObject*, size_t> indegree;
+    std::unordered_map<ModObject*, int> indegree;
     std::unordered_map<ModObject*, std::vector<ModObject*>> dependents;
     indegree.reserve(N);
     dependents.reserve(N);
@@ -50,12 +52,10 @@ void ModEnvironnement::resolveOrder(std::vector<ModObject*> mods)
     {
         ModObject* pm = m;
         for (auto& depName : m->getMeta().dependencies) {
-            auto it = nameMap.find(depName);
-            if (it == nameMap.end())
-                throw std::runtime_error("Missing dependency: " + depName);
+            auto it = nameMap.at(depName);
+            if (!it) throw std::runtime_error("Missing dependency: " + depName);
 
-            ModObject* dep = it->second;
-            dependents[dep].push_back(pm);
+            dependents[it].push_back(pm);
             ++indegree[pm];
         }
     }
@@ -133,38 +133,82 @@ int ModEnvironnement::SetupEnvironnement(std::string modDirs)
 
 void ModEnvironnement::PreLoad()
 {
-    for(auto* m : _modsList)
+    const size_t modListSize = _modsList.size();
+    size_t numThreads = std::thread::hardware_concurrency();
+    if (numThreads > modListSize) numThreads = modListSize;
+
+    ThreadPool pool{numThreads};
+
+    struct Bucket
     {
-        ModLoader::logger->info("Loading mod: ", m->getMeta().name, " v", m->getMeta().version);
-        std::filesystem::path modLibPath = m->GetPath() / (m->getMeta().name + ".mod");
+        std::vector<LibHandle> libs;
+        std::vector<std::unique_ptr<ModBase>> mods;
+    };
 
-        LibHandle lib = LoadLib(modLibPath.string());
-        if(!lib)
+    std::vector<Bucket> buckets(numThreads);
+    std::atomic<int> nextBucket { 0 };
+
+    std::latch done(modListSize);
+
+    for (auto* mod : _modsList)
+    {
+        pool.enqueue([this, &done, mod, &buckets, &nextBucket, numThreads]
+            {
+                size_t index = nextBucket.fetch_add(1) % numThreads;
+                Bucket& bucket = buckets[index];
+
+                ModMetaData meta = mod->getMeta();
+                ModLoader::logger->info("Loading mod: ", meta.name, " v", meta.version);
+
+                auto path = mod->GetPath() / (meta.name + ".mod");
+                LibHandle lib = LoadLib(path.string());
+                if (!lib)
+                {
+                    ModLoader::logger->error("Failed to load: ", meta.name);
+                    return;
+                }
+
+                using GetModFunc = ModBase * (*)();
+                auto getter = reinterpret_cast<GetModFunc>(GetFunction(lib, "CraftMod"));
+                if (!getter)
+                {
+                    ModLoader::logger->error("Missing CraftMod in ", meta.name);
+                    return;
+                }
+
+                auto modPtr = std::unique_ptr<ModBase>(getter());
+                modPtr->OnPreLoad();
+
+                bucket.libs.push_back(lib);
+                bucket.mods.push_back(std::move(modPtr));
+                done.count_down();
+            });
+    }
+
+    done.wait();
+
+    {
+        std::lock_guard<std::mutex> lg(_mergeMutex);
+        for(auto& bucket : buckets)
         {
-            ModLoader::logger->error("Failed to load ", modLibPath);
-            continue;
-        }
-        _modLibList.push_back(lib);
-        
-        using GetModFunc = ModBase* (*)();
-        GetModFunc getFunc = (GetModFunc)GetFunction(lib, "CraftMod");
-        if(!getFunc)
-        {
-            ModLoader::logger->error("Missing CraftMod function in ", m->getMeta().name);
-            CloseLib(lib);
-        }
+            _modLibList.insert(_modLibList.end(), bucket.libs.begin(), bucket.libs.end());
 
-        std::unique_ptr<ModBase> mod(getFunc());
-
-        mod->OnPreLoad();
-        _modPTRList.push_back(std::move(mod));
+            for(auto& modPtr : bucket.mods) _modPTRList.push_back(std::move(modPtr));
+        }
     }
 }
 
 void ModEnvironnement::PostLoad()
 {
-    for(auto& mod : _modPTRList)
-        mod->OnPostLoad();
+    ThreadPool pool{};
+
+    for(auto& modPtr : _modPTRList)
+    {
+        pool.enqueue([&modPtr] 
+        {
+            modPtr->OnPostLoad();
+        });
+    }
 }
 
 void ModEnvironnement::Free()
@@ -178,5 +222,4 @@ void ModEnvironnement::Free()
     for(auto* lib : _modLibList)
         CloseLib(lib);
     _modsList.clear();
-
 }
