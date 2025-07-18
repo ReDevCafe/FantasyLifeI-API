@@ -1,14 +1,14 @@
 # Fantasy Life I Mod Loader
 > [!IMPORTANT]
-> HEY!!! This mod loader is currently under development.. Some features may work, some may not - and honestly, there's a good chance nothing works just yet.
+> HEY!!! This mod loader is currently under development.. Somes features work (about 20%-30%??) but some things might break if you try weird stuff, that said, if you take your time and experiment a little you can already pull off some pretty cool things
 > If you're interested in supporting the project, contributions are welcome! Feel free to open a Pull Request!!
 
 ### How to install the Mod Loader
 1. Locate your game's binaries folder
 ```mathematica
-<Your Game Folder>\Game\Binaries\Win64
-                                   │
-                               [THIS ONE]
+Fantasy Life I/Game/Binaries/Win64
+                                │
+                            [ THIS ONE ]
 ```
 2. Place **both** of the following files into that folder:
 - `ModLoader.dll`
@@ -43,7 +43,7 @@ Fantasy Life I/
 
 2. For each mod. create a subfolder inside `Mods` and drop in **both**:
 - `Mod.json`
-- The compiled mod DLL (e.g. `MyReallyReallyCuteMod.dll`)
+- The compiled mod DLL (e.g. `MyMod.mod`)
 
 > [!WARNING] 
 > Both files are required for the mod to be recognized and initialized by the mod loader so if a mod doesn't include them, there's a good chaance the developer messed up their export. <br />
@@ -52,9 +52,8 @@ Example layout:
 ```mathematica
 Fantasy Life I/
 └── Mods/
-    ├── MyReallyReallyCuteMod/     
+    ├── MyMod/     
     │   ├── Mod.json 
-    │   └── MyReallyReallyCuteMod.dll
-    │
+    │   └── MyMod.mod
     └── OtherMod/... 
 ```

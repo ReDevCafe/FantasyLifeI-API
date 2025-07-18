@@ -25,7 +25,8 @@ GameCache::GameCache()
     initText(gmd, sdm);
     ModLoader::logger->verbose("Cached: Text Registries");
 
-    
+    initItem(gmd, sdm);
+    ModLoader::logger->verbose("Cached: Items Registries");
 
     initRecipe(gmd, sdm);
     ModLoader::logger->verbose("Cached: Recipes Registries");   
@@ -41,10 +42,6 @@ void GameCache::PostLoadCache()
 {
     auto* gmd = ModLoader::gameData;
     auto* sdm = gmd->getStaticDataManager();
-
-    // TEMPORAIRE
-    initItem(gmd, sdm);
-    ModLoader::logger->verbose("Cached: Items Registries");
 
     initSubLevel(gmd, sdm);
     ModLoader::logger->verbose("Cached: Sub level registries");

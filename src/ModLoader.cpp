@@ -4,6 +4,7 @@
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
 Logger *ModLoader::logger = nullptr;
+ModEnvironnement *ModLoader::modEnvironnement = nullptr;
 
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     logger = new Logger("ModLoader");
@@ -14,14 +15,13 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
     gameData->initOthersData();
-    gameCache = new GameCache();
-    //TODO: Load PreLoad mod function
 
+    gameCache = new GameCache();
+    modEnvironnement = new ModEnvironnement("../../../Mods");
+    modEnvironnement->PreLoad();
 
     gameCache->PostLoadCache();
-    //TODO: Load PostLoad mod function
-
-
+    modEnvironnement->PostLoad();
 
     return 0;
 }
@@ -62,6 +62,12 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
             if(ModLoader::logger != nullptr)
                 delete ModLoader::logger;
+
+            if(ModLoader::modEnvironnement != nullptr)
+            {
+                ModLoader::modEnvironnement->Free();
+                delete ModLoader::modEnvironnement;
+            }
 
             break;
         }
