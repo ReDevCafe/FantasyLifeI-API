@@ -23,6 +23,10 @@ jobs:
         
         - name: Build project
           run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+
+        - name: tree
+          run: dir ./build/Release
+
         - name: Upload Artifacts
           uses: actions/upload-artifact@v4
           with:
@@ -41,10 +45,6 @@ jobs:
                 echo "::set-output name=tag::$DATE_TAG"
             - name: Download Artifacts
               uses: actions/download-artifact@v4
-            
-            - name: Tree
-              run: tree .
-
             - name: Create GitHub Release
               id: create_release
               uses: softprops/action-gh-release@v2
@@ -52,11 +52,6 @@ jobs:
                 tag_name: ${{ env.TAG_NAME }}
                 body: "Automated release of ${{ env.TAG_NAME }}."
                 token: ${{ secrets.RELEASE_CD_TOKEN }}
-            - name: Download Artifact
-              uses: actions/download-artifact@v4
-              with:
-                name: fli-modloader
-                path: ./release
 
             - name: Upload ModLoader.dll
               uses: actions/upload-release-asset@v1
@@ -64,7 +59,7 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
               with:
                 upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./release/buid/Release/ModLoader.dll"
+                asset_path: "./fli-modloader/ModLoader.dll"
                 asset_name: ModLoader.dll
                 asset_content_type: application/octet-stream
             
@@ -74,6 +69,6 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
               with:
                 upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./release/buid/Release/ModLoader.dll"
+                asset_path: "./fli-modloader/version.dll"
                 asset_name: version.dll
                 asset_content_type: application/octet-stream
