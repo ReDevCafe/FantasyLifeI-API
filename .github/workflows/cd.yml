@@ -48,6 +48,7 @@ jobs:
               with:
                 tag_name: ${{ env.TAG_NAME }}
                 body: "Automated release of ${{ github.ref_name }}."
+                generate_release_notes: true
                 token: ${{ secrets.RELEASE_CD_TOKEN }}
 
             - name: Upload ModLoader.dll
