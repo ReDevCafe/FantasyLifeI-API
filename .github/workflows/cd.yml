@@ -37,9 +37,9 @@ jobs:
         steps:
             - name: Set up date-based tag
               run: |
-                DATE_TAG="v$(date +'%Y%m%d-%H%M')"
+                DATE_TAG="v$(date +'%Y%m%d.%H%M')"
                 echo "TAG_NAME=$DATE_TAG" >> $GITHUB_ENV
-                echo "::set-output name=tag::$DATE_TAG"
+                echo "{tag}=$DATE_TAG"
             - name: Download Artifacts
               uses: actions/download-artifact@v4
             - name: Create GitHub Release
@@ -47,7 +47,7 @@ jobs:
               uses: softprops/action-gh-release@v2
               with:
                 tag_name: ${{ env.TAG_NAME }}
-                body: "Automated release of ${{ env.TAG_NAME }}."
+                body: "Automated release of ${{ github.ref_name }}."
                 token: ${{ secrets.RELEASE_CD_TOKEN }}
 
             - name: Upload ModLoader.dll
