@@ -1,0 +1,44 @@
+name: "Build and deploy project"
+
+on:
+    push:
+        branches: [ "deployement" ]
+    pull_request:
+        branches: [ "deployement" ]
+
+env:
+    BUILD_TYPE: Release
+
+jobs:
+    build:
+        runs-on: windows-latest
+        steps:
+        - uses: actions/checkout@v4
+        
+        - name: Configure CMake
+          run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        
+        - name: Build project
+          run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+        - name: Upload Artifacts
+          uses: actions/upload-artifact@v4
+          with:
+            name: fli-modloader
+            path: |
+                build/Release/ModLoader.dll
+                buid/Release/version.dll
+    release:
+        needs: build
+        runs-on: windows-latest
+        steps:
+        - name: Download Artifacts
+          uses: actions/download-artifact@v4
+        - name: Create GitHub Release
+          uses: softprops/action-gh-release@v2
+          with:
+            files: |
+                ModLoader.dll
+                version.dll
+            tag_name: ${{ github.ref_name }}
+            body: "Automated release of ${{ github.ref_name }}."
+            token: ${{ secrets.RELEASE_CD_TOKEN }}

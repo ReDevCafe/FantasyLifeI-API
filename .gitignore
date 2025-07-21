@@ -5,4 +5,6 @@
 !src/**/*
 #!CMakeLists.txt
 !README.md
+!.github/
+!.github/**/*
 !version_proxy.def
