@@ -32,7 +32,7 @@ jobs:
                 buid/Release/version.dll
     release:
         needs: build
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Set up date-based tag
               run: |
