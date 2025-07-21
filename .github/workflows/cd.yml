@@ -54,15 +54,13 @@ jobs:
                 name: fli-modloader
                 path: ./release
 
-            - name: List directory
-              run: ls -la release
             - name: Upload ModLoader.dll
               uses: actions/upload-release-asset@v1
               env:
                 GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
               with:
                 upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./release/ModLoader.dll"
+                asset_path: "./release/buid/Release/ModLoader.dll"
                 asset_name: ModLoader.dll
                 asset_content_type: application/octet-stream
             
@@ -72,6 +70,6 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
               with:
                 upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./release/version.dll"
+                asset_path: "./release/buid/Release/ModLoader.dll"
                 asset_name: version.dll
                 asset_content_type: application/octet-stream
