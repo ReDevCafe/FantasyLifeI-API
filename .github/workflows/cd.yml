@@ -2,9 +2,9 @@ name: "Build and deploy project"
 
 on:
     push:
-        branches: [ "deployement" ]
+        branches: [ "master" ]
     pull_request:
-        branches: [ "deployement" ]
+        branches: [ "master" ]
 
 env:
     BUILD_TYPE: Release
