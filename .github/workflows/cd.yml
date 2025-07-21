@@ -28,8 +28,8 @@ jobs:
           with:
             name: fli-modloader
             path: |
-                build/Release/ModLoader.dll
-                buid/Release/version.dll
+                ./build/Release/ModLoader.dll
+                ./build/Release/version.dll
     release:
         needs: build
         runs-on: ubuntu-latest
@@ -41,6 +41,10 @@ jobs:
                 echo "::set-output name=tag::$DATE_TAG"
             - name: Download Artifacts
               uses: actions/download-artifact@v4
+            
+            - name: Tree
+              run: tree .
+
             - name: Create GitHub Release
               id: create_release
               uses: softprops/action-gh-release@v2
