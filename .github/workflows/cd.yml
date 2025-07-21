@@ -56,7 +56,7 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
               with:
                 upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./fli-modloader/ModLoader.dll"
+                asset_path: "./fli-modloader/Release/ModLoader.dll"
                 asset_name: ModLoader.dll
                 asset_content_type: application/octet-stream
             
@@ -66,6 +66,6 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
               with:
                 upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./fli-modloader/version.dll"
+                asset_path: "./fli-modloader/DllProxy/Release/version.dll"
                 asset_name: version.dll
                 asset_content_type: application/octet-stream
