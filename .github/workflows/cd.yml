@@ -53,6 +53,9 @@ jobs:
               with:
                 name: fli-modloader
                 path: ./release
+
+            - name: List directory
+              run: ls -la release
             - name: Upload ModLoader.dll
               uses: actions/upload-release-asset@v1
               env:
@@ -62,7 +65,7 @@ jobs:
                 asset_path: "./release/ModLoader.dll"
                 asset_name: ModLoader.dll
                 asset_content_type: application/octet-stream
-
+            
             - name: Upload version.dll
               uses: actions/upload-release-asset@v1
               env:
