@@ -28,8 +28,8 @@ jobs:
           with:
             name: fli-modloader
             path: |
-                build/Release/ModLoader.dll
-                buid/Release/version.dll
+                ./build/Release/ModLoader.dll
+                ./buid/Release/version.dll
     release:
         needs: build
         runs-on: windows-latest
@@ -42,6 +42,6 @@ jobs:
             files: |
                 ModLoader.dll
                 version.dll
-            tag_name: ${{ github.ref_name }}
+            tag_name: ${{ github.sha}}
             body: "Automated release of ${{ github.ref_name }}."
             token: ${{ secrets.RELEASE_CD_TOKEN }}

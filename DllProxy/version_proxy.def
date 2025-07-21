@@ -16,4 +16,4 @@ EXPORTS
     VerLanguageNameA            @14
     VerLanguageNameW            @15
     VerQueryValueA              @16
-    VerQueryValueW              @17
+    VerQueryValueW              @17 
