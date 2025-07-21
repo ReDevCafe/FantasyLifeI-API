@@ -24,16 +24,13 @@ jobs:
         - name: Build project
           run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
-        - name: tree
-          run: dir ./build/Release
-
         - name: Upload Artifacts
           uses: actions/upload-artifact@v4
           with:
             name: fli-modloader
             path: |
                 ./build/Release/ModLoader.dll
-                ./build/Release/version.dll
+                ./build/DllProxy/Release/version.dll
     release:
         needs: build
         runs-on: ubuntu-latest
