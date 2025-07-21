@@ -42,11 +42,33 @@ jobs:
             - name: Download Artifacts
               uses: actions/download-artifact@v4
             - name: Create GitHub Release
+              id: create_release
               uses: softprops/action-gh-release@v2
               with:
-                files: |
-                    ModLoader.dll
-                    version.dll
                 tag_name: ${{ env.TAG_NAME }}
-                body: "Automated release of ${{ env.TAG_NAME }}}."
+                body: "Automated release of ${{ env.TAG_NAME }}."
                 token: ${{ secrets.RELEASE_CD_TOKEN }}
+            - name: Download Artifact
+              uses: actions/download-artifact@v4
+              with:
+                name: fli-modloader
+                path: ./release
+            - name: Upload ModLoader.dll
+              uses: actions/upload-release-asset@v1
+              env:
+                GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
+              with:
+                upload_url: ${{ steps.create_release.outputs.upload_url }}
+                asset_path: "./release/ModLoader.dll"
+                asset_name: ModLoader.dll
+                asset_content_type: application/octet-stream
+
+            - name: Upload version.dll
+              uses: actions/upload-release-asset@v1
+              env:
+                GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
+              with:
+                upload_url: ${{ steps.create_release.outputs.upload_url }}
+                asset_path: "./release/version.dll"
+                asset_name: version.dll
+                asset_content_type: application/octet-stream
