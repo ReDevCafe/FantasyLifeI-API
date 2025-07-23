@@ -1,5 +1,5 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.6)
-PROJECT(FantasyLifeI-ModLoader LANGUAGES CXX C)
+cmake_minimum_required(VERSION 3.10)
+project(FantasyLifeI-ModLoader LANGUAGES CXX C)
 
 set(VERSION 1.00)
 option(MLDEBUG "Enable ModLoader debug code" ON)

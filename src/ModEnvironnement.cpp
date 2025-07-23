@@ -102,26 +102,26 @@ int ModEnvironnement::SetupEnvironnement(std::string modDirs)
     std::vector<ModObject*> tempModList;
     for (const auto& entry : std::filesystem::directory_iterator(modDirs))
     {
-        if (!std::filesystem::is_directory(entry))
-        {
-            ModLoader::logger->error("Invalid object inside the mods folder");
-            return 0;
+        std::filesystem::path entryPath = entry.path();
+        if (!std::filesystem::is_directory(entry)) 
+        {   
+            ModLoader::logger->verbose("Invalid entry: ", entryPath);
+            continue; // Just skip it
         }
 
-        std::filesystem::path entryPath = entry.path();
         std::filesystem::path modJsonPath = entryPath / "Mod.json";
         if (!std::filesystem::exists(modJsonPath))
         {
-            ModLoader::logger->error("Invalid mod packet inside of",  entryPath, " Missing: ", modJsonPath);
-            return 0;
+            ModLoader::logger->warn("Invalid mod packet inside of ",  entryPath, " Missing: ", modJsonPath);
+            continue;
         }
 
         ModObject* mod = new ModObject(parseModMeta(modJsonPath), entryPath);
         std::filesystem::path modLibPath = entryPath / (mod->getMeta().name + ".mod");
         if (!std::filesystem::exists(modLibPath))
         {
-            ModLoader::logger->error("Invalid mod packet inside of",  entryPath, " Missing: ", modLibPath);
-            return 0;
+            ModLoader::logger->warn("Invalid mod packet inside of ",  entryPath, " Missing: ", modLibPath);
+            continue;
         }
 
         tempModList.push_back(mod);
