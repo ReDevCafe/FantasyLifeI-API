@@ -6,15 +6,16 @@
 ### How to install the Mod Loader
 1. Locate your game's binaries folder
 ```mathematica
-Fantasy Life I/Game/Binaries/Win64
-                                │
-                            [ THIS ONE ]
+Fantasy Life I/
+└── Game/
+    └── Binaries/
+        └── Win64 ← [ THIS ONE]
 ```
 2. Place **both** of the following files into that folder:
 - `ModLoader.dll`
 - `version.dll`
 > [!IMPORTANT]
-> `ModLoader.dll` and `version.dll` can be built from source or downloaded from our [release](https://github.com/AmeliaCute/FantasyLifeI-ModLoader/releases)
+> `ModLoader.dll` and `version.dll` can be built from source or downloaded from our [release](https://github.com/ReDevCafe/FantasyLifeI-API/releases)
 
 Your directory should now look like:
 ```mathematica
@@ -24,7 +25,7 @@ Fantasy Life I/
         └── Win64/
             ├── NFL1-Win64-Shipping.exe
             ├── ModLoader.dll
-            └── version.dll
+            ├── version.dll
 ```
 3. When you launch Fantasy Life I, the mod loader will automatically start alongside the game
 
@@ -33,12 +34,12 @@ Fantasy Life I/
 > If you're interested in making your own mods for Fantasy Life I, there's a ready-to-use template available here:
 > [Fantasy Life I Mod Template](https://github.com/ReDevCafe/FantasyLifeI-ModTemplate)
 
-1. At the root of your game install directory, create a folder named `Mods` if it doesn't already exist:
+1. Inside the Game/Contents directory of your game installation, create a folder named `Mods` if it doesn't already exist:
 ```mathematica
 Fantasy Life I/
-├── Mods/
 └── Game/
-    └── Binaries/...
+    └── Contents/
+        └── Mods/
 ```
 
 2. For each mod. create a subfolder inside `Mods` and drop in **both**:
@@ -46,14 +47,16 @@ Fantasy Life I/
 - The compiled mod DLL (e.g. `MyMod.mod`)
 
 > [!WARNING] 
-> Both files are required for the mod to be recognized and initialized by the mod loader so if a mod doesn't include them, there's a good chaance the developer messed up their export. <br />
+> Both files are required for the mod to be recognized and initialized by the mod loader so if a mod doesn't include them, there's a good chance the developer messed up their export. <br />
 
 Example layout:
 ```mathematica
 Fantasy Life I/
-└── Mods/
-    ├── MyMod/     
-    │   ├── Mod.json 
-    │   └── MyMod.mod
-    └── OtherMod/... 
+└── Game/
+    └── Contents/
+        └── Mods/
+            ├── MyMod/     
+            │   ├── Mod.json 
+            │   └── MyMod.mod
+            └── OtherMod/... 
 ```
