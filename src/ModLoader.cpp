@@ -1,5 +1,6 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
+#include "Utils.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -15,6 +16,19 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
     gameData->initOthersData();
+    
+    UGDSMapPickPoint* pickpoint = nullptr;
+    gameData->waitObject(&pickpoint, "Map_100101_GDSMapPickPoint");
+
+    logger->verbose(std::hex, pickpoint);           // CHECK THE ARRAYS INSIDE 
+
+    logger->verbose(std::hex, &(pickpoint->m_dataMap.Data[0].Value.Second));  // qsa_life05_pick_point_00
+    logger->verbose(std::hex, &(pickpoint->m_dataMap.Data[78].Value.Second)); // map_100101_pick_point_5000
+
+    pickpoint = nullptr;
+    gameData->waitObject(&pickpoint, "Map_100101_PV_GDSMapPickPoint");
+    logger->verbose(std::hex, &(pickpoint->m_dataMap.Data[0].Value.Second));  // qsa_life05_pick_point_00   [PV]
+    logger->verbose(std::hex, &(pickpoint->m_dataMap.Data[78].Value.Second)); // map_100101_pick_point_5000 [PV]
 
     gameCache = new GameCache();
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
@@ -22,6 +36,8 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
 
     gameCache->PostLoadCache();
     modEnvironnement->PostLoad();
+    
+    
 
     return 0;
 }
