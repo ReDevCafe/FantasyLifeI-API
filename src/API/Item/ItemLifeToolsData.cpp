@@ -1,7 +1,7 @@
 #include "API/Item/ItemLifeToolsData.hpp"
-#include "Utils.hpp"
+#include "Engine/FNamePool.hpp"
 
 std::string ItemLifeToolsData::GetSecondModel()
 {
-    return Utils::FNameToString(reinterpret_cast<FGDItemLifeToolsData*>(&this->_object)->ModelId2);
+    return FNameUtils::getString(reinterpret_cast<FGDItemLifeToolsData*>(&this->_object)->ModelId2);
 }

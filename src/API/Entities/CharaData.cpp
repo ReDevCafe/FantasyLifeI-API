@@ -5,12 +5,12 @@
 
 std::string CharaData::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.ID);
+    return FNameUtils::getString(this->_object.ID);
 }
 
 std::string CharaData::GetNameIdentifier()
 {
-    return Utils::FNameToString(this->_object.nameId);
+    return FNameUtils::getString(this->_object.nameId);
 }
 
 std::string CharaData::GetName(LANG lang)

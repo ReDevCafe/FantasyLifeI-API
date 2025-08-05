@@ -7,12 +7,12 @@
 
 std::string RecipeData::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.recipeId);
+    return FNameUtils::getString(this->_object.recipeId);
 }
 
 std::string RecipeData::GetItemIdentifier()
 {
-    return Utils::FNameToString(this->_object.ItemId);
+    return FNameUtils::getString(this->_object.ItemId);
 }
 
 ItemData RecipeData::GetItem()

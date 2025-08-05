@@ -1,17 +1,17 @@
 #include "API/World/MapSubLevel.hpp"
-#include "Utils.hpp"
+#include "Engine/FNamePool.hpp"
 
 std::string MapSubLevel::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.SubLevelID);
+    return FNameUtils::getString(this->_object.SubLevelID);
 }
 
 std::string MapSubLevel::GetMapSubIdentifier()
 {
-    return Utils::FNameToString(this->_object.mapSubId);
+    return FNameUtils::getString(this->_object.mapSubId);
 }
 
 std::string MapSubLevel::GetPath()
 {
-    return Utils::FNameToString(this->_object.SubLevelInfo.SubLevelPath);
+    return FNameUtils::getString(this->_object.SubLevelInfo.SubLevelPath);
 }

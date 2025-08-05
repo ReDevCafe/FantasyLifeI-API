@@ -1,10 +1,10 @@
 #include "API/Common/CommonItemTableSetting.hpp"
-#include "Utils.hpp"
+#include "Engine/FNamePool.hpp"
 #include "API/Engine/TArrayHelper.hpp"
 
 std::string CommonItemTableSetting::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.tableId);
+    return FNameUtils::getString(this->_object.tableId);
 }
 
 ItemTableDetail CommonItemTableSetting::GetData(int index)

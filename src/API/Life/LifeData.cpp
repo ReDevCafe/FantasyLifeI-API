@@ -1,18 +1,18 @@
 #include "API/Life/LifeData.hpp"
 #include "GameData.hpp"
-#include "Utils.hpp"
+#include "Engine/FNamePool.hpp"
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 #include "API/Common/Common.hpp"
 
 std::string LifeData::GetNameIdentifier()
 {
-    return Utils::FNameToString(this->_object.nameId);
+    return FNameUtils::getString(this->_object.nameId);
 }
 
 std::string LifeData::GetDescIdentifier()
 {
-    return Utils::FNameToString(this->_object.DescId);
+    return FNameUtils::getString(this->_object.DescId);
 }
 
 std::string LifeData::GetName(LANG lang)

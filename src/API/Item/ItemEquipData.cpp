@@ -1,9 +1,9 @@
 #include "API/Item/ItemEquipData.hpp"
-#include "Utils.hpp"
+#include "Engine/FNamePool.hpp"
 
 std::string ItemEquipData::GetModelIdentifier()
 {
-    return Utils::FNameToString(reinterpret_cast<FGDItemEquipData*>(&this->_object)->modelID);
+    return FNameUtils::getString(reinterpret_cast<FGDItemEquipData*>(&this->_object)->modelID);
 }
 
 void ItemEquipData::SetModel(ItemEquipData item)

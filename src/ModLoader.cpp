@@ -1,6 +1,11 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
 
+//FIXME: TEST
+#include "Engine/FNamePool.hpp"
+#include "API/Identifier/ItemIdentifier.hpp"
+#include "Utils.hpp"
+
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
 Logger *ModLoader::logger = nullptr;
@@ -19,6 +24,13 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameCache = new GameCache();
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
+
+    Sleep(3000);
+
+    auto item       = gameCache->GetItem("imt01000050").getObject().nameId;
+    auto str    = FNameUtils::getString(item);
+
+    logger->info("Test ", str);
 
     gameCache->PostLoadCache();
     modEnvironnement->PostLoad();
