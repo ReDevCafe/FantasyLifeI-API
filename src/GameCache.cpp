@@ -13,6 +13,8 @@
 #include "API/Item/ItemVehicleData.hpp"
 #include "API/Item/ItemPowerUpData.hpp"
 
+#include "API/Identifier/MapIdentifier.hpp"
+
 GameCache::GameCache()
 {
     ModLoader::logger->verbose("Initialize GameCache");
@@ -36,19 +38,15 @@ GameCache::GameCache()
 
     initChara(gmd, sdm);
     ModLoader::logger->verbose("Cached: Basic Chara Registries");
+
+    //initLevel(gmd);
+    ModLoader::logger->verbose("Cached: Levels");
 }
 
 void GameCache::PostLoadCache()
 {
     auto* gmd = ModLoader::gameData;
     auto* sdm = gmd->getStaticDataManager();
-
-    initSubLevel(gmd, sdm);
-    ModLoader::logger->verbose("Cached: Sub level registries");
-
-    initMap(gmd, sdm);
-    ModLoader::logger->verbose("Cached: Map registries");
-
 
     ModLoader::logger->info("OK: GameCache has been initialized");
 }
@@ -511,24 +509,14 @@ void GameCache::initChara(GameData* gmd, UStaticDataManager* sdm)
     }
 }
 
-void GameCache::initSubLevel(GameData* gmd, UStaticDataManager* sdm)
+void GameCache::initLevel(GameData* gmd)
 {
-    gmd->waitObject(&sdm->m_MapSubLevel);
-    for (int i = 0; i < sdm->m_MapSubLevel->m_dataMap.Data.Count; i++)
-    {
-        MapSubLevel level{ sdm->m_MapSubLevel->m_dataMap.Data[i].Value.Second };
+    // >>> MapIdentifier.hpp <<<
 
-        _cacheSubLevel.emplace(level.GetIdentifier(), std::make_unique<MapSubLevel>(level));
-    }
-}
 
-void GameCache::initMap(GameData* gmd, UStaticDataManager* sdm)
-{
-    gmd->waitObject(&sdm->m_MapData);
-    for (int i = 0; i < sdm->m_MapData->m_dataMap.Data.Count; ++i)
-    {
-        MapData map{ sdm->m_MapData->m_dataMap.Data[i].Value.Second };
+    //FIXME: find a better method 
+    UGDSMapPickPoint* pickpoint = nullptr;
+    gmd->waitObject(&pickpoint, "Map_100101_GDSMapPickPoint"); // CAPITAL_OF_MYSTERIA
 
-        _cacheMap.emplace(map.GetIdentifier(), std::make_unique<MapData>(map));
-    }
+    _cacheLevel.emplace(CAPITAL_OF_MYSTERIA, std::make_unique<Level>(pickpoint));
 }

@@ -22,17 +22,39 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
 
     logger->verbose(std::hex, pickpoint);           // CHECK THE ARRAYS INSIDE 
 
+    logger->verbose("TSetElementSize  ", std::hex, sizeof(TSetElement<TPair<FName, FGDMapPickPoint>>));
+    logger->verbose("TPairSize ", std::hex, sizeof(TPair<FName, FGDMapPickPoint>));
+    logger->verbose("FNameSize ",  std::hex, sizeof(FName));
+    
+
     logger->verbose(std::hex, &(pickpoint->m_dataMap.Data[0].Value.Second));  // qsa_life05_pick_point_00
     logger->verbose(std::hex, &(pickpoint->m_dataMap.Data[78].Value.Second)); // map_100101_pick_point_5000
+
+    Sleep(5000);
+
+   
+
+    /*for (int i = 0; i < pickpoint->m_dataMap.Data.Count; ++i)
+    {
+        logger->verbose("Starting the test for ", i);
+        pickpoint->m_dataMap.Data[i].Value.Second.actorPos.X = 2805;
+        pickpoint->m_dataMap.Data[i].Value.Second.actorPos.Y = -6182;
+        pickpoint->m_dataMap.Data[i].Value.Second.actorPos.Z = 500;
+        pickpoint->m_dataMap.Data[i].Value.Second.actorPos.W = 0;
+    }
 
     pickpoint = nullptr;
     gameData->waitObject(&pickpoint, "Map_100101_PV_GDSMapPickPoint");
     logger->verbose(std::hex, &(pickpoint->m_dataMap.Data[0].Value.Second));  // qsa_life05_pick_point_00   [PV]
     logger->verbose(std::hex, &(pickpoint->m_dataMap.Data[78].Value.Second)); // map_100101_pick_point_5000 [PV]
-
+    
+    */
     gameCache = new GameCache();
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
+
+    logger->info(Utils::TestFNameToString(gameCache->GetItem("imt01000280").getObject().nameId));
+    logger->info(Utils::TestFNameToString(pickpoint->m_dataMap.Data[0].Value.Second.ID));
 
     gameCache->PostLoadCache();
     modEnvironnement->PostLoad();
