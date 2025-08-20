@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(FantasyLifeI-ModLoader LANGUAGES CXX C)
 
 set(VERSION 1.00)
-option(MLDEBUG "Enable ModLoader debug code" ON)
+option(MLDEBUG "Enable ModLoader debug code" OFF)
 
 add_subdirectory(DllProxy)
 add_library(${PROJECT_NAME} SHARED src/ModLoader.cpp)
