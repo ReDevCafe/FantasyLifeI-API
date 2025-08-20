@@ -3,7 +3,6 @@
 #include "GameData.hpp"
 #include "GameCache.hpp"
 
-
 std::unordered_map<FNameEntryId, std::string> Utils::_strings; 
 
 std::string &Utils::FNameToString(uintptr_t baseAddress, FName fname) {
