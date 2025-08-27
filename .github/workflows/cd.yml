@@ -28,6 +28,7 @@ jobs:
             name: fli-modloader
             path: |
                 ./build/Release/ModLoader.dll
+                ./build/Release/ModLoader.lib
                 ./build/DllProxy/Release/version.dll
     release:
         needs: build
