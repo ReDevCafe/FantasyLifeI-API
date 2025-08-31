@@ -23,6 +23,10 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameCache->PostLoadCache();
     modEnvironnement->PostLoad();
 
+    UGDSRequestQuestConfig* test = nullptr;
+    gameData->waitObject(&test, "GDSRequestQuestConfig", 1);
+    logger->error(test->m_dataMap.Data.Count);
+
     return 0;
 }
 

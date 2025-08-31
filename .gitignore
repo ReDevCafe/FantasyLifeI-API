@@ -8,3 +8,4 @@
 !.github/
 !.github/**/*
 !version_proxy.def
+!.gitmodule
