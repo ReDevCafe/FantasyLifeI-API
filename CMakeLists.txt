@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 project(FantasyLifeI-ModLoader LANGUAGES CXX C)
 
 set(VERSION 1.00)
@@ -14,7 +14,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 )
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE MLCOMPILED)
-target_compile_definitions(${PROJECT_NAME} PRIVATE MLVERSION=\"${VERSION}\")
+target_compile_definitions(${PROJECT_NAME} PRIVATE MLVERSION=${VERSION})
 
 if(MLDEBUG)
     target_compile_definitions(${PROJECT_NAME} PRIVATE MLDEBUG)
@@ -36,8 +36,11 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
     kernel32
 )
 
-file(GLOB_RECURSE PROJECT_SOURCE "src/*.cpp")
+target_sources(${PROJECT_NAME} PRIVATE src/Lib/miniz.c)
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/miniz)
+target_compile_definitions(${PROJECT_NAME} PRIVATE MZ_ZIP_READER_ONLY)
 
+file(GLOB_RECURSE PROJECT_SOURCE "src/*.cpp")
 target_sources(${PROJECT_NAME} PUBLIC
     ${PROJECT_SOURCE}
 )

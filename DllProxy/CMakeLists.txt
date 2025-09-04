@@ -1,5 +1,5 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.6)
-PROJECT(DllProxy LANGUAGES CXX C)
+cmake_minimum_required(VERSION 3.16)
+project(DllProxy LANGUAGES CXX C)
 
 add_library(${PROJECT_NAME} SHARED src/dllmain.cpp) 
 
