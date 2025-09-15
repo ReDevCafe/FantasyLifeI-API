@@ -28,6 +28,7 @@ jobs:
             name: fli-modloader
             path: |
                 ./build/Release/ModLoader.dll
+                ./build/Release/ModLoader.lib
                 ./build/DllProxy/Release/version.dll
     release:
         needs: build
@@ -67,4 +68,14 @@ jobs:
                 upload_url: ${{ steps.create_release.outputs.upload_url }}
                 asset_path: "./fli-modloader/DllProxy/Release/version.dll"
                 asset_name: version.dll
+                asset_content_type: application/octet-stream
+
+            - name: Upload ModLoader.lib
+              uses: actions/upload-release-asset@v1
+              env:
+                GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
+              with:
+                upload_url: ${{ steps.create_release.outputs.upload_url }}
+                asset_path: "./fli-modloader/Release/ModLoader.lib"
+                asset_name: ModLoader.lib
                 asset_content_type: application/octet-stream
