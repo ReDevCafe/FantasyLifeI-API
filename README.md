@@ -42,12 +42,7 @@ Fantasy Life I/
         └── Mods/
 ```
 
-2. For each mod. create a subfolder inside `Mods` and drop in **both**:
-- `Mod.json`
-- The compiled mod DLL (e.g. `MyMod.mod`)
-
-> [!WARNING] 
-> Both files are required for the mod to be recognized and initialized by the mod loader so if a mod doesn't include them, there's a good chance the developer messed up their export. <br />
+2. Place your `.fliarchive` mod files inside the `Mods` directory
 
 Example layout:
 ```mathematica
@@ -55,8 +50,6 @@ Fantasy Life I/
 └── Game/
     └── Contents/
         └── Mods/
-            ├── MyMod/     
-            │   ├── Mod.json 
-            │   └── MyMod.mod
-            └── OtherMod/... 
+            ├── MyMod.fliarchive
+            └── OtherMod.fliarchive 
 ```
