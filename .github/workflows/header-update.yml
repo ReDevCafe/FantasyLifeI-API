@@ -1,0 +1,36 @@
+name: "Update submodule to latest"
+
+on:
+  push:
+    branches: [ "master" ]
+
+permissions:
+  contents: write
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Config user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Update submodule
+        run: |
+          git submodule set-branch --branch main include
+          git submodule update --init --remote include
+          git add include
+          if ! git diff --staged --quiet; then
+            git commit -m "[skip ci] update include submodule to latest main"
+            git push
+          else
+            echo "No update required"
+          fi
