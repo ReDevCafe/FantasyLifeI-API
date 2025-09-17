@@ -8,7 +8,7 @@ std::string ItemData::GetIdentifier()
     return Utils::FNameToString(this->_object.ID);
 }
 
-std::string ItemData::GetNameIdentifier()
+std::string ItemData::getNameIdentifier()
 {
     return Utils::FNameToString(this->_object.nameId);
 }
@@ -20,12 +20,12 @@ std::string ItemData::GetDescIdentifier()
 
 std::string ItemData::GetName(LANG lang)
 {
-    return NAME_GET(lang, GetNameIdentifier());
+    return NAME_GET(lang, getNameIdentifier());
 }
 
 void ItemData::SetName(LANG lang, FString string)
 {
-    NAME_SET(lang, GetNameIdentifier(), string);
+    NAME_SET(lang, getNameIdentifier(), string);
 }
 
 std::string ItemData::GetDescription(LANG lang)
