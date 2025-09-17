@@ -2,7 +2,7 @@ name: "Update submodule to latest"
 
 on:
   push:
-    branches: [ "auto/action-fix-branch" ]
+    branches: [ "master" ]
 
 permissions:
   contents: write
