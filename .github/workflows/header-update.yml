@@ -1,7 +1,7 @@
 name: "Update submodule to latest"
 
 on:
-  push:
+  pull_request:
     branches: [ "master" ]
 
 permissions:
