@@ -14,19 +14,14 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
-    gameData->initOthersData();
 
     gameCache = new GameCache();
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
 
     gameCache->PostLoadCache();
+    gameData->initOthersData();
     modEnvironnement->PostLoad();
-
-    UGDSRequestQuestConfig* test = nullptr;
-    gameData->waitObject(&test, "GDSRequestQuestConfig", 1);
-    logger->error(test->m_dataMap.Data.Count);
-
     return 0;
 }
 
