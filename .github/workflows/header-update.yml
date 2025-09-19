@@ -30,7 +30,7 @@ jobs:
           git add include
           if ! git diff --staged --quiet; then
             git commit -m "[skip ci] update include submodule to latest main"
-            git push origin HEAD:${github.head_ref}
+            git push origin HEAD:${{github.head_ref}}
           else
             echo "No update required"
           fi
