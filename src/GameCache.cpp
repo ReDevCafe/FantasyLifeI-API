@@ -36,6 +36,9 @@ GameCache::GameCache()
 
     initChara(gmd, sdm);
     ModLoader::logger->verbose("Cached: Basic Chara Registries");
+
+    initAddSkillTable(gmd, sdm);
+    ModLoader::logger->verbose("Cached: AddSkillTable Registries");
 }
 
 void GameCache::PostLoadCache()
@@ -530,5 +533,15 @@ void GameCache::initMap(GameData* gmd, UStaticDataManager* sdm)
         MapData map{ sdm->m_MapData->m_dataMap.Data[i].Value.Second };
 
         _cacheMap.emplace(map.GetIdentifier(), std::make_unique<MapData>(map));
+    }
+}
+
+void GameCache::initAddSkillTable(GameData* gmd, UStaticDataManager* sdm)
+{
+    gmd->waitObject(&sdm->m_AddSkillLotTable);
+    for (int i = 0; i < sdm->m_AddSkillLotTable->m_dataMap.Data.Count; i++)
+    {
+        std::string key = Utils::FNameToString(sdm->m_AddSkillLotTable->m_dataMap.Data[i].Value.First);
+        this->_cacheAddSkillLotTable.emplace(key, &sdm->m_AddSkillLotTable->m_dataMap.Data[i].Value.Second.addSkillInfoList);
     }
 }
