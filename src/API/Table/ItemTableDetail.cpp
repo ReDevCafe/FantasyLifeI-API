@@ -4,7 +4,7 @@
 
 std::string ItemTableDetail::GetItemIdentifier()
 {
-    return FNameUtils::getString(this->_object.ItemId);
+    return FNameUtils::GetString(this->_object.ItemId);
 }
 
 ItemData ItemTableDetail::GetItem()

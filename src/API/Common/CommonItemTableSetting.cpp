@@ -4,7 +4,7 @@
 
 std::string CommonItemTableSetting::GetIdentifier()
 {
-    return FNameUtils::getString(this->_object.tableId);
+    return FNameUtils::GetString(this->_object.tableId);
 }
 
 ItemTableDetail CommonItemTableSetting::GetData(int index)

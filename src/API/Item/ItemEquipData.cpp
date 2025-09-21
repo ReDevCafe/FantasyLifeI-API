@@ -3,7 +3,7 @@
 
 std::string ItemEquipData::GetModelIdentifier()
 {
-    return FNameUtils::getString(reinterpret_cast<FGDItemEquipData*>(&this->_object)->modelID);
+    return FNameUtils::GetString(reinterpret_cast<FGDItemEquipData*>(&this->_object)->modelID);
 }
 
 void ItemEquipData::SetModel(ItemEquipData item)

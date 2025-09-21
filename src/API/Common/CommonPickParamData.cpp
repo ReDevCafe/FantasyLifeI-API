@@ -3,10 +3,10 @@
 
 std::string CommonPickParamData::GetIdentifier()
 {
-    return FNameUtils::getString(this->_object.ID);
+    return FNameUtils::GetString(this->_object.ID);
 }
 
 std::string CommonPickParamData::GetGotIdentifier()
 {
-    return FNameUtils::getString(this->_object.gotId);
+    return FNameUtils::GetString(this->_object.gotId);
 }

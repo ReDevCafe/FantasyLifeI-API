@@ -4,5 +4,5 @@
 
 ItemData RecipeDataItemInfo::GetItem()
 {
-    return ModLoader::gameCache->GetItem(FNameUtils::getString(this->_object.ItemId));
+    return ModLoader::gameCache->GetItem(FNameUtils::GetString(this->_object.ItemId));
 }

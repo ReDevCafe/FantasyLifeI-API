@@ -5,17 +5,17 @@
 
 std::string ItemData::GetIdentifier()
 {
-    return FNameUtils::getString(this->_object.ID);
+    return FNameUtils::GetString(this->_object.ID);
 }
 
 std::string ItemData::GetNameIdentifier()
 {
-    return FNameUtils::getString(this->_object.nameId);
+    return FNameUtils::GetString(this->_object.nameId);
 }
 
 std::string ItemData::GetDescIdentifier()
 {
-    return FNameUtils::getString(this->_object.DescId);
+    return FNameUtils::GetString(this->_object.DescId);
 }
 
 std::string ItemData::GetName(LANG lang)
@@ -40,5 +40,5 @@ void ItemData::SetDescription(LANG lang, FString string)
 
 std::string ItemData::GetOverwriteIcon()
 {
-    return FNameUtils::getString(this->_object.overwriteIconName);
+    return FNameUtils::GetString(this->_object.overwriteIconName);
 }

@@ -24,12 +24,13 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
 
-    Sleep(3000);
-
-    auto item       = gameCache->GetItem("imt01000050").getObject().nameId;
-    auto str    = FNameUtils::getString(item);
-
+    FName test = FNameUtils::GetFName("grp_enmy_map100310_enm113011_01");
+    auto str    = FNameUtils::GetString(test);
     logger->info("Test ", str);
+
+    FName createTst = FNameUtils::CreateFName("AmeliaEstTropSympa");
+    str    = FNameUtils::GetString(createTst);
+    logger->info("CTest: ", str);
 
     gameCache->PostLoadCache();
     gameData->initOthersData();

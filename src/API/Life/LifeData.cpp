@@ -7,12 +7,12 @@
 
 std::string LifeData::GetNameIdentifier()
 {
-    return FNameUtils::getString(this->_object.nameId);
+    return FNameUtils::GetString(this->_object.nameId);
 }
 
 std::string LifeData::GetDescIdentifier()
 {
-    return FNameUtils::getString(this->_object.DescId);
+    return FNameUtils::GetString(this->_object.DescId);
 }
 
 std::string LifeData::GetName(LANG lang)

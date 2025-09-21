@@ -5,7 +5,7 @@
 
 std::string MapDataSubMapData::GetSubMapIdentifier()
 {
-    return FNameUtils::getString(this->_object.subMapId);
+    return FNameUtils::GetString(this->_object.subMapId);
 }
 
 MapSubLevel MapDataSubMapData::GetSubMap()
@@ -15,5 +15,5 @@ MapSubLevel MapDataSubMapData::GetSubMap()
 
 std::string MapDataSubMapData::GetAreaID()
 {
-    return  FNameUtils::getString(this->_object.AreaID);
+    return  FNameUtils::GetString(this->_object.AreaID);
 }

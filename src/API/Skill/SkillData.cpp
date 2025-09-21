@@ -7,12 +7,12 @@
 
 std::string SkillData::GetIdentifier()
 {
-    return FNameUtils::getString(this->_object.ID.Name);
+    return FNameUtils::GetString(this->_object.ID.Name);
 }
 
 std::string SkillData::GetNameIdentifier()
 {
-    return FNameUtils::getString(this->_object.nameTextID);
+    return FNameUtils::GetString(this->_object.nameTextID);
 }
 
 std::string SkillData::GetName(LANG lang)
@@ -27,7 +27,7 @@ void SkillData::SetName(LANG lang, FString string)
 
 std::string SkillData::GetDescIdentifier()
 {
-    return FNameUtils::getString(this->_object.dascTextId);
+    return FNameUtils::GetString(this->_object.dascTextId);
 }
 
 std::string SkillData::GetDescription(LANG lang)

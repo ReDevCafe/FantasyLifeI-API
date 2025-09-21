@@ -3,15 +3,15 @@
 
 std::string MapSubLevel::GetIdentifier()
 {
-    return FNameUtils::getString(this->_object.SubLevelID);
+    return FNameUtils::GetString(this->_object.SubLevelID);
 }
 
 std::string MapSubLevel::GetMapSubIdentifier()
 {
-    return FNameUtils::getString(this->_object.mapSubId);
+    return FNameUtils::GetString(this->_object.mapSubId);
 }
 
 std::string MapSubLevel::GetPath()
 {
-    return FNameUtils::getString(this->_object.SubLevelInfo.SubLevelPath);
+    return FNameUtils::GetString(this->_object.SubLevelInfo.SubLevelPath);
 }

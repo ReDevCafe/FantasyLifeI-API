@@ -60,7 +60,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_BattleCommandNameNoun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_BattleCommandNameNoun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_BattleCommandNameNoun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     } 
@@ -70,7 +70,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_PlantDungeonText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_PlantDungeonText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_PlantDungeonText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     } 
@@ -80,7 +80,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_ItemText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_ItemText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_ItemText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     } 
@@ -90,7 +90,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_LifeText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_LifeText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_LifeText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     } 
@@ -100,7 +100,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_SkillText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_SkillText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_SkillText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     } 
@@ -110,7 +110,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_QuestRequestMapText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_QuestRequestMapText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_QuestRequestMapText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     } 
@@ -120,7 +120,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_QuestTitleText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_QuestTitleText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_QuestTitleText->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     } 
@@ -130,7 +130,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_MapText_Noun->m_dataMap.Data[i].Value.Second.nounInfo.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_MapText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_MapText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     }    
@@ -140,7 +140,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_MenuText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_MenuText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_MenuText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     }  
@@ -150,7 +150,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_CharaText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_CharaText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_CharaText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     }
@@ -160,7 +160,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
     {
         auto noun = sdm->m_SystemText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
         if (noun == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_SystemText_Noun->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_SystemText_Noun->m_dataMap.Data[i].Value.First);
         
         this->_cacheNounInfo.emplace(key, noun);
     }
@@ -173,7 +173,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_AchievementText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_AchievementText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_AchievementText->m_dataMap.Data[i].Value.First);
 
         this->_cacheTextInfo.emplace(key, text);
     } 
@@ -183,7 +183,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_CharacterFlavorText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_CharacterFlavorText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_CharacterFlavorText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -193,7 +193,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_CharamakeText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_CharamakeText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_CharamakeText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -203,7 +203,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -213,7 +213,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_DailyMissionTitleText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_DailyMissionTitleText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_DailyMissionTitleText->m_dataMap.Data[i].Value.First);
 
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -223,7 +223,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_GuildRewardText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_GuildRewardText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_GuildRewardText->m_dataMap.Data[i].Value.First);
 
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -233,7 +233,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_ItemText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_ItemText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_ItemText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -243,7 +243,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_LifeText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_LifeText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_LifeText->m_dataMap.Data[i].Value.First);
        
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -253,7 +253,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_MapText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_MapText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_MapText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -263,7 +263,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_MenuText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_MenuText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_MenuText->m_dataMap.Data[i].Value.First);
 
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -273,7 +273,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_MultiText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_MultiText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_MultiText->m_dataMap.Data[i].Value.First);
 
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -284,7 +284,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_PhaseTitleText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_PhaseTitleText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_PhaseTitleText->m_dataMap.Data[i].Value.First);
 
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -294,7 +294,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_PlantDungeonText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_PlantDungeonText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_PlantDungeonText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -304,7 +304,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_QuestDetailText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_QuestDetailText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_QuestDetailText->m_dataMap.Data[i].Value.First);
 
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -314,7 +314,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_QuestPurposeText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_QuestPurposeText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_QuestPurposeText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -324,7 +324,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_QuestReportNotificationText->m_dataMap.Data[i].Value.Second.Text.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_QuestReportNotificationText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_QuestReportNotificationText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -334,7 +334,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_SkillText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_SkillText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_SkillText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -344,7 +344,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_SystemText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_SystemText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_SystemText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -354,7 +354,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_TipsText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_TipsText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_TipsText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -367,7 +367,7 @@ void GameCache::postInitText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_PhasePurposeText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_PhasePurposeText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_PhasePurposeText->m_dataMap.Data[i].Value.First);
 
         this->_cacheTextInfo.emplace(key, text);
     }
@@ -377,7 +377,7 @@ void GameCache::postInitText(GameData* gmd, UStaticDataManager* sdm)
     {
         auto text = sdm->m_BattleCommandDescText->m_dataMap.Data[i].Value.Second.textInfo.Data;
         if (text == nullptr) continue;
-        std::string key = FNameUtils::getString(sdm->m_BattleCommandDescText->m_dataMap.Data[i].Value.First);
+        std::string key = FNameUtils::GetString(sdm->m_BattleCommandDescText->m_dataMap.Data[i].Value.First);
         
         this->_cacheTextInfo.emplace(key, text);
     } 
@@ -388,7 +388,7 @@ void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
     gmd->waitObject(&sdm->m_SkillData);
     for (int i = 0; i < sdm->m_SkillData->m_dataMap.Data.Count; i++)
     {
-        std::string key = FNameUtils::getString(sdm->m_SkillData->m_dataMap.Data[i].Value.First.Name);
+        std::string key = FNameUtils::GetString(sdm->m_SkillData->m_dataMap.Data[i].Value.First.Name);
         if(key == "ps_just_avoid" || key == "ps_just_guard") continue;
 
         SkillData skill{ sdm->m_SkillData->m_dataMap.Data[i].Value.Second }; 
