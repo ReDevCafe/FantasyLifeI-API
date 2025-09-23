@@ -98,7 +98,7 @@ FName FNameUtils::GetFName(uintptr_t baseAddress, const std::string& data)
 
             if(result == data)
             {
-                FNameEntryId entryId = (static_cast<FNameEntryId>(blockIndex) << 17) | static_cast<FNameEntryId>(offset);
+                FNameEntryId entryId = (static_cast<FNameEntryId>(blockIndex) << 16) | static_cast<FNameEntryId>(offset);
                 entryPush(result, entryId);
 
                 return FName(entryId, 0);
