@@ -1,6 +1,7 @@
 #include "API/Common/CommonItemEffectParam.hpp"
+#include "API/Common/Common.hpp"
+
 #include "Utils.hpp"
-#include "Common.hpp"
 
 std::string CommonItemEffectParam::getDescIdentifier()
 {
