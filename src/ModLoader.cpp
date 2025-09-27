@@ -21,11 +21,33 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     modEnvironnement->PreLoad();
 
     gameCache->PostLoadCache();
+
+    UMapUtility* mapUtilityClass = nullptr;
+    gameData->waitObject(&mapUtilityClass, "MapUtility");
+    if(!mapUtilityClass) logger->error("FUCK YOU");
+    logger->verbose(std::hex, mapUtilityClass);
+
+    UFunction* getCurrentMapFunc = nullptr;
+    gameData->waitObject(&getCurrentMapFunc, "GetCurrentMapID");
+    if(!getCurrentMapFunc) logger->error("sudo rm");
+
+    struct Params
+    {
+        FName returnValue;
+    } params;
+    std::memset(&params, 0, sizeof(Params));
+
+    using tProcessEvent = void(*)(UObject* pObj, UFunction*, void* pParams);
+    tProcessEvent ProcessEvent = reinterpret_cast<tProcessEvent>(baseAddress + 0x88AB980);
+    ProcessEvent(mapUtilityClass, getCurrentMapFunc, &params);
+
+    logger->verbose("O1: ", params.returnValue.ComparisonIndex, ", O2: ", params.returnValue.Number);
+
     modEnvironnement->PostLoad();
 
-    UGDSRequestQuestConfig* test = nullptr;
-    gameData->waitObject(&test, "GDSRequestQuestConfig", 1);
-    logger->error(test->m_dataMap.Data.Count);
+
+    
+
 
     return 0;
 }

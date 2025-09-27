@@ -6,8 +6,8 @@
 std::unordered_map<FNameEntryId, std::string> Utils::_strings; 
 
 std::string &Utils::FNameToString(uintptr_t baseAddress, FName fname) {
-    if (_strings.contains(fname.ComparisonIndex))
-        return _strings.at(fname.ComparisonIndex);
+    //if (_strings.contains(fname.ComparisonIndex))
+    //    return _strings.at(fname.ComparisonIndex);
     char name[NAME_BUFFER + 1] = {0};
 	const unsigned int chunkOffset = fname.ComparisonIndex >> 16;
 	const unsigned short nameOffset = fname.ComparisonIndex;
