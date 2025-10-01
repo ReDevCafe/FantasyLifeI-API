@@ -31,15 +31,18 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameData->waitObject(&getCurrentMapFunc, "GetCurrentMapID");
     if(!getCurrentMapFunc) logger->error("sudo rm");
 
+    uintptr_t classPtr = *reinterpret_cast<uintptr_t*>(reinterpret_cast<uintptr_t>(mapUtilityClass) + 0x10);
+    uintptr_t cdo = *reinterpret_cast<uintptr_t*>(classPtr + 0x110);
+
     struct Params
     {
         FName returnValue;
     } params;
     std::memset(&params, 0, sizeof(Params));
 
-    using tProcessEvent = void(*)(UObject* pObj, UFunction*, void* pParams);
+    using tProcessEvent = void(*)(UObject*, UFunction*, void*);
     tProcessEvent ProcessEvent = reinterpret_cast<tProcessEvent>(baseAddress + 0x88AB980);
-    ProcessEvent(mapUtilityClass, getCurrentMapFunc, &params);
+    ProcessEvent(reinterpret_cast<UObject*>(cdo), getCurrentMapFunc, &params);
 
     logger->verbose("O1: ", params.returnValue.ComparisonIndex, ", O2: ", params.returnValue.Number);
 
