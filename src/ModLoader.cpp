@@ -8,6 +8,8 @@ ModEnvironnement *ModLoader::modEnvironnement = nullptr;
 
 DWORD WINAPI ModLoader::init(LPVOID parameter) {
     LPMODULEINFO moduleInfo = reinterpret_cast<LPMODULEINFO>(parameter);
+DWORD WINAPI ModLoader::init(LPVOID parameter) {
+    LPMODULEINFO moduleInfo = reinterpret_cast<LPMODULEINFO>(parameter);
     logger = new Logger("ModLoader");
     logger->info("Mod loader has been started");
     Patcher patcher;
@@ -55,6 +57,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             std::cerr.clear();
             
             Utils::EnableAnsiColors();
+            MODULEINFO moduleInfo{};
+            GetModuleInformation(GetCurrentProcess(), GetModuleHandle(nullptr), &moduleInfo, sizeof(MODULEINFO));
+            LoaderThread = CreateThread(nullptr, 0, ModLoader::init, &moduleInfo, 0, nullptr);
             MODULEINFO moduleInfo{};
             GetModuleInformation(GetCurrentProcess(), GetModuleHandle(nullptr), &moduleInfo, sizeof(MODULEINFO));
             LoaderThread = CreateThread(nullptr, 0, ModLoader::init, &moduleInfo, 0, nullptr);
