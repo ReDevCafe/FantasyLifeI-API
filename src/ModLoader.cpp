@@ -20,7 +20,7 @@ DWORD WINAPI ModLoader::init(LPVOID parameter) {
     };
     const char* mask = "xx????xxxxxx";
     try {
-        uintptr_t address = MemoryHelper::findPattern(baseAddress, lpParam->SizeOfImage, eacPattern, mask);
+        uintptr_t address = MemoryHelper::findPattern(baseAddress, moduleInfo->SizeOfImage, eacPattern, mask);
         ModLoader::logger->info(std::hex, address);
     } catch (const std::exception &exception) {
         ModLoader::logger->info(exception.what());

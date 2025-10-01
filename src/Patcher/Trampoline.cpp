@@ -17,14 +17,9 @@ bool Trampoline::apply(uintptr_t baseAddress) {
         return false;
     }
     DWORD oldProtectPtr;
-    DWORD oldProtectFree;
     DWORD oldProtectStub;
     void *ptr = reinterpret_cast<void *>(baseAddress + _target);
     void *stubPtr = reinterpret_cast<void *>(stubAddress);
-    if (!VirtualProtect(free, sizeof(trampoline), PAGE_EXECUTE_READWRITE, &oldProtectFree)) {
-        ModLoader::logger->error("Cannot write at ", std::hex, free);
-        return false;
-    }
     if (!VirtualProtect(ptr, sizeof(patch), PAGE_EXECUTE_READWRITE, &oldProtectPtr)) {
         ModLoader::logger->error("Cannot write at ", std::hex, ptr);
         return false;
@@ -54,18 +49,13 @@ bool Trampoline::apply(uintptr_t baseAddress) {
     memcpy(ptr, customPatch, sizeof(patch));
     memcpy(stubPtr, customStub, sizeof(customStub));
 
-    if (!VirtualProtect(stubPtr, sizeof(trampoline), oldProtectFree, &oldProtectFree)) {
-        ModLoader::logger->error("Cannot restore at  ", std::hex, free);
-        VirtualFree(customTrampoline, 0, MEM_RELEASE);
-        return false;
-    }
     if (!VirtualProtect(ptr, sizeof(patch), oldProtectPtr, &oldProtectPtr)) {
         ModLoader::logger->error("Cannot restore at ", std::hex, ptr);
         VirtualFree(customTrampoline, 0, MEM_RELEASE);
         return false;
     }
     if (!VirtualProtect(stubPtr, sizeof(stub), oldProtectStub, &oldProtectStub)) {
-        ModLoader::logger->error("Cannot restore at ", std::hex, ptr);
+        ModLoader::logger->error("Cannot restore at ", std::hex, stubPtr);
         VirtualFree(customTrampoline, 0, MEM_RELEASE);
         return false;
     }
