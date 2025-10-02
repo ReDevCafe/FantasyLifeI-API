@@ -46,6 +46,13 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     tProcessEvent ProcessEvent = reinterpret_cast<tProcessEvent>(baseAddress + 0x30B4190);
     ProcessEvent(mapUtilityClass, getCurrentMapFunc, &params);
 
+    using tGetCurrentMapId = FName(*)(void);
+    tGetCurrentMapId GetCurrentMapId = reinterpret_cast<tGetCurrentMapId>(baseAddress + 0x6725f00);
+    FName CrMapId = GetCurrentMapId();
+
+    logger->verbose("O1: ", CrMapId.ComparisonIndex, ", O2: ", CrMapId.Number);
+    logger->verbose("Bite: ", Utils::FNameToString(CrMapId));
+
     logger->verbose(std::hex, (baseAddress + 0x30B4190));
     logger->verbose("O1: ", params.returnValue.ComparisonIndex, ", O2: ", params.returnValue.Number);
 
