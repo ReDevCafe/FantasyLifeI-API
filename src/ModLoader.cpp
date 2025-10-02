@@ -40,17 +40,16 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     } params;
     std::memset(&params, 0, sizeof(Params));
 
-    using tProcessEvent = void(*)(UObject*, UFunction*, void*);
-    tProcessEvent ProcessEvent = reinterpret_cast<tProcessEvent>(baseAddress + 0x88AB980);
-    ProcessEvent(reinterpret_cast<UObject*>(cdo), getCurrentMapFunc, &params);
+    Sleep(8000);
 
+    using tProcessEvent = void(*)(void*, UFunction*, void*);
+    tProcessEvent ProcessEvent = reinterpret_cast<tProcessEvent>(baseAddress + 0x30B4190);
+    ProcessEvent(mapUtilityClass, getCurrentMapFunc, &params);
+
+    logger->verbose(std::hex, (baseAddress + 0x30B4190));
     logger->verbose("O1: ", params.returnValue.ComparisonIndex, ", O2: ", params.returnValue.Number);
 
     modEnvironnement->PostLoad();
-
-
-    
-
 
     return 0;
 }
