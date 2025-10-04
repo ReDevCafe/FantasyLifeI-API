@@ -21,40 +21,19 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     modEnvironnement->PreLoad();
 
     gameCache->PostLoadCache();
-
-    UMapUtility* mapUtilityClass = nullptr;
-    gameData->waitObject(&mapUtilityClass, "MapUtility");
-    if(!mapUtilityClass) logger->error("FUCK YOU");
-    logger->verbose(std::hex, mapUtilityClass);
-
-    UFunction* getCurrentMapFunc = nullptr;
-    gameData->waitObject(&getCurrentMapFunc, "GetCurrentMapID");
-    if(!getCurrentMapFunc) logger->error("sudo rm");
-
-    uintptr_t classPtr = *reinterpret_cast<uintptr_t*>(reinterpret_cast<uintptr_t>(mapUtilityClass) + 0x10);
-    uintptr_t cdo = *reinterpret_cast<uintptr_t*>(classPtr + 0x110);
-
-    struct Params
-    {
-        FName returnValue;
-    } params;
-    std::memset(&params, 0, sizeof(Params));
-
     Sleep(8000);
 
-    using tProcessEvent = void(*)(void*, UFunction*, void*);
-    tProcessEvent ProcessEvent = reinterpret_cast<tProcessEvent>(baseAddress + 0x30B4190);
-    ProcessEvent(mapUtilityClass, getCurrentMapFunc, &params);
-
     using tGetCurrentMapId = FName(*)(void);
-    tGetCurrentMapId GetCurrentMapId = reinterpret_cast<tGetCurrentMapId>(baseAddress + 0x6725f00);
+    tGetCurrentMapId GetCurrentMapId = reinterpret_cast<tGetCurrentMapId>(baseAddress + 0x6725f40);
     FName CrMapId = GetCurrentMapId();
 
-    logger->verbose("O1: ", CrMapId.ComparisonIndex, ", O2: ", CrMapId.Number);
-    logger->verbose("Bite: ", Utils::FNameToString(CrMapId));
+    using tToString = void(__thiscall *)(void*, FString&);
+    tToString ToString = reinterpret_cast<tToString>(baseAddress + 0x2EE2140);
+    FString truc;
+    ToString(&CrMapId, truc);
 
-    logger->verbose(std::hex, (baseAddress + 0x30B4190));
-    logger->verbose("O1: ", params.returnValue.ComparisonIndex, ", O2: ", params.returnValue.Number);
+    logger->verbose("O1: ", CrMapId.ComparisonIndex, ", O2: ", CrMapId.Number);
+    logger->verbose("Bite: ", truc.ToString());
 
     modEnvironnement->PostLoad();
 
