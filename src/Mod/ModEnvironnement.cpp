@@ -3,7 +3,6 @@
 #include "ModLoader.hpp"
 #include "Mod/ThreadPool.hpp"
 #include <latch>
-#include <mutex>
 #include "Lib/json.hpp"
 #include "Lib/miniz.h"
 
@@ -121,6 +120,7 @@ bool ModEnvironnement::findModJsonInArchive(const std::filesystem::path& archive
         mz_zip_archive_file_stat stat;
         if(!mz_zip_reader_file_stat(&archive, i, &stat)) continue;
         //if(!stat.m_filename) break;
+        //if(!stat.m_filename) break;
 
         std::string fname = stat.m_filename;
         if(fname.size() >= 8 && fname.substr(fname.size() - 8) == "Mod.json")
@@ -146,6 +146,7 @@ bool ModEnvironnement::findModLibInArchive(const std::filesystem::path& archiveP
         mz_zip_archive_file_stat st;
         if (!mz_zip_reader_file_stat(&archive, i, &st)) continue;
         //if (st.m_filename) {
+        //if (st.m_filename) {
             std::string fname = st.m_filename;
             if (fname.size() >= libName.size() &&
                 fname.compare(fname.size() - libName.size(), libName.size(), libName) == 0)
@@ -154,6 +155,7 @@ bool ModEnvironnement::findModLibInArchive(const std::filesystem::path& archiveP
                 mz_zip_reader_end(&archive);
                 return true;
             }
+        //}
         //}
     }
 
@@ -178,6 +180,7 @@ bool ModEnvironnement::readContentFromArchive(const std::filesystem::path& archi
         {
             mz_zip_archive_file_stat stat;
             if(!mz_zip_reader_file_stat(&archive, i, &stat)) continue;
+            //if(stat.m_filename == "") break;
             //if(stat.m_filename == "") break;
 
             std::string fname = stat.m_filename;

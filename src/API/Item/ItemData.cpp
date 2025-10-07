@@ -7,7 +7,7 @@ std::string& ItemData::GetIdentifier()
     return Utils::FNameToString(this->_object.ID);
 }
 
-std::string ItemData::getNameIdentifier()
+std::string& ItemData::getNameIdentifier()
 {
     return Utils::FNameToString(this->_object.nameId);
 }

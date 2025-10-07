@@ -1,9 +1,6 @@
 #include "API/Entities/Player/Player.hpp"
 #include "Utils.hpp"
 
-#include "ModLoader.hpp"
-#include <cstdint>
-
 Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV) : stats(charaParameter), status(*charaStatusP, charaStatusV) {}
 
 ELifeType Player::GetLifeType() {

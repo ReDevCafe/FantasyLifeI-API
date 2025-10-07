@@ -4,6 +4,9 @@
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
 #include "Utils.hpp"
+#include "Patcher/Patcher.hpp"
+#include "Patcher/Patches/EventHook.hpp"
+#include "Utils.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
