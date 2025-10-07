@@ -61,8 +61,8 @@ Fantasy Life I/
     $ cmake -B build -G "Ninja" -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DMLDEBUG=OFF
 ```
 > [!NOTE]  
-> For debugging u might need to set MLDEBUG to ON: `-DMLDEBUG=OFF`
-> But it's only if you need the pdb, otherwise let the option off.
+> For debugging you might need to set `MLDEBUG` to `ON`: `-DMLDEBUG=OFF`
+> This is only needed if you require PDB files, otherwise keep this option off.
 
 ```bash
     $ cmake --build build --config Release
