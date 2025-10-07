@@ -1,5 +1,8 @@
 #include "ModLoader.hpp"
 #include "Hook/EventHandler.hpp"
+#include "Patcher/Patcher.hpp"
+#include "Patcher/Patches/EventHook.hpp"
+#include "Utils.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -33,7 +36,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         case DLL_PROCESS_ATTACH:
         {
             AllocConsole();
-
             freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);
             freopen_s(reinterpret_cast<FILE**>(stderr), "CONOUT$", "w", stderr);
 

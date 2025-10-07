@@ -1,16 +1,14 @@
 #include "API/Skill/SkillData.hpp"
-#include "ModLoader.hpp"
-#include "GameCache.hpp"
 #include "Utils.hpp"
 #include "API/Common/Common.hpp"
 #include "API/Engine/TArrayHelper.hpp"
 
-std::string SkillData::GetIdentifier()
+std::string& SkillData::GetIdentifier()
 {
     return Utils::FNameToString(this->_object.ID.Name);
 }
 
-std::string SkillData::GetNameIdentifier()
+std::string& SkillData::GetNameIdentifier()
 {
     return Utils::FNameToString(this->_object.nameTextID);
 }
@@ -25,7 +23,7 @@ void SkillData::SetName(LANG lang, FString string)
     NAME_SET(lang, GetNameIdentifier(), string);
 }
 
-std::string SkillData::GetDescIdentifier()
+std::string& SkillData::GetDescIdentifier()
 {
     return Utils::FNameToString(this->_object.dascTextId);
 }

@@ -2,7 +2,7 @@
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 
-std::string ItemTableDetail::GetItemIdentifier()
+std::string& ItemTableDetail::GetItemIdentifier()
 {
     return Utils::FNameToString(this->_object.ItemId);
 }

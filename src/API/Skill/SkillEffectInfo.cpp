@@ -1,6 +1,4 @@
 #include "API/Skill/SkillEffectInfo.hpp"
-#include <stdexcept>
-#include "ModLoader.hpp"
 #include "API/Engine/TArrayHelper.hpp"
 
 EffectCondition SkillEffectInfo::GetEffectCondition(int index)

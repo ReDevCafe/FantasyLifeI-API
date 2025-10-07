@@ -1,14 +1,13 @@
 #include "API/Entities/CharaData.hpp"
-#include "GameCache.hpp"
-#include "ModLoader.hpp"
 #include "API/Common/Common.hpp"
+#include "Utils.hpp"
 
-std::string CharaData::GetIdentifier()
+std::string& CharaData::GetIdentifier()
 {
     return Utils::FNameToString(this->_object.ID);
 }
 
-std::string CharaData::GetNameIdentifier()
+std::string& CharaData::GetNameIdentifier()
 {
     return Utils::FNameToString(this->_object.nameId);
 }

@@ -1,7 +1,5 @@
-
 #include "API/Entities/Player/Player.hpp"
 #include "Utils.hpp"
-#include "ModLoader.hpp"
 
 Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV) : stats(charaParameter), status(*charaStatusP, charaStatusV) {}
 
