@@ -2,9 +2,9 @@
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 
-std::string Common::NounSingular(LANG lang, std::string identifier)
+std::string Common::NounSingular(LANG lang, std::string& identifier)
 {
-    if(identifier == "None") return "NO_NAME";
+    if(identifier == "None") return nullptr;
     auto text = ModLoader::gameCache->GetNoun(identifier);
     switch(lang)
     {
@@ -22,7 +22,7 @@ std::string Common::NounSingular(LANG lang, std::string identifier)
     return text->nounSingularForm.ToString();
 }
 
-void Common::NounSingularSet(LANG lang, std::string identifier, FString value)
+void Common::NounSingularSet(LANG lang, std::string& identifier, FString value)
 {
     if(identifier == "None") 
     {
@@ -45,7 +45,7 @@ void Common::NounSingularSet(LANG lang, std::string identifier, FString value)
     }
 }
 
-std::string Common::Description(LANG lang, std::string identifier)
+std::string Common::Description(LANG lang, std::string& identifier)
 {
     auto text = ModLoader::gameCache->GetText(identifier);
     switch(lang)
@@ -64,7 +64,7 @@ std::string Common::Description(LANG lang, std::string identifier)
     return text->Text.ToString();
 }
 
-void Common::DescriptionSet(LANG lang, std::string identifier, FString value)
+void Common::DescriptionSet(LANG lang, std::string &identifier, FString value)
 {
     if(identifier == "desc_itm_common") 
     {

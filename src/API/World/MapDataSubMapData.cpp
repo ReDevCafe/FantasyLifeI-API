@@ -3,7 +3,7 @@
 #include "GameCache.hpp"
 #include "Utils.hpp"
 
-std::string MapDataSubMapData::GetSubMapIdentifier()
+std::string& MapDataSubMapData::GetSubMapIdentifier()
 {
     return Utils::FNameToString(this->_object.subMapId);
 }
@@ -13,7 +13,7 @@ MapSubLevel MapDataSubMapData::GetSubMap()
     return ModLoader::gameCache->GetSubLevel(GetSubMapIdentifier());
 }
 
-std::string MapDataSubMapData::GetAreaID()
+std::string& MapDataSubMapData::GetAreaID()
 {
     return  Utils::FNameToString(this->_object.AreaID);
 }

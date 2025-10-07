@@ -1,20 +1,18 @@
 #include "API/World/MapData.hpp"
-#include "ModLoader.hpp"
-#include "GameCache.hpp"
 #include "Utils.hpp"
 #include "API/Common/Common.hpp"
 
-std::string MapData::GetIdentifier()
+std::string& MapData::GetIdentifier()
 {
     return Utils::FNameToString(this->_object.mapId);
 }
 
-std::string MapData::GetPath()
+std::string& MapData::GetPath()
 {
     return Utils::FNameToString(this->_object.MapPath);
 }
 
-std::string MapData::GetMapViewCategory()
+std::string& MapData::GetMapViewCategory()
 {
     return Utils::FNameToString(this->_object.MapViewCategory);
 }
@@ -39,12 +37,12 @@ void MapData::SetMapViewName(int index, FString name)
     this->_object.MapViewDataArray.Data[index].mapName = name;
 }
 
-std::string MapData::GetMapSubject()
+std::string& MapData::GetMapSubject()
 {
     return Utils::FNameToString(this->_object.MapSubject);
 }
 
-std::string MapData::GetNameIdentifier()
+std::string& MapData::GetNameIdentifier()
 {
     return Utils::FNameToString(this->_object.MapNameID);
 }
@@ -59,7 +57,7 @@ void MapData::SetName(LANG lang, FString string)
     NAME_SET(lang, GetNameIdentifier(), string);
 }
 
-std::string MapData::GetWorldMap()
+std::string& MapData::GetWorldMap()
 {
     return Utils::FNameToString(this->_object.WorldMapID);
 }

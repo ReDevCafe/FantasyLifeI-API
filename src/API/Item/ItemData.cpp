@@ -1,19 +1,18 @@
 #include "API/Item/ItemData.hpp"
-#include "ModLoader.hpp"
-#include "GameCache.hpp"
 #include "API/Common/Common.hpp"
+#include "Utils.hpp"
 
-std::string ItemData::GetIdentifier()
+std::string& ItemData::GetIdentifier()
 {
     return Utils::FNameToString(this->_object.ID);
 }
 
-std::string ItemData::getNameIdentifier()
+std::string& ItemData::getNameIdentifier()
 {
     return Utils::FNameToString(this->_object.nameId);
 }
 
-std::string ItemData::GetDescIdentifier()
+std::string& ItemData::GetDescIdentifier()
 {
     return Utils::FNameToString(this->_object.DescId);
 }
@@ -38,7 +37,7 @@ void ItemData::SetDescription(LANG lang, FString string)
     DESC_SET(lang, GetDescIdentifier(), string);
 }
 
-std::string ItemData::GetOverwriteIcon()
+std::string& ItemData::GetOverwriteIcon()
 {
     return Utils::FNameToString(this->_object.overwriteIconName);
 }

@@ -16,15 +16,18 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 target_compile_definitions(${PROJECT_NAME} PRIVATE MLCOMPILED)
 target_compile_definitions(${PROJECT_NAME} PRIVATE MLVERSION=${VERSION})
 
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    target_compile_options(${PROJECT_NAME} PRIVATE 
+        "-Wno-inconsistent-dllimport"
+        "-Wno-dllimport-static-field-def"
+    )
+endif()
+
 if(MLDEBUG)
     target_compile_definitions(${PROJECT_NAME} PRIVATE MLDEBUG)
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /Zi")
     set(CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} /DEBUG")
     set(CMAKE_SHARED_LINKER_FLAGS_RELEASE "${CMAKE_SHARED_LINKER_FLAGS_RELEASE} /DEBUG")
-
-    if(MSVC)
-        target_compile_options(FantasyLifeI-ModLoader PRIVATE /wd4369 /wd4309)
-    endif()
 endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -37,8 +40,6 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
 )
 
 target_sources(${PROJECT_NAME} PRIVATE src/Lib/miniz.c)
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/miniz)
-target_compile_definitions(${PROJECT_NAME} PRIVATE MZ_ZIP_READER_ONLY)
 
 file(GLOB_RECURSE PROJECT_SOURCE "src/*.cpp")
 target_sources(${PROJECT_NAME} PUBLIC
