@@ -2,7 +2,7 @@
 #include "Utils.hpp"
 #include "API/Engine/TArrayHelper.hpp"
 
-std::string CommonItemTableSetting::GetIdentifier()
+std::string& CommonItemTableSetting::GetIdentifier()
 {
     return Utils::FNameToString(this->_object.tableId);
 }

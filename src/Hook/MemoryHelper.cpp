@@ -1,4 +1,5 @@
 #include "Hook/MemoryHelper.hpp"
+#include <stdexcept>
 
 uintptr_t MemoryHelper::findFreeMemory(uintptr_t address, uint8_t length) {
     unsigned char *ptr = (unsigned char *) address;

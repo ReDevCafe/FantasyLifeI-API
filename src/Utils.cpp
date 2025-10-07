@@ -2,6 +2,8 @@
 #include "ModLoader.hpp"
 #include "GameData.hpp"
 #include "GameCache.hpp"
+#include "Offset.h"
+
 
 std::unordered_map<FNameEntryId, std::string> Utils::_strings; 
 

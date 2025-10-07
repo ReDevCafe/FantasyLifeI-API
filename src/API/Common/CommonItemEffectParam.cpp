@@ -3,7 +3,7 @@
 
 #include "Utils.hpp"
 
-std::string CommonItemEffectParam::getDescIdentifier()
+std::string& CommonItemEffectParam::getDescIdentifier()
 {
     return Utils::FNameToString(this->_object.effDescId);
 }
