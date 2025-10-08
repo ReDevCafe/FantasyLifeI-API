@@ -287,6 +287,14 @@ void ModEnvironnement::SetupEnvironnnement(std::string modDirs)
 
 void ModEnvironnement::PreLoad()
 {
+    #ifdef MLDEBUG
+        ThreadPool podol{1};
+        podol.enqueue([](){
+            std::cerr << "[TEST1] pool task executed on " << std::this_thread::get_id() << "\n";
+            ModLoader::logger->error("[TEST2] logger work");
+        });
+    #endif
+
     const size_t modListSize = _modsList.size();
     size_t numThreads = std::thread::hardware_concurrency();
     if(numThreads == 0) numThreads = 1;
@@ -304,20 +312,18 @@ void ModEnvironnement::PreLoad()
     std::atomic<int> nextBucket { 0 }; 
     std::latch done(static_cast<int>(modListSize));
     
+    
     for (auto * mod : _modsList)
     {
         pool.enqueue([this, &done, mod, &buckets, &nextBucket, numThreads]()
         {
             size_t index = nextBucket.fetch_add(1) % numThreads;
             Bucket& bucket = buckets[index];
-            
-            ModMetaData meta = mod->getMeta();
-            std::string identifier = meta.identifier;
 
             std::vector<char> modBuf;
             if(!readContentFromArchive(mod->getContainerPath(), mod->getInternalPath(), modBuf))
             {
-                ModLoader::logger->error("Failed to decompressed content from archive from: ", identifier);
+                ModLoader::logger->error("Failed to decompressed content from archive from: ", mod->getMeta().identifier);
                 done.count_down();
                 return;
             }
@@ -328,11 +334,17 @@ void ModEnvironnement::PreLoad()
                 size_t pos = intern.find_last_of('.');
                 if(pos != std::string::npos) suffix = intern.substr(pos);
             }
+            std::string suffix = ".mod";
+            {
+                std::string intern = mod->getInternalPath();
+                size_t pos = intern.find_last_of('.');
+                if(pos != std::string::npos) suffix = intern.substr(pos);
+            }
 
             std::filesystem::path libOnDiskPath = writeBufferToTemp(modBuf, suffix);
             if(libOnDiskPath.empty())
             {
-                ModLoader::logger->error("Failed to write temporary content for ", identifier);
+                ModLoader::logger->error("Failed to writee temporary content for ", mod->getMeta().identifier);
                 done.count_down();
                 return;
             }
@@ -341,11 +353,15 @@ void ModEnvironnement::PreLoad()
                 std::lock_guard<std::mutex> lg(_mergeMutex);
                 _tempFilesToRemove.push_back(libOnDiskPath);
             }
+            {
+                std::lock_guard<std::mutex> lg(_mergeMutex);
+                _tempFilesToRemove.push_back(libOnDiskPath);
+            }
 
             LibHandle lib = LoadLib(libOnDiskPath.string());
             if(!lib)
             {
-                ModLoader::logger->error("Failed to load: ", identifier);
+                ModLoader::logger->error("Failed to load: ", mod->getMeta().identifier);
                 done.count_down();
                 return;
             }
@@ -354,21 +370,17 @@ void ModEnvironnement::PreLoad()
             auto getter = reinterpret_cast<GetModFunc>(GetFunction(lib, "CraftMod"));
             if(!getter)
             {
-                ModLoader::logger->error("Missing CraftMod in ", identifier);
+                ModLoader::logger->error("Missing CraftMod in ", mod->getMeta().identifier);
                 CloseLib(lib);
                 done.count_down();
                 return;
             }
 
-            ModLoader::logger->info("Loading ", identifier, " v", meta.version);
             auto modPtr = std::unique_ptr<ModBase>(getter());
             modPtr->OnPreLoad();
 
-            {
-                std::lock_guard<std::mutex> lg(bucket.mutex);
-                bucket.libs.push_back(lib);
-                bucket.mods.push_back(std::move(modPtr));
-            }
+            bucket.libs.push_back(lib);
+            bucket.mods.push_back(std::move(modPtr));
             done.count_down();
         });
     }
