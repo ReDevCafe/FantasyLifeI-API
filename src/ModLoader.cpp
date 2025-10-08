@@ -45,8 +45,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
             Utils::EnableAnsiColors();
             LoaderThread = CreateThread(nullptr, 0, ModLoader::init, nullptr, 0, nullptr);
-            if (LoaderThread)
-                CloseHandle(LoaderThread);
             break;
         }
         case DLL_PROCESS_DETACH:

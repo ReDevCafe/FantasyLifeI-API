@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(DllProxy LANGUAGES CXX C)
 
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
 add_library(${PROJECT_NAME} SHARED src/dllmain.cpp) 
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
