@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 project(FantasyLifeI-ModLoader LANGUAGES CXX C)
 
 set(VERSION 1.00)
-option(MLDEBUG "Enable ModLoader debug code" OFF)
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
+option(MLDEBUG "Enable ModLoader debug code" ON)
 
 add_subdirectory(DllProxy)
 add_library(${PROJECT_NAME} SHARED src/ModLoader.cpp)
@@ -24,6 +25,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 if(MLDEBUG)
+    add_compile_options(/EHsc)
     target_compile_definitions(${PROJECT_NAME} PRIVATE MLDEBUG)
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /Zi")
     set(CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} /DEBUG")
