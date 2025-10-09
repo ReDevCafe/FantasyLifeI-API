@@ -3,6 +3,7 @@
 #include "ModLoader.hpp"
 #include "Mod/ThreadPool.hpp"
 #include <latch>
+#include <mutex>
 #include "Lib/json.hpp"
 #include "Lib/miniz.h"
 
@@ -287,14 +288,6 @@ void ModEnvironnement::SetupEnvironnnement(std::string modDirs)
 
 void ModEnvironnement::PreLoad()
 {
-    #ifdef MLDEBUG
-        ThreadPool podol{1};
-        podol.enqueue([](){
-            std::cerr << "[TEST1] pool task executed on " << std::this_thread::get_id() << "\n";
-            ModLoader::logger->error("[TEST2] logger work");
-        });
-    #endif
-
     const size_t modListSize = _modsList.size();
     size_t numThreads = std::thread::hardware_concurrency();
     if(numThreads == 0) numThreads = 1;
@@ -303,6 +296,9 @@ void ModEnvironnement::PreLoad()
     ThreadPool pool{numThreads};
     struct Bucket
     {
+        std::mutex                              mutex;
+        std::vector<LibHandle>                  libs;
+        std::vector<std::unique_ptr<ModBase>>   mods;
         std::mutex                              mutex;
         std::vector<LibHandle>                  libs;
         std::vector<std::unique_ptr<ModBase>>   mods;
@@ -344,7 +340,7 @@ void ModEnvironnement::PreLoad()
             std::filesystem::path libOnDiskPath = writeBufferToTemp(modBuf, suffix);
             if(libOnDiskPath.empty())
             {
-                ModLoader::logger->error("Failed to writee temporary content for ", mod->getMeta().identifier);
+                ModLoader::logger->error("Failed to write temporary content for ", mod->getMeta().identifier);
                 done.count_down();
                 return;
             }
@@ -379,8 +375,11 @@ void ModEnvironnement::PreLoad()
             auto modPtr = std::unique_ptr<ModBase>(getter());
             modPtr->OnPreLoad();
 
-            bucket.libs.push_back(lib);
-            bucket.mods.push_back(std::move(modPtr));
+            {
+                std::lock_guard<std::mutex> lg(bucket.mutex);
+                bucket.libs.push_back(lib);
+                bucket.mods.push_back(std::move(modPtr));
+            }
             done.count_down();
         });
     }
@@ -388,18 +387,24 @@ void ModEnvironnement::PreLoad()
     done.wait();
     {
         _modLibList.reserve(buckets.size());
+        _modLibList.reserve(buckets.size());
         std::lock_guard<std::mutex> lg(_mergeMutex);
         for(auto& bucket : buckets)
         {
+            _modPtrList.reserve(bucket.mods.size());
             _modPtrList.reserve(bucket.mods.size());
             _modLibList.insert(_modLibList.end(), bucket.libs.begin(), bucket.libs.end());
             for(auto& modPtr : bucket.mods) 
             { 
                 _modPtrList.push_back(std::move(modPtr));
             }
+            for(auto& modPtr : bucket.mods) 
+            { 
+                _modPtrList.push_back(std::move(modPtr));
+            }
         }
     }
-    ModLoader::logger->verbose("MENV Preload finished. [size of modPtr: ", _modPtrList.size(),"]");
+    ModLoader::logger->verbose("MENV Preload finished.\n Total size of modPtr: ", _modPtrList.size());
 }
 
 void ModEnvironnement::PostLoad()
