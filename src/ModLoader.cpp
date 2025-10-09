@@ -30,7 +30,7 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
 
     gameCache->PostLoadCache();
     gameData->initOthersData();
-
+       
     modEnvironnement->PostLoad();
 
     return 0;
