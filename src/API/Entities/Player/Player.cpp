@@ -1,14 +1,22 @@
 #include "API/Entities/Player/Player.hpp"
 #include "Utils.hpp"
 
+#include "ModLoader.hpp"
+
 Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV) : stats(charaParameter), status(*charaStatusP, charaStatusV) {}
 
+// FIXME: Invalid return value
 ELifeType Player::GetLifeType() {
-    FAvatarCharaStatusP *avatarStatus = reinterpret_cast<FAvatarCharaStatusP *>(&this->status.GetPermanentStatus());
-    std::string &lifeId = Utils::FNameToString(avatarStatus->m_lifeId);
+    std::string &lifeId = GetLifeId();
     if (lifeId.empty() || lifeId.size() <= 4)
         return ELifeType::ELifeType__None;
     return static_cast<ELifeType>(std::stoi(lifeId.c_str() + 4));
+}
+
+std::string& Player::GetLifeId()
+{
+    FAvatarCharaStatusP *avatarStatus = reinterpret_cast<FAvatarCharaStatusP *>(&this->status.GetPermanentStatus());
+    return Utils::FNameToString(avatarStatus->m_lifeId);
 }
 
 void Player::SetExp(ELifeType life, uint32_t exp) {
