@@ -22,10 +22,11 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
         "-Wno-inconsistent-dllimport"
         "-Wno-dllimport-static-field-def"
     )
+
+    add_compile_options(${PROJECT_NAME} PRIVATE /EHsc /GS /MD)
 endif()
 
 if(MLDEBUG)
-    add_compile_options(/EHsc)
     target_compile_definitions(${PROJECT_NAME} PRIVATE MLDEBUG)
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /Zi")
     set(CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} /DEBUG")

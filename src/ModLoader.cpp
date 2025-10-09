@@ -1,4 +1,5 @@
 #include "ModLoader.hpp"
+#include "GameData.hpp"
 #include "Hook/EventHandler.hpp"
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
