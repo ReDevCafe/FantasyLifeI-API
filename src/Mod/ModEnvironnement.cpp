@@ -434,7 +434,7 @@ void ModEnvironnement::Free()
     
     for(auto lib : _modLibList)
         CloseLib(lib);
-
+    
     _modLibList.clear();
 
     for(const std::filesystem::path& p : _tempFilesToRemove)
