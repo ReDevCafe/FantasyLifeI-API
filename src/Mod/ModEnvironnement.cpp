@@ -403,10 +403,15 @@ void ModEnvironnement::Free()
         delete mod;
 
     _modsList.clear();
+    
+    for(auto& modPtr : _modPtrList)
+        modPtr->OnExit();
+    
     _modPtrList.clear();
     
     for(auto lib : _modLibList)
         CloseLib(lib);
+    
     _modLibList.clear();
 
     for(const std::filesystem::path& p : _tempFilesToRemove)

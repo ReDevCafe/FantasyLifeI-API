@@ -9,6 +9,7 @@ GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
 Logger *ModLoader::logger = nullptr;
 ModEnvironnement *ModLoader::modEnvironnement = nullptr;
+ConfigManager *ModLoader::configManager = nullptr;
 
 DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     logger = new Logger("ModLoader");
@@ -20,13 +21,21 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
 
     gameCache = new GameCache();
+    configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
-    modEnvironnement->PreLoad();
+
+    
+
+    
+
+//    modEnvironnement->PreLoad();
 
     gameCache->PostLoadCache();
     gameData->initOthersData();
+
+    logger->info(test1.Get(), " > ", test2.Get(), " ? ", test3.Get());
        
-    modEnvironnement->PostLoad();
+//    modEnvironnement->PostLoad();
 
     return 0;
 }
@@ -70,6 +79,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
                 ModLoader::modEnvironnement->Free();
                 delete ModLoader::modEnvironnement;
             }
+
+            if(ModLoader::configManager != nullptr)
+                delete ModLoader::configManager;
 
             break;
         }
