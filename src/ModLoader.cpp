@@ -23,11 +23,11 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameCache = new GameCache();
     configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
-
-//    modEnvironnement->PreLoad();
+    modEnvironnement->PreLoad();
 
     gameCache->PostLoadCache();
     gameData->initOthersData();
+
     modEnvironnement->PostLoad();
 
     return 0;
