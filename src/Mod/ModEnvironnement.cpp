@@ -307,11 +307,14 @@ void ModEnvironnement::PreLoad()
         {
             size_t index = nextBucket.fetch_add(1) % numThreads;
             Bucket& bucket = buckets[index];
+            
+            ModMetaData meta = mod->getMeta();
+            std::string identifier = meta.identifier;
 
             std::vector<char> modBuf;
             if(!readContentFromArchive(mod->getContainerPath(), mod->getInternalPath(), modBuf))
             {
-                ModLoader::logger->error("Failed to decompressed content from archive from: ", mod->getMeta().identifier);
+                ModLoader::logger->error("Failed to decompressed content from archive from: ", identifier);
                 done.count_down();
                 return;
             }
@@ -326,7 +329,7 @@ void ModEnvironnement::PreLoad()
             std::filesystem::path libOnDiskPath = writeBufferToTemp(modBuf, suffix);
             if(libOnDiskPath.empty())
             {
-                ModLoader::logger->error("Failed to write temporary content for ", mod->getMeta().identifier);
+                ModLoader::logger->error("Failed to write temporary content for ", identifier);
                 done.count_down();
                 return;
             }
@@ -339,7 +342,7 @@ void ModEnvironnement::PreLoad()
             LibHandle lib = LoadLib(libOnDiskPath.string());
             if(!lib)
             {
-                ModLoader::logger->error("Failed to load: ", mod->getMeta().identifier);
+                ModLoader::logger->error("Failed to load: ", identifier);
                 done.count_down();
                 return;
             }
@@ -348,12 +351,13 @@ void ModEnvironnement::PreLoad()
             auto getter = reinterpret_cast<GetModFunc>(GetFunction(lib, "CraftMod"));
             if(!getter)
             {
-                ModLoader::logger->error("Missing CraftMod in ", mod->getMeta().identifier);
+                ModLoader::logger->error("Missing CraftMod in ", identifier);
                 CloseLib(lib);
                 done.count_down();
                 return;
             }
 
+            ModLoader::logger->info("Loading ", identifier, " v", meta.version);
             auto modPtr = std::unique_ptr<ModBase>(getter());
             modPtr->OnPreLoad();
 
@@ -367,7 +371,6 @@ void ModEnvironnement::PreLoad()
     }
 
     done.wait();
-    
     {
         _modLibList.reserve(buckets.size());
         std::lock_guard<std::mutex> lg(_mergeMutex);
@@ -381,7 +384,7 @@ void ModEnvironnement::PreLoad()
             }
         }
     }
-    ModLoader::logger->verbose("MENV Preload finished.\n Total size of modPtr: ", _modPtrList.size());
+    ModLoader::logger->verbose("MENV Preload finished. [size of modPtr: ", _modPtrList.size(),"]");
 }
 
 void ModEnvironnement::PostLoad()
@@ -411,7 +414,7 @@ void ModEnvironnement::Free()
     
     for(auto lib : _modLibList)
         CloseLib(lib);
-    
+
     _modLibList.clear();
 
     for(const std::filesystem::path& p : _tempFilesToRemove)
