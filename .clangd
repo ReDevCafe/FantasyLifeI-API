@@ -1,7 +1,16 @@
 CompileFlags:
   Add: [-std=c++20]
 
+---
+
 If:
   PathMatch: include/SDK.h
 Diagnostics:
   UnusedIncludes: None
+
+---
+
+If:
+  PathMatch: .*
+Diagnostics:
+  Suppress: [-Wunused-include:include/SDK.h]
