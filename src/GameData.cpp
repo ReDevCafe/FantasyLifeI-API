@@ -3,9 +3,13 @@
 #include "ModLoader.hpp"
 #include "Offset.h"
 
-GameData::GameData(uintptr_t baseAddress) : _staticDataManager(nullptr), _dynamicDataManager(nullptr) {
+GameData::GameData(uintptr_t baseAddress, uint32_t imageSize) : 
+    _staticDataManager(nullptr), 
+    _dynamicDataManager(nullptr)
+{
     ModLoader::logger->verbose("Initialize GameData");
     this->_baseAddress = baseAddress;
+    this->_imageSize = imageSize;
     this->_gObjects = reinterpret_cast<FUObjectArray *>(this->_baseAddress + GOBJECTS_OFFSET);
     this->_gWorld = reinterpret_cast<void *>(this->_baseAddress + GWORLD_OFFSET);
     this->_gNames = reinterpret_cast<void *>(this->_baseAddress + GNAMES_OFFSET);
@@ -34,6 +38,11 @@ Player *GameData::getPlayer() {
 
 uintptr_t GameData::getBaseAddress() {
     return _baseAddress;
+}
+
+uint32_t GameData::getImageSize()
+{
+    return _imageSize;
 }
 
 FUObjectArray *GameData::getGObjects() {

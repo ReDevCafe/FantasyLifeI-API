@@ -1,12 +1,13 @@
 #include "ModLoader.hpp"
+#include "GameCache.hpp"
 #include "GameData.hpp"
 #include "Hook/EventHandler.hpp"
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
 #include "Utils.hpp"
-#include "Patcher/Patcher.hpp"
-#include "Patcher/Patches/EventHook.hpp"
-#include "Utils.hpp"
+#include "Psapi.h"
+
+#include "API/Function/Engine/FnameToString.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -14,19 +15,28 @@ Logger *ModLoader::logger = nullptr;
 ModEnvironnement *ModLoader::modEnvironnement = nullptr;
 ConfigManager *ModLoader::configManager = nullptr;
 
-DWORD WINAPI ModLoader::init(LPVOID lpParam) {
+
+DWORD WINAPI ModLoader::init(LPVOID lpParam)
+{
     logger = new Logger("ModLoader");
     logger->info("Mod loader has been started");
     Patcher patcher;
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
-    // patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32)); broken?????
-    // patcher.applyPatches(baseAddress);
-    gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
+    patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
+    patcher.applyPatches(baseAddress);
+    gameData = new GameData(baseAddress, reinterpret_cast<LPMODULEINFO>(lpParam)->SizeOfImage);
 
     gameCache = new GameCache();
     configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
+
+    FName test = gameCache->GetItem("imt01004480").getObject().nameId;
+    FString fstrtest;
+    FNameToString::call(&test, &fstrtest);
+
+    std::string res = fstrtest.IsValid() ? fstrtest.ToString() : "Value invalid sorry..";
+    ModLoader::logger->info("Returned: ", res);
 
     gameCache->PostLoadCache();
     gameData->initOthersData();
@@ -51,7 +61,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             std::cerr.clear();
 
             Utils::EnableAnsiColors();
-            LoaderThread = CreateThread(nullptr, 0, ModLoader::init, nullptr, 0, nullptr);
+            MODULEINFO moduleInfo{};
+            GetModuleInformation(GetCurrentProcess(), GetModuleHandle(nullptr), &moduleInfo, sizeof(MODULEINFO));
+            LoaderThread = CreateThread(nullptr, 0, ModLoader::init, &moduleInfo, 0, nullptr);
             break;
         }
         case DLL_PROCESS_DETACH:
