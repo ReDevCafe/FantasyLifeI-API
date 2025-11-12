@@ -7,7 +7,7 @@
 #include "Utils.hpp"
 #include "Psapi.h"
 
-#include "API/Function/Engine/FnameToString.hpp"
+#include "API/Engine/FName.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -30,13 +30,10 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
+    
+    FName test("Cute:3");
+    ModLoader::logger->info("Returned: ", test.ToString());
 
-    FName test = gameCache->GetItem("imt01004480").getObject().nameId;
-    FString fstrtest;
-    FNameToString::call(&test, &fstrtest);
-
-    std::string res = fstrtest.IsValid() ? fstrtest.ToString() : "Value invalid sorry..";
-    ModLoader::logger->info("Returned: ", res);
 
     gameCache->PostLoadCache();
     gameData->initOthersData();
