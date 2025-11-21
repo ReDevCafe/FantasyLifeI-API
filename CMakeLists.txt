@@ -4,17 +4,12 @@ project(FantasyLifeI-ModLoader LANGUAGES CXX C)
 set(VERSION 1.00)
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
 option(MLDEBUG "Enable ModLoader debug code" ON)
-option(USE_CUSTOM_UE_CLASS "Use custom Unreal Engine class instead of inheriting UE classes" OFF)
 
 add_subdirectory(DllProxy)
 add_library(${PROJECT_NAME} SHARED)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "ModLoader" CXX_STANDARD 20 CXX_STANDARD_REQUIRED YES)
 target_compile_definitions(${PROJECT_NAME} PRIVATE MLCOMPILED MLVERSION=${VERSION})
-
-if(USE_CUSTOM_UE_CLASS)
-    target_compile_definitions(${PROJECT_NAME} PRIVATE USE_CUSTOM_UE_CLASS)
-endif()
 
 if(MLDEBUG)
     target_compile_definitions(${PROJECT_NAME} PRIVATE MLDEBUG)
