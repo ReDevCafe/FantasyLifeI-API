@@ -1,15 +1,20 @@
 #include "API/Entities/CharaData.hpp"
 #include "API/Common/Common.hpp"
-#include "Utils.hpp"
+#include "API/Engine/FName.hpp"
 
-std::string& CharaData::GetIdentifier()
+std::string CharaData::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.ID);
+    return static_cast<API_FName>(this->_object.ID).ToString();
 }
 
-std::string& CharaData::GetNameIdentifier()
+std::string CharaData::GetNameIdentifier()
 {
-    return Utils::FNameToString(this->_object.nameId);
+    return static_cast<API_FName>(this->_object.nameId).ToString();
+}
+
+std::string CharaData::GetFlag()
+{
+    return static_cast<API_FName>(this->_object.Flag).ToString();
 }
 
 std::string CharaData::GetName(LANG lang)

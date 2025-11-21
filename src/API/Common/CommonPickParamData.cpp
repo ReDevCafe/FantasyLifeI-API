@@ -1,12 +1,12 @@
 #include "API/Common/CommonPickParamData.hpp"
-#include "Utils.hpp"
+#include "API/Engine/FName.hpp"
 
-std::string& CommonPickParamData::GetIdentifier()
+std::string CommonPickParamData::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.ID);
+    return static_cast<API_FName>(this->_object.ID).ToString();
 }
 
-std::string& CommonPickParamData::GetGotIdentifier()
+std::string CommonPickParamData::GetGotIdentifier()
 {
-    return Utils::FNameToString(this->_object.gotId);
+    return static_cast<API_FName>(this->_object.gotId).ToString();
 }

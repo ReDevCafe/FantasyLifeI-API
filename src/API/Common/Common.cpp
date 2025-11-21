@@ -2,10 +2,10 @@
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 
-std::string Common::NounSingular(LANG lang, std::string& identifier)
+std::string Common::NounSingular(LANG lang, std::string_view identifier)
 {
     if(identifier == "None") return nullptr;
-    auto text = ModLoader::gameCache->GetNoun(identifier);
+    auto text = ModLoader::gameCache->GetNoun(identifier.data());
     switch(lang)
     {
         case LANG::JAPANESE: return text->nounSingularForm.ToString();
@@ -22,7 +22,7 @@ std::string Common::NounSingular(LANG lang, std::string& identifier)
     return text->nounSingularForm.ToString();
 }
 
-void Common::NounSingularSet(LANG lang, std::string& identifier, FString value)
+void Common::NounSingularSet(LANG lang, std::string_view identifier, FString value)
 {
     if(identifier == "None") 
     {
@@ -30,7 +30,7 @@ void Common::NounSingularSet(LANG lang, std::string& identifier, FString value)
         return;
     }
     
-    auto text = ModLoader::gameCache->GetNoun(identifier);
+    auto text = ModLoader::gameCache->GetNoun(identifier.data());
     switch(lang)
     {
         case LANG::JAPANESE: text->nounSingularForm = value;
@@ -45,9 +45,9 @@ void Common::NounSingularSet(LANG lang, std::string& identifier, FString value)
     }
 }
 
-std::string Common::Description(LANG lang, std::string& identifier)
+std::string Common::Description(LANG lang, std::string_view identifier)
 {
-    auto text = ModLoader::gameCache->GetText(identifier);
+    auto text = ModLoader::gameCache->GetText(identifier.data());
     switch(lang)
     {
         case LANG::JAPANESE: return text->Text.ToString();
@@ -64,7 +64,7 @@ std::string Common::Description(LANG lang, std::string& identifier)
     return text->Text.ToString();
 }
 
-void Common::DescriptionSet(LANG lang, std::string &identifier, FString value)
+void Common::DescriptionSet(LANG lang, std::string_view identifier, FString value)
 {
     if(identifier == "desc_itm_common") 
     {
@@ -72,7 +72,7 @@ void Common::DescriptionSet(LANG lang, std::string &identifier, FString value)
         return;
     }
 
-    auto text = ModLoader::gameCache->GetText(identifier);
+    auto text = ModLoader::gameCache->GetText(identifier.data());
     switch(lang)
     {
         case LANG::JAPANESE: text->Text = value;

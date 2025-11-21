@@ -1,17 +1,16 @@
 #include "API/Life/LifeData.hpp"
-#include "Utils.hpp"
+#include "API/Engine/FName.hpp"
 #include "API/Common/Common.hpp"
 
-std::string& LifeData::GetNameIdentifier()
+std::string LifeData::GetNameIdentifier()
 {
-    return Utils::FNameToString(this->_object.nameId);
+    return static_cast<API_FName>(this->_object.nameId).ToString();
 }
 
-std::string& LifeData::GetDescIdentifier()
+std::string LifeData::GetDescIdentifier()
 {
-    return Utils::FNameToString(this->_object.DescId);
+    return static_cast<API_FName>(this->_object.DescId).ToString();
 }
-
 std::string LifeData::GetName(LANG lang)
 {
     return NAME_GET(lang, GetNameIdentifier());
