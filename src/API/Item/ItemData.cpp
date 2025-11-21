@@ -1,20 +1,20 @@
 #include "API/Item/ItemData.hpp"
 #include "API/Common/Common.hpp"
-#include "Utils.hpp"
+#include "API/Engine/FName.hpp"
 
-std::string& ItemData::GetIdentifier()
+std::string ItemData::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.ID);
+    return static_cast<API_FName>(this->_object.ID).ToString();
 }
 
-std::string& ItemData::getNameIdentifier()
+std::string ItemData::getNameIdentifier()
 {
-    return Utils::FNameToString(this->_object.nameId);
+    return static_cast<API_FName>(this->_object.nameId).ToString();
 }
 
-std::string& ItemData::GetDescIdentifier()
+std::string ItemData::GetDescIdentifier()
 {
-    return Utils::FNameToString(this->_object.DescId);
+    return static_cast<API_FName>(this->_object.DescId).ToString();
 }
 
 std::string ItemData::GetName(LANG lang)
@@ -37,7 +37,7 @@ void ItemData::SetDescription(LANG lang, FString string)
     DESC_SET(lang, GetDescIdentifier(), string);
 }
 
-std::string& ItemData::GetOverwriteIcon()
+std::string ItemData::GetOverwriteIcon()
 {
-    return Utils::FNameToString(this->_object.overwriteIconName);
+    return static_cast<API_FName>(this->_object.overwriteIconName).ToString();
 }

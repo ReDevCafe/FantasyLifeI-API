@@ -1,17 +1,18 @@
 #include "API/Recipe/RecipeData.hpp"
+#include "API/Engine/FName.hpp"
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 #include "API/Engine/TArrayHelper.hpp"
 
 
-std::string& RecipeData::GetIdentifier()
+std::string RecipeData::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.recipeId);
+    return static_cast<API_FName>(this->_object.recipeId).ToString();
 }
 
-std::string& RecipeData::GetItemIdentifier()
+std::string RecipeData::GetItemIdentifier()
 {
-    return Utils::FNameToString(this->_object.ItemId);
+    return static_cast<API_FName>(this->_object.ItemId).ToString();
 }
 
 ItemData RecipeData::GetItem()

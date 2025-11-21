@@ -25,15 +25,18 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     patcher.applyPatches(baseAddress);
     gameData = new GameData(baseAddress, reinterpret_cast<LPMODULEINFO>(lpParam)->SizeOfImage);
+    gameData->init();
 
     gameCache = new GameCache();
     configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
     
-    FName test("Cute:3");
+    API_FName test("Cute:3");
     ModLoader::logger->info("Returned: ", test.ToString());
 
+    API_FName name(gameCache->GetItem("imt01000430").getObject().nameId);
+    ModLoader::logger->info("Item name: ", name.ToString());
 
     gameCache->PostLoadCache();
     gameData->initOthersData();
