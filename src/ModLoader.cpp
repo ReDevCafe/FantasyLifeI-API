@@ -19,9 +19,10 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
 {
     logger = new Logger("ModLoader");
     logger->info("Mod loader has been started");
-    Patcher patcher;
     
     Sleep(200); // TODO: Remove this hacky sleep, but it's needed, maybe check if the memory is ready next time?
+    Patcher patcher;
+    
     logger->verbose("Dll module is loaded");
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
@@ -84,22 +85,22 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
                 CloseHandle(LoaderThread);
             FreeConsole();
 
-            if (ModLoader::gameData != nullptr)
+            if (!ModLoader::gameData)
                 delete ModLoader::gameData;
 
-            if(ModLoader::gameCache != nullptr)
+            if (!ModLoader::gameCache)
                 delete ModLoader::gameCache;
 
-            if(ModLoader::logger != nullptr)
+            if (!ModLoader::logger)
                 delete ModLoader::logger;
 
-            if(ModLoader::modEnvironnement != nullptr)
+            if (!ModLoader::modEnvironnement)
             {
                 ModLoader::modEnvironnement->Free();
                 delete ModLoader::modEnvironnement;
             }
 
-            if(ModLoader::configManager != nullptr)
+            if (!ModLoader::configManager)
                 delete ModLoader::configManager;
 
             break;
