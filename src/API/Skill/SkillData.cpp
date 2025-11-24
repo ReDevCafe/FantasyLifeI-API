@@ -1,7 +1,6 @@
 #include "API/Skill/SkillData.hpp"
 #include "API/Engine/FName.hpp"
 #include "API/Common/Common.hpp"
-#include "API/Engine/TArrayHelper.hpp"
 
 std::string SkillData::GetIdentifier()
 {
@@ -40,16 +39,16 @@ void SkillData::SetDescription(LANG lang, FString string)
 
 SkillEffectInfo SkillData::GetSkillEffect(int index)
 {
-    auto raw = TArrayHelper<FGDSkillData_SkillEffectInfo>::Get(this->_object.skillEffectInfoList, index);
+    auto raw = this->_object.skillEffectInfoList.Get(index);
     return SkillEffectInfo(raw);
 }
 
 void SkillData::SetSkillEffect(int index, SkillEffectInfo value)
 {
-    TArrayHelper<FGDSkillData_SkillEffectInfo>::Set(this->_object.skillEffectInfoList, index, value.getObject());
+    this->_object.skillEffectInfoList.Set(index, value.getObject());
 }
 
 void SkillData::AddSkillEffect(SkillEffectInfo data)
 {
-    TArrayHelper<FGDSkillData_SkillEffectInfo>::Add(this->_object.skillEffectInfoList, data.getObject());
+    this->_object.skillEffectInfoList.Add(data.getObject());
 }
