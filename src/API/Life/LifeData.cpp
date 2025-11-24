@@ -4,12 +4,12 @@
 
 std::string LifeData::GetNameIdentifier()
 {
-    return static_cast<API_FName>(this->_object.nameId).ToString();
+    return this->_object.nameId.ToString();
 }
 
 std::string LifeData::GetDescIdentifier()
 {
-    return static_cast<API_FName>(this->_object.DescId).ToString();
+    return this->_object.DescId.ToString();
 }
 std::string LifeData::GetName(LANG lang)
 {

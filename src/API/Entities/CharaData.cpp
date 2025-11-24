@@ -4,17 +4,17 @@
 
 std::string CharaData::GetIdentifier()
 {
-    return static_cast<API_FName>(this->_object.ID).ToString();
+    return this->_object.ID.ToString();
 }
 
 std::string CharaData::GetNameIdentifier()
 {
-    return static_cast<API_FName>(this->_object.nameId).ToString();
+    return this->_object.nameId.ToString();
 }
 
 std::string CharaData::GetFlag()
 {
-    return static_cast<API_FName>(this->_object.Flag).ToString();
+    return this->_object.Flag.ToString();
 }
 
 std::string CharaData::GetName(LANG lang)

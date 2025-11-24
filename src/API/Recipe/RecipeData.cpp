@@ -7,12 +7,12 @@
 
 std::string RecipeData::GetIdentifier()
 {
-    return static_cast<API_FName>(this->_object.recipeId).ToString();
+    return this->_object.recipeId.ToString();
 }
 
 std::string RecipeData::GetItemIdentifier()
 {
-    return static_cast<API_FName>(this->_object.ItemId).ToString();
+    return this->_object.ItemId.ToString();
 }
 
 ItemData RecipeData::GetItem()

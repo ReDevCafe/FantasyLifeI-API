@@ -5,7 +5,7 @@
 
 std::string MapDataSubMapData::GetSubMapIdentifier()
 {
-    return static_cast<API_FName>(this->_object.subMapId).ToString();
+    return this->_object.subMapId.ToString();
 }
 
 MapSubLevel MapDataSubMapData::GetSubMap()
@@ -15,5 +15,5 @@ MapSubLevel MapDataSubMapData::GetSubMap()
 
 std::string MapDataSubMapData::GetAreaID()
 {
-    return static_cast<API_FName>(this->_object.AreaID).ToString();
+    return this->_object.AreaID.ToString();
 }

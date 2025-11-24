@@ -2,9 +2,8 @@
 #include "API/Engine/FName.hpp"
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
-#include "Utils.hpp"
 
 ItemData RecipeDataItemInfo::GetItem()
 {
-    return ModLoader::gameCache->GetItem(static_cast<API_FName>(this->_object.ItemId).ToString());
+    return ModLoader::gameCache->GetItem(this->_object.ItemId.ToString());
 }

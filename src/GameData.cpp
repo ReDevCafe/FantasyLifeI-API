@@ -4,6 +4,11 @@
 #include "ModLoader.hpp"
 #include "Offset.h"
 
+#ifdef _WIN32
+    #include <Windows.h>
+#else
+#endif
+
 GameData::GameData(uintptr_t baseAddress, uint32_t imageSize) : 
     _staticDataManager(nullptr), 
     _dynamicDataManager(nullptr)
@@ -39,7 +44,7 @@ void GameData::initOthersData() {
 
 UObject* GameData::_getUObject(std::string_view name, bool safe, int nth = 0)
 {
-    API_FName apiName(name);
+    FName apiName(name);
 
     UObject *object = nullptr;
     uint32_t counter = 0;
@@ -48,7 +53,7 @@ UObject* GameData::_getUObject(std::string_view name, bool safe, int nth = 0)
     for (int i = 0; i < _gObjects->ObjObjects.NumElements; ++i) {
         object = _gObjects->getObject(i);
         if (object == nullptr) continue;
-        if (static_cast<API_FName>(object->NamePrivate) == apiName && ++counter > nth) break;
+        if (object->NamePrivate == apiName && ++counter > nth) break;
         object = nullptr;
     }
     if (safe)

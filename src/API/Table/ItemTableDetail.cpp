@@ -5,7 +5,7 @@
 
 std::string ItemTableDetail::GetItemIdentifier()
 {
-    return static_cast<API_FName>(this->_object.ItemId).ToString();
+    return this->_object.ItemId.ToString();
 }
 
 ItemData ItemTableDetail::GetItem()
