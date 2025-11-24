@@ -1,17 +1,16 @@
 #include "API/Skill/SkillData.hpp"
 #include "API/Engine/FName.hpp"
-#include "Utils.hpp"
 #include "API/Common/Common.hpp"
 #include "API/Engine/TArrayHelper.hpp"
 
 std::string SkillData::GetIdentifier()
 {
-    return static_cast<API_FName>(this->_object.ID.Name).ToString();
+    return this->_object.ID.Name.ToString();
 }
 
 std::string SkillData::GetNameIdentifier()
 {
-    return static_cast<API_FName>(this->_object.nameTextID).ToString();
+    return this->_object.nameTextID.ToString();
 }
 
 std::string SkillData::GetName(LANG lang)
@@ -26,7 +25,7 @@ void SkillData::SetName(LANG lang, FString string)
 
 std::string SkillData::GetDescIdentifier()
 {
-    return static_cast<API_FName>(this->_object.descTextID).ToString();
+    return this->_object.descTextID.ToString();
 }
 
 std::string SkillData::GetDescription(LANG lang)

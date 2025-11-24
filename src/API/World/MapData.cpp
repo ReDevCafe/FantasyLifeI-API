@@ -4,17 +4,17 @@
 
 std::string MapData::GetIdentifier()
 {
-    return static_cast<API_FName>(this->_object.mapId).ToString();
+    return this->_object.mapId.ToString();
 }
 
 std::string MapData::GetPath()
 {
-    return static_cast<API_FName>(this->_object.MapPath).ToString();
+    return this->_object.MapPath.ToString();
 }
 
 std::string MapData::GetMapViewCategory()
 {
-    return static_cast<API_FName>(this->_object.MapViewCategory).ToString();
+    return this->_object.MapViewCategory.ToString();
 }
 
 std::string MapData::GetMapViewName(int index)
@@ -39,12 +39,12 @@ void MapData::SetMapViewName(int index, FString name)
 
 std::string MapData::GetMapSubject()
 {
-    return static_cast<API_FName>(this->_object.MapSubject).ToString();
+    return this->_object.MapSubject.ToString();
 }
 
 std::string MapData::GetNameIdentifier()
 {
-    return static_cast<API_FName>(this->_object.MapNameID).ToString();
+    return this->_object.MapNameID.ToString();
 }
 
 std::string MapData::GetName(LANG lang)
@@ -59,7 +59,7 @@ void MapData::SetName(LANG lang, FString string)
 
 std::string MapData::GetWorldMap()
 {
-    return static_cast<API_FName>(this->_object.WorldMapID).ToString();
+    return this->_object.WorldMapID.ToString();
 }
 
 MapDataSubMapData MapData::GetSubMap(int index)

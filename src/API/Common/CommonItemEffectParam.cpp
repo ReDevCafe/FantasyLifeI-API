@@ -4,7 +4,7 @@
 
 std::string CommonItemEffectParam::getDescIdentifier()
 {
-    return static_cast<API_FName>(this->_object.effDescId).ToString();
+    return this->_object.effDescId.ToString();
 }
 
 std::string CommonItemEffectParam::GetDescription(LANG lang)

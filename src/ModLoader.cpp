@@ -4,7 +4,6 @@
 #include "Hook/EventHandler.hpp"
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
-#include "Utils.hpp"
 #include "Psapi.h"
 
 #include "API/Engine/FName.hpp"
@@ -21,6 +20,9 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     logger = new Logger("ModLoader");
     logger->info("Mod loader has been started");
     Patcher patcher;
+    
+    Sleep(200); // TODO: Remove this hacky sleep, but it's needed, maybe check if the memory is ready next time?
+    logger->verbose("Dll module is loaded");
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     patcher.applyPatches(baseAddress);
@@ -31,11 +33,12 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
+    logger->verbose("All loader preparations done");
     
-    API_FName test("Cute:3");
+    FName test("Cute:3");
     ModLoader::logger->info("Returned: ", test.ToString());
 
-    API_FName name(gameCache->GetItem("imt01000430").getObject().nameId);
+    FName name(gameCache->GetItem("imt01000430").getObject().nameId);
     ModLoader::logger->info("Item name: ", name.ToString());
 
     gameCache->PostLoadCache();
@@ -43,6 +46,7 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
 
     modEnvironnement->PostLoad();
 
+    logger->verbose("Mod loader initialization complete");
     return 0;
 }
 
@@ -60,7 +64,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             std::cout.clear();
             std::cerr.clear();
 
-            Utils::EnableAnsiColors();
+            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+            DWORD dwMode = 0;
+            if(GetConsoleMode(hConsole, &dwMode))
+            {
+                dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+                SetConsoleMode(hConsole, dwMode);
+            }
+
             MODULEINFO moduleInfo{};
             GetModuleInformation(GetCurrentProcess(), GetModuleHandle(nullptr), &moduleInfo, sizeof(MODULEINFO));
             LoaderThread = CreateThread(nullptr, 0, ModLoader::init, &moduleInfo, 0, nullptr);

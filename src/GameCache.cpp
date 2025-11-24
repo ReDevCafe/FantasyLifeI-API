@@ -67,7 +67,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.nounInfoArray.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     } 
 
     gmd->waitObject(&sdm->m_PlantDungeonText_Noun);
@@ -77,7 +77,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.nounInfoArray.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     } 
 
     gmd->waitObject(&sdm->m_ItemText_Noun);
@@ -87,7 +87,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     } 
 
     gmd->waitObject(&sdm->m_LifeText_Noun);
@@ -97,7 +97,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     } 
 
     gmd->waitObject(&sdm->m_SkillText_Noun);
@@ -107,7 +107,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     } 
 
     gmd->waitObject(&sdm->m_QuestRequestMapText_Noun);
@@ -117,7 +117,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     } 
 
     gmd->waitObject(&sdm->m_QuestTitleText);
@@ -127,7 +127,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.Text.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     } 
 
     gmd->waitObject(&sdm->m_MapText_Noun);
@@ -137,7 +137,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.nounInfo.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     }    
 
     gmd->waitObject(&sdm->m_MenuText_Noun);
@@ -147,7 +147,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.nounInfoArray.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     }  
 
     gmd->waitObject(&sdm->m_CharaText_Noun);
@@ -157,7 +157,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.textInfo.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     }
 
     gmd->waitObject(&sdm->m_SystemText_Noun);
@@ -167,7 +167,7 @@ void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
         auto noun = textInfo.Value.Second.nounInfoArray.Data;
         if (noun == nullptr) continue;
 
-        this->_cacheNounInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), noun);
+        this->_cacheNounInfo.emplace(textInfo.Value.First.ToString(), noun);
     }
 }
 
@@ -180,7 +180,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_CharacterFlavorText);
@@ -190,7 +190,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_CharamakeText);
@@ -200,7 +200,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_DailyMissionCompleteNotificationText);
@@ -210,7 +210,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.Text.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_DailyMissionTitleText);
@@ -220,7 +220,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.Text.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_GuildRewardText);
@@ -230,7 +230,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.Text.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_ItemText);
@@ -240,7 +240,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_LifeText);
@@ -250,7 +250,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_MapText);
@@ -260,7 +260,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_MenuText);
@@ -270,7 +270,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_MultiText);
@@ -280,7 +280,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
 
@@ -291,7 +291,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfoArray.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_PlantDungeonText);
@@ -301,7 +301,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_QuestDetailText);
@@ -311,7 +311,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.Text.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_QuestPurposeText);
@@ -321,7 +321,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.Text.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_QuestReportNotificationText);
@@ -331,7 +331,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.Text.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_SkillText);
@@ -341,7 +341,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_SystemText);
@@ -351,7 +351,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_TipsText);
@@ -361,7 +361,7 @@ void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 }
 
@@ -374,7 +374,7 @@ void GameCache::postInitText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfoArray.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     }
 
     gmd->waitObject(&sdm->m_BattleCommandDescText);
@@ -384,7 +384,7 @@ void GameCache::postInitText(GameData* gmd, UStaticDataManager* sdm)
         auto text = textInfo.Value.Second.textInfo.Data;
         if (text == nullptr) continue;
 
-        this->_cacheTextInfo.emplace(static_cast<API_FName>(textInfo.Value.First).ToString(), text);
+        this->_cacheTextInfo.emplace(textInfo.Value.First.ToString(), text);
     } 
 }
 
@@ -394,7 +394,7 @@ void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
     for (int i = 0; i < sdm->m_SkillData->m_dataMap.Data.Count; i++)
     {
         auto skillInfo = sdm->m_SkillData->m_dataMap.Data[i];
-        std::string key = static_cast<API_FName>(skillInfo.Value.First.Name).ToString();
+        std::string key = skillInfo.Value.First.Name.ToString();
         if(key == "ps_just_avoid" || key == "ps_just_guard") continue;
 
         this->_cacheSkillData.emplace(key, std::make_unique<SkillData>(skillInfo.Value.Second));
@@ -544,7 +544,8 @@ void GameCache::initAddSkillTable(GameData* gmd, UStaticDataManager* sdm)
     {
         auto addSkillInfo = sdm->m_AddSkillLotTable->m_dataMap.Data[i];
         this->_cacheAddSkillLotTable.emplace(
-            static_cast<API_FName>(addSkillInfo.Value.First).ToString(), 
-            &addSkillInfo.Value.Second.addSkillInfoList);
+            addSkillInfo.Value.First.ToString(), 
+            &addSkillInfo.Value.Second.addSkillInfoList
+        );
     }
 }

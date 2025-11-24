@@ -4,7 +4,7 @@
 
 std::string CommonItemTableSetting::GetIdentifier()
 {
-    return static_cast<API_FName>(this->_object.tableId).ToString();
+    return this->_object.tableId.ToString();
 }
 
 ItemTableDetail CommonItemTableSetting::GetData(int index)

@@ -3,5 +3,5 @@
 
 std::string ItemLifeToolsData::GetSecondModel()
 {
-    return static_cast<API_FName>(reinterpret_cast<FGDItemLifeToolsData*>(&this->_object)->ModelId2).ToString();
+    return reinterpret_cast<FGDItemLifeToolsData*>(&this->_object)->ModelId2.ToString();
 }

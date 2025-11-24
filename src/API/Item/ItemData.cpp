@@ -4,17 +4,17 @@
 
 std::string ItemData::GetIdentifier()
 {
-    return static_cast<API_FName>(this->_object.ID).ToString();
+    return this->_object.ID.ToString();
 }
 
 std::string ItemData::getNameIdentifier()
 {
-    return static_cast<API_FName>(this->_object.nameId).ToString();
+    return this->_object.nameId.ToString();
 }
 
 std::string ItemData::GetDescIdentifier()
 {
-    return static_cast<API_FName>(this->_object.DescId).ToString();
+    return this->_object.DescId.ToString();
 }
 
 std::string ItemData::GetName(LANG lang)
@@ -41,5 +41,5 @@ void ItemData::SetDescription(LANG lang, FString string)
 
 std::string ItemData::GetOverwriteIcon()
 {
-    return static_cast<API_FName>(this->_object.overwriteIconName).ToString();
+    return this->_object.overwriteIconName.ToString();
 }
