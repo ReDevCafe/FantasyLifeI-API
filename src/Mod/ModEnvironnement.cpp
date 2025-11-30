@@ -384,7 +384,7 @@ void ModEnvironnement::PreLoad()
             }
         }
     }
-    ModLoader::logger->verbose("MENV Preload finished. [size of modPtr: ", _modPtrList.size(),"]");
+    ModLoader::logger->verbose("MENV Preload finished (size of modPtr: ", _modPtrList.size(), ")");
 }
 
 void ModEnvironnement::PostLoad()
