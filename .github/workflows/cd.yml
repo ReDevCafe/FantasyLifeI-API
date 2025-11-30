@@ -13,11 +13,16 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         
+        - name: Install LLVM and Clang
+          uses: KyleMayes/install-llvm-action@v2
+          with:
+            version: "21.1.3"
+        
         - name: Pull submodule
           run: git submodule update --init
 
-        - name: Configure CMake
-          run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        - name: Configure CMake with Clang-CL
+          run: cmake -B ${{github.workspace}}/build -G "Ninja" -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DMLDEBUG=OFF
         
         - name: Build project
           run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
@@ -27,9 +32,10 @@ jobs:
           with:
             name: fli-modloader
             path: |
-                ./build/Release/ModLoader.dll
-                ./build/Release/ModLoader.lib
-                ./build/DllProxy/Release/version.dll
+                ./build/ModLoader.dll
+                ./build/ModLoader.lib
+                ./build/DllProxy/version.dll
+    
     release:
         needs: build
         runs-on: ubuntu-latest
@@ -38,9 +44,11 @@ jobs:
               run: |
                 DATE_TAG="v$(date +'%Y%m%d.%H%M')"
                 echo "TAG_NAME=$DATE_TAG" >> $GITHUB_ENV
-                echo "{tag}=$DATE_TAG"
+                echo "tag=$DATE_TAG"
+            
             - name: Download Artifacts
               uses: actions/download-artifact@v4
+            
             - name: Create GitHub Release
               id: create_release
               uses: softprops/action-gh-release@v2
@@ -49,33 +57,7 @@ jobs:
                 body: "Automated release of ${{ github.ref_name }}."
                 generate_release_notes: true
                 token: ${{ secrets.RELEASE_CD_TOKEN }}
-
-            - name: Upload ModLoader.dll
-              uses: actions/upload-release-asset@v1
-              env:
-                GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
-              with:
-                upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./fli-modloader/Release/ModLoader.dll"
-                asset_name: ModLoader.dll
-                asset_content_type: application/octet-stream
-            
-            - name: Upload version.dll
-              uses: actions/upload-release-asset@v1
-              env:
-                GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
-              with:
-                upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./fli-modloader/DllProxy/Release/version.dll"
-                asset_name: version.dll
-                asset_content_type: application/octet-stream
-
-            - name: Upload ModLoader.lib
-              uses: actions/upload-release-asset@v1
-              env:
-                GITHUB_TOKEN: ${{ secrets.RELEASE_CD_TOKEN }}
-              with:
-                upload_url: ${{ steps.create_release.outputs.upload_url }}
-                asset_path: "./fli-modloader/Release/ModLoader.lib"
-                asset_name: ModLoader.lib
-                asset_content_type: application/octet-stream
+                files: |
+                    ./fli-modloader/ModLoader.dll
+                    ./fli-modloader/ModLoader.lib
+                    ./fli-modloader/DllProxy/version.dll
