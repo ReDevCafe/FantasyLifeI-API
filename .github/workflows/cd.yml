@@ -13,7 +13,15 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         
+        - name: Cache LLVM
+          id: cache-llvm
+          uses: actions/cache@v4
+          with:
+            path: C:\Program Files\LLVM
+            key: llvm-21.1.0-windows
+        
         - name: Install LLVM 21.1.0
+          if: steps.cache-llvm.outputs.cache-hit != 'true'
           run: choco install llvm --version=21.1.0 -y
           shell: powershell
         
@@ -24,7 +32,7 @@ jobs:
         - name: Pull submodule
           run: git submodule update --init
 
-        - name: Configure CMake with Clang-CL 
+        - name: Configure CMake with Clang-CL
           run: cmake -B ${{github.workspace}}/build -G "Ninja" -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DMLDEBUG=OFF
         
         - name: Build project
