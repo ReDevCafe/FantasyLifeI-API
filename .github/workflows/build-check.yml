@@ -1,0 +1,32 @@
+name: "Build Check"
+
+on:
+    push:
+        branches-ignore:
+            - master
+    pull_request:
+        branches:
+            - master
+
+env:
+    BUILD_TYPE: Release
+
+jobs:
+    build-check:
+        runs-on: windows-latest
+        steps:
+        - uses: actions/checkout@v4
+        
+        - name: Install LLVM and Clang
+          uses: KyleMayes/install-llvm-action@v2
+          with:
+            version: "21.1.3"
+        
+        - name: Pull submodule
+          run: git submodule update --init
+
+        - name: Configure CMake with Clang-CL
+          run: cmake -B ${{github.workspace}}/build -G "Ninja" -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DMLDEBUG=OFF
+        
+        - name: Build project
+          run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
