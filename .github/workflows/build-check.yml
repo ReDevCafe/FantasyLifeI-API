@@ -17,8 +17,8 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         
-        - name: Install LLVM 21.1.3
-          run: choco install llvm --version=21.1.3 -y
+        - name: Install LLVM 21.1.0
+          run: choco install llvm --version=21.1.0 -y
           shell: powershell
         
         - name: Add LLVM to PATH
