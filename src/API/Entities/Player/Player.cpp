@@ -1,14 +1,12 @@
 #include "API/Entities/Player/Player.hpp"
-#include "Utils.hpp"
-
-#include "ModLoader.hpp"
+#include "API/Engine/FName.hpp"
 #include <cstdint>
 
 Player::Player(FGDCharaParameter &charaParameter, FCharaStatusP *charaStatusP, FAvatarCharaStatusV &charaStatusV) : stats(charaParameter), status(*charaStatusP, charaStatusV) {}
 
 ELifeType Player::GetLifeType() {
     FAvatarCharaStatusP *avatarStatus = reinterpret_cast<FAvatarCharaStatusP *>(&this->status.GetPermanentStatus());
-    std::string &lifeId = Utils::FNameToString(avatarStatus->m_lifeId);
+    std::string lifeId = avatarStatus->m_lifeId.ToString();
     if (lifeId.empty() || lifeId.size() <= 4)
         return ELifeType::ELifeType__None;
 

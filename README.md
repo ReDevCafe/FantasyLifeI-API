@@ -56,6 +56,9 @@ Fantasy Life I/
 
 ### Build the ModLoader
 
+>[!WARNING]
+> Use LLVM 21.1.3 OR HIGHER
+
 ```bash
     $ cmake -B build -G "Ninja" -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DMLDEBUG=OFF
 ```

@@ -1,17 +1,16 @@
 #include "API/Recipe/RecipeData.hpp"
+#include "API/Engine/FName.hpp"
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
-#include "API/Engine/TArrayHelper.hpp"
 
-
-std::string& RecipeData::GetIdentifier()
+std::string RecipeData::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.recipeId);
+    return this->_object.recipeId.ToString();
 }
 
-std::string& RecipeData::GetItemIdentifier()
+std::string RecipeData::GetItemIdentifier()
 {
-    return Utils::FNameToString(this->_object.ItemId);
+    return this->_object.ItemId.ToString();
 }
 
 ItemData RecipeData::GetItem()
@@ -21,16 +20,16 @@ ItemData RecipeData::GetItem()
 
 RecipeDataItemInfo RecipeData::GetRecipeItem(int index)
 {
-    auto raw = TArrayHelper<FGDRecipeData_ItemInfo>::Get(this->_object.itemList, index);
+    auto raw = this->_object.itemList.Get(index);
     return RecipeDataItemInfo(raw);
 }
 
 void RecipeData::SetRecipeItem(ItemData value, int index, int32_t quantity)
 {
-    TArrayHelper<FGDRecipeData_ItemInfo>::Set(this->_object.itemList, index, FGDRecipeData_ItemInfo{value.getObject().ID, quantity});
+    this->_object.itemList.Set(index, FGDRecipeData_ItemInfo{value.getObject().ID, quantity});
 }
 
 void RecipeData::AddRecipeItem(ItemData data, int32_t quantity)
 {
-    TArrayHelper<FGDRecipeData_ItemInfo>::Add(this->_object.itemList, FGDRecipeData_ItemInfo{data.getObject().ID, quantity});
+    this->_object.itemList.Add(FGDRecipeData_ItemInfo{data.getObject().ID, quantity});
 }

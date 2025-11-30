@@ -1,11 +1,11 @@
 #include "API/World/MapDataSubMapData.hpp"
+#include "API/Engine/FName.hpp"
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
-#include "Utils.hpp"
 
-std::string& MapDataSubMapData::GetSubMapIdentifier()
+std::string MapDataSubMapData::GetSubMapIdentifier()
 {
-    return Utils::FNameToString(this->_object.subMapId);
+    return this->_object.subMapId.ToString();
 }
 
 MapSubLevel MapDataSubMapData::GetSubMap()
@@ -13,7 +13,7 @@ MapSubLevel MapDataSubMapData::GetSubMap()
     return ModLoader::gameCache->GetSubLevel(GetSubMapIdentifier());
 }
 
-std::string& MapDataSubMapData::GetAreaID()
+std::string MapDataSubMapData::GetAreaID()
 {
-    return  Utils::FNameToString(this->_object.AreaID);
+    return this->_object.AreaID.ToString();
 }

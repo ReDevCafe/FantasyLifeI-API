@@ -1,11 +1,10 @@
 #include "API/Common/CommonItemEffectParam.hpp"
 #include "API/Common/Common.hpp"
+#include "API/Engine/FName.hpp"
 
-#include "Utils.hpp"
-
-std::string& CommonItemEffectParam::getDescIdentifier()
+std::string CommonItemEffectParam::getDescIdentifier()
 {
-    return Utils::FNameToString(this->_object.effDescId);
+    return this->_object.effDescId.ToString();
 }
 
 std::string CommonItemEffectParam::GetDescription(LANG lang)

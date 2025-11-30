@@ -1,16 +1,15 @@
 #include "API/Skill/SkillData.hpp"
-#include "Utils.hpp"
+#include "API/Engine/FName.hpp"
 #include "API/Common/Common.hpp"
-#include "API/Engine/TArrayHelper.hpp"
 
-std::string& SkillData::GetIdentifier()
+std::string SkillData::GetIdentifier()
 {
-    return Utils::FNameToString(this->_object.ID.Name);
+    return this->_object.ID.Name.ToString();
 }
 
-std::string& SkillData::GetNameIdentifier()
+std::string SkillData::GetNameIdentifier()
 {
-    return Utils::FNameToString(this->_object.nameTextID);
+    return this->_object.nameTextID.ToString();
 }
 
 std::string SkillData::GetName(LANG lang)
@@ -23,9 +22,9 @@ void SkillData::SetName(LANG lang, FString string)
     NAME_SET(lang, GetNameIdentifier(), string);
 }
 
-std::string& SkillData::GetDescIdentifier()
+std::string SkillData::GetDescIdentifier()
 {
-    return Utils::FNameToString(this->_object.dascTextId);
+    return this->_object.descTextID.ToString();
 }
 
 std::string SkillData::GetDescription(LANG lang)
@@ -40,16 +39,16 @@ void SkillData::SetDescription(LANG lang, FString string)
 
 SkillEffectInfo SkillData::GetSkillEffect(int index)
 {
-    auto raw = TArrayHelper<FGDSkillData_SkillEffectInfo>::Get(this->_object.skillEffectInfoList, index);
+    auto raw = this->_object.skillEffectInfoList.Get(index);
     return SkillEffectInfo(raw);
 }
 
 void SkillData::SetSkillEffect(int index, SkillEffectInfo value)
 {
-    TArrayHelper<FGDSkillData_SkillEffectInfo>::Set(this->_object.skillEffectInfoList, index, value.getObject());
+    this->_object.skillEffectInfoList.Set(index, value.getObject());
 }
 
 void SkillData::AddSkillEffect(SkillEffectInfo data)
 {
-    TArrayHelper<FGDSkillData_SkillEffectInfo>::Add(this->_object.skillEffectInfoList, data.getObject());
+    this->_object.skillEffectInfoList.Add(data.getObject());
 }
