@@ -1,4 +1,6 @@
 #include "ModLoader.hpp"
+#include "API/Engine/TArray.hpp"
+#include "API/Engine/TMap.hpp"
 #include "GameCache.hpp"
 #include "GameData.hpp"
 #include "Hook/EventHandler.hpp"
@@ -7,6 +9,7 @@
 #include "Psapi.h"
 
 #include "API/Engine/FName.hpp"
+#include "SDK/DP1Project.h"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -39,8 +42,21 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     FName test("Cute:3");
     ModLoader::logger->info("Returned: ", test.ToString());
 
-    FName name(gameCache->GetItem("imt01000430").getObject().nameId);
+    FName name(gameCache->GetItem("imt01000430").GetDescIdentifier());
     ModLoader::logger->info("Item name: ", name.ToString());
+
+    TArray<FGDStCommon_TextInfo> textInfoArray;
+    auto tdfest = gameCache->GetText(name.ToString());
+    textInfoArray.Add(*tdfest);
+
+    FGDItemText itemText
+    {
+        .ID = test,
+        .textInfo = textInfoArray
+    };
+    TPair<FName, FGDItemText> newItemElement{test, itemText};
+    newItemElement.First = test;
+    gameData->getStaticDataManager()->m_ItemText->m_dataMap.Data.Add(TSetElement<TPair<FName, FGDItemText>>{newItemElement, -1, -1});
 
     gameCache->PostLoadCache();
     gameData->initOthersData();
