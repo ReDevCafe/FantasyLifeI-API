@@ -14,7 +14,6 @@
 #include "API/Item/ItemKitData.hpp"
 #include "API/Item/ItemVehicleData.hpp"
 #include "API/Item/ItemPowerUpData.hpp"
-#include <cstddef>
 #include <cstdint>
 
 GameCache::GameCache()
