@@ -3,16 +3,6 @@
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 
-std::string RecipeData::GetIdentifier()
-{
-    return this->_object.recipeId.ToString();
-}
-
-std::string RecipeData::GetItemIdentifier()
-{
-    return this->_object.ItemId.ToString();
-}
-
 ItemData RecipeData::GetItem()
 {
     return ModLoader::gameCache->GetItem(GetItemIdentifier());

@@ -81,22 +81,22 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
                 CloseHandle(LoaderThread);
             FreeConsole();
 
-            if (!ModLoader::configManager)
+            if (ModLoader::configManager)
                 delete ModLoader::configManager;
 
-            if (!ModLoader::modEnvironnement)
+            if (ModLoader::modEnvironnement)
             {
                 ModLoader::modEnvironnement->Free();
                 delete ModLoader::modEnvironnement;
             }
             
-            if (!ModLoader::logger)
+            if (ModLoader::logger)
                 delete ModLoader::logger;
 
-            if (!ModLoader::gameCache)
+            if (ModLoader::gameCache)
                 delete ModLoader::gameCache;
 
-            if (!ModLoader::gameData)
+            if (ModLoader::gameData)
                 delete ModLoader::gameData;
 
             break;
