@@ -1,15 +1,10 @@
 #include "ModLoader.hpp"
-#include "API/Engine/TArray.hpp"
-#include "API/Engine/TMap.hpp"
 #include "GameCache.hpp"
 #include "GameData.hpp"
 #include "Hook/EventHandler.hpp"
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
 #include "Psapi.h"
-
-#include "API/Engine/FName.hpp"
-#include "SDK/DP1Project.h"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
