@@ -1,11 +1,6 @@
 #include "API/Common/CommonItemTableSetting.hpp"
 #include "API/Engine/FName.hpp"
 
-std::string CommonItemTableSetting::GetIdentifier()
-{
-    return this->_object.tableId.ToString();
-}
-
 ItemTableDetail CommonItemTableSetting::GetData(int index)
 {
     auto raw = this->_object.tableData.Get(index);

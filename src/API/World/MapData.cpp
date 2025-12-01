@@ -2,21 +2,6 @@
 #include "API/Engine/FName.hpp"
 #include "API/Common/Common.hpp"
 
-std::string MapData::GetIdentifier()
-{
-    return this->_object.mapId.ToString();
-}
-
-std::string MapData::GetPath()
-{
-    return this->_object.MapPath.ToString();
-}
-
-std::string MapData::GetMapViewCategory()
-{
-    return this->_object.MapViewCategory.ToString();
-}
-
 std::string MapData::GetMapViewName(int index)
 {
     if(index < 0 || index >= this->_object.MapViewDataArray.Count)
@@ -37,15 +22,6 @@ void MapData::SetMapViewName(int index, FString name)
     this->_object.MapViewDataArray.Data[index].mapName = name;
 }
 
-std::string MapData::GetMapSubject()
-{
-    return this->_object.MapSubject.ToString();
-}
-
-std::string MapData::GetNameIdentifier()
-{
-    return this->_object.MapNameID.ToString();
-}
 
 std::string MapData::GetName(LANG lang)
 {
@@ -55,11 +31,6 @@ std::string MapData::GetName(LANG lang)
 void MapData::SetName(LANG lang, FString string)
 {
     NAME_SET(lang, GetNameIdentifier(), string);
-}
-
-std::string MapData::GetWorldMap()
-{
-    return this->_object.WorldMapID.ToString();
 }
 
 MapDataSubMapData MapData::GetSubMap(int index)
