@@ -1,5 +1,4 @@
 #include "API/Common/CommonItemTableSetting.hpp"
-#include "API/Engine/FName.hpp"
 
 ItemTableDetail CommonItemTableSetting::GetData(int index)
 {
