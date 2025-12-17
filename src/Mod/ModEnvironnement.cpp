@@ -2,8 +2,6 @@
 
 #include "ModLoader.hpp"
 #include "Mod/ThreadPool.hpp"
-#include <latch>
-#include <mutex>
 #include "Lib/json.hpp"
 #include "Lib/miniz.h"
 
@@ -120,8 +118,6 @@ bool ModEnvironnement::findModJsonInArchive(const std::filesystem::path& archive
     {
         mz_zip_archive_file_stat stat;
         if(!mz_zip_reader_file_stat(&archive, i, &stat)) continue;
-        //if(!stat.m_filename) break;
-        //if(!stat.m_filename) break;
 
         std::string fname = stat.m_filename;
         if(fname.size() >= 8 && fname.substr(fname.size() - 8) == "Mod.json")
@@ -143,21 +139,18 @@ bool ModEnvironnement::findModLibInArchive(const std::filesystem::path& archiveP
 
     if(!mz_zip_reader_init_file(&archive, archivePath.string().c_str(), 0)) return false;
     mz_uint num = mz_zip_reader_get_num_files(&archive);
-    for (mz_uint i = 0; i < num; ++i) {
+    for (mz_uint i = 0; i < num; ++i) 
+    {
         mz_zip_archive_file_stat st;
         if (!mz_zip_reader_file_stat(&archive, i, &st)) continue;
-        //if (st.m_filename) {
-        //if (st.m_filename) {
-            std::string fname = st.m_filename;
-            if (fname.size() >= libName.size() &&
-                fname.compare(fname.size() - libName.size(), libName.size(), libName) == 0)
-            {
-                foundPath = fname;
-                mz_zip_reader_end(&archive);
-                return true;
-            }
-        //}
-        //}
+        std::string fname = st.m_filename;
+
+        if (fname.size() >= libName.size() && fname.compare(fname.size() - libName.size(), libName.size(), libName) == 0)
+        {
+            foundPath = fname;
+            mz_zip_reader_end(&archive);
+            return true;
+        }
     }
 
     mz_zip_reader_end(&archive);
@@ -288,13 +281,10 @@ void ModEnvironnement::SetupEnvironnnement(std::string modDirs)
 
 void ModEnvironnement::PreLoad()
 {
-    const size_t modListSize = _modsList.size();
-    size_t numThreads = std::thread::hardware_concurrency();
-    if(numThreads == 0) numThreads = 1;
-    if(numThreads > modListSize) numThreads = modListSize;
+    _modLibList.reserve(_modsList.size());
+    _modPtrList.reserve(_modsList.size());
 
-    ThreadPool pool{numThreads};
-    struct Bucket
+    for (auto* mod : _modsList)
     {
         std::mutex                              mutex;
         std::vector<LibHandle>                  libs;
@@ -407,8 +397,39 @@ void ModEnvironnement::PreLoad()
                 _modPtrList.push_back(std::move(modPtr));
             }
         }
+
+        std::filesystem::path libOnDiskPath = writeBufferToTemp(modBuf, ".mod");
+        if(libOnDiskPath.empty())
+        {
+            ModLoader::logger->error("Failed to write temporary content for ", identifier);
+            continue;
+        }
+
+        _tempFilesToRemove.push_back(libOnDiskPath);
+
+        LibHandle lib = LoadLib(libOnDiskPath.string());
+        if(!lib)
+        {
+            ModLoader::logger->error("Failed to load: ", identifier);
+            continue;
+        }
+
+        using GetModFunc = ModBase *(*)();
+        auto getter = reinterpret_cast<GetModFunc>(GetFunction(lib, "CraftMod"));
+        if(!getter)
+        {
+            ModLoader::logger->error("Missing CraftMod in ", identifier);
+            CloseLib(lib);
+            continue;
+        }
+
+        ModLoader::logger->info("Loading ", identifier, " v", meta.version);
+        auto modPtr = std::unique_ptr<ModBase>(getter());
+        modPtr->OnPreLoad();
+
+        _modLibList.push_back(lib);
+        _modPtrList.push_back(std::move(modPtr));
     }
-    ModLoader::logger->verbose("MENV Preload finished (size of modPtr: ", _modPtrList.size(), ")");
 }
 
 void ModEnvironnement::PostLoad()
@@ -421,7 +442,8 @@ void ModEnvironnement::PostLoad()
     ThreadPool pool{numThreads};
 
     for(auto& modPtr : _modPtrList)
-        pool.enqueue([&modPtr]{modPtr->OnPostLoad();});
+        
+    pool.enqueue([&modPtr]{modPtr->OnPostLoad();});
 }
 
 void ModEnvironnement::Free()

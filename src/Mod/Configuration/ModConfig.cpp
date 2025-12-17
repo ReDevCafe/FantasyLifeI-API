@@ -1,5 +1,4 @@
 #include "Mod/Configuration/ModConfig.hpp"
-#include <any>
 #include <exception>
 #include <filesystem>
 #include <fstream>
@@ -70,13 +69,11 @@ void ModConfig::Save()
 
 void ModConfig::Reload()
 {
+  std::lock_guard<std::mutex> lock(_mutex);
+  for(auto& [path, reg] : _registration)
   {
-    std::lock_guard<std::mutex> lock(_mutex);
-    for(auto& [path, reg] : _registration)
-    {
-      _pending.insert(path);
-      // TODO: Reset the config value and adding a reset method in reg
-    }
+    _pending.insert(path);
+    // TODO: Reset the config value and adding a reset method in reg
   }
 
   Load();
