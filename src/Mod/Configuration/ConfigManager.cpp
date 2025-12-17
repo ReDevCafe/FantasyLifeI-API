@@ -21,14 +21,12 @@ void ConfigManager::PushConfig(std::string name, std::function<void(ModConfig&)>
 
 void ConfigManager::SaveAll()
 {
-  std::lock_guard<std::mutex> lock(_mutex);
   for(const auto& [name, config] : _configs)
     config->Save();
 }
 
 void ConfigManager::ReloadAll()
 {
-  std::lock_guard<std::mutex> lock(_mutex);
   for(const auto& [name, config] : _configs)
     config->Reload();
 }

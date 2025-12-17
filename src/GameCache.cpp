@@ -42,17 +42,6 @@ GameCache::GameCache()
 
     initAddSkillTable(gmd, sdm);
     ModLoader::logger->verbose("Cached: AddSkillTable Registries");
-
-    uint32_t totalSize = 
-        (this->_cacheNounInfo.size() * sizeof(void*)) +
-        (this->_cacheTextInfo.size() * sizeof(void*)) +
-        (this->_cacheItemData.size() * sizeof(void*)) +
-        (this->_cacheRecipeData.size() * sizeof(void*)) +
-        (this->_cacheCommonPickParam.size() * sizeof(void*)) +
-        (this->_cacheCharaData.size() * sizeof(void*)) +
-        (this->_cacheAddSkillLotTable.size() * sizeof(TArray<FGDAddSkillLotTable_AddSkillInfo>*));
-
-    ModLoader::logger->verbose("Total cached size: ", totalSize / 1024, " KB");
 }
 
 void GameCache::PostLoadCache()
@@ -68,6 +57,19 @@ void GameCache::PostLoadCache()
 
 
     ModLoader::logger->info("OK: GameCache has been initialized");
+    
+    uint32_t totalSize = 
+        (this->_cacheNounInfo.size() * sizeof(void*)) +
+        (this->_cacheTextInfo.size() * sizeof(void*)) +
+        (this->_cacheItemData.size() * sizeof(void*)) +
+        (this->_cacheRecipeData.size() * sizeof(void*)) +
+        (this->_cacheCommonPickParam.size() * sizeof(void*)) +
+        (this->_cacheCharaData.size() * sizeof(void*)) +
+        (this->_cacheAddSkillLotTable.size() * sizeof(TArray<FGDAddSkillLotTable_AddSkillInfo>*)) +
+        (this->_cacheSubLevel.size() * sizeof(void*)) + 
+        (this->_cacheMap.size() * sizeof(void*));
+
+    ModLoader::logger->verbose("Total cached size: ", totalSize / 1024, " KB");
 }
 
 void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)

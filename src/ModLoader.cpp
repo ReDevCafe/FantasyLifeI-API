@@ -4,7 +4,7 @@
 #include "Hook/EventHandler.hpp"
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
-#include "Psapi.h"
+#include <thread>
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -12,20 +12,20 @@ Logger *ModLoader::logger = nullptr;
 ModEnvironnement *ModLoader::modEnvironnement = nullptr;
 ConfigManager *ModLoader::configManager = nullptr;
 
-
-DWORD WINAPI ModLoader::init(LPVOID lpParam)
+void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
 {
     logger = new Logger("ModLoader");
     logger->info("Mod loader has been started");
     
-    Sleep(200); // TODO: Remove this hacky sleep, but it's needed, maybe check if the memory is ready next time?
+    // TODO: Remove this hacky sleep, but it's needed, maybe check if the memory is ready next time?
+    std::this_thread::sleep_for(std::chrono::milliseconds(200)); 
     Patcher patcher;
     
     logger->verbose("Dll module is loaded");
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     patcher.applyPatches(baseAddress);
-    gameData = new GameData(baseAddress, reinterpret_cast<LPMODULEINFO>(lpParam)->SizeOfImage);
+    gameData = new GameData(baseAddress, moduleInfo->SizeOfImage);
     gameData->init();
 
     gameCache = new GameCache();
@@ -37,14 +37,12 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam)
     gameData->initOthersData();
 
     modEnvironnement->PostLoad();
-
     logger->verbose("Mod loader initialization complete");
-    return 0;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
-    HANDLE LoaderThread = nullptr;
+    std::thread* loaderThread;
     switch(ul_reason_for_call)
     {
         case DLL_PROCESS_ATTACH:
@@ -66,15 +64,12 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
             MODULEINFO moduleInfo{};
             GetModuleInformation(GetCurrentProcess(), GetModuleHandle(nullptr), &moduleInfo, sizeof(MODULEINFO));
-            LoaderThread = CreateThread(nullptr, 0, ModLoader::init, &moduleInfo, 0, nullptr);
+            loaderThread = new std::thread(ModLoader::init, &moduleInfo);
             break;
         }
         case DLL_PROCESS_DETACH:
         {
             ModLoader::logger->verbose("Mod loader detached from process");
-            if (LoaderThread)
-                CloseHandle(LoaderThread);
-            FreeConsole();
 
             if (ModLoader::configManager)
                 delete ModLoader::configManager;
@@ -84,9 +79,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
                 ModLoader::modEnvironnement->Free();
                 delete ModLoader::modEnvironnement;
             }
-            
-            if (ModLoader::logger)
-                delete ModLoader::logger;
 
             if (ModLoader::gameCache)
                 delete ModLoader::gameCache;
@@ -94,6 +86,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             if (ModLoader::gameData)
                 delete ModLoader::gameData;
 
+            if (ModLoader::logger)
+                delete ModLoader::logger;
+
+            if (loaderThread)
+                loaderThread->join();
+
+            FreeConsole();
+            
             break;
         }
     }
