@@ -1,6 +1,7 @@
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 #include "GameData.hpp"
+#include "GameRegistries.hpp"
 #include "Hook/EventHandler.hpp"
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
@@ -29,6 +30,10 @@ void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
     gameData->init();
 
     gameCache = new GameCache();
+    
+    GameRegistries* gameReg = new GameRegistries();
+    gameReg->init(gameData);
+    
     configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
