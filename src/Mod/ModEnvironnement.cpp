@@ -1,10 +1,8 @@
 #include "Mod/ModEnvironnement.hpp"
 
 #include "ModLoader.hpp"
-#include <set>
 #include "Mod/ThreadPool.hpp"
-#include <latch>
-#include "Lib/Json.hpp"
+#include "Lib/json.hpp"
 #include "Lib/miniz.h"
 
 
@@ -108,52 +106,30 @@ void ModEnvironnement::resolveOrder(std::vector<ModObject*> mods)
     _modsList = std::move(sorted);
 }
 
-bool ModEnvironnement::findModJsonInArchive(const std::filesystem::path& archivePath, std::string& foundPath)
+bool ModEnvironnement::findFileInArchive(const std::filesystem::path& archivePath, const std::string& suffix, std::string& foundPath)
 {
     mz_zip_archive archive;
     memset(&archive, 0, sizeof(archive));
 
-    if(!mz_zip_reader_init_file(&archive, archivePath.string().c_str(), 0)) return false;
+    if(!mz_zip_reader_init_file(&archive, archivePath.string().c_str(), 0)) 
+        return false;
 
     mz_uint num = mz_zip_reader_get_num_files(&archive);
+    const size_t suffixLen = suffix.size();
+    
     for(mz_uint i = 0; i < num; ++i)
     {
         mz_zip_archive_file_stat stat;
         if(!mz_zip_reader_file_stat(&archive, i, &stat)) continue;
-        if(!stat.m_filename) break;
 
-        std::string fname = stat.m_filename;
-        if(fname.size() >= 8 && fname.substr(fname.size() - 8) == "Mod.json")
+        const char* fname = stat.m_filename;
+        size_t fnameLen = strlen(fname);
+        
+        if(fnameLen >= suffixLen && strncmp(fname + fnameLen - suffixLen, suffix.c_str(), suffixLen) == 0)
         {
             foundPath = fname;
             mz_zip_reader_end(&archive);
             return true;
-        }
-    }
-
-    mz_zip_reader_end(&archive);
-    return false;
-}
-
-bool ModEnvironnement::findModLibInArchive(const std::filesystem::path& archivePath, const std::string& libName, std::string& foundPath)
-{
-    mz_zip_archive archive;
-    memset(&archive, 0, sizeof(archive));
-
-    if(!mz_zip_reader_init_file(&archive, archivePath.string().c_str(), 0)) return false;
-    mz_uint num = mz_zip_reader_get_num_files(&archive);
-    for (mz_uint i = 0; i < num; ++i) {
-        mz_zip_archive_file_stat st;
-        if (!mz_zip_reader_file_stat(&archive, i, &st)) continue;
-        if (st.m_filename) {
-            std::string fname = st.m_filename;
-            if (fname.size() >= libName.size() &&
-                fname.compare(fname.size() - libName.size(), libName.size(), libName) == 0)
-            {
-                foundPath = fname;
-                mz_zip_reader_end(&archive);
-                return true;
-            }
         }
     }
 
@@ -178,8 +154,6 @@ bool ModEnvironnement::readContentFromArchive(const std::filesystem::path& archi
         {
             mz_zip_archive_file_stat stat;
             if(!mz_zip_reader_file_stat(&archive, i, &stat)) continue;
-            if(!stat.m_filename) break;
-
             std::string fname = stat.m_filename;
             if(fname.size() >= internalName.size() && fname.compare(fname.size() - internalName.size(), internalName.size(), internalName) == 0)
             {
@@ -246,7 +220,7 @@ void ModEnvironnement::SetupEnvironnnement(std::string modDirs)
         if(entryPath.extension() == ".fliarchive")
         {
             std::string modJsonInternal;
-            if(!findModJsonInArchive(entryPath, modJsonInternal))
+            if(!findFileInArchive(entryPath, "Mod.json", modJsonInternal))
             {
                 ModLoader::logger->warn("Invalid mod (no metadata) ", entryPath);
                 continue;
@@ -269,7 +243,7 @@ void ModEnvironnement::SetupEnvironnnement(std::string modDirs)
 
             std::string internalModPath;
             std::string modLibIdentifier = "CompiledBin.bin";
-            if(!findModLibInArchive(entryPath, modLibIdentifier, internalModPath))
+            if(!findFileInArchive(entryPath, modLibIdentifier, internalModPath))
             {
                 ModLoader::logger->warn("Invalid mod (no content) ", entryPath);
                 continue;
@@ -284,99 +258,52 @@ void ModEnvironnement::SetupEnvironnnement(std::string modDirs)
 
 void ModEnvironnement::PreLoad()
 {
-    const size_t modListSize = _modsList.size();
-    size_t numThreads = std::thread::hardware_concurrency();
-    if(numThreads == 0) numThreads = 1;
-    if(numThreads > modListSize) numThreads = modListSize;
+    _modLibList.reserve(_modsList.size());
+    _modPtrList.reserve(_modsList.size());
 
-    ThreadPool pool{numThreads};
-    struct Bucket
+    for (auto* mod : _modsList)
     {
-        std::vector<LibHandle> libs;
-        std::vector<std::unique_ptr<ModBase>> mods;
-    };
+        ModMetaData meta = mod->getMeta();
+        std::string identifier = meta.identifier;
 
-    std::vector<Bucket> buckets(numThreads);
-    std::atomic<int> nextBucket { 0 }; 
-
-    std::latch done(static_cast<int>(modListSize));
-
-    for (auto * mod : _modsList)
-    {
-        pool.enqueue([this, &done, mod, &buckets, &nextBucket, numThreads]
-            {
-                size_t index = nextBucket.fetch_add(1) % numThreads;
-                Bucket& bucket = buckets[index];
-
-                ModMetaData meta = mod->getMeta();
-                std::string identifier = meta.identifier;
-                ModLoader::logger->info("Loading mod: ", identifier, " v", meta.version);
-
-                std::vector<char> modBuf;
-                if(!readContentFromArchive(mod->getContainerPath(), mod->getInternalPath(), modBuf))
-                {
-                    ModLoader::logger->error("Failed to decompressed content from archive from: ", identifier);
-                    done.count_down();
-                    return;
-                }
-
-                std::string suffix = ".mod";
-                {
-                    std::string intern = mod->getInternalPath();
-                    size_t pos = intern.find_last_of('.');
-                    if(pos != std::string::npos) suffix = intern.substr(pos);
-                }
-
-                std::filesystem::path libOnDiskPath = writeBufferToTemp(modBuf, suffix);
-                if(libOnDiskPath.empty())
-                {
-                    ModLoader::logger->error("Failed to writee temporary content for ", identifier);
-                    done.count_down();
-                    return;
-                }
-
-                {
-                    std::lock_guard<std::mutex> lg(_mergeMutex);
-                    _tempFilesToRemove.push_back(libOnDiskPath);
-                }
-
-                LibHandle lib = LoadLib(libOnDiskPath.string());
-                if(!lib)
-                {
-                    ModLoader::logger->error("Failed to load: ", identifier);
-                    done.count_down();
-                    return;
-                }
-
-                using GetModFunc = ModBase *(*)();
-                auto getter = reinterpret_cast<GetModFunc>(GetFunction(lib, "CraftMod"));
-                if(!getter)
-                {
-                    ModLoader::logger->error("Missing CraftMod in ", identifier);
-                    CloseLib(lib);
-                    done.count_down();
-                    return;
-                }
-
-                auto modPtr = std::unique_ptr<ModBase>(getter());
-                modPtr->OnPreLoad();
-
-                bucket.libs.push_back(lib);
-                bucket.mods.push_back(std::move(modPtr));
-                done.count_down();
-            }
-        );
-    }
-
-    done.wait();
-    
-    {
-        std::lock_guard<std::mutex> lg(_mergeMutex);
-        for(auto& bucket : buckets)
+        std::vector<char> modBuf;
+        if(!readContentFromArchive(mod->getContainerPath(), mod->getInternalPath(), modBuf))
         {
-            _modLibList.insert(_modLibList.end(), bucket.libs.begin(), bucket.libs.end());
-            for(auto& modPtr : bucket.mods) _modPtrList.push_back(std::move(modPtr));
+            ModLoader::logger->error("Failed to decompress content from: ", identifier);
+            continue;
         }
+
+        std::filesystem::path libOnDiskPath = writeBufferToTemp(modBuf, ".mod");
+        if(libOnDiskPath.empty())
+        {
+            ModLoader::logger->error("Failed to write temporary content for ", identifier);
+            continue;
+        }
+
+        _tempFilesToRemove.push_back(libOnDiskPath);
+
+        LibHandle lib = LoadLib(libOnDiskPath.string());
+        if(!lib)
+        {
+            ModLoader::logger->error("Failed to load: ", identifier);
+            continue;
+        }
+
+        using GetModFunc = ModBase *(*)();
+        auto getter = reinterpret_cast<GetModFunc>(GetFunction(lib, "CraftMod"));
+        if(!getter)
+        {
+            ModLoader::logger->error("Missing CraftMod in ", identifier);
+            CloseLib(lib);
+            continue;
+        }
+
+        ModLoader::logger->info("Loading ", identifier, " v", meta.version);
+        auto modPtr = std::unique_ptr<ModBase>(getter());
+        modPtr->OnPreLoad();
+
+        _modLibList.push_back(lib);
+        _modPtrList.push_back(std::move(modPtr));
     }
 }
 
@@ -390,7 +317,8 @@ void ModEnvironnement::PostLoad()
     ThreadPool pool{numThreads};
 
     for(auto& modPtr : _modPtrList)
-        pool.enqueue([&modPtr]{modPtr->OnPostLoad();});
+        
+    pool.enqueue([&modPtr]{modPtr->OnPostLoad();});
 }
 
 void ModEnvironnement::Free()
@@ -399,10 +327,15 @@ void ModEnvironnement::Free()
         delete mod;
 
     _modsList.clear();
+    
+    for(auto& modPtr : _modPtrList)
+        modPtr->OnExit();
+    
     _modPtrList.clear();
     
     for(auto lib : _modLibList)
         CloseLib(lib);
+
     _modLibList.clear();
 
     for(const std::filesystem::path& p : _tempFilesToRemove)

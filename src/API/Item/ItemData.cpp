@@ -1,22 +1,7 @@
 #include "API/Item/ItemData.hpp"
-#include "ModLoader.hpp"
-#include "GameCache.hpp"
 #include "API/Common/Common.hpp"
+#include "API/Engine/FName.hpp"
 
-std::string ItemData::GetIdentifier()
-{
-    return Utils::FNameToString(this->_object.ID);
-}
-
-std::string ItemData::GetNameIdentifier()
-{
-    return Utils::FNameToString(this->_object.nameId);
-}
-
-std::string ItemData::GetDescIdentifier()
-{
-    return Utils::FNameToString(this->_object.DescId);
-}
 
 std::string ItemData::GetName(LANG lang)
 {
@@ -36,9 +21,4 @@ std::string ItemData::GetDescription(LANG lang)
 void ItemData::SetDescription(LANG lang, FString string)
 {
     DESC_SET(lang, GetDescIdentifier(), string);
-}
-
-std::string ItemData::GetOverwriteIcon()
-{
-    return Utils::FNameToString(this->_object.overwriteIconName);
 }

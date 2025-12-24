@@ -1,74 +1,98 @@
 #include "ModLoader.hpp"
+#include "GameCache.hpp"
+#include "GameData.hpp"
 #include "Hook/EventHandler.hpp"
+#include "Patcher/Patcher.hpp"
+#include "Patcher/Patches/EventHook.hpp"
+#include <thread>
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
 Logger *ModLoader::logger = nullptr;
 ModEnvironnement *ModLoader::modEnvironnement = nullptr;
+ConfigManager *ModLoader::configManager = nullptr;
 
-DWORD WINAPI ModLoader::init(LPVOID lpParam) {
+void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
+{
     logger = new Logger("ModLoader");
     logger->info("Mod loader has been started");
+    
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
     Patcher patcher;
+    logger->verbose("Dll module is loaded");
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
-    // patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32)); broken?????
+    // patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     // patcher.applyPatches(baseAddress);
-    gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
+    gameData = new GameData(baseAddress, moduleInfo->SizeOfImage);
+    gameData->init();
 
     gameCache = new GameCache();
+    configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
-
+    
     gameCache->PostLoadCache();
     gameData->initOthersData();
-    modEnvironnement->PostLoad();
 
-    return 0;
+    modEnvironnement->PostLoad();
+    logger->verbose("Mod loader initialization complete");
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
-    HANDLE LoaderThread = nullptr;
+    std::thread* loaderThread;
     switch(ul_reason_for_call)
     {
         case DLL_PROCESS_ATTACH:
         {
             AllocConsole();
-
             freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);
             freopen_s(reinterpret_cast<FILE**>(stderr), "CONOUT$", "w", stderr);
 
             std::cout.clear();
             std::cerr.clear();
 
-            Utils::EnableAnsiColors();
-            LoaderThread = CreateThread(nullptr, 0, ModLoader::init, nullptr, 0, nullptr);
-            if (LoaderThread)
-                CloseHandle(LoaderThread);
+            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+            DWORD dwMode = 0;
+            if(GetConsoleMode(hConsole, &dwMode))
+            {
+                dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+                SetConsoleMode(hConsole, dwMode);
+            }
+
+            MODULEINFO moduleInfo{};
+            GetModuleInformation(GetCurrentProcess(), GetModuleHandle(nullptr), &moduleInfo, sizeof(MODULEINFO));
+            loaderThread = new std::thread(ModLoader::init, &moduleInfo);
             break;
         }
         case DLL_PROCESS_DETACH:
         {
             ModLoader::logger->verbose("Mod loader detached from process");
-            if (LoaderThread)
-                CloseHandle(LoaderThread);
-            FreeConsole();
 
-            if (ModLoader::gameData != nullptr)
-                delete ModLoader::gameData;
+            if (ModLoader::configManager)
+                delete ModLoader::configManager;
 
-            if(ModLoader::gameCache != nullptr)
-                delete ModLoader::gameCache;
-
-            if(ModLoader::logger != nullptr)
-                delete ModLoader::logger;
-
-            if(ModLoader::modEnvironnement != nullptr)
+            if (ModLoader::modEnvironnement)
             {
                 ModLoader::modEnvironnement->Free();
                 delete ModLoader::modEnvironnement;
             }
 
+            if (ModLoader::gameCache)
+                delete ModLoader::gameCache;
+
+            if (ModLoader::gameData)
+                delete ModLoader::gameData;
+
+            if (ModLoader::logger)
+                delete ModLoader::logger;
+
+            if (loaderThread)
+                loaderThread->join();
+
+            FreeConsole();
+            
             break;
         }
     }
