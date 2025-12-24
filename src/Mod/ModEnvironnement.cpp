@@ -174,8 +174,6 @@ bool ModEnvironnement::readContentFromArchive(const std::filesystem::path& archi
         {
             mz_zip_archive_file_stat stat;
             if(!mz_zip_reader_file_stat(&archive, i, &stat)) continue;
-            //if(stat.m_filename == "") break;
-            //if(stat.m_filename == "") break;
 
             std::string fname = stat.m_filename;
             if(fname.size() >= internalName.size() && fname.compare(fname.size() - internalName.size(), internalName.size(), internalName) == 0)
@@ -286,116 +284,14 @@ void ModEnvironnement::PreLoad()
 
     for (auto* mod : _modsList)
     {
-        std::mutex                              mutex;
-        std::vector<LibHandle>                  libs;
-        std::vector<std::unique_ptr<ModBase>>   mods;
-        std::mutex                              mutex;
-        std::vector<LibHandle>                  libs;
-        std::vector<std::unique_ptr<ModBase>>   mods;
-    };
+        ModMetaData meta = mod->getMeta();
+        std::string identifier = meta.identifier;
 
-    std::vector<Bucket> buckets(numThreads);
-    std::atomic<int> nextBucket { 0 }; 
-    std::latch done(static_cast<int>(modListSize));
-    
-    
-    for (auto * mod : _modsList)
-    {
-        pool.enqueue([this, &done, mod, &buckets, &nextBucket, numThreads]()
+        std::vector<char> modBuf;
+        if(!readContentFromArchive(mod->getContainerPath(), mod->getInternalPath(), modBuf))
         {
-            size_t index = nextBucket.fetch_add(1) % numThreads;
-            Bucket& bucket = buckets[index];
-            
-            ModMetaData meta = mod->getMeta();
-            std::string identifier = meta.identifier;
-
-            std::vector<char> modBuf;
-            if(!readContentFromArchive(mod->getContainerPath(), mod->getInternalPath(), modBuf))
-            {
-                ModLoader::logger->error("Failed to decompressed content from archive from: ", identifier);
-                done.count_down();
-                return;
-            }
-
-            std::string suffix = ".mod";
-            {
-                std::string intern = mod->getInternalPath();
-                size_t pos = intern.find_last_of('.');
-                if(pos != std::string::npos) suffix = intern.substr(pos);
-            }
-            std::string suffix = ".mod";
-            {
-                std::string intern = mod->getInternalPath();
-                size_t pos = intern.find_last_of('.');
-                if(pos != std::string::npos) suffix = intern.substr(pos);
-            }
-
-            std::filesystem::path libOnDiskPath = writeBufferToTemp(modBuf, suffix);
-            if(libOnDiskPath.empty())
-            {
-                ModLoader::logger->error("Failed to write temporary content for ", identifier);
-                done.count_down();
-                return;
-            }
-
-            {
-                std::lock_guard<std::mutex> lg(_mergeMutex);
-                _tempFilesToRemove.push_back(libOnDiskPath);
-            }
-            {
-                std::lock_guard<std::mutex> lg(_mergeMutex);
-                _tempFilesToRemove.push_back(libOnDiskPath);
-            }
-
-            LibHandle lib = LoadLib(libOnDiskPath.string());
-            if(!lib)
-            {
-                ModLoader::logger->error("Failed to load: ", identifier);
-                done.count_down();
-                return;
-            }
-
-            using GetModFunc = ModBase *(*)();
-            auto getter = reinterpret_cast<GetModFunc>(GetFunction(lib, "CraftMod"));
-            if(!getter)
-            {
-                ModLoader::logger->error("Missing CraftMod in ", identifier);
-                CloseLib(lib);
-                done.count_down();
-                return;
-            }
-
-            ModLoader::logger->info("Loading ", identifier, " v", meta.version);
-            auto modPtr = std::unique_ptr<ModBase>(getter());
-            modPtr->OnPreLoad();
-
-            {
-                std::lock_guard<std::mutex> lg(bucket.mutex);
-                bucket.libs.push_back(lib);
-                bucket.mods.push_back(std::move(modPtr));
-            }
-            done.count_down();
-        });
-    }
-
-    done.wait();
-    {
-        _modLibList.reserve(buckets.size());
-        _modLibList.reserve(buckets.size());
-        std::lock_guard<std::mutex> lg(_mergeMutex);
-        for(auto& bucket : buckets)
-        {
-            _modPtrList.reserve(bucket.mods.size());
-            _modPtrList.reserve(bucket.mods.size());
-            _modLibList.insert(_modLibList.end(), bucket.libs.begin(), bucket.libs.end());
-            for(auto& modPtr : bucket.mods) 
-            { 
-                _modPtrList.push_back(std::move(modPtr));
-            }
-            for(auto& modPtr : bucket.mods) 
-            { 
-                _modPtrList.push_back(std::move(modPtr));
-            }
+            ModLoader::logger->error("Failed to decompress content from: ", identifier);
+            continue;
         }
 
         std::filesystem::path libOnDiskPath = writeBufferToTemp(modBuf, ".mod");
