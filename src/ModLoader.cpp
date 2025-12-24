@@ -11,8 +11,8 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     logger->info("Mod loader has been started");
     Patcher patcher;
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
-    patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
-    patcher.applyPatches(baseAddress);
+    // patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32)); broken?????
+    // patcher.applyPatches(baseAddress);
     gameData = new GameData(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)));
 
     gameCache = new GameCache();
@@ -22,7 +22,7 @@ DWORD WINAPI ModLoader::init(LPVOID lpParam) {
     gameCache->PostLoadCache();
     gameData->initOthersData();
     modEnvironnement->PostLoad();
-    
+
     return 0;
 }
 
