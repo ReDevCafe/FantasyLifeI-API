@@ -106,46 +106,26 @@ void ModEnvironnement::resolveOrder(std::vector<ModObject*> mods)
     _modsList = std::move(sorted);
 }
 
-bool ModEnvironnement::findModJsonInArchive(const std::filesystem::path& archivePath, std::string& foundPath)
+bool ModEnvironnement::findFileInArchive(const std::filesystem::path& archivePath, const std::string& suffix, std::string& foundPath)
 {
     mz_zip_archive archive;
     memset(&archive, 0, sizeof(archive));
 
-    if(!mz_zip_reader_init_file(&archive, archivePath.string().c_str(), 0)) return false;
+    if(!mz_zip_reader_init_file(&archive, archivePath.string().c_str(), 0)) 
+        return false;
 
     mz_uint num = mz_zip_reader_get_num_files(&archive);
+    const size_t suffixLen = suffix.size();
+    
     for(mz_uint i = 0; i < num; ++i)
     {
         mz_zip_archive_file_stat stat;
         if(!mz_zip_reader_file_stat(&archive, i, &stat)) continue;
 
-        std::string fname = stat.m_filename;
-        if(fname.size() >= 8 && fname.substr(fname.size() - 8) == "Mod.json")
-        {
-            foundPath = fname;
-            mz_zip_reader_end(&archive);
-            return true;
-        }
-    }
-
-    mz_zip_reader_end(&archive);
-    return false;
-}
-
-bool ModEnvironnement::findModLibInArchive(const std::filesystem::path& archivePath, const std::string& libName, std::string& foundPath)
-{
-    mz_zip_archive archive;
-    memset(&archive, 0, sizeof(archive));
-
-    if(!mz_zip_reader_init_file(&archive, archivePath.string().c_str(), 0)) return false;
-    mz_uint num = mz_zip_reader_get_num_files(&archive);
-    for (mz_uint i = 0; i < num; ++i) 
-    {
-        mz_zip_archive_file_stat st;
-        if (!mz_zip_reader_file_stat(&archive, i, &st)) continue;
-        std::string fname = st.m_filename;
-
-        if (fname.size() >= libName.size() && fname.compare(fname.size() - libName.size(), libName.size(), libName) == 0)
+        const char* fname = stat.m_filename;
+        size_t fnameLen = strlen(fname);
+        
+        if(fnameLen >= suffixLen && strncmp(fname + fnameLen - suffixLen, suffix.c_str(), suffixLen) == 0)
         {
             foundPath = fname;
             mz_zip_reader_end(&archive);
@@ -240,7 +220,7 @@ void ModEnvironnement::SetupEnvironnnement(std::string modDirs)
         if(entryPath.extension() == ".fliarchive")
         {
             std::string modJsonInternal;
-            if(!findModJsonInArchive(entryPath, modJsonInternal))
+            if(!findFileInArchive(entryPath, "Mod.json", modJsonInternal))
             {
                 ModLoader::logger->warn("Invalid mod (no metadata) ", entryPath);
                 continue;
@@ -263,7 +243,7 @@ void ModEnvironnement::SetupEnvironnnement(std::string modDirs)
 
             std::string internalModPath;
             std::string modLibIdentifier = "CompiledBin.bin";
-            if(!findModLibInArchive(entryPath, modLibIdentifier, internalModPath))
+            if(!findFileInArchive(entryPath, modLibIdentifier, internalModPath))
             {
                 ModLoader::logger->warn("Invalid mod (no content) ", entryPath);
                 continue;
