@@ -17,10 +17,7 @@ void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
     logger = new Logger("ModLoader");
     logger->info("Mod loader has been started");
     
-    // TODO: Remove this hacky sleep, but it's needed, maybe check if the memory is ready next time?
-    std::this_thread::sleep_for(std::chrono::milliseconds(200)); 
     Patcher patcher;
-    
     logger->verbose("Dll module is loaded");
     uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
     patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
