@@ -1,7 +1,6 @@
 # Fantasy Life I Mod Loader
 > [!IMPORTANT]
 > HEY!!! This mod loader is currently under development.. Somes features work (about 25%-35%??) but some things might break if you try weird stuff, that said, if you take your time and experiment a little you can already pull off some pretty cool things
-> HEY!!! This mod loader is currently under development.. Somes features work (about 25%-35%??) but some things might break if you try weird stuff, that said, if you take your time and experiment a little you can already pull off some pretty cool things
 > If you're interested in supporting the project, contributions are welcome! Feel free to open a Pull Request!!
 
 ### How to install the Mod Loader

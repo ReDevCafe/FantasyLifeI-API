@@ -174,7 +174,6 @@ bool ModEnvironnement::readContentFromArchive(const std::filesystem::path& archi
         {
             mz_zip_archive_file_stat stat;
             if(!mz_zip_reader_file_stat(&archive, i, &stat)) continue;
-
             std::string fname = stat.m_filename;
             if(fname.size() >= internalName.size() && fname.compare(fname.size() - internalName.size(), internalName.size(), internalName) == 0)
             {
