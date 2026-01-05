@@ -3,26 +3,25 @@
 #include "API/Entities/Player/Player.hpp"
 #include "ModLoader.hpp"
 #include "Offset.h"
+#include "CommonData.hpp"
 
 #ifdef _WIN32
     #include <Windows.h>
 #else
 #endif
 
-GameData::GameData(uintptr_t baseAddress, uint32_t imageSize) : 
+GameData::GameData() : 
     _staticDataManager(nullptr), 
     _dynamicDataManager(nullptr)
 {
     ModLoader::logger->verbose("Initialize GameData");
-    this->_baseAddress = baseAddress;
-    this->_imageSize = imageSize;
 }
 
 void GameData::init()
 {
-    this->_gObjects = reinterpret_cast<FUObjectArray *>(this->_baseAddress + GOBJECTS_OFFSET);
-    this->_gWorld = reinterpret_cast<void *>(this->_baseAddress + GWORLD_OFFSET);
-    this->_gNames = reinterpret_cast<void *>(this->_baseAddress + GNAMES_OFFSET);
+    this->_gObjects = reinterpret_cast<FUObjectArray *>(CommonData::GetBaseAddress() + GOBJECTS_OFFSET);
+    this->_gWorld = reinterpret_cast<void *>(CommonData::GetBaseAddress() + GWORLD_OFFSET);
+    this->_gNames = reinterpret_cast<void *>(CommonData::GetBaseAddress() + GNAMES_OFFSET);
     this->waitObject(&this->_gObjects);
     this->waitObject(&this->_staticDataManager, "StaticDataManager", 1);
     ModLoader::logger->verbose("Found StaticDataManager => ", std::hex, this->_staticDataManager);
@@ -64,15 +63,6 @@ UObject* GameData::_getUObject(std::string_view name, bool safe, int nth = 0)
 
 Player *GameData::getPlayer() {
     return _player.get();
-}
-
-uintptr_t GameData::getBaseAddress() {
-    return _baseAddress;
-}
-
-uint32_t GameData::getImageSize()
-{
-    return _imageSize;
 }
 
 FUObjectArray *GameData::getGObjects() {

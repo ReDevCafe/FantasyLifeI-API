@@ -1,19 +1,23 @@
 #include "Hook/Pattern.hpp"
+#include "CommonData.hpp"
 #include "GameData.hpp"
 #include "Hook/MemoryHelper.hpp"
 #include "ModLoader.hpp"
 
 Pattern::Pattern(uint8_t *pattern, const char *mask) : _pattern(pattern), _mask(mask) {}
 
-size_t Pattern::getSize() {
+size_t Pattern::getSize() 
+{
     return strlen(_mask);
 }
 
-uint8_t *Pattern::getPattern() {
+uint8_t *Pattern::getPattern() 
+{
     return _pattern;
 }
 
-const char *Pattern::getMask() {
+const char *Pattern::getMask() 
+{
     return _mask;
 }
 
@@ -24,5 +28,5 @@ uintptr_t Pattern::find(uintptr_t baseAddress, uint32_t range)
 
 uintptr_t Pattern::find(uintptr_t startOffset)
 {
-     return MemoryHelper::findPattern(ModLoader::gameData->getBaseAddress() + startOffset, ModLoader::gameData->getImageSize(), this->_pattern, this->_mask);
+    return MemoryHelper::findPattern(CommonData::GetBaseAddress() + startOffset, CommonData::GetSizeImage(), this->_pattern, this->_mask);
 }

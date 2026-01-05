@@ -5,6 +5,7 @@
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
 #include <thread>
+#include "CommonData.hpp"
 
 GameData *ModLoader::gameData = nullptr;
 GameCache *ModLoader::gameCache = nullptr;
@@ -21,10 +22,12 @@ void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
 
     Patcher patcher;
     logger->verbose("Dll module is loaded");
-    uintptr_t baseAddress = (uintptr_t) GetModuleHandle(nullptr);
+    CommonData::init(moduleInfo->SizeOfImage, (uintptr_t) GetModuleHandle(nullptr));
+    // Patcher is crashing the game for unknown reasons - disabling for now, waiting @EltyDev to investigate
     // patcher.add(new EventHook(EventType::ClickEvent, 0x657DC32));
     // patcher.applyPatches(baseAddress);
-    gameData = new GameData(baseAddress, moduleInfo->SizeOfImage);
+
+    gameData = new GameData();
     gameData->init();
 
     gameCache = new GameCache();
