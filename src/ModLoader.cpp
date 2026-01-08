@@ -45,6 +45,11 @@ void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
 
     modEnvironnement->PostLoad();
     logger->verbose("Mod loader initialization complete");
+
+    for(auto text : GameRegistries::LIFE_NOUN->GetAll())
+    {
+        logger->verbose("Life Noun: ", text->ID.ToString());
+    }
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
