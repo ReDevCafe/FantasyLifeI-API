@@ -1,6 +1,7 @@
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 #include "GameData.hpp"
+#include "GameRegistries.hpp"
 #include "Hook/EventHandler.hpp"
 #include "Patcher/Patcher.hpp"
 #include "Patcher/Patches/EventHook.hpp"
@@ -31,6 +32,10 @@ void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
     gameData->init();
 
     gameCache = new GameCache();
+    
+    GameRegistries* gameReg = new GameRegistries();
+    gameReg->init(gameData);
+    
     configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
@@ -40,6 +45,11 @@ void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
 
     modEnvironnement->PostLoad();
     logger->verbose("Mod loader initialization complete");
+
+    for(auto text : GameRegistries::LIFE_NOUN->GetAll())
+    {
+        logger->verbose("Life Noun: ", text->ID.ToString());
+    }
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
