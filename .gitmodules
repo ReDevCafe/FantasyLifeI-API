@@ -1,4 +1,0 @@
-[submodule "include"]
-	path = include
-	url = https://github.com/ReDevCafe/FantasyLifeI-ModLoader-Headers.git
-	branch = main
