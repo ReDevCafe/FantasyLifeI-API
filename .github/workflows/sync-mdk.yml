@@ -44,19 +44,19 @@ jobs:
           fetch-depth: 0
       
       - name: Update include folder
-          run: |
-            echo "Removing old include folder..."
-            rm -rf repo-mdk/include/*
-            rm -rf repo-mdk/include/.[!.]*
-            
-            echo "Creating include folder if it doesn't exist"
-            mkdir -p repo-mdk/include
-            
-            echo "Copying new include folder..."
-            cp -r repo-api/include/* repo-mdk/include/
-            
-            echo "Include folder updated, new contents:"
-            ls -la repo-mdk/include
+        run: |
+          echo "Removing old include folder..."
+          rm -rf repo-mdk/include/*
+          rm -rf repo-mdk/include/.[!.]*
+          
+          echo "Creating include folder if it doesn't exist"
+          mkdir -p repo-mdk/include
+          
+          echo "Copying new include folder..."
+          cp -r repo-api/include/* repo-mdk/include/
+          
+          echo "Include folder updated, new contents:"
+          ls -la repo-mdk/include
       
       - name: Update MODLOADER_BUILD_VERSION in CMakeLists.txt
         working-directory: repo-mdk
