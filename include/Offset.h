@@ -1,0 +1,5 @@
+#pragma once
+
+#define GOBJECTS_OFFSET 0xCB0C7F0
+#define GNAMES_OFFSET   0xCA55A40
+#define GWORLD_OFFSET   0xCC8C678

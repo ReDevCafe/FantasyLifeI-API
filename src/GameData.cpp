@@ -1,14 +1,27 @@
 #include "GameData.hpp"
+#include "API/Engine/FName.hpp"
 #include "API/Entities/Player/Player.hpp"
 #include "ModLoader.hpp"
 #include "Offset.h"
+#include "CommonData.hpp"
 
-GameData::GameData(uintptr_t baseAddress) : _staticDataManager(nullptr), _dynamicDataManager(nullptr) {
+#ifdef _WIN32
+    #include <Windows.h>
+#else
+#endif
+
+GameData::GameData() : 
+    _staticDataManager(nullptr), 
+    _dynamicDataManager(nullptr)
+{
     ModLoader::logger->verbose("Initialize GameData");
-    this->_baseAddress = baseAddress;
-    this->_gObjects = reinterpret_cast<FUObjectArray *>(this->_baseAddress + GOBJECTS_OFFSET);
-    this->_gWorld = reinterpret_cast<void *>(this->_baseAddress + GWORLD_OFFSET);
-    this->_gNames = reinterpret_cast<void *>(this->_baseAddress + GNAMES_OFFSET);
+}
+
+void GameData::init()
+{
+    this->_gObjects = reinterpret_cast<FUObjectArray *>(CommonData::GetBaseAddress() + GOBJECTS_OFFSET);
+    this->_gWorld = reinterpret_cast<void *>(CommonData::GetBaseAddress() + GWORLD_OFFSET);
+    this->_gNames = reinterpret_cast<void *>(CommonData::GetBaseAddress() + GNAMES_OFFSET);
     this->waitObject(&this->_gObjects);
     this->waitObject(&this->_staticDataManager, "StaticDataManager", 1);
     ModLoader::logger->verbose("Found StaticDataManager => ", std::hex, this->_staticDataManager);
@@ -28,12 +41,28 @@ void GameData::initOthersData() {
     ModLoader::logger->info("OK: GameData has been initialized");
 }
 
-Player *GameData::getPlayer() {
-    return _player.get();
+UObject* GameData::_getUObject(std::string_view name, bool safe, int nth = 0)
+{
+    FName apiName(name);
+
+    UObject *object = nullptr;
+    uint32_t counter = 0;
+    if (safe)
+        _gObjects->lock();
+    for (int i = 0; i < _gObjects->ObjObjects.NumElements; ++i) {
+        object = _gObjects->getObject(i);
+        if (object == nullptr) continue;
+        if (object->NamePrivate == apiName && ++counter > nth) break;
+        object = nullptr;
+    }
+    if (safe)
+        _gObjects->unlock();
+
+    return object;
 }
 
-uintptr_t GameData::getBaseAddress() {
-    return _baseAddress;
+Player *GameData::getPlayer() {
+    return _player.get();
 }
 
 FUObjectArray *GameData::getGObjects() {

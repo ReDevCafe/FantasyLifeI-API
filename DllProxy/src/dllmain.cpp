@@ -1,9 +1,5 @@
-#define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 #include <Shlwapi.h>
-#pragma comment(lib, "Shlwapi.lib")
-#pragma comment(linker, "/DLL")
-
 static HMODULE hOriginal = NULL;
 
 // If needed we can load multiple DLLs

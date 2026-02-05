@@ -1,4 +1,6 @@
 #include "GameCache.hpp"
+
+#include "API/Engine/FName.hpp"
 #include "ModLoader.hpp"
 #include "GameData.hpp"
 
@@ -12,6 +14,7 @@
 #include "API/Item/ItemKitData.hpp"
 #include "API/Item/ItemVehicleData.hpp"
 #include "API/Item/ItemPowerUpData.hpp"
+#include <cstdint>
 
 GameCache::GameCache()
 {
@@ -36,6 +39,9 @@ GameCache::GameCache()
 
     initChara(gmd, sdm);
     ModLoader::logger->verbose("Cached: Basic Chara Registries");
+
+    initAddSkillTable(gmd, sdm);
+    ModLoader::logger->verbose("Cached: AddSkillTable Registries");
 }
 
 void GameCache::PostLoadCache()
@@ -51,484 +57,271 @@ void GameCache::PostLoadCache()
 
 
     ModLoader::logger->info("OK: GameCache has been initialized");
+    
+    uint32_t totalSize = 
+        (this->_cacheNounInfo.size() * sizeof(void*)) +
+        (this->_cacheTextInfo.size() * sizeof(void*)) +
+        (this->_cacheItemData.size() * sizeof(void*)) +
+        (this->_cacheRecipeData.size() * sizeof(void*)) +
+        (this->_cacheCommonPickParam.size() * sizeof(void*)) +
+        (this->_cacheCharaData.size() * sizeof(void*)) +
+        (this->_cacheAddSkillLotTable.size() * sizeof(TArray<FGDAddSkillLotTable_AddSkillInfo>*)) +
+        (this->_cacheSubLevel.size() * sizeof(void*)) + 
+        (this->_cacheMap.size() * sizeof(void*));
+
+    ModLoader::logger->verbose("Total cached size: ", totalSize / 1024, " KB");
 }
 
 void GameCache::initNoun(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_BattleCommandNameNoun);
-    for (int i = 0; i < sdm->m_BattleCommandNameNoun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_BattleCommandNameNoun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_BattleCommandNameNoun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    } 
+    for (auto& noun : sdm->m_BattleCommandNameNoun->m_dataMap)
+        this->_cacheNounInfo.emplace(noun.ID.ToString(), noun.nounInfoArray.GetData());
 
     gmd->waitObject(&sdm->m_PlantDungeonText_Noun);
-    for (int i = 0; i < sdm->m_PlantDungeonText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_PlantDungeonText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_PlantDungeonText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    } 
+    for (auto& noun : sdm->m_PlantDungeonText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(noun.ID.ToString(), noun.nounInfoArray.GetData());
 
     gmd->waitObject(&sdm->m_ItemText_Noun);
-    for (int i = 0; i < sdm->m_ItemText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_ItemText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_ItemText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    } 
+    for (auto& noun : sdm->m_ItemText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(noun.ID.ToString(), noun.textInfo.GetData()); // WHY IS THIS FUCKING NAMED TEXTINFO WTF LEVEL 5 PLEASE BE CONSISTENT
 
     gmd->waitObject(&sdm->m_LifeText_Noun);
-    for (int i = 0; i < sdm->m_LifeText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_LifeText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_LifeText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    } 
+    for (auto& textInfo : sdm->m_LifeText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_SkillText_Noun);
-    for (int i = 0; i < sdm->m_SkillText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_SkillText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_SkillText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    } 
+    for (auto& textInfo : sdm->m_SkillText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_QuestRequestMapText_Noun);
-    for (int i = 0; i < sdm->m_QuestRequestMapText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_QuestRequestMapText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_QuestRequestMapText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    } 
+    for (auto& textInfo : sdm->m_QuestRequestMapText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_QuestTitleText);
-    for (int i = 0; i < sdm->m_QuestTitleText->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_QuestTitleText->m_dataMap.Data[i].Value.Second.Text.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_QuestTitleText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    } 
+    for (auto& textInfo : sdm->m_QuestTitleText->m_dataMap)
+        this->_cacheNounInfo.emplace(textInfo.ID.ToString(), textInfo.Text.GetData());
 
     gmd->waitObject(&sdm->m_MapText_Noun);
-    for (int i = 0; i < sdm->m_MapText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_MapText_Noun->m_dataMap.Data[i].Value.Second.nounInfo.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_MapText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    }    
+    for (auto& textInfo : sdm->m_MapText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(textInfo.ID.ToString(), textInfo.nounInfo.GetData());
 
     gmd->waitObject(&sdm->m_MenuText_Noun);
-    for (int i = 0; i < sdm->m_MenuText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_MenuText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_MenuText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    }  
+    for (auto& textInfo : sdm->m_MenuText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(textInfo.ID.ToString(), textInfo.nounInfoArray.GetData());
 
     gmd->waitObject(&sdm->m_CharaText_Noun);
-    for (int i = 0; i < sdm->m_CharaText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_CharaText_Noun->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_CharaText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    }
+    for (auto& textInfo : sdm->m_CharaText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_SystemText_Noun);
-    for (int i = 0; i < sdm->m_SystemText_Noun->m_dataMap.Data.Count; i++)
-    {
-        auto noun = sdm->m_SystemText_Noun->m_dataMap.Data[i].Value.Second.nounInfoArray.Data;
-        if (noun == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_SystemText_Noun->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheNounInfo.emplace(key, noun);
-    }
+    for (auto& textInfo : sdm->m_SystemText_Noun->m_dataMap)
+        this->_cacheNounInfo.emplace(textInfo.ID.ToString(), textInfo.nounInfoArray.GetData());
+
+    ModLoader::logger->verbose("GameCache: NounInfo size: ", this->_cacheNounInfo.size());
 }
 
 void GameCache::initText(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_AchievementText);
-    for (int i = 0; i < sdm->m_AchievementText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_AchievementText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_AchievementText->m_dataMap.Data[i].Value.First);
-
-        this->_cacheTextInfo.emplace(key, text);
-    } 
+    for (auto& textInfo : sdm->m_AchievementText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_CharacterFlavorText);
-    for (int i = 0; i < sdm->m_CharacterFlavorText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_CharacterFlavorText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_CharacterFlavorText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_CharacterFlavorText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_CharamakeText);
-    for (int i = 0; i < sdm->m_CharamakeText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_CharamakeText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_CharamakeText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_CharamakeText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_DailyMissionCompleteNotificationText);
-    for (int i = 0; i < sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data[i].Value.Second.Text.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_DailyMissionCompleteNotificationText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_DailyMissionCompleteNotificationText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.Text.GetData());
 
     gmd->waitObject(&sdm->m_DailyMissionTitleText);
-    for (int i = 0; i < sdm->m_DailyMissionTitleText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_DailyMissionTitleText->m_dataMap.Data[i].Value.Second.Text.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_DailyMissionTitleText->m_dataMap.Data[i].Value.First);
-
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_DailyMissionTitleText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.Text.GetData());
 
     gmd->waitObject(&sdm->m_GuildRewardText);
-    for (int i = 0; i < sdm->m_GuildRewardText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_GuildRewardText->m_dataMap.Data[i].Value.Second.Text.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_GuildRewardText->m_dataMap.Data[i].Value.First);
-
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_GuildRewardText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.Text.GetData());
 
     gmd->waitObject(&sdm->m_ItemText);
-    for (int i = 0; i < sdm->m_ItemText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_ItemText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_ItemText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_ItemText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_LifeText);
-    for (int i = 0; i < sdm->m_LifeText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_LifeText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_LifeText->m_dataMap.Data[i].Value.First);
-       
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_LifeText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_MapText);
-    for (int i = 0; i < sdm->m_MapText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_MapText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_MapText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_MapText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_MenuText);
-    for (int i = 0; i < sdm->m_MenuText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_MenuText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_MenuText->m_dataMap.Data[i].Value.First);
-
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_MenuText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_MultiText);
-    for (int i = 0; i < sdm->m_MultiText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_MultiText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_MultiText->m_dataMap.Data[i].Value.First);
-
-        this->_cacheTextInfo.emplace(key, text);
-    }
-
+    for (auto& textInfo : sdm->m_MultiText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_PhaseTitleText);
-    for (int i = 0; i < sdm->m_PhaseTitleText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_PhaseTitleText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_PhaseTitleText->m_dataMap.Data[i].Value.First);
-
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_PhaseTitleText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfoArray.GetData());
 
     gmd->waitObject(&sdm->m_PlantDungeonText);
-    for (int i = 0; i < sdm->m_PlantDungeonText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_PlantDungeonText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_PlantDungeonText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_PlantDungeonText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_QuestDetailText);
-    for (int i = 0; i < sdm->m_QuestDetailText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_QuestDetailText->m_dataMap.Data[i].Value.Second.Text.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_QuestDetailText->m_dataMap.Data[i].Value.First);
-
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_QuestDetailText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.Text.GetData());
 
     gmd->waitObject(&sdm->m_QuestPurposeText);
-    for (int i = 0; i < sdm->m_QuestPurposeText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_QuestPurposeText->m_dataMap.Data[i].Value.Second.Text.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_QuestPurposeText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_QuestPurposeText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.Text.GetData());
 
     gmd->waitObject(&sdm->m_QuestReportNotificationText);
-    for (int i = 0; i < sdm->m_QuestReportNotificationText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_QuestReportNotificationText->m_dataMap.Data[i].Value.Second.Text.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_QuestReportNotificationText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_QuestReportNotificationText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.Text.GetData());
 
     gmd->waitObject(&sdm->m_SkillText);
-    for (int i = 0; i < sdm->m_SkillText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_SkillText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_SkillText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_SkillText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_SystemText);
-    for (int i = 0; i < sdm->m_SystemText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_SystemText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_SystemText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_SystemText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
 
     gmd->waitObject(&sdm->m_TipsText);
-    for (int i = 0; i < sdm->m_TipsText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_TipsText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_TipsText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_TipsText->m_dataMap)
+        this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
+
+    ModLoader::logger->verbose("GameCache: TextInfo size: ", this->_cacheTextInfo.size());
 }
 
 void GameCache::postInitText(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_PhasePurposeText);
-    for (int i = 0; i < sdm->m_PhasePurposeText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_PhasePurposeText->m_dataMap.Data[i].Value.Second.textInfoArray.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_PhasePurposeText->m_dataMap.Data[i].Value.First);
-
-        this->_cacheTextInfo.emplace(key, text);
-    }
+    for (auto& textInfo : sdm->m_PhasePurposeText->m_dataMap)
+       this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfoArray.GetData());
 
     gmd->waitObject(&sdm->m_BattleCommandDescText);
-    for (int i = 0; i < sdm->m_BattleCommandDescText->m_dataMap.Data.Count; i++)
-    {
-        auto text = sdm->m_BattleCommandDescText->m_dataMap.Data[i].Value.Second.textInfo.Data;
-        if (text == nullptr) continue;
-        std::string key = Utils::FNameToString(sdm->m_BattleCommandDescText->m_dataMap.Data[i].Value.First);
-        
-        this->_cacheTextInfo.emplace(key, text);
-    } 
+    for (auto& textInfo : sdm->m_BattleCommandDescText->m_dataMap)
+       this->_cacheTextInfo.emplace(textInfo.ID.ToString(), textInfo.textInfo.GetData());
+    
 }
 
 void GameCache::initSkill(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_SkillData);
-    for (int i = 0; i < sdm->m_SkillData->m_dataMap.Data.Count; i++)
+    for (auto& skillInfo : sdm->m_SkillData->m_dataMap)
     {
-        std::string key = Utils::FNameToString(sdm->m_SkillData->m_dataMap.Data[i].Value.First.Name);
+        std::string key = skillInfo.ID.Name.ToString();
         if(key == "ps_just_avoid" || key == "ps_just_guard") continue;
 
-        SkillData skill{ sdm->m_SkillData->m_dataMap.Data[i].Value.Second }; 
-        
-        this->_cacheSkillData.emplace(key, std::make_unique<SkillData>(skill));
+        this->_cacheSkillData.emplace(key, std::make_unique<SkillData>(skillInfo));
     } 
+    ModLoader::logger->verbose("GameCache: SkillData size: ", this->_cacheSkillData.size());
 }
 
 void GameCache::initCommonPickParam(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_CommonPickParamData);
-    for (int i = 0; i < sdm->m_CommonPickParamData->m_dataMap.Data.Count; i++)
-    {
-        CommonPickParamData param{ sdm->m_CommonPickParamData->m_dataMap.Data[i].Value.Second }; 
-        this->_cacheCommonPickParam.emplace(param.GetIdentifier(), std::make_unique<CommonPickParamData>(param));
-    } 
+    for (auto& paramInfo : sdm->m_CommonPickParamData->m_dataMap)
+        this->_cacheCommonPickParam.emplace(paramInfo.ID.ToString(), std::make_unique<CommonPickParamData>(paramInfo));
+    
+    ModLoader::logger->verbose("GameCache: CommonPickParamData size: ", this->_cacheCommonPickParam.size());
 }
 
 void GameCache::initItem(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_ItemMaterialData);
-    for (int i = 0; i < sdm->m_ItemMaterialData->m_dataMap.Data.Count; i++)
-    {
-        ItemMaterialData citem{ sdm->m_ItemMaterialData->m_dataMap.Data[i].Value.Second };
-
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemMaterialData>(citem));
-
-    }
-
+    for (auto& itemInfo : sdm->m_ItemMaterialData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemMaterialData>(itemInfo));
+    
     gmd->waitObject(&sdm->m_ItemConsumeData);
-    for (int i = 0; i < sdm->m_ItemConsumeData->m_dataMap.Data.Count; i++)
-    {
-        ItemConsumeData citem{ sdm->m_ItemConsumeData->m_dataMap.Data[i].Value.Second };
-
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemConsumeData>(citem));
-    }
+    for (auto& itemInfo : sdm->m_ItemConsumeData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemConsumeData>(itemInfo));
 
     gmd->waitObject(&sdm->m_ItemImportantData);
-    for (int i = 0; i < sdm->m_ItemImportantData->m_dataMap.Data.Count; i++)
-    {
-        ItemImportantData citem{ sdm->m_ItemImportantData->m_dataMap.Data[i].Value.Second };
-
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemImportantData>(citem));
-    }
+    for (auto& itemInfo : sdm->m_ItemImportantData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemImportantData>(itemInfo));
 
     gmd->waitObject(&sdm->m_ItemWeaponData);
-    for (int i = 0; i < sdm->m_ItemWeaponData->m_dataMap.Data.Count; i++)
-    {
-        ItemWeaponData citem{ sdm->m_ItemWeaponData->m_dataMap.Data[i].Value.Second };
-
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemWeaponData>(citem));
-    }
+    for (auto& itemInfo : sdm->m_ItemWeaponData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemWeaponData>(itemInfo));
 
     gmd->waitObject(&sdm->m_ItemLifeToolsData);
-    for (int i = 0; i < sdm->m_ItemLifeToolsData->m_dataMap.Data.Count; i++)
-    {
-        ItemLifeToolsData citem{ sdm->m_ItemLifeToolsData->m_dataMap.Data[i].Value.Second };
-        
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemLifeToolsData>(citem));
-    }
+    for (auto& itemInfo : sdm->m_ItemLifeToolsData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemLifeToolsData>(itemInfo));
 
     gmd->waitObject(&sdm->m_ItemArmorData);
-    for (int i = 0; i < sdm->m_ItemArmorData->m_dataMap.Data.Count; i++)
-    {
-        ItemArmorData citem{ sdm->m_ItemArmorData->m_dataMap.Data[i].Value.Second };
-
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemArmorData>(citem));
-    }
+    for (auto& itemInfo : sdm->m_ItemArmorData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemArmorData>(itemInfo));
+    
     gmd->waitObject(&sdm->m_ItemCraftData);
-    for (int i = 0; i < sdm->m_ItemCraftData->m_dataMap.Data.Count; i++)
-    {
-        ItemCraftData citem{ sdm->m_ItemCraftData->m_dataMap.Data[i].Value.Second };
-
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemCraftData>(citem));
-    }
+    for (auto& itemInfo : sdm->m_ItemCraftData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemCraftData>(itemInfo));
 
     gmd->waitObject(&sdm->m_ItemKitData);
-    for (int i = 0; i < sdm->m_ItemKitData->m_dataMap.Data.Count; i++)
-    {
-        ItemKitData citem{ sdm->m_ItemKitData->m_dataMap.Data[i].Value.Second };
+    for (auto& itemInfo : sdm->m_ItemKitData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemKitData>(itemInfo));
 
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemKitData>(citem));
-    }
     gmd->waitObject(&sdm->m_ItemVehicleData);
-    for (int i = 0; i < sdm->m_ItemVehicleData->m_dataMap.Data.Count; i++)
-    {
-        ItemVehicleData citem{ sdm->m_ItemVehicleData->m_dataMap.Data[i].Value.Second };
-
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemVehicleData>(citem));
-    }
+    for (auto& itemInfo : sdm->m_ItemVehicleData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemVehicleData>(itemInfo));
 
     gmd->waitObject(&sdm->m_ItemPowerUpData);
-    for (int i = 0; i < sdm->m_ItemPowerUpData->m_dataMap.Data.Count; i++)
-    {
-        ItemPowerUpData citem{ sdm->m_ItemPowerUpData->m_dataMap.Data[i].Value.Second };
+    for (auto& itemInfo : sdm->m_ItemPowerUpData->m_dataMap)
+        this->_cacheItemData.emplace(itemInfo.ID.ToString(), std::make_unique<ItemPowerUpData>(itemInfo));
 
-        _cacheItemData.emplace(citem.GetIdentifier(), std::make_unique<ItemPowerUpData>(citem));
-    }
+    ModLoader::logger->verbose("GameCache: ItemData size: ", this->_cacheItemData.size());
 }
 
 void GameCache::initRecipe(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_RecipeData);
-    for (int i = 0; i < sdm->m_RecipeData->m_dataMap.Data.Count; i++)
-    {
-        RecipeData recipe{ sdm->m_RecipeData->m_dataMap.Data[i].Value.Second };
+    for (auto& recipeInfo : sdm->m_RecipeData->m_dataMap)
+        this->_cacheRecipeData.emplace(recipeInfo.recipeId.ToString(), std::make_unique<RecipeData>(recipeInfo));
 
-        _cacheRecipeData.emplace(recipe.GetIdentifier(), std::make_unique<RecipeData>(recipe));
-    }
+    ModLoader::logger->verbose("GameCache: RecipeData size: ", this->_cacheRecipeData.size());
 }
 
 void GameCache::initChara(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_CharaData);
-    for (int i = 0; i < sdm->m_CharaData->m_dataMap.Data.Count; i++)
-    {
-        CharaData chara{ sdm->m_CharaData->m_dataMap.Data[i].Value.Second };
+    for (auto& charaInfo : sdm->m_CharaData->m_dataMap)
+        this->_cacheCharaData.emplace(charaInfo.ID.ToString(), std::make_unique<CharaData>(charaInfo));
 
-        _cacheCharaData.emplace(chara.GetIdentifier(), std::make_unique<CharaData>(chara));
-    }
+    ModLoader::logger->verbose("GameCache: CharaData size: ", this->_cacheCharaData.size());
 }
 
 void GameCache::initSubLevel(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_MapSubLevel);
-    for (int i = 0; i < sdm->m_MapSubLevel->m_dataMap.Data.Count; i++)
-    {
-        MapSubLevel level{ sdm->m_MapSubLevel->m_dataMap.Data[i].Value.Second };
+    for (auto& levelInfo : sdm->m_MapSubLevel->m_dataMap)
+        this->_cacheSubLevel.emplace(levelInfo.SubLevelID.ToString(),  std::make_unique<MapSubLevel>(levelInfo));
 
-        _cacheSubLevel.emplace(level.GetIdentifier(), std::make_unique<MapSubLevel>(level));
-    }
+    ModLoader::logger->verbose("GameCache: SubLevel size: ", this->_cacheSubLevel.size());
 }
 
 void GameCache::initMap(GameData* gmd, UStaticDataManager* sdm)
 {
     gmd->waitObject(&sdm->m_MapData);
-    for (int i = 0; i < sdm->m_MapData->m_dataMap.Data.Count; ++i)
-    {
-        MapData map{ sdm->m_MapData->m_dataMap.Data[i].Value.Second };
+    for (auto& mapInfo : sdm->m_MapData->m_dataMap)
+        this->_cacheMap.emplace(mapInfo.mapId.ToString(), std::make_unique<MapData>(mapInfo));
 
-        _cacheMap.emplace(map.GetIdentifier(), std::make_unique<MapData>(map));
-    }
+    ModLoader::logger->verbose("GameCache: MapData size: ", this->_cacheMap.size());
+}
+
+void GameCache::initAddSkillTable(GameData* gmd, UStaticDataManager* sdm)
+{
+    gmd->waitObject(&sdm->m_AddSkillLotTable);
+    for (auto& addSkillInfo : sdm->m_AddSkillLotTable->m_dataMap)
+        this->_cacheAddSkillLotTable.emplace(addSkillInfo.ID.ToString(), &addSkillInfo.addSkillInfoList);
+
+    ModLoader::logger->verbose("GameCache: AddSkillLotTable size: ", this->_cacheAddSkillLotTable.size());
 }
