@@ -65,7 +65,7 @@ jobs:
           sed -i "s/set(MODLOADER_BUILD_VERSION[[:space:]]*\"[^\"]*\")/set(MODLOADER_BUILD_VERSION   \"$TAG\")/" CMakeLists.txt
           grep "MODLOADER_BUILD_VERSION" CMakeLists.txt
       
-      - name: Commit and push to main
+      - name: Commit and push to mainmaster
         working-directory: repo-mdk
         run: |
           git config user.name "github-actions[bot]"
@@ -78,7 +78,7 @@ jobs:
             
             - Updated include headers
             - Updated MODLOADER_BUILD_VERSION in CMakeLists.txt"
-            git push origin main
+            git push origin master
           else
             echo "No changes to commit"
           fi
