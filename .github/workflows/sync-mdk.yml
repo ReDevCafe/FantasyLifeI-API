@@ -1,0 +1,90 @@
+name: "Sync to MDK repository"
+on:
+  workflow_run:
+    workflows: ["Build and deploy project"]
+    types:
+      - completed
+    branches:
+      - master
+env:
+  TARGET_REPO: ReDevCafe/FantasyLifeI-ModTemplate
+jobs:
+  sync-include:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout repo API (ModLoader)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: repo-api
+      
+      - name: Verify include folder exists
+        run: |
+          if [ ! -d "repo-api/include" ]; then
+            echo "Error: include folder not found in source repo"
+            exit 1
+          fi
+          echo "Include folder found, contents:"
+          ls -la repo-api/include
+      
+      - name: Get release tag from cd.yml
+        id: version
+        run: |
+          TAG="v$(date +'%Y%m%d.%H%M')"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          echo "Release tag: $TAG"
+      
+      - name: Checkout repo MDK (FLiMod template)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.TARGET_REPO }}
+          token: ${{ secrets.REPO_MDK_PAT }}
+          path: repo-mdk
+          fetch-depth: 0
+      
+      - name: Update include folder
+        run: |
+          echo "Removing old include folder..."
+          rm -rf repo-mdk/include/*
+          rm -rf repo-mdk/include/.[!.]*
+          
+          echo "Copying new include folder..."
+          cp -r repo-api/include/* repo-mdk/include/
+          
+          echo "Include folder updated, new contents:"
+          ls -la repo-mdk/include
+      
+      - name: Update MODLOADER_BUILD_VERSION in CMakeLists.txt
+        working-directory: repo-mdk
+        run: |
+          TAG="${{ steps.version.outputs.tag }}"
+          sed -i "s/set(MODLOADER_BUILD_VERSION[[:space:]]*\"[^\"]*\")/set(MODLOADER_BUILD_VERSION   \"$TAG\")/" CMakeLists.txt
+          grep "MODLOADER_BUILD_VERSION" CMakeLists.txt
+      
+      - name: Commit and push to main
+        working-directory: repo-mdk
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add include CMakeLists.txt
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "Update ModLoader to ${{ steps.version.outputs.tag }}
+            
+            - Updated include headers
+            - Updated MODLOADER_BUILD_VERSION in CMakeLists.txt"
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi
+      
+      - name: Create versioned branch
+        working-directory: repo-mdk
+        run: |
+          TAG="${{ steps.version.outputs.tag }}"
+          BRANCH_NAME="modloader-$TAG"
+          
+          git checkout -b $BRANCH_NAME
+          git push origin $BRANCH_NAME
