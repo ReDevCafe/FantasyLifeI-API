@@ -1,12 +1,24 @@
 #include "API/Item/ItemEquipData.hpp"
-#include "Utils.hpp"
+#include "API/Engine/FName.hpp"
+#include "ModLoader.hpp"
 
 std::string ItemEquipData::GetModelIdentifier()
 {
-    return Utils::FNameToString(reinterpret_cast<FGDItemEquipData*>(&this->_object)->modelID);
+    return static_cast<FGDItemEquipData&>(this->_object).modelID.ToString();
 }
 
 void ItemEquipData::SetModel(ItemEquipData item)
 {
-    reinterpret_cast<FGDItemEquipData*>(&this->_object)->modelID = reinterpret_cast<FGDItemEquipData*>(&item.getObject())->modelID;
+    static_cast<FGDItemEquipData&>(this->_object).modelID = static_cast<FGDItemEquipData&>(this->_object).modelID;
+}
+
+TArray<FGDAddSkillLotTable_AddSkillInfo>& ItemEquipData::GetAddSkillLot(int rarity)
+{
+    auto skillIdRaw = static_cast<FGDItemEquipData&>(this->_object).addSkillLotTableList.Get(rarity);
+    return ModLoader::gameCache->GetAddSkillTable(skillIdRaw.ToString());
+}
+
+void ItemEquipData::SetAddSkillTable(int rarity, FName value)
+{
+    static_cast<FGDItemEquipData&>(this->_object).addSkillLotTableList.Set(rarity, value);
 }

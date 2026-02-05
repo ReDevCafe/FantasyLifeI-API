@@ -1,6 +1,6 @@
 # Fantasy Life I Mod Loader
 > [!IMPORTANT]
-> HEY!!! This mod loader is currently under development.. Somes features work (about 20%-30%??) but some things might break if you try weird stuff, that said, if you take your time and experiment a little you can already pull off some pretty cool things
+> HEY!!! This mod loader is currently under development.. Somes features work (about 25%-35%??) but some things might break if you try weird stuff, that said, if you take your time and experiment a little you can already pull off some pretty cool things
 > If you're interested in supporting the project, contributions are welcome! Feel free to open a Pull Request!!
 
 ### How to install the Mod Loader
@@ -52,4 +52,20 @@ Fantasy Life I/
         └── Mods/
             ├── MyMod.fliarchive
             └── OtherMod.fliarchive 
+```
+
+### Build the ModLoader
+
+>[!WARNING]
+> Use LLVM 21.1.3 OR HIGHER
+
+```bash
+    $ cmake -B build -G "Ninja" -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DMLDEBUG=OFF
+```
+> [!NOTE]  
+> For debugging you might need to set `MLDEBUG` to `ON`: `-DMLDEBUG=OFF`
+> This is only needed if you require PDB files, otherwise keep this option off.
+
+```bash
+    $ cmake --build build --config Release
 ```

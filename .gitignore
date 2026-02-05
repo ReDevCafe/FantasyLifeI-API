@@ -1,10 +1,22 @@
+#Exclude ALL FILES
 *
+#Except :
+
+# Dll Proxy
+!DllProxy
+!DllProxy/**/*
+
+# Source codes
 !include/
 !include/**/*
 !src/
 !src/**/*
-#!CMakeLists.txt
+
+# Configuration and documentation
+!CMakeLists.txt
+!.clangd
 !README.md
+
+# Git Action
 !.github/
 !.github/**/*
-!version_proxy.def

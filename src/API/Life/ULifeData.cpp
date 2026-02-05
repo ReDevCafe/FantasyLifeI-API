@@ -1,5 +1,5 @@
-#include "Api/Life/ULifeData.hpp"
-#include "API/Engine/TArrayHelper.hpp"
+#include "API/Life/ULifeData.hpp"
+#include "API/Life/LifeData.hpp"
 
 LifeData ULifeData::GetLife(ELifeType life)
 {

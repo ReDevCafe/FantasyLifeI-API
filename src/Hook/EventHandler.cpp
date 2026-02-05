@@ -1,9 +1,6 @@
 #include "Hook/EventHandler.hpp"
 #include "Hook/MemoryHelper.hpp"
-#include "ModLoader.hpp"
 #include "SDK.h"
-
-#include <iomanip>
 
 std::unordered_map<EventType, std::vector<std::function<void(std::vector<std::any>)>>> EventHandler::_handlers;
 std::unordered_map<uintptr_t, EventType> EventHandler::_events;

@@ -2,27 +2,27 @@
 #include "ModLoader.hpp"
 #include "GameCache.hpp"
 
-std::string Common::NounSingular(LANG lang, std::string identifier)
+std::string Common::NounSingular(LANG lang, std::string_view identifier)
 {
-    if(identifier == "None") return "NO_NAME";
-    auto text = ModLoader::gameCache->GetNoun(identifier);
+    if(identifier == "None") return "nullptr";
+    auto text = ModLoader::gameCache->GetNoun(identifier.data());
     switch(lang)
     {
-        case LANG::JAPANESE: return text->nounSingularForm.ToString();
-        case LANG::ENGLISH: return text->nounSingularForm_en.ToString();
-        case LANG::FRENCH: return text->nounSingularForm_fr.ToString();
-        case LANG::ESPAGNOL: return text->nounSingularForm_es.ToString();
-        case LANG::DEUTSCH: return text->nounSingularForm_de.ToString();
-        case LANG::ITALIAN: return text->nounSingularForm_it.ToString();
-        case LANG::TZH: return text->nounSingularForm_tzh.ToString();
-        case LANG::CZH: return text->nounSingularForm_czh.ToString();
-        case LANG::KO: return text->nounSingularForm_ko.ToString();
+        case LANG::JAPANESE: return text->nounSingularForm.ToString(); break;
+        case LANG::ENGLISH: return text->nounSingularForm_en.ToString(); break;
+        case LANG::FRENCH: return text->nounSingularForm_fr.ToString(); break;
+        case LANG::ESPAGNOL: return text->nounSingularForm_es.ToString(); break;
+        case LANG::DEUTSCH: return text->nounSingularForm_de.ToString(); break;
+        case LANG::ITALIAN: return text->nounSingularForm_it.ToString(); break;
+        case LANG::TZH: return text->nounSingularForm_tzh.ToString(); break;
+        case LANG::CZH: return text->nounSingularForm_czh.ToString(); break;
+        case LANG::KO:  return text->nounSingularForm_ko.ToString(); break;
     }
 
     return text->nounSingularForm.ToString();
 }
 
-void Common::NounSingularSet(LANG lang, std::string identifier, FString value)
+void Common::NounSingularSet(LANG lang, std::string_view identifier, FString value)
 {
     if(identifier == "None") 
     {
@@ -30,41 +30,41 @@ void Common::NounSingularSet(LANG lang, std::string identifier, FString value)
         return;
     }
     
-    auto text = ModLoader::gameCache->GetNoun(identifier);
+    auto text = ModLoader::gameCache->GetNoun(identifier.data());
     switch(lang)
     {
-        case LANG::JAPANESE: text->nounSingularForm = value;
-        case LANG::ENGLISH: text->nounSingularForm_en = value;
-        case LANG::FRENCH: text->nounSingularForm_fr = value;
-        case LANG::ESPAGNOL: text->nounSingularForm_es = value;
-        case LANG::DEUTSCH: text->nounSingularForm_de = value;
-        case LANG::ITALIAN: text->nounSingularForm_it = value;
-        case LANG::TZH: text->nounSingularForm_tzh = value;
-        case LANG::CZH: text->nounSingularForm_czh = value;
-        case LANG::KO: text->nounSingularForm_ko = value;
+        case LANG::JAPANESE: text->nounSingularForm = value; break;
+        case LANG::ENGLISH: text->nounSingularForm_en = value; break;
+        case LANG::FRENCH: text->nounSingularForm_fr = value; break;
+        case LANG::ESPAGNOL: text->nounSingularForm_es = value; break;
+        case LANG::DEUTSCH: text->nounSingularForm_de = value; break;
+        case LANG::ITALIAN: text->nounSingularForm_it = value; break;
+        case LANG::TZH: text->nounSingularForm_tzh = value; break;
+        case LANG::CZH: text->nounSingularForm_czh = value; break;
+        case LANG::KO:  text->nounSingularForm_ko = value; break;
     }
 }
 
-std::string Common::Description(LANG lang, std::string identifier)
+std::string Common::Description(LANG lang, std::string_view identifier)
 {
-    auto text = ModLoader::gameCache->GetText(identifier);
+    auto text = ModLoader::gameCache->GetText(identifier.data());
     switch(lang)
     {
-        case LANG::JAPANESE: return text->Text.ToString();
-        case LANG::ENGLISH:  return text->text_en.ToString();
-        case LANG::FRENCH:   return text->text_fr.ToString();
-        case LANG::ESPAGNOL: return text->text_es.ToString();
-        case LANG::DEUTSCH:  return text->text_de.ToString();
-        case LANG::ITALIAN:  return text->text_de.ToString();
-        case LANG::TZH:      return text->text_tzh.ToString();
-        case LANG::CZH:      return text->text_czh.ToString();
-        case LANG::KO :      return text->text_ko.ToString();
+        case LANG::JAPANESE: return text->Text.ToString(); break;
+        case LANG::ENGLISH:  return text->text_en.ToString(); break;
+        case LANG::FRENCH:   return text->text_fr.ToString(); break;
+        case LANG::ESPAGNOL: return text->text_es.ToString(); break;
+        case LANG::DEUTSCH:  return text->text_de.ToString(); break;
+        case LANG::ITALIAN:  return text->text_de.ToString(); break;
+        case LANG::TZH:      return text->text_tzh.ToString(); break;
+        case LANG::CZH:      return text->text_czh.ToString(); break;
+        case LANG::KO:       return text->text_ko.ToString(); break;
     }
 
     return text->Text.ToString();
 }
 
-void Common::DescriptionSet(LANG lang, std::string identifier, FString value)
+void Common::DescriptionSet(LANG lang, std::string_view identifier, FString value)
 {
     if(identifier == "desc_itm_common") 
     {
@@ -72,17 +72,17 @@ void Common::DescriptionSet(LANG lang, std::string identifier, FString value)
         return;
     }
 
-    auto text = ModLoader::gameCache->GetText(identifier);
+    auto text = ModLoader::gameCache->GetText(identifier.data());
     switch(lang)
     {
-        case LANG::JAPANESE: text->Text = value;
-        case LANG::ENGLISH:  text->text_en = value;
-        case LANG::FRENCH:   text->text_fr = value;
-        case LANG::ESPAGNOL: text->text_es = value;
-        case LANG::DEUTSCH:  text->text_de = value;
-        case LANG::ITALIAN:  text->text_de = value;
-        case LANG::TZH:      text->text_tzh = value;
-        case LANG::CZH:      text->text_czh = value;
-        case LANG::KO :      text->text_ko = value;
+        case LANG::JAPANESE: text->Text = value; break;
+        case LANG::ENGLISH:  text->text_en = value; break;
+        case LANG::FRENCH:   text->text_fr = value; break;
+        case LANG::ESPAGNOL: text->text_es = value; break;
+        case LANG::DEUTSCH:  text->text_de = value; break;
+        case LANG::ITALIAN:  text->text_de = value; break;
+        case LANG::TZH:      text->text_tzh = value; break;
+        case LANG::CZH:      text->text_czh = value; break;
+        case LANG::KO:       text->text_ko = value; break;
     }
 }
