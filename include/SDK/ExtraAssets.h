@@ -17,9 +17,10 @@ enum class EGDValueType : uint8_t
 {
 	EGDValueType__TypeInt                                                            = 0,
 	EGDValueType__TypeFloat                                                          = 1,
-	EGDValueType__TypeName                                                           = 2,
-	EGDValueType__TypeEmpty                                                          = 3,
-	EGDValueType__TypeMax                                                            = 4
+	EGDValueType__TypeBoolean                                                        = 2,
+	EGDValueType__TypeName                                                           = 3,
+	EGDValueType__TypeEmpty                                                          = 4,
+	EGDValueType__TypeMax                                                            = 5
 };
 
 /// Class /Script/ExtraAssets.GameDataAsset
@@ -34,9 +35,9 @@ public:
 
 	/// Functions
 	// Function /Script/ExtraAssets.GameDataAsset.ImportCSV
-	// void ImportCSV();                                                                                                        // [0x6717a90] Final|Native|Public  
+	// void ImportCSV();                                                                                                        // [0x6747c70] Final|Native|Public  
 	// Function /Script/ExtraAssets.GameDataAsset.ExportCSV
-	// void ExportCSV();                                                                                                        // [0x6717a70] Final|Native|Public|Const 
+	// void ExportCSV();                                                                                                        // [0x6747c50] Final|Native|Public|Const 
 };
 
 /// Class /Script/ExtraAssets.TextAsset

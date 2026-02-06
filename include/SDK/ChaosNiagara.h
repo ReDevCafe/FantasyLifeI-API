@@ -101,7 +101,7 @@ enum class ELocationZToSpawnEnum : uint8_t
 class UNiagaraDataInterfaceChaosDestruction : public UNiagaraDataInterface
 { 
 public:
-	SDK_UNDEFINED(80,659) /* TSet<AChaosSolverActor*> */ __um(ChaosSolverActorSet);                                // 0x0038   (0x0050)  
+	SDK_UNDEFINED(80,645) /* TSet<AChaosSolverActor*> */ __um(ChaosSolverActorSet);                                // 0x0038   (0x0050)  
 	EDataSourceTypeEnum                                DataSourceType;                                             // 0x0088   (0x0001)  
 	unsigned char                                      UnknownData00_6[0x3];                                       // 0x0089   (0x0003)  MISSED
 	int32_t                                            DataProcessFrequency;                                       // 0x008C   (0x0004)  
@@ -140,7 +140,7 @@ public:
 	int32_t                                            MaxDataPerCell;                                             // 0x01B8   (0x0004)  
 	bool                                               bApplyMaterialsFilter;                                      // 0x01BC   (0x0001)  
 	unsigned char                                      UnknownData07_6[0x3];                                       // 0x01BD   (0x0003)  MISSED
-	SDK_UNDEFINED(80,660) /* TSet<UPhysicalMaterial*> */ __um(ChaosBreakingMaterialSet);                           // 0x01C0   (0x0050)  
+	SDK_UNDEFINED(80,646) /* TSet<UPhysicalMaterial*> */ __um(ChaosBreakingMaterialSet);                           // 0x01C0   (0x0050)  
 	bool                                               bGetExternalBreakingData;                                   // 0x0210   (0x0001)  
 	bool                                               bGetExternalTrailingData;                                   // 0x0211   (0x0001)  
 	unsigned char                                      UnknownData08_6[0x6];                                       // 0x0212   (0x0006)  MISSED

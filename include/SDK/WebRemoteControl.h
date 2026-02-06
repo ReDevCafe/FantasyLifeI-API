@@ -189,7 +189,7 @@ struct FRCAssetFilter
 	TArray<FName>                                      PackageNames;                                               // 0x0000   (0x0010)  
 	TArray<FName>                                      PackagePaths;                                               // 0x0010   (0x0010)  
 	TArray<FName>                                      ClassNames;                                                 // 0x0020   (0x0010)  
-	SDK_UNDEFINED(80,1283) /* TSet<FName> */           __um(RecursiveClassesExclusionSet);                         // 0x0030   (0x0050)  
+	SDK_UNDEFINED(80,1247) /* TSet<FName> */           __um(RecursiveClassesExclusionSet);                         // 0x0030   (0x0050)  
 	TArray<FName>                                      NativeParentClasses;                                        // 0x0080   (0x0010)  
 	bool                                               RecursiveClasses;                                           // 0x0090   (0x0001)  
 	bool                                               RecursivePaths;                                             // 0x0091   (0x0001)  

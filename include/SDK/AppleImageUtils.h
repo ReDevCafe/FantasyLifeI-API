@@ -58,8 +58,8 @@ class UAppleImageUtilsBaseAsyncTaskBlueprintProxy : public UObject
 { 
 public:
 	unsigned char                                      UnknownData00_8[0x8];                                       // 0x0028   (0x0008)  MISSED
-	SDK_UNDEFINED(16,358) /* FMulticastInlineDelegate */ __um(OnSuccess);                                          // 0x0030   (0x0010)  
-	SDK_UNDEFINED(16,359) /* FMulticastInlineDelegate */ __um(OnFailure);                                          // 0x0040   (0x0010)  
+	SDK_UNDEFINED(16,352) /* FMulticastInlineDelegate */ __um(OnSuccess);                                          // 0x0030   (0x0010)  
+	SDK_UNDEFINED(16,353) /* FMulticastInlineDelegate */ __um(OnFailure);                                          // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData01_6[0x10];                                      // 0x0050   (0x0010)  MISSED
 	FAppleImageUtilsImageConversionResult              ConversionResult;                                           // 0x0060   (0x0020)  
 	unsigned char                                      UnknownData02_7[0x8];                                       // 0x0080   (0x0008)  MISSED
@@ -67,13 +67,13 @@ public:
 
 	/// Functions
 	// Function /Script/AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy.CreateProxyObjectForConvertToTIFF
-	// class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToTIFF(class UTexture* SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate); // [0x8ba45b0] Final|Native|Static|Public|BlueprintCallable 
+	// class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToTIFF(class UTexture* SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate); // [0x8bff050] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy.CreateProxyObjectForConvertToPNG
-	// class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToPNG(class UTexture* SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate); // [0x8ba4300] Final|Native|Static|Public|BlueprintCallable 
+	// class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToPNG(class UTexture* SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate); // [0x8bfeda0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy.CreateProxyObjectForConvertToJPEG
-	// class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToJPEG(class UTexture* SourceImage, int32_t Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate); // [0x8ba4050] Final|Native|Static|Public|BlueprintCallable 
+	// class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToJPEG(class UTexture* SourceImage, int32_t Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate); // [0x8bfeaf0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy.CreateProxyObjectForConvertToHEIF
-	// class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToHEIF(class UTexture* SourceImage, int32_t Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate); // [0x8ba3da0] Final|Native|Static|Public|BlueprintCallable 
+	// class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToHEIF(class UTexture* SourceImage, int32_t Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate); // [0x8bfe840] Final|Native|Static|Public|BlueprintCallable 
 };
 
 #pragma pack(pop)

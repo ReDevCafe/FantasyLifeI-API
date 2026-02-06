@@ -114,7 +114,7 @@ public:
 	bool                                               bRestrictServerAccess;                                      // 0x0084   (0x0001)  
 	bool                                               bEnableRemotePythonExecution;                               // 0x0085   (0x0001)  
 	unsigned char                                      UnknownData03_6[0x2];                                       // 0x0086   (0x0002)  MISSED
-	SDK_UNDEFINED(80,1224) /* TSet<FRCNetworkAddressRange> */ __um(AllowlistedClients);                            // 0x0088   (0x0050)  
+	SDK_UNDEFINED(80,1188) /* TSet<FRCNetworkAddressRange> */ __um(AllowlistedClients);                            // 0x0088   (0x0050)  
 	FString                                            AllowedOrigin;                                              // 0x00D8   (0x0010)  
 	bool                                               bEnforcePassphraseForRemoteClients;                         // 0x00E8   (0x0001)  
 	unsigned char                                      UnknownData04_6[0x7];                                       // 0x00E9   (0x0007)  MISSED
@@ -122,7 +122,7 @@ public:
 	bool                                               bShowPassphraseDisabledWarning;                             // 0x0100   (0x0001)  
 	bool                                               bLogicPanelVisibility;                                      // 0x0101   (0x0001)  
 	unsigned char                                      UnknownData05_6[0x6];                                       // 0x0102   (0x0006)  MISSED
-	SDK_UNDEFINED(80,1225) /* TSet<FName> */           __um(EntitiesListHiddenColumns);                            // 0x0108   (0x0050)  
+	SDK_UNDEFINED(80,1189) /* TSet<FName> */           __um(EntitiesListHiddenColumns);                            // 0x0108   (0x0050)  
 	FName                                              DefaultPanelMode;                                           // 0x0158   (0x0008)  
 	bool                                               bRefreshExposedEntitiesOnObjectPropertyUpdate;              // 0x0160   (0x0001)  
 	bool                                               bSecuritySettingsReviewed;                                  // 0x0161   (0x0001)  

@@ -17,7 +17,7 @@
 class UAndroidPermissionCallbackProxy : public UObject
 { 
 public:
-	SDK_UNDEFINED(16,357) /* FMulticastInlineDelegate */ __um(OnPermissionsGrantedDynamicDelegate);                // 0x0028   (0x0010)  
+	SDK_UNDEFINED(16,351) /* FMulticastInlineDelegate */ __um(OnPermissionsGrantedDynamicDelegate);                // 0x0028   (0x0010)  
 	unsigned char                                      UnknownData00_7[0x18];                                      // 0x0038   (0x0018)  MISSED
 };
 
@@ -30,9 +30,9 @@ public:
 
 	/// Functions
 	// Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission
-	// bool CheckPermission(FString permission);                                                                                // [0x8ba2450] Final|Native|Static|Public|BlueprintCallable 
+	// bool CheckPermission(FString permission);                                                                                // [0x8bfcef0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions
-	// class UAndroidPermissionCallbackProxy* AcquirePermissions(TArray<FString>& Permissions);                                 // [0x8ba2390] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UAndroidPermissionCallbackProxy* AcquirePermissions(TArray<FString>& Permissions);                                 // [0x8bfce30] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 #pragma pack(pop)

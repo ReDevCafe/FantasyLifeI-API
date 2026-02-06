@@ -21,11 +21,11 @@ public:
 
 	/// Functions
 	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.RemoveActorFromLayer
-	// void RemoveActorFromLayer(class AActor* InActor, FActorLayer& Layer);                                                    // [0x7f13060] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void RemoveActorFromLayer(class AActor* InActor, FActorLayer& Layer);                                                    // [0x7f6eb10] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.GetActors
-	// TArray<AActor*> GetActors(class UObject* WorldContextObject, FActorLayer& ActorLayer);                                   // [0x7f12f40] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// TArray<AActor*> GetActors(class UObject* WorldContextObject, FActorLayer& ActorLayer);                                   // [0x7f6e9f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ActorLayerUtilities.LayersBlueprintLibrary.AddActorToLayer
-	// void AddActorToLayer(class AActor* InActor, FActorLayer& Layer);                                                         // [0x7f12e50] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void AddActorToLayer(class AActor* InActor, FActorLayer& Layer);                                                         // [0x7f6e900] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/ActorLayerUtilities.ActorLayer

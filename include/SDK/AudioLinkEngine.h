@@ -20,13 +20,13 @@ public:
 
 	/// Functions
 	// Function /Script/AudioLinkEngine.AudioLinkBlueprintInterface.StopLink
-	// void StopLink();                                                                                                         // [0x53850d0] Native|Public|BlueprintCallable 
+	// void StopLink();                                                                                                         // [0x53b72a0] Native|Public|BlueprintCallable 
 	// Function /Script/AudioLinkEngine.AudioLinkBlueprintInterface.SetLinkSound
-	// void SetLinkSound(class USoundBase* NewSound);                                                                           // [0x5385040] Native|Public|BlueprintCallable 
+	// void SetLinkSound(class USoundBase* NewSound);                                                                           // [0x53b7210] Native|Public|BlueprintCallable 
 	// Function /Script/AudioLinkEngine.AudioLinkBlueprintInterface.PlayLink
-	// void PlayLink(float StartTime);                                                                                          // [0x5384fc0] Native|Public|BlueprintCallable 
+	// void PlayLink(float StartTime);                                                                                          // [0x53b7190] Native|Public|BlueprintCallable 
 	// Function /Script/AudioLinkEngine.AudioLinkBlueprintInterface.IsLinkPlaying
-	// bool IsLinkPlaying();                                                                                                    // [0x5384f90] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsLinkPlaying();                                                                                                    // [0x53b7160] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 #pragma pack(pop)

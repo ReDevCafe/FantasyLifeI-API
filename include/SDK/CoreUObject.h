@@ -441,7 +441,7 @@ public:
 
 	/// Functions
 	// Function /Script/CoreUObject.Object.ExecuteUbergraph
-	// void ExecuteUbergraph(int32_t EntryPoint);                                                                               // [0x35d7f00] Event|Public|BlueprintEvent 
+	// void ExecuteUbergraph(int32_t EntryPoint);                                                                               // [0x3617e10] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/CoreUObject.Interface
@@ -508,42 +508,13 @@ public:
 	unsigned char                                      UnknownData00_1[0x58];                                      // 0x0028   (0x0058)  MISSED
 };
 
-struct FRepRecord
-{
-	void* Property;
-	int32_t Index;
-};
-
 /// Class /Script/CoreUObject.Class
 /// Size: 0x0200 (512 bytes) (0x0000B0 - 0x000200) align 8 MaxSize: 0x0200
 class UClass : public UStruct
-{
-	public:
-    /* (0x08) @0xB0 */  uintptr_t  			ClassConstructor;
-    /* (0x08) @0xB8 */  uintptr_t   		ClassVTableHelperCtorCaller;
-    /* (0x08) @0xC0 */  uintptr_t			CppClassStaticFunctions;
-
-    /* (0x04) @0xC8 */  int32_t				ClassUnique;
-    /* (0x04) @0xCC */  int32_t				FirstOwnedClassRep;
-
-    /* (0x01) @0xD0 */  uint8_t				bCooked;
-    /* (0x01) @0xD1 */  uint8_t				bLayoutChanging; 
-    /* (0x02) @0xD2 */  uint8_t     		BOOLLPADDING[2];
-
-    /* (0x04) @0xD4 */  uint32_t			ClassFlags;
-    /* (0x08) @0xD8 */  uint64_t			ClassCastFlags;
-
-    /* (0x08) @0xE0 */  uintptr_t			ClassWithin; 
-    /* (0x08) @0xE8 */  FName				ClassConfigName;
-
-    /* (0x10) @0xF0 */  TArray<FRepRecord>	ClassReps; 
-    /* (0x10) @0x100 */ TArray<UField*>		NetFields;
-
-    /* (0x08) @0x110 */ uintptr_t			ClassDefaultObject;
+{ 
+public:
+	unsigned char                                      UnknownData00_1[0x150];                                     // 0x00B0   (0x0150)  MISSED
 };
-
-
-
 
 /// Class /Script/CoreUObject.Function
 /// Size: 0x00E0 (224 bytes) (0x0000B0 - 0x0000E0) align 8 MaxSize: 0x00E0

@@ -1,4 +1,4 @@
-#pragma once // BASICTYPE_H
+#pragma once
 #include <cstdint>
 #include <locale>
 #include "../API/Engine/TArray.hpp"
@@ -19,9 +19,6 @@
 /// THERE ARE MISSING STRUCTS!! This will result in members having the SDK_UNDEFINED pragma!!!
 ///
 
-//TODO: Define FDelegateProperty!
-
-
 //TODO: Define FMulticastInlineDelegate!
 
 
@@ -29,6 +26,9 @@
 
 
 //TODO: Define FMulticastSparseDelegate!
+
+
+//TODO: Define FDelegateProperty!
 
 
 /// Definition for FScriptInterface
@@ -207,17 +207,6 @@ public:
 };
 
 
-/// Definition for TPair
-
-// template <typename KeyType, typename ValueType>
-// class TPair
-// {
-// public:
-// 	KeyType First;
-//     ValueType Second;
-// };
-
-
 /// Definition for TUniquePtr
 
 template <typename PtrType>
@@ -255,40 +244,6 @@ struct FText
     FTextData* Data;
     char UnknownData[0x10];
 };
-
-
-/// Definition for TSetElement
-
-// template<typename ElementType>
-// class TSetElement
-// {
-// public:
-//     ElementType                                                Value;                                                   // 0x0000(0x0000)
-//     int32_t                                                    HashNextId;                                              // 0x0000(0x0000)
-//     int32_t                                                    HashIndex;                                               // 0x0000(0x0000)
-// };
-
-
-// /// Definition for TMap
-
-// template<typename Key, typename Value>
-// class TMap
-// {
-// public:
-// 	TArray<TSetElement<TPair<Key, Value>>>                     Data;                                                    // 0x0000(0x0000)
-// private:
-// 	uint8_t                                                    UnknownData01[0x04];                                     // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData02[0x04];                                     // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData03[0x08];                                     // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData04[0x08];                                     // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData_MayBeSize[0x04];                             // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData_MayBeFlag[0x04];                             // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData05[0x08];                                     // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData06[0x08];                                     // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData07[0x08];                                     // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData_MayBeSize02[0x04];                           // 0x0000(0x0000)
-// 	uint8_t                                                    UnknownData08[0x04];                                     // 0x0000(0x0000)
-// };
 
 
 /// Definition for EObjectFlags
@@ -336,5 +291,3 @@ enum class EObjectFlags : uint32_t
 	RF_Dynamic = 0x04000000, // Field Only. Dynamic field - doesn't get constructed during static initialization, can be constructed multiple times
 	RF_WillBeLoaded = 0x08000000, // This object was constructed during load and will be loaded shortly
 };
-
-
