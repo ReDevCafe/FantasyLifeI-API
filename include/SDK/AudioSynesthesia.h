@@ -115,17 +115,17 @@ class UConstantQAnalyzer : public UAudioAnalyzer
 { 
 public:
 	class UConstantQSettings*                          Settings;                                                   // 0x00A0   (0x0008)  
-	SDK_UNDEFINED(16,360) /* FMulticastInlineDelegate */ __um(OnConstantQResults);                                 // 0x00A8   (0x0010)  
+	SDK_UNDEFINED(16,354) /* FMulticastInlineDelegate */ __um(OnConstantQResults);                                 // 0x00A8   (0x0010)  
 	unsigned char                                      UnknownData00_6[0x18];                                      // 0x00B8   (0x0018)  MISSED
-	SDK_UNDEFINED(16,361) /* FMulticastInlineDelegate */ __um(OnLatestConstantQResults);                           // 0x00D0   (0x0010)  
+	SDK_UNDEFINED(16,355) /* FMulticastInlineDelegate */ __um(OnLatestConstantQResults);                           // 0x00D0   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x18];                                      // 0x00E0   (0x0018)  MISSED
 
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.ConstantQAnalyzer.GetNumCenterFrequencies
-	// int32_t GetNumCenterFrequencies();                                                                                       // [0x8fe75e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumCenterFrequencies();                                                                                       // [0x8c755e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.ConstantQAnalyzer.GetCenterFrequencies
-	// void GetCenterFrequencies(TArray<float>& OutCenterFrequencies);                                                          // [0x8fe6720] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetCenterFrequencies(TArray<float>& OutCenterFrequencies);                                                          // [0x8c74720] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/AudioSynesthesia.ConstantQNRTSettings
@@ -157,9 +157,9 @@ public:
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime
-	// void GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);               // [0x8fe6fc0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);               // [0x8c74fc0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
-	// void GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);                         // [0x8fe6960] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);                         // [0x8c74960] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessSettings
@@ -182,10 +182,10 @@ class ULoudnessAnalyzer : public UAudioAnalyzer
 { 
 public:
 	class ULoudnessSettings*                           Settings;                                                   // 0x00A0   (0x0008)  
-	SDK_UNDEFINED(16,362) /* FMulticastInlineDelegate */ __um(OnOverallLoudnessResults);                           // 0x00A8   (0x0010)  
-	SDK_UNDEFINED(16,363) /* FMulticastInlineDelegate */ __um(OnPerChannelLoudnessResults);                        // 0x00B8   (0x0010)  
-	SDK_UNDEFINED(16,364) /* FMulticastInlineDelegate */ __um(OnLatestOverallLoudnessResults);                     // 0x00C8   (0x0010)  
-	SDK_UNDEFINED(16,365) /* FMulticastInlineDelegate */ __um(OnLatestPerChannelLoudnessResults);                  // 0x00D8   (0x0010)  
+	SDK_UNDEFINED(16,356) /* FMulticastInlineDelegate */ __um(OnOverallLoudnessResults);                           // 0x00A8   (0x0010)  
+	SDK_UNDEFINED(16,357) /* FMulticastInlineDelegate */ __um(OnPerChannelLoudnessResults);                        // 0x00B8   (0x0010)  
+	SDK_UNDEFINED(16,358) /* FMulticastInlineDelegate */ __um(OnLatestOverallLoudnessResults);                     // 0x00C8   (0x0010)  
+	SDK_UNDEFINED(16,359) /* FMulticastInlineDelegate */ __um(OnLatestPerChannelLoudnessResults);                  // 0x00D8   (0x0010)  
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessNRTSettings
@@ -212,13 +212,13 @@ public:
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetNormalizedLoudnessAtTime
-	// void GetNormalizedLoudnessAtTime(float InSeconds, float& OutLoudness);                                                   // [0x8fe74f0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNormalizedLoudnessAtTime(float InSeconds, float& OutLoudness);                                                   // [0x8c754f0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetNormalizedChannelLoudnessAtTime
-	// void GetNormalizedChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                         // [0x8fe7100] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNormalizedChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                         // [0x8c75100] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetLoudnessAtTime
-	// void GetLoudnessAtTime(float InSeconds, float& OutLoudness);                                                             // [0x8fe6ed0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetLoudnessAtTime(float InSeconds, float& OutLoudness);                                                             // [0x8c74ed0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime
-	// void GetChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                                   // [0x8fe6b30] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                                   // [0x8c74b30] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AudioSynesthesia.MeterSettings
@@ -241,13 +241,13 @@ class UMeterAnalyzer : public UAudioAnalyzer
 { 
 public:
 	class UMeterSettings*                              Settings;                                                   // 0x00A0   (0x0008)  
-	SDK_UNDEFINED(16,366) /* FMulticastInlineDelegate */ __um(OnOverallMeterResults);                              // 0x00A8   (0x0010)  
+	SDK_UNDEFINED(16,360) /* FMulticastInlineDelegate */ __um(OnOverallMeterResults);                              // 0x00A8   (0x0010)  
 	unsigned char                                      UnknownData00_6[0x18];                                      // 0x00B8   (0x0018)  MISSED
-	SDK_UNDEFINED(16,367) /* FMulticastInlineDelegate */ __um(OnPerChannelMeterResults);                           // 0x00D0   (0x0010)  
+	SDK_UNDEFINED(16,361) /* FMulticastInlineDelegate */ __um(OnPerChannelMeterResults);                           // 0x00D0   (0x0010)  
 	unsigned char                                      UnknownData01_6[0x18];                                      // 0x00E0   (0x0018)  MISSED
-	SDK_UNDEFINED(16,368) /* FMulticastInlineDelegate */ __um(OnLatestOverallMeterResults);                        // 0x00F8   (0x0010)  
+	SDK_UNDEFINED(16,362) /* FMulticastInlineDelegate */ __um(OnLatestOverallMeterResults);                        // 0x00F8   (0x0010)  
 	unsigned char                                      UnknownData02_6[0x18];                                      // 0x0108   (0x0018)  MISSED
-	SDK_UNDEFINED(16,369) /* FMulticastInlineDelegate */ __um(OnLatestPerChannelMeterResults);                     // 0x0120   (0x0010)  
+	SDK_UNDEFINED(16,363) /* FMulticastInlineDelegate */ __um(OnLatestPerChannelMeterResults);                     // 0x0120   (0x0010)  
 	unsigned char                                      UnknownData03_7[0x18];                                      // 0x0130   (0x0018)  MISSED
 };
 
@@ -275,9 +275,9 @@ public:
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes
-	// void GetNormalizedChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x8fe7220] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNormalizedChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x8c75220] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes
-	// void GetChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x8fe6c50] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x8c74c50] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AudioSynesthesia.SynesthesiaSpectrumAnalysisSettings
@@ -298,17 +298,17 @@ class USynesthesiaSpectrumAnalyzer : public UAudioAnalyzer
 { 
 public:
 	class USynesthesiaSpectrumAnalysisSettings*        Settings;                                                   // 0x00A0   (0x0008)  
-	SDK_UNDEFINED(16,370) /* FMulticastInlineDelegate */ __um(OnSpectrumResults);                                  // 0x00A8   (0x0010)  
+	SDK_UNDEFINED(16,364) /* FMulticastInlineDelegate */ __um(OnSpectrumResults);                                  // 0x00A8   (0x0010)  
 	unsigned char                                      UnknownData00_6[0x18];                                      // 0x00B8   (0x0018)  MISSED
-	SDK_UNDEFINED(16,371) /* FMulticastInlineDelegate */ __um(OnLatestSpectrumResults);                            // 0x00D0   (0x0010)  
+	SDK_UNDEFINED(16,365) /* FMulticastInlineDelegate */ __um(OnLatestSpectrumResults);                            // 0x00D0   (0x0010)  
 	unsigned char                                      UnknownData01_7[0x18];                                      // 0x00E0   (0x0018)  MISSED
 
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetNumCenterFrequencies
-	// int32_t GetNumCenterFrequencies();                                                                                       // [0x8fe7610] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumCenterFrequencies();                                                                                       // [0x8c75610] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetCenterFrequencies
-	// void GetCenterFrequencies(float InSampleRate, TArray<float>& OutCenterFrequencies);                                      // [0x8fe6870] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetCenterFrequencies(float InSampleRate, TArray<float>& OutCenterFrequencies);                                      // [0x8c74870] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/AudioSynesthesia.ConstantQResults

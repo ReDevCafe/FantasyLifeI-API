@@ -22,11 +22,11 @@ public:
 
 	/// Functions
 	// Function /Script/CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
-	// bool SetCustomMeshTriangles(TArray<FCustomMeshTriangle>& Triangles);                                                     // [0x8bb6ea0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool SetCustomMeshTriangles(TArray<FCustomMeshTriangle>& Triangles);                                                     // [0x8c11940] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles
-	// void ClearCustomMeshTriangles();                                                                                         // [0x8bb6e40] Final|Native|Public|BlueprintCallable 
+	// void ClearCustomMeshTriangles();                                                                                         // [0x8c118e0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles
-	// void AddCustomMeshTriangles(TArray<FCustomMeshTriangle>& Triangles);                                                     // [0x8bb6d20] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void AddCustomMeshTriangles(TArray<FCustomMeshTriangle>& Triangles);                                                     // [0x8c117c0] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/CustomMeshComponent.CustomMeshTriangle

@@ -41,10 +41,10 @@ public:
 class URCActionContainer : public UObject
 { 
 public:
-	SDK_UNDEFINED(80,1238) /* TSet<URCActionContainer*> */ __um(ActionContainers);                                 // 0x0028   (0x0050)  
+	SDK_UNDEFINED(80,1202) /* TSet<URCActionContainer*> */ __um(ActionContainers);                                 // 0x0028   (0x0050)  
 	TWeakObjectPtr<class URemoteControlPreset*>        PresetWeakPtr;                                              // 0x0078   (0x0008)  
 	unsigned char                                      UnknownData00_6[0x18];                                      // 0x0080   (0x0018)  MISSED
-	SDK_UNDEFINED(80,1239) /* TSet<URCAction*> */      __um(Actions);                                              // 0x0098   (0x0050)  
+	SDK_UNDEFINED(80,1203) /* TSet<URCAction*> */      __um(Actions);                                              // 0x0098   (0x0050)  
 };
 
 /// Class /Script/RemoteControlLogic.RCBehaviour
@@ -90,11 +90,11 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControlLogic.RCBehaviourBindNode.OnPassed
-	// void OnPassed(class URCBehaviour* InBehaviour);                                                                          // [0x545dc30] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
+	// void OnPassed(class URCBehaviour* InBehaviour);                                                                          // [0x548fe00] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourBindNode.IsSupported
-	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7a4cb50] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7aa8600] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourBindNode.Execute
-	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7a4cab0] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7aa8560] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 };
 
 /// Class /Script/RemoteControlLogic.RCBehaviourBlueprintNode
@@ -106,13 +106,13 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControlLogic.RCBehaviourBlueprintNode.PreExecute
-	// void PreExecute(class URCBehaviour* InBehaviour);                                                                        // [0x7a4cd30] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
+	// void PreExecute(class URCBehaviour* InBehaviour);                                                                        // [0x7aa87e0] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourBlueprintNode.OnPassed
-	// void OnPassed(class URCBehaviour* InBehaviour);                                                                          // [0x545dc30] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
+	// void OnPassed(class URCBehaviour* InBehaviour);                                                                          // [0x548fe00] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourBlueprintNode.IsSupported
-	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7a4cbf0] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7aa86a0] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourBlueprintNode.Execute
-	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7a4cab0] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7aa8560] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 };
 
 /// Struct /Script/RemoteControlLogic.RCBehaviourCondition
@@ -142,11 +142,11 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControlLogic.RCBehaviourConditionalNode.OnPassed
-	// void OnPassed(class URCBehaviour* InBehaviour);                                                                          // [0x545dc30] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
+	// void OnPassed(class URCBehaviour* InBehaviour);                                                                          // [0x548fe00] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourConditionalNode.IsSupported
-	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7a4cb50] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7aa8600] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourConditionalNode.Execute
-	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7a4cab0] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7aa8560] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 };
 
 /// Class /Script/RemoteControlLogic.RCBehaviourOnValueChangedNode
@@ -158,9 +158,9 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControlLogic.RCBehaviourOnValueChangedNode.IsSupported
-	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7a4cc90] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7aa8740] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourOnValueChangedNode.Execute
-	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7a4cb50] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7aa8600] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 };
 
 /// Class /Script/RemoteControlLogic.RCBehaviourRangeMapNode
@@ -172,11 +172,11 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControlLogic.RCBehaviourRangeMapNode.OnPassed
-	// void OnPassed(class URCBehaviour* InBehaviour);                                                                          // [0x545dc30] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
+	// void OnPassed(class URCBehaviour* InBehaviour);                                                                          // [0x548fe00] Native|Event|Public|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourRangeMapNode.IsSupported
-	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7a4cb50] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7aa8600] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourRangeMapNode.Execute
-	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7a4cab0] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7aa8560] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 };
 
 /// Class /Script/RemoteControlLogic.RCBehaviourSetAssetByPathNode
@@ -188,9 +188,9 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControlLogic.RCBehaviourSetAssetByPathNode.IsSupported
-	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7a4cc90] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool IsSupported(class URCBehaviour* InBehaviour);                                                                       // [0x7aa8740] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/RemoteControlLogic.RCBehaviourSetAssetByPathNode.Execute
-	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7a4cb50] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool Execute(class URCBehaviour* InBehaviour);                                                                           // [0x7aa8600] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 };
 
 /// Class /Script/RemoteControlLogic.RCController
@@ -199,7 +199,7 @@ class URCController : public URCVirtualPropertyInContainer
 { 
 public:
 	unsigned char                                      UnknownData00_8[0x18];                                      // 0x00C8   (0x0018)  MISSED
-	SDK_UNDEFINED(80,1240) /* TSet<URCBehaviour*> */   __um(Behaviours);                                           // 0x00E0   (0x0050)  
+	SDK_UNDEFINED(80,1204) /* TSet<URCBehaviour*> */   __um(Behaviours);                                           // 0x00E0   (0x0050)  
 };
 
 /// Class /Script/RemoteControlLogic.RCControllerContainer
@@ -211,7 +211,7 @@ public:
 	float                                              VectorLinearDeltaSensitivity;                               // 0x00FC   (0x0004)  
 	float                                              RotatorSliderDelta;                                         // 0x0100   (0x0004)  
 	float                                              RotatorLinearDeltaSensitivity;                              // 0x0104   (0x0004)  
-	SDK_UNDEFINED(80,1241) /* TSet<URCActionContainer*> */ __um(SharedActionContainers);                           // 0x0108   (0x0050)  
+	SDK_UNDEFINED(80,1205) /* TSet<URCActionContainer*> */ __um(SharedActionContainers);                           // 0x0108   (0x0050)  
 };
 
 /// Class /Script/RemoteControlLogic.RCFunctionAction
@@ -327,7 +327,7 @@ public:
 
 	/// Functions
 	// Function /Script/RemoteControlLogic.RemoteControlLogicTestData.TestIntFunction
-	// void TestIntFunction();                                                                                                  // [0x7a4cdc0] Final|Native|Public|BlueprintCallable 
+	// void TestIntFunction();                                                                                                  // [0x7aa8870] Final|Native|Public|BlueprintCallable 
 };
 
 #pragma pack(pop)

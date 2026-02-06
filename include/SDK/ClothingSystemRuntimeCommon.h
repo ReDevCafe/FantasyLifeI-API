@@ -88,7 +88,7 @@ struct FClothPhysicalMeshData
 	TMap<uint32_t, FPointWeightMap>                    WeightMaps;                                                 // 0x0030   (0x0050)  
 	TArray<float>                                      InverseMasses;                                              // 0x0080   (0x0010)  
 	TArray<FClothVertBoneData>                         BoneData;                                                   // 0x0090   (0x0010)  
-	SDK_UNDEFINED(80,643) /* TSet<int32_t> */          __um(SelfCollisionVertexSet);                               // 0x00A0   (0x0050)  
+	SDK_UNDEFINED(80,629) /* TSet<int32_t> */          __um(SelfCollisionVertexSet);                               // 0x00A0   (0x0050)  
 	FClothTetherData                                   EuclideanTethers;                                           // 0x00F0   (0x0010)  
 	FClothTetherData                                   GeodesicTethers;                                            // 0x0100   (0x0010)  
 	int32_t                                            MaxBoneWeights;                                             // 0x0110   (0x0004)  

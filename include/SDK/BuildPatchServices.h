@@ -78,7 +78,7 @@ public:
 	FString                                            BuildVersion;                                               // 0x0040   (0x0010)  
 	FString                                            LaunchExe;                                                  // 0x0050   (0x0010)  
 	FString                                            LaunchCommand;                                              // 0x0060   (0x0010)  
-	SDK_UNDEFINED(80,642) /* TSet<FString> */          __um(PrereqIds);                                            // 0x0070   (0x0050)  
+	SDK_UNDEFINED(80,628) /* TSet<FString> */          __um(PrereqIds);                                            // 0x0070   (0x0050)  
 	FString                                            PrereqName;                                                 // 0x00C0   (0x0010)  
 	FString                                            PrereqPath;                                                 // 0x00D0   (0x0010)  
 	FString                                            PrereqArgs;                                                 // 0x00E0   (0x0010)  

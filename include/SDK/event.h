@@ -16,7 +16,7 @@
 class Apoint_C : public AActor
 { 
 public:
-	class USkeletalMeshComponent*                      SkeletalMesh;                                               // 0x0290   (0x0008)  
+	class USceneComponent*                             DefaultSceneRoot;                                           // 0x0290   (0x0008)  
 };
 
 /// Class /Game/event/eventAssets/point_eff/point_eff.point_eff_C
@@ -24,7 +24,7 @@ public:
 class Apoint_eff_C : public AActor
 { 
 public:
-	class USkeletalMeshComponent*                      SkeletalMesh;                                               // 0x0290   (0x0008)  
+	class USceneComponent*                             DefaultSceneRoot;                                           // 0x0290   (0x0008)  
 };
 
 #pragma pack(pop)

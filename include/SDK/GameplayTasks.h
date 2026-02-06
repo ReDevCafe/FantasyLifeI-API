@@ -59,11 +59,11 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask.ReadyForActivation
-	// void ReadyForActivation();                                                                                               // [0x64e3fc0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ReadyForActivation();                                                                                               // [0x6514080] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayTasks.GameplayTask.GenericGameplayTaskDelegate__DelegateSignature
-	// void GenericGameplayTaskDelegate__DelegateSignature();                                                                   // [0x35d7f00] MulticastDelegate|Public|Delegate 
+	// void GenericGameplayTaskDelegate__DelegateSignature();                                                                   // [0x3617e10] MulticastDelegate|Public|Delegate 
 	// Function /Script/GameplayTasks.GameplayTask.EndTask
-	// void EndTask();                                                                                                          // [0x64e3b60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void EndTask();                                                                                                          // [0x6513c20] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/GameplayTasks.GameplayTaskOwnerInterface
@@ -95,15 +95,15 @@ public:
 	unsigned char                                      UnknownData01_6[0x10];                                      // 0x00C8   (0x0010)  MISSED
 	TArray<class UGameplayTask*>                       TickingTasks;                                               // 0x00D8   (0x0010)  
 	TArray<class UGameplayTask*>                       KnownTasks;                                                 // 0x00E8   (0x0010)  
-	SDK_UNDEFINED(16,335) /* FMulticastInlineDelegate */ __um(OnClaimedResourcesChange);                           // 0x00F8   (0x0010)  
+	SDK_UNDEFINED(16,329) /* FMulticastInlineDelegate */ __um(OnClaimedResourcesChange);                           // 0x00F8   (0x0010)  
 	TArray<class UGameplayTask*>                       SimulatedTasks;                                             // 0x0108   (0x0010)  
 
 
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks
-	// void OnRep_SimulatedTasks(TArray<UGameplayTask*>& PreviousSimulatedTasks);                                               // [0x64e3f10] Final|RequiredAPI|Native|Public|HasOutParms 
+	// void OnRep_SimulatedTasks(TArray<UGameplayTask*>& PreviousSimulatedTasks);                                               // [0x6513fd0] Final|RequiredAPI|Native|Public|HasOutParms 
 	// Function /Script/GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
-	// EGameplayTaskRunResult K2_RunGameplayTask(TScriptInterface<Class> TaskOwner, class UGameplayTask* Task, char Priority, TArray<UClass*> AdditionalRequiredResources, TArray<UClass*> AdditionalClaimedResources); // [0x64e3c70] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// EGameplayTaskRunResult K2_RunGameplayTask(TScriptInterface<Class> TaskOwner, class UGameplayTask* Task, char Priority, TArray<UClass*> AdditionalRequiredResources, TArray<UClass*> AdditionalClaimedResources); // [0x6513d30] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/GameplayTasks.GameplayTask_ClaimResource
@@ -115,9 +115,9 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask_ClaimResource.ClaimResources
-	// class UGameplayTask_ClaimResource* ClaimResources(TScriptInterface<Class> InTaskOwner, TArray<UClass*> ResourceClasses, char Priority, FName TaskInstanceName); // [0x64e38f0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// class UGameplayTask_ClaimResource* ClaimResources(TScriptInterface<Class> InTaskOwner, TArray<UClass*> ResourceClasses, char Priority, FName TaskInstanceName); // [0x65139b0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayTasks.GameplayTask_ClaimResource.ClaimResource
-	// class UGameplayTask_ClaimResource* ClaimResource(TScriptInterface<Class> InTaskOwner, class UClass* ResourceClass, char Priority, FName TaskInstanceName); // [0x64e3620] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// class UGameplayTask_ClaimResource* ClaimResource(TScriptInterface<Class> InTaskOwner, class UClass* ResourceClass, char Priority, FName TaskInstanceName); // [0x65136e0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/GameplayTasks.GameplayTask_SpawnActor
@@ -125,19 +125,19 @@ public:
 class UGameplayTask_SpawnActor : public UGameplayTask
 { 
 public:
-	SDK_UNDEFINED(16,336) /* FMulticastInlineDelegate */ __um(Success);                                            // 0x0068   (0x0010)  
-	SDK_UNDEFINED(16,337) /* FMulticastInlineDelegate */ __um(DidNotSpawn);                                        // 0x0078   (0x0010)  
+	SDK_UNDEFINED(16,330) /* FMulticastInlineDelegate */ __um(Success);                                            // 0x0068   (0x0010)  
+	SDK_UNDEFINED(16,331) /* FMulticastInlineDelegate */ __um(DidNotSpawn);                                        // 0x0078   (0x0010)  
 	unsigned char                                      UnknownData00_6[0x30];                                      // 0x0088   (0x0030)  MISSED
 	class UClass*                                      ClassToSpawn;                                               // 0x00B8   (0x0008)  
 
 
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask_SpawnActor.SpawnActor
-	// class UGameplayTask_SpawnActor* SpawnActor(TScriptInterface<Class> TaskOwner, FVector SpawnLocation, FRotator SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority); // [0x64e3fe0] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// class UGameplayTask_SpawnActor* SpawnActor(TScriptInterface<Class> TaskOwner, FVector SpawnLocation, FRotator SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority); // [0x65140a0] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor
-	// void FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor);                                 // [0x64e3ba0] Native|Public|BlueprintCallable 
+	// void FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor);                                 // [0x6513c60] Native|Public|BlueprintCallable 
 	// Function /Script/GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor
-	// bool BeginSpawningActor(class UObject* WorldContextObject, class AActor*& SpawnedActor);                                 // [0x64e3540] Native|Public|HasOutParms|BlueprintCallable 
+	// bool BeginSpawningActor(class UObject* WorldContextObject, class AActor*& SpawnedActor);                                 // [0x6513600] Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/GameplayTasks.GameplayTask_TimeLimitedExecution
@@ -145,14 +145,14 @@ public:
 class UGameplayTask_TimeLimitedExecution : public UGameplayTask
 { 
 public:
-	SDK_UNDEFINED(16,338) /* FMulticastInlineDelegate */ __um(OnFinished);                                         // 0x0068   (0x0010)  
-	SDK_UNDEFINED(16,339) /* FMulticastInlineDelegate */ __um(OnTimeExpired);                                      // 0x0078   (0x0010)  
+	SDK_UNDEFINED(16,332) /* FMulticastInlineDelegate */ __um(OnFinished);                                         // 0x0068   (0x0010)  
+	SDK_UNDEFINED(16,333) /* FMulticastInlineDelegate */ __um(OnTimeExpired);                                      // 0x0078   (0x0010)  
 	unsigned char                                      UnknownData00_7[0x18];                                      // 0x0088   (0x0018)  MISSED
 
 
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask_TimeLimitedExecution.TaskFinishDelegate__DelegateSignature
-	// void TaskFinishDelegate__DelegateSignature();                                                                            // [0x35d7f00] MulticastDelegate|Public|Delegate 
+	// void TaskFinishDelegate__DelegateSignature();                                                                            // [0x3617e10] MulticastDelegate|Public|Delegate 
 };
 
 /// Class /Script/GameplayTasks.GameplayTask_WaitDelay
@@ -160,15 +160,15 @@ public:
 class UGameplayTask_WaitDelay : public UGameplayTask
 { 
 public:
-	SDK_UNDEFINED(16,340) /* FMulticastInlineDelegate */ __um(OnFinish);                                           // 0x0068   (0x0010)  
+	SDK_UNDEFINED(16,334) /* FMulticastInlineDelegate */ __um(OnFinish);                                           // 0x0068   (0x0010)  
 	unsigned char                                      UnknownData00_7[0x10];                                      // 0x0078   (0x0010)  MISSED
 
 
 	/// Functions
 	// Function /Script/GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
-	// class UGameplayTask_WaitDelay* TaskWaitDelay(TScriptInterface<Class> TaskOwner, float Time, char Priority);              // [0x64e42a0] Final|Native|Static|Public|BlueprintCallable 
+	// class UGameplayTask_WaitDelay* TaskWaitDelay(TScriptInterface<Class> TaskOwner, float Time, char Priority);              // [0x6514360] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature
-	// void TaskDelayDelegate__DelegateSignature();                                                                             // [0x35d7f00] MulticastDelegate|Public|Delegate 
+	// void TaskDelayDelegate__DelegateSignature();                                                                             // [0x3617e10] MulticastDelegate|Public|Delegate 
 };
 
 /// Struct /Script/GameplayTasks.GameplayResourceSet
