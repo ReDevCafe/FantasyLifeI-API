@@ -78,9 +78,9 @@ public:
 
 	/// Functions
 	// Function /Script/AnimationWarpingRuntime.AnimationWarpingLibrary.GetOffsetRootTransform
-	// FTransform GetOffsetRootTransform(FAnimNodeReference& Node);                                                             // [0x7e5cbe0] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// FTransform GetOffsetRootTransform(FAnimNodeReference& Node);                                                             // [0x7eb8690] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/AnimationWarpingRuntime.AnimationWarpingLibrary.GetCurveValueFromAnimation
-	// bool GetCurveValueFromAnimation(class UAnimSequenceBase* Animation, FName CurveName, float Time, float& OutValue);       // [0x7e5c990] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// bool GetCurveValueFromAnimation(class UAnimSequenceBase* Animation, FName CurveName, float Time, float& OutValue);       // [0x7eb8440] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 };
 
 /// Struct /Script/AnimationWarpingRuntime.FootPlacementInterpolationSettings

@@ -1321,33 +1321,33 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadVector4
-	// FVector4 ReadVector4(FName VarName, int32_t Index, bool& IsValid);                                                       // [0x61abdf0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector4 ReadVector4(FName VarName, int32_t Index, bool& IsValid);                                                       // [0x61dbda0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadVector2D
-	// FVector2D ReadVector2D(FName VarName, int32_t Index, bool& IsValid);                                                     // [0x61abcc0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector2D ReadVector2D(FName VarName, int32_t Index, bool& IsValid);                                                     // [0x61dbc70] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadVector
-	// FVector ReadVector(FName VarName, int32_t Index, bool& IsValid);                                                         // [0x61abf40] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector ReadVector(FName VarName, int32_t Index, bool& IsValid);                                                         // [0x61dbef0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadSpawnInfo
-	// FNiagaraSpawnInfo ReadSpawnInfo(FName VarName, int32_t Index, bool& IsValid);                                            // [0x61abb90] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// FNiagaraSpawnInfo ReadSpawnInfo(FName VarName, int32_t Index, bool& IsValid);                                            // [0x61dbb40] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadQuat
-	// FQuat ReadQuat(FName VarName, int32_t Index, bool& IsValid);                                                             // [0x61aba40] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FQuat ReadQuat(FName VarName, int32_t Index, bool& IsValid);                                                             // [0x61db9f0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadPosition
-	// FVector ReadPosition(FName VarName, int32_t Index, bool& IsValid);                                                       // [0x61ab8f0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector ReadPosition(FName VarName, int32_t Index, bool& IsValid);                                                       // [0x61db8a0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadLinearColor
-	// FLinearColor ReadLinearColor(FName VarName, int32_t Index, bool& IsValid);                                               // [0x61ab7c0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FLinearColor ReadLinearColor(FName VarName, int32_t Index, bool& IsValid);                                               // [0x61db770] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadInt
-	// int32_t ReadInt(FName VarName, int32_t Index, bool& IsValid);                                                            // [0x61ab6a0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// int32_t ReadInt(FName VarName, int32_t Index, bool& IsValid);                                                            // [0x61db650] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadID
-	// FNiagaraID ReadID(FName VarName, int32_t Index, bool& IsValid);                                                          // [0x61ab570] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// FNiagaraID ReadID(FName VarName, int32_t Index, bool& IsValid);                                                          // [0x61db520] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadFloat
-	// double ReadFloat(FName VarName, int32_t Index, bool& IsValid);                                                           // [0x61ab450] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// double ReadFloat(FName VarName, int32_t Index, bool& IsValid);                                                           // [0x61db400] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadEnum
-	// char ReadEnum(FName VarName, int32_t Index, bool& IsValid);                                                              // [0x61ab330] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// char ReadEnum(FName VarName, int32_t Index, bool& IsValid);                                                              // [0x61db2e0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadBool
-	// bool ReadBool(FName VarName, int32_t Index, bool& IsValid);                                                              // [0x61ab210] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool ReadBool(FName VarName, int32_t Index, bool& IsValid);                                                              // [0x61db1c0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.Num
-	// int32_t Num();                                                                                                           // [0x61ab1b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t Num();                                                                                                           // [0x61db160] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.InitAccess
-	// bool InitAccess(FNiagaraDataChannelSearchParameters SearchParams, bool bReadPrevFrameData);                              // [0x61aadf0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool InitAccess(FNiagaraDataChannelSearchParameters SearchParams, bool bReadPrevFrameData);                              // [0x61dada0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataChannelWriter
@@ -1361,33 +1361,33 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteVector4
-	// void WriteVector4(FName VarName, int32_t Index, FVector4 InData);                                                        // [0x61acbb0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteVector4(FName VarName, int32_t Index, FVector4 InData);                                                        // [0x61dcb60] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteVector2D
-	// void WriteVector2D(FName VarName, int32_t Index, FVector2D InData);                                                      // [0x61aca90] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteVector2D(FName VarName, int32_t Index, FVector2D InData);                                                      // [0x61dca40] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteVector
-	// void WriteVector(FName VarName, int32_t Index, FVector InData);                                                          // [0x61accf0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteVector(FName VarName, int32_t Index, FVector InData);                                                          // [0x61dcca0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteSpawnInfo
-	// void WriteSpawnInfo(FName VarName, int32_t Index, FNiagaraSpawnInfo InData);                                             // [0x61ac970] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteSpawnInfo(FName VarName, int32_t Index, FNiagaraSpawnInfo InData);                                             // [0x61dc920] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteQuat
-	// void WriteQuat(FName VarName, int32_t Index, FQuat InData);                                                              // [0x61ac840] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteQuat(FName VarName, int32_t Index, FQuat InData);                                                              // [0x61dc7f0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WritePosition
-	// void WritePosition(FName VarName, int32_t Index, FVector InData);                                                        // [0x61ac710] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WritePosition(FName VarName, int32_t Index, FVector InData);                                                        // [0x61dc6c0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteLinearColor
-	// void WriteLinearColor(FName VarName, int32_t Index, FLinearColor InData);                                                // [0x61ac5f0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteLinearColor(FName VarName, int32_t Index, FLinearColor InData);                                                // [0x61dc5a0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteInt
-	// void WriteInt(FName VarName, int32_t Index, int32_t InData);                                                             // [0x61ac4e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteInt(FName VarName, int32_t Index, int32_t InData);                                                             // [0x61dc490] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteID
-	// void WriteID(FName VarName, int32_t Index, FNiagaraID InData);                                                           // [0x61ac3d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteID(FName VarName, int32_t Index, FNiagaraID InData);                                                           // [0x61dc380] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteFloat
-	// void WriteFloat(FName VarName, int32_t Index, double InData);                                                            // [0x61ac2b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteFloat(FName VarName, int32_t Index, double InData);                                                            // [0x61dc260] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteEnum
-	// void WriteEnum(FName VarName, int32_t Index, char InData);                                                               // [0x61ac1a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteEnum(FName VarName, int32_t Index, char InData);                                                               // [0x61dc150] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteBool
-	// void WriteBool(FName VarName, int32_t Index, bool InData);                                                               // [0x61ac090] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteBool(FName VarName, int32_t Index, bool InData);                                                               // [0x61dc040] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.Num
-	// int32_t Num();                                                                                                           // [0x61ab1e0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t Num();                                                                                                           // [0x61db190] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.InitWrite
-	// bool InitWrite(FNiagaraDataChannelSearchParameters SearchParams, int32_t Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU, FString DebugSource); // [0x61aaf40] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool InitWrite(FNiagaraDataChannelSearchParameters SearchParams, int32_t Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU, FString DebugSource); // [0x61daef0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataChannelHandler
@@ -1403,9 +1403,9 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataChannelHandler.GetDataChannelWriter
-	// class UNiagaraDataChannelWriter* GetDataChannelWriter();                                                                 // [0x61b2a90] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// class UNiagaraDataChannelWriter* GetDataChannelWriter();                                                                 // [0x61e2a40] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelHandler.GetDataChannelReader
-	// class UNiagaraDataChannelReader* GetDataChannelReader();                                                                 // [0x61b2a60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// class UNiagaraDataChannelReader* GetDataChannelReader();                                                                 // [0x61e2a10] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataChannelAsset
@@ -1533,7 +1533,7 @@ public:
 	FVector                                            InitialExtents;                                             // 0x0138   (0x0018)  
 	FVector                                            MaxExtents;                                                 // 0x0150   (0x0018)  
 	FVector                                            PerElementExtents;                                          // 0x0168   (0x0018)  
-	SDK_UNDEFINED(16,422) /* TArray<TWeakObjectPtr<UNiagaraSystem*>> */ __um(Systems);                             // 0x0180   (0x0010)  
+	SDK_UNDEFINED(16,406) /* TArray<TWeakObjectPtr<UNiagaraSystem*>> */ __um(Systems);                             // 0x0180   (0x0010)  
 	int32_t                                            IslandPoolSize;                                             // 0x0190   (0x0004)  
 	FNDCIslandDebugDrawSettings                        DebugDrawSettings;                                          // 0x0194   (0x0004)  
 	TArray<class UNiagaraSystem*>                      SystemsInternal;                                            // 0x0198   (0x0010)  
@@ -1775,7 +1775,7 @@ public:
 	TEnumAsByte<ENDISkelMesh_AdjacencyTriangleIndexFormat> NDISkelMesh_AdjacencyTriangleIndexFormat;               // 0x0114   (0x0001)  
 	bool                                               NDIStaticMesh_AllowDistanceFields;                          // 0x0115   (0x0001)  
 	unsigned char                                      UnknownData06_6[0x2];                                       // 0x0116   (0x0002)  MISSED
-	SDK_UNDEFINED(16,423) /* TArray<TEnumAsByte<ENDICollisionQuery_AsyncGpuTraceProvider>> */ __um(NDICollisionQuery_AsyncGpuTraceProviderOrder); // 0x0118   (0x0010)  
+	SDK_UNDEFINED(16,407) /* TArray<TEnumAsByte<ENDICollisionQuery_AsyncGpuTraceProvider>> */ __um(NDICollisionQuery_AsyncGpuTraceProviderOrder); // 0x0118   (0x0010)  
 	FString                                            SimCacheAuxiliaryFileBasePath;                              // 0x0128   (0x0010)  
 	int64_t                                            SimCacheMaxCPUMemoryVolumetrics;                            // 0x0138   (0x0008)  
 	TArray<FNiagaraPlatformSetRedirect>                PlatformSetRedirects;                                       // 0x0140   (0x0010)  
@@ -2079,7 +2079,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraStatelessModule_MeshIndex.NeedsMeshIndexWeights
-	// bool NeedsMeshIndexWeights();                                                                                            // [0x61c10d0] Final|Native|Public|Const 
+	// bool NeedsMeshIndexWeights();                                                                                            // [0x61f1080] Final|Native|Public|Const 
 };
 
 /// Class /Script/Niagara.NiagaraStatelessModule_MeshRotationRate
@@ -2144,7 +2144,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraStatelessModule_ScaleMeshSize.UseScaleCurveRange
-	// bool UseScaleCurveRange();                                                                                               // [0x61c1100] Final|Native|Public|Const 
+	// bool UseScaleCurveRange();                                                                                               // [0x61f10b0] Final|Native|Public|Const 
 };
 
 /// Class /Script/Niagara.NiagaraStatelessModule_ScaleMeshSizeBySpeed
@@ -2175,7 +2175,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraStatelessModule_ScaleSpriteSize.UseScaleCurveRange
-	// bool UseScaleCurveRange();                                                                                               // [0x61c1100] Final|Native|Public|Const 
+	// bool UseScaleCurveRange();                                                                                               // [0x61f10b0] Final|Native|Public|Const 
 };
 
 /// Class /Script/Niagara.NiagaraStatelessModule_ScaleSpriteSizeBySpeed
@@ -2458,7 +2458,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceSceneCapture2D.SetSceneCapture2DManagedShowOnlyActors
-	// void SetSceneCapture2DManagedShowOnlyActors(class UNiagaraComponent* NiagaraSystem, FName ParameterName, TArray<AActor*> ShowOnlyActors); // [0x624b000] Final|RequiredAPI|Native|Static|Protected|BlueprintCallable 
+	// void SetSceneCapture2DManagedShowOnlyActors(class UNiagaraComponent* NiagaraSystem, FName ParameterName, TArray<AActor*> ShowOnlyActors); // [0x627b030] Final|RequiredAPI|Native|Static|Protected|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSimCacheReader
@@ -2523,9 +2523,9 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceStaticMesh.SetNiagaraStaticMeshDIInstanceIndex
-	// void SetNiagaraStaticMeshDIInstanceIndex(class UNiagaraComponent* NiagaraSystem, FName UserParameterName, int32_t NewInstanceIndex); // [0x624aed0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetNiagaraStaticMeshDIInstanceIndex(class UNiagaraComponent* NiagaraSystem, FName UserParameterName, int32_t NewInstanceIndex); // [0x627af00] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceStaticMesh.OnSourceEndPlay
-	// void OnSourceEndPlay(class AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                        // [0x624adf0] Final|RequiredAPI|Native|Protected 
+	// void OnSourceEndPlay(class AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                        // [0x627ae20] Final|RequiredAPI|Native|Protected 
 };
 
 /// Struct /Script/Niagara.NiagaraUObjectPropertyReaderRemap
@@ -2553,7 +2553,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceUObjectPropertyReader.SetUObjectReaderPropertyRemap
-	// void SetUObjectReaderPropertyRemap(class UNiagaraComponent* NiagaraComponent, FName UserParameterName, FName GraphName, FName RemapName); // [0x624b2c0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetUObjectReaderPropertyRemap(class UNiagaraComponent* NiagaraComponent, FName UserParameterName, FName GraphName, FName RemapName); // [0x627b2f0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVirtualTexture
@@ -2656,11 +2656,11 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraActor.SetDestroyOnSystemFinish
-	// void SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish);                                                        // [0x62bd1c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish);                                                        // [0x62ed1f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraActor.OnNiagaraSystemFinished
-	// void OnNiagaraSystemFinished(class UNiagaraComponent* FinishedComponent);                                                // [0x62bcba0] Final|RequiredAPI|Native|Private 
+	// void OnNiagaraSystemFinished(class UNiagaraComponent* FinishedComponent);                                                // [0x62ecbd0] Final|RequiredAPI|Native|Private 
 	// Function /Script/Niagara.NiagaraActor.GetDestroyOnSystemFinish
-	// bool GetDestroyOnSystemFinish();                                                                                         // [0x62bc7d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetDestroyOnSystemFinish();                                                                                         // [0x62ec800] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/Niagara.NiagaraBakerOutput
@@ -2809,7 +2809,7 @@ public:
 	FVector                                            CameraViewportLocation[7];                                  // 0x0088   (0x00A8)  
 	FRotator                                           CameraViewportRotation[7];                                  // 0x0130   (0x00A8)  
 	float                                              CameraOrbitDistance;                                        // 0x01D8   (0x0004)  
-	float                                              CameraFOV;                                                  // 0x01DC   (0x0004)  
+	float                                              cameraFov;                                                  // 0x01DC   (0x0004)  
 	float                                              CameraOrthoWidth;                                           // 0x01E0   (0x0004)  
 	bool                                               bUseCameraAspectRatio : 1;                                  // 0x01E4:0 (0x0001)  
 	unsigned char                                      UnknownData03_5[0x3];                                       // 0x01E5   (0x0003)  MISSED
@@ -2901,7 +2901,7 @@ public:
 	unsigned char                                      UnknownData04_6[0x1];                                       // 0x0648   (0x0001)  MISSED
 	ENiagaraOcclusionQueryMode                         OcclusionQueryMode;                                         // 0x0649   (0x0001)  
 	unsigned char                                      UnknownData05_6[0x6];                                       // 0x064A   (0x0006)  MISSED
-	SDK_UNDEFINED(16,424) /* FMulticastInlineDelegate */ __um(OnSystemFinished);                                   // 0x0650   (0x0010)  
+	SDK_UNDEFINED(16,408) /* FMulticastInlineDelegate */ __um(OnSystemFinished);                                   // 0x0650   (0x0010)  
 	TWeakObjectPtr<class USceneComponent*>             AutoAttachParent;                                           // 0x0660   (0x0008)  
 	FName                                              AutoAttachSocketName;                                       // 0x0668   (0x0008)  
 	EAttachmentRule                                    AutoAttachLocationRule;                                     // 0x0670   (0x0001)  
@@ -2920,163 +2920,163 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec4
-	// void SetVariableVec4(FName InVariableName, FVector4& InValue);                                                           // [0x62bf930] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVariableVec4(FName InVariableName, FVector4& InValue);                                                           // [0x62ef960] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec3
-	// void SetVariableVec3(FName InVariableName, FVector InValue);                                                             // [0x62bf850] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVariableVec3(FName InVariableName, FVector InValue);                                                             // [0x62ef880] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec2
-	// void SetVariableVec2(FName InVariableName, FVector2D InValue);                                                           // [0x62bf780] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVariableVec2(FName InVariableName, FVector2D InValue);                                                           // [0x62ef7b0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableTextureRenderTarget
-	// void SetVariableTextureRenderTarget(FName InVariableName, class UTextureRenderTarget* TextureRenderTarget);              // [0x62bf5f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableTextureRenderTarget(FName InVariableName, class UTextureRenderTarget* TextureRenderTarget);              // [0x62ef620] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableTexture
-	// void SetVariableTexture(FName InVariableName, class UTexture* Texture);                                                  // [0x62bf460] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableTexture(FName InVariableName, class UTexture* Texture);                                                  // [0x62ef490] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableStaticMesh
-	// void SetVariableStaticMesh(FName InVariableName, class UStaticMesh* InValue);                                            // [0x62bf2c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableStaticMesh(FName InVariableName, class UStaticMesh* InValue);                                            // [0x62ef2f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableQuat
-	// void SetVariableQuat(FName InVariableName, FQuat& InValue);                                                              // [0x62bf1e0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVariableQuat(FName InVariableName, FQuat& InValue);                                                              // [0x62ef210] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariablePosition
-	// void SetVariablePosition(FName InVariableName, FVector InValue);                                                         // [0x62bf100] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVariablePosition(FName InVariableName, FVector InValue);                                                         // [0x62ef130] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableObject
-	// void SetVariableObject(FName InVariableName, class UObject* Object);                                                     // [0x62bea40] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableObject(FName InVariableName, class UObject* Object);                                                     // [0x62eea70] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableMatrix
-	// void SetVariableMatrix(FName InVariableName, FMatrix& InValue);                                                          // [0x62bf000] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVariableMatrix(FName InVariableName, FMatrix& InValue);                                                          // [0x62ef030] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableMaterial
-	// void SetVariableMaterial(FName InVariableName, class UMaterialInterface* Object);                                        // [0x62bee60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableMaterial(FName InVariableName, class UMaterialInterface* Object);                                        // [0x62eee90] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableLinearColor
-	// void SetVariableLinearColor(FName InVariableName, FLinearColor& InValue);                                                // [0x62bed80] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVariableLinearColor(FName InVariableName, FLinearColor& InValue);                                                // [0x62eedb0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableInt
-	// void SetVariableInt(FName InVariableName, int32_t InValue);                                                              // [0x62becb0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableInt(FName InVariableName, int32_t InValue);                                                              // [0x62eece0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableFloat
-	// void SetVariableFloat(FName InVariableName, float InValue);                                                              // [0x62bebe0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableFloat(FName InVariableName, float InValue);                                                              // [0x62eec10] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableBool
-	// void SetVariableBool(FName InVariableName, bool InValue);                                                                // [0x62beb10] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableBool(FName InVariableName, bool InValue);                                                                // [0x62eeb40] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableActor
-	// void SetVariableActor(FName InVariableName, class AActor* Actor);                                                        // [0x62bea40] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableActor(FName InVariableName, class AActor* Actor);                                                        // [0x62eea70] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetTickBehavior
-	// void SetTickBehavior(ENiagaraTickBehavior NewTickBehavior);                                                              // [0x62be9b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTickBehavior(ENiagaraTickBehavior NewTickBehavior);                                                              // [0x62ee9e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetSystemFixedBounds
-	// void SetSystemFixedBounds(FBox LocalBounds);                                                                             // [0x62be8e0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSystemFixedBounds(FBox LocalBounds);                                                                             // [0x62ee910] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetSimCache
-	// void SetSimCache(class UNiagaraSimCache* SimCache, bool bResetSystem);                                                   // [0x62be7d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSimCache(class UNiagaraSimCache* SimCache, bool bResetSystem);                                                   // [0x62ee800] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetSeekDelta
-	// void SetSeekDelta(float InSeekDelta);                                                                                    // [0x62be750] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSeekDelta(float InSeekDelta);                                                                                    // [0x62ee780] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetRenderingEnabled
-	// void SetRenderingEnabled(bool bInRenderingEnabled);                                                                      // [0x62be6b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetRenderingEnabled(bool bInRenderingEnabled);                                                                      // [0x62ee6e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetRandomSeedOffset
-	// void SetRandomSeedOffset(int32_t NewRandomSeedOffset);                                                                   // [0x62be610] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetRandomSeedOffset(int32_t NewRandomSeedOffset);                                                                   // [0x62ee640] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetPreviewLODDistance
-	// void SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance, float PreviewMaxDistance);          // [0x62be500] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance, float PreviewMaxDistance);          // [0x62ee530] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetPaused
-	// void SetPaused(bool bInPaused);                                                                                          // [0x62be3e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetPaused(bool bInPaused);                                                                                          // [0x62ee410] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetOcclusionQueryMode
-	// void SetOcclusionQueryMode(ENiagaraOcclusionQueryMode Mode);                                                             // [0x62be350] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetOcclusionQueryMode(ENiagaraOcclusionQueryMode Mode);                                                             // [0x62ee380] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec4
-	// void SetNiagaraVariableVec4(FString InVariableName, FVector4& InValue);                                                  // [0x62be220] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableVec4(FString InVariableName, FVector4& InValue);                                                  // [0x62ee250] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec3
-	// void SetNiagaraVariableVec3(FString InVariableName, FVector InValue);                                                    // [0x62be0e0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableVec3(FString InVariableName, FVector InValue);                                                    // [0x62ee110] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec2
-	// void SetNiagaraVariableVec2(FString InVariableName, FVector2D InValue);                                                  // [0x62bdfd0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableVec2(FString InVariableName, FVector2D InValue);                                                  // [0x62ee000] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableQuat
-	// void SetNiagaraVariableQuat(FString InVariableName, FQuat& InValue);                                                     // [0x62bdeb0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableQuat(FString InVariableName, FQuat& InValue);                                                     // [0x62edee0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariablePosition
-	// void SetNiagaraVariablePosition(FString InVariableName, FVector InValue);                                                // [0x62bdd70] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariablePosition(FString InVariableName, FVector InValue);                                                // [0x62edda0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableObject
-	// void SetNiagaraVariableObject(FString InVariableName, class UObject* Object);                                            // [0x62bd710] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableObject(FString InVariableName, class UObject* Object);                                            // [0x62ed740] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableMatrix
-	// void SetNiagaraVariableMatrix(FString InVariableName, FMatrix& InValue);                                                 // [0x62bdc40] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableMatrix(FString InVariableName, FMatrix& InValue);                                                 // [0x62edc70] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableLinearColor
-	// void SetNiagaraVariableLinearColor(FString InVariableName, FLinearColor& InValue);                                       // [0x62bdb20] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableLinearColor(FString InVariableName, FLinearColor& InValue);                                       // [0x62edb50] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableInt
-	// void SetNiagaraVariableInt(FString InVariableName, int32_t InValue);                                                     // [0x62bda20] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableInt(FString InVariableName, int32_t InValue);                                                     // [0x62eda50] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableFloat
-	// void SetNiagaraVariableFloat(FString InVariableName, float InValue);                                                     // [0x62bd910] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableFloat(FString InVariableName, float InValue);                                                     // [0x62ed940] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableBool
-	// void SetNiagaraVariableBool(FString InVariableName, bool InValue);                                                       // [0x62bd810] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableBool(FString InVariableName, bool InValue);                                                       // [0x62ed840] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableActor
-	// void SetNiagaraVariableActor(FString InVariableName, class AActor* Actor);                                               // [0x62bd710] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableActor(FString InVariableName, class AActor* Actor);                                               // [0x62ed740] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetMaxSimTime
-	// void SetMaxSimTime(float InMaxTime);                                                                                     // [0x62bd690] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetMaxSimTime(float InMaxTime);                                                                                     // [0x62ed6c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetLockDesiredAgeDeltaTimeToSeekDelta
-	// void SetLockDesiredAgeDeltaTimeToSeekDelta(bool block);                                                                  // [0x62bd600] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetLockDesiredAgeDeltaTimeToSeekDelta(bool block);                                                                  // [0x62ed630] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetGpuComputeDebug
-	// void SetGpuComputeDebug(bool bEnableDebug);                                                                              // [0x62bd540] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetGpuComputeDebug(bool bEnableDebug);                                                                              // [0x62ed570] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetForceSolo
-	// void SetForceSolo(bool bInForceSolo);                                                                                    // [0x62bd490] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetForceSolo(bool bInForceSolo);                                                                                    // [0x62ed4c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetForceLocalPlayerEffect
-	// void SetForceLocalPlayerEffect(bool bIsPlayerEffect);                                                                    // [0x62bd3f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetForceLocalPlayerEffect(bool bIsPlayerEffect);                                                                    // [0x62ed420] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetEmitterFixedBounds
-	// void SetEmitterFixedBounds(FName EmitterName, FBox LocalBounds);                                                         // [0x62bd260] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetEmitterFixedBounds(FName EmitterName, FBox LocalBounds);                                                         // [0x62ed290] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetDesiredAge
-	// void SetDesiredAge(float InDesiredAge);                                                                                  // [0x62bd130] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDesiredAge(float InDesiredAge);                                                                                  // [0x62ed160] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetCustomTimeDilation
-	// void SetCustomTimeDilation(float Dilation);                                                                              // [0x62bd080] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetCustomTimeDilation(float Dilation);                                                                              // [0x62ed0b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetCanRenderWhileSeeking
-	// void SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking);                                                            // [0x62bcff0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking);                                                            // [0x62ed020] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetAutoDestroy
-	// void SetAutoDestroy(bool bInAutoDestroy);                                                                                // [0x62bcf40] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAutoDestroy(bool bInAutoDestroy);                                                                                // [0x62ecf70] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetAsset
-	// void SetAsset(class UNiagaraSystem* InAsset, bool bResetExistingOverrideParameters);                                     // [0x62bce70] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAsset(class UNiagaraSystem* InAsset, bool bResetExistingOverrideParameters);                                     // [0x62ecea0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetAllowScalability
-	// void SetAllowScalability(bool bAllow);                                                                                   // [0x62bcda0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAllowScalability(bool bAllow);                                                                                   // [0x62ecdd0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetAgeUpdateMode
-	// void SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode);                                                            // [0x62bcd20] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode);                                                            // [0x62ecd50] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SeekToDesiredAge
-	// void SeekToDesiredAge(float InDesiredAge);                                                                               // [0x62bcc90] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SeekToDesiredAge(float InDesiredAge);                                                                               // [0x62eccc0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.ResetSystem
-	// void ResetSystem();                                                                                                      // [0x62bcc60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResetSystem();                                                                                                      // [0x62ecc90] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.ReinitializeSystem
-	// void ReinitializeSystem();                                                                                               // [0x62bcc40] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ReinitializeSystem();                                                                                               // [0x62ecc70] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.IsPaused
-	// bool IsPaused();                                                                                                         // [0x62bcb70] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPaused();                                                                                                         // [0x62ecba0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.InitForPerformanceBaseline
-	// void InitForPerformanceBaseline();                                                                                       // [0x62bcaf0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void InitForPerformanceBaseline();                                                                                       // [0x62ecb20] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.GetTickBehavior
-	// ENiagaraTickBehavior GetTickBehavior();                                                                                  // [0x62bcad0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ENiagaraTickBehavior GetTickBehavior();                                                                                  // [0x62ecb00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetSystemFixedBounds
-	// FBox GetSystemFixedBounds();                                                                                             // [0x62bca80] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FBox GetSystemFixedBounds();                                                                                             // [0x62ecab0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetSimCache
-	// class UNiagaraSimCache* GetSimCache();                                                                                   // [0x62bca60] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UNiagaraSimCache* GetSimCache();                                                                                   // [0x62eca90] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetSeekDelta
-	// float GetSeekDelta();                                                                                                    // [0x62bca40] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetSeekDelta();                                                                                                    // [0x62eca70] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetRandomSeedOffset
-	// int32_t GetRandomSeedOffset();                                                                                           // [0x62bca20] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetRandomSeedOffset();                                                                                           // [0x62eca50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled
-	// bool GetPreviewLODDistanceEnabled();                                                                                     // [0x62bc9f0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetPreviewLODDistanceEnabled();                                                                                     // [0x62eca20] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistance
-	// float GetPreviewLODDistance();                                                                                           // [0x62bc9b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPreviewLODDistance();                                                                                           // [0x62ec9e0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetOcclusionQueryMode
-	// ENiagaraOcclusionQueryMode GetOcclusionQueryMode();                                                                      // [0x62bc990] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ENiagaraOcclusionQueryMode GetOcclusionQueryMode();                                                                      // [0x62ec9c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetMaxSimTime
-	// float GetMaxSimTime();                                                                                                   // [0x62bc970] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetMaxSimTime();                                                                                                   // [0x62ec9a0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetLockDesiredAgeDeltaTimeToSeekDelta
-	// bool GetLockDesiredAgeDeltaTimeToSeekDelta();                                                                            // [0x62bc950] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetLockDesiredAgeDeltaTimeToSeekDelta();                                                                            // [0x62ec980] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetForceSolo
-	// bool GetForceSolo();                                                                                                     // [0x62bc920] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetForceSolo();                                                                                                     // [0x62ec950] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetForceLocalPlayerEffect
-	// bool GetForceLocalPlayerEffect();                                                                                        // [0x62bc8f0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetForceLocalPlayerEffect();                                                                                        // [0x62ec920] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetEmitterFixedBounds
-	// FBox GetEmitterFixedBounds(FName EmitterName);                                                                           // [0x62bc800] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FBox GetEmitterFixedBounds(FName EmitterName);                                                                           // [0x62ec830] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetDesiredAge
-	// float GetDesiredAge();                                                                                                   // [0x62bc7b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetDesiredAge();                                                                                                   // [0x62ec7e0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetDataInterface
-	// class UNiagaraDataInterface* GetDataInterface(FString Name);                                                             // [0x62bc6d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// class UNiagaraDataInterface* GetDataInterface(FString Name);                                                             // [0x62ec700] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.GetCustomTimeDilation
-	// float GetCustomTimeDilation();                                                                                           // [0x62bc6b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetCustomTimeDilation();                                                                                           // [0x62ec6e0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetAsset
-	// class UNiagaraSystem* GetAsset();                                                                                        // [0x62bc690] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// class UNiagaraSystem* GetAsset();                                                                                        // [0x62ec6c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetAllowScalability
-	// bool GetAllowScalability();                                                                                              // [0x62bc660] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetAllowScalability();                                                                                              // [0x62ec690] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetAgeUpdateMode
-	// ENiagaraAgeUpdateMode GetAgeUpdateMode();                                                                                // [0x62bc640] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ENiagaraAgeUpdateMode GetAgeUpdateMode();                                                                                // [0x62ec670] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.ClearSystemFixedBounds
-	// void ClearSystemFixedBounds();                                                                                           // [0x62bc590] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ClearSystemFixedBounds();                                                                                           // [0x62ec5c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.ClearSimCache
-	// void ClearSimCache(bool bResetSystem);                                                                                   // [0x62bc4d0] Final|Native|Public|BlueprintCallable 
+	// void ClearSimCache(bool bResetSystem);                                                                                   // [0x62ec500] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.ClearEmitterFixedBounds
-	// void ClearEmitterFixedBounds(FName EmitterName);                                                                         // [0x62bc3a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ClearEmitterFixedBounds(FName EmitterName);                                                                         // [0x62ec3d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulationByTime
-	// void AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds);                                                // [0x62bc2a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds);                                                // [0x62ec2d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulation
-	// void AdvanceSimulation(int32_t TickCount, float TickDeltaSeconds);                                                       // [0x62bc1c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AdvanceSimulation(int32_t TickCount, float TickDeltaSeconds);                                                       // [0x62ec1f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/Niagara.NCPoolElement
@@ -3198,17 +3198,17 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataChannelLibrary.WriteToNiagaraDataChannelSingle
-	// void WriteToNiagaraDataChannelSingle(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, FNiagaraDataChannelSearchParameters SearchParams, bool bVisibleToBlueprint, bool bVisibleToNiagaraCPU, bool bVisibleToNiagaraGPU); // [0x6333c70] Final|Native|Static|Public 
+	// void WriteToNiagaraDataChannelSingle(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, FNiagaraDataChannelSearchParameters SearchParams, bool bVisibleToBlueprint, bool bVisibleToNiagaraCPU, bool bVisibleToNiagaraGPU); // [0x6363d30] Final|Native|Static|Public 
 	// Function /Script/Niagara.NiagaraDataChannelLibrary.WriteToNiagaraDataChannel
-	// class UNiagaraDataChannelWriter* WriteToNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, FNiagaraDataChannelSearchParameters SearchParams, int32_t Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU, FString DebugSource); // [0x6333540] Final|Native|Static|Public|BlueprintCallable 
+	// class UNiagaraDataChannelWriter* WriteToNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, FNiagaraDataChannelSearchParameters SearchParams, int32_t Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU, FString DebugSource); // [0x6363600] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelLibrary.ReadFromNiagaraDataChannelSingle
-	// void ReadFromNiagaraDataChannelSingle(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, int32_t Index, FNiagaraDataChannelSearchParameters SearchParams, bool bReadPreviousFrame, ENiagartaDataChannelReadResult& ReadResult); // [0x6330a30] Final|Native|Static|Public|HasOutParms 
+	// void ReadFromNiagaraDataChannelSingle(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, int32_t Index, FNiagaraDataChannelSearchParameters SearchParams, bool bReadPreviousFrame, ENiagartaDataChannelReadResult& ReadResult); // [0x6360af0] Final|Native|Static|Public|HasOutParms 
 	// Function /Script/Niagara.NiagaraDataChannelLibrary.ReadFromNiagaraDataChannel
-	// class UNiagaraDataChannelReader* ReadFromNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, FNiagaraDataChannelSearchParameters SearchParams, bool bReadPreviousFrame); // [0x6330830] Final|Native|Static|Public|BlueprintCallable 
+	// class UNiagaraDataChannelReader* ReadFromNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, FNiagaraDataChannelSearchParameters SearchParams, bool bReadPreviousFrame); // [0x63608f0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelLibrary.GetNiagaraDataChannel
-	// class UNiagaraDataChannelHandler* GetNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel); // [0x6330710] Final|Native|Static|Public 
+	// class UNiagaraDataChannelHandler* GetNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel); // [0x63607d0] Final|Native|Static|Public 
 	// Function /Script/Niagara.NiagaraDataChannelLibrary.GetDataChannelElementCount
-	// int32_t GetDataChannelElementCount(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, FNiagaraDataChannelSearchParameters SearchParams, bool bReadPreviousFrame); // [0x632e5d0] Final|Native|Static|Public|BlueprintCallable 
+	// int32_t GetDataChannelElementCount(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, FNiagaraDataChannelSearchParameters SearchParams, bool bReadPreviousFrame); // [0x635e690] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterface2DArrayTexture
@@ -3327,93 +3327,93 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVectorValue
-	// void SetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FVector& Value, bool bSizeToFit); // [0x6333360] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FVector& Value, bool bSizeToFit); // [0x6363420] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4Value
-	// void SetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FVector4& Value, bool bSizeToFit); // [0x6333010] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FVector4& Value, bool bSizeToFit); // [0x63630d0] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4
-	// void SetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FVector4>& ArrayData);    // [0x6332eb0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FVector4>& ArrayData);    // [0x6362f70] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2DValue
-	// void SetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FVector2D& Value, bool bSizeToFit); // [0x6332ce0] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FVector2D& Value, bool bSizeToFit); // [0x6362da0] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2D
-	// void SetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FVector2D>& ArrayData);  // [0x6332b80] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FVector2D>& ArrayData);  // [0x6362c40] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector
-	// void SetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FVector>& ArrayData);      // [0x6333200] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FVector>& ArrayData);      // [0x63632c0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayUInt8Value
-	// void SetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, int32_t Value, bool bSizeToFit); // [0x63329c0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, int32_t Value, bool bSizeToFit); // [0x6362a80] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayUInt8
-	// void SetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<int32_t>& ArrayData);       // [0x6332860] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<int32_t>& ArrayData);       // [0x6362920] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuatValue
-	// void SetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FQuat& Value, bool bSizeToFit); // [0x6332680] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FQuat& Value, bool bSizeToFit); // [0x6362740] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuat
-	// void SetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FQuat>& ArrayData);          // [0x6332520] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FQuat>& ArrayData);          // [0x63625e0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayPositionValue
-	// void SetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FVector& Value, bool bSizeToFit); // [0x6332280] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FVector& Value, bool bSizeToFit); // [0x6362340] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayPosition
-	// void SetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FVector>& ArrayData);    // [0x6331fc0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FVector>& ArrayData);    // [0x6362080] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayMatrixValue
-	// void SetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FMatrix& Value, bool bSizeToFit, bool bApplyLWCRebase); // [0x6331ca0] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FMatrix& Value, bool bSizeToFit, bool bApplyLWCRebase); // [0x6361d60] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayMatrix
-	// void SetNiagaraArrayMatrix(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FMatrix>& ArrayData, bool bApplyLWCRebase); // [0x63318c0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayMatrix(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FMatrix>& ArrayData, bool bApplyLWCRebase); // [0x6361980] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32Value
-	// void SetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, int32_t Value, bool bSizeToFit); // [0x6331700] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, int32_t Value, bool bSizeToFit); // [0x63617c0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32
-	// void SetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<int32_t>& ArrayData);       // [0x63315a0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<int32_t>& ArrayData);       // [0x6361660] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloatValue
-	// void SetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, float Value, bool bSizeToFit); // [0x63313e0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, float Value, bool bSizeToFit); // [0x63614a0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloat
-	// void SetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<float>& ArrayData);         // [0x6331280] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<float>& ArrayData);         // [0x6361340] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColorValue
-	// void SetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FLinearColor& Value, bool bSizeToFit); // [0x63310b0] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, FLinearColor& Value, bool bSizeToFit); // [0x6361170] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColor
-	// void SetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FLinearColor>& ArrayData);  // [0x6330f50] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<FLinearColor>& ArrayData);  // [0x6361010] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBoolValue
-	// void SetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, bool& Value, bool bSizeToFit); // [0x6330d80] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, bool& Value, bool bSizeToFit); // [0x6360e40] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBool
-	// void SetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<bool>& ArrayData);           // [0x6330c20] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<bool>& ArrayData);           // [0x6360ce0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVectorValue
-	// FVector GetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);           // [0x63305f0] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FVector GetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);           // [0x63606b0] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4Value
-	// FVector4 GetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);         // [0x6330360] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FVector4 GetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);         // [0x6360420] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4
-	// TArray<FVector4> GetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                     // [0x6330220] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<FVector4> GetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                     // [0x63602e0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2DValue
-	// FVector2D GetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);       // [0x6330110] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FVector2D GetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);       // [0x63601d0] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2D
-	// TArray<FVector2D> GetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                   // [0x632ffd0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<FVector2D> GetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                   // [0x6360090] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector
-	// TArray<FVector> GetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                       // [0x63304b0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<FVector> GetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                       // [0x6360570] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayUInt8Value
-	// int32_t GetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);            // [0x632fed0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// int32_t GetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);            // [0x635ff90] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayUInt8
-	// TArray<int32_t> GetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                        // [0x632fd90] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<int32_t> GetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                        // [0x635fe50] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuatValue
-	// FQuat GetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);               // [0x632fc80] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FQuat GetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);               // [0x635fd40] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuat
-	// TArray<FQuat> GetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                           // [0x632fb40] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<FQuat> GetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                           // [0x635fc00] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayPositionValue
-	// FVector GetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);         // [0x632f950] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FVector GetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);         // [0x635fa10] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayPosition
-	// TArray<FVector> GetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                     // [0x632f6b0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<FVector> GetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                     // [0x635f770] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayMatrixValue
-	// FMatrix GetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, bool bApplyLWCRebase); // [0x632f3b0] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FMatrix GetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index, bool bApplyLWCRebase); // [0x635f470] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayMatrix
-	// TArray<FMatrix> GetNiagaraArrayMatrix(class UNiagaraComponent* NiagaraSystem, FName OverrideName, bool bApplyLWCRebase); // [0x632f0c0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<FMatrix> GetNiagaraArrayMatrix(class UNiagaraComponent* NiagaraSystem, FName OverrideName, bool bApplyLWCRebase); // [0x635f180] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32Value
-	// int32_t GetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);            // [0x632efc0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// int32_t GetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);            // [0x635f080] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32
-	// TArray<int32_t> GetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                        // [0x632ee80] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<int32_t> GetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                        // [0x635ef40] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloatValue
-	// float GetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);              // [0x632ed80] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// float GetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);              // [0x635ee40] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloat
-	// TArray<float> GetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                          // [0x632ec40] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<float> GetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                          // [0x635ed00] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColorValue
-	// FLinearColor GetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);       // [0x632eb30] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// FLinearColor GetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);       // [0x635ebf0] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColor
-	// TArray<FLinearColor> GetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                   // [0x632e9f0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<FLinearColor> GetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                   // [0x635eab0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBoolValue
-	// bool GetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);                // [0x632e8f0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// bool GetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, FName OverrideName, int32_t Index);                // [0x635e9b0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool
-	// TArray<bool> GetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                            // [0x632e7b0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// TArray<bool> GetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, FName OverrideName);                            // [0x635e870] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArrayInt32
@@ -3598,7 +3598,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraParticleCallbackHandler.ReceiveParticleData
-	// void ReceiveParticleData(TArray<FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, FVector& SimulationPositionOffset); // [0x6360a70] Native|Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void ReceiveParticleData(TArray<FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, FVector& SimulationPositionOffset); // [0x6390b30] Native|Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceExport
@@ -3644,13 +3644,13 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize
-	// void GetTextureSize(class UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY);                                 // [0x63607b0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetTextureSize(class UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY);                                 // [0x6390870] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize
-	// void GetRawTextureSize(class UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY);                              // [0x63604f0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetRawTextureSize(class UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY);                              // [0x63905b0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D
-	// bool FillTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32_t AttributeIndex);      // [0x63603d0] RequiredAPI|Native|Public|BlueprintCallable 
+	// bool FillTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32_t AttributeIndex);      // [0x6390490] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D
-	// bool FillRawTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32_t& TilesX, int32_t& TilesY); // [0x6360050] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool FillRawTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32_t& TilesX, int32_t& TilesY); // [0x6390110] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid2DCollectionReader
@@ -3692,13 +3692,13 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize
-	// void GetTextureSize(class UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY, int32_t& SizeZ);                 // [0x63608e0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetTextureSize(class UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY, int32_t& SizeZ);                 // [0x63909a0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize
-	// void GetRawTextureSize(class UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY, int32_t& SizeZ);              // [0x6360620] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetRawTextureSize(class UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY, int32_t& SizeZ);              // [0x63906e0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture
-	// bool FillVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32_t AttributeIndex);          // [0x63603d0] RequiredAPI|Native|Public|BlueprintCallable 
+	// bool FillVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32_t AttributeIndex);          // [0x6390490] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture
-	// bool FillRawVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32_t& TilesX, int32_t& TilesY, int32_t& TileZ); // [0x63601d0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool FillRawVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32_t& TilesX, int32_t& TilesY, int32_t& TileZ); // [0x6390290] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid3DCollectionReader
@@ -3862,7 +3862,7 @@ class UNiagaraDataInterfaceRigidMeshCollisionQuery : public UNiagaraDataInterfac
 public:
 	TArray<FName>                                      ActorTags;                                                  // 0x0038   (0x0010)  
 	TArray<FName>                                      ComponentTags;                                              // 0x0048   (0x0010)  
-	SDK_UNDEFINED(16,425) /* TArray<TWeakObjectPtr<AActor*>> */ __um(SourceActors);                                // 0x0058   (0x0010)  
+	SDK_UNDEFINED(16,409) /* TArray<TWeakObjectPtr<AActor*>> */ __um(SourceActors);                                // 0x0058   (0x0010)  
 	bool                                               OnlyUseMoveable;                                            // 0x0068   (0x0001)  
 	bool                                               UseComplexCollisions;                                       // 0x0069   (0x0001)  
 	bool                                               bFilterByObjectType;                                        // 0x006A   (0x0001)  
@@ -3883,7 +3883,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDIRigidMeshCollisionFunctionLibrary.SetSourceActors
-	// void SetSourceActors(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<AActor*>& SourceActors);         // [0x6399d90] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetSourceActors(class UNiagaraComponent* NiagaraSystem, FName OverrideName, TArray<AActor*>& SourceActors);         // [0x63c9e50] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSkeletalMesh
@@ -3917,7 +3917,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceSkeletalMesh.OnSourceEndPlay
-	// void OnSourceEndPlay(class AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                        // [0x63daad0] Final|RequiredAPI|Native|Protected 
+	// void OnSourceEndPlay(class AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                        // [0x640ab90] Final|RequiredAPI|Native|Protected 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSparseVolumeTexture
@@ -4542,41 +4542,41 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAttachedWithParams
-	// class UNiagaraComponent* SpawnSystemAttachedWithParams(FFXSystemSpawnParameters& SpawnParams);                           // [0x63face0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UNiagaraComponent* SpawnSystemAttachedWithParams(FFXSystemSpawnParameters& SpawnParams);                           // [0x642ada0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAttached
-	// class UNiagaraComponent* SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, FRotator Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck); // [0x63fa990] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// class UNiagaraComponent* SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, FRotator Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck); // [0x642aa50] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocationWithParams
-	// class UNiagaraComponent* SpawnSystemAtLocationWithParams(FFXSystemSpawnParameters& SpawnParams);                         // [0x63fa890] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UNiagaraComponent* SpawnSystemAtLocationWithParams(FFXSystemSpawnParameters& SpawnParams);                         // [0x642a950] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation
-	// class UNiagaraComponent* SpawnSystemAtLocation(class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, FVector Location, FRotator Rotation, FVector Scale, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck); // [0x63fa390] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// class UNiagaraComponent* SpawnSystemAtLocation(class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, FVector Location, FRotator Rotation, FVector Scale, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck); // [0x642a450] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetVolumeTextureObject
-	// void SetVolumeTextureObject(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UVolumeTexture* Texture); // [0x63fa270] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetVolumeTextureObject(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UVolumeTexture* Texture); // [0x642a330] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetTextureObject
-	// void SetTextureObject(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UTexture* Texture);            // [0x63fa270] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetTextureObject(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UTexture* Texture);            // [0x642a330] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetTexture2DArrayObject
-	// void SetTexture2DArrayObject(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UTexture2DArray* Texture); // [0x63fa270] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetTexture2DArrayObject(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UTexture2DArray* Texture); // [0x642a330] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions
-	// void SetSkeletalMeshDataInterfaceSamplingRegions(class UNiagaraComponent* NiagaraSystem, FString OverrideName, TArray<FName>& SamplingRegions); // [0x63fa040] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetSkeletalMeshDataInterfaceSamplingRegions(class UNiagaraComponent* NiagaraSystem, FString OverrideName, TArray<FName>& SamplingRegions); // [0x642a100] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceFilteredSockets
-	// void SetSkeletalMeshDataInterfaceFilteredSockets(class UNiagaraComponent* NiagaraSystem, FString OverrideName, TArray<FName>& FilteredSockets); // [0x63f9e10] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetSkeletalMeshDataInterfaceFilteredSockets(class UNiagaraComponent* NiagaraSystem, FString OverrideName, TArray<FName>& FilteredSockets); // [0x6429ed0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceFilteredBones
-	// void SetSkeletalMeshDataInterfaceFilteredBones(class UNiagaraComponent* NiagaraSystem, FString OverrideName, TArray<FName>& FilteredBones); // [0x63f9be0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetSkeletalMeshDataInterfaceFilteredBones(class UNiagaraComponent* NiagaraSystem, FString OverrideName, TArray<FName>& FilteredBones); // [0x6429ca0] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetComponentNiagaraGPURayTracedCollisionGroup
-	// void SetComponentNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class UPrimitiveComponent* Primitive, int32_t CollisionGroup); // [0x63f9aa0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetComponentNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class UPrimitiveComponent* Primitive, int32_t CollisionGroup); // [0x6429b60] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.SetActorNiagaraGPURayTracedCollisionGroup
-	// void SetActorNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class AActor* Actor, int32_t CollisionGroup); // [0x63f9890] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetActorNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class AActor* Actor, int32_t CollisionGroup); // [0x6429950] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.ReleaseNiagaraGPURayTracedCollisionGroup
-	// void ReleaseNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, int32_t CollisionGroup);                // [0x63f97a0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void ReleaseNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, int32_t CollisionGroup);                // [0x6429860] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent
-	// void OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UStaticMeshComponent* StaticMeshComponent); // [0x63f9590] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UStaticMeshComponent* StaticMeshComponent); // [0x6429650] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh
-	// void OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UStaticMesh* StaticMesh); // [0x63f9380] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class UStaticMesh* StaticMesh); // [0x6429440] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent
-	// void OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent); // [0x63f9170] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, FString OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent); // [0x6429230] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection
-	// class UNiagaraParameterCollectionInstance* GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection); // [0x63f9070] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// class UNiagaraParameterCollectionInstance* GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection); // [0x6429130] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraFunctionLibrary.AcquireNiagaraGPURayTracedCollisionGroup
-	// int32_t AcquireNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject);                                     // [0x63f8fa0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// int32_t AcquireNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject);                                     // [0x6429060] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraLensEffectBase
@@ -4731,37 +4731,37 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVectorParameter
-	// void SetVectorParameter(FString InVariableName, FVector InValue);                                                        // [0x6425720] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVectorParameter(FString InVariableName, FVector InValue);                                                        // [0x64557e0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter
-	// void SetVector4Parameter(FString InVariableName, FVector4& InValue);                                                     // [0x64254e0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVector4Parameter(FString InVariableName, FVector4& InValue);                                                     // [0x64555a0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter
-	// void SetVector2DParameter(FString InVariableName, FVector2D InValue);                                                    // [0x64252d0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVector2DParameter(FString InVariableName, FVector2D InValue);                                                    // [0x6455390] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetQuatParameter
-	// void SetQuatParameter(FString InVariableName, FQuat& InValue);                                                           // [0x64250a0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetQuatParameter(FString InVariableName, FQuat& InValue);                                                           // [0x6455160] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetIntParameter
-	// void SetIntParameter(FString InVariableName, int32_t InValue);                                                           // [0x6424ed0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetIntParameter(FString InVariableName, int32_t InValue);                                                           // [0x6454f90] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetFloatParameter
-	// void SetFloatParameter(FString InVariableName, float InValue);                                                           // [0x6424cf0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetFloatParameter(FString InVariableName, float InValue);                                                           // [0x6454db0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetColorParameter
-	// void SetColorParameter(FString InVariableName, FLinearColor InValue);                                                    // [0x6424b00] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetColorParameter(FString InVariableName, FLinearColor InValue);                                                    // [0x6454bc0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetBoolParameter
-	// void SetBoolParameter(FString InVariableName, bool InValue);                                                             // [0x6424920] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetBoolParameter(FString InVariableName, bool InValue);                                                             // [0x64549e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVectorParameter
-	// FVector GetVectorParameter(FString InVariableName);                                                                      // [0x6424650] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FVector GetVectorParameter(FString InVariableName);                                                                      // [0x6454710] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter
-	// FVector4 GetVector4Parameter(FString InVariableName);                                                                    // [0x6424470] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FVector4 GetVector4Parameter(FString InVariableName);                                                                    // [0x6454530] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter
-	// FVector2D GetVector2DParameter(FString InVariableName);                                                                  // [0x64242e0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FVector2D GetVector2DParameter(FString InVariableName);                                                                  // [0x64543a0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetQuatParameter
-	// FQuat GetQuatParameter(FString InVariableName);                                                                          // [0x6424110] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FQuat GetQuatParameter(FString InVariableName);                                                                          // [0x64541d0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetIntParameter
-	// int32_t GetIntParameter(FString InVariableName);                                                                         // [0x6423f60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// int32_t GetIntParameter(FString InVariableName);                                                                         // [0x6454020] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetFloatParameter
-	// float GetFloatParameter(FString InVariableName);                                                                         // [0x6423df0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// float GetFloatParameter(FString InVariableName);                                                                         // [0x6453eb0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetColorParameter
-	// FLinearColor GetColorParameter(FString InVariableName);                                                                  // [0x6423c80] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FLinearColor GetColorParameter(FString InVariableName);                                                                  // [0x6453d40] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
-	// bool GetBoolParameter(FString InVariableName);                                                                           // [0x6423b20] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool GetBoolParameter(FString InVariableName);                                                                           // [0x6453be0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraParameterCollection
@@ -4791,15 +4791,15 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraBaselineController.OnTickTest
-	// bool OnTickTest();                                                                                                       // [0x59d3260] RequiredAPI|Native|Event|Public|BlueprintEvent 
+	// bool OnTickTest();                                                                                                       // [0x5a04450] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.OnOwnerTick
-	// void OnOwnerTick(float DeltaTime);                                                                                       // [0x6424890] RequiredAPI|Native|Event|Public|BlueprintEvent 
+	// void OnOwnerTick(float DeltaTime);                                                                                       // [0x6454950] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.OnEndTest
-	// void OnEndTest(FNiagaraPerfBaselineStats Stats);                                                                         // [0x6424800] RequiredAPI|Native|Event|Public|BlueprintEvent 
+	// void OnEndTest(FNiagaraPerfBaselineStats Stats);                                                                         // [0x64548c0] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.OnBeginTest
-	// void OnBeginTest();                                                                                                      // [0x42e01f0] RequiredAPI|Native|Event|Public|BlueprintEvent 
+	// void OnBeginTest();                                                                                                      // [0x4312180] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.GetSystem
-	// class UNiagaraSystem* GetSystem();                                                                                       // [0x5a74950] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// class UNiagaraSystem* GetSystem();                                                                                       // [0x5aa5b40] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraBaselineController_Basic
@@ -4839,9 +4839,9 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraPreviewBase.SetSystem
-	// void SetSystem(class UNiagaraSystem* InSystem);                                                                          // [0x35d7f00] Event|Public|BlueprintCallable|BlueprintEvent 
+	// void SetSystem(class UNiagaraSystem* InSystem);                                                                          // [0x3617e10] Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraPreviewBase.SetLabelText
-	// void SetLabelText(FText& InXAxisText, FText& InYAxisText);                                                               // [0x35d7f00] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void SetLabelText(FText& InXAxisText, FText& InYAxisText);                                                               // [0x3617e10] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis
@@ -4853,9 +4853,9 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraPreviewAxis.Num
-	// int32_t Num();                                                                                                           // [0x54fe850] Native|Event|Public|BlueprintEvent 
+	// int32_t Num();                                                                                                           // [0x5530a20] Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraPreviewAxis.ApplyToPreview
-	// void ApplyToPreview(class UNiagaraComponent* PreviewComponent, int32_t PreviewIndex, bool bIsXAxis, FString& OutLabelText); // [0x6460860] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void ApplyToPreview(class UNiagaraComponent* PreviewComponent, int32_t PreviewIndex, bool bIsXAxis, FString& OutLabelText); // [0x6490920] Native|Event|Public|HasOutParms|BlueprintEvent 
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamBase
@@ -4944,13 +4944,13 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraPreviewGrid.SetPaused
-	// void SetPaused(bool bPaused);                                                                                            // [0x6460ab0] Final|Native|Public|BlueprintCallable 
+	// void SetPaused(bool bPaused);                                                                                            // [0x6490b70] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraPreviewGrid.GetPreviews
-	// void GetPreviews(TArray<UNiagaraComponent*>& OutPreviews);                                                               // [0x6460a00] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetPreviews(TArray<UNiagaraComponent*>& OutPreviews);                                                               // [0x6490ac0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraPreviewGrid.DeactivatePreviews
-	// void DeactivatePreviews();                                                                                               // [0x64609e0] Final|Native|Public|BlueprintCallable 
+	// void DeactivatePreviews();                                                                                               // [0x6490aa0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraPreviewGrid.ActivatePreviews
-	// void ActivatePreviews(bool bReset);                                                                                      // [0x64607d0] Final|Native|Public|BlueprintCallable 
+	// void ActivatePreviews(bool bReset);                                                                                      // [0x6490890] Final|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/Niagara.NiagaraRibbonUVSettings
@@ -5258,7 +5258,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
-	// void RaiseOnGPUCompilationComplete();                                                                                    // [0x53369a0] Final|Native|Public  
+	// void RaiseOnGPUCompilationComplete();                                                                                    // [0x5368b70] Final|Native|Public  
 };
 
 /// Struct /Script/Niagara.NiagaraSimCacheVariable
@@ -5366,43 +5366,43 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraSimCache.ReadVectorAttribute
-	// void ReadVectorAttribute(TArray<FVector>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);        // [0x6491450] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadVectorAttribute(TArray<FVector>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);        // [0x64c1510] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadVector4Attribute
-	// void ReadVector4Attribute(TArray<FVector4>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);      // [0x64912d0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadVector4Attribute(TArray<FVector4>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);      // [0x64c1390] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadVector2Attribute
-	// void ReadVector2Attribute(TArray<FVector2D>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);     // [0x6490f40] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadVector2Attribute(TArray<FVector2D>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);     // [0x64c1000] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadQuatAttributeWithRebase
-	// void ReadQuatAttributeWithRebase(TArray<FQuat>& OutValues, FQuat Quat, FName AttributeName, FName EmitterName, int32_t FrameIndex); // [0x6490d70] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// void ReadQuatAttributeWithRebase(TArray<FQuat>& OutValues, FQuat Quat, FName AttributeName, FName EmitterName, int32_t FrameIndex); // [0x64c0e30] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadQuatAttribute
-	// void ReadQuatAttribute(TArray<FQuat>& OutValues, FName AttributeName, FName EmitterName, bool bLocalSpaceToWorld, int32_t FrameIndex); // [0x6490bb0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadQuatAttribute(TArray<FQuat>& OutValues, FName AttributeName, FName EmitterName, bool bLocalSpaceToWorld, int32_t FrameIndex); // [0x64c0c70] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadPositionAttributeWithRebase
-	// void ReadPositionAttributeWithRebase(TArray<FVector>& OutValues, FTransform Transform, FName AttributeName, FName EmitterName, int32_t FrameIndex); // [0x6490940] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// void ReadPositionAttributeWithRebase(TArray<FVector>& OutValues, FTransform Transform, FName AttributeName, FName EmitterName, int32_t FrameIndex); // [0x64c0a00] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadPositionAttribute
-	// void ReadPositionAttribute(TArray<FVector>& OutValues, FName AttributeName, FName EmitterName, bool bLocalSpaceToWorld, int32_t FrameIndex); // [0x6490780] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadPositionAttribute(TArray<FVector>& OutValues, FName AttributeName, FName EmitterName, bool bLocalSpaceToWorld, int32_t FrameIndex); // [0x64c0840] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadIntAttribute
-	// void ReadIntAttribute(TArray<int32_t>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);           // [0x6490600] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadIntAttribute(TArray<int32_t>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);           // [0x64c06c0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadIDAttribute
-	// void ReadIDAttribute(TArray<FNiagaraID>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);         // [0x6490280] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadIDAttribute(TArray<FNiagaraID>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);         // [0x64c0340] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadFloatAttribute
-	// void ReadFloatAttribute(TArray<float>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);           // [0x648ff30] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadFloatAttribute(TArray<float>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);           // [0x64bfff0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadColorAttribute
-	// void ReadColorAttribute(TArray<FLinearColor>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);    // [0x648fdb0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadColorAttribute(TArray<FLinearColor>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);    // [0x64bfe70] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.IsEmpty
-	// bool IsEmpty();                                                                                                          // [0x648fd80] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsEmpty();                                                                                                          // [0x64bfe40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.IsCacheValid
-	// bool IsCacheValid();                                                                                                     // [0x648fd50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsCacheValid();                                                                                                     // [0x64bfe10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetStartSeconds
-	// float GetStartSeconds();                                                                                                 // [0x648fd30] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetStartSeconds();                                                                                                 // [0x64bfdf0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetNumFrames
-	// int32_t GetNumFrames();                                                                                                  // [0x648fd10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumFrames();                                                                                                  // [0x64bfdd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetNumEmitters
-	// int32_t GetNumEmitters();                                                                                                // [0x648fcf0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumEmitters();                                                                                                // [0x64bfdb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetEmitterNames
-	// TArray<FName> GetEmitterNames();                                                                                         // [0x648fbc0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FName> GetEmitterNames();                                                                                         // [0x64bfc80] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetEmitterName
-	// FName GetEmitterName(int32_t EmitterIndex);                                                                              // [0x648fb00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetEmitterName(int32_t EmitterIndex);                                                                              // [0x64bfbc0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetAttributeCaptureMode
-	// ENiagaraSimCacheAttributeCaptureMode GetAttributeCaptureMode();                                                          // [0x648fae0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ENiagaraSimCacheAttributeCaptureMode GetAttributeCaptureMode();                                                          // [0x64bfba0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/Niagara.AsyncNiagaraCaptureSimCache
@@ -5412,19 +5412,19 @@ class UAsyncNiagaraCaptureSimCache : public UCancellableAsyncAction
 public:
 	class UNiagaraSimCache*                            CaptureSimCache;                                            // 0x0030   (0x0008)  
 	class UNiagaraComponent*                           CaptureComponent;                                           // 0x0038   (0x0008)  
-	SDK_UNDEFINED(16,426) /* FMulticastInlineDelegate */ __um(CaptureComplete);                                    // 0x0040   (0x0010)  
+	SDK_UNDEFINED(16,410) /* FMulticastInlineDelegate */ __um(CaptureComplete);                                    // 0x0040   (0x0010)  
 	unsigned char                                      UnknownData00_7[0xE0];                                      // 0x0050   (0x00E0)  MISSED
 
 
 	/// Functions
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.OnCaptureComplete__DelegateSignature
-	// void OnCaptureComplete__DelegateSignature(bool bSuccess);                                                                // [0x35d7f00] MulticastDelegate|Public|Delegate 
+	// void OnCaptureComplete__DelegateSignature(bool bSuccess);                                                                // [0x3617e10] MulticastDelegate|Public|Delegate 
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCacheUntilComplete
-	// class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheUntilComplete(class UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache*& OutSimCache, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x648f4f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheUntilComplete(class UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache*& OutSimCache, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x64bf5b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCacheMultiFrame
-	// class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheMultiFrame(class UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache*& OutSimCache, int32_t NumFrames, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x648efe0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheMultiFrame(class UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache*& OutSimCache, int32_t NumFrames, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x64bf0a0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCache
-	// class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCache(class UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, class UNiagaraComponent* NiagaraComponent, FNiagaraSimCacheCaptureParameters CaptureParameters, class UNiagaraSimCache*& OutSimCache); // [0x648e520] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCache(class UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, class UNiagaraComponent* NiagaraComponent, FNiagaraSimCacheCaptureParameters CaptureParameters, class UNiagaraSimCache*& OutSimCache); // [0x64be5e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraSimCacheFunctionLibrary
@@ -5436,9 +5436,9 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraSimCacheFunctionLibrary.CreateNiagaraSimCache
-	// class UNiagaraSimCache* CreateNiagaraSimCache(class UObject* WorldContextObject);                                        // [0x648f9c0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// class UNiagaraSimCache* CreateNiagaraSimCache(class UObject* WorldContextObject);                                        // [0x64bfa80] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraSimCacheFunctionLibrary.CaptureNiagaraSimCacheImmediate
-	// bool CaptureNiagaraSimCacheImmediate(class UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache*& OutSimCache, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x648e970] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// bool CaptureNiagaraSimCacheImmediate(class UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache*& OutSimCache, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x64bea30] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraSimulationStageBase

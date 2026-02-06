@@ -72,9 +72,9 @@ public:
 
 	/// Functions
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.SetVisualFidelity
-	// void SetVisualFidelity(class UObject* WorldContextObject, FLatentActionInfo LatentInfo, class UAnimationCompressionLibraryDatabase* DatabaseAsset, ACLVisualFidelityChangeResult& Result, ACLVisualFidelity VisualFidelity); // [0x86323a0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetVisualFidelity(class UObject* WorldContextObject, FLatentActionInfo LatentInfo, class UAnimationCompressionLibraryDatabase* DatabaseAsset, ACLVisualFidelityChangeResult& Result, ACLVisualFidelity VisualFidelity); // [0x868e010] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.GetVisualFidelity
-	// ACLVisualFidelity GetVisualFidelity(class UAnimationCompressionLibraryDatabase* DatabaseAsset);                          // [0x8632300] Final|Native|Static|Public|BlueprintCallable 
+	// ACLVisualFidelity GetVisualFidelity(class UAnimationCompressionLibraryDatabase* DatabaseAsset);                          // [0x868df70] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLBase

@@ -69,8 +69,8 @@ enum class ESimulationQuery : uint8_t
 class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
 { 
 public:
-	SDK_UNDEFINED(16,688) /* FMulticastInlineDelegate */ __um(OnInstanceTakePointDamage);                          // 0x0B10   (0x0010)  
-	SDK_UNDEFINED(16,689) /* FMulticastInlineDelegate */ __um(OnInstanceTakeRadialDamage);                         // 0x0B20   (0x0010)  
+	SDK_UNDEFINED(16,674) /* FMulticastInlineDelegate */ __um(OnInstanceTakePointDamage);                          // 0x0B10   (0x0010)  
+	SDK_UNDEFINED(16,675) /* FMulticastInlineDelegate */ __um(OnInstanceTakeRadialDamage);                         // 0x0B20   (0x0010)  
 	bool                                               bEnableDiscardOnLoad;                                       // 0x0B30   (0x0001)  
 	unsigned char                                      UnknownData00_6[0x3];                                       // 0x0B31   (0x0003)  MISSED
 	FGuid                                              GenerationGuid;                                             // 0x0B34   (0x0010)  
@@ -274,11 +274,11 @@ public:
 
 	/// Functions
 	// Function /Script/Foliage.FoliageStatistics.FoliageOverlappingSphereCount
-	// int32_t FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, FVector CenterPosition, float Radius); // [0x4e0cb80] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// int32_t FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, FVector CenterPosition, float Radius); // [0x4e3eb10] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Foliage.FoliageStatistics.FoliageOverlappingBoxTransforms
-	// void FoliageOverlappingBoxTransforms(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, FBox Box, TArray<FTransform>& OutTransforms); // [0x4e0c9f0] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void FoliageOverlappingBoxTransforms(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, FBox Box, TArray<FTransform>& OutTransforms); // [0x4e3e980] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Foliage.FoliageStatistics.FoliageOverlappingBoxCount
-	// int32_t FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, FBox Box);          // [0x4e0c890] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// int32_t FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, FBox Box);          // [0x4e3e820] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/Foliage.GrassInstancedStaticMeshComponent
@@ -312,7 +312,7 @@ public:
 
 	/// Functions
 	// Function /Script/Foliage.InteractiveFoliageActor.CapsuleTouched
-	// void CapsuleTouched(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& OverlapInfo); // [0x4e0c500] Final|Native|Protected|HasOutParms 
+	// void CapsuleTouched(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& OverlapInfo); // [0x4e3e490] Final|Native|Protected|HasOutParms 
 };
 
 /// Class /Script/Foliage.ProceduralFoliageBlockingVolume
@@ -360,13 +360,13 @@ public:
 	TArray<FFoliageTypeObject>                         FoliageTypes;                                               // 0x0040   (0x0010)  
 	bool                                               bUseOverrideFoliageTerrainMaterials;                        // 0x0050   (0x0001)  
 	unsigned char                                      UnknownData01_6[0x7];                                       // 0x0051   (0x0007)  MISSED
-	SDK_UNDEFINED(16,690) /* TArray<TWeakObjectPtr<UMaterialInterface*>> */ __um(OverrideFoliageTerrainMaterials); // 0x0058   (0x0010)  
+	SDK_UNDEFINED(16,676) /* TArray<TWeakObjectPtr<UMaterialInterface*>> */ __um(OverrideFoliageTerrainMaterials); // 0x0058   (0x0010)  
 	unsigned char                                      UnknownData02_7[0x18];                                      // 0x0068   (0x0018)  MISSED
 
 
 	/// Functions
 	// Function /Script/Foliage.ProceduralFoliageSpawner.Simulate
-	// void Simulate(int32_t NumSteps);                                                                                         // [0x4e0cd00] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Simulate(int32_t NumSteps);                                                                                         // [0x4e3ec90] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/Foliage.ProceduralFoliageInstance
