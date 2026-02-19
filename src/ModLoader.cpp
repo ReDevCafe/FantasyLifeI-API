@@ -46,9 +46,9 @@ void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
     modEnvironnement->PostLoad();
     logger->verbose("Mod loader initialization complete");
 
-    for(auto text : GameRegistries::LIFE_NOUN->GetAll())
+    for(auto text : GameRegistries::ITEM_CONSUME->GetAll())
     {
-        logger->verbose("Life Noun: ", text->ID.ToString());
+        logger->verbose("Life Noun: ", text->GetIdentifier());
     }
 }
 

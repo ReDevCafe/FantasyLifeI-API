@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 project(FantasyLifeI-ModLoader LANGUAGES CXX C)
 
-set(VERSION 1.00)
+set(VERSION "1.1.2")
+set(GAME_VERSION "3.1.1")
+option(MLDEBUG "Enable ModLoader debug code" ON)
 
 add_subdirectory(DllProxy)
 add_library(${PROJECT_NAME} SHARED)
@@ -22,7 +24,6 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
         /EHsc /GS /MD
     )
 endif()
-
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_NAME} PRIVATE user32 kernel32)
