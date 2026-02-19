@@ -35,7 +35,6 @@ void WINAPI ModLoader::init(MODULEINFO* moduleInfo)
     
     GameRegistries* gameReg = new GameRegistries();
     gameReg->init(gameData);
-    
     configManager = new ConfigManager("../../Content/Settings");
     modEnvironnement = new ModEnvironnement("../../Content/Mods");
     modEnvironnement->PreLoad();
