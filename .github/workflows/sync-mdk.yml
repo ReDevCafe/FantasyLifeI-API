@@ -4,8 +4,7 @@ on:
     workflows: ["Build and deploy project"]
     types:
       - completed
-    branches:
-      - master
+    branches: ["master"]
 env:
   TARGET_REPO: ReDevCafe/FantasyLifeI-ModTemplate
 jobs:
