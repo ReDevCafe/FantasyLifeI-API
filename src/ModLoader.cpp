@@ -52,7 +52,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             bool isWine = GetProcAddress(GetModuleHandleA("ntdll.dll"), "wine_get_version") != nullptr;
             
             AllocConsole();
-            WriteConsoleA(GetStdHandle(STD_OUTPUT_HANDLE), "CCCCCCCCC\n", 6, NULL, NULL);
             if(isWine)
             {
                 setvbuf(stdout, nullptr, _IONBF, 0);
