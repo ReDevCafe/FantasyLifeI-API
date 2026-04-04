@@ -49,9 +49,17 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     {
         case DLL_PROCESS_ATTACH:
         {
-            AllocConsole();
-            freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);
-            freopen_s(reinterpret_cast<FILE**>(stderr), "CONOUT$", "w", stderr);
+            bool isWine = GetProcAddress(GetModuleHandleA("ntdll.dll"), "wine_get_version") != nullptr;
+            if(isWine)
+            {
+                setvbuf(stdout, nullptr, _IONBF, 0);
+                setvbuf(stderr, nullptr, _IONBF, 0);
+            } else
+            {
+                AllocConsole();
+                freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);
+                freopen_s(reinterpret_cast<FILE**>(stderr), "CONOUT$", "w", stderr);
+            }            
 
             std::cout.clear();
             std::cerr.clear();
