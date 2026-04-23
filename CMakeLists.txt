@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 project(FantasyLifeI-ModLoader LANGUAGES CXX C)
 
-set(VERSION 1.00)
+set(VERSION "1.12")
+set(GAME_VERSION "3.1.1")
+option(MLDEBUG "Enable ModLoader debug code" ON)
 
 add_subdirectory(DllProxy)
 add_library(${PROJECT_NAME} SHARED)
@@ -19,15 +21,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     target_compile_options(${PROJECT_NAME} PRIVATE 
         "-Wno-inconsistent-dllimport"
         "-Wno-dllimport-static-field-def"
-    )
-endif()
-
-if(MSVC OR CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
-    target_compile_options(${PROJECT_NAME} PRIVATE /EHsc /GS /MD)
-else()
-    target_compile_options(${PROJECT_NAME} PRIVATE 
-        -fexceptions 
-        -fstack-protector-strong
+        /EHsc /GS /MD
     )
 endif()
 
@@ -36,4 +30,4 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/in
 target_link_libraries(${PROJECT_NAME} PRIVATE user32 kernel32)
 
 file(GLOB_RECURSE PROJECT_SOURCE "src/*.cpp")
-target_sources(${PROJECT_NAME} PUBLIC src/Lib/miniz.c ${PROJECT_SOURCE})
+target_sources(${PROJECT_NAME} PRIVATE src/Lib/miniz.c ${PROJECT_SOURCE})

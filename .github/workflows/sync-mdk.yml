@@ -89,4 +89,3 @@ jobs:
           BRANCH_NAME="modloader-$TAG"
           
           git checkout -b $BRANCH_NAME
-          git push origin $BRANCH_NAME
