@@ -4,9 +4,6 @@ on:
     push:
         branches-ignore:
             - master
-    pull_request:
-        branches:
-            - master
 
 env:
     BUILD_TYPE: Release
@@ -37,7 +34,16 @@ jobs:
           run: git submodule update --init
 
         - name: Configure CMake with Clang-CL
-          run: cmake -B ${{github.workspace}}/build -G "Ninja" -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DMLDEBUG=OFF
+          run: cmake -B ${{github.workspace}}/build -G "Ninja" -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DMLDEBUG=ON
         
         - name: Build project
           run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+
+        - name: Upload Artifacts
+          uses: actions/upload-artifact@v4
+          with:
+            name: fli-test-artifacts
+            path: |
+                ./build/ModLoader.dll
+                ./build/ModLoader.lib
+                ./build/DllProxy/version.dll

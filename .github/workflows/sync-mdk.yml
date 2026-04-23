@@ -4,8 +4,7 @@ on:
     workflows: ["Build and deploy project"]
     types:
       - completed
-    branches:
-      - master
+    branches: ["master"]
 env:
   TARGET_REPO: ReDevCafe/FantasyLifeI-ModTemplate
 jobs:
@@ -44,19 +43,19 @@ jobs:
           fetch-depth: 0
       
       - name: Update include folder
-          run: |
-            echo "Removing old include folder..."
-            rm -rf repo-mdk/include/*
-            rm -rf repo-mdk/include/.[!.]*
-            
-            echo "Creating include folder if it doesn't exist"
-            mkdir -p repo-mdk/include
-            
-            echo "Copying new include folder..."
-            cp -r repo-api/include/* repo-mdk/include/
-            
-            echo "Include folder updated, new contents:"
-            ls -la repo-mdk/include
+        run: |
+          echo "Removing old include folder..."
+          rm -rf repo-mdk/include/*
+          rm -rf repo-mdk/include/.[!.]*
+          
+          echo "Creating include folder if it doesn't exist"
+          mkdir -p repo-mdk/include
+          
+          echo "Copying new include folder..."
+          cp -r repo-api/include/* repo-mdk/include/
+          
+          echo "Include folder updated, new contents:"
+          ls -la repo-mdk/include
       
       - name: Update MODLOADER_BUILD_VERSION in CMakeLists.txt
         working-directory: repo-mdk
@@ -65,7 +64,7 @@ jobs:
           sed -i "s/set(MODLOADER_BUILD_VERSION[[:space:]]*\"[^\"]*\")/set(MODLOADER_BUILD_VERSION   \"$TAG\")/" CMakeLists.txt
           grep "MODLOADER_BUILD_VERSION" CMakeLists.txt
       
-      - name: Commit and push to main
+      - name: Commit and push to mainmaster
         working-directory: repo-mdk
         run: |
           git config user.name "github-actions[bot]"
@@ -78,7 +77,7 @@ jobs:
             
             - Updated include headers
             - Updated MODLOADER_BUILD_VERSION in CMakeLists.txt"
-            git push origin main
+            git push origin master
           else
             echo "No changes to commit"
           fi

@@ -19,7 +19,15 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     target_compile_options(${PROJECT_NAME} PRIVATE 
         "-Wno-inconsistent-dllimport"
         "-Wno-dllimport-static-field-def"
-        /EHsc /GS /MD
+    )
+endif()
+
+if(MSVC OR CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
+    target_compile_options(${PROJECT_NAME} PRIVATE /EHsc /GS /MD)
+else()
+    target_compile_options(${PROJECT_NAME} PRIVATE 
+        -fexceptions 
+        -fstack-protector-strong
     )
 endif()
 

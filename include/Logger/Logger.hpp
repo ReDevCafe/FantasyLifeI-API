@@ -42,7 +42,19 @@ class Logger
             const std::string& prefix
             ) :
             prefix("[" + prefix + "] "),
-            logFunc([](const std::string& msg) { std::cout << msg; }) 
+            logFunc([](const std::string& msg) { 
+                HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+                if (hConsole != INVALID_HANDLE_VALUE)
+                {
+                    DWORD written = 0;
+                    WriteConsoleA(hConsole, msg.c_str(), (DWORD)msg.size(), &written, NULL);
+                }
+                else
+                {
+                    OutputDebugStringA(msg.c_str());
+                }
+             }) 
         {
             createFile(prefix);
         }
@@ -78,7 +90,7 @@ class Logger
             if(result != S_OK) throw std::runtime_error("Could not get Documents path on Windows.");
 #else
             const char* home = std::getenv("HOME");
-            if(!home) return std::runtime_error("HOME environment variable not set.");
+            if(!home) throw std::runtime_error("HOME environment variable not set.");
             std::string document = home + "/Documents"
 #endif 
             std::string logFolder = document + std::string("/My Games/Fantasy Life I/Logs");            // Sorry
